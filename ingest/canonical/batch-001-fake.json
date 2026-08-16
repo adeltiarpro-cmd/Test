@@ -1,0 +1,182 @@
+{
+  "source": "Prep Platform — Exercices Factices v1",
+  "track": "markets",
+  "module": "derivatives",
+  "items": [
+    {
+      "external_key": "markets-deriv-mcq-001",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "Quelle est la différence fondamentale entre une option **européenne** et une option **américaine** ?",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "Une option européenne peut être exercée à tout moment avant l'échéance." },
+          { "key": "B", "text_mdx": "Une option américaine ne peut être exercée qu'à l'échéance." },
+          { "key": "C", "text_mdx": "Une option européenne ne peut être exercée **qu'à l'échéance**." },
+          { "key": "D", "text_mdx": "Il n'y a aucune différence pratique entre les deux." }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": ["C"],
+        "explain_mdx": "**C est correct.** Une option européenne ne peut être exercée qu'à l'échéance (expiry date), tandis qu'une option américaine peut être exercée à tout moment jusqu'à l'échéance.",
+        "distractor_explains": {
+          "A": "C'est la définition de l'option américaine, pas européenne.",
+          "B": "C'est la définition de l'option européenne, non de l'américaine.",
+          "D": "La distinction est réelle et affecte la valeur (prime d'exercice anticipé pour les options américaines)."
+        }
+      }
+    },
+    {
+      "external_key": "markets-deriv-mcq-002",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "La parité put-call stipule que, pour des options européennes de même strike K et maturité T sur un sous-jacent S :",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "$C + Ke^{-rT} = P + S$" },
+          { "key": "B", "text_mdx": "$C - P = S - Ke^{-rT}$" },
+          { "key": "C", "text_mdx": "$C + P = S + Ke^{-rT}$" },
+          { "key": "D", "text_mdx": "$C = P + S - K$" }
+        ],
+        "multiple": false,
+        "shuffle": false
+      },
+      "solution": {
+        "correct_keys": ["B"],
+        "explain_mdx": "**B est correct** : $C - P = S - Ke^{-rT}$, ce qui est équivalent à $C + Ke^{-rT} = P + S$ (réponse A aussi correcte). Ici A et B sont les deux formes de la même relation. **B est la forme canonique.**",
+        "distractor_explains": {
+          "C": "Additionner C et P n'a pas de sens dans la parité put-call — l'un est long, l'autre short.",
+          "D": "Cette formule omet l'actualisation du strike et est incorrecte."
+        }
+      }
+    },
+    {
+      "external_key": "markets-deriv-mcq-003",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "Un call est dit **in-the-money (ITM)** lorsque :",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "Le prix du sous-jacent $S < K$ (strike)" },
+          { "key": "B", "text_mdx": "Le prix du sous-jacent $S > K$ (strike)" },
+          { "key": "C", "text_mdx": "Le prix du sous-jacent $S = K$ (strike)" },
+          { "key": "D", "text_mdx": "La valeur temps est nulle" }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": ["B"],
+        "explain_mdx": "Un call est ITM quand $S > K$ : son exercice immédiat a une valeur intrinsèque positive ($S - K > 0$).",
+        "distractor_explains": {
+          "A": "C'est la définition d'un **put** ITM (S < K).",
+          "C": "C'est la définition at-the-money (ATM).",
+          "D": "La valeur temps est nulle uniquement à l'expiration, pas une définition ITM."
+        }
+      }
+    },
+    {
+      "external_key": "markets-deriv-numeric-001",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "Un call européen sur une action cotée **100 €** a un strike de **100 €**, une maturité de **1 an**, une volatilité implicite de **20 %** et un taux sans risque de **5 %**. Calculez le prix du call via Black-Scholes (dividendes nuls). Donnez votre réponse en euros, arrondie à 2 décimales.",
+      "payload": {
+        "unit": "EUR",
+        "precision": 2,
+        "tolerance": { "type": "abs", "value": 0.05 }
+      },
+      "solution": {
+        "value": 10.45,
+        "steps_mdx": "## Black-Scholes\n\n- $d_1 = \\frac{\\ln(S/K) + (r + \\sigma^2/2)T}{\\sigma\\sqrt{T}} = \\frac{0 + (0.05 + 0.02)}{0.20} = 0.35$\n- $d_2 = d_1 - \\sigma\\sqrt{T} = 0.35 - 0.20 = 0.15$\n- $N(d_1) \\approx 0.6368$, $N(d_2) \\approx 0.5596$\n- $C = S \\cdot N(d_1) - K e^{-rT} \\cdot N(d_2) = 100 \\times 0.6368 - 95.12 \\times 0.5596 \\approx **10.45 €**$",
+        "formula_katex": "C = S \\cdot N(d_1) - K e^{-rT} \\cdot N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-deriv-numeric-002",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "Pour le call Black-Scholes ci-dessus ($S=100$, $K=100$, $T=1$, $\\sigma=20\\%$, $r=5\\%$), calculez le **delta** du call (arrondi à 4 décimales).",
+      "payload": {
+        "unit": "",
+        "precision": 4,
+        "tolerance": { "type": "abs", "value": 0.005 }
+      },
+      "solution": {
+        "value": 0.6368,
+        "steps_mdx": "## Delta d'un call\n\n$\\Delta_C = N(d_1)$\n\nAvec $d_1 = 0.35$ et $N(0.35) \\approx 0.6368$, donc $\\Delta = **0.6368**$.",
+        "formula_katex": "\\Delta_C = N(d_1)"
+      }
+    },
+    {
+      "external_key": "markets-deriv-formula-001",
+      "type": "formula_cloze",
+      "difficulty": 3,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "Complétez la formule de Black-Scholes pour le prix d'un call européen :",
+      "payload": {
+        "template_mdx": "$C = S \\cdot$ __[n_d1]__ $- K e^{-rT} \\cdot$ __[n_d2]__\n\navec $d_1 = \\dfrac{\\ln(S/K) + (r + $ __[var_term]__ $) \\cdot T}{\\sigma\\sqrt{T}}$",
+        "blanks": [
+          { "key": "n_d1",    "kind": "token", "hint": "Fonction de répartition normale évaluée en d₁" },
+          { "key": "n_d2",    "kind": "token", "hint": "Fonction de répartition normale évaluée en d₂" },
+          { "key": "var_term","kind": "expression", "hint": "Terme lié à la variance dans le drift risk-neutral" }
+        ]
+      },
+      "solution": {
+        "blanks": {
+          "n_d1":    { "accepted": ["N(d1)", "N(d_1)", "Φ(d1)"], "canonical": "N(d_1)", "explain_mdx": "$N(d_1)$ est la probabilité risk-neutral que l'option expire ITM, pondérée par le sous-jacent." },
+          "n_d2":    { "accepted": ["N(d2)", "N(d_2)", "Φ(d2)"], "canonical": "N(d_2)", "explain_mdx": "$N(d_2)$ est la probabilité risk-neutral que l'option soit exercée." },
+          "var_term":{ "accepted": ["σ²/2", "sigma^2/2", "σ^2/2"], "canonical": "σ²/2", "explain_mdx": "Le drift risk-neutral comprend le terme de convexité $\\sigma^2/2$." }
+        }
+      }
+    },
+    {
+      "external_key": "markets-deriv-short-001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "Expliquez le concept de **delta-hedging** et pourquoi il nécessite un **rééquilibrage continu** du portefeuille de couverture. (120 mots max.)",
+      "payload": {
+        "max_words": 120
+      },
+      "solution": {
+        "key_points": [
+          { "text": "Le delta mesure la sensibilité du prix de l'option au sous-jacent (∂C/∂S)", "weight": 0.25 },
+          { "text": "Un portefeuille delta-neutre (vendeur option + Δ unités du sous-jacent) est immunisé aux petits mouvements de S", "weight": 0.35 },
+          { "text": "Le delta change à mesure que S évolue (gamma non nul), donc la couverture doit être recalibrée en permanence", "weight": 0.40 }
+        ],
+        "model_answer_mdx": "Le **delta** ($\\Delta = N(d_1)$) mesure la variation du prix d'un call pour un mouvement unitaire du sous-jacent. Un vendeur de call se couvre en détenant $\\Delta$ actions : le portefeuille est alors **delta-neutre**, insensible aux petits mouvements de $S$.\n\nMais le delta n'est pas constant — il évolue avec $S$ (effet **gamma**). Quand $S$ monte, $\\Delta$ augmente (call plus ITM) ; quand $S$ baisse, $\\Delta$ diminue. Le hedge doit donc être **rééquilibré continuellement** pour maintenir la neutralité, ce qui génère un coût théoriquement couvert par la prime reçue."
+      }
+    },
+    {
+      "external_key": "markets-deriv-casemath-001",
+      "type": "case_math",
+      "difficulty": 2,
+      "source_ref": "fake",
+      "concepts": [],
+      "prompt_mdx": "Vous achetez un straddle sur ABC (call + put, même strike $K = 50$ €, même maturité). Vous payez 4 € pour le call et 3,50 € pour le put. À l'échéance, le cours d'ABC est **60 €**. Calculez le **profit net** de la stratégie (en euros, par unité de sous-jacent).",
+      "payload": {
+        "prompt": "Straddle P&L : call @ 4 €, put @ 3,50 €, K = 50 €, S_T = 60 €. Calculez le profit net.",
+        "time_limit_seconds": 90,
+        "tolerance": 0
+      },
+      "solution": {
+        "value": 2.5,
+        "steps_mdx": "## Résolution\n\n- **Coût total du straddle** : 4 + 3,50 = 7,50 €\n- **Valeur du call à T** : max(60 − 50, 0) = **10 €**\n- **Valeur du put à T** : max(50 − 60, 0) = **0 €**\n- **Valeur totale** : 10 + 0 = 10 €\n- **Profit net** : 10 − 7,50 = **2,50 €**"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@prep/ingest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "tsx scripts/validate.ts",
+    "load": "tsx scripts/load.ts",
+    "xls": "tsx scripts/xls-extract.ts",
+    "report": "tsx scripts/report.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "@types/ws": "^8.18.1",
+    "dotenv": "^16.4.5",
+    "ws": "^8.21.3",
+    "xlsx": "^0.18.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "tsx": "^4.19.0",
+    "typescript": "^5"
+  }
+}

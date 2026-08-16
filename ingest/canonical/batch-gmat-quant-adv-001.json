@@ -1,0 +1,210 @@
+{
+  "source": {
+    "kind": "own",
+    "title": "Original GMAT Advanced Quant — Batch 1",
+    "external_key": "own-gmat-adv-batch1"
+  },
+  "track": "gmat",
+  "module": "quantitative",
+  "items": [
+    {
+      "external_key": "own-gmat-adv-batch1-item-01",
+      "type": "mcq",
+      "difficulty": 3,
+      "source_ref": "original",
+      "concepts": ["number-properties", "divisibility"],
+      "prompt_mdx": "If $n$ is a positive integer and $n^3$ is divisible by 24, what is the least possible value of $n$?",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "2" },
+          { "key": "B", "text_mdx": "3" },
+          { "key": "C", "text_mdx": "4" },
+          { "key": "D", "text_mdx": "6" },
+          { "key": "E", "text_mdx": "12" }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": ["D"],
+        "explain_mdx": "24 = 2^3 × 3. Pour que n^3 contienne 2^3, n doit contenir au moins 2^1. Pour que n^3 contienne 3^1, n doit contenir au moins 3^1 (car 3×0=0 ne suffit pas). Donc n_min = 2×3 = 6. Vérification : 6^3 = 216 = 24×9.",
+        "distractor_explains": {
+          "A": "2^3 = 8 n'est pas divisible par 3.",
+          "B": "3^3 = 27 n'est pas divisible par 8.",
+          "C": "4^3 = 64 n'est pas divisible par 3.",
+          "E": "12 fonctionne mais n'est pas la plus petite valeur possible."
+        }
+      }
+    },
+    {
+      "external_key": "own-gmat-adv-batch1-item-02",
+      "type": "numeric",
+      "difficulty": 4,
+      "source_ref": "original",
+      "concepts": ["algebra-word-problems", "work-rate"],
+      "prompt_mdx": "Machine A can complete a job in $x$ hours. Machine B, which is 50% faster than Machine A, completes the same job in $x - 4$ hours. How many hours does Machine A alone take to complete the job?",
+      "payload": {
+        "unit": "hours",
+        "precision": 0,
+        "tolerance": { "type": "abs", "value": 0 }
+      },
+      "solution": {
+        "value": 12,
+        "formula_katex": "\\frac{x}{1.5} = x - 4",
+        "steps_mdx": "Le taux de B vaut 1.5 fois celui de A, donc le temps de B vaut x/1.5. On pose x/1.5 = x - 4, soit x = 1.5x - 6, donc 0.5x = 6, x = 12. Vérification : B met 12/1.5 = 8 h = x - 4."
+      }
+    },
+    {
+      "external_key": "own-gmat-adv-batch1-item-03",
+      "type": "mcq",
+      "difficulty": 4,
+      "source_ref": "original",
+      "concepts": ["combinatorics"],
+      "prompt_mdx": "A committee of 4 people is to be selected from a group of 6 men and 5 women. In how many ways can the committee be formed if it must include at least 2 women?",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "165" },
+          { "key": "B", "text_mdx": "195" },
+          { "key": "C", "text_mdx": "205" },
+          { "key": "D", "text_mdx": "215" },
+          { "key": "E", "text_mdx": "225" }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": ["D"],
+        "explain_mdx": "Décomposer par cas : 2F2H = C(5,2)×C(6,2) = 10×15 = 150 ; 3F1H = C(5,3)×C(6,1) = 10×6 = 60 ; 4F0H = C(5,4) = 5. Total = 150+60+5 = 215.",
+        "distractor_explains": {
+          "A": "Oublie le cas 4 femmes.",
+          "B": "Erreur de calcul sur le cas 3F1H.",
+          "C": "Erreur d'addition des trois cas.",
+          "E": "Confond avec le total sans la contrainte 'au moins 2 femmes'."
+        }
+      }
+    },
+    {
+      "external_key": "own-gmat-adv-batch1-item-04",
+      "type": "numeric",
+      "difficulty": 4,
+      "source_ref": "original",
+      "concepts": ["geometry-area"],
+      "prompt_mdx": "A circle is inscribed in a square with side length 8. Using π ≈ 3.14, what is the area of the region inside the square but outside the circle? (round to the nearest hundredth)",
+      "payload": {
+        "unit": "units²",
+        "precision": 2,
+        "tolerance": { "type": "abs", "value": 0.05 }
+      },
+      "solution": {
+        "value": 13.76,
+        "formula_katex": "8^2 - \\pi \\times 4^2",
+        "steps_mdx": "Aire du carré = 64. Rayon du cercle inscrit = 8/2 = 4, aire du cercle = π×16 = 50.24. Région = 64 - 50.24 = 13.76."
+      }
+    },
+    {
+      "external_key": "own-gmat-adv-batch1-item-05",
+      "type": "mcq",
+      "difficulty": 5,
+      "source_ref": "original",
+      "concepts": ["number-properties", "remainders-modular-arithmetic"],
+      "prompt_mdx": "When positive integer $k$ is divided by 7, the remainder is 3. When $k$ is divided by 11, the remainder is 5. What is the remainder when $k$ is divided by 77?",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "17" },
+          { "key": "B", "text_mdx": "24" },
+          { "key": "C", "text_mdx": "31" },
+          { "key": "D", "text_mdx": "38" },
+          { "key": "E", "text_mdx": "45" }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": ["D"],
+        "explain_mdx": "k = 7a+3. On veut 7a+3 ≡ 5 (mod 11), soit 7a ≡ 2 (mod 11). L'inverse de 7 mod 11 est 8 (7×8=56≡1). Donc a ≡ 16 ≡ 5 (mod 11), a = 11b+5. k = 7(11b+5)+3 = 77b+38. Reste = 38.",
+        "distractor_explains": {
+          "A": "Erreur dans le calcul de l'inverse modulaire.",
+          "B": "Confond avec un autre reste intermédiaire.",
+          "C": "Erreur d'arithmétique dans la résolution de la congruence.",
+          "E": "Dépasse la valeur correcte de 7."
+        }
+      }
+    },
+    {
+      "external_key": "own-gmat-adv-batch1-item-06",
+      "type": "mcq",
+      "difficulty": 4,
+      "source_ref": "original",
+      "concepts": ["data-sufficiency", "number-properties"],
+      "prompt_mdx": "Is integer $x$ divisible by 6?\n\n(1) $x$ is divisible by 3\n(2) $x$ is divisible by 4",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient." },
+          { "key": "B", "text_mdx": "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient." },
+          { "key": "C", "text_mdx": "BOTH statements TOGETHER are sufficient, but NEITHER statement alone is sufficient." },
+          { "key": "D", "text_mdx": "EACH statement ALONE is sufficient." },
+          { "key": "E", "text_mdx": "Statements (1) and (2) TOGETHER are still not sufficient." }
+        ],
+        "multiple": false,
+        "shuffle": false
+      },
+      "solution": {
+        "correct_keys": ["C"],
+        "explain_mdx": "(1) seul : x=9 est divisible par 3 mais pas par 6 → insuffisant. (2) seul : x=8 est divisible par 4 mais pas par 6 → insuffisant. Ensemble : x divisible par 3 et par 4 → divisible par ppcm(3,4)=12, donc par 6 → suffisant.",
+        "distractor_explains": {
+          "A": "x=9 est un contre-exemple à (1) seul.",
+          "B": "x=8 est un contre-exemple à (2) seul.",
+          "D": "Aucune des deux conditions seule ne suffit.",
+          "E": "Les deux ensemble suffisent bien, via le ppcm."
+        }
+      }
+    },
+    {
+      "external_key": "own-gmat-adv-batch1-item-07",
+      "type": "numeric",
+      "difficulty": 5,
+      "source_ref": "original",
+      "concepts": ["work-rate", "algebra-word-problems"],
+      "prompt_mdx": "A tank is filled by two pipes, A and B. Pipe A alone fills it in 6 hours, pipe B alone in 10 hours. Both are opened together, but after 2 hours pipe A is shut off. How many additional hours does pipe B alone take to fill the remaining part of the tank?",
+      "payload": {
+        "unit": "hours",
+        "precision": 2,
+        "tolerance": { "type": "abs", "value": 0.01 }
+      },
+      "solution": {
+        "value": 4.67,
+        "formula_katex": "\\left(1 - 2\\left(\\frac{1}{6}+\\frac{1}{10}\\right)\\right) \\div \\frac{1}{10}",
+        "steps_mdx": "En 2h à deux : 2×(1/6+1/10) = 2×(8/30) = 8/15 du réservoir rempli. Reste = 7/15. B seul à 1/10 par heure met (7/15)/(1/10) = 70/15 = 14/3 ≈ 4.67 h."
+      }
+    },
+    {
+      "external_key": "own-gmat-adv-batch1-item-08",
+      "type": "mcq",
+      "difficulty": 5,
+      "source_ref": "original",
+      "concepts": ["geometry-coordinate"],
+      "prompt_mdx": "In the xy-plane, line $l$ passes through the points $(2, 5)$ and $(6, -3)$. What is the x-intercept of line $l$?",
+      "payload": {
+        "options": [
+          { "key": "A", "text_mdx": "3" },
+          { "key": "B", "text_mdx": "3.5" },
+          { "key": "C", "text_mdx": "4" },
+          { "key": "D", "text_mdx": "4.5" },
+          { "key": "E", "text_mdx": "5" }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": ["D"],
+        "explain_mdx": "Pente = (-3-5)/(6-2) = -2. Équation : y - 5 = -2(x-2), soit y = 9 - 2x. x-intercept (y=0) : x = 4.5.",
+        "distractor_explains": {
+          "A": "Erreur de signe dans le calcul de la pente.",
+          "B": "Erreur d'arithmétique en résolvant y=0.",
+          "C": "Confond avec une valeur arrondie incorrecte.",
+          "E": "Erreur de calcul dans l'équation de la droite."
+        }
+      }
+    }
+  ]
+}
