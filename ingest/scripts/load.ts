@@ -86,18 +86,39 @@ async function resolveOrCreateSourceId(title: string): Promise<string | null> {
 
 async function resolveConceptIds(slugs: string[], moduleId: string): Promise<string[]> {
   if (slugs.length === 0) return [];
-  const { data } = await supabase
+
+  const { data: existing } = await supabase
     .from("concepts")
     .select("id, slug")
     .eq("module_id", moduleId)
     .in("slug", slugs);
 
-  const found = data?.map((r) => r.id) ?? [];
-  const missing = slugs.filter((s) => !data?.some((r) => r.slug === s));
+  const found = new Map((existing ?? []).map((r) => [r.slug as string, r.id as string]));
+  const missing = slugs.filter((s) => !found.has(s));
+
   if (missing.length > 0) {
-    console.warn(`  ⚠️  concepts introuvables (skipped) : ${missing.join(", ")}`);
+    if (DRY_RUN) {
+      console.log(`  [dry] concepts à créer : ${missing.join(", ")}`);
+    } else {
+      const toInsert = missing.map((slug) => ({
+        module_id: moduleId,
+        slug,
+        title: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+      }));
+      const { data: created, error } = await supabase
+        .from("concepts")
+        .insert(toInsert)
+        .select("id, slug");
+      if (error) {
+        console.warn(`  ⚠️  concepts non créés : ${error.message}`);
+      } else {
+        for (const r of created ?? []) found.set(r.slug as string, r.id as string);
+        console.log(`  ➕  concepts créés : ${missing.join(", ")}`);
+      }
+    }
   }
-  return found;
+
+  return slugs.map((s) => found.get(s)).filter((id): id is string => id !== undefined);
 }
 
 async function upsertExercise(
