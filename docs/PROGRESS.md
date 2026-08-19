@@ -47,6 +47,17 @@ DÉCISIONS:
   - Alias TypeScript @prep/schemas → packages/schemas/exercises.ts ajouté dans tsconfig.json et vitest.config.ts.
 FICHIERS CLÉS: packages/schemas/exercises.ts, packages/schemas/__fixtures__/*.ts, packages/schemas/__tests__/exercises.test.ts
 
+## 2026-08-19 — STEP-06 — Explorateur Umbrex + graph_fill
+STATUT: FAIT
+FAIT: Explorateur de graphes (tree CSS récursif, couleur par layer) avec bascule lecture/à-trous instantanée. Recall par défaut (input inline dans l'arbre), dragdrop en option (click-to-select + click-to-place). graph_fill branché dans ExerciseRunner + scoreGraphFill() dans session-actions (matching case-insensitive sur accepted_labels). Session RSC pré-fetche le graphe pour les graph_fill (client reçoit _graphData). Pages /consulting (liste) + /consulting/[graphId] (explorateur). Migration 20240011 : graphe test Consulting Problem-Solving 12 nœuds + exercice graph_fill de seed (external_key seed-graph-fill-consulting-ps-001).
+DÉCISIONS:
+  - Pas de D3/force-directed — rendu en CSS via parent_key (arbre). Suffisant pour les graphes hiérarchiques Umbrex.
+  - dragdrop implémenté comme click-select + click-place (accessible, sans librairie DnD).
+  - Graph data pré-fetché côté RSC session (pas de fetch client-side dans le runner) → pas de useEffect asynchrone dans ExerciseRunner.
+  - buttonVariants sur Link (pas asChild — Button ne l'implémente pas).
+  - typedRoutes: .next/types générés par premier passage dans next dev avant tsc --noEmit.
+FICHIERS CLÉS: supabase/migrations/20240011000000_seed_graph_test.sql, src/lib/graph-actions.ts, src/components/graph-explorer/{index,graph-tree,dragdrop-panel}.tsx, src/components/exercise-runner/runners/graph-fill.tsx, src/app/consulting/{page,[graphId]/page}.tsx
+
 ## 2026-08-16 — STEP-05 — Runner d'exercices (socle)
 STATUT: FAIT
 FAIT: ExerciseRunner + 4 runners (mcq, numeric, formula_cloze, short_answer) + page /session fonctionnelle. Scoring server-side (solution jamais transmis au client). Writes vers attempts + review_states (scheduling simplifié : +stability jours si correct, +10 min si raté) + concept_mastery (WMA α=0.3). MathText renderer KaTeX custom (pas de react-markdown). /session → 307 redirect si non authentifié, 200 après auth.
@@ -80,3 +91,34 @@ DÉCISIONS: tsconfig.json de /ingest nécessitait un rootDir explicite pour
 référencer packages/schemas/exercises.ts hors du dossier — corrigé.
 FICHIERS CLÉS: ingest/scripts/{validate,load,report,xls-extract}.ts,
 ingest/README.md, ingest/canonical/batch-001-fake.json, docs/ingest/COVERAGE.md
+
+## 2026-08-17 — STEP-07 — Atelier de modèles + comptes interactifs
+STATUT: FAIT
+FAIT: HyperFormula intégré (client + serveur), excel_model (3 check_mode, feedback
+cellule par cellule confirmé vert/orange/rouge avec message explicite "valeur
+juste — formule non conforme"), statement_interactive avec linked_checks
+dynamiques (ni_flows_to_re actif, contrôle en direct confirmé avant validation).
+Testé de bout en bout sur /session, attempts confirmés en base pour les 2 types.
+DÉCISIONS: comparaison de formule suit le pattern Monte Carlo du STEP-05, via
+HyperFormula au lieu de mathjs. linked_checks 'balance' et 'cf_ties_to_cash'
+détectés dynamiquement mais sans logique de calcul — à coder côté composant
+(pas côté ingestion) le jour où un template bilan/cash-flow est ajouté.
+FICHIERS CLÉS: src/components/model-workshop/, src/components/statement-interactive/,
+src/lib/model-actions.ts, supabase/migrations/20240012_*.sql
+
+## 2026-08-19 — STEP-06 — Explorateur Umbrex + graph_fill (corrections post-session)
+STATUT: FAIT
+FAIT: explorateur lecture + mode à trous (recall par défaut, dragdrop en option),
+graph_fill branché sur ExerciseRunner et scoreGraphFill(), testé de bout en bout
+sur /consulting (attempts + review_states confirmés en base)
+DÉCISIONS: migration 20240011 avait un littéral tableau malformé sur la colonne
+tags (chaîne JSON au lieu de array Postgres) — corrigé en array['...','...'].
+buttonVariants() exporté depuis button.tsx ("use client") était appelé directement
+depuis le RSC /consulting/page.tsx — corrigé en extrayant buttonVariants dans
+src/components/ui/button-variants.ts (sans directive client) ; button.tsx l'importe
+et le ré-exporte pour ne rien casser côté composants clients.
+Prochaine migration disponible : 20240012 (20240011 déjà pris par ce seed de test).
+FICHIERS CLÉS: src/components/ui/button-variants.ts (nouveau),
+src/components/ui/button.tsx (import depuis button-variants),
+src/app/consulting/page.tsx, src/app/consulting/[graphId]/page.tsx,
+supabase/migrations/20240011000000_seed_graph_test.sql

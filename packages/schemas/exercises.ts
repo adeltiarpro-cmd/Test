@@ -105,6 +105,7 @@ export const StatementLineSchema = z.object({
   given: z.boolean().optional(),
   editable: z.boolean(),
   formula_hint: z.string().optional(),
+  value: z.number().optional(), // shown to user for given=true lines
 });
 
 export const StatementInteractivePayloadSchema = z.object({

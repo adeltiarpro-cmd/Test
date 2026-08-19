@@ -1,13 +1,19 @@
 "use server";
 
 import { evaluate } from "mathjs";
+import HyperFormula from "hyperformula";
 import { createClient } from "@/lib/supabase/server";
+import type { CellResult } from "@/components/model-workshop";
+import type { LineResult } from "@/components/statement-interactive";
 
 export type ExerciseAnswer =
   | { type: "mcq"; selected_keys: string[] }
   | { type: "numeric"; value: number }
   | { type: "formula_cloze"; blanks: Record<string, string> }
-  | { type: "short_answer"; text: string };
+  | { type: "short_answer"; text: string }
+  | { type: "graph_fill"; nodes: Record<string, string> }
+  | { type: "excel_model"; cells: Record<string, string> }
+  | { type: "statement_interactive"; values: Record<string, string> };
 
 export type AttemptResult = {
   isCorrect: boolean;
@@ -15,11 +21,12 @@ export type AttemptResult = {
   explanation: string;
   distractorExplains?: Record<string, string>;
   blankFeedback?: Record<string, { correct: boolean; canonical: string; explain: string }>;
+  cellResults?: Record<string, CellResult>;
+  lineResults?: Record<string, LineResult>;
 };
 
-// ── Formula equivalence (AST-based, server-side only) ────────────────────────
+// ── Formula equivalence (mathjs — for formula_cloze) ─────────────────────────
 
-// Known mathjs built-ins that should not be treated as free variables.
 const MATH_BUILTINS = new Set([
   "pi", "e", "i", "Infinity", "NaN", "true", "false", "null",
   "sin", "cos", "tan", "asin", "acos", "atan", "atan2",
@@ -27,31 +34,18 @@ const MATH_BUILTINS = new Set([
   "ceil", "floor", "round", "sign", "min", "max", "pow", "mod",
 ]);
 
-/** Extract free variable names from a formula string using regex. */
 function extractVars(expr: string): string[] {
   const tokens = expr.match(/[a-zA-Z_][a-zA-Z0-9_]*/g) ?? [];
   return [...new Set(tokens.filter((t) => !MATH_BUILTINS.has(t)))];
 }
 
-/**
- * Returns true if two formula expressions are algebraically equivalent.
- * Strategy:
- *   1. Quick string check (strip whitespace, lowercase).
- *   2. Monte Carlo numeric evaluation with 3 random variable assignments —
- *      handles commutativity, associativity, and distributivity without
- *      needing a full symbolic algebra engine.
- */
 function formulasEquivalent(a: string, b: string): boolean {
   const strip = (s: string) => s.replace(/\s+/g, "").toLowerCase();
   if (strip(a) === strip(b)) return true;
-
   const vars = [...new Set([...extractVars(a), ...extractVars(b)])];
-
   for (let trial = 0; trial < 3; trial++) {
     const scope: Record<string, number> = {};
-    // Avoid 0 and 1 to catch bugs like x*1 ≡ x; use values in (1, 9).
     vars.forEach((v) => { scope[v] = Math.random() * 7 + 1.5; });
-
     try {
       const rA = Number(evaluate(a, scope));
       const rB = Number(evaluate(b, scope));
@@ -65,6 +59,105 @@ function formulasEquivalent(a: string, b: string): boolean {
   return true;
 }
 
+// ── Excel formula equivalence (HyperFormula Monte Carlo) ─────────────────────
+
+// Parse A1 ref to 0-indexed { row, col }
+function parseRef(ref: string): { row: number; col: number } {
+  const up = ref.toUpperCase().replace(/\$/g, "");
+  const colStr = up.match(/^([A-Z]+)/)?.[1] ?? "A";
+  const rowStr = up.match(/(\d+)$/)?.[1] ?? "1";
+  let col = 0;
+  for (const ch of colStr) col = col * 26 + (ch.charCodeAt(0) - 64);
+  return { row: parseInt(rowStr) - 1, col: col - 1 };
+}
+
+type HFInstance = ReturnType<typeof HyperFormula.buildFromArray>;
+
+/**
+ * Returns {row, col, originalValue} for every cell in the template that holds
+ * a plain number (not a formula, not an editable cell). These are the
+ * "free variables" we perturb to test algebraic equivalence of two formulas.
+ */
+function findPrimitiveInputs(
+  templateData: (string | number | null)[][],
+  editableSet: Set<string>
+): { row: number; col: number; originalValue: number }[] {
+  const result: { row: number; col: number; originalValue: number }[] = [];
+  templateData.forEach((row, ri) => {
+    row.forEach((cell, ci) => {
+      const ref = `${String.fromCharCode(65 + ci)}${ri + 1}`;
+      if (!editableSet.has(ref) && typeof cell === "number") {
+        result.push({ row: ri, col: ci, originalValue: cell });
+      }
+    });
+  });
+  return result;
+}
+
+/**
+ * Test whether userFormula and expectedFormula are algebraically equivalent by
+ * perturbing primitive input cells (3 Monte Carlo trials) and comparing the
+ * values HyperFormula computes for each formula at the target cell.
+ *
+ * Strategy mirrors the mathjs Monte Carlo used for formula_cloze:
+ *   - vary the concrete numeric inputs (e.g., Revenue, COGS)
+ *   - apply user formula → read value
+ *   - apply expected formula → read value
+ *   - if the two values agree in all 3 trials → formulas are equivalent
+ *
+ * Example: =B2+B1 vs =B1+B2 — both produce the same result for any B1, B2.
+ * Example: =B1*B2 vs =B1+B2 — differ for most {B1, B2} combinations.
+ */
+function excelFormulasEquivalent(
+  hf: HFInstance,
+  ref: string,
+  userFormula: string,
+  expectedFormula: string,
+  primitiveInputs: { row: number; col: number; originalValue: number }[]
+): boolean {
+  const { row, col } = parseRef(ref);
+  let ok = true;
+
+  for (let trial = 0; trial < 3; trial++) {
+    // Perturb primitive inputs by a random factor in (0.7, 1.3).
+    // Multiplying a negative number (e.g. COGS = -400) keeps its sign.
+    for (const ic of primitiveInputs) {
+      const factor = 0.7 + Math.random() * 0.6;
+      try {
+        hf.setCellContents({ sheet: 0, row: ic.row, col: ic.col }, ic.originalValue * factor);
+      } catch {}
+    }
+
+    try {
+      // Evaluate user formula at target cell
+      hf.setCellContents({ sheet: 0, row, col }, userFormula);
+      const userVal = hf.getCellValue({ sheet: 0, row, col });
+
+      // Evaluate expected formula at same cell
+      hf.setCellContents({ sheet: 0, row, col }, expectedFormula);
+      const expVal = hf.getCellValue({ sheet: 0, row, col });
+
+      // Restore user formula for subsequent iterations (keeps cascading cells correct)
+      hf.setCellContents({ sheet: 0, row, col }, userFormula);
+
+      if (typeof userVal !== "number" || typeof expVal !== "number") { ok = false; break; }
+      if (!isFinite(userVal) || !isFinite(expVal)) { ok = false; break; }
+      const tol = 1e-9 * Math.max(1, Math.abs(expVal));
+      if (Math.abs(userVal - expVal) > tol) { ok = false; break; }
+    } catch {
+      ok = false;
+      break;
+    }
+  }
+
+  // Restore original input values
+  for (const ic of primitiveInputs) {
+    try { hf.setCellContents({ sheet: 0, row: ic.row, col: ic.col }, ic.originalValue); } catch {}
+  }
+
+  return ok;
+}
+
 // ── Scorers ───────────────────────────────────────────────────────────────────
 
 function scoreMcq(
@@ -74,7 +167,12 @@ function scoreMcq(
   const correct = [...sol.correct_keys].sort().join(",");
   const given = [...selectedKeys].sort().join(",");
   const isCorrect = given === correct;
-  return { isCorrect, score: isCorrect ? 1 : 0, explanation: sol.explain_mdx, distractorExplains: sol.distractor_explains };
+  return {
+    isCorrect,
+    score: isCorrect ? 1 : 0,
+    explanation: sol.explain_mdx,
+    distractorExplains: sol.distractor_explains,
+  };
 }
 
 function scoreNumeric(
@@ -83,9 +181,8 @@ function scoreNumeric(
   tolerance: { type: "abs" | "rel"; value: number }
 ): AttemptResult {
   const diff = Math.abs(value - sol.value);
-  const threshold = tolerance.type === "abs"
-    ? tolerance.value
-    : Math.abs(sol.value) * tolerance.value;
+  const threshold =
+    tolerance.type === "abs" ? tolerance.value : Math.abs(sol.value) * tolerance.value;
   const isCorrect = diff <= threshold;
   return { isCorrect, score: isCorrect ? 1 : 0, explanation: sol.steps_mdx };
 }
@@ -97,7 +194,6 @@ function scoreFormulaCloze(
   const feedback: Record<string, { correct: boolean; canonical: string; explain: string }> = {};
   let hit = 0;
   const total = Object.keys(sol.blanks).length;
-
   for (const [key, blankSol] of Object.entries(sol.blanks)) {
     const userInput = (blanks[key] ?? "").trim();
     const candidates = [...blankSol.accepted, blankSol.canonical];
@@ -105,7 +201,6 @@ function scoreFormulaCloze(
     feedback[key] = { correct: ok, canonical: blankSol.canonical, explain: blankSol.explain_mdx };
     if (ok) hit++;
   }
-
   const score = total > 0 ? hit / total : 0;
   return {
     isCorrect: score === 1,
@@ -122,15 +217,202 @@ function scoreShortAnswer(
   const lower = text.toLowerCase();
   let total = 0;
   let matched = 0;
-
   for (const kp of sol.key_points) {
     total += kp.weight;
     const keywords = kp.text.toLowerCase().split(/[\s,;]+/).filter(Boolean);
     if (keywords.every((kw) => lower.includes(kw))) matched += kp.weight;
   }
-
   const score = total > 0 ? Math.round((matched / total) * 100) / 100 : 0;
   return { isCorrect: score >= 0.7, score, explanation: sol.model_answer_mdx };
+}
+
+function scoreGraphFill(
+  nodes: Record<string, string>,
+  sol: { nodes: Record<string, { accepted_labels: string[]; explain_mdx: string }> }
+): AttemptResult {
+  let hit = 0;
+  const total = Object.keys(sol.nodes).length;
+  const explanations: string[] = [];
+  for (const [key, nodeSol] of Object.entries(sol.nodes)) {
+    const userLabel = (nodes[key] ?? "").trim().toLowerCase();
+    const ok = nodeSol.accepted_labels.some((a) => a.toLowerCase() === userLabel);
+    if (ok) hit++;
+    else explanations.push(nodeSol.explain_mdx);
+  }
+  const score = total > 0 ? hit / total : 0;
+  return {
+    isCorrect: score === 1,
+    score,
+    explanation:
+      explanations.length > 0
+        ? explanations.join("\n\n")
+        : "Tous les nœuds sont corrects.",
+  };
+}
+
+async function scoreExcelModel(
+  userCells: Record<string, string>,
+  sol: { cells: Record<string, { formula?: string; value?: number | string; tolerance?: number; explain_mdx?: string }> },
+  pay: { template_id: string; editable_cells: string[]; given_cells?: Record<string, string | number>; check_mode: "value" | "formula" | "both" }
+): Promise<AttemptResult> {
+  // Fetch template to reconstruct HyperFormula sheet for value scoring
+  const supabase = await createClient();
+  const { data: tmpl } = await supabase
+    .from("model_templates")
+    .select("sheet")
+    .eq("id", pay.template_id)
+    .single();
+
+  const sheet = tmpl?.sheet as { cols: string[]; data: (string | number | null)[][] } | null;
+
+  const editableSet = new Set(pay.editable_cells);
+  let hf: HFInstance | null = null;
+  let primitiveInputs: ReturnType<typeof findPrimitiveInputs> = [];
+
+  if (sheet) {
+    const data = sheet.data.map((row) =>
+      row.map((cell) => (cell === null ? "" : cell))
+    ) as (string | number)[][];
+
+    primitiveInputs = findPrimitiveInputs(sheet.data, editableSet);
+
+    // Clear editable cells (start empty)
+    for (const ref of pay.editable_cells) {
+      const { row, col } = parseRef(ref);
+      if (data[row]) data[row][col] = "";
+    }
+    if (pay.given_cells) {
+      for (const [ref, val] of Object.entries(pay.given_cells)) {
+        const { row, col } = parseRef(ref);
+        if (data[row]) data[row][col] = val;
+      }
+    }
+    hf = HyperFormula.buildFromArray(data, { licenseKey: "gpl-v3" });
+  }
+
+  const cellResults: Record<string, CellResult> = {};
+  let hit = 0;
+  const total = Object.keys(sol.cells).length;
+
+  for (const [ref, solCell] of Object.entries(sol.cells)) {
+    const userFormula = (userCells[ref] ?? "").trim();
+    const tolerance = solCell.tolerance ?? 1;
+    const checkMode = pay.check_mode;
+
+    let valueCorrect = false;
+    let formulaCorrect: boolean | null = null;
+
+    if (hf) {
+      // Apply user formula and read computed value
+      const { row, col } = parseRef(ref);
+      const cellValue = userFormula.startsWith("=")
+        ? userFormula
+        : userFormula === ""
+        ? null
+        : isNaN(Number(userFormula))
+        ? userFormula
+        : Number(userFormula);
+      try {
+        hf.setCellContents({ sheet: 0, row, col }, cellValue);
+      } catch {}
+
+      const computed = hf.getCellValue({ sheet: 0, row, col });
+      const computedNum =
+        typeof computed === "number" ? computed : parseFloat(String(computed ?? ""));
+      const expectedNum =
+        typeof solCell.value === "number"
+          ? solCell.value
+          : parseFloat(String(solCell.value ?? ""));
+
+      valueCorrect =
+        !isNaN(computedNum) && !isNaN(expectedNum) && Math.abs(computedNum - expectedNum) <= tolerance;
+    } else {
+      // No template — fall back to raw value comparison
+      const userNum = parseFloat(userFormula);
+      const expectedNum =
+        typeof solCell.value === "number"
+          ? solCell.value
+          : parseFloat(String(solCell.value ?? ""));
+      valueCorrect =
+        !isNaN(userNum) && !isNaN(expectedNum) && Math.abs(userNum - expectedNum) <= tolerance;
+    }
+
+    // Formula equivalence — HyperFormula Monte Carlo (same strategy as mathjs for formula_cloze).
+    // Quick string check first (fast path); Monte Carlo only when strings differ.
+    if ((checkMode === "formula" || checkMode === "both") && solCell.formula && hf) {
+      const normalUser = userFormula.trim().toUpperCase().replace(/\s+/g, "").replace(/\$/g, "");
+      const normalExpected = solCell.formula.trim().toUpperCase().replace(/\s+/g, "").replace(/\$/g, "");
+      if (normalUser === normalExpected) {
+        formulaCorrect = true;
+      } else {
+        formulaCorrect = excelFormulasEquivalent(hf, ref, userFormula, solCell.formula, primitiveInputs);
+      }
+    } else if ((checkMode === "formula" || checkMode === "both") && solCell.formula && !hf) {
+      // No HF instance — fall back to string check only
+      const normalUser = userFormula.trim().toUpperCase().replace(/\s+/g, "").replace(/\$/g, "");
+      const normalExpected = solCell.formula.trim().toUpperCase().replace(/\s+/g, "").replace(/\$/g, "");
+      formulaCorrect = normalUser === normalExpected;
+    }
+
+    const cellCorrect =
+      checkMode === "value"
+        ? valueCorrect
+        : checkMode === "formula"
+        ? (formulaCorrect ?? false)
+        : valueCorrect && formulaCorrect !== false;
+
+    if (cellCorrect) hit++;
+    cellResults[ref] = {
+      valueCorrect,
+      formulaCorrect,
+      explain_mdx: solCell.explain_mdx ?? "",
+    };
+  }
+
+  if (hf) hf.destroy();
+
+  const score = total > 0 ? hit / total : 0;
+  return {
+    isCorrect: score === 1,
+    score,
+    explanation:
+      score === 1
+        ? "Toutes les cellules sont correctes."
+        : `${hit} / ${total} cellules correctes.`,
+    cellResults,
+  };
+}
+
+function scoreStatementInteractive(
+  userValues: Record<string, string>,
+  sol: { lines: Record<string, { value: number; tolerance: number; derivation_mdx: string }> }
+): AttemptResult {
+  const lineResults: Record<string, LineResult> = {};
+  let hit = 0;
+  let total = 0;
+
+  for (const [key, lineSol] of Object.entries(sol.lines)) {
+    if (!(key in userValues)) continue; // given or not submitted → skip
+    total++;
+    const userNum = parseFloat(
+      (userValues[key] ?? "").replace(",", ".")
+    );
+    const correct =
+      !isNaN(userNum) && Math.abs(userNum - lineSol.value) <= lineSol.tolerance;
+    if (correct) hit++;
+    lineResults[key] = { correct, explain_mdx: lineSol.derivation_mdx };
+  }
+
+  const score = total > 0 ? hit / total : 0;
+  return {
+    isCorrect: score === 1,
+    score,
+    explanation:
+      score === 1
+        ? "Toutes les lignes sont correctes."
+        : `${hit} / ${total} lignes correctes.`,
+    lineResults,
+  };
 }
 
 // ── Main action ───────────────────────────────────────────────────────────────
@@ -142,10 +424,11 @@ export async function submitAttempt(
 ): Promise<AttemptResult> {
   const supabase = await createClient();
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
-  // Fetch exercise + solution + concepts in one query
   const { data: ex, error } = await supabase
     .from("exercises")
     .select("type, payload, solution, exercise_concepts(concept_id)")
@@ -155,14 +438,16 @@ export async function submitAttempt(
 
   const pay = ex.payload as Record<string, unknown>;
   const sol = ex.solution as Record<string, unknown>;
-  const conceptIds = (ex.exercise_concepts as { concept_id: string }[] | null)
-    ?.map((ec) => ec.concept_id) ?? [];
+  const conceptIds =
+    (ex.exercise_concepts as { concept_id: string }[] | null)?.map((ec) => ec.concept_id) ?? [];
 
-  // Score
   let result: AttemptResult;
   switch (answer.type) {
     case "mcq":
-      result = scoreMcq(answer.selected_keys, sol as Parameters<typeof scoreMcq>[1]);
+      result = scoreMcq(
+        answer.selected_keys,
+        sol as Parameters<typeof scoreMcq>[1]
+      );
       break;
     case "numeric":
       result = scoreNumeric(
@@ -173,15 +458,42 @@ export async function submitAttempt(
       break;
     case "formula_cloze":
       result = scoreFormulaCloze(answer.blanks, {
-        blanks: sol.blanks as Record<string, { accepted: string[]; canonical: string; explain_mdx: string }>,
+        blanks: sol.blanks as Record<
+          string,
+          { accepted: string[]; canonical: string; explain_mdx: string }
+        >,
       });
       break;
     case "short_answer":
       result = scoreShortAnswer(answer.text, sol as Parameters<typeof scoreShortAnswer>[1]);
       break;
+    case "graph_fill":
+      result = scoreGraphFill(answer.nodes, {
+        nodes: sol.nodes as Record<
+          string,
+          { accepted_labels: string[]; explain_mdx: string }
+        >,
+      });
+      break;
+    case "excel_model":
+      result = await scoreExcelModel(answer.cells, { cells: sol.cells as Parameters<typeof scoreExcelModel>[1]["cells"] }, {
+        template_id: pay.template_id as string,
+        editable_cells: pay.editable_cells as string[],
+        given_cells: pay.given_cells as Record<string, string | number> | undefined,
+        check_mode: pay.check_mode as "value" | "formula" | "both",
+      });
+      break;
+    case "statement_interactive":
+      result = scoreStatementInteractive(answer.values, {
+        lines: sol.lines as Record<
+          string,
+          { value: number; tolerance: number; derivation_mdx: string }
+        >,
+      });
+      break;
   }
 
-  // Record attempt — strip discriminant `type` before storing as jsonb
+  // Record attempt
   const { type: _, ...answerPayload } = answer;
   await supabase.from("attempts").insert({
     user_id: user.id,
@@ -191,7 +503,7 @@ export async function submitAttempt(
     time_spent_ms: timeSpentMs,
   });
 
-  // Upsert review_states with simple SM-2-like scheduling
+  // Upsert review_states
   const { data: rs } = await supabase
     .from("review_states")
     .select("reps, lapses, stability")
@@ -200,14 +512,27 @@ export async function submitAttempt(
     .maybeSingle();
 
   const reps = (Number(rs?.reps) || 0) + 1;
-  const lapses = result.isCorrect ? (Number(rs?.lapses) || 0) : (Number(rs?.lapses) || 0) + 1;
-  const stability = result.isCorrect ? Math.min((Number(rs?.stability) || 0) + 1, 30) : 0.5;
+  const lapses = result.isCorrect
+    ? Number(rs?.lapses) || 0
+    : (Number(rs?.lapses) || 0) + 1;
+  const stability = result.isCorrect
+    ? Math.min((Number(rs?.stability) || 0) + 1, 30)
+    : 0.5;
   const dueAt = result.isCorrect
     ? new Date(Date.now() + stability * 86_400_000).toISOString()
-    : new Date(Date.now() + 600_000).toISOString(); // 10 min
+    : new Date(Date.now() + 600_000).toISOString();
 
   await supabase.from("review_states").upsert(
-    { user_id: user.id, exercise_id: exerciseId, due_at: dueAt, stability, reps, lapses, state: result.isCorrect ? 2 : 3, last_review_at: new Date().toISOString() },
+    {
+      user_id: user.id,
+      exercise_id: exerciseId,
+      due_at: dueAt,
+      stability,
+      reps,
+      lapses,
+      state: result.isCorrect ? 2 : 3,
+      last_review_at: new Date().toISOString(),
+    },
     { onConflict: "user_id,exercise_id" }
   );
 
@@ -220,10 +545,16 @@ export async function submitAttempt(
       .eq("concept_id", conceptId)
       .maybeSingle();
 
-    const newScore = Math.round((0.7 * Number(cm?.mastery_score || 0) + 0.3 * result.score) * 10_000) / 10_000;
+    const newScore =
+      Math.round((0.7 * Number(cm?.mastery_score || 0) + 0.3 * result.score) * 10_000) / 10_000;
 
     await supabase.from("concept_mastery").upsert(
-      { user_id: user.id, concept_id: conceptId, mastery_score: newScore, last_updated: new Date().toISOString() },
+      {
+        user_id: user.id,
+        concept_id: conceptId,
+        mastery_score: newScore,
+        last_updated: new Date().toISOString(),
+      },
       { onConflict: "user_id,concept_id" }
     );
   }

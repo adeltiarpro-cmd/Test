@@ -16,6 +16,7 @@
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.45.4",
     "class-variance-authority": "^0.7.1",
+    "hyperformula": "^3.4.0",
     "katex": "^0.18.4",
     "lucide-react": "^1.31.0",
     "mathjs": "^15.2.0",

@@ -11,8 +11,8 @@ pas de case tant que la précédente n'est pas cochée, sauf indication contrair
 | 4 | `STEP-04-design-system.md` | Claude Code | Le step file + skill `ui-ux-pro-max` | Tout le reste (indépendant) | `design-system/prep-platform/MASTER.md` + primitives UI | ☑ |
 | 5 | `STEP-05-exercise-runner-core.md` | Claude Code | Le step file + `exercises.ts` + primitives UI | Détail du pipeline d'ingestion | Runner `mcq`/`numeric`/`short_answer`/`formula_cloze` + page `/session` | ☑ |
 | — | **`INGEST-RUNBOOK.md`** | **Chat normal** (upload PDF) | Le runbook + le PDF/chapitre du jour | Le reste du repo — pas nécessaire | 1 fichier JSON canonique par lot, à coller dans `/ingest/canonical/` puis charger avec `load.ts` | récurrent, dès que STEP-03 est fait |
-| 6 | `STEP-06-graph-explorer.md` | Claude Code | Le step file + migrations `knowledge_graphs/*` + `exercises.ts` | — | Explorateur Umbrex + `graph_fill` | ☐ |
-| 7 | `STEP-07-excel-model-statements.md` | Claude Code | Le step file + migrations `model_templates` + `exercises.ts` | — | Atelier de modèles (HyperFormula) + comptes de résultat interactifs | ☐ |
+| 6 | `STEP-06-graph-explorer.md` | Claude Code | Le step file + migrations `knowledge_graphs/*` + `exercises.ts` | — | Explorateur Umbrex + `graph_fill` | ☑ |
+| 7 | `STEP-07-excel-model-statements.md` | Claude Code | Le step file + migrations `model_templates` + `exercises.ts` | — | Atelier de modèles (HyperFormula) + comptes de résultat interactifs | ☑ |
 | 8 | `STEP-08-case-formats.md` | Claude Code | Le step file + `exercises.ts` | — | `case_structuring`/`market_sizing`/`case_math` + bouton feedback LLM | ☐ |
 | 9 | `STEP-09-srs-pedagogy-dashboard.md` | Claude Code | Le step file + migrations `review_states/concept_mastery/module_targets` | — | SRS + 8 dispositifs pédagogiques + dashboard + vue Math | ☐ |
 | 10 | `STEP-10-hardening-deploy.md` | Claude Code | Le step file, revue transverse | — | Audit RLS, invitations, checklist skill, déploiement Vercel | ☐ |

@@ -1,11 +1,21 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { fetchGraphData } from "@/lib/graph-actions";
+import { fetchModelTemplate } from "@/lib/model-actions";
 import { SessionClient } from "./session-client";
 import type { SessionExercise } from "@/components/exercise-runner";
 
 export const metadata = { title: "Session — Prep Platform" };
 
-const SUPPORTED_TYPES = ["mcq", "numeric", "formula_cloze", "short_answer"] as const;
+const SUPPORTED_TYPES = [
+  "mcq",
+  "numeric",
+  "formula_cloze",
+  "short_answer",
+  "graph_fill",
+  "excel_model",
+  "statement_interactive",
+] as const;
 
 export default async function SessionPage() {
   const supabase = await createClient();
@@ -34,7 +44,7 @@ export default async function SessionPage() {
     exercises = (data ?? []) as SessionExercise[];
   }
 
-  // 2. Fallback: newest exercises of supported types (includes new ones)
+  // 2. Fallback: newest exercises of supported types
   if (exercises.length < 5) {
     const { data } = await supabase
       .from("exercises")
@@ -48,6 +58,26 @@ export default async function SessionPage() {
     exercises = [...exercises, ...newOnes].slice(0, 10);
   }
 
+  // 3. Pre-fetch server-side data for graph_fill and excel_model
+  const enriched = await Promise.all(
+    exercises.map(async (ex) => {
+      const pay = ex.payload as Record<string, unknown>;
+      if (ex.type === "graph_fill") {
+        const graphId = pay.graph_id as string | undefined;
+        if (!graphId) return ex;
+        const graphData = await fetchGraphData(graphId);
+        return { ...ex, payload: { ...pay, _graphData: graphData } } as SessionExercise;
+      }
+      if (ex.type === "excel_model") {
+        const templateId = pay.template_id as string | undefined;
+        if (!templateId) return ex;
+        const templateData = await fetchModelTemplate(templateId);
+        return { ...ex, payload: { ...pay, _templateData: templateData } } as SessionExercise;
+      }
+      return ex;
+    })
+  );
+
   return (
     <main className="min-h-screen bg-background px-4 py-8 md:px-8">
       <div className="mx-auto max-w-2xl flex flex-col gap-6">
@@ -60,7 +90,7 @@ export default async function SessionPage() {
           </p>
         </header>
 
-        <SessionClient exercises={exercises} />
+        <SessionClient exercises={enriched} />
       </div>
     </main>
   );
