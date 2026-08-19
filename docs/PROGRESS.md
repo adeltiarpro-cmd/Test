@@ -92,6 +92,12 @@ référencer packages/schemas/exercises.ts hors du dossier — corrigé.
 FICHIERS CLÉS: ingest/scripts/{validate,load,report,xls-extract}.ts,
 ingest/README.md, ingest/canonical/batch-001-fake.json, docs/ingest/COVERAGE.md
 
+## 2026-08-19 — STEP-08 — Cas structurés
+STATUT: FAIT
+FAIT: case_math (chrono strict, auto-submit à expiration), case_structuring (matching mots-clés/rubrique avec must_have, bouton feedback IA via Haiku à la demande), market_sizing (fourchette acceptable_range, bouton feedback IA à la demande). API route POST /api/case-feedback (Anthropic SDK, auth Supabase, Haiku 4.5). 3 exercices seed migration 20240013 (profitabilité, structuration consulting, cafés France). case_structuring et market_sizing persistent comme les grid types (rubricResults + LLM button visibles après submit). case_math non-persistent (ResultPanel standard).
+DÉCISIONS: runners case_structuring + market_sizing persistents (ajoutés à PERSISTENT_TYPES dans ExerciseRunner) — affichent rubric/résultat inline dans le runner ET ResultPanel (réponse modèle). LLM Haiku 4.5 car coût maîtrisé ; appel uniquement sur clic explicite. scoreCaseStructuring : is_correct = score ≥ 0.7 ET tous les must_have couverts. scoreMarketSizing : inRange = final_value dans acceptable_range.
+FICHIERS CLÉS: src/components/exercise-runner/runners/{case-math,case-structuring,market-sizing}.tsx, src/app/api/case-feedback/route.ts, src/lib/session-actions.ts, supabase/migrations/20240013000000_seed_case_exercises.sql
+
 ## 2026-08-17 — STEP-07 — Atelier de modèles + comptes interactifs
 STATUT: FAIT
 FAIT: HyperFormula intégré (client + serveur), excel_model (3 check_mode, feedback

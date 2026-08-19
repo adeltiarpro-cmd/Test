@@ -15,6 +15,9 @@ const SUPPORTED_TYPES = [
   "graph_fill",
   "excel_model",
   "statement_interactive",
+  "case_math",
+  "case_structuring",
+  "market_sizing",
 ] as const;
 
 export default async function SessionPage() {

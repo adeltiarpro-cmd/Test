@@ -12,6 +12,9 @@ import { ShortAnswerRunner } from "./runners/short-answer";
 import { GraphFillRunner } from "./runners/graph-fill";
 import { ExcelModelRunner } from "./runners/excel-model";
 import { StatementInteractiveRunner } from "./runners/statement-interactive";
+import { CaseMathRunner } from "./runners/case-math";
+import { CaseStructuringRunner } from "./runners/case-structuring";
+import { MarketSizingRunner } from "./runners/market-sizing";
 import { submitAttempt } from "@/lib/session-actions";
 import type { AttemptResult } from "@/lib/session-actions";
 
@@ -24,7 +27,10 @@ export type SessionExercise = {
     | "short_answer"
     | "graph_fill"
     | "excel_model"
-    | "statement_interactive";
+    | "statement_interactive"
+    | "case_math"
+    | "case_structuring"
+    | "market_sizing";
   difficulty: number;
   payload: Record<string, unknown>;
   tags: string[];
@@ -50,10 +56,16 @@ const TYPE_LABELS: Record<string, string> = {
   graph_fill: "Graphe à trous",
   excel_model: "Modèle Excel",
   statement_interactive: "État financier interactif",
+  case_math: "Math de Cas",
+  case_structuring: "Structuration de Cas",
+  market_sizing: "Market Sizing",
 };
 
-// Grid-based runners stay mounted after submission so the colored grid is visible.
+// Grid-based runners stay mounted so colored cells remain visible.
 const GRID_TYPES = new Set(["excel_model", "statement_interactive"]);
+// Case runners stay mounted so rubric results and LLM button remain visible.
+const CASE_TYPES = new Set(["case_structuring", "market_sizing"]);
+const PERSISTENT_TYPES = new Set([...GRID_TYPES, ...CASE_TYPES]);
 
 export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
   const [result, setResult] = useState<AttemptResult | null>(null);
@@ -63,7 +75,8 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
 
   const pay = exercise.payload as Record<string, unknown>;
   const promptMdx = (pay.prompt_mdx as string | undefined) ?? "";
-  const isGridType = GRID_TYPES.has(exercise.type);
+  const isPersistent = PERSISTENT_TYPES.has(exercise.type);
+  const isGrid = GRID_TYPES.has(exercise.type);
 
   async function handleSubmit(answer: Record<string, unknown>) {
     if (isSubmitting || result) return;
@@ -116,8 +129,8 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
         </div>
       )}
 
-      {/* Runner — grid types stay visible after submission */}
-      {(!result || isGridType) && (
+      {/* Runner — persistent types stay visible after submission */}
+      {(!result || isPersistent) && (
         <div aria-live="polite">
           {exercise.type === "mcq" && (
             <McqRunner
@@ -170,6 +183,31 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
               lineResults={result?.lineResults}
             />
           )}
+          {exercise.type === "case_math" && (
+            <CaseMathRunner
+              payload={pay as Parameters<typeof CaseMathRunner>[0]["payload"]}
+              onSubmit={(value) => handleSubmit({ value })}
+              disabled={isSubmitting || !!result}
+            />
+          )}
+          {exercise.type === "case_structuring" && (
+            <CaseStructuringRunner
+              payload={pay as Parameters<typeof CaseStructuringRunner>[0]["payload"]}
+              onSubmit={(text) => handleSubmit({ text })}
+              disabled={isSubmitting || !!result}
+              rubricResults={result?.rubricResults}
+              exerciseId={exercise.id}
+            />
+          )}
+          {exercise.type === "market_sizing" && (
+            <MarketSizingRunner
+              payload={pay as Parameters<typeof MarketSizingRunner>[0]["payload"]}
+              onSubmit={(finalValue, reasoning) => handleSubmit({ final_value: finalValue, reasoning })}
+              disabled={isSubmitting || !!result}
+              exerciseId={exercise.id}
+              submitted={!!result}
+            />
+          )}
           {isSubmitting && (
             <p className="text-sm text-muted-foreground animate-pulse mt-2">
               Correction en cours…
@@ -182,7 +220,7 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
       {result && (
         <div ref={resultRef} aria-live="assertive">
           {/* Grid types: compact score line instead of full ResultPanel */}
-          {isGridType ? (
+          {isGrid ? (
             <p
               className={cn(
                 "text-sm font-semibold mt-2",

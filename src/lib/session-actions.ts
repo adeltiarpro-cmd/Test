@@ -13,7 +13,18 @@ export type ExerciseAnswer =
   | { type: "short_answer"; text: string }
   | { type: "graph_fill"; nodes: Record<string, string> }
   | { type: "excel_model"; cells: Record<string, string> }
-  | { type: "statement_interactive"; values: Record<string, string> };
+  | { type: "statement_interactive"; values: Record<string, string> }
+  | { type: "case_math"; value: number }
+  | { type: "case_structuring"; text: string }
+  | { type: "market_sizing"; final_value: number; reasoning?: string };
+
+export type RubricBranchResult = {
+  branch_key: string;
+  label: string;
+  covered: boolean;
+  weight: number;
+  must_have: boolean;
+};
 
 export type AttemptResult = {
   isCorrect: boolean;
@@ -23,6 +34,7 @@ export type AttemptResult = {
   blankFeedback?: Record<string, { correct: boolean; canonical: string; explain: string }>;
   cellResults?: Record<string, CellResult>;
   lineResults?: Record<string, LineResult>;
+  rubricResults?: RubricBranchResult[];
 };
 
 // ── Formula equivalence (mathjs — for formula_cloze) ─────────────────────────
@@ -415,6 +427,66 @@ function scoreStatementInteractive(
   };
 }
 
+function scoreCaseMath(
+  value: number,
+  sol: { value: number; steps_mdx: string },
+  tolerance: number
+): AttemptResult {
+  const isCorrect = Math.abs(value - sol.value) <= tolerance;
+  return { isCorrect, score: isCorrect ? 1 : 0, explanation: sol.steps_mdx };
+}
+
+function scoreCaseStructuring(
+  text: string,
+  sol: {
+    rubric: Array<{ branch_key: string; label: string; keywords: string[]; weight: number; must_have: boolean }>;
+    model_answer_mdx: string;
+  }
+): AttemptResult {
+  const lower = text.toLowerCase();
+  const rubricResults: RubricBranchResult[] = [];
+  let totalWeight = 0;
+  let coveredWeight = 0;
+  let allMustHaveCovered = true;
+
+  for (const branch of sol.rubric) {
+    const covered = branch.keywords.every((kw) => lower.includes(kw.toLowerCase()));
+    rubricResults.push({
+      branch_key: branch.branch_key,
+      label: branch.label,
+      covered,
+      weight: branch.weight,
+      must_have: branch.must_have,
+    });
+    totalWeight += branch.weight;
+    if (covered) coveredWeight += branch.weight;
+    if (branch.must_have && !covered) allMustHaveCovered = false;
+  }
+
+  const score = totalWeight > 0 ? Math.round((coveredWeight / totalWeight) * 100) / 100 : 0;
+  const isCorrect = score >= 0.7 && allMustHaveCovered;
+
+  return {
+    isCorrect,
+    score,
+    explanation: sol.model_answer_mdx,
+    rubricResults,
+  };
+}
+
+function scoreMarketSizing(
+  finalValue: number,
+  sol: { final_value: number; acceptable_range: [number, number]; reasoning_mdx: string }
+): AttemptResult {
+  const [lo, hi] = sol.acceptable_range;
+  const inRange = finalValue >= lo && finalValue <= hi;
+  return {
+    isCorrect: inRange,
+    score: inRange ? 1 : 0,
+    explanation: sol.reasoning_mdx,
+  };
+}
+
 // ── Main action ───────────────────────────────────────────────────────────────
 
 export async function submitAttempt(
@@ -489,6 +561,26 @@ export async function submitAttempt(
           string,
           { value: number; tolerance: number; derivation_mdx: string }
         >,
+      });
+      break;
+    case "case_math":
+      result = scoreCaseMath(
+        answer.value,
+        sol as Parameters<typeof scoreCaseMath>[1],
+        pay.tolerance as number
+      );
+      break;
+    case "case_structuring":
+      result = scoreCaseStructuring(answer.text, {
+        rubric: sol.rubric as Parameters<typeof scoreCaseStructuring>[1]["rubric"],
+        model_answer_mdx: sol.model_answer_mdx as string,
+      });
+      break;
+    case "market_sizing":
+      result = scoreMarketSizing(answer.final_value, {
+        final_value: sol.final_value as number,
+        acceptable_range: sol.acceptable_range as [number, number],
+        reasoning_mdx: sol.reasoning_mdx as string,
       });
       break;
   }
