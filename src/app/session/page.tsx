@@ -32,7 +32,7 @@ export default async function SessionPage() {
     .select("exercise_id")
     .eq("user_id", user.id)
     .lte("due_at", new Date().toISOString())
-    .limit(10);
+    .limit(7);
 
   const dueIds = (dueStates ?? []).map((s) => s.exercise_id as string);
 
@@ -47,8 +47,8 @@ export default async function SessionPage() {
     exercises = (data ?? []) as SessionExercise[];
   }
 
-  // 2. Fallback: newest exercises of supported types
-  if (exercises.length < 5) {
+  // 2. Always fill remaining slots with newest exercises (includes unseen types)
+  if (exercises.length < 10) {
     const { data } = await supabase
       .from("exercises")
       .select("id, type, difficulty, payload, tags")

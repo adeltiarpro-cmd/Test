@@ -51,7 +51,7 @@ export function CaseMathRunner({ payload, onSubmit, disabled }: CaseMathRunnerPr
   const minutes = Math.floor(timeLeft / 60);
   const secs = timeLeft % 60;
   const timeStr = `${minutes}:${String(secs).padStart(2, "0")}`;
-  const urgent = timeLeft <= 30 && timeLeft > 0;
+  const urgent = timeLeft <= 10 && timeLeft > 0;
 
   return (
     <div className="flex flex-col gap-3">
