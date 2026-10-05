@@ -1,0 +1,288 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "capital-structure",
+  "items": [
+    {
+      "external_key": "qa-q082",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q82",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Quel est le candidat classique pour un LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "flux de trésorerie",
+            "weight": 0.3333
+          },
+          {
+            "text": "mature",
+            "weight": 0.3333
+          },
+          {
+            "text": "management",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Un LBO est le rachat d'une société par une holding fortement endettée, qui rembourse grâce aux dividendes remontés de la cible. La cible idéale génère des **flux de trésorerie** réguliers, opère sur un marché peu risqué, est **mature** avec peu de besoins d'investissement, et dispose d'un **management** solide capable de créer de la valeur."
+      }
+    },
+    {
+      "external_key": "qa-q083",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q83",
+      "concepts": [
+        "irr"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un TRI ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "valeur actuelle nette",
+            "weight": 0.5
+          },
+          {
+            "text": "coût",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le taux de rentabilité interne est le taux d'actualisation qui annule la **valeur actuelle nette** d'une série de flux, typiquement un investissement initial suivi de flux positifs. C'est un critère de décision : un projet crée de la valeur si son TRI dépasse le **coût** du capital."
+      }
+    },
+    {
+      "external_key": "qa-q084",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q84",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Pouvez-vous décrire les étapes d'un modèle LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "plan",
+            "weight": 0.2
+          },
+          {
+            "text": "sources",
+            "weight": 0.2
+          },
+          {
+            "text": "flux",
+            "weight": 0.2
+          },
+          {
+            "text": "sortie",
+            "weight": 0.2
+          },
+          {
+            "text": "TRI",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "1. Établir le **plan** d'affaires de la cible. 2. Fixer les hypothèses d'entrée : emplois (prix, souvent un multiple d'EBE) et **sources** (part de dette, donc levier). 3. Calculer les **flux** annuels disponibles après intérêts et les affecter au remboursement de la dette. 4. Fixer les hypothèses de **sortie** : durée de 4 à 6 ans et multiple, souvent égal à celui d'entrée. 5. Calculer le **TRI** : (valeur des capitaux propres à la sortie / capitaux propres investis)^(1/n) - 1. Si le fonds a un TRI cible, c'est le prix d'acquisition qui devient la résultante."
+      }
+    },
+    {
+      "external_key": "qa-q085",
+      "type": "numeric",
+      "difficulty": 5,
+      "source_ref": "Q&A Annales, Q85",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "LBO fin 2018 à 7x un EBE de 100 M€, levier de 4x, dette à 2 % remboursée chaque année avec tout le flux disponible. EBE des cinq années de détention : 100, 110, 120, 130, 140. Impôt 25 %, investissements 10 M€ par an, amortissements égaux à 20 % des investissements. Sortie à 7x la cinquième année. Quel est le TRI (en %) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 1,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 26.3,
+        "steps_mdx": "Prix = 700, dette = 400, capitaux propres = 300. Chaque année : flux = EBE - intérêts - impôt - investissements, avec impôt = 25 % × (EBE - 2 d'amortissement - intérêts). Flux successifs d'environ 60, 68, 76, 85 et 94 : la dette nette tombe à environ 17. Valeur d'entreprise de sortie = 7 × 140 = 980, capitaux propres ≈ 963. TRI = (963 / 300)^(1/5) - 1 ≈ 26 %. Le corrigé du document aboutit à 966 et 26 % avec des intérêts un peu plus faibles que 2 % de la dette : l'écart est sans effet sur le résultat arrondi.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "qa-q086",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q86",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "Comment augmenter le TRI du fonds dans un LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prix d'acquisition",
+            "weight": 0.25
+          },
+          {
+            "text": "sortie",
+            "weight": 0.25
+          },
+          {
+            "text": "dette",
+            "weight": 0.25
+          },
+          {
+            "text": "croissance",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Baisser le **prix d'acquisition**, augmenter le prix de **sortie**, lever davantage de **dette**, accélérer la **croissance** de l'entreprise (désendettement plus rapide et, à multiple constant, prix de vente plus élevé), raccourcir la durée de détention, et réduire les coûts pour améliorer la performance opérationnelle."
+      }
+    },
+    {
+      "external_key": "qa-q087",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q87",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "D'où vient la création de valeur dans les LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "gouvernance",
+            "weight": 0.5
+          },
+          {
+            "text": "management",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Selon la lecture défendue dans le document, pas du levier lui-même mais de la **gouvernance** propre au montage : la dette met le **management** sous pression pour améliorer la performance opérationnelle (il faut servir la dette), et le package d'intéressement l'associe au gain. C'est le bâton et la carotte. En pratique, on décompose aussi le gain du fonds en croissance de l'EBE, variation du multiple et désendettement."
+      }
+    },
+    {
+      "external_key": "qa-q089",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q89",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un « dividend recap » dans un LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "réendett",
+            "weight": 0.5
+          },
+          {
+            "text": "dividende",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le fonds **réendette** une société qu'il contrôle depuis quelques années pour se faire verser un **dividende** exceptionnel. Ce n'est pas une sortie, puisqu'il reste actionnaire, mais il récupère une partie des capitaux investis."
+      }
+    },
+    {
+      "external_key": "qa-q090",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q90",
+      "concepts": [
+        "revolver"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un « crédit revolving » ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "court terme",
+            "weight": 0.5
+          },
+          {
+            "text": "fonds de roulement",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Une ligne de crédit à **court terme** renouvelable en permanence, tirée et remboursée selon les besoins. Elle sert notamment à financer le besoin en **fonds de roulement**."
+      }
+    },
+    {
+      "external_key": "qa-q091",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q91",
+      "concepts": [
+        "covenants"
+      ],
+      "prompt_mdx": "Pouvez-vous définir un « covenant » ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "ratio",
+            "weight": 0.5
+          },
+          {
+            "text": "remboursement anticipé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un engagement de l'emprunteur que les prêteurs surveillent pour détecter un risque sur leur remboursement. Deux familles : ceux testés seulement quand la société prend une décision (nouvelle dette, investissement) et ceux de maintenance, testés à intervalles réguliers. Ils portent sur des **ratios** financiers : dette nette / EBE, couverture des intérêts, niveau d'investissement. En cas de rupture, la banque peut exiger le **remboursement anticipé**."
+      }
+    },
+    {
+      "external_key": "qa-q092",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q92",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "Quels sont les effets d'un « dividend recap » de 10 M€ sur le bilan ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette nette",
+            "weight": 0.5
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La **dette nette** augmente de 10 M€ et les **capitaux propres** baissent de 10 M€, le dividende venant en déduction des réserves."
+      }
+    }
+  ]
+}

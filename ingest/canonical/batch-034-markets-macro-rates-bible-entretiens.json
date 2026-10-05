@@ -1,0 +1,67 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "markets",
+  "module": "macro-rates",
+  "items": [
+    {
+      "external_key": "bible-p3-cult-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Culture générale, Q1",
+      "concepts": [
+        "market-culture"
+      ],
+      "prompt_mdx": "Connaissez-vous les niveaux d'inflation dans le monde ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "États-Unis",
+            "weight": 0.3333
+          },
+          {
+            "text": "France",
+            "weight": 0.3333
+          },
+          {
+            "text": "zone euro",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Il faut avoir en tête l'ordre de grandeur de l'inflation des principales zones : **États-Unis**, **France** et **zone euro**, plus celle de la zone visée par le poste. Les chiffres changent : à vérifier juste avant l'entretien."
+      }
+    },
+    {
+      "external_key": "bible-p3-cult-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Culture générale, Q2",
+      "concepts": [
+        "market-culture"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un taux interbancaire ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "banques",
+            "weight": 0.3333
+          },
+          {
+            "text": "référence",
+            "weight": 0.3333
+          },
+          {
+            "text": "Euribor",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le taux auquel les **banques** se prêtent entre elles sur le marché interbancaire. Il sert de **référence** pour valoriser de nombreux instruments (prêts, dérivés). Exemple : l'**Euribor** en zone euro. Les Libor cités par le document ont depuis été remplacés par d'autres taux de référence."
+      }
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "capital-structure",
+  "items": [
+    {
+      "external_key": "bible-p3-lbo-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III LBO, Q1",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un LBO (Leveraged Buy-Out) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "levier",
+            "weight": 0.3333
+          },
+          {
+            "text": "holding",
+            "weight": 0.3333
+          },
+          {
+            "text": "dividendes",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Un montage qui permet d'acquérir une entreprise par effet de **levier**, avec des fonds propres et un emprunt. L'investisseur crée une **holding** qui porte la dette, remboursée grâce aux **dividendes** remontés par la cible. La solidité du montage dépend donc de la capacité de la cible à générer du cash. Le document évoque un ordre de grandeur de 25 % de fonds propres pour 75 % de dette."
+      }
+    },
+    {
+      "external_key": "bible-p3-lbo-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III LBO, Q2",
+      "concepts": [
+        "lbo-types"
+      ],
+      "prompt_mdx": "Quels sont les différents types de LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "MBO",
+            "weight": 0.25
+          },
+          {
+            "text": "MBI",
+            "weight": 0.25
+          },
+          {
+            "text": "OBO",
+            "weight": 0.25
+          },
+          {
+            "text": "build-up",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**MBO** (Management Buy-Out) : rachat par les dirigeants ou salariés en place. **MBI** (Management Buy-In) : rachat par des dirigeants extérieurs. **OBO** (Owner Buy-Out) : rachat par le dirigeant actionnaire lui-même. **Build-up** : la société rachète plusieurs entreprises de son secteur pour créer des synergies industrielles."
+      }
+    },
+    {
+      "external_key": "bible-p3-lbo-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III LBO, Q3",
+      "concepts": [
+        "lbo-candidate"
+      ],
+      "prompt_mdx": "Quelles sont les principales caractéristiques d'un bon candidat LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash-flow",
+            "weight": 0.3333
+          },
+          {
+            "text": "barrières",
+            "weight": 0.3333
+          },
+          {
+            "text": "management",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Un **cash-flow** stable et prévisible pour servir la dette, un vrai potentiel de croissance, des **barrières** à l'entrée, un **management** motivé et compétent, des risques opérationnels maîtrisés. En bref une « cash machine »."
+      }
+    },
+    {
+      "external_key": "bible-p3-lbo-q004",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, III LBO, Q4",
+      "concepts": [
+        "lbo-model"
+      ],
+      "prompt_mdx": "Peux-tu me dérouler un modèle LBO ?",
+      "payload": {
+        "max_words": 200
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "hypothèses",
+            "weight": 0.2
+          },
+          {
+            "text": "uses",
+            "weight": 0.2
+          },
+          {
+            "text": "bilan",
+            "weight": 0.2
+          },
+          {
+            "text": "sortie",
+            "weight": 0.2
+          },
+          {
+            "text": "TRI",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "1. Poser les **hypothèses** : prix d'acquisition, ratio dette / fonds propres, taux d'intérêt. 2. Construire le tableau **Uses** & Sources : le prix à payer d'un côté, dette et fonds propres de l'autre. 3. Ajuster le **bilan** de la cible pour le nouveau financement et le goodwill. 4. Projeter les trois états pour vérifier la capacité à servir la dette et à remonter des dividendes. 5. Estimer le prix de **sortie**, en général par un multiple d'EBITDA. 6. Calculer le retour, c'est-à-dire le **TRI** Equity. Il monte avec un prix d'achat plus bas, plus de levier, plus de croissance, plus de marge ou un taux d'intérêt plus faible."
+      }
+    },
+    {
+      "external_key": "bible-p3-lbo-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III LBO, Q5",
+      "concepts": [
+        "lbo-model"
+      ],
+      "prompt_mdx": "Quelles hypothèses ont le plus d'impact sur les résultats d'un modèle LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prix d'acquisition",
+            "weight": 0.3333
+          },
+          {
+            "text": "multiple de sortie",
+            "weight": 0.3333
+          },
+          {
+            "text": "gearing",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Dans l'ordre : le **prix d'acquisition**, le **multiple de sortie**, le **gearing**, puis les hypothèses opérationnelles (croissance des revenus et marge d'EBITDA)."
+      }
+    },
+    {
+      "external_key": "bible-p3-lbo-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III LBO, Q6",
+      "concepts": [
+        "lbo-exit"
+      ],
+      "prompt_mdx": "Quelles sont les sorties possibles d'un LBO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "fonds",
+            "weight": 0.3333
+          },
+          {
+            "text": "corporate",
+            "weight": 0.3333
+          },
+          {
+            "text": "IPO",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "La revente à un autre **fonds** d'investissement, la revente à un **corporate**, ou une **IPO**."
+      }
+    },
+    {
+      "external_key": "bible-p3-lbo-q007",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, III LBO, Q7",
+      "concepts": [
+        "value-creation-levers"
+      ],
+      "prompt_mdx": "Citez les 3 leviers de création de valeur d'un fonds dans un LBO. Illustrez le premier : société achetée 100 M€ avec 75 M€ de dette et 25 M€ de fonds propres, 10 M€ de dividendes par an pendant 5 ans affectés à la dette, revente à 100 M€.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "remboursement de la dette",
+            "weight": 0.25
+          },
+          {
+            "text": "croissance",
+            "weight": 0.25
+          },
+          {
+            "text": "multiples",
+            "weight": 0.25
+          },
+          {
+            "text": "3",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "1. Le **remboursement de la dette** : en 5 ans, 50 M€ sont remboursés. À la revente pour 100 M€, il reste 25 M€ de dette, donc 75 M€ pour le fonds, soit **3** fois sa mise alors que la valeur de l'entreprise n'a pas bougé. 2. La **croissance** de la cible : EBITDA et résultats en hausse, donc une valorisation plus élevée à multiple constant. 3. L'évolution des **multiples** entre l'entrée et la sortie, qui dépend de la tendance du secteur."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q9",
+      "concepts": [
+        "investment-thesis"
+      ],
+      "prompt_mdx": "Choisissez une entreprise et expliquez en quoi ce serait un bon investissement.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "secteur",
+            "weight": 0.3333
+          },
+          {
+            "text": "financi",
+            "weight": 0.3333
+          },
+          {
+            "text": "non financiers",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Réponse personnelle à préparer, selon quatre axes : présenter l'entreprise en une ou deux phrases, analyser son **secteur** et ses tendances, analyser sa santé **financière** par les ratios, puis les éléments **non financiers** qui confortent le choix (savoir-faire, qualité du management, diversité des clients, contrats récents, nouveaux produits). Le recruteur évalue l'analyse, l'argumentation et la logique."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q10",
+      "concepts": [
+        "investment-thesis"
+      ],
+      "prompt_mdx": "Parlez-moi d'un secteur dans lequel vous investiriez actuellement.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "marché",
+            "weight": 0.5
+          },
+          {
+            "text": "drivers",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Réponse à préparer par une recherche approfondie sur un secteur choisi à l'avance. La règle : présenter l'état actuel du **marché** et ses **drivers** de croissance, en s'appuyant sur des études sectorielles et des statistiques publiques."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q11",
+      "concepts": [
+        "investment-thesis"
+      ],
+      "prompt_mdx": "Quel est l'état du marché du Private Equity en ce moment ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "rapports",
+            "weight": 0.5
+          },
+          {
+            "text": "presse",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Réponse d'actualité, à préparer avant l'entretien à partir des **rapports** annuels publiés par les cabinets de conseil et d'audit et de la **presse** économique."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q12",
+      "concepts": [
+        "irr"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un bon investissement ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "TRI",
+            "weight": 0.25
+          },
+          {
+            "text": "WACC",
+            "weight": 0.25
+          },
+          {
+            "text": "VAN",
+            "weight": 0.25
+          },
+          {
+            "text": "free cash-flows",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Sous l'angle financier : un **TRI** supérieur au **WACC**, une **VAN** au moins positive, et des **Free Cash-Flows** positifs sur le long terme, même s'ils sont négatifs au départ. En clair, un investissement qui crée de la valeur."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q013",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q13",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Dans un LBO, pourquoi l'investisseur s'intéresse-t-il à l'Enterprise Value de la cible ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Parce qu'en plus de racheter les fonds propres, il reprend la **dette** de la cible : c'est la valeur d'entreprise qui mesure ce qu'il engage."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q14",
+      "concepts": [
+        "lbo-valuation"
+      ],
+      "prompt_mdx": "Pourquoi le modèle LBO n'est-il pas réellement une méthode de valorisation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prix maximum",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Parce que son objet est de déterminer le **prix maximum** qu'un investisseur peut payer pour atteindre son rendement cible, pas de mesurer une valeur intrinsèque."
+      }
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "consulting",
+  "module": "market-sizing",
+  "items": [
+    {
+      "external_key": "bible-p5-ms-q001",
+      "type": "market_sizing",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, V Market Sizing, Q1",
+      "concepts": [
+        "market-estimation"
+      ],
+      "prompt_mdx": "Pouvez-vous estimer la valorisation immobilière de l'avenue Foch ?",
+      "payload": {
+        "question": "Pouvez-vous estimer la valorisation immobilière de l'avenue Foch ?",
+        "allowed_assumptions": [
+          "Longueur de l'avenue : 1 000 m",
+          "Un bâtiment : 100 m de long sur 20 m de large, 3 étages",
+          "Prix : 10 000 € le m²"
+        ],
+        "unit": "€"
+      },
+      "solution": {
+        "tree": [
+          {
+            "key": "batiments",
+            "label": "Bâtiments (10 par côté)",
+            "value": 20,
+            "unit": "bâtiments"
+          },
+          {
+            "key": "surface_sol",
+            "label": "Surface au sol d'un bâtiment",
+            "value": 2000,
+            "unit": "m²"
+          },
+          {
+            "key": "surface",
+            "label": "Surface totale d'un bâtiment (3 étages)",
+            "value": 6000,
+            "unit": "m²"
+          },
+          {
+            "key": "valeur_bat",
+            "label": "Valeur d'un bâtiment",
+            "value": 60000000,
+            "unit": "€"
+          },
+          {
+            "key": "total",
+            "label": "Valeur de l'avenue",
+            "value": 1200000000,
+            "unit": "€"
+          }
+        ],
+        "final_value": 1200000000,
+        "acceptable_range": [
+          600000000,
+          3000000000
+        ],
+        "reasoning_mdx": "1 000 m / 100 m = 10 bâtiments par côté, soit 20. Surface au sol : 100 × 20 = 2 000 m², sur 3 étages : 6 000 m². À 10 000 € le m², un bâtiment vaut 60 M€. Total : 20 × 60 M€ = **1,2 Md€**."
+      }
+    },
+    {
+      "external_key": "bible-p5-ms-q002",
+      "type": "market_sizing",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, V Market Sizing, Q2",
+      "concepts": [
+        "market-estimation"
+      ],
+      "prompt_mdx": "En moyenne, combien dépense un foyer français au restaurant sur une année ?",
+      "payload": {
+        "question": "En moyenne, combien dépense un foyer français au restaurant sur une année ?",
+        "allowed_assumptions": [
+          "Foyer moyen : 3 personnes",
+          "2 sorties au restaurant par mois",
+          "50 € par personne"
+        ],
+        "unit": "€/an"
+      },
+      "solution": {
+        "tree": [
+          {
+            "key": "personnes",
+            "label": "Personnes par foyer",
+            "value": 3,
+            "unit": "personnes"
+          },
+          {
+            "key": "panier",
+            "label": "Dépense par sortie",
+            "value": 150,
+            "unit": "€"
+          },
+          {
+            "key": "mensuel",
+            "label": "Dépense mensuelle",
+            "value": 300,
+            "unit": "€"
+          },
+          {
+            "key": "total",
+            "label": "Dépense annuelle",
+            "value": 3600,
+            "unit": "€"
+          }
+        ],
+        "final_value": 3600,
+        "acceptable_range": [
+          1500,
+          6000
+        ],
+        "reasoning_mdx": "3 personnes × 50 € = 150 € par sortie. 2 sorties par mois : 300 €. Sur 12 mois : **3 600 € par an**."
+      }
+    },
+    {
+      "external_key": "bible-p5-ms-q003",
+      "type": "market_sizing",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, V Market Sizing, Q3",
+      "concepts": [
+        "market-estimation"
+      ],
+      "prompt_mdx": "Quel est le nombre de stations de métro en Île-de-France ?",
+      "payload": {
+        "question": "Quel est le nombre de stations de métro en Île-de-France ?",
+        "allowed_assumptions": [
+          "Environ 15 lignes de métro",
+          "Une vingtaine de stations par ligne"
+        ],
+        "unit": "stations"
+      },
+      "solution": {
+        "tree": [
+          {
+            "key": "lignes",
+            "label": "Lignes de métro",
+            "value": 15,
+            "unit": "lignes"
+          },
+          {
+            "key": "stations_ligne",
+            "label": "Stations par ligne",
+            "value": 20,
+            "unit": "stations"
+          },
+          {
+            "key": "total",
+            "label": "Stations",
+            "value": 300,
+            "unit": "stations"
+          }
+        ],
+        "final_value": 300,
+        "acceptable_range": [
+          220,
+          400
+        ],
+        "reasoning_mdx": "15 lignes × 20 stations = **environ 300 stations**. Le document indique un chiffre réel proche, 303."
+      }
+    },
+    {
+      "external_key": "bible-p5-ms-q004",
+      "type": "market_sizing",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, V Market Sizing, Q4",
+      "concepts": [
+        "market-estimation"
+      ],
+      "prompt_mdx": "Combien y a-t-il de stations essence en France ?",
+      "payload": {
+        "question": "Combien y a-t-il de stations essence en France ?",
+        "allowed_assumptions": [
+          "Population arrondie à 70 millions, dont 50 millions de conducteurs",
+          "Une voiture pour deux conducteurs",
+          "25 pleins par an et par véhicule",
+          "Une station sert 150 véhicules par jour, 360 jours par an"
+        ],
+        "unit": "stations"
+      },
+      "solution": {
+        "tree": [
+          {
+            "key": "conducteurs",
+            "label": "Conducteurs",
+            "value": 50000000,
+            "unit": "personnes"
+          },
+          {
+            "key": "vehicules",
+            "label": "Véhicules",
+            "value": 25000000,
+            "unit": "véhicules"
+          },
+          {
+            "key": "pleins",
+            "label": "Pleins par an",
+            "value": 625000000,
+            "unit": "pleins"
+          },
+          {
+            "key": "capacite",
+            "label": "Pleins par station et par an",
+            "value": 54000,
+            "unit": "pleins"
+          },
+          {
+            "key": "total",
+            "label": "Stations",
+            "value": 11574,
+            "unit": "stations"
+          }
+        ],
+        "final_value": 11574,
+        "acceptable_range": [
+          7000,
+          18000
+        ],
+        "reasoning_mdx": "50 millions de conducteurs, une voiture pour deux : 25 millions de véhicules. À 25 pleins par an : 625 millions de pleins. Une station en sert 150 × 360 = 54 000. Résultat : 625 000 000 / 54 000 ≈ **11 500 stations**. Le document cite environ 11 000 stations réelles fin 2018."
+      }
+    },
+    {
+      "external_key": "bible-p5-ms-q005",
+      "type": "market_sizing",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, V Market Sizing, Q5",
+      "concepts": [
+        "volume-estimation"
+      ],
+      "prompt_mdx": "Combien peut-on mettre de balles de golf dans un bus ?",
+      "payload": {
+        "question": "Combien peut-on mettre de balles de golf dans un bus ?",
+        "allowed_assumptions": [
+          "Bus : 10 m de long, 3 m de haut, 4 m de large",
+          "Balle : 4 cm de diamètre, soit 25 balles par mètre"
+        ],
+        "unit": "balles"
+      },
+      "solution": {
+        "tree": [
+          {
+            "key": "volume",
+            "label": "Volume du bus",
+            "value": 120,
+            "unit": "m³"
+          },
+          {
+            "key": "balles_m3",
+            "label": "Balles par m³ (25 × 25 × 25)",
+            "value": 15625,
+            "unit": "balles"
+          },
+          {
+            "key": "total",
+            "label": "Balles",
+            "value": 1875000,
+            "unit": "balles"
+          }
+        ],
+        "final_value": 1875000,
+        "acceptable_range": [
+          900000,
+          3000000
+        ],
+        "reasoning_mdx": "Volume : 10 × 3 × 4 = 120 m³. 25 balles par mètre, donc 25³ = 15 625 balles par m³. Total : 120 × 15 625 = **1 875 000 balles**. Ce calcul ignore les sièges et les vides entre sphères, il donne donc un majorant."
+      }
+    }
+  ]
+}

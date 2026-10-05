@@ -1,0 +1,2135 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "capital-structure",
+  "items": [
+    {
+      "external_key": "ibq400-lbo-basic-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q1",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Walk me through a basic LBO model.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.2
+          },
+          {
+            "text": "sources",
+            "weight": 0.2
+          },
+          {
+            "text": "balance sheet",
+            "weight": 0.2
+          },
+          {
+            "text": "debt",
+            "weight": 0.2
+          },
+          {
+            "text": "exit",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "1. Set the assumptions: **purchase price**, debt and equity split, interest rates, and operating assumptions such as growth and margins. 2. Build the **Sources** and Uses table, which shows how the deal is funded and how much investor equity is needed. 3. Adjust the **Balance Sheet** for the new debt and equity, with Goodwill and intangibles as the balancing item. 4. Project the three statements and work out how much **debt** is repaid each year from available cash flow. 5. Assume an **exit**, usually on an EBITDA multiple, and compute the return on the equity invested."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q2",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "Why would you use leverage when buying a company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "return",
+            "weight": 0.5
+          },
+          {
+            "text": "capital",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To raise the **return** on equity: borrowed money is not your own, so the same gain is earned on a smaller cheque. Paying 5 billion with 2 billion of equity and 3 billion of debt beats the reverse. It also leaves the fund with more **capital** for other deals."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q3",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "What variables impact an LBO model the most?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "exit",
+            "weight": 0.3333
+          },
+          {
+            "text": "leverage",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Purchase** and **exit** multiples first. Then the amount of **leverage**. Then operating drivers such as revenue growth and EBITDA margins."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q4",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "How do you pick purchase multiples and exit multiples in an LBO model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.5
+          },
+          {
+            "text": "sensitivity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "As anywhere else: from **comparable** companies and comparable LBO transactions, shown as a range in **sensitivity** tables. When the model is used for valuation, the multiples can instead be solved from a target IRR."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q5",
+      "concepts": [
+        "lbo-candidate"
+      ],
+      "prompt_mdx": "What is an ideal candidate for an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stable",
+            "weight": 0.3333
+          },
+          {
+            "text": "capital expenditures",
+            "weight": 0.3333
+          },
+          {
+            "text": "management",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Stable** and predictable cash flows above all. Also a low-risk business, limited need for **capital expenditures**, room to cut costs, a strong **management** team and assets that can serve as collateral."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q6",
+      "concepts": [
+        "lbo-valuation"
+      ],
+      "prompt_mdx": "How do you use an LBO model to value a company, and why is it said to set the floor valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "IRR",
+            "weight": 0.3333
+          },
+          {
+            "text": "purchase price",
+            "weight": 0.3333
+          },
+          {
+            "text": "strategic",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Fix a target **IRR**, say 25%, and solve for the **purchase price** a fund could pay to reach it. It is called a floor because financial buyers almost always pay less than **strategic** acquirers would."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q7",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Give an example of a real-life LBO.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mortgage",
+            "weight": 0.5
+          },
+          {
+            "text": "down payment",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Buying a house with a **mortgage**. The **down payment** is the investor equity, the mortgage is the debt, the interest and principal payments are the debt service, and selling the house is the exit."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q8",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How is the Balance Sheet adjusted in an LBO model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.3333
+          },
+          {
+            "text": "equity",
+            "weight": 0.3333
+          },
+          {
+            "text": "goodwill",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "On the financing side, new **debt** is added and existing shareholders' **equity** is wiped out and replaced by the fund's contribution. On the asset side, cash is reduced by what is used in the deal, and **Goodwill** and intangibles are the plug. There may be other items such as capitalised financing fees."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q9",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Why are Goodwill and Other Intangibles created in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "premium",
+            "weight": 0.5
+          },
+          {
+            "text": "plug",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "They represent the **premium** paid over the company's fair value, and act as the **plug** that makes the asset side match the new financing side."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q010",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, LBO Model Basic, Q10",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "A strategic acquirer usually prefers to pay in cash. Why would a PE firm want to use debt in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "returns",
+            "weight": 0.5
+          },
+          {
+            "text": "company",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A fund holds the company for a few years only, so it cares less about the relative cost of cash and debt and more about boosting **returns** by putting in less capital. And in an LBO the debt sits in the **company**, which bears most of the risk, whereas a strategic buyer carries the acquisition debt itself."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q11",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Do you need to project all 3 statements in an LBO model? Are there shortcuts?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "income statement",
+            "weight": 0.3333
+          },
+          {
+            "text": "debt",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash flow",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "No. You need some form of **Income Statement**, a schedule tracking **debt** balances, and a **cash flow** statement showing what is available for repayment. A full Balance Sheet can be skipped by assuming a net change in working capital."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q12",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "How would you determine how much debt can be raised in an LBO and how many tranches there would be?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable LBOs",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "From **comparable LBOs**: the terms and tranches used by companies of similar size in the same industry."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q013",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, LBO Model Basic, Q13",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "What are reasonable leverage and coverage ratios when analysing how much debt a company can take on?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt comps",
+            "weight": 0.5
+          },
+          {
+            "text": "industry",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It depends entirely on the company and its **industry**. You look at **debt comps** showing the types, tranches and terms that similar companies have used. As a sanity bound, even at the peak of the cycle leverage rarely went above 5 to 10x EBITDA."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q14",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "What is the difference between bank debt and high-yield debt?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "floating",
+            "weight": 0.2
+          },
+          {
+            "text": "fixed",
+            "weight": 0.2
+          },
+          {
+            "text": "maintenance",
+            "weight": 0.2
+          },
+          {
+            "text": "incurrence",
+            "weight": 0.2
+          },
+          {
+            "text": "bullet",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "High-yield carries higher rates. Its rate is **fixed**, while bank debt is **floating**. Bank debt has **maintenance** covenants (a ratio to respect at all times), high-yield has **incurrence** covenants (things you may not do). Bank debt amortises, high-yield is repaid in one **bullet** at maturity. A sizeable LBO usually uses both."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q15",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why might you use bank debt rather than high-yield debt in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "lower",
+            "weight": 0.5
+          },
+          {
+            "text": "incurrence",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "If the concern is meeting interest payments and a **lower** cost is wanted, or if major expansion or capex is planned and **incurrence** covenants would get in the way."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q016",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q16",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why would a PE firm prefer high-yield debt instead?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "refinance",
+            "weight": 0.5
+          },
+          {
+            "text": "sensitive",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "If it plans to **refinance** later, if returns are not very **sensitive** to interest cost, or if no major expansion or asset sale is planned that incurrence covenants would block."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q017",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q17",
+      "concepts": [
+        "lbo-candidate"
+      ],
+      "prompt_mdx": "Why would a private equity firm buy a company in a risky industry such as technology?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mature",
+            "weight": 0.3333
+          },
+          {
+            "text": "consolidation",
+            "weight": 0.3333
+          },
+          {
+            "text": "turnaround",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Every industry has **mature**, cash-generative companies. And some funds pursue specific plays: industry **consolidation**, **turnarounds** of struggling businesses, or divestitures that turn a division into a stand-alone company."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q018",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q18",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "How could a private equity firm boost its return in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.2
+          },
+          {
+            "text": "exit",
+            "weight": 0.2
+          },
+          {
+            "text": "leverage",
+            "weight": 0.2
+          },
+          {
+            "text": "growth",
+            "weight": 0.2
+          },
+          {
+            "text": "margins",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "Lower the **purchase price**, raise the **exit** multiple, use more **leverage**, increase **growth** organically or by acquisition, and widen **margins** by cutting costs. All easier in a model than in reality."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q019",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q19",
+      "concepts": [
+        "tax-shield"
+      ],
+      "prompt_mdx": "What is meant by the tax shield in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "tax-deductible",
+            "weight": 0.5
+          },
+          {
+            "text": "cash flow",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Interest on the LBO debt is **tax-deductible**, which lowers tax and supports **cash flow**. Cash flow is still below that of a debt-free company, since the interest itself costs more than the tax it saves."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q020",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q20",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "What is a dividend recapitalization?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.5
+          },
+          {
+            "text": "dividend",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "The company raises new **debt** for the sole purpose of paying a special **dividend** to the fund that owns it."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q021",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q21",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "Why would a PE firm do a dividend recap of one of its portfolio companies?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "returns",
+            "weight": 0.5
+          },
+          {
+            "text": "equity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To boost **returns**: it recovers part of its **equity** investment early, and a smaller net investment makes a given gain a higher return."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q022",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q22",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "How would a dividend recap affect the 3 financial statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no change",
+            "weight": 0.25
+          },
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "equity",
+            "weight": 0.25
+          },
+          {
+            "text": "financing",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Income Statement: **no change**. Balance Sheet: **debt** up and shareholders' **equity** down by the same amount. Cash Flow Statement: within **financing**, the debt raised offsets the dividend paid, so the net change in cash is zero."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q001",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q1",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Describe the different kinds of debt you could use in an LBO and how they differ.",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revolver",
+            "weight": 0.2
+          },
+          {
+            "text": "term loan",
+            "weight": 0.2
+          },
+          {
+            "text": "senior notes",
+            "weight": 0.2
+          },
+          {
+            "text": "subordinated",
+            "weight": 0.2
+          },
+          {
+            "text": "mezzanine",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "In rising order of cost and falling order of seniority. **Revolver**: lowest rate, floating, 3-5 years, no amortisation, senior secured, maintenance covenants. **Term Loan** A: floating, 4-6 years, straight-line amortisation, held by banks. Term Loan B: slightly higher rate, 4-8 years, minimal amortisation, prepayable. **Senior Notes**: fixed rate, 7-10 years, bullet, unsecured, incurrence covenants, call protection. **Subordinated** Notes: higher fixed rate, 8-10 years, bullet. **Mezzanine**: highest rate, cash or PIK interest, 8-12 years, bullet, ranking just above equity."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q002",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q2",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How would an asset write-up or write-down affect an LBO model? How do you adjust the Balance Sheet?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "merger model",
+            "weight": 0.3333
+          },
+          {
+            "text": "equity",
+            "weight": 0.3333
+          },
+          {
+            "text": "tranches",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Much as in a **merger model**: goodwill, intangibles, write-ups, deferred taxes, cash used, capitalised fees and new debt are handled the same way. Three differences: existing **equity** is replaced by the sponsor's contribution, possibly with preferred stock or management rollover, there are many more debt **tranches**, and you are not combining two balance sheets."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q003",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q3",
+      "concepts": [
+        "irr"
+      ],
+      "prompt_mdx": "How do you calculate the IRR for the debt investors in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "interest",
+            "weight": 0.3333
+          },
+          {
+            "text": "principal",
+            "weight": 0.3333
+          },
+          {
+            "text": "remaining",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Year 0 is the amount lent, as a negative flow. Each year's flow is the **interest** and **principal** received. The final flow includes the **remaining** balance repaid. Apply the IRR function. It is usually below the equity IRR, but can exceed it if the deal goes badly."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q004",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q4",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why might a PE firm allot some of the new equity to a management option pool, and how does it affect the model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "incentiv",
+            "weight": 0.5
+          },
+          {
+            "text": "treasury stock method",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To **incentivise** management and keep it on board until exit, like an earnout but without a cap. In the model you compute a per-share price at exit and the proceeds going to management with the **Treasury Stock Method**. The pool lowers the sponsor's return on paper, offset by better expected performance."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q005",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q5",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why would you use PIK debt rather than other types of debt, and how does it affect the debt schedules and statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "accrues",
+            "weight": 0.3333
+          },
+          {
+            "text": "principal",
+            "weight": 0.3333
+          },
+          {
+            "text": "non-cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "PIK interest is not paid in cash: it **accrues** to the **principal**, which grows over time. It preserves cash but is riskier and costs more than bank or high-yield debt. In the schedules it behaves like bullet debt with interest added to the balance. The interest is expensed on the Income Statement and added back on the Cash Flow Statement as a **non-cash** item."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q006",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, LBO Model Advanced, Q6",
+      "concepts": [
+        "covenants"
+      ],
+      "prompt_mdx": "Give examples of incurrence covenants and of maintenance covenants.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "acquisitions",
+            "weight": 0.25
+          },
+          {
+            "text": "EBITDA",
+            "weight": 0.25
+          },
+          {
+            "text": "interest",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Incurrence: no more than a set amount of total **debt**, asset sale proceeds earmarked for repayment, no **acquisitions** above a size limit, a cap on annual capex. Maintenance: total debt / **EBITDA** below 3.0x, senior debt / EBITDA below 2.0x, EBITDA / **interest** expense above 5.0x, EBITDA / cash interest above 3.0x, (EBITDA - capex) / interest above 2.0x."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q007",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q7",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "An LBO can be structured as a stock or an asset purchase. Can you also use a Section 338(h)(10) election?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no",
+            "weight": 0.5
+          },
+          {
+            "text": "C corporation",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Generally **no**: the election requires the buyer to be a **C corporation**, while funds are organised as LLCs or limited partnerships and acquire through an LLC shell."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q008",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q8",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Walk me through how you calculate optional repayments on debt in an LBO model.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revolver",
+            "weight": 0.3333
+          },
+          {
+            "text": "term loan",
+            "weight": 0.3333
+          },
+          {
+            "text": "mandatory",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Only **Revolvers** and Term Loans can be prepaid. Start from cash available: opening cash, less minimum cash, plus cash flow available for debt repayment, less **mandatory** repayments. Repay the Revolver first, then **Term Loan** A with what is left, then Term Loan B, never exceeding each balance after its mandatory repayment."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q009",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q9",
+      "concepts": [
+        "revolver"
+      ],
+      "prompt_mdx": "Explain how a Revolver is used in an LBO model.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mandatory",
+            "weight": 0.3333
+          },
+          {
+            "text": "MAX",
+            "weight": 0.3333
+          },
+          {
+            "text": "undrawn",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It covers a shortfall when **mandatory** repayments exceed available cash flow: Revolver borrowing = **MAX**(0, total mandatory repayment - cash flow available to repay debt). It starts **undrawn**, and any amount drawn is repaid first from later excess cash flow, before the term loans."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q010",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q10",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "How would you adjust the Income Statement in an LBO model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cost savings",
+            "weight": 0.2
+          },
+          {
+            "text": "depreciation",
+            "weight": 0.2
+          },
+          {
+            "text": "amortization",
+            "weight": 0.2
+          },
+          {
+            "text": "interest",
+            "weight": 0.2
+          },
+          {
+            "text": "management fees",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "**Cost savings** assumed by the sponsor. New **depreciation** from PP&E write-ups. New **amortization** from written-up intangibles and capitalised financing fees. **Interest** on the LBO debt, cash and PIK. Sponsor **management fees**. And below net income, any common dividend or preferred dividend."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q011",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q11",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "In an LBO model, can debt investors get a higher return than the PE firm? What does that tell us?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "yes",
+            "weight": 0.5
+          },
+          {
+            "text": "multiples",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Yes**, and more often than expected. High-yield holders lock in their coupon, often 10 to 15%, as long as the debt is repaid. If exit **multiples** contract or the company fails to grow, the equity IRR can fall below that, which tells you the deal underperformed."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q012",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q12",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "More leverage usually means a higher IRR. How could increasing leverage reduce the IRR?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "interest",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash flow",
+            "weight": 0.3333
+          },
+          {
+            "text": "multiple",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "When **interest** and principal payments become so heavy that they absorb the **cash flow** the company needs. It takes a combination: little EBITDA growth, debt service high relative to cash flow, and a high purchase **multiple** that already makes a good IRR hard to reach."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q1",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What do you actually do in Restructuring?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "distressed",
+            "weight": 0.3333
+          },
+          {
+            "text": "capital structure",
+            "weight": 0.3333
+          },
+          {
+            "text": "bankruptcy",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Restructuring bankers advise **distressed** companies: those heading into **bankruptcy**, in it, or coming out of it. They help rework the **capital structure** to avoid or exit bankruptcy, or run a sale of the company when that is the better route."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q2",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What are the 2 sides of a Restructuring deal?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debtor",
+            "weight": 0.5
+          },
+          {
+            "text": "creditors",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "The **debtor**, meaning the company itself, and the **creditors**, meaning everyone who has lent to it, usually several parties with different interests. It mirrors sell-side and buy-side M&A. Operational advisers may also be hired for the turnaround itself. Each bank tends to be known for one side."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q3",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "Why are you interested in Restructuring, beyond the fact that it is a hot area?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "technical",
+            "weight": 0.5
+          },
+          {
+            "text": "specialized",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A personal answer, built on a few solid points: the skill set is **specialized** and therefore valuable, the work is more **technical** than standard M&A, and you see companies in bad times as well as good. A legal background or interest is a real asset, since the process runs within a legal framework."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q4",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "How will you use your Restructuring experience in your future career?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "distressed",
+            "weight": 0.5
+          },
+          {
+            "text": "technical",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Again personal. Credible directions: **distressed** debt or special situations investing, which is hard to reach from other groups, or a return to M&A or mainstream investing with stronger **technical** skills. The only wrong answer is to show no interest in the field."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q5",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "How would a distressed company select its Restructuring bankers?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "experience",
+            "weight": 0.5
+          },
+          {
+            "text": "relationships",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On **experience** with similar situations in the industry and on **relationships** with the many parties involved: lawyers, shareholders, lenders, suppliers, directors, management, crisis managers. Few banks have strong practices. Lawyers are an important source of mandates."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q6",
+      "concepts": [
+        "bankruptcy"
+      ],
+      "prompt_mdx": "Why would a company go bankrupt in the first place?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.5
+          },
+          {
+            "text": "liquidity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It cannot meet its **debt** service. Creditors accelerate repayment. An acquisition went badly or assets were written down sharply, leaving it short of capital. Or a **liquidity** crunch stops it paying suppliers."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q7",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What options are available to a distressed company that cannot meet its debt obligations?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "refinance",
+            "weight": 0.25
+          },
+          {
+            "text": "sell",
+            "weight": 0.25
+          },
+          {
+            "text": "restructure",
+            "weight": 0.25
+          },
+          {
+            "text": "bankruptcy",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**Refinance** with fresh debt or equity. **Sell** the company, whole or in pieces. **Restructure** its obligations to reduce interest and repayments, for example with PIK interest. Or file for **bankruptcy** and use the process to raise financing, renegotiate and shed onerous contracts."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q008",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q8",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What are the advantages and disadvantages of each option?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "confidence",
+            "weight": 0.25
+          },
+          {
+            "text": "valuation",
+            "weight": 0.25
+          },
+          {
+            "text": "lenders",
+            "weight": 0.25
+          },
+          {
+            "text": "disruption",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Refinancing: least disruptive and restores **confidence**, but investors are hard to attract. Sale: shareholders may recover something and creditors see cash coming, but the **valuation** will be poor. Restructuring: quick and without third parties, but **lenders** resist adding exposure and rarely agree with management. Bankruptcy: often the best setting to negotiate and obtain financing, at the price of major business **disruption** and probably nothing for shareholders."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q009",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q9",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "From the creditors' perspective, what strategies are available to recover their capital in a distressed situation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "lend",
+            "weight": 0.25
+          },
+          {
+            "text": "conditional",
+            "weight": 0.25
+          },
+          {
+            "text": "sale",
+            "weight": 0.25
+          },
+          {
+            "text": "foreclosure",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "They mirror the company's options. **Lend** more or take equity. **Conditional** financing, tied to cost cuts and new covenants. Force a **sale** of the company or parts of it. **Foreclosure**: seize the collateral and push the company into bankruptcy."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q10",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "How are Restructuring deals different from other types of transactions?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "complex",
+            "weight": 0.3333
+          },
+          {
+            "text": "parties",
+            "weight": 0.3333
+          },
+          {
+            "text": "legal",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "They are more **complex**, involve more **parties**, demand specialised technical skills and must follow bankruptcy **legal** rules. Negotiation is not two-sided: creditors also negotiate among themselves."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q11",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What is the difference between Chapter 7 and Chapter 11 bankruptcy?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "liquidation",
+            "weight": 0.5
+          },
+          {
+            "text": "reorganization",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Chapter 7 is a **liquidation**: the company is past saving, a trustee sells the assets and pays creditors. Chapter 11 is a **reorganization**: the company survives and renegotiates its debt to lower interest and principal."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q012",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q12",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What is debtor-in-possession (DIP) financing and how is it used?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "priority",
+            "weight": 0.5
+          },
+          {
+            "text": "Chapter 11",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "New money lent to a company in bankruptcy that takes repayment **priority** over all existing debt, equity and other claims, under strict terms. It keeps the business running through the process. Access to it is one reason to file for **Chapter 11**. Some DIP lenders use their position to take control cheaply."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q013",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q13",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "How would you adjust the 3 financial statements of a distressed company for valuation or modeling?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cost of goods sold",
+            "weight": 0.25
+          },
+          {
+            "text": "fees",
+            "weight": 0.25
+          },
+          {
+            "text": "working capital",
+            "weight": 0.25
+          },
+          {
+            "text": "capex",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Adjust **Cost of Goods Sold** for inflated supplier prices. Add back one-off legal and restructuring **fees**. Add back excess lease costs and, for private companies, excess owner salaries. Clean up **working capital**: doubtful receivables, misvalued inventory, stretched payables. And question **CapEx**, which may be too high or artificially low."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q14",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "Would those adjustments differ for public versus private companies?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "salaries",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Mostly the same. The excess **salaries** adjustment is the exception: a public company cannot easily pay abnormal salaries the way a private owner can."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q015",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q15",
+      "concepts": [
+        "equity"
+      ],
+      "prompt_mdx": "If the market value of a distressed company's debt exceeds its assets, what happens to its equity?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "shareholders' equity",
+            "weight": 0.3333
+          },
+          {
+            "text": "negative",
+            "weight": 0.3333
+          },
+          {
+            "text": "market cap",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Shareholders' equity**, a book value, turns **negative**. The **market cap** stays positive, since shares outstanding times share price cannot be negative."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q016",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q16",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "In a bankruptcy, what is the order of claims on a company's assets?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "DIP",
+            "weight": 0.2
+          },
+          {
+            "text": "secured",
+            "weight": 0.2
+          },
+          {
+            "text": "unsecured",
+            "weight": 0.2
+          },
+          {
+            "text": "subordinated",
+            "weight": 0.2
+          },
+          {
+            "text": "shareholders",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "1. New **DIP** lenders. 2. **Secured** creditors: revolvers and bank debt. 3. **Unsecured** creditors: high-yield bonds. 4. **Subordinated** debt. 5. Mezzanine: convertibles, preferred, PIK. 6. **Shareholders**. Secured means backed by specific collateral."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q017",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q17",
+      "concepts": [
+        "cost-of-debt"
+      ],
+      "prompt_mdx": "How do you measure the cost of debt for a company too distressed to issue new debt?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.3333
+          },
+          {
+            "text": "yield",
+            "weight": 0.3333
+          },
+          {
+            "text": "credit default swap",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "From the bond **yields** or **credit default swap** spreads of **comparable** companies. Or from the current yield on the company's own existing debt, if it trades enough to be meaningful."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q018",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q18",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "How would valuation change for a distressed company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "lower",
+            "weight": 0.3333
+          },
+          {
+            "text": "revenue multiples",
+            "weight": 0.3333
+          },
+          {
+            "text": "liquidation",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Same methodologies, applied differently: the **lower** end of the multiple ranges, the accounting adjustments above, lower projections reflecting a turnaround period, more weight on **revenue multiples** when earnings are negative, and a **liquidation** valuation alongside. Values may be shown on an assets-only basis and on a liabilities-assumed basis."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q019",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q19",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "How would a DCF be different in a distressed scenario?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "terminal value",
+            "weight": 0.5
+          },
+          {
+            "text": "WACC",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Even more value sits in the **terminal value**, since the first years are often cash-negative. You add sensitivities on hitting or missing the plan, and a premium to **WACC** for operating distress."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q020",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q20",
+      "concepts": [
+        "ma-process"
+      ],
+      "prompt_mdx": "A distressed company hires your bank to sell it. How does the M&A process differ from that of a healthy company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "quick",
+            "weight": 0.3333
+          },
+          {
+            "text": "marketing",
+            "weight": 0.3333
+          },
+          {
+            "text": "creditors",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Timing is **quick**, since the alternative is bankruptcy. Fewer **marketing** materials are prepared upfront. **Creditors** often start the process. And it cannot simply fail: it ends in a sale, a bankruptcy or a restructuring."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q021",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q21",
+      "concepts": [
+        "ma-process"
+      ],
+      "prompt_mdx": "Why are multiple bidders especially important in a distressed sale?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "leverage",
+            "weight": 0.5
+          },
+          {
+            "text": "price",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Because the seller has almost no negotiating **leverage**. Competition between bidders is the only real way to improve the **price**."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q022",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q22",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "What is the difference between a stock purchase and an asset purchase, and which would the buyer and the seller prefer in a distressed sale?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "liabilities",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset",
+            "weight": 0.3333
+          },
+          {
+            "text": "stock",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A stock purchase takes all the shares and with them every asset and liability, on and off balance sheet. An asset purchase takes selected assets and selected **liabilities**. The buyer almost always prefers an **asset** purchase, to avoid unknown liabilities and for tax reasons. The distressed seller prefers a **stock** purchase, to shed all liabilities and because asset sales are taxed more heavily."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q023",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q23",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "A distressed sale does not always end in a conventional stock or asset purchase. What other outcomes are possible?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "foreclosure",
+            "weight": 0.3333
+          },
+          {
+            "text": "363",
+            "weight": 0.3333
+          },
+          {
+            "text": "Chapter 11",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Foreclosure**, formal or informal. A general assignment, a quicker alternative to bankruptcy. A Section **363** asset sale, faster and safer than an ordinary asset sale. **Chapter 11**. Or Chapter 7."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q024",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q24",
+      "concepts": [
+        "ma-process"
+      ],
+      "prompt_mdx": "M&A processes are normally confidential. Why would a distressed company announce that it has hired a banker for a sale?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bids",
+            "weight": 0.5
+          },
+          {
+            "text": "competition",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To attract more **bids** and increase **competition**, in the hope of a higher price. Healthy companies sometimes do the same."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q025",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q25",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "Are shareholders likely to receive anything in a distressed sale or bankruptcy?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no",
+            "weight": 0.5
+          },
+          {
+            "text": "exceed",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "In practice usually **no**. When a company is truly distressed its obligations **exceed** the value of its assets, so little or nothing reaches equity, especially in a liquidation."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q026",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q26",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "A company wants to sell itself or restructure its obligations. Why might it be forced into Chapter 11?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "creditors",
+            "weight": 0.5
+          },
+          {
+            "text": "accelerat",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Aggressive **creditors** can force it. If they reject the proposed restructuring or an out-of-court sale cannot be completed, they **accelerate** their debt and push the company into Chapter 11."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q027",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q27",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "Some distressed companies buy back their own debt at 50 cents on the dollar. What is the motivation and how does it work in accounting terms?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash",
+            "weight": 0.3333
+          },
+          {
+            "text": "interest",
+            "weight": 0.3333
+          },
+          {
+            "text": "debt",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "They use excess **cash** to retire **debt** cheaply and cut future **interest** and obligations: the interest lost on cash is below the rate paid on the debt. On the Balance Sheet, cash goes down and debt goes down. The document treats the two as equal. Strictly, debt falls by its face value while cash falls by the price paid, and the difference is a gain."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q028",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q28",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What kind of companies are most likely to do debt buy-backs?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "over-levered",
+            "weight": 0.5
+          },
+          {
+            "text": "leveraged buyouts",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Over-levered** companies, typically acquired in **leveraged buyouts** at the top of the cycle, that struggle with interest payments yet hold excess cash."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q029",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q29",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "Why might a creditor have to take a loss on debt lent to a distressed company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "priority",
+            "weight": 0.5
+          },
+          {
+            "text": "secured",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Because of **priority**. **Secured** creditors are paid first from sale proceeds. Lower-ranking creditors only receive what remains, which is often less than they are owed."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q030",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q30",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What is the end goal of a financial restructuring?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "terms",
+            "weight": 0.5
+          },
+          {
+            "text": "covenants",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To change the **terms** of the debt rather than its amount as such: interest payments, repayment schedule and **covenants**, so the company can service it."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q031",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q31",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What is the difference between a Distressed M&A deal and a Restructuring deal?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "outcome",
+            "weight": 0.5
+          },
+          {
+            "text": "debt obligations",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Restructuring is one possible **outcome** of a distressed situation, the one where the company reworks its **debt obligations**. The others are bankruptcy, liquidation or a sale of the whole company."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q032",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q32",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "What is the difference between acquiring only the assets of a company and acquiring it on a current-liabilities-assumed basis?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "accounts payable",
+            "weight": 0.5
+          },
+          {
+            "text": "lower",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "With assets only, you get just the assets. If you also assume current liabilities, you must adjust for the distorted working capital of a distressed company: **Accounts Payable** and accrued expenses run far above normal levels, and the excess is deducted. The valuation is therefore usually **lower** on that basis."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q033",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q33",
+      "concepts": [
+        "bankruptcy"
+      ],
+      "prompt_mdx": "How could a decline in a company's share price cause it to go bankrupt?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "not",
+            "weight": 0.3333
+          },
+          {
+            "text": "confidence",
+            "weight": 0.3333
+          },
+          {
+            "text": "liquidity",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Directly it does **not**: market cap is not shareholders' equity, which is a book value unaffected by the share price. Indirectly, the fall erodes the **confidence** of customers, suppliers and lenders. Revenue drops, payables climb, and funding can dry up. A firm dependent on overnight funding can lose its **liquidity** in days."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q034",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q34",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "What happens to Accounts Payable Days at a distressed company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "rise",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "They **rise**, well beyond the industry norm, because the company struggles to pay its suppliers."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q035",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q35",
+      "concepts": [
+        "restructuring"
+      ],
+      "prompt_mdx": "Why might a distressed company be unable to raise debt or equity to fix its problems?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "turnaround",
+            "weight": 0.3333
+          },
+          {
+            "text": "priority",
+            "weight": 0.3333
+          },
+          {
+            "text": "100%",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Debt: if it is too small or lacks a credible **turnaround** plan, lenders simply refuse. Equity: harder still, since equity ranks below debt in **priority**, and with a depressed market cap raising enough could mean selling close to **100%** of the company."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q036",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q36",
+      "concepts": [
+        "exceptional-items"
+      ],
+      "prompt_mdx": "Will the adjusted EBITDA of a distressed company be higher or lower than the figure from its financial statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "higher",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Usually **higher**: you add back above-normal salaries, one-off legal and restructuring charges and similar items."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q037",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q37",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Would you use Levered Cash Flow in a DCF for a distressed company, given its debt burden?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no",
+            "weight": 0.5
+          },
+          {
+            "text": "debt-free",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**No**. It matters even more to analyse a distressed company on a **debt-free** basis, precisely because its debt costs are abnormally high."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q038",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q38",
+      "concepts": [
+        "liquidation-value"
+      ],
+      "prompt_mdx": "In a Liquidation Valuation, why can't you just use Shareholders' Equity, since it equals Assets minus Liabilities?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "sold",
+            "weight": 0.5
+          },
+          {
+            "text": "recover",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Because assets must be restated at what they would fetch if **sold** separately, not at book value. You might **recover** only half the book value of inventory, for instance. Once asset values change, book equity no longer applies."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q039",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q39",
+      "concepts": [
+        "liquidation-value"
+      ],
+      "prompt_mdx": "What recovery can you expect for different assets in a Liquidation Valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash",
+            "weight": 0.25
+          },
+          {
+            "text": "receivable",
+            "weight": 0.25
+          },
+          {
+            "text": "inventory",
+            "weight": 0.25
+          },
+          {
+            "text": "intangible",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "It varies widely. **Cash**: close to 100%. Investments: near 100% for cash-like ones, much less for equity stakes. Accounts **Receivable**: below cash, as customers may not pay a failing company. **Inventory**: lower still. PP&E: high for land and buildings, lower for equipment. **Intangibles**: zero."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q040",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q40",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "How would an LBO model for a distressed company be different?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "pay off",
+            "weight": 0.5
+          },
+          {
+            "text": "asset purchase",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Its purpose shifts from the sponsor's IRR to how fast the company can **pay off** its obligations and what return new debt and equity investors can expect. The mechanics are the same, with other debt types such as DIP, possibly more tranches, and generally lower returns. Structurally it is more likely to be an **asset purchase**."
+      }
+    }
+  ]
+}

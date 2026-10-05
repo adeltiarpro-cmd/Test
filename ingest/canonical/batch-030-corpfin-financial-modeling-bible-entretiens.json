@@ -1,0 +1,884 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "financial-modeling",
+  "items": [
+    {
+      "external_key": "bible-p3-gen-q001",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q1",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Quels sont les principaux états financiers et comment sont-ils liés entre eux ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "compte de résultat",
+            "weight": 0.2
+          },
+          {
+            "text": "flux de trésorerie",
+            "weight": 0.2
+          },
+          {
+            "text": "bilan",
+            "weight": 0.2
+          },
+          {
+            "text": "résultat net",
+            "weight": 0.2
+          },
+          {
+            "text": "cash",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "Trois états. Le **compte de résultat** (Income Statement) mesure la capacité à dégager un bénéfice. Le tableau des **flux de trésorerie** (Cash-Flow Statement) montre la génération et l'emploi du cash. Le **bilan** (Balance Sheet) présente les actifs et leur financement à une date. Ils se construisent en cascade : le **résultat net** ouvre le tableau des flux et alimente les réserves au passif, et le **cash** issu du tableau des flux s'inscrit à l'actif du bilan."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q2",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Pouvez-vous me dérouler les principaux états financiers ?",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "EBITDA",
+            "weight": 0.2
+          },
+          {
+            "text": "EBIT",
+            "weight": 0.2
+          },
+          {
+            "text": "BFR",
+            "weight": 0.2
+          },
+          {
+            "text": "CAPEX",
+            "weight": 0.2
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : chiffre d'affaires, coût des ventes, marge brute, dépenses d'exploitation, **EBITDA**, amortissements, **EBIT**, résultat financier, éléments exceptionnels, résultat avant impôt, impôt, résultat net. Flux de trésorerie : résultat net, plus amortissements, variation du **BFR**, soit le flux opérationnel. Puis investissements (**CAPEX**, achats et cessions de titres et d'actifs). Puis financement (dividendes, dette, capital). On arrive à la variation de cash. Bilan : à l'actif, cash, placements, créances, stocks, immobilisations corporelles et incorporelles, goodwill. Au passif, dettes court et long terme, puis **capitaux propres** : capital et primes, actions propres, réserves."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q003",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q3",
+      "concepts": [
+        "ebitda"
+      ],
+      "prompt_mdx": "Qu'est-ce que l'EBITDA ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "intérêts",
+            "weight": 0.3333
+          },
+          {
+            "text": "impôts",
+            "weight": 0.3333
+          },
+          {
+            "text": "amortissements",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "C'est le résultat opérationnel avant **intérêts**, **impôts**, dépréciations et **amortissements**. Il mesure la rentabilité de l'exploitation et permet de comparer des sociétés sans l'effet des politiques comptables et de financement. Un EBITDA positif ne garantit pas un résultat net positif."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q004",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q4",
+      "concepts": [
+        "ebitda"
+      ],
+      "prompt_mdx": "Qu'est-ce que l'EBIT ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "résultat d'exploitation",
+            "weight": 0.5
+          },
+          {
+            "text": "amortissements",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "C'est le **résultat d'exploitation** : l'EBITDA diminué des dépréciations et **amortissements**. Il mesure la rentabilité de l'activité avant coût du financement, éléments exceptionnels et impôt. Un EBIT positif peut aller de pair avec une perte nette si les charges financières ou exceptionnelles sont lourdes."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q5",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Qu'est-ce que le goodwill ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prix",
+            "weight": 0.3333
+          },
+          {
+            "text": "actif net",
+            "weight": 0.3333
+          },
+          {
+            "text": "badwill",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Dans une acquisition, c'est l'écart entre le **prix** payé et l'**actif net** de la cible, quand le prix est supérieur. Quand le prix est inférieur à l'actif net, on parle de **badwill**."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q006",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q6",
+      "concepts": [
+        "retained-earnings"
+      ],
+      "prompt_mdx": "Qu'est-ce que les Retained Earnings ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "résultat net",
+            "weight": 0.3333
+          },
+          {
+            "text": "dividendes",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "La part du **résultat net** conservée par l'entreprise après versement des **dividendes**. Elle figure au passif, dans les **capitaux propres**."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q007",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q7",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "Qu'est-ce que le Working Capital / Besoin en Fonds de Roulement ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "créances clients",
+            "weight": 0.3333
+          },
+          {
+            "text": "stocks",
+            "weight": 0.3333
+          },
+          {
+            "text": "dettes fournisseurs",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "BFR = **créances clients** + **stocks** - **dettes fournisseurs**. C'est le montant que l'entreprise doit financer du fait des décalages entre encaissements et décaissements de son cycle d'exploitation."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q8",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "Comment s'interprète un Working Capital positif et un Working Capital négatif ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "négatif",
+            "weight": 0.25
+          },
+          {
+            "text": "grande distribution",
+            "weight": 0.25
+          },
+          {
+            "text": "positif",
+            "weight": 0.25
+          },
+          {
+            "text": "financement",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Un BFR **négatif** est le plus souvent un bon signe : l'entreprise encaisse ses clients avant de payer ses fournisseurs. C'est le cas de la **grande distribution**, payée comptant en caisse et qui règle ses fournisseurs à 30 jours ou plus. Un BFR **positif** signifie que les encaissements arrivent trop tard pour couvrir les fournisseurs, d'où un besoin de **financement** externe. Exemple : un grossiste qui paie à 30 jours et encaisse à 60 jours."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q009",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q9",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Quel impact aura une augmentation des Depreciations & Amortizations de 100 € sur les états financiers (impôt à 30 %) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "70",
+            "weight": 0.3333
+          },
+          {
+            "text": "30",
+            "weight": 0.3333
+          },
+          {
+            "text": "100",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : EBIT et résultat avant impôt -100, impôt -30, résultat net -**70**. Flux de trésorerie : résultat net -70, amortissements réintégrés +100, flux opérationnel et cash +**30**. Bilan : cash +30 et immobilisations -**100**, soit un actif en baisse de 70. Capitaux propres -70. Le bilan est équilibré."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q10",
+      "concepts": [
+        "tax"
+      ],
+      "prompt_mdx": "Quel impact aura une hausse de 10 points du taux d'imposition (de 30 % à 40 %) sur les états financiers, pour un résultat avant impôt de 200 € ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "20",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : l'impôt passe de 60 à 80, le résultat net baisse de **20**. Flux de trésorerie : le flux opérationnel et le **cash** baissent de 20, rien ne change en investissement ni en financement. Bilan : cash -20 à l'actif, **capitaux propres** -20 au passif."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q1",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Quel est le 4e état financier d'une entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "variations des capitaux propres",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Le tableau des **variations des capitaux propres** (Statement of Shareholders' Equity), qui retrace les mouvements des capitaux propres sur la période."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q2",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Pourquoi les Depreciations & Amortizations n'impactent-elles pas le cash ? Illustrez avec une camionnette achetée 20 000 € et amortie sur 10 ans.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "étaler",
+            "weight": 0.3333
+          },
+          {
+            "text": "2 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "non-cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "L'amortissement est une écriture qui sert à **étaler** le coût d'un bien sur sa durée d'utilisation. Le cash sort à l'achat : 20 000 € la première année. Ensuite on enregistre **2 000** € de charge par an pendant 10 ans, sans aucun décaissement. C'est une charge **non-cash**."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q3",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Comment les Depreciations & Amortizations ont-elles tout de même un impact sur le cash ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "déductibles",
+            "weight": 0.5
+          },
+          {
+            "text": "impôt",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Elles sont **déductibles** : elles réduisent le résultat imposable, donc l'**impôt** payé, ce qui améliore le cash."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q4",
+      "concepts": [
+        "bankruptcy"
+      ],
+      "prompt_mdx": "Comment une entreprise peut-elle faire faillite du jour au lendemain alors qu'elle affichait un EBITDA positif sur les 5 dernières années ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "CAPEX",
+            "weight": 0.3333
+          },
+          {
+            "text": "inattendu",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "L'EBITDA ne dit rien du financier, de l'exceptionnel ni de la gestion du cash. L'entreprise peut ne pas faire face à sa **dette**, avoir des **CAPEX** trop lourds qui rendent le cash-flow négatif, ou subir un événement **inattendu** de grande ampleur, comme une amende."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q5",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "En tant que dirigeant, préférez-vous une augmentation de vos revenus ou une baisse de vos coûts d'exploitation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "baisse",
+            "weight": 0.3333
+          },
+          {
+            "text": "coûts",
+            "weight": 0.3333
+          },
+          {
+            "text": "EBITDA",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Une **baisse** des **coûts** : elle se retrouve directement dans l'**EBITDA**, alors qu'une hausse du chiffre d'affaires peut s'accompagner d'une hausse des coûts."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q6",
+      "concepts": [
+        "stock-options"
+      ],
+      "prompt_mdx": "Qu'est-ce que les stock-options ? Illustrez avec des options à 5 € quand l'action vaut 10 €.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prix fixe",
+            "weight": 0.3333
+          },
+          {
+            "text": "durée",
+            "weight": 0.3333
+          },
+          {
+            "text": "5",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Des options donnant le droit d'acheter des actions de l'entreprise à un **prix fixe**, pendant une **durée** limitée. Avec un prix d'exercice de 5 € et une action à 10 €, on exerce et on gagne **5** € par action en revendant aussitôt, ou on conserve les titres en espérant une nouvelle hausse."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q7",
+      "concepts": [
+        "dividends"
+      ],
+      "prompt_mdx": "Quel impact a une distribution de dividendes sur le prix de l'action ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "diminue",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Le cours **diminue** : le dividende est une sortie de cash, l'entreprise vaut donc moins après la distribution."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q8",
+      "concepts": [
+        "net-debt"
+      ],
+      "prompt_mdx": "Qu'est-ce que la dette nette ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "court terme",
+            "weight": 0.3333
+          },
+          {
+            "text": "long terme",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Dette nette = dette **court terme** + dette **long terme** - **cash** et équivalents. Négative, elle signale une société peu endettée et riche en cash. Positive, plus de dette que de cash."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q009",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q9",
+      "concepts": [
+        "net-debt"
+      ],
+      "prompt_mdx": "Quel est l'impact sur la dette nette lorsqu'on rembourse une partie de la dette ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "diminue",
+            "weight": 0.5
+          },
+          {
+            "text": "cash",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Selon le document, la dette nette **diminue** à mesure que l'entreprise rembourse. À nuancer : si le remboursement est fait avec le **cash** déjà en caisse, dette brute et trésorerie baissent du même montant et la dette nette ne bouge pas. Elle ne baisse que grâce au cash généré par l'activité."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q010",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q10",
+      "concepts": [
+        "net-debt"
+      ],
+      "prompt_mdx": "Quel est l'impact sur la dette nette lorsqu'on augmente la dette ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "augmente",
+            "weight": 0.5
+          },
+          {
+            "text": "cash",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Selon le document, la dette nette **augmente**. À nuancer : tant que le **cash** emprunté reste en caisse, la dette nette est inchangée. Elle augmente quand ce cash est dépensé."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q11",
+      "concepts": [
+        "debt-types"
+      ],
+      "prompt_mdx": "Quels types de dettes connaissez-vous ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "senior",
+            "weight": 0.25
+          },
+          {
+            "text": "high-yield",
+            "weight": 0.25
+          },
+          {
+            "text": "mezzanine",
+            "weight": 0.25
+          },
+          {
+            "text": "unitranche",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Dette **senior** : bancaire, remboursée en priorité, en tranches A, B et C de maturités croissantes. Dette **high-yield** : obligations à haut rendement émises sur les marchés, subordonnées, remboursées in fine à 7-10 ans. Dette **mezzanine** : subordonnée, apportée par des fonds spécialisés, rémunérée par intérêts payés, intérêts capitalisés et participation à la plus-value. C'est la plus risquée, juste avant les fonds propres. Dette **unitranche** : un financement unique, in fine, qui remplace senior et subordonnée, adapté aux LBO petits et moyens."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q12",
+      "concepts": [
+        "debt-capex"
+      ],
+      "prompt_mdx": "Un entrepreneur acquiert une boutique de 500 000 € entièrement financée par dette. Quel est l'impact sur ses états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "aucun",
+            "weight": 0.25
+          },
+          {
+            "text": "investissement",
+            "weight": 0.25
+          },
+          {
+            "text": "financement",
+            "weight": 0.25
+          },
+          {
+            "text": "500 000",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : **aucun** impact, l'activité n'a pas commencé. Flux de trésorerie : -500 000 en **investissement**, +500 000 en **financement**, donc cash inchangé. Bilan : immobilisations corporelles +**500 000** à l'actif, dette long terme +500 000 au passif."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q013",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q13",
+      "concepts": [
+        "inventory"
+      ],
+      "prompt_mdx": "Il achète pour 10 000 € de tissus, payés en cash. Quel est l'impact sur ses états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "aucun",
+            "weight": 0.3333
+          },
+          {
+            "text": "10 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "stocks",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : **aucun** impact. Flux de trésorerie : les stocks augmentent, le flux opérationnel baisse de **10 000**, tout comme le cash. Bilan : **stocks** +10 000 et cash -10 000, l'actif circulant est inchangé."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q014",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q14",
+      "concepts": [
+        "inventory"
+      ],
+      "prompt_mdx": "Le premier mois, il vend pour 5 000 € et paie 3 000 € de main-d'oeuvre (impôt 30 %). Quel est l'impact sur ses états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "2 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "1 400",
+            "weight": 0.3333
+          },
+          {
+            "text": "6 400",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : EBITDA, EBIT et résultat avant impôt de **2 000**, impôt de 600, résultat net de **1 400**. Flux de trésorerie, selon le document : résultat net 1 400, plus une baisse des stocks de 5 000, soit un flux opérationnel et un cash de +**6 400**. Bilan : cash +6 400, stocks -5 000, actif +1 400. Capitaux propres +1 400. À noter : le document sort les stocks à la valeur des ventes sans passer de coût des ventes au compte de résultat. C'est une simplification, mais ce sont ses chiffres."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q015",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q15",
+      "concepts": [
+        "debt-capex"
+      ],
+      "prompt_mdx": "Après un an, il doit payer les intérêts de l'emprunt de 500 000 € (in fine, 5 %) et amortir la boutique (5 % par an). Quel est l'impact sur ses états financiers (impôt 30 %) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "25 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "35 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "10 000",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : amortissement de **25 000**, intérêts de 25 000, résultat avant impôt -50 000, économie d'impôt de 15 000, résultat net -**35 000**. Flux de trésorerie : -35 000 + 25 000 d'amortissement réintégré, soit -**10 000** de flux opérationnel et de cash. Bilan : cash -10 000 et immobilisations -25 000, actif -35 000. La dette ne bouge pas, puisqu'elle est in fine. Capitaux propres -35 000."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q016",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q16",
+      "concepts": [
+        "dividends"
+      ],
+      "prompt_mdx": "Après 5 ans, il se verse un dividende de 100 000 €. Quel est l'impact sur ses états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "aucun",
+            "weight": 0.3333
+          },
+          {
+            "text": "financement",
+            "weight": 0.3333
+          },
+          {
+            "text": "100 000",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : **aucun** impact. Flux de trésorerie : -100 000 en **financement**, cash -100 000. Bilan : cash -**100 000** à l'actif, capitaux propres -100 000 au passif."
+      }
+    },
+    {
+      "external_key": "bible-p6-case-q001",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q1",
+      "concepts": [
+        "business-plan"
+      ],
+      "prompt_mdx": "Parc éolien : chiffre d'affaires 2020 de 10 M€ (+7 % par an), maintenance 4 M€ (+10 % par an), loyer 500 k€ (+3 % par an), 50 employés à 3 000 € par mois (+1 % par an), autres charges 2 M€ fixes, CAPEX 15 M€ engagés en 2019 et amortis sur 10 ans, financement 100 % fonds propres, impôt 30 %, pas de BFR, WACC 5 %. Construisez le business plan sur 10 ans, du chiffre d'affaires au résultat net. Quels sont l'EBITDA et le résultat net de 2020 ?",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "1,7",
+            "weight": 0.3333
+          },
+          {
+            "text": "0,14",
+            "weight": 0.3333
+          },
+          {
+            "text": "1,5",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Salaires 2020 : 50 × 3 000 × 12 = 1,8 M€. Amortissement : 15 / 10 = **1,5** M€ par an. EBITDA 2020 = 10 - 4 - 0,5 - 1,8 - 2 = **1,7** M€. EBIT = 0,2 M€. Pas de charges financières, donc résultat avant impôt = EBIT. Impôt 30 % = 0,06, résultat net = **0,14** M€. On projette ensuite chaque ligne avec son taux de croissance jusqu'en 2029, en ne calculant l'impôt que si le résultat avant impôt est positif. L'EBITDA atteint environ 4,3 M€ en 2029. Bonnes pratiques : hypothèses séparées des calculs, code couleur (bleu en dur, noir calculé, vert pour les liens), charges saisies en négatif."
+      }
+    },
+    {
+      "external_key": "bible-p6-case-q002",
+      "type": "numeric",
+      "difficulty": 5,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q2",
+      "concepts": [
+        "npv"
+      ],
+      "prompt_mdx": "Parc éolien : chiffre d'affaires 2020 de 10 M€ (+7 % par an), maintenance 4 M€ (+10 % par an), loyer 500 k€ (+3 % par an), 50 employés à 3 000 € par mois (+1 % par an), autres charges 2 M€ fixes, CAPEX 15 M€ engagés en 2019 et amortis sur 10 ans, financement 100 % fonds propres, impôt 30 %, pas de BFR, WACC 5 %. Calculez la Net Present Value du projet sur la base du Free Cash-Flow to Firm, sur 2020-2029 (en M€).",
+      "payload": {
+        "unit": "M€",
+        "precision": 1,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.15
+        }
+      },
+      "solution": {
+        "value": 3.97,
+        "steps_mdx": "FCFF = EBIT × (1 - 30 %) + amortissement, sans BFR ni nouveau CAPEX. Il passe d'environ 1,64 M€ en 2020 à 3,48 M€ en 2029. Actualisés à 5 % et diminués des 15 M€ investis en 2019, ces flux donnent une VAN d'environ 4,0 M€. La VAN cumulée devient positive en 2028 : c'est la date de Discounted Payback, conforme au document.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "bible-p6-case-q003",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q3",
+      "concepts": [
+        "sensitivity"
+      ],
+      "prompt_mdx": "Toujours sur ce parc éolien : comment construire une table de sensibilité de la Discounted Payback pour une croissance du chiffre d'affaires de 3 % à 8 % et un WACC de 3 % à 8 % ? Quel résultat obtient-on à 8 % de croissance et 7 % de WACC ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "table de données",
+            "weight": 0.5
+          },
+          {
+            "text": "2027",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On dispose les hypothèses de croissance en ligne et de WACC en colonne, on place dans le coin la cellule qui calcule la date de payback, puis on utilise l'outil **Table de données** d'Excel en pointant vers les deux cellules d'hypothèses. Contrôle : la case 7 % de croissance et 5 % de WACC doit redonner 2028. À 8 % de croissance et 7 % de WACC, le payback tombe en **2027**."
+      }
+    },
+    {
+      "external_key": "bible-p6-case-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q4",
+      "concepts": [
+        "sensitivity"
+      ],
+      "prompt_mdx": "Que signifient les valeurs égales à 0 dans cette table de sensibilité ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "négative",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Ce sont les combinaisons où le projet ne récupère jamais sa mise sur l'horizon : la VAN reste **négative**, donc il n'y a pas de date de payback. C'est le cas par exemple à 3 % de croissance et 4 % de WACC."
+      }
+    }
+  ]
+}

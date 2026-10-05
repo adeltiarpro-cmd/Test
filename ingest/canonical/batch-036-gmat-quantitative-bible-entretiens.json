@@ -1,0 +1,154 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "gmat",
+  "module": "quantitative",
+  "items": [
+    {
+      "external_key": "bible-p3-cult-q009",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Culture générale, Q9",
+      "concepts": [
+        "mental-math"
+      ],
+      "prompt_mdx": "Le calcul mental : comment aborder une multiplication à deux chiffres comme 35 × 56 ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "1960",
+            "weight": 0.5
+          },
+          {
+            "text": "décompos",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On **décompose** : 35 × 56 = 35 × 50 + 35 × 6 = 1 750 + 210 = **1960**. Autre exemple du document : 78 × 23 = 78 × 20 + 78 × 3 = 1 560 + 234 = 1 794."
+      }
+    },
+    {
+      "external_key": "bible-p5-brain-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, V Brain Teasers, Q1",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "Vous êtes enfermé avec deux ficelles et un briquet. Chaque ficelle met une heure à se consumer, à vitesse irrégulière. Vous ne pouvez sortir qu'au bout d'une heure et demie. Comment faites-vous ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "deux bouts",
+            "weight": 0.5
+          },
+          {
+            "text": "30 minutes",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On allume la première ficelle par un bout : quand elle est consumée, une heure s'est écoulée. On allume alors la seconde par les **deux bouts** : elle se consume en **30 minutes**. Total : une heure et demie."
+      }
+    },
+    {
+      "external_key": "bible-p5-brain-q002",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, V Brain Teasers, Q2",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "Un nénuphar double de taille chaque jour. Il met 20 jours à recouvrir la moitié du lac. Combien de jours faut-il pour recouvrir tout le lac ?",
+      "payload": {
+        "unit": "jours",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 21,
+        "steps_mdx": "La surface double chaque jour : à moitié couvert le jour 20, le lac est entièrement couvert le jour 21.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "bible-p5-brain-q003",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, V Brain Teasers, Q3",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "Un tournoi de tennis à élimination directe réunit 100 participants. Si le nombre de joueurs est impair, celui qui n'a pas d'adversaire est qualifié d'office. Combien de matchs sont joués ?",
+      "payload": {
+        "unit": "matchs",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 99,
+        "steps_mdx": "Chaque match élimine un joueur et il faut en éliminer 99 : n - 1 = 99. Tour par tour : 50 + 25 + 12 + 6 + 3 + 2 + 1 = 99.",
+        "formula_katex": "n - 1"
+      }
+    },
+    {
+      "external_key": "bible-p5-brain-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, V Brain Teasers, Q4",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "Vous avez une bouteille A de 5 litres et une bouteille B de 3 litres, et de l'eau à volonté. Comment obtenir 4 litres dans la bouteille A ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "2 litres",
+            "weight": 0.5
+          },
+          {
+            "text": "1 litre",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Remplir A et verser dans B : il reste **2 litres** dans A. Vider B et y verser ces 2 litres. Remplir A à nouveau et compléter B, qui ne peut prendre qu'**1 litre** : il reste 4 litres dans A."
+      }
+    },
+    {
+      "external_key": "bible-p5-brain-q005",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, V Brain Teasers, Q5",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "Il est 15 h 15. Quel est l'angle formé par les aiguilles de votre montre (en degrés) ?",
+      "payload": {
+        "unit": "degrés",
+        "precision": 1,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 7.5,
+        "steps_mdx": "L'aiguille des minutes est sur le 3. Celle des heures a avancé d'un quart du créneau 3-4, soit 30 × 1/4 = 7,5 degrés.",
+        "formula_katex": "30\\times\\tfrac{1}{4}"
+      }
+    }
+  ]
+}

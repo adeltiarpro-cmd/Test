@@ -1,0 +1,105 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "gmat",
+  "module": "quantitative",
+  "items": [
+    {
+      "external_key": "ibq400-brain-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Brain Teasers, Q1",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "A car drives 60 miles at an average speed of 30 miles per hour. How fast must the driver go to cover the same 60 miles in the same time at an average of 60 miles per hour?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "impossible",
+            "weight": 0.5
+          },
+          {
+            "text": "2 hours",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It is **impossible**. 60 miles at 30 mph takes **2 hours**. Averaging 60 mph over those same 2 hours would mean covering 120 miles, not 60. The usual wrong answers are 90 or 120 mph."
+      }
+    },
+    {
+      "external_key": "ibq400-brain-q002",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Brain Teasers, Q2",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "What is the angle formed by the hands of a clock at 1:45 (in degrees)?",
+      "payload": {
+        "unit": "degrees",
+        "precision": 1,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 142.5,
+        "steps_mdx": "Minute hand on the 9, hour hand on the 1: four numbers apart, 4 x 30 = 120 degrees. But the hour hand has moved three quarters of the way to 2, that is 0.75 x 30 = 22.5 degrees further. Total: 142.5 degrees.",
+        "formula_katex": "4\\times 30 + 0.75\\times 30"
+      }
+    },
+    {
+      "external_key": "ibq400-brain-q003",
+      "type": "numeric",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Brain Teasers, Q3",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "You have unlimited quarters, dimes, nickels and pennies (0.25, 0.10, 0.05 and 0.01 USD). What is the greatest value in coins you can hold without being able to make change for exactly one dollar (in USD)?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.004
+        }
+      },
+      "solution": {
+        "value": 1.19,
+        "steps_mdx": "3 quarters (4 would make a dollar). 4 dimes (5 dimes plus 2 quarters would make a dollar). No nickel (one nickel plus 3 quarters and 2 dimes makes a dollar). 4 pennies (5 would act like a nickel). Total: 0.75 + 0.40 + 0.04 = 1.19.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "ibq400-brain-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Brain Teasers, Q4",
+      "concepts": [
+        "brain-teaser"
+      ],
+      "prompt_mdx": "You have a hose, a 3-liter bucket and a 5-liter bucket. How do you get exactly 4 liters of water?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "1 liter",
+            "weight": 0.5
+          },
+          {
+            "text": "5-liter",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Fill the 3-liter bucket and pour it into the **5-liter** one. Refill the 3-liter bucket and top up the 5-liter one: **1 liter** stays in the small bucket. Empty the 5-liter bucket, pour that 1 liter in, then add a full 3-liter bucket: 4 liters."
+      }
+    }
+  ]
+}

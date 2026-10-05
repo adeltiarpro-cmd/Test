@@ -1,0 +1,595 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "financial-modeling",
+  "items": [
+    {
+      "external_key": "qa-q001",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Q&A Annales, Q1",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Pouvez-vous décrire les 3 états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bilan",
+            "weight": 0.3333
+          },
+          {
+            "text": "compte de résultat",
+            "weight": 0.3333
+          },
+          {
+            "text": "flux de trésorerie",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le **bilan** est une photo du patrimoine à une date : ce que l'entreprise possède (actifs) face à ce qu'elle doit (passifs et capitaux propres), toujours équilibré. Le **compte de résultat** mesure la rentabilité sur une période : produits moins charges, jusqu'au résultat net. Le tableau des **flux de trésorerie** explique la variation du cash, en trois blocs : exploitation, investissement, financement."
+      }
+    },
+    {
+      "external_key": "qa-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q2",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Comment les 3 états financiers sont-ils liés les uns aux autres ?",
+      "payload": {
+        "max_words": 200
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "résultat net",
+            "weight": 0.25
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.25
+          },
+          {
+            "text": "trésorerie",
+            "weight": 0.25
+          },
+          {
+            "text": "BFR",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Le **résultat net** du compte de résultat alimente les **capitaux propres** du bilan, après déduction des dividendes. Il ouvre aussi le tableau des flux : on lui ajoute les amortissements et on corrige de la variation du **BFR**, calculée à partir des stocks, créances clients et dettes fournisseurs du bilan. Les investissements se déduisent de la variation de l'actif immobilisé net et des amortissements. Les flux de financement reprennent la variation de dette, les dividendes et les opérations sur le capital. La variation de **trésorerie** qui en ressort donne le cash de clôture du bilan."
+      }
+    },
+    {
+      "external_key": "qa-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q3",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Tu conseilles une PME et dois te faire vite une opinion sur sa santé. Le directeur financier te propose de regarder un seul des trois états financiers. Lequel choisis-tu ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "flux de trésorerie",
+            "weight": 0.5
+          },
+          {
+            "text": "cash",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le tableau des **flux de trésorerie**. Il montre le **cash** réellement généré sur les derniers exercices, alors que le compte de résultat contient des éléments non cash comme les amortissements. Or c'est le cash qui intéresse toutes les parties prenantes : les créanciers pour le service de la dette, les fournisseurs pour être payés, les actionnaires pour leur retour sur investissement."
+      }
+    },
+    {
+      "external_key": "qa-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q4",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "L'entreprise comptabilise une dépréciation de 100 €. Quel est l'impact sur les 3 états financiers (impôt à 25 %) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "75",
+            "weight": 0.3333
+          },
+          {
+            "text": "25",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : le résultat opérationnel baisse de 100, l'impôt de 25, le résultat net de **75**. Flux de trésorerie : la dotation n'est pas décaissée, le seul effet cash est l'économie d'impôt, soit +**25** de trésorerie. Bilan : l'actif immobilisé net baisse de 100 et la trésorerie monte de 25, donc l'actif baisse de 75. Au passif, les **capitaux propres** baissent de 75."
+      }
+    },
+    {
+      "external_key": "qa-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q5",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "L'entreprise augmente son niveau de stock de 100 €. Quel est l'impact sur les 3 états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "aucun",
+            "weight": 0.3333
+          },
+          {
+            "text": "100",
+            "weight": 0.3333
+          },
+          {
+            "text": "BFR",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : **aucun** impact, le stock n'est pas encore vendu. Bilan : stocks +**100** et trésorerie -100 à l'actif, passif inchangé. Flux de trésorerie : le **BFR** augmente de 100, ce qui réduit d'autant le flux d'exploitation. La trésorerie baisse de 100."
+      }
+    },
+    {
+      "external_key": "qa-q006",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Q&A Annales, Q6",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Quelle est la définition du Besoin en Fonds de Roulement ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "créances clients",
+            "weight": 0.3333
+          },
+          {
+            "text": "stocks",
+            "weight": 0.3333
+          },
+          {
+            "text": "dettes fournisseurs",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "BFR = **créances clients** + **stocks** - **dettes fournisseurs**, soit l'actif circulant d'exploitation moins le passif circulant d'exploitation. Il mesure le besoin de financement à court terme né des décalages entre encaissements et décaissements du cycle d'exploitation. Positif, il doit être financé par le fonds de roulement ou de la dette court terme. Négatif, l'activité dégage une ressource qui alimente la trésorerie."
+      }
+    },
+    {
+      "external_key": "qa-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q7",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Une entreprise à BFR négatif est-elle toujours préférable à une entreprise à BFR positif ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "secteur",
+            "weight": 0.3333
+          },
+          {
+            "text": "fournisseurs",
+            "weight": 0.3333
+          },
+          {
+            "text": "stock",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Pas nécessairement : le niveau du BFR dépend d'abord du **secteur**. La grande distribution a un BFR négatif (clients payant comptant, peu de stocks, fournisseurs payés tard), l'automobile ou le luxe un BFR positif (stocks élevés, fournisseurs payés vite). La comparaison n'a de sens qu'au sein d'un même secteur, où un BFR plus bas traduit une meilleure efficacité : pouvoir de négociation face aux **fournisseurs**, clients qui paient vite, niveau de **stock** maîtrisé."
+      }
+    },
+    {
+      "external_key": "qa-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q8",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Quelle est la différence entre un coût et une dépense d'investissement ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "un an",
+            "weight": 0.3333
+          },
+          {
+            "text": "amorti",
+            "weight": 0.3333
+          },
+          {
+            "text": "compte de résultat",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Tout dépend de la durée pendant laquelle la dépense procure un avantage économique. Moins d'**un an** (salaires, matières premières) : c'est un coût, passé en charge au **compte de résultat**. Plus d'un an (usine, machine, ordinateur) : c'est une dépense d'investissement, inscrite à l'actif, **amortie** sur sa durée d'utilité et visible dans le flux d'investissement."
+      }
+    },
+    {
+      "external_key": "qa-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q9",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Une entreprise est déclarée en faillite alors que son EBE était positif sur les 8 derniers exercices. Comment l'expliques-tu ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "investissement",
+            "weight": 0.3333
+          },
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "exceptionnelle",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "L'EBE ne dit rien de ce qui se passe en dessous. Trois explications possibles : des dépenses d'**investissement** trop lourdes qui consomment la trésorerie, une **dette** financière excessive dont l'entreprise ne peut plus honorer les échéances, ou une charge **exceptionnelle** importante (procès perdu, redressement fiscal). On peut y ajouter une dérive du BFR."
+      }
+    },
+    {
+      "external_key": "qa-q010",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q10",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Qu'est-ce que le « goodwill » ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prix",
+            "weight": 0.3333
+          },
+          {
+            "text": "immatériel",
+            "weight": 0.3333
+          },
+          {
+            "text": "dépréciation",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le goodwill, ou survaleur, est l'écart entre le **prix** payé par l'acquéreur et la valeur comptable de la cible. Il reflète des éléments **immatériels** : notoriété, relations clients et fournisseurs, savoir-faire, technologie. Il fait l'objet de tests de **dépréciation** : si les actifs acquis génèrent moins que prévu, le goodwill est réduit dans les comptes de l'acquéreur."
+      }
+    },
+    {
+      "external_key": "qa-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q11",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Quelle est la différence entre « capital lease » et « operating lease » ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bilan",
+            "weight": 0.3333
+          },
+          {
+            "text": "loyer",
+            "weight": 0.3333
+          },
+          {
+            "text": "IFRS 16",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "En capital lease, l'entreprise peut devenir propriétaire en fin de contrat : le bien est inscrit au **bilan** (actif et dette), amorti, et la dette porte intérêts. En operating lease, le bien retourne au loueur : l'entreprise paie un **loyer** en charge d'exploitation et rien n'apparaît au bilan. Depuis **IFRS 16** (2019), presque tous les contrats sont traités comme des capital leases, sauf durée inférieure à un an ou faible valeur."
+      }
+    },
+    {
+      "external_key": "qa-q012",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q12",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Avec IFRS 16, une compagnie aérienne doit comptabiliser ses contrats de location comme des « capital leases ». Quels sont les impacts sur les états financiers ?",
+      "payload": {
+        "max_words": 180
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "EBE",
+            "weight": 0.25
+          },
+          {
+            "text": "amortissement",
+            "weight": 0.25
+          },
+          {
+            "text": "intérêts",
+            "weight": 0.25
+          },
+          {
+            "text": "neutre",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Bilan : actif et passif augmentent de la valeur du bien (droit d'utilisation et dette de location). Compte de résultat : l'**EBE** augmente car le loyer disparaît. Il est remplacé par un **amortissement** et des **intérêts** financiers. Le résultat opérationnel monte aussi, puisque seule une partie de l'ancien loyer passe en amortissement. L'effet sur le résultat net est globalement **neutre**. Trésorerie : pas de variation notable, le décaissement est simplement reclassé en remboursement de dette et intérêts."
+      }
+    },
+    {
+      "external_key": "qa-q013",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q13",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Pouvez-vous décrire les différentes méthodes de consolidation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "intégration globale",
+            "weight": 0.3333
+          },
+          {
+            "text": "mise en équivalence",
+            "weight": 0.3333
+          },
+          {
+            "text": "proportionnelle",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Trois méthodes selon le niveau de détention. **Intégration globale** : au-delà de 50 %, quand la mère contrôle la filiale. **Mise en équivalence** : entre 20 % et 50 %, influence notable sans contrôle. Intégration **proportionnelle** : contrôle conjoint, typiquement une coentreprise à 50/50, méthode peu répandue."
+      }
+    },
+    {
+      "external_key": "qa-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q14",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Quels sont les traitements comptables de ces 3 méthodes de consolidation ?",
+      "payload": {
+        "max_words": 180
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "100 %",
+            "weight": 0.3333
+          },
+          {
+            "text": "intérêts minoritaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "quote-part",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Intégration globale : on reprend **100 %** des actifs, passifs, produits et charges de la filiale, et on isole une ligne d'**intérêts minoritaires** au bilan et au compte de résultat. Mise en équivalence : une seule ligne à l'actif en immobilisations financières, et la **quote-part** de résultat net de la filiale sous le résultat financier, donc hors EBE. Intégration proportionnelle : chaque ligne du bilan et du compte de résultat est reprise au pourcentage de détention."
+      }
+    },
+    {
+      "external_key": "qa-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q15",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "La société A détient 51 % des droits économiques de la société B. À quelle condition peut-on parler de contrôle ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "droits de vote",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "À condition que les droits économiques correspondent aux **droits de vote**, c'est-à-dire une action pour une voix. Ce n'est pas toujours le cas : avec des actions à droits de vote multiples, un actionnaire peut contrôler la société avec une minorité du capital, ou à l'inverse détenir la majorité du capital sans la majorité des votes."
+      }
+    },
+    {
+      "external_key": "qa-q016",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q16",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Une start-up lève 10 M€. Elle a 1 million d'actions de 8 € de nominal et la valorisation retenue pour la levée est de 20 M€. Quels sont les impacts sur son bilan ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "0,5",
+            "weight": 0.25
+          },
+          {
+            "text": "4",
+            "weight": 0.25
+          },
+          {
+            "text": "6",
+            "weight": 0.25
+          },
+          {
+            "text": "trésorerie",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Valorisation pre-money 20 M€, soit 20 € par action. Actions émises : 10 / 20 = **0,5** million. Actif : la **trésorerie** augmente de 10 M€. Passif : les capitaux propres augmentent de 10 M€, répartis entre **4** M€ de capital social (0,5 million × 8 €) et **6** M€ de prime d'émission (0,5 million × 12 €). Il ne faut pas confondre les fonds levés et le nominal de l'augmentation de capital."
+      }
+    },
+    {
+      "external_key": "qa-q017",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Q&A Annales, Q17",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Pouvez-vous citer des exemples de dépenses exceptionnelles ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non récurrent",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Ce sont des charges liées à des événements **non récurrents**, étrangers aux cycles normaux d'exploitation, d'investissement et de financement. Exemples : réparations après un incendie, prime exceptionnelle aux salariés, indemnités après un procès perdu, coûts de restructuration."
+      }
+    },
+    {
+      "external_key": "qa-q018",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q18",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Quelle est la différence entre la rentabilité économique et la rentabilité financière ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "actif économique",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.3333
+          },
+          {
+            "text": "levier",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "La rentabilité économique rapporte le résultat d'exploitation après impôt à l'**actif économique**. C'est ce que rapporteraient les capitaux propres sans dette. La rentabilité financière rapporte le résultat net aux **capitaux propres**. Elle est égale à la rentabilité économique plus l'effet de **levier**. La dette peut la gonfler, mais elle augmente le risque et donc le rendement exigé : à long terme, seule la rentabilité économique crée de la valeur."
+      }
+    },
+    {
+      "external_key": "qa-q019",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q19",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Peut-on dire qu'une entreprise crée de la valeur lorsque la rentabilité de ses capitaux propres augmente ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "risque",
+            "weight": 0.5
+          },
+          {
+            "text": "exigé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pas nécessairement. On peut faire monter la rentabilité des capitaux propres par simple endettement, mais le **risque** augmente en même temps, donc le rendement **exigé** par les actionnaires aussi. Exemple : un projet rapportant 8 % améliore une rentabilité de 6 %, mais détruit de la valeur si les actionnaires exigent 10 % compte tenu de son risque."
+      }
+    },
+    {
+      "external_key": "qa-q081",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q81",
+      "concepts": [
+        "revenue-model"
+      ],
+      "prompt_mdx": "Ton associate te demande de prévoir les revenus d'un fabricant d'électroménager. Quelles méthodes peux-tu appliquer ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bottom-up",
+            "weight": 0.3333
+          },
+          {
+            "text": "top-down",
+            "weight": 0.3333
+          },
+          {
+            "text": "part de marché",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Bottom-up** : partir du nombre de clients ou d'unités vendues et du prix de vente, puis faire évoluer volumes et prix, en recoupant la croissance obtenue avec l'historique, les concurrents et l'économie. **Top-down** : estimer la taille du marché adressable, lui appliquer la **part de marché** de l'entreprise, puis projeter l'évolution du marché et de cette part."
+      }
+    }
+  ]
+}

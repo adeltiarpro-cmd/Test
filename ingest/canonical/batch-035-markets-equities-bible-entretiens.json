@@ -1,0 +1,171 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "markets",
+  "module": "equities",
+  "items": [
+    {
+      "external_key": "bible-p3-cult-q003",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Culture générale, Q3",
+      "concepts": [
+        "market-culture"
+      ],
+      "prompt_mdx": "Quelle est la différence entre un « Bull Market » et un « Bear Market » ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "hauss",
+            "weight": 0.3333
+          },
+          {
+            "text": "baiss",
+            "weight": 0.3333
+          },
+          {
+            "text": "20 %",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Un Bull Market est un marché **haussier**, un Bear Market un marché **baissier**. On retient par convention un mouvement d'au moins **20 %**."
+      }
+    },
+    {
+      "external_key": "bible-p3-cult-q004",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Culture générale, Q4",
+      "concepts": [
+        "market-culture"
+      ],
+      "prompt_mdx": "Qu'est-ce que le CAC40 ? Quel est son niveau actuel ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "indice",
+            "weight": 0.3333
+          },
+          {
+            "text": "Paris",
+            "weight": 0.3333
+          },
+          {
+            "text": "40",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le principal **indice** de la bourse de **Paris**, composé de **40** grandes sociétés françaises. Son niveau varie chaque jour : à vérifier avant l'entretien."
+      }
+    },
+    {
+      "external_key": "bible-p3-cult-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Culture générale, Q5",
+      "concepts": [
+        "market-culture"
+      ],
+      "prompt_mdx": "Pouvez-vous citer une entreprise du CAC40 qui va mal ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "états financiers",
+            "weight": 0.5
+          },
+          {
+            "text": "presse",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Réponse à préparer soi-même, en deux temps : analyser les **états financiers** (difficulté à rembourser la dette, résultats négatifs depuis plusieurs années) et lire la **presse** économique pour le contexte. L'objectif est de montrer une capacité d'analyse."
+      }
+    },
+    {
+      "external_key": "bible-p3-cult-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Culture générale, Q6",
+      "concepts": [
+        "market-culture"
+      ],
+      "prompt_mdx": "Pouvez-vous citer une entreprise du CAC40 qui va bien ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "états financiers",
+            "weight": 0.5
+          },
+          {
+            "text": "presse",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Même méthode : s'appuyer sur les **états financiers** et sur la **presse** pour justifier le choix, avec quelques ratios à l'appui."
+      }
+    },
+    {
+      "external_key": "bible-p3-cult-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Culture générale, Q7",
+      "concepts": [
+        "market-culture"
+      ],
+      "prompt_mdx": "Pouvez-vous citer les plus grosses capitalisations boursières du CAC40 ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "nombre d'actions",
+            "weight": 0.5
+          },
+          {
+            "text": "prix",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La capitalisation est le **nombre d'actions** multiplié par le **prix** de l'action. Le classement change : à vérifier avant l'entretien sur un site de données boursières."
+      }
+    },
+    {
+      "external_key": "bible-p3-cult-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Culture générale, Q8",
+      "concepts": [
+        "cagr"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un CAGR ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "croissance annuel",
+            "weight": 0.5
+          },
+          {
+            "text": "composé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Compound Annual Growth Rate : le taux de **croissance annuel** **composé**. CAGR = (valeur d'arrivée / valeur de départ)^(1/n) - 1, avec n le nombre d'années."
+      }
+    }
+  ]
+}

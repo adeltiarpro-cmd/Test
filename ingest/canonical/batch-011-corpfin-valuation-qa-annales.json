@@ -1,0 +1,1283 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "valuation",
+  "items": [
+    {
+      "external_key": "qa-q020",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Q&A Annales, Q20",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pouvez-vous définir la valeur d'entreprise (enterprise value) et la valeur des capitaux propres (equity value) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "actif économique",
+            "weight": 0.3333
+          },
+          {
+            "text": "actionnaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "créanciers",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "La valeur d'entreprise est la valeur de marché de l'**actif économique**, l'outil industriel et commercial. Elle revient à tous les investisseurs, actionnaires et **créanciers**. La valeur des capitaux propres est la part revenant aux seuls **actionnaires**. Pour une société cotée, c'est la capitalisation boursière."
+      }
+    },
+    {
+      "external_key": "qa-q021",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q21",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Comment calculez-vous la valeur des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "nombre d'actions",
+            "weight": 0.3333
+          },
+          {
+            "text": "valeur d'entreprise",
+            "weight": 0.3333
+          },
+          {
+            "text": "dette nette",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Société cotée : cours de bourse × **nombre d'actions**. Société non cotée : on calcule d'abord la **valeur d'entreprise** par les méthodes usuelles (DCF, comparables boursiers, transactions), puis on retranche la **dette nette** et les autres éléments du bridge (minoritaires, sociétés mises en équivalence, etc.)."
+      }
+    },
+    {
+      "external_key": "qa-q022",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q22",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "Comment diluer le nombre d'actions de l'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "options",
+            "weight": 0.3333
+          },
+          {
+            "text": "convertibles",
+            "weight": 0.3333
+          },
+          {
+            "text": "dans la monnaie",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Nombre d'actions dilué = actions en circulation + actions issues des **options** dans la monnaie + actions issues des obligations **convertibles** dans la monnaie. Un instrument est **dans la monnaie** quand son prix d'exercice ou de conversion est inférieur au cours. L'effet des options se calcule par la treasury method."
+      }
+    },
+    {
+      "external_key": "qa-q023",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q23",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "Expliquez la « treasury method ».",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "exerc",
+            "weight": 0.3333
+          },
+          {
+            "text": "rach",
+            "weight": 0.3333
+          },
+          {
+            "text": "dilutif",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Les porteurs d'options dans la monnaie les **exercent** toutes. L'entreprise encaisse le prix d'exercice et utilise ce cash pour **racheter** ses propres actions au cours de marché. Comme le prix d'exercice est inférieur au cours, elle rachète moins d'actions qu'elle n'en a émis : l'effet net est **dilutif**."
+      }
+    },
+    {
+      "external_key": "qa-q024",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q24",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "1 000 actions en circulation cotant 10 €. 100 options émises au prix d'exercice de 8 €. Quelle est la valeur des capitaux propres diluée (en €) ?",
+      "payload": {
+        "unit": "€",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 10200,
+        "steps_mdx": "Options dans la monnaie : 100 actions émises, 800 € encaissés, qui rachètent 800 / 10 = 80 actions. Dilution nette : 20 actions. Valeur = 1 020 × 10 = 10 200 €.",
+        "formula_katex": "(1000 + 100 - \\tfrac{100\\times 8}{10})\\times 10"
+      }
+    },
+    {
+      "external_key": "qa-q025",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q25",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "1 000 actions en circulation cotant 10 €. 100 options émises au prix d'exercice de 12 €. Quelle est la valeur des capitaux propres diluée (en €) ?",
+      "payload": {
+        "unit": "€",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 10000,
+        "steps_mdx": "Options hors de la monnaie (12 > 10) : personne n'exerce, puisqu'on peut acheter l'action 10 € sur le marché. Aucune dilution. Valeur = 1 000 × 10 = 10 000 €.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "qa-q026",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q26",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "Comment traiter une obligation convertible dans le calcul du nombre d'actions dilué ? Illustre avec 5 millions d'actions à 20 € et une convertible de 30 M€ au prix de conversion de 15 €.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "2 millions",
+            "weight": 0.3333
+          },
+          {
+            "text": "140",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Dans la monnaie (prix de conversion sous le cours), elle est supposée convertie et comptée en capitaux propres. Hors de la monnaie, elle reste comptée en **dette**. Exemple : 15 € < 20 €, donc conversion. Actions créées : 30 M€ / 15 € = **2 millions**. Valeur des capitaux propres diluée : 7 millions × 20 € = **140** M€, et la dette nette baisse de 30 M€."
+      }
+    },
+    {
+      "external_key": "qa-q027",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q27",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Comment obtenir la valeur d'entreprise à partir de la valeur des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "minoritaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "mises en équivalence",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "C'est le bridge : valeur d'entreprise = valeur des capitaux propres (nombre d'actions dilué) + **dette** financière nette + actions de préférence + intérêts **minoritaires** + engagements de retraite + provisions - sociétés **mises en équivalence**."
+      }
+    },
+    {
+      "external_key": "qa-q028",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q28",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi ajoute-t-on les intérêts minoritaires à la valeur des capitaux propres pour obtenir la valeur d'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "100 %",
+            "weight": 0.5
+          },
+          {
+            "text": "cohéren",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Par **cohérence** entre numérateur et dénominateur des multiples. En intégration globale, l'EBE et le résultat opérationnel consolidés reprennent **100 %** de la filiale, alors que la capitalisation de la mère ne valorise que sa quote-part. Exemple : la mère détient 80 %. Elle consolide 100 % des résultats, mais son cours ne reflète que 80 %. On ajoute donc la valeur des 20 % détenus par les minoritaires."
+      }
+    },
+    {
+      "external_key": "qa-q029",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q29",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi retire-t-on la valeur des sociétés mises en équivalence dans le calcul de la valeur d'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "EBE",
+            "weight": 0.3333
+          },
+          {
+            "text": "cohéren",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitalisation",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Toujours par **cohérence** : l'**EBE** et le résultat opérationnel n'intègrent aucun produit ni charge des sociétés mises en équivalence, alors que la **capitalisation** de la mère inclut la valeur de ces participations. Exemple : une participation de 30 % est valorisée dans le cours, mais absente de l'EBE. On la retranche pour que la valeur d'entreprise corresponde au périmètre de l'EBE."
+      }
+    },
+    {
+      "external_key": "qa-q030",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q30",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi inclut-on les pensions dans le calcul de la valeur d'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.5
+          },
+          {
+            "text": "prestations définies",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Parce qu'elles s'apparentent à une **dette** que l'entreprise devra payer un jour. Cela ne vaut que pour les régimes à **prestations définies**, où l'entreprise s'est engagée sur un montant de retraite. Dans un régime à cotisations définies, elle ne garantit aucun montant et rien n'est ajouté."
+      }
+    },
+    {
+      "external_key": "qa-q031",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q31",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le montant des pensions à retenir ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non financé",
+            "weight": 0.5
+          },
+          {
+            "text": "actifs",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On ne retient que l'engagement **non financé** : la différence entre la valeur actuarielle de l'engagement (projected benefit obligation) et la juste valeur des **actifs** de couverture du régime à la date d'évaluation."
+      }
+    },
+    {
+      "external_key": "qa-q032",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q32",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Tu conseilles un grand groupe industriel pour le rachat d'une PME. Entre la valeur d'entreprise et la valeur des capitaux propres, laquelle retient le plus ton attention ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "valeur d'entreprise",
+            "weight": 0.5
+          },
+          {
+            "text": "bridge",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La **valeur d'entreprise** : c'est le coût réel de l'acquisition. L'acquéreur paie les capitaux propres pour obtenir 100 % des actions, mais il reprend aussi la dette financière, les engagements de retraite et les autres passifs. D'où l'importance de la négociation des éléments du **bridge**, qui déterminent une partie du prix effectivement payé."
+      }
+    },
+    {
+      "external_key": "qa-q033",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q33",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Une société peut-elle avoir une valeur d'entreprise négative ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "oui",
+            "weight": 0.5
+          },
+          {
+            "text": "trésorerie",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Oui**. C'est le cas quand la **trésorerie** nette dépasse la valeur des capitaux propres : beaucoup de cash, dette nette négative et faible capitalisation."
+      }
+    },
+    {
+      "external_key": "qa-q034",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q34",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Une société peut-elle avoir une valeur de marché des capitaux propres négative ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non",
+            "weight": 0.5
+          },
+          {
+            "text": "prix",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Non**. Ni le nombre d'actions ni le **prix** d'une action ne peuvent être négatifs."
+      }
+    },
+    {
+      "external_key": "qa-q035",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q35",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Ton associate te demande de valoriser un fabricant de tables de cuisine. Quelles méthodes de valorisation peux-tu utiliser ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "flux de trésorerie",
+            "weight": 0.3333
+          },
+          {
+            "text": "multiples boursiers",
+            "weight": 0.3333
+          },
+          {
+            "text": "transaction",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Actualisation des **flux de trésorerie** disponibles : l'actif économique vaut la somme de ses flux futurs actualisés selon leur risque. **Multiples boursiers** : on applique à l'EBE ou au résultat net un multiple observé sur des sociétés cotées comparables. Multiples de **transaction** : même logique, avec les multiples payés lors d'acquisitions de sociétés comparables."
+      }
+    },
+    {
+      "external_key": "qa-q036",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q36",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Quelle méthode d'évaluation est la meilleure ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "plusieurs",
+            "weight": 0.3333
+          },
+          {
+            "text": "marché",
+            "weight": 0.3333
+          },
+          {
+            "text": "hypothèses",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Aucune seule : il faut en croiser **plusieurs**. Les méthodes analogiques (comparables, transactions) s'appuient sur des données de **marché** et donnent un vrai point de repère, mais exigent de bons comparables et mesurent un prix plus qu'une valeur, avec le risque d'un marché trop haut ou d'un acquéreur ayant surpayé. Le DCF, intrinsèque, évite ce biais mais dépend fortement des **hypothèses** : plan d'affaires, coût du capital, croissance à l'infini."
+      }
+    },
+    {
+      "external_key": "qa-q037",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q37",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Quelle méthode donne la valorisation la plus élevée ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "transaction",
+            "weight": 0.5
+          },
+          {
+            "text": "prime",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le plus souvent les multiples de **transaction**, parce que les prix payés intègrent une **prime** d'acquisition : contrôle, effet d'enchère, synergies anticipées. On parle de méthode de majoritaire, contre méthode de minoritaire pour les comparables boursiers. Ce n'est pas systématique, et le DCF peut ressortir plus haut ou plus bas selon ses hypothèses."
+      }
+    },
+    {
+      "external_key": "qa-q038",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q38",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Quand peut-on utiliser la méthode de la « somme des parties » ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "conglomérat",
+            "weight": 0.5
+          },
+          {
+            "text": "décote",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour un groupe aux activités diverses, typiquement un **conglomérat** : on valorise chaque activité séparément avec la méthode la plus adaptée, puis on additionne. Une **décote** de holding s'applique parfois, quand le marché craint une mauvaise allocation du capital entre divisions ou préfère des sociétés mono-activité pour faire lui-même sa diversification."
+      }
+    },
+    {
+      "external_key": "qa-q039",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q39",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Existe-t-il d'autres méthodes pour valoriser une société ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "LBO",
+            "weight": 0.3333
+          },
+          {
+            "text": "liquidative",
+            "weight": 0.3333
+          },
+          {
+            "text": "opérationnels",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Méthode **LBO** : le prix qu'un investisseur financier peut payer compte tenu de son TRI cible et de la capacité d'endettement. Valeur **liquidative** : ce que rapporterait la vente des actifs, souvent la valorisation la plus basse, réservée aux sociétés en difficulté. Multiples **opérationnels** (valeur d'entreprise par abonné, par clic) : en second choix, quand les agrégats financiers sont inexploitables, par exemple pour une start-up sans revenus."
+      }
+    },
+    {
+      "external_key": "qa-q040",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q40",
+      "concepts": [
+        "bank-valuation"
+      ],
+      "prompt_mdx": "Ton associate te demande de valoriser une banque. Quelles méthodes utilises-tu ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "résultat net",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.3333
+          },
+          {
+            "text": "dividendes",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "La structure de capital d'une banque rend la valeur d'entreprise inopérante : on raisonne en valeur des capitaux propres. Multiples : valeur des capitaux propres / **résultat net** (P/E) et valeur des capitaux propres / **capitaux propres** comptables (P/BV). Actualisation des **dividendes**, au coût des capitaux propres et non au coût moyen pondéré du capital."
+      }
+    },
+    {
+      "external_key": "qa-q041",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q41",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "La valeur liquidative peut-elle donner une valorisation plus élevée que le DCF ou les multiples ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "oui",
+            "weight": 0.5
+          },
+          {
+            "text": "sous-évalu",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Oui**, quand l'entreprise détient des actifs de grande valeur (brevets, usines, immobilier) **sous-évalués** par le marché : mauvaise performance opérationnelle du management, creux de cycle, ou événement exceptionnel ayant frappé le secteur."
+      }
+    },
+    {
+      "external_key": "qa-q042",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q42",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Comment sélectionner les sociétés comparables pour la méthode des multiples boursiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "secteur",
+            "weight": 0.25
+          },
+          {
+            "text": "rentabilité",
+            "weight": 0.25
+          },
+          {
+            "text": "géographie",
+            "weight": 0.25
+          },
+          {
+            "text": "taille",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Quatre critères. Même **secteur** d'activité. Profil financier proche : **rentabilité** (marges), levier, croissance. Même **géographie**, car le même métier peut avoir des dynamiques très différentes selon la région. **Taille** comparable en chiffre d'affaires."
+      }
+    },
+    {
+      "external_key": "qa-q043",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q43",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Quels sont les multiples les plus utilisés en évaluation financière ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "chiffre d'affaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "EBE",
+            "weight": 0.3333
+          },
+          {
+            "text": "résultat net",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Valeur d'entreprise / **chiffre d'affaires**, quand la société n'est pas encore rentable. Valeur d'entreprise / **EBE**, le plus courant, qui mesure la performance opérationnelle. Valeur d'entreprise / résultat opérationnel, pour les secteurs très capitalistiques. Valeur des capitaux propres / **résultat net** (P/E), qui dépend de la politique financière et de la fiscalité."
+      }
+    },
+    {
+      "external_key": "qa-q044",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q44",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Tu valorises une entreprise par le multiple valeur d'entreprise / EBE. Nous sommes en septembre. Quel EBE retiens-tu ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prévisionnel",
+            "weight": 0.5
+          },
+          {
+            "text": "en cours",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un EBE **prévisionnel** plutôt qu'historique, puisqu'on cherche à valoriser le futur : celui de l'année **en cours** et celui de l'année suivante, ou l'EBE des douze prochains mois. On le trouve dans les notes de brokers ou les prévisions de la société. Un multiple sur les douze derniers mois reste utile en comparaison."
+      }
+    },
+    {
+      "external_key": "qa-q045",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q45",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Comment sélectionner les comparables pour la méthode des multiples transactionnels ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "2-3",
+            "weight": 0.5
+          },
+          {
+            "text": "termes",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Mêmes critères que pour les comparables boursiers, plus deux autres. Le temps : des transactions des **2-3** dernières années, dans le même cycle économique. Les **termes** de l'opération : pourcentage acquis, type d'acquéreur, prime payée."
+      }
+    },
+    {
+      "external_key": "qa-q046",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q46",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Pouvez-vous décrire la méthode de l'actualisation des flux de trésorerie disponibles ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "plan d'affaires",
+            "weight": 0.25
+          },
+          {
+            "text": "valeur terminale",
+            "weight": 0.25
+          },
+          {
+            "text": "coût moyen pondéré",
+            "weight": 0.25
+          },
+          {
+            "text": "endettement net",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Trois étapes. 1. Bâtir un **plan d'affaires** et calculer les flux disponibles sur un horizon explicite d'environ 5 ans. 2. Calculer la **valeur terminale** au-delà de cet horizon, par Gordon-Shapiro ou par un multiple d'EBE normatif. 3. Calculer le **coût moyen pondéré** du capital et actualiser flux et valeur terminale. On obtient la valeur d'entreprise, dont on retranche l'**endettement net** et les autres éléments du bridge pour arriver aux capitaux propres."
+      }
+    },
+    {
+      "external_key": "qa-q047",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q47",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le flux de trésorerie disponible ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "résultat opérationnel",
+            "weight": 0.25
+          },
+          {
+            "text": "amortissement",
+            "weight": 0.25
+          },
+          {
+            "text": "BFR",
+            "weight": 0.25
+          },
+          {
+            "text": "investissement",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Flux de trésorerie disponible = **résultat opérationnel** × (1 - taux d'impôt) + dotations aux **amortissements** - variation du **BFR** - dépenses d'**investissement**. C'est le flux généré par l'actif économique, qui revient à tous les apporteurs de fonds, actionnaires et créanciers."
+      }
+    },
+    {
+      "external_key": "qa-q048",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q48",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le flux de trésorerie disponible revenant aux actionnaires ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "intérêts",
+            "weight": 0.3333
+          },
+          {
+            "text": "remboursement",
+            "weight": 0.3333
+          },
+          {
+            "text": "nouvelles dettes",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "On part du flux de trésorerie disponible et on retire ce qui revient aux créanciers : flux disponible - **intérêts** financiers - **remboursements** de dette + **nouvelles dettes**. En toute rigueur, les intérêts se prennent nets de leur économie d'impôt."
+      }
+    },
+    {
+      "external_key": "qa-q049",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q49",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Sur quelle période faut-il projeter les flux de trésorerie ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "5",
+            "weight": 0.5
+          },
+          {
+            "text": "valeur terminale",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "En général **5** à 6 ans, la **valeur terminale** captant tout ce qui vient après. L'horizon s'allonge quand les flux sont prévisibles sur longue durée (concession, contrat) ou quand la société n'a pas encore atteint son régime de croisière, comme une start-up non rentable."
+      }
+    },
+    {
+      "external_key": "qa-q050",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q50",
+      "concepts": [
+        "wacc"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le coût moyen pondéré du capital ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "coût des capitaux propres",
+            "weight": 0.3333
+          },
+          {
+            "text": "coût de la dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "impôt",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "CMPC = Ke × CP / (CP + D) + Kd × (1 - IS) × D / (CP + D), avec Ke le **coût des capitaux propres**, Kd le **coût de la dette**, IS le taux d'**impôt**, CP et D les valeurs de marché des capitaux propres et de la dette nette. C'est le rendement minimal exigé par l'ensemble des apporteurs de fonds, utilisé comme taux d'actualisation du DCF."
+      }
+    },
+    {
+      "external_key": "qa-q051",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q51",
+      "concepts": [
+        "wacc"
+      ],
+      "prompt_mdx": "Pourquoi pondérer le coût moyen pondéré du capital par les valeurs de marché plutôt que comptables ? Illustre : 10 M€ investis en capitaux propres, valorisés 50 M€ aujourd'hui, dette de 10 M€, Ke 10 %, Kd 5 %, impôt 25 %.",
+      "payload": {
+        "max_words": 180
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "8,96",
+            "weight": 0.3333
+          },
+          {
+            "text": "6,88",
+            "weight": 0.3333
+          },
+          {
+            "text": "sous-estim",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Les valeurs comptables **sous-estiment** le coût du capital. En valeur de marché : 10 % × 50/60 + 5 % × 0,75 × 10/60 = **8,96** %. En valeur comptable : 10 % × 10/20 + 5 % × 0,75 × 10/20 = **6,88** %. Les actionnaires attendent 10 % sur les 50 M€ qu'ils pourraient encaisser aujourd'hui en vendant, pas sur les 10 M€ d'origine. Un taux trop bas gonflerait la valorisation et ferait accepter des projets insuffisamment rentables."
+      }
+    },
+    {
+      "external_key": "qa-q052",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q52",
+      "concepts": [
+        "capm"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le coût des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "sans risque",
+            "weight": 0.3333
+          },
+          {
+            "text": "bêta",
+            "weight": 0.3333
+          },
+          {
+            "text": "prime de risque",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Par le MEDAF : coût des capitaux propres = taux **sans risque** + **bêta** × **prime de risque** du marché, auquel on peut ajouter une prime de risque pays, de taille ou d'illiquidité. C'est le rendement exigé par les actionnaires compte tenu du risque systématique du titre."
+      }
+    },
+    {
+      "external_key": "qa-q053",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q53",
+      "concepts": [
+        "beta"
+      ],
+      "prompt_mdx": "Comment obtenir le bêta d'une entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "désendetté",
+            "weight": 0.3333
+          },
+          {
+            "text": "endetté",
+            "weight": 0.3333
+          },
+          {
+            "text": "comparables",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Soit on le relève dans une source de marché (Bloomberg, FactSet, notes de brokers), soit on le calcule à partir de **comparables**. On distingue le bêta **désendetté**, ou de l'actif économique, qui ne reflète que le risque d'exploitation, et le bêta **endetté**, ou des capitaux propres, qui y ajoute le risque lié à la structure financière."
+      }
+    },
+    {
+      "external_key": "qa-q054",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q54",
+      "concepts": [
+        "beta"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le bêta de l'actif économique, et quand l'utilise-t-on ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparables",
+            "weight": 0.5
+          },
+          {
+            "text": "structure financière cible",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On désendette le bêta de chaque société cotée comparable : β désendetté = β endetté / [1 + (1 - IS) × D / CP]. On prend la moyenne ou la médiane de ces **comparables**. On le réendette ensuite avec la **structure financière cible** de la société à valoriser. On s'en sert quand la société n'est pas cotée ou que son propre bêta n'est pas fiable."
+      }
+    },
+    {
+      "external_key": "qa-q055",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q55",
+      "concepts": [
+        "cost-of-debt"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le coût de la dette ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "rendement",
+            "weight": 0.3333
+          },
+          {
+            "text": "notation",
+            "weight": 0.3333
+          },
+          {
+            "text": "spread",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Si la société a des obligations cotées, on prend leur **rendement** actuariel. Sinon, on part de sa **notation** : taux sans risque de même maturité plus le **spread** correspondant. Sans notation, on construit une note synthétique à partir du levier ou du ratio de couverture des intérêts."
+      }
+    },
+    {
+      "external_key": "qa-q056",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q56",
+      "concepts": [
+        "capm"
+      ],
+      "prompt_mdx": "Quelle est la relation entre le niveau de levier et le coût des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "augmente",
+            "weight": 0.5
+          },
+          {
+            "text": "bêta",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Toutes choses égales par ailleurs, plus le levier est élevé, plus le risque de défaut augmente et plus le coût des capitaux propres **augmente**. Techniquement, l'endettement fait monter le **bêta** des capitaux propres."
+      }
+    },
+    {
+      "external_key": "qa-q057",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q57",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "Dans un DCF, comment calcule-t-on la valeur terminale ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Gordon",
+            "weight": 0.3333
+          },
+          {
+            "text": "normatif",
+            "weight": 0.3333
+          },
+          {
+            "text": "croissance",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le plus souvent par la formule de **Gordon**-Shapiro : valeur terminale = flux **normatif** × (1 + g) / (CMPC - g), où g est le taux de **croissance** à l'infini et le flux normatif celui de la dernière année du plan, représentatif du long terme. On peut aussi appliquer un multiple à l'EBE ou au résultat opérationnel de sortie."
+      }
+    },
+    {
+      "external_key": "qa-q058",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q58",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "Comment fixe-t-on le taux de croissance perpétuel de la formule de Gordon-Shapiro ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "inflation",
+            "weight": 0.5
+          },
+          {
+            "text": "économie",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On se réfère au taux d'**inflation** ou à la croissance de long terme de l'**économie**. Il ne peut pas dépasser cette dernière : cela reviendrait à supposer que l'entreprise croît indéfiniment plus vite que le pays entier."
+      }
+    },
+    {
+      "external_key": "qa-q059",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q59",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Mandat de vente : tu dois faire un DCF sur le plan d'affaires du management, que tu juges trop agressif. Comment ajustes-tu la valorisation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "hypothèses",
+            "weight": 0.5
+          },
+          {
+            "text": "sensibilité",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Deux leviers. Refaire les projections avec d'autres **hypothèses** et bâtir plusieurs scénarios en jouant sur la croissance du chiffre d'affaires, la marge d'EBE et les investissements. Présenter des tables de **sensibilité** qui montrent comment la valeur réagit aux hypothèses clés."
+      }
+    },
+    {
+      "external_key": "qa-q060",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q60",
+      "concepts": [
+        "financial-policy"
+      ],
+      "prompt_mdx": "L'entreprise verse un dividende à ses actionnaires. Quel est l'impact sur la valeur d'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "aucun",
+            "weight": 0.3333
+          },
+          {
+            "text": "dette nette",
+            "weight": 0.3333
+          },
+          {
+            "text": "cours",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Aucun** : une décision de politique financière ne crée ni ne détruit de valeur d'actif économique. En revanche la trésorerie sort, donc la **dette nette** augmente, et la valeur des capitaux propres baisse d'autant : le **cours** de l'action s'ajuste du montant du dividende le jour du détachement."
+      }
+    },
+    {
+      "external_key": "qa-q061",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q61",
+      "concepts": [
+        "financial-policy"
+      ],
+      "prompt_mdx": "Quel est l'effet d'un rachat d'actions sur le cours de bourse ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "demande",
+            "weight": 0.3333
+          },
+          {
+            "text": "sous-évalu",
+            "weight": 0.3333
+          },
+          {
+            "text": "signal",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Trois lectures coexistent. Offre et **demande** : l'entreprise achète ses titres, le cours monte. Théorie de la **sous-évaluation** : une société ne rachète ses actions que si elle les juge sous leur valeur fondamentale, signal positif. **Signal** négatif à l'inverse : faute de projets créateurs de valeur, elle rend le cash, ce qui peut peser sur le cours."
+      }
+    },
+    {
+      "external_key": "qa-q062",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q62",
+      "concepts": [
+        "financial-policy"
+      ],
+      "prompt_mdx": "Le directeur financier d'une entreprise peut-il créer de la valeur ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "résultat d'exploitation",
+            "weight": 0.5
+          },
+          {
+            "text": "répart",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "En théorie non. La valeur vient du **résultat d'exploitation**, qui dépend de la qualité des actifs et sur lequel il n'a pas la main. Son rôle est de **répartir** ce résultat entre les apporteurs de fonds : intérêts aux créanciers, dividendes aux actionnaires."
+      }
+    },
+    {
+      "external_key": "qa-q063",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q63",
+      "concepts": [
+        "cost-of-debt"
+      ],
+      "prompt_mdx": "Comment calcule-t-on la valeur de marché d'une dette ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "actualis",
+            "weight": 0.5
+          },
+          {
+            "text": "marge",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "En **actualisant** l'échéancier restant d'intérêts et de capital au taux qu'un investisseur exigerait aujourd'hui pour ce risque. Ce taux est le taux sans risque de même maturité, lu sur la courbe des taux, plus une **marge** de crédit correspondant à la notation de l'émetteur."
+      }
+    },
+    {
+      "external_key": "qa-q064",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q64",
+      "concepts": [
+        "financial-policy"
+      ],
+      "prompt_mdx": "Ta banque conseille une entreprise qui veut racheter une partie de ses actions. Quelles peuvent être les motivations ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "sortie",
+            "weight": 0.3333
+          },
+          {
+            "text": "bénéfice par action",
+            "weight": 0.3333
+          },
+          {
+            "text": "fiscal",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Offrir une **sortie** à un actionnaire, renforcer le poids de ceux qui restent, améliorer des indicateurs comme le **bénéfice par action** ou la rentabilité des capitaux propres, distribuer du cash avec un traitement **fiscal** parfois plus favorable que le dividende, soutenir le cours, ou constituer un stock d'actions pour les plans salariés. Contrairement au dividende, le rachat est ponctuel."
+      }
+    }
+  ]
+}
