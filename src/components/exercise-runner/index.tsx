@@ -34,6 +34,7 @@ export type SessionExercise = {
   difficulty: number;
   payload: Record<string, unknown>;
   tags: string[];
+  module_id?: string;
 };
 
 interface ExerciseRunnerProps {
@@ -48,6 +49,12 @@ const DIFFICULTY_LABELS: Record<number, string> = {
   4: "Difficile",
   5: "Expert",
 };
+const CONFIDENCE_LABELS: Record<1 | 2 | 3, string> = {
+  1: "Au hasard",
+  2: "Incertain",
+  3: "Sûr",
+};
+
 const TYPE_LABELS: Record<string, string> = {
   mcq: "QCM",
   numeric: "Numérique",
@@ -72,6 +79,7 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const startRef = useRef(Date.now());
   const resultRef = useRef<HTMLDivElement>(null);
+  const [confidence, setConfidence] = useState<1 | 2 | 3>(2);
 
   const pay = exercise.payload as Record<string, unknown>;
   const promptMdx = (pay.prompt_mdx as string | undefined) ?? "";
@@ -85,7 +93,8 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
       const res = await submitAttempt(
         exercise.id,
         { type: exercise.type, ...answer } as Parameters<typeof submitAttempt>[1],
-        Date.now() - startRef.current
+        Date.now() - startRef.current,
+        confidence
       );
       setResult(res);
       setTimeout(
@@ -126,6 +135,28 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
       {promptMdx && (
         <div className="text-base text-foreground leading-relaxed">
           <MathText>{promptMdx}</MathText>
+        </div>
+      )}
+
+      {/* Confidence selector — set before submitting */}
+      {!result && (
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="text-xs text-muted-foreground shrink-0">Confiance :</span>
+          {([1, 2, 3] as const).map((c) => (
+            <button
+              key={c}
+              type="button"
+              onClick={() => setConfidence(c)}
+              className={cn(
+                "px-2 py-0.5 rounded text-xs font-medium border transition-colors",
+                confidence === c
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "text-muted-foreground border-border hover:border-foreground hover:text-foreground"
+              )}
+            >
+              {CONFIDENCE_LABELS[c]}
+            </button>
+          ))}
         </div>
       )}
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Nav } from "@/components/layout/nav";
 import { Fira_Sans, Fira_Code } from "next/font/google";
 import "./globals.css";
 import "katex/dist/katex.min.css";
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${firaSans.variable} ${firaCode.variable} font-sans`}>
+        <Nav />
         {children}
       </body>
     </html>

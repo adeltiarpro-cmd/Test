@@ -14,8 +14,8 @@ pas de case tant que la précédente n'est pas cochée, sauf indication contrair
 | 6 | `STEP-06-graph-explorer.md` | Claude Code | Le step file + migrations `knowledge_graphs/*` + `exercises.ts` | — | Explorateur Umbrex + `graph_fill` | ☑ |
 | 7 | `STEP-07-excel-model-statements.md` | Claude Code | Le step file + migrations `model_templates` + `exercises.ts` | — | Atelier de modèles (HyperFormula) + comptes de résultat interactifs | ☑ |
 | 8 | `STEP-08-case-formats.md` | Claude Code | Le step file + `exercises.ts` | — | `case_structuring`/`market_sizing`/`case_math` + bouton feedback LLM | ☑ |
-| 9 | `STEP-09-srs-pedagogy-dashboard.md` | Claude Code | Le step file + migrations `review_states/concept_mastery/module_targets` | — | SRS + 8 dispositifs pédagogiques + dashboard + vue Math | ☐ |
-| 10 | `STEP-10-hardening-deploy.md` | Claude Code | Le step file, revue transverse | — | Audit RLS, invitations, checklist skill, déploiement Vercel | ☐ |
+| 9 | `STEP-09-srs-pedagogy-dashboard.md` | Claude Code | Le step file + migrations `review_states/concept_mastery/module_targets` | — | SRS + 8 dispositifs pédagogiques + dashboard + vue Math | ☑ |
+| 10 | `STEP-10-hardening-deploy.md` | Claude Code | Le step file, revue transverse | — | Audit RLS, invitations, checklist skill, déploiement Vercel | ☑ |
 | 11 | `STEP-11-admin-form.md` | Claude Code | Le step file + `exercises.ts` + ExerciseRunner (STEP-05) | — | Formulaire admin de saisie manuelle + colonne `is_admin` | ☐ |
 
 ## Trois principes qui font tenir ce système

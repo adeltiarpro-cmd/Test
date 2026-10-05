@@ -5,6 +5,7 @@ import HyperFormula from "hyperformula";
 import { createClient } from "@/lib/supabase/server";
 import type { CellResult } from "@/components/model-workshop";
 import type { LineResult } from "@/components/statement-interactive";
+import { schedule } from "./srs";
 
 export type ExerciseAnswer =
   | { type: "mcq"; selected_keys: string[] }
@@ -35,6 +36,8 @@ export type AttemptResult = {
   cellResults?: Record<string, CellResult>;
   lineResults?: Record<string, LineResult>;
   rubricResults?: RubricBranchResult[];
+  isLeech?: boolean;
+  prerequisiteConcepts?: { id: string; title: string }[];
 };
 
 // ── Formula equivalence (mathjs — for formula_cloze) ─────────────────────────
@@ -492,7 +495,8 @@ function scoreMarketSizing(
 export async function submitAttempt(
   exerciseId: string,
   answer: ExerciseAnswer,
-  timeSpentMs: number
+  timeSpentMs: number,
+  confidence: 1 | 2 | 3 = 2
 ): Promise<AttemptResult> {
   const supabase = await createClient();
 
@@ -593,36 +597,39 @@ export async function submitAttempt(
     answer: answerPayload as Record<string, unknown>,
     is_correct: result.isCorrect,
     time_spent_ms: timeSpentMs,
+    confidence,
   });
 
-  // Upsert review_states
+  // Upsert review_states — SM-2 with confidence rating
   const { data: rs } = await supabase
     .from("review_states")
-    .select("reps, lapses, stability")
+    .select("reps, lapses, stability, difficulty_fsrs, state")
     .eq("user_id", user.id)
     .eq("exercise_id", exerciseId)
     .maybeSingle();
 
-  const reps = (Number(rs?.reps) || 0) + 1;
-  const lapses = result.isCorrect
-    ? Number(rs?.lapses) || 0
-    : (Number(rs?.lapses) || 0) + 1;
-  const stability = result.isCorrect
-    ? Math.min((Number(rs?.stability) || 0) + 1, 30)
-    : 0.5;
-  const dueAt = result.isCorrect
-    ? new Date(Date.now() + stability * 86_400_000).toISOString()
-    : new Date(Date.now() + 600_000).toISOString();
+  const srs = schedule(
+    {
+      reps: Number(rs?.reps) || 0,
+      lapses: Number(rs?.lapses) || 0,
+      stability: Number(rs?.stability) || 0,
+      difficulty_fsrs: Number(rs?.difficulty_fsrs) || 0.3,
+      state: Number(rs?.state) || 0,
+    },
+    result.isCorrect,
+    confidence
+  );
 
   await supabase.from("review_states").upsert(
     {
       user_id: user.id,
       exercise_id: exerciseId,
-      due_at: dueAt,
-      stability,
-      reps,
-      lapses,
-      state: result.isCorrect ? 2 : 3,
+      due_at: srs.dueAt.toISOString(),
+      stability: srs.stability,
+      difficulty_fsrs: srs.difficulty_fsrs,
+      reps: srs.reps,
+      lapses: srs.lapses,
+      state: srs.state,
       last_review_at: new Date().toISOString(),
     },
     { onConflict: "user_id,exercise_id" }
@@ -649,6 +656,26 @@ export async function submitAttempt(
       },
       { onConflict: "user_id,concept_id" }
     );
+  }
+
+  // Leech detection: 4+ lapses → show prerequisite suggestion
+  if (srs.lapses > 3) {
+    result.isLeech = true;
+    if (conceptIds.length > 0) {
+      const { data: edges } = await supabase
+        .from("concept_edges")
+        .select("source_id")
+        .in("target_id", conceptIds)
+        .eq("kind", "prerequisite");
+      const prereqIds = (edges ?? []).map((e) => e.source_id as string);
+      if (prereqIds.length > 0) {
+        const { data: prereqConcepts } = await supabase
+          .from("concepts")
+          .select("id, title")
+          .in("id", prereqIds);
+        result.prerequisiteConcepts = (prereqConcepts ?? []) as { id: string; title: string }[];
+      }
+    }
   }
 
   return result;

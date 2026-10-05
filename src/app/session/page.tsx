@@ -7,6 +7,28 @@ import type { SessionExercise } from "@/components/exercise-runner";
 
 export const metadata = { title: "Session — Prep Platform" };
 
+type ExerciseWithModule = SessionExercise & { module_id: string };
+
+function interleave(exercises: ExerciseWithModule[]): ExerciseWithModule[] {
+  const groups = new Map<string, ExerciseWithModule[]>();
+  for (const ex of exercises) {
+    const key = ex.module_id ?? "unknown";
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(ex);
+  }
+  const result: ExerciseWithModule[] = [];
+  const buckets = [...groups.values()];
+  while (result.length < exercises.length) {
+    let added = false;
+    for (const bucket of buckets) {
+      const ex = bucket.shift();
+      if (ex) { result.push(ex); added = true; }
+    }
+    if (!added) break;
+  }
+  return result;
+}
+
 const SUPPORTED_TYPES = [
   "mcq",
   "numeric",
@@ -41,25 +63,27 @@ export default async function SessionPage() {
   if (dueIds.length > 0) {
     const { data } = await supabase
       .from("exercises")
-      .select("id, type, difficulty, payload, tags")
+      .select("id, type, difficulty, payload, tags, module_id")
       .in("id", dueIds)
       .in("type", SUPPORTED_TYPES);
-    exercises = (data ?? []) as SessionExercise[];
+    exercises = (data ?? []) as ExerciseWithModule[];
   }
 
   // 2. Always fill remaining slots with newest exercises (includes unseen types)
   if (exercises.length < 10) {
     const { data } = await supabase
       .from("exercises")
-      .select("id, type, difficulty, payload, tags")
+      .select("id, type, difficulty, payload, tags, module_id")
       .in("type", SUPPORTED_TYPES)
       .order("created_at", { ascending: false })
       .limit(10);
 
     const existing = new Set(exercises.map((e) => e.id));
-    const newOnes = (data ?? []).filter((e) => !existing.has(e.id)) as SessionExercise[];
+    const newOnes = (data ?? []).filter((e) => !existing.has(e.id)) as ExerciseWithModule[];
     exercises = [...exercises, ...newOnes].slice(0, 10);
   }
+
+  exercises = interleave(exercises as ExerciseWithModule[]);
 
   // 3. Pre-fetch server-side data for graph_fill and excel_model
   const enriched = await Promise.all(

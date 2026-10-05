@@ -17,6 +17,21 @@ FICHIERS CLÉS: <chemins créés/modifiés, pour que la session suivante sache o
 
 ---
 
+## 2026-08-27 — STEP-10 — Durcissement et déploiement
+STATUT: FAIT (partiel — tâches manuelles restantes documentées ci-dessous)
+FAIT: Page /login complète — onglets Connexion/Créer un compte, gestion invitation error (trigger check_invitation → message clair côté UI), reset password (email envoyé via resetPasswordForEmail). .env.example documenté (4 variables : NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, ANTHROPIC_API_KEY + NEXT_PUBLIC_SITE_URL). Audit RLS : migration 20240009 couvre toutes les tables user-scoped (attempts/review_states/concept_mastery/profiles) avec user_id = auth.uid() + WITH CHECK. invitations : aucune policy user, service_role only, trigger SECURITY DEFINER — correct. Accessibilité : focus-ring visible sur Button (focus-visible:ring-2) et Input (focus:ring-2), min-h-[44px] sur les deux, aria-invalid + aria-describedby sur Input, labels htmlFor corrects.
+RESTE (manuel) :
+  1. npx supabase db push (migration 20240014 confidence column si pas encore appliquée)
+  2. Smoke tests 10 types d'exos sur /session
+  3. Déploiement Vercel : ajouter les 5 variables .env.example dans les env vars Vercel
+  4. Configurer Supabase Dashboard > Authentication > URL Configuration > Site URL = URL Vercel
+  5. Tester avec 2 comptes réels (toi + un ami invité)
+DÉCISIONS:
+  - Reset password : pas de page /auth/callback implémentée (hors scope) — Supabase envoie le lien vers NEXT_PUBLIC_SITE_URL/login, flow complet uniquement après configuration Site URL dans Supabase dashboard.
+  - Signup error mapping : check sur msg.includes("invited") ET "access denied" — couvre les deux formulations possibles selon la version Supabase.
+  - Pas de redirect automatique post-signup (email de confirmation d'abord) — Callout "Vérifiez votre email" affiché.
+FICHIERS CLÉS: src/app/login/page.tsx (remplace version minimale STEP-05), src/app/login/actions.ts (+ signupAction + resetAction), .env.example (nouveau)
+
 ## 2026-08-14 — STEP-01 — Schéma Supabase, RLS, seed
 STATUT: FAIT
 FAIT: scaffold Next.js 15 + App Router posé (src/, supabase/config.toml, package.json, Supabase client SSR) ; 10 migrations SQL créées — 18 tables + enum exercise_type (10 valeurs) + 2 triggers (check_invitation BEFORE, handle_new_user AFTER) + RLS complète + seed 5 tracks + 15 modules racine (dont 3 math explicites) + module_targets par défaut.
@@ -91,6 +106,17 @@ DÉCISIONS: tsconfig.json de /ingest nécessitait un rootDir explicite pour
 référencer packages/schemas/exercises.ts hors du dossier — corrigé.
 FICHIERS CLÉS: ingest/scripts/{validate,load,report,xls-extract}.ts,
 ingest/README.md, ingest/canonical/batch-001-fake.json, docs/ingest/COVERAGE.md
+
+## 2026-08-21 — STEP-09 — SRS + pédagogie + dashboard
+STATUT: FAIT
+FAIT: SM-2 avec notation de confiance (1/2/3) remplace le placeholder STEP-05. Migration 20240014 ajoute `confidence` sur `attempts`. SRS : intervalles fractionnaires, `difficulty_fsrs` ajusté par confiance, cap 60 jours, état new/learning/review/relearning. Détection de leech (lapses > 4) + proposition des prérequis (`concept_edges`). Sélecteur de confiance "Au hasard / Incertain / Sûr" dans ExerciseRunner avant chaque soumission. Interleaving par `module_id` dans session/page.tsx (cap due à 7, fallback < 10). Dashboard `/dashboard` : due count, 3 concepts faibles, activité 7 jours, progression par filière avec barre target. Vue Math `/math` : concepts groupés par module, code couleur maîtrise (vert ≥80 %, ambre 50-80 %, rouge <50 %), badge "Leech", prérequis texte. Nav sticky (Dashboard / Entraînement / Consulting / Maths) dans layout global. Rappel lundi en-tête : bannière conditionnelle in-app (no cron externe nécessaire, calcul fresh à chaque load RSC).
+DÉCISIONS:
+  - `as unknown as T` pour les casts Supabase deep-join (concepts→modules→tracks) : les types générés Supabase auto ne sont pas présents, TypeScript ne peut pas inférer la direction FK. Aucun impact runtime.
+  - Leech seuil = lapses > 3 (donc 4+ erreurs) aligné sur le spec ("> 3").
+  - Dashboard track progression : agrégation concept_mastery → modules → tracks en JS après un seul deep-join Supabase. Si aucun concept ingéré, fallback Callout info.
+  - `/math` montre tous les tracks math mais reste vide tant qu'aucun concept n'est ingéré (INGEST-RUNBOOK) — comportement attendu.
+  - Nav masquée sur /login et /style-guide (check pathname client-side dans nav.tsx).
+FICHIERS CLÉS: supabase/migrations/20240014000000_srs_confidence.sql, src/lib/srs.ts, src/lib/session-actions.ts, src/app/session/page.tsx, src/components/exercise-runner/index.tsx, src/components/exercise-runner/result-panel.tsx, src/app/dashboard/page.tsx, src/app/math/page.tsx, src/components/layout/nav.tsx, src/app/layout.tsx
 
 ## 2026-08-19 — STEP-08 — Cas structurés
 STATUT: FAIT

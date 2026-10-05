@@ -82,6 +82,19 @@ export function ResultPanel({ result, exerciseType }: ResultPanelProps) {
           ))}
         </div>
       )}
+      {/* Leech warning */}
+      {result.isLeech && (
+        <Callout variant="warning" title="Point bloquant — 4+ erreurs sur cet exercice">
+          <p>Recommandation : revoir les prérequis avant de continuer.</p>
+          {result.prerequisiteConcepts && result.prerequisiteConcepts.length > 0 && (
+            <ul className="mt-1 list-disc list-inside">
+              {result.prerequisiteConcepts.map((c) => (
+                <li key={c.id} className="text-sm">{c.title}</li>
+              ))}
+            </ul>
+          )}
+        </Callout>
+      )}
     </div>
   );
 }
