@@ -1,0 +1,419 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "val-enterprise-value",
+  "items": [
+    {
+      "external_key": "qa-q020",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Q&A Annales, Q20",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pouvez-vous définir la valeur d'entreprise (enterprise value) et la valeur des capitaux propres (equity value) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "actif économique",
+            "weight": 0.3333
+          },
+          {
+            "text": "actionnaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "créanciers",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "La valeur d'entreprise est la valeur de marché de l'**actif économique**, l'outil industriel et commercial. Elle revient à tous les investisseurs, actionnaires et **créanciers**. La valeur des capitaux propres est la part revenant aux seuls **actionnaires**. Pour une société cotée, c'est la capitalisation boursière."
+      }
+    },
+    {
+      "external_key": "qa-q021",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q21",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Comment calculez-vous la valeur des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "nombre d'actions",
+            "weight": 0.3333
+          },
+          {
+            "text": "valeur d'entreprise",
+            "weight": 0.3333
+          },
+          {
+            "text": "dette nette",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Société cotée : cours de bourse × **nombre d'actions**. Société non cotée : on calcule d'abord la **valeur d'entreprise** par les méthodes usuelles (DCF, comparables boursiers, transactions), puis on retranche la **dette nette** et les autres éléments du bridge (minoritaires, sociétés mises en équivalence, etc.)."
+      }
+    },
+    {
+      "external_key": "qa-q022",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q22",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "Comment diluer le nombre d'actions de l'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "options",
+            "weight": 0.3333
+          },
+          {
+            "text": "convertibles",
+            "weight": 0.3333
+          },
+          {
+            "text": "dans la monnaie",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Nombre d'actions dilué = actions en circulation + actions issues des **options** dans la monnaie + actions issues des obligations **convertibles** dans la monnaie. Un instrument est **dans la monnaie** quand son prix d'exercice ou de conversion est inférieur au cours. L'effet des options se calcule par la treasury method."
+      }
+    },
+    {
+      "external_key": "qa-q023",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q23",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "Expliquez la « treasury method ».",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "exerc",
+            "weight": 0.3333
+          },
+          {
+            "text": "rach",
+            "weight": 0.3333
+          },
+          {
+            "text": "dilutif",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Les porteurs d'options dans la monnaie les **exercent** toutes. L'entreprise encaisse le prix d'exercice et utilise ce cash pour **racheter** ses propres actions au cours de marché. Comme le prix d'exercice est inférieur au cours, elle rachète moins d'actions qu'elle n'en a émis : l'effet net est **dilutif**."
+      }
+    },
+    {
+      "external_key": "qa-q024",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q24",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "1 000 actions en circulation cotant 10 €. 100 options émises au prix d'exercice de 8 €. Quelle est la valeur des capitaux propres diluée (en €) ?",
+      "payload": {
+        "unit": "€",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 10200,
+        "steps_mdx": "Options dans la monnaie : 100 actions émises, 800 € encaissés, qui rachètent 800 / 10 = 80 actions. Dilution nette : 20 actions. Valeur = 1 020 × 10 = 10 200 €.",
+        "formula_katex": "(1000 + 100 - \\tfrac{100\\times 8}{10})\\times 10"
+      }
+    },
+    {
+      "external_key": "qa-q025",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q25",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "1 000 actions en circulation cotant 10 €. 100 options émises au prix d'exercice de 12 €. Quelle est la valeur des capitaux propres diluée (en €) ?",
+      "payload": {
+        "unit": "€",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 10000,
+        "steps_mdx": "Options hors de la monnaie (12 > 10) : personne n'exerce, puisqu'on peut acheter l'action 10 € sur le marché. Aucune dilution. Valeur = 1 000 × 10 = 10 000 €.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "qa-q026",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q26",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "Comment traiter une obligation convertible dans le calcul du nombre d'actions dilué ? Illustre avec 5 millions d'actions à 20 € et une convertible de 30 M€ au prix de conversion de 15 €.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "2 millions",
+            "weight": 0.3333
+          },
+          {
+            "text": "140",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Dans la monnaie (prix de conversion sous le cours), elle est supposée convertie et comptée en capitaux propres. Hors de la monnaie, elle reste comptée en **dette**. Exemple : 15 € < 20 €, donc conversion. Actions créées : 30 M€ / 15 € = **2 millions**. Valeur des capitaux propres diluée : 7 millions × 20 € = **140** M€, et la dette nette baisse de 30 M€."
+      }
+    },
+    {
+      "external_key": "qa-q027",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q27",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Comment obtenir la valeur d'entreprise à partir de la valeur des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "minoritaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "mises en équivalence",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "C'est le bridge : valeur d'entreprise = valeur des capitaux propres (nombre d'actions dilué) + **dette** financière nette + actions de préférence + intérêts **minoritaires** + engagements de retraite + provisions - sociétés **mises en équivalence**."
+      }
+    },
+    {
+      "external_key": "qa-q028",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q28",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi ajoute-t-on les intérêts minoritaires à la valeur des capitaux propres pour obtenir la valeur d'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "100 %",
+            "weight": 0.5
+          },
+          {
+            "text": "cohéren",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Par **cohérence** entre numérateur et dénominateur des multiples. En intégration globale, l'EBE et le résultat opérationnel consolidés reprennent **100 %** de la filiale, alors que la capitalisation de la mère ne valorise que sa quote-part. Exemple : la mère détient 80 %. Elle consolide 100 % des résultats, mais son cours ne reflète que 80 %. On ajoute donc la valeur des 20 % détenus par les minoritaires."
+      }
+    },
+    {
+      "external_key": "qa-q029",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q29",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi retire-t-on la valeur des sociétés mises en équivalence dans le calcul de la valeur d'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "EBE",
+            "weight": 0.3333
+          },
+          {
+            "text": "cohéren",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitalisation",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Toujours par **cohérence** : l'**EBE** et le résultat opérationnel n'intègrent aucun produit ni charge des sociétés mises en équivalence, alors que la **capitalisation** de la mère inclut la valeur de ces participations. Exemple : une participation de 30 % est valorisée dans le cours, mais absente de l'EBE. On la retranche pour que la valeur d'entreprise corresponde au périmètre de l'EBE."
+      }
+    },
+    {
+      "external_key": "qa-q030",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q30",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi inclut-on les pensions dans le calcul de la valeur d'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.5
+          },
+          {
+            "text": "prestations définies",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Parce qu'elles s'apparentent à une **dette** que l'entreprise devra payer un jour. Cela ne vaut que pour les régimes à **prestations définies**, où l'entreprise s'est engagée sur un montant de retraite. Dans un régime à cotisations définies, elle ne garantit aucun montant et rien n'est ajouté."
+      }
+    },
+    {
+      "external_key": "qa-q031",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q31",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le montant des pensions à retenir ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non financé",
+            "weight": 0.5
+          },
+          {
+            "text": "actifs",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On ne retient que l'engagement **non financé** : la différence entre la valeur actuarielle de l'engagement (projected benefit obligation) et la juste valeur des **actifs** de couverture du régime à la date d'évaluation."
+      }
+    },
+    {
+      "external_key": "qa-q032",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q32",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Tu conseilles un grand groupe industriel pour le rachat d'une PME. Entre la valeur d'entreprise et la valeur des capitaux propres, laquelle retient le plus ton attention ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "valeur d'entreprise",
+            "weight": 0.5
+          },
+          {
+            "text": "bridge",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La **valeur d'entreprise** : c'est le coût réel de l'acquisition. L'acquéreur paie les capitaux propres pour obtenir 100 % des actions, mais il reprend aussi la dette financière, les engagements de retraite et les autres passifs. D'où l'importance de la négociation des éléments du **bridge**, qui déterminent une partie du prix effectivement payé."
+      }
+    },
+    {
+      "external_key": "qa-q033",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q33",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Une société peut-elle avoir une valeur d'entreprise négative ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "oui",
+            "weight": 0.5
+          },
+          {
+            "text": "trésorerie",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Oui**. C'est le cas quand la **trésorerie** nette dépasse la valeur des capitaux propres : beaucoup de cash, dette nette négative et faible capitalisation."
+      }
+    },
+    {
+      "external_key": "qa-q034",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q34",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Une société peut-elle avoir une valeur de marché des capitaux propres négative ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non",
+            "weight": 0.5
+          },
+          {
+            "text": "prix",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Non**. Ni le nombre d'actions ni le **prix** d'une action ne peuvent être négatifs."
+      }
+    }
+  ]
+}

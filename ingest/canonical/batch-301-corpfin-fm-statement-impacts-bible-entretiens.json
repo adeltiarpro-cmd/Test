@@ -1,0 +1,277 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "fm-statement-impacts",
+  "items": [
+    {
+      "external_key": "bible-p3-gen-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q5",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Qu'est-ce que le goodwill ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prix",
+            "weight": 0.3333
+          },
+          {
+            "text": "actif net",
+            "weight": 0.3333
+          },
+          {
+            "text": "badwill",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Dans une acquisition, c'est l'écart entre le **prix** payé et l'**actif net** de la cible, quand le prix est supérieur. Quand le prix est inférieur à l'actif net, on parle de **badwill**."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q009",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q9",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Quel impact aura une augmentation des Depreciations & Amortizations de 100 € sur les états financiers (impôt à 30 %) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "70",
+            "weight": 0.3333
+          },
+          {
+            "text": "30",
+            "weight": 0.3333
+          },
+          {
+            "text": "100",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : EBIT et résultat avant impôt -100, impôt -30, résultat net -**70**. Flux de trésorerie : résultat net -70, amortissements réintégrés +100, flux opérationnel et cash +**30**. Bilan : cash +30 et immobilisations -**100**, soit un actif en baisse de 70. Capitaux propres -70. Le bilan est équilibré."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q10",
+      "concepts": [
+        "tax"
+      ],
+      "prompt_mdx": "Quel impact aura une hausse de 10 points du taux d'imposition (de 30 % à 40 %) sur les états financiers, pour un résultat avant impôt de 200 € ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "20",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitaux propres",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : l'impôt passe de 60 à 80, le résultat net baisse de **20**. Flux de trésorerie : le flux opérationnel et le **cash** baissent de 20, rien ne change en investissement ni en financement. Bilan : cash -20 à l'actif, **capitaux propres** -20 au passif."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q2",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Pourquoi les Depreciations & Amortizations n'impactent-elles pas le cash ? Illustrez avec une camionnette achetée 20 000 € et amortie sur 10 ans.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "étaler",
+            "weight": 0.3333
+          },
+          {
+            "text": "2 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "non-cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "L'amortissement est une écriture qui sert à **étaler** le coût d'un bien sur sa durée d'utilisation. Le cash sort à l'achat : 20 000 € la première année. Ensuite on enregistre **2 000** € de charge par an pendant 10 ans, sans aucun décaissement. C'est une charge **non-cash**."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q3",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Comment les Depreciations & Amortizations ont-elles tout de même un impact sur le cash ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "déductibles",
+            "weight": 0.5
+          },
+          {
+            "text": "impôt",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Elles sont **déductibles** : elles réduisent le résultat imposable, donc l'**impôt** payé, ce qui améliore le cash."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q12",
+      "concepts": [
+        "debt-capex"
+      ],
+      "prompt_mdx": "Un entrepreneur acquiert une boutique de 500 000 € entièrement financée par dette. Quel est l'impact sur ses états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "aucun",
+            "weight": 0.25
+          },
+          {
+            "text": "investissement",
+            "weight": 0.25
+          },
+          {
+            "text": "financement",
+            "weight": 0.25
+          },
+          {
+            "text": "500 000",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : **aucun** impact, l'activité n'a pas commencé. Flux de trésorerie : -500 000 en **investissement**, +500 000 en **financement**, donc cash inchangé. Bilan : immobilisations corporelles +**500 000** à l'actif, dette long terme +500 000 au passif."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q013",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q13",
+      "concepts": [
+        "inventory"
+      ],
+      "prompt_mdx": "Il achète pour 10 000 € de tissus, payés en cash. Quel est l'impact sur ses états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "aucun",
+            "weight": 0.3333
+          },
+          {
+            "text": "10 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "stocks",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : **aucun** impact. Flux de trésorerie : les stocks augmentent, le flux opérationnel baisse de **10 000**, tout comme le cash. Bilan : **stocks** +10 000 et cash -10 000, l'actif circulant est inchangé."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q014",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q14",
+      "concepts": [
+        "inventory"
+      ],
+      "prompt_mdx": "Le premier mois, il vend pour 5 000 € et paie 3 000 € de main-d'oeuvre (impôt 30 %). Quel est l'impact sur ses états financiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "2 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "1 400",
+            "weight": 0.3333
+          },
+          {
+            "text": "6 400",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : EBITDA, EBIT et résultat avant impôt de **2 000**, impôt de 600, résultat net de **1 400**. Flux de trésorerie, selon le document : résultat net 1 400, plus une baisse des stocks de 5 000, soit un flux opérationnel et un cash de +**6 400**. Bilan : cash +6 400, stocks -5 000, actif +1 400. Capitaux propres +1 400. À noter : le document sort les stocks à la valeur des ventes sans passer de coût des ventes au compte de résultat. C'est une simplification, mais ce sont ses chiffres."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q015",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q15",
+      "concepts": [
+        "debt-capex"
+      ],
+      "prompt_mdx": "Après un an, il doit payer les intérêts de l'emprunt de 500 000 € (in fine, 5 %) et amortir la boutique (5 % par an). Quel est l'impact sur ses états financiers (impôt 30 %) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "25 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "35 000",
+            "weight": 0.3333
+          },
+          {
+            "text": "10 000",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Compte de résultat : amortissement de **25 000**, intérêts de 25 000, résultat avant impôt -50 000, économie d'impôt de 15 000, résultat net -**35 000**. Flux de trésorerie : -35 000 + 25 000 d'amortissement réintégré, soit -**10 000** de flux opérationnel et de cash. Bilan : cash -10 000 et immobilisations -25 000, actif -35 000. La dette ne bouge pas, puisqu'elle est in fine. Capitaux propres -35 000."
+      }
+    }
+  ]
+}

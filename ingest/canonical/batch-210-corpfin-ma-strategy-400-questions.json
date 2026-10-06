@@ -1,0 +1,275 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "ma-strategy",
+  "items": [
+    {
+      "external_key": "ibq400-mm-basic-q002",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Merger Model Basic, Q2",
+      "concepts": [
+        "ma-rationale"
+      ],
+      "prompt_mdx": "What is the difference between a merger and an acquisition?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "size",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Mostly wording: every deal has a buyer and a seller. It is called a merger when the two are of similar **size**, an acquisition when the buyer is clearly larger."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Merger Model Basic, Q3",
+      "concepts": [
+        "ma-rationale"
+      ],
+      "prompt_mdx": "Why would a company want to acquire another company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "market share",
+            "weight": 0.3333
+          },
+          {
+            "text": "undervalued",
+            "weight": 0.3333
+          },
+          {
+            "text": "synergies",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "To gain **market share** by buying a competitor, to grow faster than it can organically, because it sees the target as **undervalued**, to reach the target's customers for cross-selling, to obtain a key technology or intellectual property, or to capture **synergies** that make the deal accretive."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q10",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "Why would a strategic acquirer typically pay more for a company than a private equity firm would?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "synergies",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "A strategic buyer can realise revenue and cost **synergies** that a financial buyer cannot, unless it merges the target with a portfolio company. Those synergies raise what the target is worth to it."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q014",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Merger Model Basic, Q14",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "What are synergies? Give a few examples.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue",
+            "weight": 0.3333
+          },
+          {
+            "text": "cost",
+            "weight": 0.3333
+          },
+          {
+            "text": "cross-sell",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "The combined company is worth more than the sum of the two. **Revenue** synergies: **cross-selling** to each other's customers, up-selling, entering new geographies. **Cost** synergies: merging offices and administrative functions, cutting duplicate roles, closing redundant sites."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q15",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "How are synergies used in merger models?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue",
+            "weight": 0.3333
+          },
+          {
+            "text": "margin",
+            "weight": 0.3333
+          },
+          {
+            "text": "operating expenses",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Revenue** synergies are added to combined revenue, then a **margin** is applied so that only the profit flows through. Cost synergies reduce combined COGS or **operating expenses**, which lifts pre-tax income, net income and EPS."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q016",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Merger Model Basic, Q16",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "Are revenue or cost synergies more important?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cost",
+            "weight": 0.5
+          },
+          {
+            "text": "predict",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Cost** synergies are taken more seriously: you can count the sites to close and the duplicate roles. Revenue synergies are very hard to **predict**. In practice both are often not realised, so many treat them with scepticism."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q019",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q19",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "How do you determine the purchase price for the target in an acquisition?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "valuation",
+            "weight": 0.5
+          },
+          {
+            "text": "premium",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "With the usual **valuation** methodologies. For a public seller, you also check that the **premium** over the current share price is enough to win shareholder approval, typically 15 to 30%. For a private seller the methodologies carry more weight."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q022",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Merger Model Basic, Q22",
+      "concepts": [
+        "ma-rationale"
+      ],
+      "prompt_mdx": "Why do most mergers and acquisitions fail?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "integrat",
+            "weight": 0.3333
+          },
+          {
+            "text": "synergies",
+            "weight": 0.3333
+          },
+          {
+            "text": "ego",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Because **integrating** another company and actually delivering **synergies** is far harder than announcing them. Many deals are also done for the wrong reasons, such as management **ego** or shareholder pressure."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q002",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q2",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "Walk me through a concrete example of how to calculate revenue synergies.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue per",
+            "weight": 0.5
+          },
+          {
+            "text": "margin",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Take a search business earning a given **revenue per** search. If the acquirer can lift that by one or two cents through better monetisation, multiply the uplift by the target's total number of searches to get extra revenue, then apply a **margin** to see how much reaches operating income."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q003",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q3",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "Walk me through an example of how to calculate expense synergies.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "employees",
+            "weight": 0.5
+          },
+          {
+            "text": "salary",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Say the acquirer has 5,000 SG&A staff and the target 1,000, of whom only 200 will be kept. The saving is the 800 redundant **employees** multiplied by their average **salary**."
+      }
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fit-personnalite",
+  "items": [
+    {
+      "external_key": "ibq400-fit-strengths-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q1",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "In your internship this past summer, what feedback did you receive?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give one or two strengths people really noted, with the situation behind each, and one area to improve with what you did about it. Balanced and concrete.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q2",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "What were a few areas that your team said you should try to improve upon?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give a real weakness, not a disguised strength such as working too hard, and one that is not fatal for an analyst. Then show the improvement with a specific example.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q3",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Did you get an offer to return to where you worked last summer?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "If yes, say so and explain why you are looking elsewhere. If no, tell the truth, give the context briefly (group not hiring, economy) without blaming anyone, and move to what you learned.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q4",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "After going through the accounting program at PricewaterhouseCoopers for the past year, what sort of end-of-year review did you get?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Summarise the review honestly: what was praised, what was flagged, and how you acted on it. Link the strengths to what banking needs.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q5",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Let's imagine that your best friend is describing you in 3 words, which words would he/she use and why?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Three words, each backed by a short example. Mix one work quality (reliable, rigorous) with one human quality. Avoid three synonyms.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q6",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Imagine that I'm speaking to someone with whom you have not gotten along in the past, what would he/she say about you?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "It is a weakness question in disguise. Name a real trait that can irritate (too direct, too demanding), say what you learned from that friction and how you adjusted.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q7",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Why would we decide not to give you an offer today?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Name the obvious objection in your profile (no finance internship, unusual background) and answer it straight away with evidence. Do not invent a new flaw.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q8",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Tell me why we should hire you in 3 sentences.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Three sentences, three points: what you have done, the skill it proves, why this firm. Respect the constraint, it is part of the test.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-strengths-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Strengths and Weaknesses, Q9",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "What was your greatest failure?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "A real failure with consequences, your share of responsibility, and what you do differently since. A fake failure or one blamed on others fails the question.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q1",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "Can you talk about a team project or some kind of group activity you've worked on before?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Three parts: the problem to solve, the team and your own role, the result with a figure if possible. Leading or delegating is best, but a contributor role works if you show hours, care and a decisive contribution.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q2",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "Can you describe a situation where a team did not work as intended? Whose fault was it?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Describe the breakdown factually, take your share of responsibility instead of pointing at one person, and say what you did to fix it or what you would do now.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q3",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "Can you discuss an ethical challenge you were confronted with and how you responded?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Pick a real dilemma, not a caricature. Explain the options, why you chose the honest one and what it cost. Keep it short and without preaching.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q4",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "What was the most difficult situation you faced as a leader and how did you respond?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Situation, what made it hard (conflict, deadline, someone not delivering), the decision you took, the outcome. Show that you dealt with the person directly.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q5",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "Can you discuss a time where you had to sacrifice your time for the sake of a team project?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "The example must involve long hours, 60 to 70 a week or more, over weeks or months, not one exam week. Say what you gave up and what the team achieved.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q6",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "Do you work better as a leader or a follower?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Both, with an example of each. As an analyst you mostly execute, so show you are comfortable taking direction, while able to take the lead when needed.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q7",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "What is your leadership style?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Describe it in one line (by example, by delegation, by consensus) and prove it with a case. Mention that you adapt it to the people in front of you.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-team-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Team and Leadership, Q8",
+      "concepts": [
+        "fit-teamwork"
+      ],
+      "prompt_mdx": "Does the leader make the team?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Take a position and defend it: a leader sets direction and standards, but results come from the members, and a good leader cannot rescue a team that does not work. One example on each side makes the answer.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q1",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "What's your greatest fear about investment banking?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Name something real and manageable (the learning curve at the start, making an error under time pressure) and say how you plan to handle it. Do not say the hours.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q2",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "What's your \"Plan B\" if you can't get into investment banking this year?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "A plan that stays close to finance and keeps the goal alive: a related role, further study, then applying again. It shows determination without making banking sound optional.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q003",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q3",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "That guy over there has a 4.0 from Wharton/Harvard, why should I hire you over him, given that you're much less impressive?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Stay calm and do not attack the other candidate. Say that grades are one signal among others and give what sets you apart: experience, drive, proof that you deliver under pressure.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q004",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q4",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "Let's say your MD is meeting with a client and you have been invited. As he's presenting, you notice a mistake in the materials, do you point it out?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Not in front of the client. Unless the error is serious enough to mislead the client on something material, wait and tell the MD privately afterwards, so it can be corrected and resent.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q5",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "I see you have a big gap in your work experience over the past few months / few years / I see you have a gap of 2-3 years a few years ago, what happened there?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Tell the truth in a few sentences, without excuses, then say what you did during that time that has value (study, a project, family reasons handled, travel with a purpose) and why you are ready now.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q6",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "Why did you get a C in accounting? (Or other bad grade in highly relevant class)",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Own it, give the reason briefly, then show the evidence that you know the subject today: later grades, self-study, and offer to take technical questions.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q7",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "Why did you NOT receive a return offer from your internship?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Be honest. If it was external (no hiring in the group, market), say so. If it was about you, say what the feedback was and what you corrected. Never blame the team.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q8",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "You graduated last year and don't have anything listed on your resume since then, what have you been doing, and did you participate in recruiting last year?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say plainly what happened with recruiting, then what you have done since to be a stronger candidate: courses, a temporary job, networking, modelling practice.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q9",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "Why are we your first choice? Wouldn't you like London or New York more?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give real reasons to be in this office: ties to the region, the type of deals done here, smaller teams, a long-term wish to live here. They fear you will leave after a year.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-tough-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Tough Questions, Q10",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "Why are you so old? (Stated more tactfully)",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Present the earlier years as experience that makes you useful, then answer the two hidden doubts with examples: you learn new things quickly, and you can work the hours of a junior under younger managers.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-outside-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Outside the Box, Q1",
+      "concepts": [
+        "fit-outside-box"
+      ],
+      "prompt_mdx": "What type of animal / vegetable would you be?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Do not take yourself too seriously. Pick one, give a reason that says something about how you work or who you are, and smile.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-outside-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Outside the Box, Q2",
+      "concepts": [
+        "fit-outside-box"
+      ],
+      "prompt_mdx": "Let's say that in the future your name turns up as the front page headline of a newspaper one day, what would the story be about?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Something positive that fits your interests: an achievement in business, a cause, a personal project. It shows what you care about.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-outside-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Outside the Box, Q3",
+      "concepts": [
+        "fit-outside-box"
+      ],
+      "prompt_mdx": "Tell me a joke.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Have one short, clean joke ready. Nothing about politics, religion or groups of people. A finance joke works if it is brief.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-outside-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Outside the Box, Q4",
+      "concepts": [
+        "fit-outside-box"
+      ],
+      "prompt_mdx": "What's your personal Beta?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Beta measures sensitivity to the market: explain whether you amplify or dampen what happens around you. A reasonable answer: calm under pressure, so below 1 in a crisis, yet willing to take measured risks.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-outside-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Outside the Box, Q5",
+      "concepts": [
+        "fit-outside-box"
+      ],
+      "prompt_mdx": "What's the riskiest thing you've ever done?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "A real risk that was thought through: a move abroad, a venture, a career change. Avoid anything reckless or illegal, and say what you weighed before deciding.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-outside-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Outside the Box, Q6",
+      "concepts": [
+        "fit-outside-box"
+      ],
+      "prompt_mdx": "Let's say that you have USD 1 million, but you are NOT allowed to invest it or otherwise use it to create more money. What would you spend the capital on instead?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Stay believable and consistent with who you are: supporting a cause you already work with, a long trip, something you have always wanted. Do not suddenly play the saint.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "val-multiples",
+  "items": [
+    {
+      "external_key": "qa-q042",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q42",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Comment sélectionner les sociétés comparables pour la méthode des multiples boursiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "secteur",
+            "weight": 0.25
+          },
+          {
+            "text": "rentabilité",
+            "weight": 0.25
+          },
+          {
+            "text": "géographie",
+            "weight": 0.25
+          },
+          {
+            "text": "taille",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Quatre critères. Même **secteur** d'activité. Profil financier proche : **rentabilité** (marges), levier, croissance. Même **géographie**, car le même métier peut avoir des dynamiques très différentes selon la région. **Taille** comparable en chiffre d'affaires."
+      }
+    },
+    {
+      "external_key": "qa-q043",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q43",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Quels sont les multiples les plus utilisés en évaluation financière ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "chiffre d'affaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "EBE",
+            "weight": 0.3333
+          },
+          {
+            "text": "résultat net",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Valeur d'entreprise / **chiffre d'affaires**, quand la société n'est pas encore rentable. Valeur d'entreprise / **EBE**, le plus courant, qui mesure la performance opérationnelle. Valeur d'entreprise / résultat opérationnel, pour les secteurs très capitalistiques. Valeur des capitaux propres / **résultat net** (P/E), qui dépend de la politique financière et de la fiscalité."
+      }
+    },
+    {
+      "external_key": "qa-q044",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q44",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Tu valorises une entreprise par le multiple valeur d'entreprise / EBE. Nous sommes en septembre. Quel EBE retiens-tu ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "prévisionnel",
+            "weight": 0.5
+          },
+          {
+            "text": "en cours",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un EBE **prévisionnel** plutôt qu'historique, puisqu'on cherche à valoriser le futur : celui de l'année **en cours** et celui de l'année suivante, ou l'EBE des douze prochains mois. On le trouve dans les notes de brokers ou les prévisions de la société. Un multiple sur les douze derniers mois reste utile en comparaison."
+      }
+    },
+    {
+      "external_key": "qa-q045",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q45",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Comment sélectionner les comparables pour la méthode des multiples transactionnels ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "2-3",
+            "weight": 0.5
+          },
+          {
+            "text": "termes",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Mêmes critères que pour les comparables boursiers, plus deux autres. Le temps : des transactions des **2-3** dernières années, dans le même cycle économique. Les **termes** de l'opération : pourcentage acquis, type d'acquéreur, prime payée."
+      }
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "ma-strategy",
+  "items": [
+    {
+      "external_key": "bible-p3-ma-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III M&A, Q3",
+      "concepts": [
+        "ma-rationale"
+      ],
+      "prompt_mdx": "Quelles raisons un chef d'entreprise peut-il avoir de vendre sa société ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "retraite",
+            "weight": 0.3333
+          },
+          {
+            "text": "opportunité",
+            "weight": 0.3333
+          },
+          {
+            "text": "difficultés",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Prendre sa **retraite**, saisir une **opportunité** (repreneur, prix supérieur au marché), des raisons personnelles, l'envie de lancer autre chose, le sentiment de ne plus pouvoir assurer le développement, ou des **difficultés** financières."
+      }
+    },
+    {
+      "external_key": "bible-p3-ma-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III M&A, Q4",
+      "concepts": [
+        "ma-rationale"
+      ],
+      "prompt_mdx": "Quelles motivations une entreprise peut-elle avoir pour en acheter une autre ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "synergies",
+            "weight": 0.3333
+          },
+          {
+            "text": "pays",
+            "weight": 0.3333
+          },
+          {
+            "text": "technolog",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Bénéficier de **synergies** : économies d'échelle, parts de marché, complémentarité des offres. S'implanter dans un **pays** où l'entrée directe est difficile. Acquérir une avance **technologique** qu'il serait trop long de développer en interne."
+      }
+    },
+    {
+      "external_key": "bible-p3-ma-q005",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III M&A, Q5",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'une synergie ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenus",
+            "weight": 0.5
+          },
+          {
+            "text": "coûts",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La valeur supplémentaire obtenue en réunissant deux entreprises, qui performent mieux ensemble que séparément. Elle prend la forme d'une hausse des **revenus** (complémentarité des produits, parts de marché, partage de technologies) ou d'une baisse des **coûts** (économies d'échelle)."
+      }
+    },
+    {
+      "external_key": "bible-p3-ma-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III M&A, Q7",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'une prime de contrôle ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "20 %",
+            "weight": 0.3333
+          },
+          {
+            "text": "30 %",
+            "weight": 0.3333
+          },
+          {
+            "text": "synergies",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le supplément de prix qu'un acheteur accepte de payer pour obtenir le contrôle majoritaire. Elle représente en général **20 %** à **30 %** au-dessus du cours de bourse et se justifie surtout par les **synergies** attendues."
+      }
+    },
+    {
+      "external_key": "bible-p3-ma-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III M&A, Q8",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "Pourquoi le DCF et les transactions comparables intègrent-ils la prime de contrôle, et pas les multiples boursiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "synergies",
+            "weight": 0.3333
+          },
+          {
+            "text": "prix",
+            "weight": 0.3333
+          },
+          {
+            "text": "payés",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le DCF repose sur des perspectives de croissance et de **synergies**, il suppose donc le contrôle. Les transactions comparables reposent sur des **prix** effectivement **payés**, prime comprise. Les multiples boursiers ne reflètent que les données de marché du moment, pour une participation minoritaire."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q2",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "Pourquoi un acheteur serait-il prêt à payer plus cher que la valorisation d'une entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "synergies",
+            "weight": 0.5
+          },
+          {
+            "text": "concurren",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Deux cas fréquents : il a une forte confiance dans les **synergies** que l'acquisition peut dégager, ou le processus est très **concurrentiel** et il surenchérit pour l'emporter."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q7",
+      "concepts": [
+        "spin-off"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un Spin-Off ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "branche",
+            "weight": 0.5
+          },
+          {
+            "text": "indépendante",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Une opération par laquelle une entreprise se sépare d'une **branche** d'activité en créant une société **indépendante**."
+      }
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "ma-accounting",
+  "items": [
+    {
+      "external_key": "ibq400-mm-basic-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q11",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Why do Goodwill and Other Intangibles get created in an acquisition?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "book value",
+            "weight": 0.5
+          },
+          {
+            "text": "purchase price",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "They are what the buyer paid above the seller's fair value: equity **purchase price** minus the seller's **book value**. They stand for assets such as customer relationships, brands and intellectual property that do not appear as financial assets."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q12",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "What is the difference between Goodwill and Other Intangible Assets?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "amortized",
+            "weight": 0.5
+          },
+          {
+            "text": "impairment",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Goodwill is not **amortized** and stays unchanged unless there is an **impairment** or a new deal. Other intangibles are amortized over several years, which lowers pre-tax income. Allocating value between the two is the job of accountants and valuation specialists."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q013",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Basic, Q13",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "Besides Goodwill and Other Intangibles, is there anything else intangible that could affect the combined company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "R&D",
+            "weight": 0.5
+          },
+          {
+            "text": "deferred revenue",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Yes, two write-offs. Purchased in-process **R&D**: unfinished projects acquired in the deal, whose cost is recognised at acquisition. And a **Deferred Revenue** write-down: cash the seller already collected for services not yet recognised, written down so the revenue is not counted twice."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q020",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q20",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "A company overpays for another company. What typically happens afterwards?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "goodwill",
+            "weight": 0.5
+          },
+          {
+            "text": "impairment",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A large amount of **Goodwill** and intangibles is booked, since the price is far above fair value. If the acquisition disappoints, the buyer later records a goodwill **impairment** charge, a large non-cash loss."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q001",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q1",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "What is the difference between purchase accounting and pooling accounting in an M&A deal?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "wiped out",
+            "weight": 0.3333
+          },
+          {
+            "text": "goodwill",
+            "weight": 0.3333
+          },
+          {
+            "text": "combine",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Purchase accounting: the seller's shareholders' equity is **wiped out** and the premium paid over it is booked as **Goodwill**. Pooling: you simply **combine** the two equity figures, with no goodwill. Pooling has strict conditions, so almost all deals use purchase accounting."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q004",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q4",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How do you take NOLs into account in an M&A deal? Illustrate with an equity purchase price of 1 billion USD, a 5% rate and 250 million USD of NOLs.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "382",
+            "weight": 0.3333
+          },
+          {
+            "text": "50 million",
+            "weight": 0.3333
+          },
+          {
+            "text": "5 years",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Under US Section **382**, annual usable NOLs = equity purchase price x the highest adjusted long-term rate of the past three months. Here 1 billion x 5% = **50 million** a year. With 250 million of NOLs, the combined company offsets 50 million of taxable income a year for **5 years**."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q005",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q5",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "Why do deferred tax liabilities and deferred tax assets get created in M&A deals?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "write-up",
+            "weight": 0.3333
+          },
+          {
+            "text": "write-down",
+            "weight": 0.3333
+          },
+          {
+            "text": "depreciation",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Because assets are restated to fair value. A **write-up** creates a deferred tax liability: the higher book **depreciation** is not deductible for tax in a stock deal, so book tax runs below cash tax and the difference unwinds over time. A **write-down** creates a deferred tax asset for the opposite reason."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q006",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q6",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "How do DTLs and DTAs affect the balance sheet adjustment? Example: buy a company for 1 billion USD, half cash and half debt, with a 100 million asset write-up and a 40% tax rate. The seller has assets of 200 million, liabilities of 150 million and equity of 50 million.",
+      "payload": {
+        "max_words": 200
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "40",
+            "weight": 0.3333
+          },
+          {
+            "text": "990",
+            "weight": 0.3333
+          },
+          {
+            "text": "890",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "DTL = write-up x tax rate = 100 x 40% = **40** million (and DTA = write-down x tax rate). Add the seller's 200 of assets and 150 of liabilities, drop its equity. Cash falls by 500, debt rises by 500, a DTL of 40 appears. Liabilities are up 690 while assets, before the write-up, are down 300, so **990** million of Goodwill and intangibles is needed to balance, which is the document's figure. Of that, 100 is the written-up asset itself, leaving **890** of pure goodwill: 1,000 - 50 - 100 + 40."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q007",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q7",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "Could you get DTLs or DTAs in an asset purchase?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no",
+            "weight": 0.5
+          },
+          {
+            "text": "tax basis",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**No**. In an asset purchase the book basis of the assets equals their **tax basis**. They arise in a stock purchase because book values are stepped up or down while tax values are not."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q008",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q8",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "How do you account for DTLs in the forward projections of a merger model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "book",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          },
+          {
+            "text": "schedule",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Build a **book** versus **cash** tax **schedule**: tax owed on book pre-tax income against tax actually paid, given NOLs and the new depreciation and amortisation from write-ups. When cash tax exceeds book tax, the DTL decreases. When book tax is higher, it increases."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q009",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q9",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Explain the complete formula for calculating Goodwill in an M&A deal.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.25
+          },
+          {
+            "text": "book value",
+            "weight": 0.25
+          },
+          {
+            "text": "write-ups",
+            "weight": 0.25
+          },
+          {
+            "text": "deferred tax",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Goodwill = equity **purchase price** - seller **book value** + seller's existing goodwill - asset **write-ups** - seller's existing **deferred tax** liability + write-down of seller's existing deferred tax asset + newly created deferred tax liability. Existing goodwill is added back because it is reset to zero. Write-ups are subtracted because they already add to assets."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q010",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q10",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "Why would you write down the seller's existing Deferred Tax Asset in an M&A deal?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "NOL",
+            "weight": 0.5
+          },
+          {
+            "text": "use",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Because it largely consists of **NOLs**, and the buyer may not be able to **use** all of them. In an asset or 338(h)(10) deal the NOLs are assumed lost entirely. In a stock deal: write-down = buyer tax rate x MAX(0, NOL balance - allowed annual usage x years to expiry)."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q015",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q15",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How would an accretion / dilution model differ for a private seller?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "asset purchase",
+            "weight": 0.5
+          },
+          {
+            "text": "net income",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Same mechanics, but the structure is more likely an **asset purchase** or 338(h)(10) election, and the seller is projected only down to **net income**, since it has no EPS. With a private buyer the analysis is meaningless, as there is no EPS to accrete or dilute."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q016",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q16",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How do you calculate break-even synergies in an M&A deal, and what does the number mean?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "zero",
+            "weight": 0.5
+          },
+          {
+            "text": "synergies",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Set EPS accretion or dilution to **zero** and solve for the **synergies** required. It shows whether the deal works mathematically: a high figure means a lot of savings or extra revenue is needed."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q017",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q17",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How would you combine all 3 financial statements in a merger model, not just the Income Statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "balance sheets",
+            "weight": 0.3333
+          },
+          {
+            "text": "pro-forma",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash flow statement",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Combine the Income Statements as usual. Combine the two **balance sheets**, leaving out the seller's equity. Make the **pro-forma** adjustments: cash, debt, goodwill and intangibles. Project the combined balance sheet with standard assumptions, then build the **Cash Flow Statement** and link the three."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q021",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q21",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "What is a contribution analysis and why look at it in a merger model? Illustrate with a buyer with 100 million USD of revenue and a seller with 50 million, each set to own 50%.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "ownership",
+            "weight": 0.5
+          },
+          {
+            "text": "2/3",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It compares what each side contributes in revenue, EBITDA, pre-tax income or cash to judge what **ownership** split is fair. Here the buyer brings **2/3** of combined revenue, so on that measure it should own about 66%, not 50%. Most useful in mergers of equals."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q022",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q22",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How do you account for transaction costs, financing fees and miscellaneous expenses in a merger model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "expense",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitalize",
+            "weight": 0.3333
+          },
+          {
+            "text": "amortize",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Transaction and miscellaneous fees are **expensed** upfront and reduce retained earnings in the balance sheet adjustment. Financing fees are **capitalized** as an asset and **amortized** over the life of the debt. Formerly all of them were capitalised and amortised."
+      }
+    }
+  ]
+}

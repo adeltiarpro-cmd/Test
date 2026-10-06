@@ -1,0 +1,85 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "val-wacc",
+  "items": [
+    {
+      "external_key": "bible-p4-eval-q012",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q12",
+      "concepts": [
+        "wacc"
+      ],
+      "prompt_mdx": "Entre deux entreprises au niveau de dette différent, laquelle a le WACC le plus élevé ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "faible",
+            "weight": 0.3333
+          },
+          {
+            "text": "déductibles",
+            "weight": 0.3333
+          },
+          {
+            "text": "faillite",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Celle dont la dette est **faible**. La dette pèse moins dans le WACC : les intérêts sont **déductibles** et le coût de la dette est inférieur à celui des fonds propres, les prêteurs étant prioritaires. Mais au-delà d'un certain niveau, le risque de **faillite** fait monter le taux d'intérêt, et une société très endettée peut finir avec un WACC plus élevé."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q013",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q13",
+      "concepts": [
+        "wacc"
+      ],
+      "prompt_mdx": "Comment calculer le WACC d'une entreprise non cotée ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparables",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "On l'estime à partir de sociétés cotées **comparables** plutôt que de le calculer directement, ou l'on s'appuie sur les travaux de cabinets d'évaluation."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q14",
+      "concepts": [
+        "wacc"
+      ],
+      "prompt_mdx": "Le WACC est-il impacté par l'endettement de l'entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "volume",
+            "weight": 0.5
+          },
+          {
+            "text": "prix",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Oui, de deux façons. Un effet **volume** : de nouveaux emprunts modifient la structure du capital. Un effet **prix** : leur taux d'intérêt modifie le coût de la dette. Certaines grandes sociétés optimisent ainsi leur WACC en empruntant à des taux très bas."
+      }
+    }
+  ]
+}

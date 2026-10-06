@@ -1,0 +1,251 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fit-business",
+  "items": [
+    {
+      "external_key": "ibq400-fit-discussion-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q1",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Let's say you had USD 10 million to invest in anything. What would you do with it?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Start by asking about goals and constraints: horizon, risk tolerance, need for income, tax. Then give an allocation that follows from the answers and justify each block. The reasoning matters more than the picks.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q2",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "If you owned a small business and were approached by a larger company about an acquisition, how would you think about the offer, and how would you make a decision on what to do?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "price",
+            "weight": 0.3333
+          },
+          {
+            "text": "payment",
+            "weight": 0.3333
+          },
+          {
+            "text": "plans",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Three things. The **price**: is it above what the business is worth to you if you keep running it? The form of **payment**: cash is certain, stock depends on the buyer's future, deferred amounts carry risk. And the buyer's **plans** for the company compared with your own: your role afterwards, the staff, and whether you were ready to stop."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q3",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "We do most of our work with technology companies. Can you talk about a trend or company in the industry that has piqued your interest lately?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Pick something recent and relevant, explain why it is happening (the economics behind it) and what it does to the market as a whole: who wins, who must adapt, what deals could follow.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q4",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Let's say you could start any type of business you wanted, and you had USD 1 million in initial funds. What would you do?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Ask whether the interviewer has a constraint in mind, then propose a business you know something about. Cover the customer need, how it earns money, what the million pays for and the main risk.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q5",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Can you talk about a company you admire and what makes them attractive to you?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give business reasons an investor would accept: customer base, competitive advantage, margins, management. Liking the product is not an argument. Have a few figures ready.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q6",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Let's assume you are going to start a laundry machine business. How would you analyze whether it's viable?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue",
+            "weight": 0.3333
+          },
+          {
+            "text": "costs",
+            "weight": 0.3333
+          },
+          {
+            "text": "profit",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Check whether it can earn a **profit** on the capital invested. Estimate **revenue**: number of machines, loads per machine per day, price per load. Estimate **costs**: purchase of the machines, rent, water and energy, maintenance, staff. Compare the yearly cash flow with the upfront investment to get a payback period and a return, then test it against local competition and demand."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q7",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Tell me about an M&A deal that interested you recently.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Prepare one or two deals: buyer, seller, price and multiples, the rationale, how it was financed, and your own view on whether it made sense. Admit what you do not know if questions go further.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q8",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Pitch me a stock.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Structure: name and what the company does, size and profitability in a few figures, why it is undervalued or better placed than rivals, the long-term trend in its favour, and why the next five to ten years look good. End with the main risk.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q9",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Can you explain to me, in simple terms, the subprime crisis?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mortgage",
+            "weight": 0.3333
+          },
+          {
+            "text": "default",
+            "weight": 0.3333
+          },
+          {
+            "text": "securit",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Lenders granted **mortgage** loans to borrowers with weak credit, often at low initial rates, while house prices rose. The loans were packaged into **securit**ies and sold to investors and banks worldwide. When rates reset and prices fell, borrowers began to **default**, the securities lost value, and the institutions holding them with heavy leverage took large losses, which froze credit."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-discussion-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Discussion, Q10",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Do you agree with the USD 700 billion bank bailout?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Either side can be defended. State your position, give the main argument (stopping a collapse of credit versus rewarding bad risk-taking), and acknowledge the other side. Being reasoned matters more than the side you pick.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    }
+  ]
+}

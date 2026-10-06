@@ -1,0 +1,117 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "fit-business",
+  "items": [
+    {
+      "external_key": "bible-p1-q016",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q16",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "L'actualité (le recruteur vous interroge sur les faits récents qui touchent l'entreprise)",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Avant chaque entretien, consultez l'actualité récente de l'entreprise : opérations, résultats, nominations. Une acquisition bouclée quelques mois plus tôt et que vous ignorez peut suffire à vous écarter.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-gen-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Questions plus générales, Q1",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Connaissez-vous les deals que nous avons récemment bouclés ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Préparez deux ou trois opérations récentes de l'établissement : acteurs, taille, logique, et si possible valorisation. Soyez prêt à dire ce que vous en pensez.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-gen-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Questions plus générales, Q2",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Pouvez-vous me parler d'un deal qui vous a marqué ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Un deal que vous maîtrisez : acheteur, cible, prix et multiples, logique stratégique, financement, puis votre avis sur sa pertinence.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-gen-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, II Questions plus générales, Q3",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Connaissez-vous nos principaux concurrents ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Citez-en quelques-uns sur le même segment (taille d'opérations, secteurs) et ce qui différencie l'établissement face à eux.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-gen-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, II Questions plus générales, Q5",
+      "concepts": [
+        "business-sense"
+      ],
+      "prompt_mdx": "Connaissez-vous notre PDG ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Renseignez-vous avant l'entretien sur le dirigeant et les principaux associés : nom, parcours, prises de parole récentes. La question vérifie le sérieux de votre préparation.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    }
+  ]
+}

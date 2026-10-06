@@ -1,7 +1,7 @@
 {
   "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
   "track": "corpfin",
-  "module": "capital-structure",
+  "module": "cs-lbo",
   "items": [
     {
       "external_key": "qa-q082",
@@ -178,110 +178,6 @@
           }
         ],
         "model_answer_mdx": "Selon la lecture défendue dans le document, pas du levier lui-même mais de la **gouvernance** propre au montage : la dette met le **management** sous pression pour améliorer la performance opérationnelle (il faut servir la dette), et le package d'intéressement l'associe au gain. C'est le bâton et la carotte. En pratique, on décompose aussi le gain du fonds en croissance de l'EBE, variation du multiple et désendettement."
-      }
-    },
-    {
-      "external_key": "qa-q089",
-      "type": "short_answer",
-      "difficulty": 3,
-      "source_ref": "Q&A Annales, Q89",
-      "concepts": [
-        "dividend-recap"
-      ],
-      "prompt_mdx": "Qu'est-ce qu'un « dividend recap » dans un LBO ?",
-      "payload": {
-        "max_words": 150
-      },
-      "solution": {
-        "key_points": [
-          {
-            "text": "réendett",
-            "weight": 0.5
-          },
-          {
-            "text": "dividende",
-            "weight": 0.5
-          }
-        ],
-        "model_answer_mdx": "Le fonds **réendette** une société qu'il contrôle depuis quelques années pour se faire verser un **dividende** exceptionnel. Ce n'est pas une sortie, puisqu'il reste actionnaire, mais il récupère une partie des capitaux investis."
-      }
-    },
-    {
-      "external_key": "qa-q090",
-      "type": "short_answer",
-      "difficulty": 2,
-      "source_ref": "Q&A Annales, Q90",
-      "concepts": [
-        "revolver"
-      ],
-      "prompt_mdx": "Qu'est-ce qu'un « crédit revolving » ?",
-      "payload": {
-        "max_words": 150
-      },
-      "solution": {
-        "key_points": [
-          {
-            "text": "court terme",
-            "weight": 0.5
-          },
-          {
-            "text": "fonds de roulement",
-            "weight": 0.5
-          }
-        ],
-        "model_answer_mdx": "Une ligne de crédit à **court terme** renouvelable en permanence, tirée et remboursée selon les besoins. Elle sert notamment à financer le besoin en **fonds de roulement**."
-      }
-    },
-    {
-      "external_key": "qa-q091",
-      "type": "short_answer",
-      "difficulty": 3,
-      "source_ref": "Q&A Annales, Q91",
-      "concepts": [
-        "covenants"
-      ],
-      "prompt_mdx": "Pouvez-vous définir un « covenant » ?",
-      "payload": {
-        "max_words": 150
-      },
-      "solution": {
-        "key_points": [
-          {
-            "text": "ratio",
-            "weight": 0.5
-          },
-          {
-            "text": "remboursement anticipé",
-            "weight": 0.5
-          }
-        ],
-        "model_answer_mdx": "Un engagement de l'emprunteur que les prêteurs surveillent pour détecter un risque sur leur remboursement. Deux familles : ceux testés seulement quand la société prend une décision (nouvelle dette, investissement) et ceux de maintenance, testés à intervalles réguliers. Ils portent sur des **ratios** financiers : dette nette / EBE, couverture des intérêts, niveau d'investissement. En cas de rupture, la banque peut exiger le **remboursement anticipé**."
-      }
-    },
-    {
-      "external_key": "qa-q092",
-      "type": "short_answer",
-      "difficulty": 3,
-      "source_ref": "Q&A Annales, Q92",
-      "concepts": [
-        "dividend-recap"
-      ],
-      "prompt_mdx": "Quels sont les effets d'un « dividend recap » de 10 M€ sur le bilan ?",
-      "payload": {
-        "max_words": 150
-      },
-      "solution": {
-        "key_points": [
-          {
-            "text": "dette nette",
-            "weight": 0.5
-          },
-          {
-            "text": "capitaux propres",
-            "weight": 0.5
-          }
-        ],
-        "model_answer_mdx": "La **dette nette** augmente de 10 M€ et les **capitaux propres** baissent de 10 M€, le dividende venant en déduction des réserves."
       }
     }
   ]

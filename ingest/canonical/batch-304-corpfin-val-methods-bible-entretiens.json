@@ -1,0 +1,333 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "val-methods",
+  "items": [
+    {
+      "external_key": "bible-p3-eval-q001",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q1",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Quelles sont les méthodes de valorisation les plus fréquemment utilisées ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "DCF",
+            "weight": 0.3333
+          },
+          {
+            "text": "multiples boursiers",
+            "weight": 0.3333
+          },
+          {
+            "text": "transactions comparables",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Trois méthodes : le **DCF** (Discounted Cash-Flow), les **multiples boursiers** et les **transactions comparables**."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q021",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q21",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Quelles sont les autres méthodes de valorisation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "liquidation",
+            "weight": 0.25
+          },
+          {
+            "text": "replacement",
+            "weight": 0.25
+          },
+          {
+            "text": "sum of the part",
+            "weight": 0.25
+          },
+          {
+            "text": "LBO",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Méthodes patrimoniales : la **Liquidation** Valuation, qui évalue l'actif net pour voir ce qui reste aux actionnaires après remboursement des dettes, et la **Replacement** Value, coût de remplacement des actifs. La méthode **Sum of the part** : chaque division valorisée séparément, adaptée aux conglomérats. La méthode **LBO** : le prix qu'un fonds peut payer pour atteindre un TRI cible."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q022",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q22",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Comment présenteriez-vous les valorisations que vous avez calculées ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "football field",
+            "weight": 0.5
+          },
+          {
+            "text": "fourchette",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Avec un **Football Field** : un graphique en barres horizontales qui compare les intervalles obtenus par chaque méthode. On présente toujours une **fourchette**, jamais un prix unique."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q023",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q23",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Pourquoi une entreprise souhaite-t-elle faire une valorisation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cession",
+            "weight": 0.3333
+          },
+          {
+            "text": "stratégique",
+            "weight": 0.3333
+          },
+          {
+            "text": "informatif",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Dans un contexte de **cession**, pour mener la négociation en connaissant sa valeur. Dans un contexte de développement **stratégique**, car une valorisation s'accompagne d'une analyse de l'activité, du marché, des risques et des forces. Ou à titre **informatif**, comme indicateur de sa croissance, ce qui peut déclencher une décision de vente."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q1",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Quelle méthode de valorisation est censée donner la valorisation la plus élevée ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "DCF",
+            "weight": 0.3333
+          },
+          {
+            "text": "transactions comparables",
+            "weight": 0.3333
+          },
+          {
+            "text": "prime de contrôle",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le **DCF** peut donner la plus haute comme la plus basse selon les hypothèses. Les **transactions comparables** sont censées ressortir au-dessus des multiples boursiers car elles intègrent la **prime de contrôle**."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q8",
+      "concepts": [
+        "private-company"
+      ],
+      "prompt_mdx": "Comment valoriser une entreprise privée (non cotée) ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "10 %",
+            "weight": 0.3333
+          },
+          {
+            "text": "15 %",
+            "weight": 0.3333
+          },
+          {
+            "text": "WACC",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Avec les mêmes méthodes, moyennant trois ajustements : une décote de **10 %** à **15 %** sur les multiples de sociétés cotées, pour l'illiquidité. Un **WACC** estimé à partir de sociétés cotées comparables. Et un résultat exprimé en valeur d'entreprise plutôt qu'en prix par action."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q9",
+      "concepts": [
+        "ipo"
+      ],
+      "prompt_mdx": "Comment valoriser une entreprise qui va à l'IPO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "multiples boursiers",
+            "weight": 0.3333
+          },
+          {
+            "text": "bridge",
+            "weight": 0.3333
+          },
+          {
+            "text": "nombre total d'actions",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Uniquement par les **multiples boursiers**. On retient le multiple le plus pertinent, on calcule la valeur d'entreprise, on fait le **bridge** vers l'Equity Value, puis on divise par le **nombre total d'actions**, anciennes et nouvelles, pour obtenir le prix par action."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q10",
+      "concepts": [
+        "bank-valuation"
+      ],
+      "prompt_mdx": "Comment valoriser une banque ou une institution financière ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "price earning",
+            "weight": 0.3333
+          },
+          {
+            "text": "price to book",
+            "weight": 0.3333
+          },
+          {
+            "text": "DDM",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Avec des multiples d'Equity Value, **Price Earning** Ratio ou **Price to Book**, plutôt que des multiples d'EV. En prêtant attention aux indicateurs propres au secteur comme la Net Asset Value. Et avec un **DDM** à la place du DCF."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q017",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q17",
+      "concepts": [
+        "ipo"
+      ],
+      "prompt_mdx": "Quels avantages une entreprise trouve-t-elle à faire une IPO ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "financement",
+            "weight": 0.5
+          },
+          {
+            "text": "notoriété",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Une nouvelle source de **financement** pour augmenter son capital, et un gain de **notoriété**."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q019",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q19",
+      "concepts": [
+        "negative-earnings"
+      ],
+      "prompt_mdx": "Comment valoriser une entreprise dont les résultats sont négatifs ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "normalis",
+            "weight": 0.3333
+          },
+          {
+            "text": "chiffre d'affaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "négatifs",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Mêmes méthodes, avec des ajustements. Si les pertes sont passagères ou cycliques, on utilise des agrégats **normalisés**. Si elles sont durables, on estime quand les résultats redeviendront positifs. En multiples, on se rabat sur le **chiffre d'affaires** ou des indicateurs non financiers du secteur. Et un DCF ou un DDM reste faisable même si certains flux sont **négatifs**, comme dans les projets d'infrastructure."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q020",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q20",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "Pouvez-vous m'expliquer les mécanismes de dilution / relution ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bénéfice par action",
+            "weight": 0.3333
+          },
+          {
+            "text": "dilutive",
+            "weight": 0.3333
+          },
+          {
+            "text": "relutive",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Ils portent sur le **bénéfice par action**, résultat net divisé par le nombre d'actions. Une opération est **dilutive** si le BPA après opération est inférieur au BPA avant : les actions créées pèsent plus que le résultat apporté. Elle est **relutive** dans le cas inverse. Ce sont des calculs d'impact, pas des méthodes de valorisation."
+      }
+    }
+  ]
+}

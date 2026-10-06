@@ -1,0 +1,661 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "val-methods",
+  "items": [
+    {
+      "external_key": "ibq400-val-basic-q001",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Valuation Basic, Q1",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "What are the 3 major valuation methodologies?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable companies",
+            "weight": 0.3333
+          },
+          {
+            "text": "precedent transactions",
+            "weight": 0.3333
+          },
+          {
+            "text": "discounted cash flow",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Comparable Companies** (trading multiples of listed peers), **Precedent Transactions** (multiples paid in past deals) and **Discounted Cash Flow** analysis (intrinsic value of future cash flows)."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q2",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Rank the 3 valuation methodologies from highest to lowest expected value.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no",
+            "weight": 0.3333
+          },
+          {
+            "text": "control premium",
+            "weight": 0.3333
+          },
+          {
+            "text": "DCF",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "There is **no** fixed ranking. As a tendency, Precedent Transactions come out above Comparable Companies because deal prices include a **control premium**. The **DCF** is the most variable: it often gives the highest figure, but can give the lowest, depending on assumptions."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q4",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "What other valuation methodologies are there?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "liquidation",
+            "weight": 0.25
+          },
+          {
+            "text": "replacement",
+            "weight": 0.25
+          },
+          {
+            "text": "LBO",
+            "weight": 0.25
+          },
+          {
+            "text": "sum of the parts",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**Liquidation** valuation: assets sold off, liabilities repaid, what is left for equity. **Replacement** value: cost of rebuilding the assets. **LBO** analysis: what a private equity fund can pay to reach its target IRR. **Sum of the Parts**: each division valued separately. M&A premiums analysis: premiums paid in comparable public deals. Future share price analysis: forward EPS times peer P/E, discounted back."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q5",
+      "concepts": [
+        "liquidation-value"
+      ],
+      "prompt_mdx": "When would you use a Liquidation Valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bankruptcy",
+            "weight": 0.5
+          },
+          {
+            "text": "equity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Mostly in **bankruptcy** or distress, to see whether anything is left for **equity** holders once debts are repaid, and to advise on whether selling assets piecemeal beats selling the whole company."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q6",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "When would you use Sum of the Parts?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "conglomerate",
+            "weight": 0.5
+          },
+          {
+            "text": "division",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "For a **conglomerate** whose businesses are unrelated. One set of peers cannot fit the whole group, so each **division** is valued with its own comparables and transactions, and the values are added up."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q7",
+      "concepts": [
+        "lbo-valuation"
+      ],
+      "prompt_mdx": "When do you use an LBO analysis as part of a valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "private equity",
+            "weight": 0.5
+          },
+          {
+            "text": "floor",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Whenever a buyout is being considered, and more broadly to see what a **private equity** buyer could pay. Since that is usually less than a strategic buyer would pay, it sets a **floor** on the valuation range."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q11",
+      "concepts": [
+        "lbo-valuation"
+      ],
+      "prompt_mdx": "Would an LBO or a DCF give a higher valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "DCF",
+            "weight": 0.3333
+          },
+          {
+            "text": "terminal value",
+            "weight": 0.3333
+          },
+          {
+            "text": "IRR",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It can go either way, but the **DCF** is usually higher. In an LBO the buyer gets no credit for the cash flows of the intermediate years, only for the **terminal value** at exit, whereas a DCF counts both. Also an LBO does not output a value directly: you set a target **IRR** and back into the price."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q012",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q12",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "How would you present these valuation methodologies to a company or its investors?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "football field",
+            "weight": 0.5
+          },
+          {
+            "text": "range",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "With a **football field** chart: one bar per methodology showing the **range** of values it implies. You always present a range, never a single number."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q013",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q13",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "How would you value an apple tree?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.5
+          },
+          {
+            "text": "cash flows",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Like a company. Relative valuation: what **comparable** apple trees sell for. Intrinsic valuation: the present value of the **cash flows** the tree will produce."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q15",
+      "concepts": [
+        "liquidation-value"
+      ],
+      "prompt_mdx": "When would a Liquidation Valuation produce the highest value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "hard assets",
+            "weight": 0.5
+          },
+          {
+            "text": "undervalu",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Rarely. It can happen when a company owns substantial **hard assets** but the market is **undervaluing** it for a specific reason, such as an earnings miss or a cyclical trough. Comparables and precedents then also read low, and asset values can exceed them."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q016",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q16",
+      "concepts": [
+        "negative-earnings"
+      ],
+      "prompt_mdx": "Take a young internet company with no profit and no revenue. How would you value it?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.3333
+          },
+          {
+            "text": "unique visitors",
+            "weight": 0.3333
+          },
+          {
+            "text": "DCF",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "With **Comparable** Companies and Precedent Transactions, using non-financial multiples such as EV per **unique visitors** or per pageview. Not with a long-dated **DCF**: you cannot credibly forecast cash flows for a business that does not earn money yet."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q021",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q21",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "What do you actually use a valuation for?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "pitch",
+            "weight": 0.5
+          },
+          {
+            "text": "fairness opinion",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "In **pitch** books and client presentations, to tell clients what value to expect. In a **Fairness Opinion** just before a deal closes. And as an input to defence analyses, merger models, LBO models and DCFs, where terminal multiples come from comparables."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q032",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q32",
+      "concepts": [
+        "private-company"
+      ],
+      "prompt_mdx": "How do you value a private company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "discount",
+            "weight": 0.3333
+          },
+          {
+            "text": "share price",
+            "weight": 0.3333
+          },
+          {
+            "text": "WACC",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "With the same three methodologies, with some differences. You may apply a 10-15% illiquidity **discount** to public multiples. Premiums analysis and future share price analysis are out, since there is no **share price**. The output is an Enterprise Value, not a per-share value. And in the DCF there is no market cap or Beta, so **WACC** is estimated from listed peers."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q033",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Basic, Q33",
+      "concepts": [
+        "private-company"
+      ],
+      "prompt_mdx": "When valuing a private company, why discount public comparable multiples but not precedent transaction multiples?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "entire company",
+            "weight": 0.5
+          },
+          {
+            "text": "liquid",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A precedent transaction prices the **entire company**, and once acquired its shares are illiquid whatever it was before. Public multiples price individual shares that are **liquid**, which a private company's shares are not, hence the discount."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q034",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q34",
+      "concepts": [
+        "private-company"
+      ],
+      "prompt_mdx": "Can you use private companies as part of your valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "precedent transactions",
+            "weight": 0.5
+          },
+          {
+            "text": "beta",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Only within **precedent transactions**. They cannot serve as trading comparables or feed the Cost of Equity and WACC calculation, because they have no market cap and no **Beta**."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q001",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Advanced, Q1",
+      "concepts": [
+        "bank-valuation"
+      ],
+      "prompt_mdx": "How do you value banks and financial institutions differently from other companies?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "P/E",
+            "weight": 0.3333
+          },
+          {
+            "text": "P/BV",
+            "weight": 0.3333
+          },
+          {
+            "text": "dividend discount model",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Same logic, different tools. Multiples are **P/E** and **P/BV** instead of EV-based ones, because of the capital structure. Bank-specific metrics such as NAV get more weight. And a **Dividend Discount Model** replaces the DCF. The reason: interest is part of a bank's revenue and debt is its raw material, not just financing."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q002",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Advanced, Q2",
+      "concepts": [
+        "ipo"
+      ],
+      "prompt_mdx": "Walk me through an IPO valuation for a company about to go public.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "public company comparables",
+            "weight": 0.3333
+          },
+          {
+            "text": "proceeds",
+            "weight": 0.3333
+          },
+          {
+            "text": "shares",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Only **public company comparables** matter. Choose the most relevant multiple and derive Enterprise Value. Move to Equity Value and subtract the IPO **proceeds**, which are new cash. Divide by total **shares**, existing plus newly issued, to get the price per share at which the IPO is priced. With an equity multiple such as P/E you land on Equity Value directly and subtract proceeds from there."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q005",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Advanced, Q5",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Walk me through a future share price analysis.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "P/E",
+            "weight": 0.3333
+          },
+          {
+            "text": "EPS",
+            "weight": 0.3333
+          },
+          {
+            "text": "cost of equity",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It projects a share price one or two years out and discounts it back. Take the median historical **P/E** of the listed peers, apply it to the company's projected **EPS** one or two years forward, and discount the result at a rate in line with the **Cost of Equity**. You show a sensitivity across P/E multiples and discount rates."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Advanced, Q7",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "Walk me through a Sum-of-the-Parts analysis. Illustrate: manufacturing with 100 million USD EBITDA at 5x, entertainment with 50 million at 8x, consumer goods with 75 million at 4x.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "division",
+            "weight": 0.5
+          },
+          {
+            "text": "1.2 billion",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Each **division** gets its own comparables, its own multiple and its own value, and the values are added. Here 100 x 5 + 50 x 8 + 75 x 4 = 500 + 400 + 300 = **1.2 billion** USD."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q008",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Valuation Advanced, Q8",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "How do you value Net Operating Losses and take them into account in a valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "tax",
+            "weight": 0.3333
+          },
+          {
+            "text": "present value",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "By the **tax** they will save: estimate the annual savings and take their **present value**. Either assume NOLs offset taxable income until used up, or in an acquisition apply the US Section 382 limit, a prescribed rate times the equity purchase price, to cap annual usage. They are rarely added in, but if they are they act like **cash** in the bridge between Equity Value and Enterprise Value."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q013",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Valuation Advanced, Q13",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "How would you value an oil and gas company, and how does it differ from a standard company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "reserves",
+            "weight": 0.3333
+          },
+          {
+            "text": "NAV",
+            "weight": 0.3333
+          },
+          {
+            "text": "commodity",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Same methodologies, with adjustments. Industry multiples based on **reserves** and production, and P/NAV. Projections require **commodity** price forecasts and the reserve base. A **NAV** model replaces the DCF, with everything flowing from reserves. There are also accounting specifics and the distinction between proven and more speculative reserves."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q014",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Valuation Advanced, Q14",
+      "concepts": [
+        "valuation-methods"
+      ],
+      "prompt_mdx": "How would you value a REIT, and how does it differ from a normal company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "FFO",
+            "weight": 0.3333
+          },
+          {
+            "text": "NAV",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitalization rate",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Real estate is asset-heavy and value comes from each property's cash flow. Multiples are Price/**FFO** and Price/AFFO, and **NAV** matters. Properties are valued by dividing Net Operating Income by a market **capitalization rate**. Replacement value is more usable than elsewhere, since land and construction costs can be estimated. A DCF remains possible, built property by property."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q030",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q30",
+      "concepts": [
+        "bank-valuation"
+      ],
+      "prompt_mdx": "Why would you not use a DCF for a bank or other financial institution?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.3333
+          },
+          {
+            "text": "interest",
+            "weight": 0.3333
+          },
+          {
+            "text": "dividend discount model",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Banks do not use **debt** to fund the business the way other companies do: it is the raw material of their products. **Interest** is core revenue and working capital dominates the balance sheet, so free cash flow is not meaningful. A **dividend discount model** is used instead."
+      }
+    }
+  ]
+}

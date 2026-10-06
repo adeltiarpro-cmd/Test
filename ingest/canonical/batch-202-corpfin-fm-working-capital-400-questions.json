@@ -1,0 +1,549 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fm-working-capital",
+  "items": [
+    {
+      "external_key": "ibq400-acc-basic-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q9",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "Accrued Compensation goes up by 10 USD. What happens on the 3 statements (40% tax rate)?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "6",
+            "weight": 0.3333
+          },
+          {
+            "text": "4",
+            "weight": 0.3333
+          },
+          {
+            "text": "liabilit",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "First check that this is a newly recognised expense. If so: operating expenses up 10, Pre-Tax Income down 10, Net Income down **6**. Cash Flow: Net Income down 6, the higher accrued liability adds 10, so operating cash flow and cash are up **4**. Balance Sheet: Cash up 4 on the asset side. On the other side, **Liabilities** up 10 and Retained Earnings down 6, a net 4."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q010",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q10",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "Inventory goes up by 10 USD and you pay for it with cash. What happens on the 3 statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no change",
+            "weight": 0.3333
+          },
+          {
+            "text": "10",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Income Statement: **no change**. Cash Flow Statement: Inventory is an asset, so its increase lowers cash flow from operations by **10**, and the net change in cash is down 10. Balance Sheet: Inventory up 10, **Cash** down 10, so total Assets are unchanged and it still balances."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q011",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q11",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "Why is the Income Statement not affected by changes in Inventory?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "sold",
+            "weight": 0.5
+          },
+          {
+            "text": "cost of goods sold",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Inventory only becomes an expense when the related goods are **sold**. Until then it sits on the Balance Sheet. It hits **Cost of Goods Sold** at the time of sale. Saying working capital changes appear on the Income Statement is a classic mistake."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q015",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q15",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "A company orders 10 USD of additional inventory using cash on hand. Nothing has been manufactured or sold yet. What happens on the 3 statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no change",
+            "weight": 0.5
+          },
+          {
+            "text": "10",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Income Statement: **no change**. Cash Flow Statement: Inventory up 10 reduces operating cash flow by **10**, so cash is down 10. Balance Sheet: Inventory up 10, Cash down 10, total Assets unchanged."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q016",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q16",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "The company now sells those goods for revenue of 20 USD, at a cost of 10 USD. Walk me through the 3 statements (40% tax).",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "6",
+            "weight": 0.3333
+          },
+          {
+            "text": "16",
+            "weight": 0.3333
+          },
+          {
+            "text": "inventory",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Income Statement: revenue up 20, COGS up 10, so operating income up 10 and Net Income up **6**. Cash Flow Statement: Net Income up 6, and **Inventory** falls by 10, which adds to cash flow, so operating cash flow and cash are up **16**. Balance Sheet: Cash up 16, Inventory down 10, so Assets up 6. Equity up 6."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q018",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q18",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "What is Working Capital? How is it used?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "current assets",
+            "weight": 0.3333
+          },
+          {
+            "text": "current liabilities",
+            "weight": 0.3333
+          },
+          {
+            "text": "operating",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Working Capital = **Current Assets** minus **Current Liabilities**. Positive means short-term assets cover short-term obligations, so it is read as a soundness indicator. In models bankers prefer **Operating** Working Capital, which strips out cash from current assets and debt from current liabilities."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q019",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q19",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "What does negative Working Capital mean? Is that a bad sign?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "deferred revenue",
+            "weight": 0.3333
+          },
+          {
+            "text": "upfront",
+            "weight": 0.3333
+          },
+          {
+            "text": "trouble",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Not necessarily. Subscription or long-contract businesses carry large **Deferred Revenue**, which pushes it negative. Retailers and restaurants are paid **upfront** and can fund payables with that cash, a sign of efficiency. In other cases it does point to financial **trouble**, for instance slow-paying customers combined with heavy debt."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q023",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q23",
+      "concepts": [
+        "revenue-recognition"
+      ],
+      "prompt_mdx": "When would a company collect cash from a customer and not record it as revenue?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "subscription",
+            "weight": 0.3333
+          },
+          {
+            "text": "upfront",
+            "weight": 0.3333
+          },
+          {
+            "text": "perform",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "When it is paid **upfront** for something it will deliver later: web **subscription** software, mobile carriers selling annual contracts, magazine subscriptions. Under accrual rules revenue is only recorded once the service is **performed**."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q024",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q24",
+      "concepts": [
+        "revenue-recognition"
+      ],
+      "prompt_mdx": "If cash collected is not recorded as revenue, what happens to it?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "deferred revenue",
+            "weight": 0.5
+          },
+          {
+            "text": "liabilit",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It goes into **Deferred Revenue**, a **liability** on the Balance Sheet. As the service is delivered, that balance is released into revenue on the Income Statement."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q025",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q25",
+      "concepts": [
+        "revenue-recognition"
+      ],
+      "prompt_mdx": "What is the difference between Accounts Receivable and Deferred Revenue?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "collected",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset",
+            "weight": 0.3333
+          },
+          {
+            "text": "liability",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Receivables are revenue already recorded but not yet **collected** in cash, an **asset**. Deferred Revenue is cash already collected but not yet recorded as revenue, a **liability**."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q026",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q26",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "How long does it usually take a company to collect its Accounts Receivable?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "40",
+            "weight": 0.5
+          },
+          {
+            "text": "50",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Typically around **40** to **50** days. Longer for sellers of high-ticket items, shorter for businesses with small, frequent transactions."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q027",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q27",
+      "concepts": [
+        "revenue-recognition"
+      ],
+      "prompt_mdx": "What is the difference between cash-based and accrual accounting?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "received",
+            "weight": 0.5
+          },
+          {
+            "text": "incurred",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Cash-based accounting records revenue and expenses when cash is actually **received** or paid. Accrual accounting records revenue when collection is reasonably certain and expenses when they are **incurred**, whatever the timing of cash. Large companies use accrual. Very small businesses sometimes use cash-based for simplicity."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q028",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q28",
+      "concepts": [
+        "revenue-recognition"
+      ],
+      "prompt_mdx": "A customer pays for a TV with a credit card. How does this look under cash-based versus accrual accounting?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "accounts receivable",
+            "weight": 0.5
+          },
+          {
+            "text": "cash",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Cash-based: nothing is recorded until the card payment clears and the funds land in the bank, at which point it appears as revenue and as **Cash**. Accrual: revenue is recorded immediately, with the counterpart in **Accounts Receivable**, which converts to Cash once the money arrives."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q029",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q29",
+      "concepts": [
+        "capex-vs-opex"
+      ],
+      "prompt_mdx": "How do you decide when to capitalize rather than expense a purchase?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "useful life",
+            "weight": 0.3333
+          },
+          {
+            "text": "1 year",
+            "weight": 0.3333
+          },
+          {
+            "text": "depreciated",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "By **useful life**. If the asset serves for more than **1 year** it is capitalised on the Balance Sheet and then **depreciated** (tangible) or amortised (intangible). Factories, equipment and land qualify. Salaries and production costs cover a short period and are expensed."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q030",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q30",
+      "concepts": [
+        "exceptional-items"
+      ],
+      "prompt_mdx": "Why do companies report both GAAP and non-GAAP (pro forma) earnings?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non-cash",
+            "weight": 0.5
+          },
+          {
+            "text": "higher",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "GAAP income statements carry **non-cash** charges such as amortisation of intangibles, stock-based compensation and deferred revenue write-downs. Companies argue these blur true profitability, so they also publish earnings excluding them, which are almost always **higher**."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q031",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q31",
+      "concepts": [
+        "bankruptcy"
+      ],
+      "prompt_mdx": "A company has had positive EBITDA for 10 years but recently went bankrupt. How could this happen?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "capital expenditures",
+            "weight": 0.25
+          },
+          {
+            "text": "interest",
+            "weight": 0.25
+          },
+          {
+            "text": "refinance",
+            "weight": 0.25
+          },
+          {
+            "text": "one-time",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "EBITDA ignores several cash drains. Heavy **Capital Expenditures** can make cash flow negative. **Interest** may have become unaffordable. Debt may mature all at once with no way to **refinance** in a credit crunch. Or large **one-time** charges such as litigation can sink it."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q10",
+      "concepts": [
+        "exceptional-items"
+      ],
+      "prompt_mdx": "What are examples of non-recurring charges that need to be added back to a company's EBIT or EBITDA?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "restructuring",
+            "weight": 0.3333
+          },
+          {
+            "text": "impairment",
+            "weight": 0.3333
+          },
+          {
+            "text": "operating income",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Restructuring** charges, goodwill **impairment**, asset write-downs, bad debt expense, legal costs, disaster costs, changes in accounting procedures. To qualify as an add-back, the charge must sit within **Operating Income**. D&A and sometimes stock-based compensation are also added back, but as non-cash items, not as non-recurring ones."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q11",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "How do you project Balance Sheet items like Accounts Receivable and Accrued Expenses in a 3-statement model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue",
+            "weight": 0.3333
+          },
+          {
+            "text": "COGS",
+            "weight": 0.3333
+          },
+          {
+            "text": "percent",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "With simple ratios held constant or drifting slightly: Accounts Receivable and Deferred Revenue as a **percent** of **revenue**, Accounts Payable as a percent of **COGS**, Accrued Expenses as a percent of operating expenses or SG&A."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q12",
+      "concepts": [
+        "capex-vs-opex"
+      ],
+      "prompt_mdx": "How should you project Depreciation and Capital Expenditures?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue",
+            "weight": 0.5
+          },
+          {
+            "text": "PP&E schedule",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Simple way: each as a percentage of **revenue** or of the prior PP&E balance. Detailed way: a **PP&E schedule** that splits assets by useful life, applies straight-line depreciation to each, and bases capex on historical investment levels."
+      }
+    }
+  ]
+}

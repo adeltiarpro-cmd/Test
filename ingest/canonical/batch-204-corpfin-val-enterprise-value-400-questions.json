@@ -1,0 +1,490 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "val-enterprise-value",
+  "items": [
+    {
+      "external_key": "ibq400-ev-basic-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q1",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Why do we look at both Enterprise Value and Equity Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "all investors",
+            "weight": 0.5
+          },
+          {
+            "text": "shareholders",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Enterprise Value is the value attributable to **all investors**. Equity Value is only the part belonging to **shareholders**. Equity Value is what the public sees, Enterprise Value is the truer measure of what the business is worth."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q2",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "When looking at an acquisition, do you pay more attention to Enterprise Value or Equity Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "enterprise value",
+            "weight": 0.5
+          },
+          {
+            "text": "debt",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Enterprise Value**: it is what the acquirer really pays, since it includes the **debt** that usually has to be repaid or refinanced at closing."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q003",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q3",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "What is the formula for Enterprise Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "preferred",
+            "weight": 0.25
+          },
+          {
+            "text": "minority",
+            "weight": 0.25
+          },
+          {
+            "text": "cash",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Enterprise Value = Equity Value + **Debt** + **Preferred** Stock + **Minority** Interest - **Cash**. A fuller version adds further items, but this is the standard answer."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q4",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Why do you need to add Minority Interest to Enterprise Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "100%",
+            "weight": 0.3333
+          },
+          {
+            "text": "numerator",
+            "weight": 0.3333
+          },
+          {
+            "text": "denominator",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A company owning more than 50% of a subsidiary consolidates **100%** of its financials. To compare like with like, the **numerator** must cover the same perimeter as the **denominator** (revenue, EBITDA), so the minority stake is added."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q5",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "How do you calculate fully diluted shares?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "options",
+            "weight": 0.3333
+          },
+          {
+            "text": "convertible",
+            "weight": 0.3333
+          },
+          {
+            "text": "treasury stock method",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Start from basic shares and add the dilutive effect of **options** and other dilutive securities: warrants, **convertible** debt, convertible preferred. The option effect is computed with the **Treasury Stock Method**."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q006",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q6",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "A company has 100 shares outstanding at 10 USD each, and 10 options with an exercise price of 5 USD. What is its fully diluted equity value (in USD)?",
+      "payload": {
+        "unit": "USD",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 1050,
+        "steps_mdx": "The options are in the money. Exercise creates 10 shares and brings in 50 of cash, which buys back 5 shares at 10. Diluted count = 105, so diluted equity value = 105 x 10 = 1,050.",
+        "formula_katex": "(100 + 10 - \\tfrac{10\\times 5}{10})\\times 10"
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q007",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q7",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "A company has 100 shares outstanding at 10 USD each, and 10 options with an exercise price of 15 USD. What is its fully diluted equity value (in USD)?",
+      "payload": {
+        "unit": "USD",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 1000,
+        "steps_mdx": "The exercise price is above the share price, so the options are out of the money and create no dilution. Equity value stays at 100 x 10 = 1,000.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q8",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Why do you subtract cash in the formula for Enterprise Value? Is that always accurate?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non-operating",
+            "weight": 0.5
+          },
+          {
+            "text": "excess",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Cash is a **non-operating** asset already reflected in Equity Value, and a buyer effectively gets the target's cash, lowering its net cost. Strictly speaking only **excess** cash should be subtracted, meaning cash above what the business needs to operate."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q9",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Is it always accurate to add Debt to Equity Value when calculating Enterprise Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "refinanced",
+            "weight": 0.5
+          },
+          {
+            "text": "exception",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Almost always: debt agreements generally require the debt to be **refinanced** on a change of control, so the buyer bears it. There can be rare **exceptions** where the debt stays in place."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q10",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Could a company have a negative Enterprise Value? What would that mean?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash",
+            "weight": 0.5
+          },
+          {
+            "text": "market cap",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Yes: a very large **cash** balance, a very low **market cap**, or both. You see it in companies close to bankruptcy and in financial institutions with big cash holdings."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q011",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q11",
+      "concepts": [
+        "equity-value"
+      ],
+      "prompt_mdx": "Could a company have a negative Equity Value? What would that mean?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no",
+            "weight": 0.5
+          },
+          {
+            "text": "share price",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**No**. Neither the share count nor the **share price** can be negative."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q12",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Why do we add Preferred Stock to get to Enterprise Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "fixed dividend",
+            "weight": 0.5
+          },
+          {
+            "text": "debt",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It pays a **fixed dividend** and ranks ahead of common shareholders on the company's assets, so it behaves more like **debt** than like common equity."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q013",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q13",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "How do you account for convertible bonds in the Enterprise Value formula?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "in-the-money",
+            "weight": 0.3333
+          },
+          {
+            "text": "dilution",
+            "weight": 0.3333
+          },
+          {
+            "text": "debt",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "If they are **in-the-money** (conversion price below the share price) they count as extra **dilution** in Equity Value. If out of the money, their face value is included in **Debt**."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q014",
+      "type": "numeric",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q14",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "A company has 1 million shares at 100 USD. It also has 10 million USD of convertible bonds with a par value of 1,000 USD and a conversion price of 50 USD. How many diluted shares are outstanding?",
+      "payload": {
+        "unit": "shares",
+        "precision": 0,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 1200000,
+        "steps_mdx": "Conversion price 50 is below the share price 100, so the bonds convert. Number of bonds = 10,000,000 / 1,000 = 10,000. Shares per bond = 1,000 / 50 = 20. New shares = 200,000. Diluted shares = 1.2 million. No Treasury Stock Method here, since conversion brings in no cash.",
+        "formula_katex": "1\\,000\\,000 + \\tfrac{10\\,000\\,000}{1000}\\times\\tfrac{1000}{50}"
+      }
+    },
+    {
+      "external_key": "ibq400-ev-basic-q015",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Enterprise/Equity Value Basic, Q15",
+      "concepts": [
+        "equity-value"
+      ],
+      "prompt_mdx": "What is the difference between Equity Value and Shareholders' Equity?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "market value",
+            "weight": 0.5
+          },
+          {
+            "text": "book value",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Equity Value is the **market value** of the shares. Shareholders' Equity is the **book value**. The first can never be negative. The second can take any value. For healthy companies the market value is usually far above book."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-adv-q001",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Enterprise/Equity Value Advanced, Q1",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Are there any problems with the basic Enterprise Value formula?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "NOL",
+            "weight": 0.25
+          },
+          {
+            "text": "investments",
+            "weight": 0.25
+          },
+          {
+            "text": "capital leases",
+            "weight": 0.25
+          },
+          {
+            "text": "pension",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "It is too simple. A fuller version also subtracts **NOLs** and long-term and equity **investments**, which are treated like cash, and adds **capital leases**, some operating leases and unfunded **pension** obligations, which are treated like debt."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-adv-q002",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Enterprise/Equity Value Advanced, Q2",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Should you use the book value or market value of each item when calculating Enterprise Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "market value",
+            "weight": 0.5
+          },
+          {
+            "text": "balance sheet",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "In theory **market value** for everything. In practice only Equity Value is taken at market, because market values for the other items are hard to establish, so they come from the **Balance Sheet**."
+      }
+    },
+    {
+      "external_key": "ibq400-ev-adv-q003",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Enterprise/Equity Value Advanced, Q3",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "What percentage dilution in Equity Value is too high?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "10%",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "There is no hard rule, but anything above **10%** is unusual. If basic Equity Value is 100 million and diluted is 115 million, recheck the calculation. It may be right, but it is rare."
+      }
+    }
+  ]
+}

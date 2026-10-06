@@ -1,0 +1,645 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fit-motivation",
+  "items": [
+    {
+      "external_key": "ibq400-fit-career-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Career Change, Q1",
+      "concepts": [
+        "fit-career-change"
+      ],
+      "prompt_mdx": "You've had tons of engineering experience and you've worked at many tech companies. Why do you want to be an investment banker now?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Show a path instead of a jump: what in your work exposed you to the business and finance side, what you did to test the interest, and why banking is the logical next step. Present the old career as an asset for covering that sector.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-career-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Career Change, Q2",
+      "concepts": [
+        "fit-career-change"
+      ],
+      "prompt_mdx": "You've done Big 4 accounting for the past year, why would you want a job that's a lot more stressful with twice the hours?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say what you want that audit does not give: working on transactions, advising instead of checking, a steeper learning curve. State plainly that you know the hours and accept them, with a past period of heavy work as proof.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-career-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Career Change, Q3",
+      "concepts": [
+        "fit-career-change"
+      ],
+      "prompt_mdx": "I see you've practiced law at Wilson Sonsini for the past 4 years, if you've been there that long, you're probably on Partner-track by now. Why would you want to leave a lucrative career in law and go back to being an entry-level Associate in banking?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Explain that deal work on the legal side showed you that you prefer the business and valuation questions to the documentation. Acknowledge the step back in title and pay, and say why the long-term fit is worth it.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-career-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Career Change, Q4",
+      "concepts": [
+        "fit-career-change"
+      ],
+      "prompt_mdx": "I see you worked at McKinsey one summer and then went to Citi investment banking the next year. Are you sure you want to do investment banking?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say you tried both on purpose and compare them concretely: what you liked more in banking (transactions, tangible outcome, finance depth). A clear preference backed by experience answers the doubt.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-career-q005",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Fit, Career Change, Q5",
+      "concepts": [
+        "fit-career-change"
+      ],
+      "prompt_mdx": "Wow. I must be honest, I rarely see people who have accomplished as much as you have at your age. You sold your own company for over USD 1 million within 2 years of starting it, and became a leading real estate investor in Asia at the same time. Why would you ever want to work for other people in banking if you've been so successful on your own?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "The worry is that you will leave quickly or will not take orders. Say what you want to learn that you cannot learn alone: larger transactions, formal training, working with experienced bankers. Add an example of you working well inside a team under someone else.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-commit-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Commitment, Q1",
+      "concepts": [
+        "fit-commitment"
+      ],
+      "prompt_mdx": "Where else are you interviewing? Is it just banking? Consulting? Other companies?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Show focus: banking, and firms comparable to this one. If you have other processes, mention those that support a coherent story. A scattered list reads as a lack of commitment.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-commit-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Commitment, Q2",
+      "concepts": [
+        "fit-commitment"
+      ],
+      "prompt_mdx": "Are you mostly interviewing at larger banks like us? What kinds of options within banking are you considering?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Stay consistent with where you are sitting: similar banks, similar groups. Explain the common thread in your choices.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-commit-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Commitment, Q3",
+      "concepts": [
+        "fit-commitment"
+      ],
+      "prompt_mdx": "Before you entered business school, I see you switched jobs about once a year. How do I know that you're here to stay for the long-term?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give the reason behind each move in one line, show that they pointed in one direction, and explain that the MBA was the moment you settled on banking. Then say what staying looks like for you.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-commit-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Commitment, Q4",
+      "concepts": [
+        "fit-commitment"
+      ],
+      "prompt_mdx": "Recently some Analysts and Associates have left \"early\" and jumped to hedge funds or private equity. If the opportunity comes up, why would you stay here instead?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say that you want to complete the programme and learn the job properly before thinking about anything else, and what keeps you in banking: advising clients, variety of deals. Do not describe banking as a stepping stone.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-commit-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Commitment, Q5",
+      "concepts": [
+        "fit-commitment"
+      ],
+      "prompt_mdx": "Tell me about a time when you failed to honor a commitment.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Choose a real but limited case, explain what caused it and what you did to repair it, then what you changed so it does not happen again. The repair is the part being judged.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-commit-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Commitment, Q6",
+      "concepts": [
+        "fit-commitment"
+      ],
+      "prompt_mdx": "If I gave you an offer right now on the spot would you take it?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "If this is your first choice, say yes without hesitation. If not, express strong interest and say you would want to finish the processes you have started before answering. Do not promise something you will not do.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-commit-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Commitment, Q7",
+      "concepts": [
+        "fit-commitment"
+      ],
+      "prompt_mdx": "Let's say that we were to give you an offer, how long would you need to decide whether or not to accept it?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "A short, reasonable delay with a reason, or no delay at all if they are your first choice. A long delay signals that they are a fallback.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-culture-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Culture, Q1",
+      "concepts": [
+        "fit-culture"
+      ],
+      "prompt_mdx": "You spent this last summer working at Morgan Stanley's investment banking division. It seems like you'd be crazy not to go back, why would you want to work for a smaller firm in our M&A group?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give reasons that are about this firm: more responsibility earlier, leaner deal teams, focus on M&A advice. Stay positive about the previous bank.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-culture-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Culture, Q2",
+      "concepts": [
+        "fit-culture"
+      ],
+      "prompt_mdx": "Since you worked at Bank of America this past year, you probably have the chance to go to a lot of different large banks, why are you interested in us specifically?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Be specific: people you have met here, a group or sector where the bank is strong, recent deals you can name. Generic praise that fits any bank does not work.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-culture-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Culture, Q3",
+      "concepts": [
+        "fit-culture"
+      ],
+      "prompt_mdx": "When you were working at that boutique this past summer, you mentioned how you liked the smaller team and more hands-on environment. Why not just go back there? Why do you want to move to a large bank?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say what a large platform adds: bigger and more varied deals, financing products alongside advisory, structured training. Explain how you would keep the hands-on attitude there.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-culture-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Culture, Q4",
+      "concepts": [
+        "fit-culture"
+      ],
+      "prompt_mdx": "Why are you interested in our M&A division rather than our industry groups? Our Tech, Healthcare and Energy teams have been really successful this year.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Explain that you want exposure across sectors and to the most technical modelling and transaction work, and that this is where you learn fastest early on. Show you know what the group has done recently.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-culture-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Culture, Q5",
+      "concepts": [
+        "fit-culture"
+      ],
+      "prompt_mdx": "Why do you want to work in Capital Markets? There's hardly any market activity these days.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Take the long view: activity is cyclical and a slow market is a good time to learn. Say what attracts you to the job itself: closeness to markets, faster pace, pricing and investor contact.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-culture-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Culture, Q6",
+      "concepts": [
+        "fit-culture"
+      ],
+      "prompt_mdx": "What do you think our bank's greatest weaknesses are?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Name something real but not damning, for example a region or product where the bank is smaller, and turn it into an opportunity for growth. Do not attack the firm, and do not pretend it has no weakness.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-culture-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Culture, Q7",
+      "concepts": [
+        "fit-culture"
+      ],
+      "prompt_mdx": "Which of our competitors do you admire the most?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Name one competitor and one precise reason (a franchise, a deal, a culture), then say why you still prefer this firm. It shows you know the market.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-future-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Future Goals, Q1",
+      "concepts": [
+        "fit-future"
+      ],
+      "prompt_mdx": "I realize it's still early in your career, you haven't even graduated yet, but have you given any thought to your long-term plans? Do you think you'll stick with investment banking?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say that you see yourself in finance for the long run and that banking is where you want to build your base. You can stay open on the exact shape of the future without naming an exit.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-future-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Future Goals, Q2",
+      "concepts": [
+        "fit-future"
+      ],
+      "prompt_mdx": "You've had quite diverse experience prior to business school. After you complete your degree, where do you think you'll be going in the long-term?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "At Associate level they hire future senior bankers: say you want to make a career in banking and explain how your earlier experience leads there.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-future-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Future Goals, Q3",
+      "concepts": [
+        "fit-future"
+      ],
+      "prompt_mdx": "What is your career goal?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "One sentence on direction (advising companies on transactions, growing into client responsibility) and one on why. Keep it compatible with staying at the bank.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-future-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Future Goals, Q4",
+      "concepts": [
+        "fit-future"
+      ],
+      "prompt_mdx": "Looking into the future 10 years, do you think you'll still be an investment banker?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Yes or a close variant, with a reason. If you add nuance, keep it within finance and transactions. Announcing a plan to leave is the mistake to avoid.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-why-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Why Banking, Q1",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "I see you have no relevant finance experience, why should we hire you over someone who's had a previous banking internship?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Show you did your homework: people you spoke with, what you studied alone. Then give what you bring that others do not, and proof that you learn fast and work hard. Add that you take a long-term view of this career.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-why-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Why Banking, Q2",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "I see you've worked mostly in wealth management before, why are you looking to switch into banking now?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say what you liked in the finance work, and what you want more of: advising companies instead of individuals, transactions, deeper analysis. Show you have checked the move with people in the job.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-why-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Why Banking, Q3",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "You're a smart guy/girl with a lot of options, and right now the economy is not doing well and lots of banks have failed. Why are you still interested in banking when you could do anything else?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Take the long view: a downturn is a good time to enter, you learn to work in bad markets as well as good ones. Your interest is in the job, not in the cycle.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-why-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Why Banking, Q4",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "The economy has been improving lately, and more people are \"getting interested\" in finance. How do I know you're serious and not just following everyone else?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Date your interest before the upturn and prove it with actions: courses, internships, networking, deals you follow. Evidence over declarations.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-why-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Why Banking, Q5",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Where did your interest in finance begin?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Tell the real starting point: a person, a class, an investment, a deal in the news. Then show how the interest grew through specific steps.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-why-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Why Banking, Q6",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "If you enjoyed your last internship and got an offer to come back, why are you trying to switch into investment banking now?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Three ideas: you researched the move and spoke with many people, banking is faster and gives you more impact, and you accept the hours or pay trade-off for the opportunities it opens.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    }
+  ]
+}

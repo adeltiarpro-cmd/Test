@@ -1,0 +1,161 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "ma-process",
+  "items": [
+    {
+      "external_key": "ibq400-mm-adv-q011",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q11",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "What is a Section 338(h)(10) election and why might a company use it?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stock purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "step-up",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A US structure that is legally a **stock purchase** but treated for tax like an **asset purchase**. The seller is still taxed twice, on asset appreciation and on proceeds, but the buyer gets a **step-up** in tax basis and can deduct the resulting depreciation and amortisation. Buyers pay more for that. It suits sellers with large NOLs or long-standing S-corporations."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q013",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q13",
+      "concepts": [
+        "ma-documents"
+      ],
+      "prompt_mdx": "Walk me through the most important terms of a Purchase Agreement in an M&A deal.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.25
+          },
+          {
+            "text": "consideration",
+            "weight": 0.25
+          },
+          {
+            "text": "warranties",
+            "weight": 0.25
+          },
+          {
+            "text": "no-shop",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**Purchase price**, per share for public targets. Form of **consideration**: cash, stock, debt. Transaction structure: stock, asset or 338(h)(10). Treatment of options. Employee retention, non-solicit and non-compete terms. Reps and **warranties**. **No-shop** or go-shop provisions."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Advanced, Q14",
+      "concepts": [
+        "earn-out"
+      ],
+      "prompt_mdx": "What is an earnout and why would a buyer offer one?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "deferred",
+            "weight": 0.3333
+          },
+          {
+            "text": "performance",
+            "weight": 0.3333
+          },
+          {
+            "text": "incentiv",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A **deferred** payment contingent on future **performance**, for example an extra amount in three years if revenue hits a target. Common with private companies and start-ups, rare with public sellers. It **incentivises** management to keep performing after the sale."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q019",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Merger Model Advanced, Q19",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "What are the 3 main transaction structures for acquiring another company?",
+      "payload": {
+        "max_words": 200
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stock purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "338",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Stock purchase**: the buyer takes everything, including off-balance-sheet items. The seller pays capital gains tax. No tax step-up, so a deferred tax liability is created. Typical for public and large private companies. **Asset purchase**: the buyer selects assets and liabilities. The seller is taxed on asset appreciation and on proceeds. The buyer gets a step-up and no DTL arises. Typical for private companies, divestitures and distressed sellers. **338**(h)(10) election: everything is acquired as in a stock purchase, with the tax treatment of an asset purchase, and the buyer usually pays more for that benefit."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q020",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q20",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "Would a seller prefer a stock purchase or an asset purchase? And the buyer?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stock",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset",
+            "weight": 0.3333
+          },
+          {
+            "text": "taxation",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "The seller prefers a **stock** purchase: no double **taxation** and all liabilities leave with the company. The buyer prefers an **asset** deal: it chooses what it takes and can deduct depreciation and amortisation on the stepped-up assets."
+      }
+    }
+  ]
+}

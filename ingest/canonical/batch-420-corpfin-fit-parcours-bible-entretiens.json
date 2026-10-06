@@ -1,0 +1,51 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "fit-parcours",
+  "items": [
+    {
+      "external_key": "bible-p1-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q1",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "Présentez-vous",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Préparez un récit de deux minutes au plus. Formation dans l'ordre chronologique, du diplôme le plus ancien au plus récent, en montrant la logique entre les étapes, puis les expériences professionnelles. Justifiez chaque choix (école, césure, stages), y compris une erreur d'orientation assumée. Phrases courtes, répétées à voix haute devant quelqu'un avant l'entretien.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q015",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q15",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "L'anglais ! (le recruteur peut vous demander de décrire tout votre parcours en anglais)",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Soyez capable de présenter l'intégralité de votre CV en anglais et de répondre en anglais à toutes les questions de fit. Certains entretiens se déroulent entièrement dans cette langue, surtout si vous affichez un bon score de test.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fm-three-statements",
+  "items": [
+    {
+      "external_key": "ibq400-acc-basic-q001",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Accounting Basic, Q1",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Walk me through the 3 financial statements.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "income statement",
+            "weight": 0.25
+          },
+          {
+            "text": "balance sheet",
+            "weight": 0.25
+          },
+          {
+            "text": "cash flow statement",
+            "weight": 0.25
+          },
+          {
+            "text": "net income",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "There are three: the **Income Statement**, the **Balance Sheet** and the **Cash Flow Statement**. The Income Statement lists revenue and expenses over a period and ends at **Net Income**. The Balance Sheet is a snapshot of what the company owns (cash, inventory, PP&E) and what it owes (debt, payables), plus Shareholders' Equity, with Assets = Liabilities + Equity. The Cash Flow Statement starts from Net Income, adds back non-cash items, adjusts for working capital, then shows investing and financing flows to reach the net change in cash."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q002",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Accounting Basic, Q2",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "Give examples of major line items on each of the financial statements.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue",
+            "weight": 0.25
+          },
+          {
+            "text": "inventory",
+            "weight": 0.25
+          },
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "capital expenditures",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Income Statement: **Revenue**, COGS, SG&A, Operating Income, Pre-Tax Income, Net Income. Balance Sheet: Cash, Accounts Receivable, **Inventory**, PP&E, Accounts Payable, Accrued Expenses, **Debt**, Shareholders' Equity. Cash Flow Statement: Net Income, D&A, Stock-Based Compensation, changes in operating assets and liabilities, Cash Flow from Operations, **Capital Expenditures**, Cash Flow from Investing, purchases and sales of securities, dividends, Cash Flow from Financing."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q3",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "How do the 3 statements link together?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "net income",
+            "weight": 0.25
+          },
+          {
+            "text": "shareholders' equity",
+            "weight": 0.25
+          },
+          {
+            "text": "working capital",
+            "weight": 0.25
+          },
+          {
+            "text": "cash",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**Net Income** is the bridge: it goes to **Shareholders' Equity** on the Balance Sheet (through Retained Earnings) and to the top of the Cash Flow Statement. Movements in Balance Sheet accounts show up as **working capital** changes in operating cash flow, while investing and financing flows change PP&E, Debt and Equity. The bottom of the Cash Flow Statement, the net change in cash, rolls into **Cash** on the Balance Sheet, which together with Equity makes the statements balance."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q4",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "You are stranded on a desert island with only one financial statement and want to assess a company's overall health. Which one do you pick, and why?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash flow statement",
+            "weight": 0.5
+          },
+          {
+            "text": "non-cash",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "The **Cash Flow Statement**. It shows how much cash the business really generates, stripped of **non-cash** accounting entries, and cash generation is the first thing that matters for a company's health."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q5",
+      "concepts": [
+        "three-statements"
+      ],
+      "prompt_mdx": "You can look at only 2 statements to assess a company's prospects. Which 2, and why?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "income statement",
+            "weight": 0.5
+          },
+          {
+            "text": "balance sheet",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "The **Income Statement** and the **Balance Sheet**, because the Cash Flow Statement can be rebuilt from them, provided you have the opening and closing Balance Sheets for the period the Income Statement covers."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q017",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q17",
+      "concepts": [
+        "equity"
+      ],
+      "prompt_mdx": "Could you ever end up with negative Shareholders' Equity? What does it mean?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dividend recap",
+            "weight": 0.5
+          },
+          {
+            "text": "losses",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Yes, in two common cases. After an LBO followed by a **dividend recap**, where the owner has pulled out a large part of the equity. Or when a company has accumulated **losses** year after year, eroding Retained Earnings. It has no single meaning, but in the second case it signals a struggling business. It never turns negative right after an LBO itself."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q021",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q21",
+      "concepts": [
+        "equity"
+      ],
+      "prompt_mdx": "Walk me through a 100 USD bailout of a company and its effect on the 3 statements.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "equity",
+            "weight": 0.3333
+          },
+          {
+            "text": "financing",
+            "weight": 0.3333
+          },
+          {
+            "text": "100",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "First clarify the form of the bailout: debt, **equity** or both. Taking the usual case of a government equity injection: no change on the Income Statement. Cash flow from **financing** up 100, so cash up **100**. On the Balance Sheet, Cash up 100 and Shareholders' Equity up 100."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q6",
+      "concepts": [
+        "equity"
+      ],
+      "prompt_mdx": "Walk me through the major items in Shareholders' Equity.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "common stock",
+            "weight": 0.25
+          },
+          {
+            "text": "retained earnings",
+            "weight": 0.25
+          },
+          {
+            "text": "additional paid-in capital",
+            "weight": 0.25
+          },
+          {
+            "text": "treasury stock",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**Common Stock**: par value of shares issued. **Retained Earnings**: cumulative Net Income kept in the business. **Additional Paid-In Capital**: stock-based compensation, shares created by option exercises and amounts raised above par. **Treasury Stock**: value of shares repurchased. Accumulated Other Comprehensive Income: a catch-all, for example currency translation effects."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Advanced, Q7",
+      "concepts": [
+        "equity"
+      ],
+      "prompt_mdx": "What flows into Retained Earnings?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "net income",
+            "weight": 0.5
+          },
+          {
+            "text": "dividends",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Retained Earnings = prior balance + **Net Income** of the year - **Dividends** paid."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q8",
+      "concepts": [
+        "equity"
+      ],
+      "prompt_mdx": "What flows into Additional Paid-In Capital (APIC)?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stock-based compensation",
+            "weight": 0.5
+          },
+          {
+            "text": "option",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "APIC = prior balance + **Stock-Based Compensation** of the year + stock created by employees exercising **options**."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q9",
+      "concepts": [
+        "equity"
+      ],
+      "prompt_mdx": "What is the Statement of Shareholders' Equity and why do we use it?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "items",
+            "weight": 0.5
+          },
+          {
+            "text": "stock-based compensation",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It lays out the **items** that make up Shareholders' Equity and how each moves during the period, using figures from the other statements. It is not used often, but helps with companies that have unusual **stock-based compensation** or option activity."
+      }
+    }
+  ]
+}

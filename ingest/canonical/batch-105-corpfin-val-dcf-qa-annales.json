@@ -1,0 +1,213 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "val-dcf",
+  "items": [
+    {
+      "external_key": "qa-q046",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q46",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Pouvez-vous décrire la méthode de l'actualisation des flux de trésorerie disponibles ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "plan d'affaires",
+            "weight": 0.25
+          },
+          {
+            "text": "valeur terminale",
+            "weight": 0.25
+          },
+          {
+            "text": "coût moyen pondéré",
+            "weight": 0.25
+          },
+          {
+            "text": "endettement net",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Trois étapes. 1. Bâtir un **plan d'affaires** et calculer les flux disponibles sur un horizon explicite d'environ 5 ans. 2. Calculer la **valeur terminale** au-delà de cet horizon, par Gordon-Shapiro ou par un multiple d'EBE normatif. 3. Calculer le **coût moyen pondéré** du capital et actualiser flux et valeur terminale. On obtient la valeur d'entreprise, dont on retranche l'**endettement net** et les autres éléments du bridge pour arriver aux capitaux propres."
+      }
+    },
+    {
+      "external_key": "qa-q047",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q47",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le flux de trésorerie disponible ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "résultat opérationnel",
+            "weight": 0.25
+          },
+          {
+            "text": "amortissement",
+            "weight": 0.25
+          },
+          {
+            "text": "BFR",
+            "weight": 0.25
+          },
+          {
+            "text": "investissement",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Flux de trésorerie disponible = **résultat opérationnel** × (1 - taux d'impôt) + dotations aux **amortissements** - variation du **BFR** - dépenses d'**investissement**. C'est le flux généré par l'actif économique, qui revient à tous les apporteurs de fonds, actionnaires et créanciers."
+      }
+    },
+    {
+      "external_key": "qa-q048",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q48",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le flux de trésorerie disponible revenant aux actionnaires ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "intérêts",
+            "weight": 0.3333
+          },
+          {
+            "text": "remboursement",
+            "weight": 0.3333
+          },
+          {
+            "text": "nouvelles dettes",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "On part du flux de trésorerie disponible et on retire ce qui revient aux créanciers : flux disponible - **intérêts** financiers - **remboursements** de dette + **nouvelles dettes**. En toute rigueur, les intérêts se prennent nets de leur économie d'impôt."
+      }
+    },
+    {
+      "external_key": "qa-q049",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q49",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Sur quelle période faut-il projeter les flux de trésorerie ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "5",
+            "weight": 0.5
+          },
+          {
+            "text": "valeur terminale",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "En général **5** à 6 ans, la **valeur terminale** captant tout ce qui vient après. L'horizon s'allonge quand les flux sont prévisibles sur longue durée (concession, contrat) ou quand la société n'a pas encore atteint son régime de croisière, comme une start-up non rentable."
+      }
+    },
+    {
+      "external_key": "qa-q057",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q57",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "Dans un DCF, comment calcule-t-on la valeur terminale ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Gordon",
+            "weight": 0.3333
+          },
+          {
+            "text": "normatif",
+            "weight": 0.3333
+          },
+          {
+            "text": "croissance",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le plus souvent par la formule de **Gordon**-Shapiro : valeur terminale = flux **normatif** × (1 + g) / (CMPC - g), où g est le taux de **croissance** à l'infini et le flux normatif celui de la dernière année du plan, représentatif du long terme. On peut aussi appliquer un multiple à l'EBE ou au résultat opérationnel de sortie."
+      }
+    },
+    {
+      "external_key": "qa-q058",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q58",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "Comment fixe-t-on le taux de croissance perpétuel de la formule de Gordon-Shapiro ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "inflation",
+            "weight": 0.5
+          },
+          {
+            "text": "économie",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On se réfère au taux d'**inflation** ou à la croissance de long terme de l'**économie**. Il ne peut pas dépasser cette dernière : cela reviendrait à supposer que l'entreprise croît indéfiniment plus vite que le pays entier."
+      }
+    },
+    {
+      "external_key": "qa-q059",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q59",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Mandat de vente : tu dois faire un DCF sur le plan d'affaires du management, que tu juges trop agressif. Comment ajustes-tu la valorisation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "hypothèses",
+            "weight": 0.5
+          },
+          {
+            "text": "sensibilité",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Deux leviers. Refaire les projections avec d'autres **hypothèses** et bâtir plusieurs scénarios en jouant sur la croissance du chiffre d'affaires, la marge d'EBE et les investissements. Présenter des tables de **sensibilité** qui montrent comment la valeur réagit aux hypothèses clés."
+      }
+    }
+  ]
+}

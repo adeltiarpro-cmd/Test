@@ -1,0 +1,93 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fm-projections",
+  "items": [
+    {
+      "external_key": "ibq400-acc-adv-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q3",
+      "concepts": [
+        "revenue-model"
+      ],
+      "prompt_mdx": "Walk me through how you create a revenue model for a company.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bottoms-up",
+            "weight": 0.3333
+          },
+          {
+            "text": "tops-down",
+            "weight": 0.3333
+          },
+          {
+            "text": "market share",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Two approaches. **Bottoms-up**: start from individual products or customers, estimate average sale value and growth in units and prices. **Tops-down**: start from total market size, apply the company's **market share** and how it evolves. Bottoms-up is more common and more credible, since big-picture figures are hard to pin down."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q4",
+      "concepts": [
+        "expense-model"
+      ],
+      "prompt_mdx": "Walk me through how you create an expense model for a company.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "employees",
+            "weight": 0.3333
+          },
+          {
+            "text": "revenue",
+            "weight": 0.3333
+          },
+          {
+            "text": "cost of goods sold",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A true bottoms-up build goes department by department: number of **employees**, average salary, bonus and benefits, each with its own growth assumption, with headcount usually tied to **revenue**. **Cost of Goods Sold** is linked directly to units sold. Rent, capex and other items follow the company's expansion plans or, in a simpler model, a percentage of revenue."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q5",
+      "concepts": [
+        "expense-model"
+      ],
+      "prompt_mdx": "You want to build these models but the company does not disclose enough information. What do you do?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "growth rate",
+            "weight": 0.5
+          },
+          {
+            "text": "percent of revenue",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Fall back on estimates. For revenue, apply a simple **growth rate** instead of a product-level build. For expenses, treat major lines such as SG&A as a **percent of revenue** and carry that forward."
+      }
+    }
+  ]
+}

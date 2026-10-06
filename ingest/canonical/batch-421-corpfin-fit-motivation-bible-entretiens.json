@@ -1,0 +1,327 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "fit-motivation",
+  "items": [
+    {
+      "external_key": "bible-p1-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q2",
+      "concepts": [
+        "fit-why-role"
+      ],
+      "prompt_mdx": "Pourquoi ce poste ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Reliez le poste à votre parcours et à votre projet : ce que vous avez déjà fait qui s'en rapproche, ce que vous voulez y apprendre, où il vous mène. Appuyez-vous sur les missions décrites dans l'offre.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q3",
+      "concepts": [
+        "fit-why-role"
+      ],
+      "prompt_mdx": "Qu'avez-vous compris du poste à pourvoir ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Reformulez les missions avec vos mots : tâches quotidiennes, interlocuteurs, livrables, place dans l'équipe. Cela prouve que vous avez lu l'offre et que vous vous êtes renseigné auprès de personnes du métier.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q4",
+      "concepts": [
+        "fit-why-role"
+      ],
+      "prompt_mdx": "Pourquoi ce secteur en particulier ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Donnez des raisons propres au secteur : ses enjeux actuels, ce qui vous y intéresse, une expérience ou une lecture qui vous y a amené. Une réponse valable pour n'importe quel secteur ne convainc pas.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q5",
+      "concepts": [
+        "fit-why-role"
+      ],
+      "prompt_mdx": "Pourquoi notre entreprise ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Citez des éléments précis : activité, positionnement, opérations ou actualité récentes, culture, personnes rencontrées. Montrez en quoi cela correspond à ce que vous cherchez.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q013",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q13",
+      "concepts": [
+        "fit-future"
+      ],
+      "prompt_mdx": "Comment vous voyez vous dans 5 ans / 10 ans ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Une trajectoire cohérente avec le poste : progression dans le métier, prise de responsabilités. Restez compatible avec une présence durable dans l'entreprise.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q014",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q14",
+      "concepts": [
+        "fit-future"
+      ],
+      "prompt_mdx": "Avez-vous d'autres processus de recrutement en cours ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Dites la vérité. Citez des processus cohérents avec celui-ci, sans en afficher une multitude ni aucun, et précisez la place de cette entreprise dans vos préférences.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q017",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q17",
+      "concepts": [
+        "fit-why-role"
+      ],
+      "prompt_mdx": "Avez-vous une question ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Préparez plusieurs questions pertinentes, dont la réponse ne figure ni sur le site ni dans l'entretien : sur l'équipe, les missions, l'intégration, le parcours de votre interlocuteur. Ne pas en avoir donne une impression de désintérêt.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Fit M&A et PE, Q1",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Pourquoi le M&A ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Une réponse personnelle et argumentée : intérêt pour les opérations stratégiques des entreprises, technicité financière, courbe d'apprentissage, travail en équipe sur des projets à fort enjeu. Appuyez chaque motif sur une expérience ou une rencontre.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Fit M&A et PE, Q2",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Pourquoi postulez-vous dans notre banque et pas dans une banque concurrente ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Citez ce qui distingue cette banque : secteurs de spécialité, taille des opérations, deals récents, taille des équipes, personnes rencontrées. La réponse ne doit pas pouvoir servir ailleurs.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Fit M&A et PE, Q3",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Pensez-vous être capable de supporter les horaires d'un analyste M&A ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Oui, avec une preuve : une période où vous avez tenu une charge lourde sur la durée. Montrez que vous connaissez la réalité du rythme par des échanges avec des analystes.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Fit M&A et PE, Q4",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Pourquoi souhaitez-vous changer de banque d'affaires ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Des raisons tournées vers la suite : type ou taille d'opérations, secteur, responsabilités. Aucune critique de l'employeur actuel.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Fit M&A et PE, Q5",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Quelles sont les qualités requises pour faire du M&A ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "rigueur",
+            "weight": 0.3333
+          },
+          {
+            "text": "travail",
+            "weight": 0.3333
+          },
+          {
+            "text": "équipe",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Une grande **rigueur** et le souci du détail, une forte capacité de **travail** et de résistance au stress, l'esprit d'**équipe**, de solides compétences techniques en finance et en modélisation, de bonnes capacités de rédaction et de synthèse, et de la curiosité pour les entreprises et leurs secteurs."
+      }
+    },
+    {
+      "external_key": "bible-p2-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Fit M&A et PE, Q6",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Pourquoi le Private Equity plutôt que du M&A ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Mettez en avant le point de vue de l'investisseur : choisir les sociétés, les suivre dans la durée et participer à la création de valeur après l'opération, là où le conseil s'arrête à la signature. Sans dévaloriser le M&A, qui reste la meilleure formation.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, II Fit M&A et PE, Q7",
+      "concepts": [
+        "fit-why-banking"
+      ],
+      "prompt_mdx": "Selon vous, quelles sont les principales qualités d'un analyste Private Equity ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "analyse",
+            "weight": 0.5
+          },
+          {
+            "text": "rigueur",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un bon esprit d'**analyse** et un jugement d'investisseur (comprendre un modèle économique, ses risques, former une conviction), de la **rigueur** en modélisation et en due diligence, de la curiosité sectorielle, des qualités relationnelles avec les dirigeants et les conseils, de l'autonomie dans de petites équipes."
+      }
+    }
+  ]
+}

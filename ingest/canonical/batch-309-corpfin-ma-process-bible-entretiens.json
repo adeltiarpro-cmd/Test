@@ -1,0 +1,101 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "ma-process",
+  "items": [
+    {
+      "external_key": "bible-p3-ma-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III M&A, Q1",
+      "concepts": [
+        "ma-process"
+      ],
+      "prompt_mdx": "Pouvez-vous me présenter les étapes d'un deal M&A ?",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "teaser",
+            "weight": 0.2
+          },
+          {
+            "text": "NDA",
+            "weight": 0.2
+          },
+          {
+            "text": "LOI",
+            "weight": 0.2
+          },
+          {
+            "text": "due diligence",
+            "weight": 0.2
+          },
+          {
+            "text": "SPA",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "Côté vendeur : la banque prépare un **teaser** anonyme et une liste d'acheteurs, validés avec le client, puis les contacte. Les intéressés signent un **NDA** et reçoivent le mémorandum d'investissement. Après les indications d'intérêt et les réunions avec le management, l'acheteur remet une **LOI** avec un prix. Vient la **due diligence** en data room, puis la rédaction du **SPA**, sa signature au closing, et l'intégration. Côté acheteur : la banque recherche des cibles selon les critères du client, les approche, signe un NDA pour accéder au mémorandum, présente chaque cible avec une valorisation, puis le déroulé est le même : réunion, LOI, due diligence, SPA, closing, intégration."
+      }
+    },
+    {
+      "external_key": "bible-p3-ma-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III M&A, Q2",
+      "concepts": [
+        "ma-documents"
+      ],
+      "prompt_mdx": "À quoi sert l'Investment Memorandum ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "informations",
+            "weight": 0.5
+          },
+          {
+            "text": "NDA",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Il regroupe toutes les **informations** sur la société en vente : activité, clients, analyse sectorielle, management, états financiers, projections, valorisation. Il est envoyé aux acheteurs qui ont manifesté leur intérêt après le teaser et signé le **NDA**."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q5",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "Quels types de structure une acquisition peut-elle adopter ? Quelles différences ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stock purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "passif",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Stock Purchase** : l'acheteur acquiert les actions et reprend la société en l'état, actif et **passif** compris. **Asset Purchase** : il achète les actifs. Le vendeur reste propriétaire de la société et, en général, conserve le cash et les dettes."
+      }
+    }
+  ]
+}

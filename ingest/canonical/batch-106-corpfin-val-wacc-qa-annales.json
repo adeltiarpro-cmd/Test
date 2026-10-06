@@ -1,0 +1,235 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "val-wacc",
+  "items": [
+    {
+      "external_key": "qa-q050",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q50",
+      "concepts": [
+        "wacc"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le coût moyen pondéré du capital ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "coût des capitaux propres",
+            "weight": 0.3333
+          },
+          {
+            "text": "coût de la dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "impôt",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "CMPC = Ke × CP / (CP + D) + Kd × (1 - IS) × D / (CP + D), avec Ke le **coût des capitaux propres**, Kd le **coût de la dette**, IS le taux d'**impôt**, CP et D les valeurs de marché des capitaux propres et de la dette nette. C'est le rendement minimal exigé par l'ensemble des apporteurs de fonds, utilisé comme taux d'actualisation du DCF."
+      }
+    },
+    {
+      "external_key": "qa-q051",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q51",
+      "concepts": [
+        "wacc"
+      ],
+      "prompt_mdx": "Pourquoi pondérer le coût moyen pondéré du capital par les valeurs de marché plutôt que comptables ? Illustre : 10 M€ investis en capitaux propres, valorisés 50 M€ aujourd'hui, dette de 10 M€, Ke 10 %, Kd 5 %, impôt 25 %.",
+      "payload": {
+        "max_words": 180
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "8,96",
+            "weight": 0.3333
+          },
+          {
+            "text": "6,88",
+            "weight": 0.3333
+          },
+          {
+            "text": "sous-estim",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Les valeurs comptables **sous-estiment** le coût du capital. En valeur de marché : 10 % × 50/60 + 5 % × 0,75 × 10/60 = **8,96** %. En valeur comptable : 10 % × 10/20 + 5 % × 0,75 × 10/20 = **6,88** %. Les actionnaires attendent 10 % sur les 50 M€ qu'ils pourraient encaisser aujourd'hui en vendant, pas sur les 10 M€ d'origine. Un taux trop bas gonflerait la valorisation et ferait accepter des projets insuffisamment rentables."
+      }
+    },
+    {
+      "external_key": "qa-q052",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q52",
+      "concepts": [
+        "capm"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le coût des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "sans risque",
+            "weight": 0.3333
+          },
+          {
+            "text": "bêta",
+            "weight": 0.3333
+          },
+          {
+            "text": "prime de risque",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Par le MEDAF : coût des capitaux propres = taux **sans risque** + **bêta** × **prime de risque** du marché, auquel on peut ajouter une prime de risque pays, de taille ou d'illiquidité. C'est le rendement exigé par les actionnaires compte tenu du risque systématique du titre."
+      }
+    },
+    {
+      "external_key": "qa-q053",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q53",
+      "concepts": [
+        "beta"
+      ],
+      "prompt_mdx": "Comment obtenir le bêta d'une entreprise ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "désendetté",
+            "weight": 0.3333
+          },
+          {
+            "text": "endetté",
+            "weight": 0.3333
+          },
+          {
+            "text": "comparables",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Soit on le relève dans une source de marché (Bloomberg, FactSet, notes de brokers), soit on le calcule à partir de **comparables**. On distingue le bêta **désendetté**, ou de l'actif économique, qui ne reflète que le risque d'exploitation, et le bêta **endetté**, ou des capitaux propres, qui y ajoute le risque lié à la structure financière."
+      }
+    },
+    {
+      "external_key": "qa-q054",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q54",
+      "concepts": [
+        "beta"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le bêta de l'actif économique, et quand l'utilise-t-on ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparables",
+            "weight": 0.5
+          },
+          {
+            "text": "structure financière cible",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On désendette le bêta de chaque société cotée comparable : β désendetté = β endetté / [1 + (1 - IS) × D / CP]. On prend la moyenne ou la médiane de ces **comparables**. On le réendette ensuite avec la **structure financière cible** de la société à valoriser. On s'en sert quand la société n'est pas cotée ou que son propre bêta n'est pas fiable."
+      }
+    },
+    {
+      "external_key": "qa-q055",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q55",
+      "concepts": [
+        "cost-of-debt"
+      ],
+      "prompt_mdx": "Comment calcule-t-on le coût de la dette ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "rendement",
+            "weight": 0.3333
+          },
+          {
+            "text": "notation",
+            "weight": 0.3333
+          },
+          {
+            "text": "spread",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Si la société a des obligations cotées, on prend leur **rendement** actuariel. Sinon, on part de sa **notation** : taux sans risque de même maturité plus le **spread** correspondant. Sans notation, on construit une note synthétique à partir du levier ou du ratio de couverture des intérêts."
+      }
+    },
+    {
+      "external_key": "qa-q056",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q56",
+      "concepts": [
+        "capm"
+      ],
+      "prompt_mdx": "Quelle est la relation entre le niveau de levier et le coût des capitaux propres ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "augmente",
+            "weight": 0.5
+          },
+          {
+            "text": "bêta",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Toutes choses égales par ailleurs, plus le levier est élevé, plus le risque de défaut augmente et plus le coût des capitaux propres **augmente**. Techniquement, l'endettement fait monter le **bêta** des capitaux propres."
+      }
+    },
+    {
+      "external_key": "qa-q063",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q63",
+      "concepts": [
+        "cost-of-debt"
+      ],
+      "prompt_mdx": "Comment calcule-t-on la valeur de marché d'une dette ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "actualis",
+            "weight": 0.5
+          },
+          {
+            "text": "marge",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "En **actualisant** l'échéancier restant d'intérêts et de capital au taux qu'un investisseur exigerait aujourd'hui pour ce risque. Ce taux est le taux sans risque de même maturité, lu sur la courbe des taux, plus une **marge** de crédit correspondant à la notation de l'émetteur."
+      }
+    }
+  ]
+}

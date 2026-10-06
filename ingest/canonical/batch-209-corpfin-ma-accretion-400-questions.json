@@ -1,0 +1,395 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "ma-accretion",
+  "items": [
+    {
+      "external_key": "ibq400-mm-basic-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q1",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "Walk me through a basic merger model.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.25
+          },
+          {
+            "text": "income statement",
+            "weight": 0.25
+          },
+          {
+            "text": "interest",
+            "weight": 0.25
+          },
+          {
+            "text": "EPS",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "A merger model tests whether a deal raises or lowers the buyer's **EPS**. Start with the deal assumptions: **purchase price** and the mix of cash, stock and debt. Establish each company's valuation and share count and project an **Income Statement** for each. Combine them line by line, then adjust pre-tax income for **interest** lost on the cash used and interest paid on new debt. Apply the buyer's tax rate and divide combined net income by the new share count."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q4",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "Why would an acquisition be dilutive?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "net income",
+            "weight": 0.3333
+          },
+          {
+            "text": "interest",
+            "weight": 0.3333
+          },
+          {
+            "text": "shares",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "When the **net income** the target brings does not cover the costs of buying it: **interest** lost on cash, interest paid on new debt, and the extra **shares** issued. Deal-related charges such as amortisation of acquired intangibles can tip it too."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q5",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "Is there a rule of thumb for telling whether an acquisition will be accretive or dilutive?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "pre-tax income",
+            "weight": 0.5
+          },
+          {
+            "text": "all-stock",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "For a cash and debt deal, add the interest on the new debt and the interest lost on cash, and compare with the seller's **pre-tax income**. For an **all-stock** deal, compare P/E multiples. For a mix of all three there is no quick shortcut."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q6",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "A company with a higher P/E acquires one with a lower P/E. Is this accretive or dilutive?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "all-stock",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "You cannot tell without knowing whether it is an **all-stock** deal. With cash or debt financing no shares are issued, so the P/E comparison says nothing. Buying earnings cheaply tends to help, but the rule only holds for stock deals."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Merger Model Basic, Q7",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "What is the rule of thumb for assessing whether an M&A deal will be accretive or dilutive?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "all-stock",
+            "weight": 0.5
+          },
+          {
+            "text": "higher P/E",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "In an **all-stock** deal: accretive if the buyer has a **higher P/E** than the seller, dilutive if lower. Paying more for earnings than the market pays for your own tends to dilute."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q8",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "What are the complete effects of an acquisition?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "foregone interest",
+            "weight": 0.25
+          },
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "shares",
+            "weight": 0.25
+          },
+          {
+            "text": "goodwill",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**Foregone interest** on cash used. Additional interest on **debt** raised. Additional **shares** if stock is issued. Combination of the two sets of financial statements. Creation of **Goodwill** and other intangibles, reflecting the premium over fair value."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q9",
+      "concepts": [
+        "deal-financing"
+      ],
+      "prompt_mdx": "If a company could pay 100% in cash for another company, why might it choose not to?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cushion",
+            "weight": 0.5
+          },
+          {
+            "text": "stock",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It may want to keep cash for other uses or as a **cushion** against a downturn. Or its **stock** may be trading at a high and it prefers to use that currency, even though equity is in theory the more expensive option."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q017",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q17",
+      "concepts": [
+        "deal-financing"
+      ],
+      "prompt_mdx": "All else being equal, which would a company prefer to use to acquire another: cash, stock or debt?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash",
+            "weight": 0.3333
+          },
+          {
+            "text": "cheaper",
+            "weight": 0.3333
+          },
+          {
+            "text": "stock",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Cash**, if resources were unlimited. It is **cheaper** than debt, since interest earned on cash is lower than interest paid on debt, and it carries no funding risk. **Stock** is generally the most expensive, just as cost of equity exceeds cost of debt, and it exposes the deal to share price moves after announcement."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q018",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q18",
+      "concepts": [
+        "deal-financing"
+      ],
+      "prompt_mdx": "How much debt could a company issue in a merger or acquisition?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Debt/EBITDA",
+            "weight": 0.5
+          },
+          {
+            "text": "comparable",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Look at **comparable** companies and precedent transactions: take their median **Debt/EBITDA** ratio and apply it to the combined company's LTM EBITDA. Debt comps in the same industry also show which instruments and how many tranches the market accepts."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q021",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q21",
+      "concepts": [
+        "deal-financing"
+      ],
+      "prompt_mdx": "A buyer pays 100 million USD for a seller in an all-stock deal. A day later the market decides the seller is only worth 50 million. What happens?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "share price",
+            "weight": 0.5
+          },
+          {
+            "text": "50 million",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "The buyer's **share price** falls by the per-share equivalent of the **50 million** loss in value, which does not mean it halves. Depending on the deal terms, the seller ends up with much less than negotiated. This is the main risk of stock deals."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q023",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q23",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "What role does a merger model play in deal negotiations?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "sanity check",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "It is a **sanity check** and a way to test assumptions. It can show a deal is worth exploring, but nobody decides on its output alone. Personalities and negotiation dynamics weigh more than the numbers."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-basic-q024",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Basic, Q24",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "What sensitivities would you look at in a merger model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.3333
+          },
+          {
+            "text": "synergies",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "The main variables are **purchase price**, the mix of stock, **cash** and debt, revenue **synergies** and cost synergies. Typical tables show EPS accretion or dilution for purchase price against cost synergies, against revenue synergies, or against the cash percentage. Operating variables are usually handled as scenarios."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Merger Model Advanced, Q12",
+      "concepts": [
+        "exchange-ratio"
+      ],
+      "prompt_mdx": "What is an exchange ratio and when would companies use it in an M&A deal?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "shares",
+            "weight": 0.5
+          },
+          {
+            "text": "fixed",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A way to structure the stock part of a deal: the seller receives a set number of the buyer's **shares** per share, for example 1.5, instead of shares worth a **fixed** amount. A buyer expecting its share price to fall prefers a ratio. A seller prefers a fixed value unless it expects the buyer's shares to rise."
+      }
+    },
+    {
+      "external_key": "ibq400-mm-adv-q018",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Merger Model Advanced, Q18",
+      "concepts": [
+        "dilution"
+      ],
+      "prompt_mdx": "How do you handle options, convertible debt and other dilutive securities in a merger model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase agreement",
+            "weight": 0.3333
+          },
+          {
+            "text": "treasury stock method",
+            "weight": 0.3333
+          },
+          {
+            "text": "conver",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It depends on the **Purchase Agreement**: the buyer may assume them, or cash them out if the offer price is above their exercise prices. If treated as exercised, dilution is computed as usual: **Treasury Stock Method** for options, **conversion** at the conversion price for convertibles."
+      }
+    }
+  ]
+}

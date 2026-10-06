@@ -1,0 +1,101 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "fm-working-capital",
+  "items": [
+    {
+      "external_key": "bible-p3-gen-q007",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q7",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "Qu'est-ce que le Working Capital / Besoin en Fonds de Roulement ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "créances clients",
+            "weight": 0.3333
+          },
+          {
+            "text": "stocks",
+            "weight": 0.3333
+          },
+          {
+            "text": "dettes fournisseurs",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "BFR = **créances clients** + **stocks** - **dettes fournisseurs**. C'est le montant que l'entreprise doit financer du fait des décalages entre encaissements et décaissements de son cycle d'exploitation."
+      }
+    },
+    {
+      "external_key": "bible-p3-gen-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Finance d'entreprise, Q8",
+      "concepts": [
+        "working-capital"
+      ],
+      "prompt_mdx": "Comment s'interprète un Working Capital positif et un Working Capital négatif ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "négatif",
+            "weight": 0.25
+          },
+          {
+            "text": "grande distribution",
+            "weight": 0.25
+          },
+          {
+            "text": "positif",
+            "weight": 0.25
+          },
+          {
+            "text": "financement",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Un BFR **négatif** est le plus souvent un bon signe : l'entreprise encaisse ses clients avant de payer ses fournisseurs. C'est le cas de la **grande distribution**, payée comptant en caisse et qui règle ses fournisseurs à 30 jours ou plus. Un BFR **positif** signifie que les encaissements arrivent trop tard pour couvrir les fournisseurs, d'où un besoin de **financement** externe. Exemple : un grossiste qui paie à 30 jours et encaisse à 60 jours."
+      }
+    },
+    {
+      "external_key": "bible-p4-fin-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Analyse financière, Q4",
+      "concepts": [
+        "bankruptcy"
+      ],
+      "prompt_mdx": "Comment une entreprise peut-elle faire faillite du jour au lendemain alors qu'elle affichait un EBITDA positif sur les 5 dernières années ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "CAPEX",
+            "weight": 0.3333
+          },
+          {
+            "text": "inattendu",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "L'EBITDA ne dit rien du financier, de l'exceptionnel ni de la gestion du cash. L'entreprise peut ne pas faire face à sa **dette**, avoir des **CAPEX** trop lourds qui rendent le cash-flow négatif, ou subir un événement **inattendu** de grande ampleur, comme une amende."
+      }
+    }
+  ]
+}

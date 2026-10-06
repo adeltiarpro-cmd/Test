@@ -1,4 +1,4 @@
-import { createServerClient } from "@supabase/ssr";
+import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
@@ -12,7 +12,7 @@ export async function middleware(request: NextRequest) {
         getAll() {
           return request.cookies.getAll();
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: { name: string; value: string; options: CookieOptions }[]) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
           );
@@ -26,7 +26,28 @@ export async function middleware(request: NextRequest) {
   );
 
   // Refresh session — required for Server Components to read auth state
-  await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  // Zone admin (STEP-11) : un compte non-admin reçoit un vrai 403, pas un lien caché
+  if (request.nextUrl.pathname.startsWith("/admin")) {
+    let isAdmin = false;
+    if (user) {
+      const { data } = await supabase
+        .from("profiles")
+        .select("is_admin")
+        .eq("id", user.id)
+        .maybeSingle();
+      isAdmin = data?.is_admin === true;
+    }
+    if (!isAdmin) {
+      return new NextResponse("403 : accès réservé à l'administrateur.", {
+        status: 403,
+        headers: { "content-type": "text/plain; charset=utf-8" },
+      });
+    }
+  }
 
   return supabaseResponse;
 }

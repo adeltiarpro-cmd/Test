@@ -1,0 +1,295 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "val-dcf",
+  "items": [
+    {
+      "external_key": "bible-p3-eval-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q2",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Présentez-moi le modèle DCF.",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "business plan",
+            "weight": 0.25
+          },
+          {
+            "text": "WACC",
+            "weight": 0.25
+          },
+          {
+            "text": "actualis",
+            "weight": 0.25
+          },
+          {
+            "text": "terminal",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Le DCF est une méthode intrinsèque : l'entreprise vaut la valeur actuelle des flux qu'elle générera. 1. Construire un **business plan** sur 5 à 10 ans et calculer les flux : FCFF = EBIT × (1 - impôt) + amortissements - variation du BFR - CAPEX. Le FCFE s'en déduit en retirant les intérêts et en ajoutant les flux nets de dette et de capital. 2. Calculer le **WACC** et le coût des fonds propres (taux sans risque + bêta × prime de risque). 3. **Actualiser** les flux. 4. Calculer la valeur **terminale**, par Gordon-Shapiro ou multiple de sortie, et l'actualiser. 5. Additionner, et présenter une fourchette plutôt qu'un chiffre unique."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q3",
+      "concepts": [
+        "discount-rate"
+      ],
+      "prompt_mdx": "Avec quel taux faut-il actualiser les FCFF ? Et les FCFE ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "WACC",
+            "weight": 0.5
+          },
+          {
+            "text": "cost of equity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les FCFF au **WACC** : ils rémunèrent tous les investisseurs, fonds propres et dette. Les FCFE au **Cost of Equity** : ils ne rémunèrent que les actionnaires."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q4",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Pour quel type d'entreprise utilise-t-on une valorisation par DCF ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stables",
+            "weight": 0.3333
+          },
+          {
+            "text": "prévisibles",
+            "weight": 0.3333
+          },
+          {
+            "text": "matur",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Pour des entreprises aux cash-flows **stables** et **prévisibles**, donc ayant atteint une certaine **maturité**. Elle convient mal aux jeunes entreprises dont les flux varient fortement d'une année à l'autre."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q5",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Quelles sont les limites du modèle DCF ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "hypothèses",
+            "weight": 0.5
+          },
+          {
+            "text": "terminale",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Son imprécision : personne ne peut prévoir avec certitude l'activité à 5 ou 10 ans, donc tout repose sur des **hypothèses**. Le problème est encore plus marqué pour la valeur **terminale**, que certains industriels excluent même de leurs calculs."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q005",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q5",
+      "concepts": [
+        "fcff"
+      ],
+      "prompt_mdx": "Pourquoi prendre l'EBIT comme base de calcul de l'impôt dans le FCFF ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "tous les investisseurs",
+            "weight": 0.3333
+          },
+          {
+            "text": "intérêts",
+            "weight": 0.3333
+          },
+          {
+            "text": "EBITDA",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le FCFF rémunère **tous les investisseurs**. L'EBIT est le dernier agrégat du compte de résultat avant le paiement des **intérêts**, donc le dernier à leur revenir à tous. On le préfère à l'**EBITDA** parce que les amortissements sont déductibles : appliquer l'impôt à l'EBIT les traite correctement."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q6",
+      "concepts": [
+        "fcff"
+      ],
+      "prompt_mdx": "Pourquoi les variations de Working Capital sont-elles retirées dans la formule du FCFF ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "besoin de financement",
+            "weight": 0.5
+          },
+          {
+            "text": "disponible",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Elles représentent le **besoin de financement** né de l'activité courante. Pour mesurer le cash réellement **disponible** pour les investisseurs, il faut retirer ce besoin."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q11",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Comment savoir si votre DCF repose trop sur les hypothèses futures ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "terminal value",
+            "weight": 0.3333
+          },
+          {
+            "text": "50 %",
+            "weight": 0.3333
+          },
+          {
+            "text": "75 %",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "En théorie, quand au moins **50 %** de la valeur vient de la **Terminal Value**. En pratique c'est presque toujours le cas. On retient donc plutôt le seuil de **75 %**."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q15",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Qu'est-ce qui a le plus d'impact sur un DCF : une hausse des revenus de 1 % ou une hausse du taux d'actualisation de 1 % ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "taux d'actualisation",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "En général la hausse du **taux d'actualisation**. En pratique cela dépend du niveau des revenus et du taux, mais le taux l'emporte le plus souvent."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q016",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q16",
+      "concepts": [
+        "ddm"
+      ],
+      "prompt_mdx": "Présentez-moi le modèle DDM (Dividend Discount Model).",
+      "payload": {
+        "max_words": 200
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dividendes",
+            "weight": 0.25
+          },
+          {
+            "text": "pay-out",
+            "weight": 0.25
+          },
+          {
+            "text": "cost of equity",
+            "weight": 0.25
+          },
+          {
+            "text": "terminal",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Même logique que le DCF, appliquée aux **dividendes**. 1. Business plan sur 5 à 10 ans : calcul du bénéfice par action, puis des dividendes par un **pay-out** ratio fondé sur l'historique. 2. Calcul du **Cost of Equity** : taux sans risque + bêta × prime de risque. 3. Actualisation des dividendes à ce taux, et à ce taux seulement. 4. Valeur **terminale** = dividende attendu / (Cost of Equity - croissance à perpétuité), actualisée. 5. Somme des deux, présentée en fourchette."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q018",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q18",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "Quel taux de croissance à l'infini retenir dans un DCF ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "PIB",
+            "weight": 0.3333
+          },
+          {
+            "text": "volumes",
+            "weight": 0.3333
+          },
+          {
+            "text": "prix",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "De préférence le taux de croissance du **PIB** : il capte à la fois la hausse des **volumes** et celle des **prix**, alors que l'inflation ne capte que les prix."
+      }
+    }
+  ]
+}

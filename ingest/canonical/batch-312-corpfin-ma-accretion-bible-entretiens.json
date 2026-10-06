@@ -1,0 +1,131 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "ma-accretion",
+  "items": [
+    {
+      "external_key": "bible-p4-corp-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q1",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "Quel est l'impact d'une acquisition sur les états financiers de l'acheteur ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "earnings per share",
+            "weight": 0.3333
+          },
+          {
+            "text": "structure capitalistique",
+            "weight": 0.3333
+          },
+          {
+            "text": "actionnariat",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Trois effets : une variation de son **Earnings Per Share**, une modification de sa **structure capitalistique** et une modification de son **actionnariat**."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q004",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q4",
+      "concepts": [
+        "deal-financing"
+      ],
+      "prompt_mdx": "Vaut-il mieux financer une acquisition par fonds propres externes ou par dette supplémentaire ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "moins cher",
+            "weight": 0.25
+          },
+          {
+            "text": "déductibles",
+            "weight": 0.25
+          },
+          {
+            "text": "dilution",
+            "weight": 0.25
+          },
+          {
+            "text": "rating",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Il faut une réponse nuancée. Dette : elle coûte **moins cher** que les fonds propres, les intérêts sont **déductibles** et il n'y a pas de **dilution** ni de perte de contrôle. Mais elle peut dégrader le credit **rating**, alourdir le bilan et exiger des garanties. Fonds propres : ni principal ni intérêts à rembourser, capacité d'endettement préservée. Mais dilution, baisse du bénéfice par action et processus plus long."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q6",
+      "concepts": [
+        "accretion-dilution"
+      ],
+      "prompt_mdx": "Illustrez la dilution / relution : A a 10 actions pour un résultat net de 10 €, B a 10 actions pour un résultat net de 5 €. A rachète B pour former C.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "0,75",
+            "weight": 0.3333
+          },
+          {
+            "text": "dilutive",
+            "weight": 0.3333
+          },
+          {
+            "text": "relutive",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "BPA de A : 1 €. BPA de B : 0,50 €. C compte 20 actions pour 15 € de résultat, soit un BPA de **0,75** €. L'opération est **dilutive** pour A, dont le BPA baisse de 1 € à 0,75 €, et **relutive** pour B, dont le BPA monte de 0,50 € à 0,75 €."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q8",
+      "concepts": [
+        "convertibles"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'une obligation convertible ? Illustrez avec une obligation de 5 000 € convertible en 50 actions.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "actions",
+            "weight": 0.3333
+          },
+          {
+            "text": "cours de conversion",
+            "weight": 0.3333
+          },
+          {
+            "text": "100",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Une obligation que son porteur peut échanger contre des **actions** de l'émetteur, à un **cours de conversion** fixé à l'émission. Ici 5 000 / 50 = **100** € : le porteur a intérêt à convertir dès que l'action dépasse 100 €."
+      }
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "val-enterprise-value",
+  "items": [
+    {
+      "external_key": "bible-p3-eval-q012",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q12",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Qu'est-ce que l'Enterprise Value ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.25
+          },
+          {
+            "text": "preferred",
+            "weight": 0.25
+          },
+          {
+            "text": "minoritaires",
+            "weight": 0.25
+          },
+          {
+            "text": "cash",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "La valeur totale de l'entreprise : Enterprise Value = **dette** + Equity Value + **Preferred** Stock + intérêts **minoritaires** - **cash**."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q013",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q13",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Qu'est-ce que les minority interests ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "50 %",
+            "weight": 0.5
+          },
+          {
+            "text": "mère",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La part du capital d'une filiale qui n'est pas détenue par la société **mère**, soit moins de **50 %**. À l'inverse, la part de la mère, supérieure à 50 %, lui donne le contrôle tout en partageant le risque avec les minoritaires."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q014",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q14",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Qu'est-ce que les Preferred Stocks ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dividende",
+            "weight": 0.3333
+          },
+          {
+            "text": "prioritaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "droit de vote",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Des actions de préférence : elles donnent droit à un **dividende** fixe et leurs porteurs sont **prioritaires** sur les actionnaires ordinaires pour les dividendes comme en cas de liquidation. En contrepartie, elles n'ont en général pas de **droit de vote**."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q015",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q15",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi faut-il ajouter la dette dans le calcul de l'Enterprise Value ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "refinancée",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Parce que lorsqu'une entreprise est rachetée, sa dette doit être **refinancée** : l'acquéreur la supporte, elle fait donc partie du coût réel."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q016",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q16",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi faut-il ajouter les Preferred Stocks dans le calcul de l'Enterprise Value ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "avant",
+            "weight": 0.5
+          },
+          {
+            "text": "dette",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Parce que leurs porteurs sont servis **avant** les actionnaires ordinaires : elles s'apparentent presque à de la **dette**."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q017",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q17",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi faut-il ajouter les intérêts minoritaires dans le calcul de l'Enterprise Value ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "100 %",
+            "weight": 0.3333
+          },
+          {
+            "text": "numérateur",
+            "weight": 0.3333
+          },
+          {
+            "text": "dénominateur",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Quand la mère détient plus de 50 % d'une filiale, elle consolide **100 %** de ses résultats. L'EBIT et l'EBITDA incluent donc la part des minoritaires. Pour que **numérateur** et **dénominateur** des multiples soient sur la même base, il faut l'inclure aussi dans la valeur d'entreprise."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q018",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q18",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Pourquoi faut-il retirer le cash dans le calcul de l'Enterprise Value ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non opérationnel",
+            "weight": 0.5
+          },
+          {
+            "text": "acheteur",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le cash est un actif **non opérationnel**, déjà pris en compte dans l'Equity Value. Lors d'une acquisition il reste dans la société et revient à l'**acheteur**, ce qui réduit ce qu'il débourse réellement."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q019",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q19",
+      "concepts": [
+        "equity-value"
+      ],
+      "prompt_mdx": "Qu'est-ce que l'Equity Value ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "fonds propres",
+            "weight": 0.3333
+          },
+          {
+            "text": "capitalisation",
+            "weight": 0.3333
+          },
+          {
+            "text": "bridge",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "La valeur des **fonds propres**. Deux façons de l'obtenir : la **capitalisation** boursière (cours × nombre d'actions dilué), ou le **bridge** depuis la valeur d'entreprise."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q020",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q20",
+      "concepts": [
+        "ev-bridge"
+      ],
+      "prompt_mdx": "Qu'est-ce que le bridge Enterprise Value - Equity Value ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "dette",
+            "weight": 0.3333
+          },
+          {
+            "text": "minoritaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Le passage de l'une à l'autre : Equity Value = Enterprise Value - **dette** - Preferred Stock - intérêts **minoritaires** + **cash** et équivalents."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q2",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Comment l'Enterprise Value peut-elle devenir négative ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash",
+            "weight": 0.5
+          },
+          {
+            "text": "equity value",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Quand l'entreprise détient trop de **cash**, quand son **Equity Value** est très faible, ou quand les deux se cumulent."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q3",
+      "concepts": [
+        "equity-value"
+      ],
+      "prompt_mdx": "Comment l'Equity Value peut-elle devenir négative ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "ne peut pas",
+            "weight": 0.5
+          },
+          {
+            "text": "actions",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Elle **ne peut pas** : ni le nombre d'**actions** ni leur prix ne peuvent être négatifs."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q7",
+      "concepts": [
+        "equity-value"
+      ],
+      "prompt_mdx": "Quelle différence entre l'Equity Value et les Shareholders' Equity ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "marché",
+            "weight": 0.5
+          },
+          {
+            "text": "comptable",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "L'Equity Value est la valeur de **marché** des fonds propres, soit la capitalisation boursière. Les Shareholders' Equity en sont la valeur **comptable**."
+      }
+    }
+  ]
+}

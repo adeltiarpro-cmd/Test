@@ -1,0 +1,108 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "fm-projections",
+  "items": [
+    {
+      "external_key": "bible-p6-case-q001",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q1",
+      "concepts": [
+        "business-plan"
+      ],
+      "prompt_mdx": "Parc éolien : chiffre d'affaires 2020 de 10 M€ (+7 % par an), maintenance 4 M€ (+10 % par an), loyer 500 k€ (+3 % par an), 50 employés à 3 000 € par mois (+1 % par an), autres charges 2 M€ fixes, CAPEX 15 M€ engagés en 2019 et amortis sur 10 ans, financement 100 % fonds propres, impôt 30 %, pas de BFR, WACC 5 %. Construisez le business plan sur 10 ans, du chiffre d'affaires au résultat net. Quels sont l'EBITDA et le résultat net de 2020 ?",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "1,7",
+            "weight": 0.3333
+          },
+          {
+            "text": "0,14",
+            "weight": 0.3333
+          },
+          {
+            "text": "1,5",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Salaires 2020 : 50 × 3 000 × 12 = 1,8 M€. Amortissement : 15 / 10 = **1,5** M€ par an. EBITDA 2020 = 10 - 4 - 0,5 - 1,8 - 2 = **1,7** M€. EBIT = 0,2 M€. Pas de charges financières, donc résultat avant impôt = EBIT. Impôt 30 % = 0,06, résultat net = **0,14** M€. On projette ensuite chaque ligne avec son taux de croissance jusqu'en 2029, en ne calculant l'impôt que si le résultat avant impôt est positif. L'EBITDA atteint environ 4,3 M€ en 2029. Bonnes pratiques : hypothèses séparées des calculs, code couleur (bleu en dur, noir calculé, vert pour les liens), charges saisies en négatif."
+      }
+    },
+    {
+      "external_key": "bible-p6-case-q002",
+      "type": "numeric",
+      "difficulty": 5,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q2",
+      "concepts": [
+        "npv"
+      ],
+      "prompt_mdx": "Parc éolien : chiffre d'affaires 2020 de 10 M€ (+7 % par an), maintenance 4 M€ (+10 % par an), loyer 500 k€ (+3 % par an), 50 employés à 3 000 € par mois (+1 % par an), autres charges 2 M€ fixes, CAPEX 15 M€ engagés en 2019 et amortis sur 10 ans, financement 100 % fonds propres, impôt 30 %, pas de BFR, WACC 5 %. Calculez la Net Present Value du projet sur la base du Free Cash-Flow to Firm, sur 2020-2029 (en M€).",
+      "payload": {
+        "unit": "M€",
+        "precision": 1,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.15
+        }
+      },
+      "solution": {
+        "value": 3.97,
+        "steps_mdx": "FCFF = EBIT × (1 - 30 %) + amortissement, sans BFR ni nouveau CAPEX. Il passe d'environ 1,64 M€ en 2020 à 3,48 M€ en 2029. Actualisés à 5 % et diminués des 15 M€ investis en 2019, ces flux donnent une VAN d'environ 4,0 M€. La VAN cumulée devient positive en 2028 : c'est la date de Discounted Payback, conforme au document.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "bible-p6-case-q003",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q3",
+      "concepts": [
+        "sensitivity"
+      ],
+      "prompt_mdx": "Toujours sur ce parc éolien : comment construire une table de sensibilité de la Discounted Payback pour une croissance du chiffre d'affaires de 3 % à 8 % et un WACC de 3 % à 8 % ? Quel résultat obtient-on à 8 % de croissance et 7 % de WACC ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "table de données",
+            "weight": 0.5
+          },
+          {
+            "text": "2027",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On dispose les hypothèses de croissance en ligne et de WACC en colonne, on place dans le coin la cellule qui calcule la date de payback, puis on utilise l'outil **Table de données** d'Excel en pointant vers les deux cellules d'hypothèses. Contrôle : la case 7 % de croissance et 5 % de WACC doit redonner 2028. À 8 % de croissance et 7 % de WACC, le payback tombe en **2027**."
+      }
+    },
+    {
+      "external_key": "bible-p6-case-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, VI Business case parc éolien, Q4",
+      "concepts": [
+        "sensitivity"
+      ],
+      "prompt_mdx": "Que signifient les valeurs égales à 0 dans cette table de sensibilité ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "négative",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Ce sont les combinaisons où le projet ne récupère jamais sa mise sur l'horizon : la VAN reste **négative**, donc il n'y a pas de date de payback. C'est le cas par exemple à 3 % de croissance et 4 % de WACC."
+      }
+    }
+  ]
+}

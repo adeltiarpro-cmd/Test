@@ -40,6 +40,8 @@ export type SessionExercise = {
 interface ExerciseRunnerProps {
   exercise: SessionExercise;
   onNext: () => void;
+  /** Aperçu admin : l'exercice s'affiche, mais rien n'est envoyé ni enregistré. */
+  preview?: boolean;
 }
 
 const DIFFICULTY_LABELS: Record<number, string> = {
@@ -74,7 +76,7 @@ const GRID_TYPES = new Set(["excel_model", "statement_interactive"]);
 const CASE_TYPES = new Set(["case_structuring", "market_sizing"]);
 const PERSISTENT_TYPES = new Set([...GRID_TYPES, ...CASE_TYPES]);
 
-export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
+export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRunnerProps) {
   const [result, setResult] = useState<AttemptResult | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const startRef = useRef(Date.now());
@@ -87,7 +89,7 @@ export function ExerciseRunner({ exercise, onNext }: ExerciseRunnerProps) {
   const isGrid = GRID_TYPES.has(exercise.type);
 
   async function handleSubmit(answer: Record<string, unknown>) {
-    if (isSubmitting || result) return;
+    if (preview || isSubmitting || result) return;
     setIsSubmitting(true);
     try {
       const res = await submitAttempt(

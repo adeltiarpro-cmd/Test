@@ -1,0 +1,513 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "cs-debt",
+  "items": [
+    {
+      "external_key": "ibq400-lbo-basic-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q12",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "How would you determine how much debt can be raised in an LBO and how many tranches there would be?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable LBOs",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "From **comparable LBOs**: the terms and tranches used by companies of similar size in the same industry."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q013",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, LBO Model Basic, Q13",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "What are reasonable leverage and coverage ratios when analysing how much debt a company can take on?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt comps",
+            "weight": 0.5
+          },
+          {
+            "text": "industry",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It depends entirely on the company and its **industry**. You look at **debt comps** showing the types, tranches and terms that similar companies have used. As a sanity bound, even at the peak of the cycle leverage rarely went above 5 to 10x EBITDA."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q14",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "What is the difference between bank debt and high-yield debt?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "floating",
+            "weight": 0.2
+          },
+          {
+            "text": "fixed",
+            "weight": 0.2
+          },
+          {
+            "text": "maintenance",
+            "weight": 0.2
+          },
+          {
+            "text": "incurrence",
+            "weight": 0.2
+          },
+          {
+            "text": "bullet",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "High-yield carries higher rates. Its rate is **fixed**, while bank debt is **floating**. Bank debt has **maintenance** covenants (a ratio to respect at all times), high-yield has **incurrence** covenants (things you may not do). Bank debt amortises, high-yield is repaid in one **bullet** at maturity. A sizeable LBO usually uses both."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q15",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why might you use bank debt rather than high-yield debt in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "lower",
+            "weight": 0.5
+          },
+          {
+            "text": "incurrence",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "If the concern is meeting interest payments and a **lower** cost is wanted, or if major expansion or capex is planned and **incurrence** covenants would get in the way."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q016",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q16",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why would a PE firm prefer high-yield debt instead?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "refinance",
+            "weight": 0.5
+          },
+          {
+            "text": "sensitive",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "If it plans to **refinance** later, if returns are not very **sensitive** to interest cost, or if no major expansion or asset sale is planned that incurrence covenants would block."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q019",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q19",
+      "concepts": [
+        "tax-shield"
+      ],
+      "prompt_mdx": "What is meant by the tax shield in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "tax-deductible",
+            "weight": 0.5
+          },
+          {
+            "text": "cash flow",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Interest on the LBO debt is **tax-deductible**, which lowers tax and supports **cash flow**. Cash flow is still below that of a debt-free company, since the interest itself costs more than the tax it saves."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q020",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q20",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "What is a dividend recapitalization?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.5
+          },
+          {
+            "text": "dividend",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "The company raises new **debt** for the sole purpose of paying a special **dividend** to the fund that owns it."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q021",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q21",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "Why would a PE firm do a dividend recap of one of its portfolio companies?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "returns",
+            "weight": 0.5
+          },
+          {
+            "text": "equity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To boost **returns**: it recovers part of its **equity** investment early, and a smaller net investment makes a given gain a higher return."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q022",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q22",
+      "concepts": [
+        "dividend-recap"
+      ],
+      "prompt_mdx": "How would a dividend recap affect the 3 financial statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no change",
+            "weight": 0.25
+          },
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "equity",
+            "weight": 0.25
+          },
+          {
+            "text": "financing",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Income Statement: **no change**. Balance Sheet: **debt** up and shareholders' **equity** down by the same amount. Cash Flow Statement: within **financing**, the debt raised offsets the dividend paid, so the net change in cash is zero."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q001",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q1",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Describe the different kinds of debt you could use in an LBO and how they differ.",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revolver",
+            "weight": 0.2
+          },
+          {
+            "text": "term loan",
+            "weight": 0.2
+          },
+          {
+            "text": "senior notes",
+            "weight": 0.2
+          },
+          {
+            "text": "subordinated",
+            "weight": 0.2
+          },
+          {
+            "text": "mezzanine",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "In rising order of cost and falling order of seniority. **Revolver**: lowest rate, floating, 3-5 years, no amortisation, senior secured, maintenance covenants. **Term Loan** A: floating, 4-6 years, straight-line amortisation, held by banks. Term Loan B: slightly higher rate, 4-8 years, minimal amortisation, prepayable. **Senior Notes**: fixed rate, 7-10 years, bullet, unsecured, incurrence covenants, call protection. **Subordinated** Notes: higher fixed rate, 8-10 years, bullet. **Mezzanine**: highest rate, cash or PIK interest, 8-12 years, bullet, ranking just above equity."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q004",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q4",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why might a PE firm allot some of the new equity to a management option pool, and how does it affect the model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "incentiv",
+            "weight": 0.5
+          },
+          {
+            "text": "treasury stock method",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To **incentivise** management and keep it on board until exit, like an earnout but without a cap. In the model you compute a per-share price at exit and the proceeds going to management with the **Treasury Stock Method**. The pool lowers the sponsor's return on paper, offset by better expected performance."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q005",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q5",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Why would you use PIK debt rather than other types of debt, and how does it affect the debt schedules and statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "accrues",
+            "weight": 0.3333
+          },
+          {
+            "text": "principal",
+            "weight": 0.3333
+          },
+          {
+            "text": "non-cash",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "PIK interest is not paid in cash: it **accrues** to the **principal**, which grows over time. It preserves cash but is riskier and costs more than bank or high-yield debt. In the schedules it behaves like bullet debt with interest added to the balance. The interest is expensed on the Income Statement and added back on the Cash Flow Statement as a **non-cash** item."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q006",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, LBO Model Advanced, Q6",
+      "concepts": [
+        "covenants"
+      ],
+      "prompt_mdx": "Give examples of incurrence covenants and of maintenance covenants.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "acquisitions",
+            "weight": 0.25
+          },
+          {
+            "text": "EBITDA",
+            "weight": 0.25
+          },
+          {
+            "text": "interest",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Incurrence: no more than a set amount of total **debt**, asset sale proceeds earmarked for repayment, no **acquisitions** above a size limit, a cap on annual capex. Maintenance: total debt / **EBITDA** below 3.0x, senior debt / EBITDA below 2.0x, EBITDA / **interest** expense above 5.0x, EBITDA / cash interest above 3.0x, (EBITDA - capex) / interest above 2.0x."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q008",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q8",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "Walk me through how you calculate optional repayments on debt in an LBO model.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revolver",
+            "weight": 0.3333
+          },
+          {
+            "text": "term loan",
+            "weight": 0.3333
+          },
+          {
+            "text": "mandatory",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Only **Revolvers** and Term Loans can be prepaid. Start from cash available: opening cash, less minimum cash, plus cash flow available for debt repayment, less **mandatory** repayments. Repay the Revolver first, then **Term Loan** A with what is left, then Term Loan B, never exceeding each balance after its mandatory repayment."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q009",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q9",
+      "concepts": [
+        "revolver"
+      ],
+      "prompt_mdx": "Explain how a Revolver is used in an LBO model.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mandatory",
+            "weight": 0.3333
+          },
+          {
+            "text": "MAX",
+            "weight": 0.3333
+          },
+          {
+            "text": "undrawn",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It covers a shortfall when **mandatory** repayments exceed available cash flow: Revolver borrowing = **MAX**(0, total mandatory repayment - cash flow available to repay debt). It starts **undrawn**, and any amount drawn is repaid first from later excess cash flow, before the term loans."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q010",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q10",
+      "concepts": [
+        "lbo-debt"
+      ],
+      "prompt_mdx": "How would you adjust the Income Statement in an LBO model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cost savings",
+            "weight": 0.2
+          },
+          {
+            "text": "depreciation",
+            "weight": 0.2
+          },
+          {
+            "text": "amortization",
+            "weight": 0.2
+          },
+          {
+            "text": "interest",
+            "weight": 0.2
+          },
+          {
+            "text": "management fees",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "**Cost savings** assumed by the sponsor. New **depreciation** from PP&E write-ups. New **amortization** from written-up intangibles and capitalised financing fees. **Interest** on the LBO debt, cash and PIK. Sponsor **management fees**. And below net income, any common dividend or preferred dividend."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q017",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q17",
+      "concepts": [
+        "cost-of-debt"
+      ],
+      "prompt_mdx": "How do you measure the cost of debt for a company too distressed to issue new debt?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.3333
+          },
+          {
+            "text": "yield",
+            "weight": 0.3333
+          },
+          {
+            "text": "credit default swap",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "From the bond **yields** or **credit default swap** spreads of **comparable** companies. Or from the current yield on the company's own existing debt, if it trades enough to be meaningful."
+      }
+    }
+  ]
+}

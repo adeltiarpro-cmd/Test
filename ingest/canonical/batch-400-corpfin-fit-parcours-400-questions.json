@@ -1,0 +1,425 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fit-parcours",
+  "items": [
+    {
+      "external_key": "ibq400-fit-analytical-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q1",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "I see you've done mostly journalism and research internships before. Can you discuss your quantitative skills?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Pick two or three precise moments where you worked with numbers or logic: a personal portfolio, a maths or science class, a budget you ran, research with data. Say what you computed and what decision came out of it. A claim without a concrete case does not count.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q2",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "In your last internship, you analyzed portfolios and recommended investments to clients. Can you walk me through your thought process for analyzing the returns of a client portfolio?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Break it into numbered steps and stay specific: collect purchase dates and amounts, collect sale dates and proceeds, then aggregate per holding over the period to get a compound return. The interviewer checks that you can explain a process cleanly.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q3",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "Can you tell me about the process you used to analyze space requirements for the building designs you worked on this past summer?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Same logic: steps in order. First estimates, then how you refined them, under which budget constraint and with whom on the team. Show that the numbers became more precise as you went.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q4",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "You've been working as a lawyer for the past 3 years, what initiative have you taken on your own to learn more about finance?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Name what you actually did: courses, a certification such as the CFA, self-study of accounting and valuation, a portfolio you manage, deals you followed from the legal side. Initiative means things you chose to do outside the job.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q5",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "You were an English major, how do you know you can handle the quantitative rigor required in investment banking?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give evidence instead of reassurance: quantitative classes and grades, test scores, any work with figures, finance self-study. Add that banking needs arithmetic and care with Excel more than advanced maths.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Analytical, Q6",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "Can you tell me about a time when you submitted a report or project with misspellings or grammatical mistakes?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "This tests attention to detail. Admit a real but minor slip, then spend most of the answer on what you changed afterwards: a checking routine, printing and rereading, asking a second reader. Claiming it never happened is not credible.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q7",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "What's the most number of classes you ever took at once and how well did you do in each of them?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "The real question is workload. Describe your heaviest term, what else you carried alongside (job, activities) and the results. If one grade was weaker, say why and what you did about it.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q8",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "How well can you multi-task?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Answer with one situation where several deadlines collided: what the tasks were, how you ranked them, what you delivered. Analysts juggle several projects at once, so the example carries the answer.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-analytical-q009",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Analytical, Q9",
+      "concepts": [
+        "fit-analytical"
+      ],
+      "prompt_mdx": "Have you ever worked on a project or report that was shown to a large number of people?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Choose something with real exposure: a publication, a client deliverable, a presentation to management. Explain how you checked it before it went out, because the point is how careful you are when errors are visible.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Background, Q1",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "Walk me through your resume.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Go in chronological order, start where your story begins (university for most), and make each step lead to the next and towards finance. Finish on why you are in this room today. Two to three minutes. Avoid listing jobs without links, long preambles, and any doubt about wanting banking.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q002",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Fit, Background, Q2",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "Why did you attend [Your University / Business School]? I'm sure you had many options. / Why did you transfer to [University Name]?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give positive, concrete reasons: programme, people, opportunities, location. For a transfer, explain what the new school offered that the first did not, without criticising the first.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q003",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Fit, Background, Q3",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "I noticed you studied abroad in [Location]. Can you tell me about that experience and why you went there?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say why that place, one thing you learned and one story worth telling. Tie it to adaptability or language rather than to holidays.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q004",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Fit, Background, Q4",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "Why did you major in [Your Major]?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Explain the real interest, then the skills it gave you that transfer to banking (analysis, writing, rigour). If it is not finance, say how you built the finance side yourself.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Background, Q5",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "Where else did you apply for school? Did you get in anywhere else?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Answer honestly and briefly, then come back to why your choice was the right one for you. Do not sound bitter about schools that said no.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Background, Q6",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "I see you wrote here that you're fluent in [Language]. Can you tell me about your most recent internship in [Language]?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "The interviewer will switch language to check the claim. Only write fluent if you can do this. Prepare your resume walk-through in every language listed.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q007",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Fit, Background, Q7",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "What do you do for fun?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Be honest and specific: one or two real interests, with a detail that makes them memorable. It is a likeability test, so anything genuine beats something meant to impress.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q008",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Fit, Background, Q8",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "What was your favorite class in college / business school?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Name one class and say why. It does not need to be finance, but a second sentence linking it to how you think or work helps.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q009",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Fit, Background, Q9",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "What are your favorite movies / books?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give titles you can actually discuss. Avoid the obvious finance titles that every candidate cites, and avoid anything that makes you sound as if you do not read.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-background-q010",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Background, Q10",
+      "concepts": [
+        "fit-resume"
+      ],
+      "prompt_mdx": "Tell me something interesting about you that's not listed on your resume.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Prepare one fact or story in advance: an unusual hobby, a trip, a project. The goal is to be remembered after a day of similar candidates.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    }
+  ]
+}

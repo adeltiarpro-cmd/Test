@@ -1,0 +1,701 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "val-multiples",
+  "items": [
+    {
+      "external_key": "ibq400-val-basic-q008",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "400 Questions, Valuation Basic, Q8",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "What are the most common multiples used in valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "EV/Revenue",
+            "weight": 0.25
+          },
+          {
+            "text": "EV/EBITDA",
+            "weight": 0.25
+          },
+          {
+            "text": "EV/EBIT",
+            "weight": 0.25
+          },
+          {
+            "text": "P/E",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**EV/Revenue**, **EV/EBITDA**, **EV/EBIT**, **P/E** (share price over earnings per share) and P/BV (share price over book value per share)."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q9",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "What are some examples of industry-specific multiples?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "EBITDAR",
+            "weight": 0.3333
+          },
+          {
+            "text": "FFO",
+            "weight": 0.3333
+          },
+          {
+            "text": "visitors",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Internet: EV per unique **visitors** or pageviews. Retail and airlines: EV/**EBITDAR**, which removes rent because it is large and varies with the lease-versus-own choice. Energy: price over reserves or daily production, and P/NAV. REITs: Price/**FFO** and Price/AFFO, where FFO adds back depreciation and removes gains on property sales to show normalised cash flow."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q10",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "With an industry multiple like EV / Scientists or EV / Subscribers, why use Enterprise Value rather than Equity Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "all investors",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Because those scientists or subscribers generate value for **all investors**, lenders and shareholders alike. The test for any multiple is to ask which investors the denominator is available to."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q014",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q14",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Why can't you use Equity Value / EBITDA as a multiple instead of Enterprise Value / EBITDA?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "all investors",
+            "weight": 0.5
+          },
+          {
+            "text": "equity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "EBITDA is earned before interest, so it belongs to **all investors**. Enterprise Value covers the same perimeter. Equity Value only reflects the **equity** holders' share of the capital structure, so pairing it with EBITDA mixes two perimeters."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q017",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q17",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "With Free Cash Flow multiples, do you use Equity Value or Enterprise Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "unlevered",
+            "weight": 0.5
+          },
+          {
+            "text": "levered",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It depends on the cash flow. **Unlevered** Free Cash Flow is before interest and goes to all investors, so it pairs with Enterprise Value. **Levered** Free Cash Flow is after interest, lenders have been paid, so it pairs with Equity Value."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q018",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Basic, Q18",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "You never use Equity Value / EBITDA. Are there cases where you might use Equity Value / Revenue?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "financial institutions",
+            "weight": 0.5
+          },
+          {
+            "text": "negative",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Very rarely. Large **financial institutions** with big cash balances can show **negative** Enterprise Values, so a revenue multiple on Equity Value may be shown instead, for example on a slide mixing financial and non-financial companies. For banks you would normally rely on P/E and P/BV anyway."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q019",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q19",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "How do you select Comparable Companies and Precedent Transactions?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "industry",
+            "weight": 0.3333
+          },
+          {
+            "text": "financial",
+            "weight": 0.3333
+          },
+          {
+            "text": "geography",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Three screens: **industry**, **financial** criteria such as revenue or EBITDA size, and **geography**. Industry is always used. For transactions you also limit by date, typically the last one to two years."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q020",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q20",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "How do you apply the 3 valuation methodologies to actually get a value for the company? Illustrate with a median precedent multiple of 8x EBITDA and EBITDA of 500 million USD.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "median",
+            "weight": 0.5
+          },
+          {
+            "text": "4 billion",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Take the **median** multiple of the peer set or transaction set and multiply it by the company's own metric. Here 8 x 500 million = **4 billion** USD of implied Enterprise Value. For a football field, also use the minimum, maximum, 25th and 75th percentiles to build a range."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q022",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q22",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "Why would a company with similar growth and profitability to its Comparable Companies be valued at a premium?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "earnings",
+            "weight": 0.3333
+          },
+          {
+            "text": "competitive advantage",
+            "weight": 0.3333
+          },
+          {
+            "text": "market leader",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It may have just beaten **earnings** expectations, hold a **competitive advantage** not visible in the numbers such as a key patent, have won a major lawsuit, or be the **market leader** with a larger share than peers."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q023",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q23",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "What are the flaws with public company comparables?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.3333
+          },
+          {
+            "text": "market",
+            "weight": 0.3333
+          },
+          {
+            "text": "thinly",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "No two companies are truly **comparable**. The stock **market** is emotional, so multiples swing with sentiment. And small, **thinly** traded stocks may not reflect full value."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q024",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q24",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "How do you take a company's competitive advantage into account in a valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "75th percentile",
+            "weight": 0.3333
+          },
+          {
+            "text": "premium",
+            "weight": 0.3333
+          },
+          {
+            "text": "projections",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Use the **75th percentile** of multiples instead of the median, add a **premium** to some multiples, or use more aggressive **projections**. In practice you pick one, not all three."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q025",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q25",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "Do you always use the median multiple of a set of comparables or precedent transactions?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "25th percentile",
+            "weight": 0.5
+          },
+          {
+            "text": "distressed",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Usually, since you want the middle of the range. But for a **distressed** or underperforming company you might use the **25th percentile**, and a higher percentile for an outperformer."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q026",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q26",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "Precedent Transactions usually give a higher value than Comparable Companies. When might that not be the case?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mismatch",
+            "weight": 0.5
+          },
+          {
+            "text": "private",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "When there is a **mismatch** between the M&A market and the public market, for instance no recent takeovers of listed companies but many small **private** companies bought at very low valuations."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q027",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q27",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "What are some flaws with precedent transactions?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.5
+          },
+          {
+            "text": "data",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Past deals are rarely fully **comparable**: structure, size and market sentiment differ. And **data** is harder to find than for listed peers, especially for small private targets."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q028",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q28",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "Two companies with the same financial profile are bought by the same acquirer, but one EBITDA multiple is twice the other. How could this happen?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "competitive",
+            "weight": 0.3333
+          },
+          {
+            "text": "bad news",
+            "weight": 0.3333
+          },
+          {
+            "text": "industr",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "One sale process was more **competitive**, with more bidders. One target had recent **bad news** or a depressed share price and went at a discount. Or they sit in **industries** with different median multiples."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q029",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q29",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Why does Warren Buffett prefer EBIT multiples to EBITDA multiples?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "capital expenditures",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Because EBITDA ignores **capital expenditures**, which are a real and often large cost of staying in business. In capital-intensive industries the gap between EBIT and EBITDA is wide and EBITDA flatters the picture."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q030",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Basic, Q30",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "EV/EBIT, EV/EBITDA and P/E all measure profitability. What is the difference and when do you use each?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "capital structure",
+            "weight": 0.3333
+          },
+          {
+            "text": "D&A",
+            "weight": 0.3333
+          },
+          {
+            "text": "banks",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "P/E depends on **capital structure**, the two EV multiples do not. So P/E suits **banks** and other companies where interest is central. EV/EBIT is after **D&A**, EV/EBITDA before: use EV/EBIT where fixed assets and capex matter, as in manufacturing, and EV/EBITDA where they matter less, as in internet businesses."
+      }
+    },
+    {
+      "external_key": "ibq400-val-basic-q031",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Basic, Q31",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "You are buying a vending machine business. Would you pay a higher multiple if it owns its machines and depreciates them, or if it leases them? Depreciation and lease cost are the same amount and everything else is equal.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "lease",
+            "weight": 0.3333
+          },
+          {
+            "text": "EBITDA",
+            "weight": 0.3333
+          },
+          {
+            "text": "higher",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A **higher** EV/EBITDA multiple for the one that **leases**. Enterprise Value is the same in both cases, but the lease cost sits above **EBITDA** while depreciation sits below it. The leasing company therefore reports lower EBITDA, which mechanically gives a higher multiple."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q003",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Advanced, Q3",
+      "concepts": [
+        "ltm"
+      ],
+      "prompt_mdx": "It is April and you are looking at a comparable company's financials. How do you calendarize them to show the Trailing Twelve Months rather than the last fiscal year?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "most recent fiscal year",
+            "weight": 0.5
+          },
+          {
+            "text": "partial period",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "TTM = **most recent fiscal year** + new **partial period** - same partial period of the prior year. Here: last fiscal year plus Q1 of this year minus Q1 of last year. Quarterly figures come from quarterly filings or interim reports."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q004",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Advanced, Q4",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "Walk me through an M&A premiums analysis. Illustrate with a company trading at 10.00 USD per share acquired at 15.00 USD.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "premium",
+            "weight": 0.3333
+          },
+          {
+            "text": "50%",
+            "weight": 0.3333
+          },
+          {
+            "text": "median",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It measures the **premium** buyers paid over sellers' share prices in similar deals. Here 15 / 10 - 1 = **50%**. Steps: select transactions by industry, date and size. For each, take the seller's share price 1, 20 and 60 days before announcement and compute the premium against each. Take the **median** of each series and apply it to your company's corresponding share prices. It only works for public targets."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q006",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Advanced, Q6",
+      "concepts": [
+        "control-premium"
+      ],
+      "prompt_mdx": "M&A premiums analysis and precedent transactions both look at past deals. How does the selection differ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "public",
+            "weight": 0.5
+          },
+          {
+            "text": "broader",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "For premiums, every seller must be **public**. The set is also **broader**: perhaps fewer than ten precedent transactions but dozens of premiums, with looser industry and financial screens. Otherwise the criteria are similar: financials, industry, geography, date."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Advanced, Q9",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "You need projections from equity research for a set of comparables. How do you choose which report to use?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "detailed",
+            "weight": 0.5
+          },
+          {
+            "text": "middle",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Two common rules: the most **detailed** report, or the one whose numbers sit in the **middle** of the range. You do not choose by the bank that wrote it. Using only your own bank's research would undermine objectivity."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Advanced, Q10",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "You have a set of precedent transactions but are missing data like EBITDA for many targets. Where do you look?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "press",
+            "weight": 0.3333
+          },
+          {
+            "text": "equity research",
+            "weight": 0.3333
+          },
+          {
+            "text": "Capital IQ",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Press** releases and financial press articles. Then **equity research** on the buyer around the deal date, where analysts may estimate the seller's figures. Then data providers such as **Capital IQ** or FactSet."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Valuation Advanced, Q11",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "How far back and forward do you usually go for comparable and precedent multiples?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "TTM",
+            "weight": 0.5
+          },
+          {
+            "text": "forward",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**TTM** for both, plus one or two years **forward**. For listed peers you may look further in both directions. For transactions, going more than one year forward is unusual because information is limited."
+      }
+    },
+    {
+      "external_key": "ibq400-val-adv-q012",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Valuation Advanced, Q12",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "One company has a 40% EBITDA margin and trades at 8x EBITDA. Another has a 10% margin and trades at 16x. What is the problem with comparing them directly?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "margin",
+            "weight": 0.3333
+          },
+          {
+            "text": "misleading",
+            "weight": 0.3333
+          },
+          {
+            "text": "outlier",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It is not forbidden, but **misleading**: by simple arithmetic the high-**margin** company will tend to show a lower EBITDA multiple regardless of its real worth. Better to screen on margins and drop the **outliers**. You would not try to normalise multiples for margins."
+      }
+    }
+  ]
+}

@@ -18,13 +18,24 @@ type MasteryEntry = {
     module_id: string;
     modules: {
       id: string;
+      slug: string;
       title: string;
       level: number;
-      module_targets: Array<{ target_mastery: number; min_exercises: number }> | null;
+      parent_id: string | null;
+      module_targets:
+        | Array<{ target_mastery: number; min_exercises: number }>
+        | { target_mastery: number; min_exercises: number }
+        | null;
       tracks: { id: string; slug: string; title: string } | null;
     } | null;
   } | null;
 };
+
+// PostgREST renvoie un objet (relation 1-1) ou un tableau selon le cas
+function targetOf<T>(t: T[] | T | null | undefined): T | undefined {
+  if (!t) return undefined;
+  return Array.isArray(t) ? t[0] : t;
+}
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -38,7 +49,7 @@ export default async function DashboardPage() {
   const sevenDaysAgo = new Date(now.getTime() - 7 * 86_400_000).toISOString();
   const DAY_LABELS = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 
-  const [dueResult, weakResult, activityResult, masteriesResult] = await Promise.all([
+  const [dueResult, weakResult, activityResult, masteriesResult, modulesResult, repsResult] = await Promise.all([
     supabase
       .from("review_states")
       .select("*", { count: "exact", head: true })
@@ -65,12 +76,19 @@ export default async function DashboardPage() {
         concepts (
           module_id,
           modules (
-            id, title, level,
+            id, slug, title, level, parent_id,
             module_targets ( target_mastery, min_exercises ),
             tracks ( id, slug, title )
           )
         )
       `)
+      .eq("user_id", user.id),
+
+    supabase.from("modules").select("id, title"),
+
+    supabase
+      .from("review_states")
+      .select("reps, exercises!inner(module_id)")
       .eq("user_id", user.id),
   ]);
 
@@ -101,9 +119,35 @@ export default async function DashboardPage() {
     {
       title: string;
       slug: string;
-      moduleMap: Map<string, { title: string; target: number; scores: number[] }>;
+      moduleMap: Map<
+        string,
+        {
+          title: string;
+          slug: string;
+          chapter: string | null;
+          target: number;
+          minExercises: number;
+          attempts: number;
+          scores: number[];
+        }
+      >;
     }
   >();
+
+  // Titre du chapitre parent, pour regrouper les sous-chapitres (STEP-09, dispositif 1)
+  const moduleTitles = new Map(
+    (modulesResult.data ?? []).map((r) => [r.id as string, r.title as string])
+  );
+
+  // Tentatives par module, pour le seuil min_exercises (STEP-09, dispositif 2)
+  const attemptsByModule = new Map<string, number>();
+  for (const row of (repsResult.data ?? []) as unknown as {
+    reps: number;
+    exercises: { module_id: string } | null;
+  }[]) {
+    const id = row.exercises?.module_id;
+    if (id) attemptsByModule.set(id, (attemptsByModule.get(id) ?? 0) + (row.reps ?? 0));
+  }
 
   for (const m of masteries) {
     const mod = m.concepts?.modules;
@@ -116,22 +160,46 @@ export default async function DashboardPage() {
     if (!te.moduleMap.has(mod.id)) {
       te.moduleMap.set(mod.id, {
         title: mod.title,
-        target: mod.module_targets?.[0]?.target_mastery ?? 0.8,
+        slug: mod.slug,
+        chapter: mod.parent_id ? moduleTitles.get(mod.parent_id) ?? null : null,
+        target: targetOf(mod.module_targets)?.target_mastery ?? 0.8,
+        minExercises: targetOf(mod.module_targets)?.min_exercises ?? 15,
+        attempts: attemptsByModule.get(mod.id) ?? 0,
         scores: [],
       });
     }
     te.moduleMap.get(mod.id)!.scores.push(Number(m.mastery_score));
   }
 
-  const trackProgression = [...trackMap.values()].map((t) => ({
-    title: t.title,
-    slug: t.slug,
-    modules: [...t.moduleMap.values()].map((m) => ({
+  const trackProgression = [...trackMap.values()].map((t) => {
+    const modules = [...t.moduleMap.values()].map((m) => ({
       title: m.title,
+      slug: m.slug,
+      chapter: m.chapter,
       target: m.target,
-      avg: m.scores.length > 0 ? m.scores.reduce((a, b) => a + b, 0) / m.scores.length : null,
-    })),
-  }));
+      attempts: m.attempts,
+      minExercises: m.minExercises,
+      // Sous le seuil de tentatives, on n'affiche pas de pourcentage
+      avg:
+        m.scores.length > 0 && m.attempts >= m.minExercises
+          ? m.scores.reduce((a, b) => a + b, 0) / m.scores.length
+          : null,
+    }));
+    // Un groupe par chapitre ; les modules sans chapitre parent restent en tête
+    const chapterMap = new Map<string, typeof modules>();
+    for (const m of modules) {
+      const key = m.chapter ?? "";
+      if (!chapterMap.has(key)) chapterMap.set(key, []);
+      chapterMap.get(key)!.push(m);
+    }
+    const chapters = [...chapterMap.entries()]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([title, mods]) => ({
+        title: title || null,
+        modules: mods.sort((a, b) => a.title.localeCompare(b.title)),
+      }));
+    return { title: t.title, slug: t.slug, chapters };
+  });
 
   return (
     <main className="min-h-screen bg-background px-4 py-8 md:px-8">
@@ -243,11 +311,21 @@ export default async function DashboardPage() {
                 {trackProgression.map((track) => (
                   <div key={track.slug}>
                     <p className="text-sm font-semibold text-foreground mb-2">{track.title}</p>
-                    <div className="flex flex-col gap-3">
-                      {track.modules.map((mod) => (
+                    <div className="flex flex-col gap-4">
+                      {track.chapters.map((chapter) => (
+                      <div key={chapter.title ?? "_"} className="flex flex-col gap-3">
+                      {chapter.title && (
+                        <p className="text-xs font-semibold text-foreground">{chapter.title}</p>
+                      )}
+                      {chapter.modules.map((mod) => (
                         <div key={mod.title}>
                           <div className="flex justify-between items-baseline mb-1">
-                            <span className="text-xs text-muted-foreground">{mod.title}</span>
+                            <Link
+                              href={{ pathname: "/session", query: { track: track.slug, module: mod.slug } }}
+                              className="text-xs text-muted-foreground underline-offset-2 hover:underline hover:text-foreground"
+                            >
+                              {mod.title}
+                            </Link>
                             {mod.avg !== null ? (
                               <span className="text-xs tabular-nums text-muted-foreground">
                                 {Math.round(mod.avg * 100)} % — obj.{" "}
@@ -255,7 +333,7 @@ export default async function DashboardPage() {
                               </span>
                             ) : (
                               <span className="text-xs text-muted-foreground italic">
-                                pas assez de données
+                                pas assez de données ({mod.attempts}/{mod.minExercises})
                               </span>
                             )}
                           </div>
@@ -275,6 +353,8 @@ export default async function DashboardPage() {
                             </div>
                           )}
                         </div>
+                      ))}
+                      </div>
                       ))}
                     </div>
                   </div>

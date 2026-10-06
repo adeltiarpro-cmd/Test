@@ -1,0 +1,105 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "ma-accounting",
+  "items": [
+    {
+      "external_key": "qa-q076",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q76",
+      "concepts": [
+        "consolidation"
+      ],
+      "prompt_mdx": "A : actif 100, capitaux propres 80, dette nette 20. B : actif 60, capitaux propres 50, dette nette 10. A acquiert 100 % de B, payé 50 % en titres et 50 % en cash. Construis le bilan consolidé.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "160",
+            "weight": 0.3333
+          },
+          {
+            "text": "105",
+            "weight": 0.3333
+          },
+          {
+            "text": "55",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Intégration globale. Prix = 50 (les capitaux propres de B), soit 25 en titres et 25 en cash. Actif consolidé : 100 + 60 = **160**. Capitaux propres : 80 + 25 de titres émis = **105** (ceux de B sont éliminés). Dette nette : 20 + 10 + 25 = **55**. Total passif : 160."
+      }
+    },
+    {
+      "external_key": "qa-q077",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q77",
+      "concepts": [
+        "consolidation"
+      ],
+      "prompt_mdx": "Mêmes bilans (A : actif 100, capitaux propres 80, dette nette 20. B : actif 60, capitaux propres 50, dette nette 10). A acquiert 80 % de B, payé 50 % en titres et 50 % en cash. Construis le bilan consolidé.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "160",
+            "weight": 0.25
+          },
+          {
+            "text": "100",
+            "weight": 0.25
+          },
+          {
+            "text": "10",
+            "weight": 0.25
+          },
+          {
+            "text": "50",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Intégration globale, car A contrôle B. Prix = 80 % × 50 = 40, soit 20 en titres et 20 en cash. Actif : **160**. Capitaux propres part du groupe : 80 + 20 = **100**. Intérêts minoritaires : 20 % × 50 = **10**. Dette nette : 20 + 10 + 20 = **50**. Total passif : 160."
+      }
+    },
+    {
+      "external_key": "qa-q078",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q78",
+      "concepts": [
+        "consolidation"
+      ],
+      "prompt_mdx": "Mêmes bilans. A acquiert 20 % de B, payé 50 % en titres et 50 % par dette. Construis le bilan de A après l'opération.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mise en équivalence",
+            "weight": 0.25
+          },
+          {
+            "text": "110",
+            "weight": 0.25
+          },
+          {
+            "text": "85",
+            "weight": 0.25
+          },
+          {
+            "text": "25",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "**Mise en équivalence**, car A n'a qu'une influence notable. Prix = 20 % × 50 = 10, soit 5 en titres et 5 en dette. Actif de A : titres mis en équivalence 10 + autres actifs 100 = **110**. Capitaux propres : 80 + 5 = **85**. Dette nette : 20 + 5 = **25**. Total passif : 110."
+      }
+    }
+  ]
+}

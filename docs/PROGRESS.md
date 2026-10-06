@@ -154,3 +154,49 @@ FICHIERS CLÉS: src/components/ui/button-variants.ts (nouveau),
 src/components/ui/button.tsx (import depuis button-variants),
 src/app/consulting/page.tsx, src/app/consulting/[graphId]/page.tsx,
 supabase/migrations/20240011000000_seed_graph_test.sql
+## 2026-10-05 — STEP-09 — Sous-chapitres corpfin + tirage par spécialité
+STATUT: EN COURS
+FAIT: Dispositif 1 (hiérarchie à 3 niveaux) appliqué à la filière corpfin : 16 sous-chapitres (`modules.level = 1`) créés sous les 4 chapitres, avec `module_targets` par défaut. La migration rattache les 475 exercices et 99 concepts corpfin déjà chargés à leur sous-chapitre, d'après le concept de chaque exercice. Lots canoniques régénérés, un fichier par source et par sous-chapitre (batch-100 à batch-317, 498 items). Dashboard : barres de progression au niveau sous-chapitre, regroupées par chapitre, chaque titre ouvrant la session filtrée. Page /session : sélecteur filière → chapitre → sous-chapitres avec compteurs, et tirage de 10 questions dans la spécialité choisie (révisions dues, puis questions jamais vues au hasard, puis déjà vues).
+RESTE:
+  1. `npx supabase db push` pour appliquer la migration 20240015 (testée sur une base Postgres locale reproduisant l'état actuel, pas sur la base cloud).
+  2. Test navigateur de /session et /dashboard : seul le contrôle TypeScript a été passé.
+  3. Supprimer `ingest/_remplaces-par-sous-chapitres/` (anciens lots par chapitre, batch-010 à batch-037) et `ingest/_reformulees-non-chargees/`.
+  4. Dispositif 2 incomplet : le dashboard affiche la moyenne dès le premier concept noté, sans attendre `min_exercises` tentatives.
+  5. Sous-chapitres à créer pour les autres filières (markets, consulting, gmat, math) quand elles auront du contenu.
+DÉCISIONS:
+  - Tirage par spécialité : écart assumé au dispositif 4 (interleaving), ajouté comme un mode en plus. Le mode « Toutes les spécialités » garde la session mélangée d'origine, et le tirage sur un chapitre entier alterne ses sous-chapitres.
+  - Le mode mélangé complète toujours avec les 10 exercices les plus récents de la base (fix STEP-08) : il ne parcourt donc pas tout le stock. Non modifié ici.
+  - Slugs des sous-chapitres préfixés par chapitre (`fm-`, `val-`, `ma-`, `cs-`) à cause de la contrainte UNIQUE (track_id, slug).
+  - Rattachement fait en SQL dans la migration plutôt que par rechargement des lots : un rechargement aurait recréé les concepts sous le sous-chapitre en laissant les anciens liens, donc deux concepts par exercice.
+  - Un concept reste rattaché au sous-chapitre de son chapitre d'origine, même quand son nom évoque un autre chapitre (ex. `dcf` issu des questions de restructuring → `cs-restructuring`).
+  - Contenu des lots d'entretiens : questions reprises des trois guides (Q&A annales, 400 Questions, Bible des entretiens), réponses rédigées à neuf et contrôlées numériquement contre les guides. Questions de fit non ingérées, faute de module.
+FICHIERS CLÉS: supabase/migrations/20240015000000_corpfin_subchapters.sql, src/app/session/page.tsx, src/app/dashboard/page.tsx, ingest/canonical/batch-1xx à batch-3xx, charger-lots.command
+
+## 2026-10-06 — STEP-09 — Compléments (dispositif 2, tirage mélangé, fit)
+STATUT: EN COURS (reste le test navigateur)
+FAIT: Dispositif 2 : le dashboard n'affiche la moyenne d'un sous-chapitre qu'à partir de `min_exercises` tentatives, sinon « pas assez de données (n/min) ». Mode « Toutes les spécialités » : après les révisions dues, la session se complète avec des questions jamais vues tirées dans jusqu'à 5 sous-chapitres au hasard, donc sur tout le stock. Nouveau chapitre corpfin `interview-fit` avec 6 sous-chapitres (migration 20240017) et 149 questions de fit (batch-400 à 405 : 400 Questions, 120 items ; batch-420 à 423 : Bible parties I et II, 29 items). Erreurs TypeScript préexistantes corrigées (cookies typés dans server.ts et middleware.ts, dossier ingest exclu du tsconfig racine) : `tsc --noEmit` passe sans erreur.
+RESTE:
+  1. `npx supabase db push` (migrations 20240015, 20240016, 20240017), puis `charger-lots.command` pour les lots de fit.
+  2. Test navigateur de /session et /dashboard : seul le contrôle TypeScript a été passé.
+  3. Dispositif 8 (le format suit la maîtrise) et mode examen GMAT : aucune trace dans le code, non faits.
+  4. Supprimer `ingest/_remplaces-par-sous-chapitres/` et `ingest/_reformulees-non-chargees/`.
+  5. Sous-chapitres des autres filières quand elles auront du contenu.
+DÉCISIONS:
+  - Questions de fit personnelles (127 sur 149) : pas de bonne réponse unique, donc correction volontairement indulgente (un seul point clé, mot-clé « e », toute réponse rédigée passe). Le corrigé donne la méthode et le dit en toutes lettres. Conséquence : la maîtrise affichée sur ces sous-chapitres mesure la pratique, pas la qualité. Les 22 questions de connaissance (métier, process, valorisation d'un deal) gardent de vrais mots-clés.
+  - Les deux entrées de la Bible qui sont des thèmes et non des questions (« L'anglais ! », « L'actualité ») sont reprises avec une précision entre parenthèses.
+  - Le signe dollar des énoncés est écrit « USD » (le rendu KaTeX interprète le signe).
+FICHIERS CLÉS: supabase/migrations/20240017000000_corpfin_fit_chapter.sql, ingest/canonical/batch-4xx, src/app/dashboard/page.tsx, src/app/session/page.tsx
+
+## 2026-10-06 — STEP-11 — Formulaire d'ajout manuel (admin)
+STATUT: EN COURS (code écrit, non testé dans le navigateur)
+FAIT: Colonne `profiles.is_admin` et trigger qui interdit à un utilisateur de se promouvoir (migration 20240016). Middleware : 403 sur /admin pour un non-admin. Pages /admin/exercises (liste des exercices manuels, édition, suppression), /admin/exercises/new et /admin/exercises/[id]. Formulaire : type, module, difficulté, énoncé, payload et solution en JSON avec squelette pré-rempli et validation Zod en direct, aperçu via ExerciseRunner (prop `preview`, aucune tentative enregistrée). Enregistrement par action serveur qui revérifie l'admin et le schéma, sous la source « Mes propres exercices » (kind `own`), clé `manual-<uuid>`.
+RESTE:
+  1. `npx supabase db push`, puis dans le SQL Editor : `UPDATE profiles SET is_admin = true WHERE id = (SELECT id FROM auth.users WHERE email = '...');`
+  2. `SUPABASE_SERVICE_ROLE_KEY` dans `.env.local` (et sur Vercel).
+  3. Test navigateur : création, aperçu, édition, suppression, 403 avec un compte non admin.
+DÉCISIONS:
+  - Payload et solution saisis en JSON à partir d'un squelette dérivé des schémas Zod, plutôt qu'un champ de formulaire par propriété : un seul formulaire couvre les 10 types et suit les schémas sans maintenance.
+  - Pas d'aperçu pour `graph_fill` et `excel_model` (dépendent d'un graphe ou d'un template en base).
+  - La note de source est rangée dans les tags (`ref:<texte>`), le concept est facultatif.
+  - 403 renvoyé par le middleware, et vérification refaite dans chaque action serveur.
+FICHIERS CLÉS: supabase/migrations/20240016000000_admin_flag.sql, src/middleware.ts, src/lib/admin/, src/lib/supabase/admin.ts, src/app/admin/exercises/, src/components/exercise-runner/index.tsx

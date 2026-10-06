@@ -1,0 +1,131 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "ma-strategy",
+  "items": [
+    {
+      "external_key": "qa-q065",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Q&A Annales, Q65",
+      "concepts": [
+        "ma-rationale"
+      ],
+      "prompt_mdx": "Quelle est la différence entre une fusion et une acquisition ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "taille",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "La différence est plus sémantique que financière : il y a toujours un acheteur et un vendeur. On parle de fusion quand les deux sociétés sont de **taille** proche, d'acquisition quand l'acheteur est nettement plus gros."
+      }
+    },
+    {
+      "external_key": "qa-q066",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Q&A Annales, Q66",
+      "concepts": [
+        "ma-rationale"
+      ],
+      "prompt_mdx": "Pour quelles raisons un acheteur procède-t-il à une acquisition ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "part de marché",
+            "weight": 0.3333
+          },
+          {
+            "text": "synergies",
+            "weight": 0.3333
+          },
+          {
+            "text": "sous-évalu",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Gagner des **parts de marché** en absorbant un concurrent, grossir plus vite que par croissance organique, saisir une cible **sous-évaluée**, acquérir une technologie ou un brevet, réaliser des **synergies**, contrôler sa chaîne de valeur en rachetant un fournisseur ou un distributeur, se diversifier ou se recentrer."
+      }
+    },
+    {
+      "external_key": "qa-q073",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Q&A Annales, Q73",
+      "concepts": [
+        "synergies"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'une synergie ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenus",
+            "weight": 0.5
+          },
+          {
+            "text": "coûts",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "C'est la valeur supplémentaire créée par le rapprochement de deux entreprises. Synergies de **revenus** : ventes additionnelles grâce aux complémentarités commerciales ou à de nouvelles activités. Synergies de **coûts** : économies d'échelle et mise en commun de fonctions."
+      }
+    },
+    {
+      "external_key": "qa-q079",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q79",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "A : capitaux propres 100 €, dette nette 40 €. B : capitaux propres 50 €, dette nette 50 € (valeurs de marché). A achète B sans prime, 100 % en titres. Quelle est la valeur d'entreprise de l'entité combinée (en €) ?",
+      "payload": {
+        "unit": "€",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 240,
+        "steps_mdx": "Capitaux propres combinés = 100 + 50 d'actions émises = 150. Dette nette = 40 + 50 = 90. Valeur d'entreprise = 240. Contrôle : sans prime ni synergies, c'est la somme des deux valeurs d'entreprise, 140 + 100.",
+        "formula_katex": ""
+      }
+    },
+    {
+      "external_key": "qa-q080",
+      "type": "numeric",
+      "difficulty": 4,
+      "source_ref": "Q&A Annales, Q80",
+      "concepts": [
+        "enterprise-value"
+      ],
+      "prompt_mdx": "Mêmes sociétés (A : capitaux propres 100 €, dette nette 40 €. B : 50 € et 50 €). A achète B avec une prime de 20 %, payée 50 % en titres et 50 % en cash. Quelle est la valeur d'entreprise de l'entité combinée (en €) ?",
+      "payload": {
+        "unit": "€",
+        "precision": 0,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 250,
+        "steps_mdx": "Prix des capitaux propres de B = 50 × 1,2 = 60, soit 30 en titres et 30 en cash. Capitaux propres combinés = 100 + 30 = 130. Dette nette = 40 + 50 + 30 = 120. Valeur d'entreprise = 250.",
+        "formula_katex": ""
+      }
+    }
+  ]
+}

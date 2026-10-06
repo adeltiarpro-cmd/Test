@@ -1,0 +1,357 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fit-deals",
+  "items": [
+    {
+      "external_key": "ibq400-deals-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q1",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "Walk me through one of the deals listed on your resume.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "In two minutes: the client and what it does with key figures, the type of deal and the counterparties, the rationale, your role, the status or outcome. Add valuation and multiples if public. Keep confidential details out.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q2",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "Did you do anything quantitative for this deal? It looks like it just involved research.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Point to any analysis you did, even simple: comparable companies, a revenue build, a returns calculation. If you truly did none, say what analysis the team did and show that you understood it.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q3",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "Why did the company you were representing want to sell?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "liquidity",
+            "weight": 0.5
+          },
+          {
+            "text": "growth",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Give the real reason for your deal. The usual ones: shareholders or founders wanting **liquidity**, a private equity owner reaching the end of its holding period, a business that needs a larger partner or more capital to keep its **growth**, a non-core division, or an unsolicited offer at an attractive price."
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q4",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "Why did the company you were representing want to buy another company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "synergies",
+            "weight": 0.5
+          },
+          {
+            "text": "market",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Give the real reason for your deal. The usual ones: entering a new **market** or geography, gaining share, acquiring a product or technology faster than building it, cost or revenue **synergies**, or buying an asset seen as undervalued."
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q005",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q5",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "Describe the deal process.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Follow the standard steps of a sell-side or buy-side process and place your deal on them: who was contacted, how many bidders, which stage you saw, what you produced at each step.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q6",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "What were the major selling points of your client? What was attractive about it?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Three or four points with figures: growth, margins, market position, customer base, technology, management. Think of what was written in the marketing documents.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q7",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "What about its weaknesses? Why might investors be hesitant?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Name real weaknesses (customer concentration, cyclicality, dependence on a founder, low margins) and say how the team addressed each in front of buyers.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q8",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "What were the major obstacles to getting the deal done? What happened?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "A gap on price, a diligence finding, financing, a regulator, a key shareholder. Explain how it was resolved, or why the deal stopped.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q9",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "What kind of standalone operating model did you create for your client?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Describe the structure: revenue drivers, cost assumptions, the three statements or a lighter version, the scenarios. Know the two or three assumptions that moved the result most.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q010",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q10",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "What was the status of this deal when you left your bank?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "State it honestly: stage reached, and what has happened since if it is public. Following your deals after leaving is a good sign.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q11",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "What did you look at in the due diligence process?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "financial",
+            "weight": 0.5
+          },
+          {
+            "text": "contracts",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Describe what your deal covered. Typically: **financial** diligence (quality of earnings, working capital, net debt, forecasts), commercial (market, customers, competition), legal (**contracts**, litigation, intellectual property), plus tax, operations and people. Say which workstreams you touched yourself."
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q12",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "Tell me about the market your client was in.",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Size, growth rate, main players and their shares, the trends driving the market and where your client sat in it. A few figures are expected.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q013",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q13",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "How did you narrow down potential targets (or potential investors)?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Explain the criteria used as successive filters: sector, size, geography, financial capacity, strategic fit, past acquisitions or investments, then the feedback from the client that cut the list further.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q14",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "How did you value your client?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.3333
+          },
+          {
+            "text": "transactions",
+            "weight": 0.3333
+          },
+          {
+            "text": "DCF",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Describe the methods used on your deal and why. Usually **comparable** public companies, precedent **transactions** and a **DCF**, with an LBO analysis when financial buyers are in the process. Know the multiples, the range each method gave and which one carried most weight."
+      }
+    },
+    {
+      "external_key": "ibq400-deals-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Discussing Transaction Experience, Q15",
+      "concepts": [
+        "deal-discussion"
+      ],
+      "prompt_mdx": "How did you personally contribute to this deal?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Say I, not we: the analyses you built, the documents you wrote, the errors you caught, the contacts you handled. Stay truthful, since follow-up questions will test every claim.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    }
+  ]
+}

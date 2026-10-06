@@ -1,0 +1,403 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fit-metier",
+  "items": [
+    {
+      "external_key": "ibq400-fit-banking-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q1",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "You've never worked in finance before. How much do you know about what bankers actually do?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "advise",
+            "weight": 0.3333
+          },
+          {
+            "text": "M&A",
+            "weight": 0.3333
+          },
+          {
+            "text": "capital",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Bankers **advise** companies on transactions: buying or selling businesses (**M&A**) and raising **capital** through equity or debt. Day to day, juniors build financial models and valuations, prepare presentations and marketing documents, and coordinate the process with clients, buyers and investors."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q002",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q2",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "Let's say I'm working on an IPO for a client. Can you describe briefly what I would do?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "valuation",
+            "weight": 0.25
+          },
+          {
+            "text": "prospectus",
+            "weight": 0.25
+          },
+          {
+            "text": "investors",
+            "weight": 0.25
+          },
+          {
+            "text": "price",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Meet the client and gather information on its business and financials, agree on a **valuation** range, draft the registration document or **prospectus** with lawyers and accountants and answer the regulator's comments. Then market the deal to institutional **investors** on a roadshow, build the order book, set the **price** and allocate shares before trading starts."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q3",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "How much do you know about the lifestyle in this industry? Do you know how many hours you're going to work each week?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "hours",
+            "weight": 0.5
+          },
+          {
+            "text": "weekends",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Expect very long **hours**, often 80 or more a week in busy periods, late nights, work on **weekends** and plans cancelled at short notice. Say you have spoken with people in the job, that you know this, and give an example of you sustaining that kind of load."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q4",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "I see you were an English major in college, and had time to participate in a lot of different activities. Can you talk about a time when you had to work long hours and make sacrifices?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Give a period of sustained heavy work, over weeks, with what you dropped to get through it and the result. It answers the doubt about whether you know what hard work is.\n\n*Personal question: there is no single right answer. Grading here is lenient on purpose; compare your answer with the method above.*"
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q5",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "Can you tell me about the different product and industry groups at our bank?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "product",
+            "weight": 0.3333
+          },
+          {
+            "text": "industry",
+            "weight": 0.3333
+          },
+          {
+            "text": "M&A",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Product** groups specialise in a type of transaction: **M&A**, Leveraged Finance, Equity Capital Markets, Debt Capital Markets, Restructuring. **Industry** groups cover a sector across all products: technology, healthcare, energy, financial institutions, consumer, industrials, real estate. Check the bank's own structure before the interview, since names and splits differ."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q6",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "What's in a pitch book?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "credentials",
+            "weight": 0.3333
+          },
+          {
+            "text": "valuation",
+            "weight": 0.3333
+          },
+          {
+            "text": "recommendations",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It depends on the pitch, but the usual frame is: the bank's **credentials** (similar deals done), the company's strategic options, **valuation** and supporting financial models, potential targets or buyers for an M&A pitch, then a summary and **recommendations**."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q7",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "How do companies select the bankers they work with?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "relationship",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Mostly on **relationship**: bankers who have followed the company for years and brought ideas before any mandate. Sector expertise, track record on similar deals and, for financings, the ability to lend or distribute also count. A formal competition between banks sometimes decides it."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q8",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "Walk me through the process of a typical sell-side M&A deal.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "buyers",
+            "weight": 0.25
+          },
+          {
+            "text": "diligence",
+            "weight": 0.25
+          },
+          {
+            "text": "bid",
+            "weight": 0.25
+          },
+          {
+            "text": "purchase agreement",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Meet the company, prepare the marketing documents (teaser and information memorandum) and agree on the list of **buyers**. Send the teaser, sign NDAs with interested parties and send the memorandum. Set a first **bid** deadline for indications of interest, invite the best bidders to management meetings and due **diligence**, set a final bid deadline and choose the winner. Negotiate the **purchase agreement** and announce the deal."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q9",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "Walk me through the process of a typical buy-side M&A deal.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "targets",
+            "weight": 0.3333
+          },
+          {
+            "text": "diligence",
+            "weight": 0.3333
+          },
+          {
+            "text": "price",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Research a wide list of potential **targets** with the client and filter it over several rounds. Decide whom to approach, hold meetings and gauge each seller's interest. As talks with the most likely seller advance, run in-depth due **diligence** and work out the offer **price**. Negotiate the key terms and the purchase agreement, then announce."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q10",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "Walk me through a debt issuance deal.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "leverage",
+            "weight": 0.3333
+          },
+          {
+            "text": "memorandum",
+            "weight": 0.3333
+          },
+          {
+            "text": "investors",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Meet the client and gather financial, industry and customer information. With the debt capital markets or leveraged finance team, build the financing model and decide the appropriate **leverage**, coverage ratios and covenants. Write an investor **memorandum** presenting the credit, then approach debt **investors** and collect their commitments to fund the deal."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q11",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "How are Equity Capital Markets (ECM) and Debt Capital Markets (DCM) different from M&A or industry groups?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "markets",
+            "weight": 0.5
+          },
+          {
+            "text": "modelling",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "ECM and DCM are closer to the **markets**: the teams follow issuance conditions and investor appetite, advise on timing and pricing, and turn deals faster. There is less **modelling** than in M&A, where the work is long transaction processes and detailed valuation. Industry groups bring the sector knowledge and client relationship across all these products."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q12",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "What's the difference between DCM and Leveraged Finance?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "investment grade",
+            "weight": 0.5
+          },
+          {
+            "text": "high yield",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "DCM mainly handles **investment-grade** issuance: frequent, standardised, market-driven, with little modelling. Leveraged Finance handles **high-yield** bonds and leveraged loans, often for buyouts and acquisitions, which calls for deeper credit analysis and modelling and makes it closer to M&A work."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q013",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q13",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "Explain what a divestiture is.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "division",
+            "weight": 0.5
+          },
+          {
+            "text": "sell",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A company decides to **sell** a **division** or business unit instead of the whole company. The process resembles a sell-side M&A deal, with more complications: carve-out financial statements for the unit, and transitional arrangements with the parent."
+      }
+    },
+    {
+      "external_key": "ibq400-fit-banking-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Fit, Understanding Banking, Q14",
+      "concepts": [
+        "banking-basics"
+      ],
+      "prompt_mdx": "Imagine you want to draft a 1-slide company profile for an investor. What would you put there?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "business",
+            "weight": 0.3333
+          },
+          {
+            "text": "financial",
+            "weight": 0.3333
+          },
+          {
+            "text": "management",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A short description of the **business** and its products, key **financial** figures (revenue, EBITDA, growth, and valuation or multiples if listed), headquarters and history, **management** and main shareholders, and a few points on market position and customers. If there is room, a share price chart or a geographic split."
+      }
+    }
+  ]
+}

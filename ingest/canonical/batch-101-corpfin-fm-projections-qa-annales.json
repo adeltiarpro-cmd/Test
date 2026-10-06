@@ -1,0 +1,37 @@
+{
+  "source": "Annales des questions d'entretiens (Q&A, 100 questions)",
+  "track": "corpfin",
+  "module": "fm-projections",
+  "items": [
+    {
+      "external_key": "qa-q081",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Q&A Annales, Q81",
+      "concepts": [
+        "revenue-model"
+      ],
+      "prompt_mdx": "Ton associate te demande de prévoir les revenus d'un fabricant d'électroménager. Quelles méthodes peux-tu appliquer ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "bottom-up",
+            "weight": 0.3333
+          },
+          {
+            "text": "top-down",
+            "weight": 0.3333
+          },
+          {
+            "text": "part de marché",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Bottom-up** : partir du nombre de clients ou d'unités vendues et du prix de vente, puis faire évoluer volumes et prix, en recoupant la croissance obtenue avec l'historique, les concurrents et l'économie. **Top-down** : estimer la taille du marché adressable, lui appliquer la **part de marché** de l'entreprise, puis projeter l'évolution du marché et de cette part."
+      }
+    }
+  ]
+}

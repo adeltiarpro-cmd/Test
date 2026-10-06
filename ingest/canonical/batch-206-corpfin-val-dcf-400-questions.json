@@ -1,0 +1,701 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "val-dcf",
+  "items": [
+    {
+      "external_key": "ibq400-val-basic-q003",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Valuation Basic, Q3",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "When would you not use a DCF in a valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "unpredictable",
+            "weight": 0.5
+          },
+          {
+            "text": "banks",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "When cash flows are unstable or **unpredictable**, as for an early-stage tech or biotech company, or when debt and working capital play a different role in the business, as for **banks** and financial institutions."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q001",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, DCF Basic, Q1",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Walk me through a DCF.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "free cash flow",
+            "weight": 0.25
+          },
+          {
+            "text": "WACC",
+            "weight": 0.25
+          },
+          {
+            "text": "terminal value",
+            "weight": 0.25
+          },
+          {
+            "text": "enterprise value",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "A DCF values a company as the present value of its cash flows plus the present value of its terminal value. Project the financials (growth, costs, working capital), derive **Free Cash Flow** for each year and discount at the **WACC**. Compute the **Terminal Value** with an exit multiple or the Gordon Growth formula and discount it too. The sum is **Enterprise Value**."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, DCF Basic, Q2",
+      "concepts": [
+        "fcff"
+      ],
+      "prompt_mdx": "Walk me through how you get from Revenue to Free Cash Flow in the projections.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "EBIT",
+            "weight": 0.2
+          },
+          {
+            "text": "tax",
+            "weight": 0.2
+          },
+          {
+            "text": "depreciation",
+            "weight": 0.2
+          },
+          {
+            "text": "capital expenditures",
+            "weight": 0.2
+          },
+          {
+            "text": "working capital",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "Revenue minus COGS and operating expenses gives **EBIT**. Multiply by (1 - **tax** rate), add back **depreciation** and other non-cash charges, subtract **capital expenditures** and the increase in **working capital**. Starting from EBIT gives Unlevered Free Cash Flow."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q3",
+      "concepts": [
+        "fcff"
+      ],
+      "prompt_mdx": "What is an alternate way to calculate Free Cash Flow?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash flow from operations",
+            "weight": 0.3333
+          },
+          {
+            "text": "capex",
+            "weight": 0.3333
+          },
+          {
+            "text": "interest",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Start from **Cash Flow from Operations** and subtract **CapEx**: that is Levered Free Cash Flow. To get to Unlevered, add back tax-adjusted **interest** expense and subtract tax-adjusted interest income."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, DCF Basic, Q4",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Why do you use 5 or 10 years for DCF projections?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "predict",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "It is about as far as you can reasonably **predict**. Under 5 years is too short to be useful, and beyond 10 the forecasts lose credibility for most companies."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q11",
+      "concepts": [
+        "fcfe"
+      ],
+      "prompt_mdx": "What is the effect of using Levered Free Cash Flow rather than Unlevered in your DCF?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "equity value",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "You get **Equity Value** instead of Enterprise Value, because that cash flow belongs to equity holders only. Lenders have already been paid through interest."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q12",
+      "concepts": [
+        "fcfe"
+      ],
+      "prompt_mdx": "If you use Levered Free Cash Flow, what discount rate should you use?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cost of equity",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "The **Cost of Equity**, not WACC: debt and preferred are out of the picture when you are computing Equity Value."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q013",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, DCF Basic, Q13",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "How do you calculate the Terminal Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "multiple",
+            "weight": 0.5
+          },
+          {
+            "text": "Gordon growth",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Either apply an exit **multiple** to final-year EBITDA, EBIT or Free Cash Flow, or use **Gordon Growth**: Terminal Value = final-year Free Cash Flow x (1 + growth rate) / (discount rate - growth rate)."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q14",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "Why would you use Gordon Growth rather than the Multiples Method for Terminal Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.5
+          },
+          {
+            "text": "cyclical",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Bankers mostly use multiples, since exit multiples can be anchored on comparables while a perpetual growth rate is a guess. Gordon Growth makes sense when there are no good **comparable** companies, or when multiples are expected to shift, for instance in a **cyclical** industry."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q015",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, DCF Basic, Q15",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "What is an appropriate growth rate for the Terminal Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "GDP",
+            "weight": 0.3333
+          },
+          {
+            "text": "inflation",
+            "weight": 0.3333
+          },
+          {
+            "text": "5%",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Long-term **GDP** growth, **inflation**, or something equally conservative. In a mature economy anything above **5%** is aggressive."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q016",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q16",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "How do you select the exit multiple for the Terminal Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "median",
+            "weight": 0.5
+          },
+          {
+            "text": "range",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "From the comparable companies, at or near the **median**. And you show a **range**: with a median of 8x you might run 6x to 10x."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q017",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q17",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "Which method of calculating Terminal Value gives a higher valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "assumptions",
+            "weight": 0.5
+          },
+          {
+            "text": "variable",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "No general answer, both depend on **assumptions**. The Multiples Method tends to be more **variable**, because exit multiples span a wider range than plausible long-term growth rates."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q018",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q18",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "What is the flaw in basing terminal multiples on where public comparables trade today?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "change",
+            "weight": 0.5
+          },
+          {
+            "text": "cyclical",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Multiples may **change** a lot over 5 to 10 years, so today's median may be wrong by the exit date. Hence the range and the sensitivity table. The problem is acute in **cyclical** industries."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q019",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q19",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "How do you know if your DCF is too dependent on future assumptions?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "terminal value",
+            "weight": 0.3333
+          },
+          {
+            "text": "50%",
+            "weight": 0.3333
+          },
+          {
+            "text": "80",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Textbook answer: when well over **50%** of Enterprise Value comes from **Terminal Value**. In practice nearly every DCF exceeds 50%. Once it reaches **80**-90%, the assumptions need rethinking."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q026",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q26",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Which has a greater impact on a DCF valuation: a 10% change in revenue or a 1% change in the discount rate?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "revenue",
+            "weight": 0.5
+          },
+          {
+            "text": "terminal value",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "It depends, but usually the 10% change in **revenue**: it carries through every future year's revenue and EBITDA and into the **terminal value**."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q027",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q27",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "And a 1% change in revenue versus a 1% change in the discount rate?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "discount rate",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "It could go either way, but most of the time the **discount rate** matters more in that case."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q029",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q29",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "What should you do if you do not believe management's projections for a DCF?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "own projections",
+            "weight": 0.3333
+          },
+          {
+            "text": "conservative",
+            "weight": 0.3333
+          },
+          {
+            "text": "sensitivity",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Build your **own projections**, haircut management's to make them more **conservative**, or show a **sensitivity** table comparing management's case with a more cautious one. With unrealistic numbers you would likely do all three."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q031",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, DCF Basic, Q31",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "What types of sensitivity analyses would you look at in a DCF?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "terminal multiple",
+            "weight": 0.3333
+          },
+          {
+            "text": "discount rate",
+            "weight": 0.3333
+          },
+          {
+            "text": "growth",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Revenue growth against **terminal multiple**, EBITDA margin against terminal multiple, terminal multiple against **discount rate**, long-term **growth** rate against discount rate. Not terminal multiple against long-term growth rate, which belong to two different methods."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-basic-q032",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, DCF Basic, Q32",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "A company has a high debt load and repays a significant part of the principal each year. How do you account for this in a DCF?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "not",
+            "weight": 0.5
+          },
+          {
+            "text": "financing",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "You do **not**. Principal repayments sit in Cash Flow from **Financing**, below Free Cash Flow. With levered cash flows, interest would decline over time as principal falls, but the repayments themselves still would not appear."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-adv-q001",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, DCF Advanced, Q1",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "Explain why you would use the mid-year convention in a DCF.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "evenly",
+            "weight": 0.3333
+          },
+          {
+            "text": "0.5",
+            "weight": 0.3333
+          },
+          {
+            "text": "1.5",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Cash flows arrive **evenly** through the year, not all on the last day. So instead of discount periods 1, 2, 3 you use **0.5**, **1.5**, 2.5 and so on."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-adv-q002",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, DCF Advanced, Q2",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "What discount periods do you use with the mid-year convention when there is a stub period, for example Q4 of Year 1?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "0.125",
+            "weight": 0.5
+          },
+          {
+            "text": "0.75",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Halve the stub period, and subtract 0.5 from the normal periods of the following years. Normal periods with a Q4 stub: 0.25, then 1.25, 2.25, 3.25, 4.25, 5.25. Mid-year: **0.125**, then **0.75**, 1.75, 2.75, 3.75, 4.75."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-adv-q003",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, DCF Advanced, Q3",
+      "concepts": [
+        "terminal-value"
+      ],
+      "prompt_mdx": "How does the Terminal Value calculation change with the mid-year convention?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "multiples",
+            "weight": 0.3333
+          },
+          {
+            "text": "0.5",
+            "weight": 0.3333
+          },
+          {
+            "text": "Gordon",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "With the **Multiples** Method, add **0.5** to the final-year discount period, since the sale is assumed at year end. With **Gordon** Growth, keep the final-year mid-year period as is, since the perpetual cash flows still arrive through the year."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-adv-q004",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, DCF Advanced, Q4",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "In a DCF for a public company, how do you calculate its per-share value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cash",
+            "weight": 0.3333
+          },
+          {
+            "text": "debt",
+            "weight": 0.3333
+          },
+          {
+            "text": "circular",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "From Enterprise Value, add **cash** and subtract **debt**, preferred stock, minority interest and other debt-like items to reach Equity Value. Then divide by diluted shares, which is **circular**: dilution from options and convertibles depends on the share price, which depends on the share count. Excel's iterative calculation resolves it."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-adv-q005",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, DCF Advanced, Q5",
+      "concepts": [
+        "ddm"
+      ],
+      "prompt_mdx": "Walk me through a Dividend Discount Model used in place of a DCF for financial institutions.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "payout ratio",
+            "weight": 0.3333
+          },
+          {
+            "text": "cost of equity",
+            "weight": 0.3333
+          },
+          {
+            "text": "P/E",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Project earnings down to EPS. Apply a dividend **payout ratio** based on history and regulatory capital needs to get dividends for 5 to 10 years. Discount them at the **Cost of Equity**, not WACC. Compute a terminal value from final-year EPS and a **P/E** multiple, discount it the same way, and add the two to get value per share."
+      }
+    },
+    {
+      "external_key": "ibq400-dcf-adv-q007",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, DCF Advanced, Q7",
+      "concepts": [
+        "dcf"
+      ],
+      "prompt_mdx": "A DCF gives an Enterprise Value of 200 USD. The company plans to buy a factory for 100 USD in cash in Year 4. How do you adjust the DCF and what is the new Enterprise Value?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "capex",
+            "weight": 0.3333
+          },
+          {
+            "text": "present value",
+            "weight": 0.3333
+          },
+          {
+            "text": "year 4",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Add 100 of **CapEx** in **Year 4**, which cuts that year's Free Cash Flow by 100. Enterprise Value falls by the **present value** of that amount: new EV = 200 - 100 / (1 + discount rate)^4. At a 10% rate, for example, that is 200 - 68.3 = 131.7."
+      }
+    }
+  ]
+}

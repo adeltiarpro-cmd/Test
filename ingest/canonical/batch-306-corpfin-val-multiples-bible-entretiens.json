@@ -1,0 +1,197 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "val-multiples",
+  "items": [
+    {
+      "external_key": "bible-p3-eval-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q6",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Présentez-moi la valorisation par les multiples boursiers. Illustrez avec un échantillon de multiples EV/EBITDA de 2x, 2x, 3x, 6x et 10x et une société à 5 M€ d'EBITDA.",
+      "payload": {
+        "max_words": 220
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparables",
+            "weight": 0.2
+          },
+          {
+            "text": "4,6",
+            "weight": 0.2
+          },
+          {
+            "text": "3",
+            "weight": 0.2
+          },
+          {
+            "text": "15",
+            "weight": 0.2
+          },
+          {
+            "text": "30",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "C'est une approche de marché. 1. Constituer un échantillon de sociétés **comparables** : même secteur, même géographie, mêmes risques, taille proche. 2. Calculer pour chacune la valeur d'entreprise et la valeur des fonds propres. 3. Calculer le nombre d'actions dilué. 4. Calculer les multiples d'EV (EV/CA, EV/EBITDA, EV/EBIT) et d'Equity Value (P/E, Price to Book), puis leur moyenne et leur médiane. 5. En tirer une fourchette. Ici la moyenne est de **4,6**x et la médiane de **3**x. Une fourchette de 3x à 6x donne une valeur d'entreprise entre **15** M€ et **30** M€."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q7",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Pour quel type d'entreprise utilise-t-on la valorisation par les multiples boursiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "IPO",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Elle s'applique à beaucoup d'entreprises car elle donne une bonne lecture du marché, et tout particulièrement à celles qui préparent une **IPO**. Elle est moins pertinente pour un processus M&A, puisqu'elle n'intègre pas de prime de contrôle."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q8",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Quelles sont les limites des multiples boursiers ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparables",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "La difficulté à trouver des sociétés réellement **comparables** : même secteur, même taille, mêmes risques opérationnels et financiers. On se contente des plus proches."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q9",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "Présentez-moi la valorisation par les transactions comparables.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "rachetées",
+            "weight": 0.3333
+          },
+          {
+            "text": "annonce",
+            "weight": 0.3333
+          },
+          {
+            "text": "multiples",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Même logique que les multiples boursiers, mais l'échantillon ne contient que des sociétés récemment **rachetées**. On retient la valeur d'entreprise ou des fonds propres à la date de la transaction, de préférence à l'**annonce**, ou au closing si elle a changé entre-temps. On calcule les **multiples** d'EV et d'Equity Value, puis une fourchette de valorisation."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q010",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q10",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "Pour quel type d'entreprise utilise-t-on la valorisation par les transactions comparables ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "fusions-acquisitions",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Dans le cadre d'opérations de **fusions-acquisitions**, puisque les prix observés incluent une prime de contrôle. Elle ne convient pas à une société qui prépare une IPO."
+      }
+    },
+    {
+      "external_key": "bible-p3-eval-q011",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, III Évaluation financière, Q11",
+      "concepts": [
+        "comparables"
+      ],
+      "prompt_mdx": "Quelles sont les limites des transactions comparables ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "similaires",
+            "weight": 0.5
+          },
+          {
+            "text": "moins",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Trouver des opérations réellement **similaires**. C'est plus difficile que pour les multiples boursiers, car il existe **moins** de transactions comparables que de sociétés cotées comparables."
+      }
+    },
+    {
+      "external_key": "bible-p4-eval-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Évaluation financière, Q4",
+      "concepts": [
+        "multiples"
+      ],
+      "prompt_mdx": "Le multiple EqV / EBIT est-il correct ? Pourquoi ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "non",
+            "weight": 0.3333
+          },
+          {
+            "text": "actionnaires",
+            "weight": 0.3333
+          },
+          {
+            "text": "tous les investisseurs",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Non**. L'Equity Value ne revient qu'aux **actionnaires**, alors que l'EBIT, situé avant les intérêts, revient à **tous les investisseurs**. Numérateur et dénominateur doivent refléter les mêmes investisseurs : EqV / résultat net ou EV / EBIT."
+      }
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "fit-personnalite",
+  "items": [
+    {
+      "external_key": "bible-p1-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q6",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Quelles sont vos qualités / Quels sont vos points forts ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Deux ou trois qualités utiles au poste, chacune illustrée par une situation vécue. Une qualité sans exemple ne pèse rien.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q007",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, I Fit, Q7",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Quelles sont vos défauts / Quels sont vos points faibles ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Un vrai défaut, qui ne soit pas rédhibitoire pour le poste, et ce que vous faites pour le corriger, exemple à l'appui. Évitez les fausses faiblesses du type perfectionniste.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, I Fit, Q8",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Si j'appelle votre manager, qu'est-ce qu'il pourra me dire de vous ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Répondez comme si l'appel allait avoir lieu : les points forts qu'il a réellement relevés, un axe de progrès qu'il vous a signalé et ce que vous en avez fait.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, I Fit, Q9",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Pourquoi vous et pas un autre ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Trois arguments : ce que vous avez fait, la compétence que cela prouve, votre motivation pour cette entreprise. Sans dénigrer les autres candidats.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q010",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, I Fit, Q10",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Quelle est votre pire erreur ou votre pire échec ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Dites la vérité. Un échec réel, votre part de responsabilité, ce que vous en avez tiré et ce que vous faites autrement depuis.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q011",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, I Fit, Q11",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Quelle est votre plus grande fierté ou votre plus grande réussite ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Une réussite précise, professionnelle ou personnelle : le contexte, l'obstacle, ce que vous avez fait, le résultat. Elle doit dire quelque chose de votre façon de travailler.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p1-q012",
+      "type": "short_answer",
+      "difficulty": 1,
+      "source_ref": "Bible des entretiens, I Fit, Q12",
+      "concepts": [
+        "fit-strengths"
+      ],
+      "prompt_mdx": "Que faites-vous de votre temps libre ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Des centres d'intérêt réels, avec un détail qui permet d'en parler : sport, voyages, association, lecture. C'est souvent ce qui crée le lien avec le recruteur.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    },
+    {
+      "external_key": "bible-p2-gen-q004",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Bible des entretiens, II Questions plus générales, Q4",
+      "concepts": [
+        "fit-tough"
+      ],
+      "prompt_mdx": "Comment gérez-vous votre stress ?",
+      "payload": {
+        "max_words": 250
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "e",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Décrivez une méthode concrète : organisation et priorités, anticipation, sport ou autre soupape. Illustrez par une situation tendue que vous avez bien traversée.\n\n*Question personnelle : pas de réponse unique. La correction est volontairement indulgente ; comparez votre réponse à la méthode ci-dessus.*"
+      }
+    }
+  ]
+}

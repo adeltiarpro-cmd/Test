@@ -1,0 +1,591 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "cs-lbo",
+  "items": [
+    {
+      "external_key": "ibq400-lbo-basic-q001",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q1",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Walk me through a basic LBO model.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.2
+          },
+          {
+            "text": "sources",
+            "weight": 0.2
+          },
+          {
+            "text": "balance sheet",
+            "weight": 0.2
+          },
+          {
+            "text": "debt",
+            "weight": 0.2
+          },
+          {
+            "text": "exit",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "1. Set the assumptions: **purchase price**, debt and equity split, interest rates, and operating assumptions such as growth and margins. 2. Build the **Sources** and Uses table, which shows how the deal is funded and how much investor equity is needed. 3. Adjust the **Balance Sheet** for the new debt and equity, with Goodwill and intangibles as the balancing item. 4. Project the three statements and work out how much **debt** is repaid each year from available cash flow. 5. Assume an **exit**, usually on an EBITDA multiple, and compute the return on the equity invested."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q002",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q2",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "Why would you use leverage when buying a company?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "return",
+            "weight": 0.5
+          },
+          {
+            "text": "capital",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "To raise the **return** on equity: borrowed money is not your own, so the same gain is earned on a smaller cheque. Paying 5 billion with 2 billion of equity and 3 billion of debt beats the reverse. It also leaves the fund with more **capital** for other deals."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q3",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "What variables impact an LBO model the most?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase",
+            "weight": 0.3333
+          },
+          {
+            "text": "exit",
+            "weight": 0.3333
+          },
+          {
+            "text": "leverage",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Purchase** and **exit** multiples first. Then the amount of **leverage**. Then operating drivers such as revenue growth and EBITDA margins."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q004",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q4",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "How do you pick purchase multiples and exit multiples in an LBO model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "comparable",
+            "weight": 0.5
+          },
+          {
+            "text": "sensitivity",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "As anywhere else: from **comparable** companies and comparable LBO transactions, shown as a range in **sensitivity** tables. When the model is used for valuation, the multiples can instead be solved from a target IRR."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q005",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q5",
+      "concepts": [
+        "lbo-candidate"
+      ],
+      "prompt_mdx": "What is an ideal candidate for an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "stable",
+            "weight": 0.3333
+          },
+          {
+            "text": "capital expenditures",
+            "weight": 0.3333
+          },
+          {
+            "text": "management",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Stable** and predictable cash flows above all. Also a low-risk business, limited need for **capital expenditures**, room to cut costs, a strong **management** team and assets that can serve as collateral."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q6",
+      "concepts": [
+        "lbo-valuation"
+      ],
+      "prompt_mdx": "How do you use an LBO model to value a company, and why is it said to set the floor valuation?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "IRR",
+            "weight": 0.3333
+          },
+          {
+            "text": "purchase price",
+            "weight": 0.3333
+          },
+          {
+            "text": "strategic",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Fix a target **IRR**, say 25%, and solve for the **purchase price** a fund could pay to reach it. It is called a floor because financial buyers almost always pay less than **strategic** acquirers would."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, LBO Model Basic, Q7",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Give an example of a real-life LBO.",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mortgage",
+            "weight": 0.5
+          },
+          {
+            "text": "down payment",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Buying a house with a **mortgage**. The **down payment** is the investor equity, the mortgage is the debt, the interest and principal payments are the debt service, and selling the house is the exit."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q008",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q8",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How is the Balance Sheet adjusted in an LBO model?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "debt",
+            "weight": 0.3333
+          },
+          {
+            "text": "equity",
+            "weight": 0.3333
+          },
+          {
+            "text": "goodwill",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "On the financing side, new **debt** is added and existing shareholders' **equity** is wiped out and replaced by the fund's contribution. On the asset side, cash is reduced by what is used in the deal, and **Goodwill** and intangibles are the plug. There may be other items such as capitalised financing fees."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q009",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q9",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Why are Goodwill and Other Intangibles created in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "premium",
+            "weight": 0.5
+          },
+          {
+            "text": "plug",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "They represent the **premium** paid over the company's fair value, and act as the **plug** that makes the asset side match the new financing side."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q010",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, LBO Model Basic, Q10",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "A strategic acquirer usually prefers to pay in cash. Why would a PE firm want to use debt in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "returns",
+            "weight": 0.5
+          },
+          {
+            "text": "company",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A fund holds the company for a few years only, so it cares less about the relative cost of cash and debt and more about boosting **returns** by putting in less capital. And in an LBO the debt sits in the **company**, which bears most of the risk, whereas a strategic buyer carries the acquisition debt itself."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q011",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q11",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "Do you need to project all 3 statements in an LBO model? Are there shortcuts?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "income statement",
+            "weight": 0.3333
+          },
+          {
+            "text": "debt",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash flow",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "No. You need some form of **Income Statement**, a schedule tracking **debt** balances, and a **cash flow** statement showing what is available for repayment. A full Balance Sheet can be skipped by assuming a net change in working capital."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q017",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q17",
+      "concepts": [
+        "lbo-candidate"
+      ],
+      "prompt_mdx": "Why would a private equity firm buy a company in a risky industry such as technology?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "mature",
+            "weight": 0.3333
+          },
+          {
+            "text": "consolidation",
+            "weight": 0.3333
+          },
+          {
+            "text": "turnaround",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Every industry has **mature**, cash-generative companies. And some funds pursue specific plays: industry **consolidation**, **turnarounds** of struggling businesses, or divestitures that turn a division into a stand-alone company."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-basic-q018",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, LBO Model Basic, Q18",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "How could a private equity firm boost its return in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "purchase price",
+            "weight": 0.2
+          },
+          {
+            "text": "exit",
+            "weight": 0.2
+          },
+          {
+            "text": "leverage",
+            "weight": 0.2
+          },
+          {
+            "text": "growth",
+            "weight": 0.2
+          },
+          {
+            "text": "margins",
+            "weight": 0.2
+          }
+        ],
+        "model_answer_mdx": "Lower the **purchase price**, raise the **exit** multiple, use more **leverage**, increase **growth** organically or by acquisition, and widen **margins** by cutting costs. All easier in a model than in reality."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q002",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q2",
+      "concepts": [
+        "purchase-accounting"
+      ],
+      "prompt_mdx": "How would an asset write-up or write-down affect an LBO model? How do you adjust the Balance Sheet?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "merger model",
+            "weight": 0.3333
+          },
+          {
+            "text": "equity",
+            "weight": 0.3333
+          },
+          {
+            "text": "tranches",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Much as in a **merger model**: goodwill, intangibles, write-ups, deferred taxes, cash used, capitalised fees and new debt are handled the same way. Three differences: existing **equity** is replaced by the sponsor's contribution, possibly with preferred stock or management rollover, there are many more debt **tranches**, and you are not combining two balance sheets."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q003",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q3",
+      "concepts": [
+        "irr"
+      ],
+      "prompt_mdx": "How do you calculate the IRR for the debt investors in an LBO?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "interest",
+            "weight": 0.3333
+          },
+          {
+            "text": "principal",
+            "weight": 0.3333
+          },
+          {
+            "text": "remaining",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Year 0 is the amount lent, as a negative flow. Each year's flow is the **interest** and **principal** received. The final flow includes the **remaining** balance repaid. Apply the IRR function. It is usually below the equity IRR, but can exceed it if the deal goes badly."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q007",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q7",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "An LBO can be structured as a stock or an asset purchase. Can you also use a Section 338(h)(10) election?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "no",
+            "weight": 0.5
+          },
+          {
+            "text": "C corporation",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Generally **no**: the election requires the buyer to be a **C corporation**, while funds are organised as LLCs or limited partnerships and acquire through an LLC shell."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q011",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q11",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "In an LBO model, can debt investors get a higher return than the PE firm? What does that tell us?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "yes",
+            "weight": 0.5
+          },
+          {
+            "text": "multiples",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Yes**, and more often than expected. High-yield holders lock in their coupon, often 10 to 15%, as long as the debt is repaid. If exit **multiples** contract or the company fails to grow, the equity IRR can fall below that, which tells you the deal underperformed."
+      }
+    },
+    {
+      "external_key": "ibq400-lbo-adv-q012",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, LBO Model Advanced, Q12",
+      "concepts": [
+        "lbo-returns"
+      ],
+      "prompt_mdx": "More leverage usually means a higher IRR. How could increasing leverage reduce the IRR?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "interest",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash flow",
+            "weight": 0.3333
+          },
+          {
+            "text": "multiple",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "When **interest** and principal payments become so heavy that they absorb the **cash flow** the company needs. It takes a combination: little EBITDA growth, debt service high relative to cash flow, and a high purchase **multiple** that already makes a good IRR hard to reach."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q022",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q22",
+      "concepts": [
+        "deal-structure"
+      ],
+      "prompt_mdx": "What is the difference between a stock purchase and an asset purchase, and which would the buyer and the seller prefer in a distressed sale?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "liabilities",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset",
+            "weight": 0.3333
+          },
+          {
+            "text": "stock",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "A stock purchase takes all the shares and with them every asset and liability, on and off balance sheet. An asset purchase takes selected assets and selected **liabilities**. The buyer almost always prefers an **asset** purchase, to avoid unknown liabilities and for tax reasons. The distressed seller prefers a **stock** purchase, to shed all liabilities and because asset sales are taxed more heavily."
+      }
+    },
+    {
+      "external_key": "ibq400-restr-q040",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Restructuring / Distressed M&A, Q40",
+      "concepts": [
+        "lbo"
+      ],
+      "prompt_mdx": "How would an LBO model for a distressed company be different?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "pay off",
+            "weight": 0.5
+          },
+          {
+            "text": "asset purchase",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Its purpose shifts from the sponsor's IRR to how fast the company can **pay off** its obligations and what return new debt and equity investors can expect. The mechanics are the same, with other debt types such as DIP, possibly more tranches, and generally lower returns. Structurally it is more likely to be an **asset purchase**."
+      }
+    }
+  ]
+}

@@ -1,0 +1,445 @@
+{
+  "source": "The 400 Investment Banking Interview Questions & Answers You Need to Know",
+  "track": "corpfin",
+  "module": "fm-statement-impacts",
+  "items": [
+    {
+      "external_key": "ibq400-acc-basic-q006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q6",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Depreciation goes up by 10 USD. Walk me through the effect on the 3 statements (40% tax rate).",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "6",
+            "weight": 0.3333
+          },
+          {
+            "text": "4",
+            "weight": 0.3333
+          },
+          {
+            "text": "balance",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Income Statement: operating income falls by 10, so Net Income falls by **6** after tax. Cash Flow Statement: Net Income is down 6, but the 10 of Depreciation is non-cash and added back, so cash flow from operations and the net change in cash are up **4**. Balance Sheet: PP&E down 10, Cash up 4, so Assets down 6. Shareholders' Equity is down 6 through Net Income, so both sides **balance**."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q007",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q7",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "If Depreciation is a non-cash expense, why does it affect the cash balance?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "tax",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "Because it is **tax**-deductible. It lowers taxable income, and taxes are paid in cash, so more Depreciation means less cash paid in tax."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q008",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "400 Questions, Accounting Basic, Q8",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Where does Depreciation usually show up on the Income Statement?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "cost of goods sold",
+            "weight": 0.3333
+          },
+          {
+            "text": "operating expenses",
+            "weight": 0.3333
+          },
+          {
+            "text": "pre-tax",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "It varies by company: sometimes on its own line, sometimes buried inside **Cost of Goods Sold** or **Operating Expenses**. Either way it reduces **Pre-Tax** Income."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q012",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q12",
+      "concepts": [
+        "debt-capex"
+      ],
+      "prompt_mdx": "A company buys 100 USD of new factories financed with debt. How are the 3 statements affected at the start of Year 1, before anything else happens?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "investing",
+            "weight": 0.25
+          },
+          {
+            "text": "financing",
+            "weight": 0.25
+          },
+          {
+            "text": "PP&E",
+            "weight": 0.25
+          },
+          {
+            "text": "debt",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Income Statement: nothing yet. Cash Flow Statement: minus 100 in cash flow from **investing** for the purchase, plus 100 in cash flow from **financing** for the debt raised, so cash is unchanged. Balance Sheet: **PP&E** up 100 on the asset side, **Debt** up 100 on the other side."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q013",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q13",
+      "concepts": [
+        "debt-capex"
+      ],
+      "prompt_mdx": "One year later: the debt is high-yield so no principal is repaid, the interest rate is 10%, and the factories depreciate at 10% per year. What happens on the 3 statements (40% tax)?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "12",
+            "weight": 0.3333
+          },
+          {
+            "text": "2",
+            "weight": 0.3333
+          },
+          {
+            "text": "PP&E",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Income Statement: 10 of depreciation and 10 of interest cut Pre-Tax Income by 20, so Net Income falls by **12**. Cash Flow Statement: Net Income down 12, depreciation of 10 added back, so operating cash flow and cash are down **2**. Balance Sheet: Cash down 2 and **PP&E** down 10, so Assets down 12. Equity is down 12. Debt is unchanged because nothing was repaid."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q014",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Accounting Basic, Q14",
+      "concepts": [
+        "write-down"
+      ],
+      "prompt_mdx": "At the start of Year 3 the factories break down and are written down to zero, and the loan must be repaid. Walk me through the 3 statements (40% tax).",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "80",
+            "weight": 0.25
+          },
+          {
+            "text": "48",
+            "weight": 0.25
+          },
+          {
+            "text": "68",
+            "weight": 0.25
+          },
+          {
+            "text": "148",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "After two years of 10% depreciation the factories carry a value of **80**, which is the write-down. Income Statement: Pre-Tax Income down 80, Net Income down **48**. Cash Flow Statement: Net Income down 48, the non-cash write-down of 80 is added back, so operating cash flow is up 32. Financing shows minus 100 for the loan repayment. Net change in cash: down **68**. Balance Sheet: Cash down 68 and PP&E down 80, so Assets down **148**. Debt down 100 and Equity down 48, also 148."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q020",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q20",
+      "concepts": [
+        "write-down"
+      ],
+      "prompt_mdx": "An asset is written down by 100 USD. Walk me through the 3 statements (40% tax).",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "60",
+            "weight": 0.3333
+          },
+          {
+            "text": "40",
+            "weight": 0.3333
+          },
+          {
+            "text": "asset",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Income Statement: Pre-Tax Income down 100, Net Income down **60**. Cash Flow Statement: Net Income down 60, the non-cash write-down added back, so operating cash flow and cash are up **40**. Balance Sheet: Cash up 40 and the written-down **asset** down 100, so Assets down 60. Equity down 60."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q022",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Accounting Basic, Q22",
+      "concepts": [
+        "write-down"
+      ],
+      "prompt_mdx": "Walk me through a 100 USD write-down of debt (a liability the company owes) and its effect on the 3 statements (40% tax).",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "gain",
+            "weight": 0.3333
+          },
+          {
+            "text": "60",
+            "weight": 0.3333
+          },
+          {
+            "text": "40",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Counter-intuitively, writing down a liability is a **gain**. Income Statement: Pre-Tax Income up 100, Net Income up **60**. Cash Flow Statement: Net Income up 60, but the non-cash gain of 100 is subtracted, so operating cash flow and cash are down **40**. Balance Sheet: Cash down 40 on the asset side. On the other side Debt down 100 and Equity up 60, a net minus 40."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q032",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q32",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Goodwill normally stays constant on the Balance Sheet. Why would it be impaired, and what does Goodwill Impairment mean?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "overpaid",
+            "weight": 0.5
+          },
+          {
+            "text": "worth less",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Impairment happens when the acquirer reassesses what it bought (customers, brand, intellectual property) and finds it **worth less** than assumed, typically because it **overpaid**. It produces a large non-cash loss. It can also follow the discontinuation of part of the acquired business."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-basic-q033",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Basic, Q33",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Under what circumstances would Goodwill increase?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "acquire",
+            "weight": 0.5
+          },
+          {
+            "text": "plug",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "A revaluation upward is possible in theory but rare. In practice Goodwill changes in two cases: the company itself is bought and Goodwill is reset, since it is the **plug** for the purchase price. Or it **acquires** another company for more than the value of its assets."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q001",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Accounting Advanced, Q1",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "How is GAAP accounting different from tax accounting?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "accrual",
+            "weight": 0.3333
+          },
+          {
+            "text": "cash",
+            "weight": 0.3333
+          },
+          {
+            "text": "depreciation",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "GAAP is **accrual**-based while tax accounting is **cash**-based. GAAP typically uses straight-line **depreciation** while tax rules allow accelerated schedules. And GAAP tracks assets and liabilities in detail, whereas tax accounting only cares about the period's revenue and expenses and the tax owed."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q002",
+      "type": "short_answer",
+      "difficulty": 4,
+      "source_ref": "400 Questions, Accounting Advanced, Q2",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "What are deferred tax assets and liabilities, and how do they arise?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "temporary differences",
+            "weight": 0.3333
+          },
+          {
+            "text": "write-up",
+            "weight": 0.3333
+          },
+          {
+            "text": "write-down",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "They come from **temporary differences** between what is deductible for book purposes and for cash tax purposes. A liability arises when tax is expensed on the Income Statement but not yet paid in cash. An asset arises when tax is paid in cash before being expensed. The most common source is M&A: an asset **write-up** creates a deferred tax liability, a **write-down** creates a deferred tax asset."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q013",
+      "type": "short_answer",
+      "difficulty": 5,
+      "source_ref": "400 Questions, Accounting Advanced, Q13",
+      "concepts": [
+        "deferred-tax"
+      ],
+      "prompt_mdx": "How do Net Operating Losses (NOLs) affect a company's 3 statements?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "taxable income",
+            "weight": 0.5
+          },
+          {
+            "text": "deferred tax",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Quick way: reduce **Taxable Income** by the NOLs usable each year, apply the tax rate, and deduct that lower tax from an unchanged Pre-Tax Income. Proper way: build a book versus cash tax schedule, compute tax with and without NOLs, and book the difference as a change in the **Deferred Tax** balance, which captures the cash saving while keeping book and cash taxes separate."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q014",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q14",
+      "concepts": [
+        "leases"
+      ],
+      "prompt_mdx": "What is the difference between capital leases and operating leases?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "operating expenses",
+            "weight": 0.25
+          },
+          {
+            "text": "debt",
+            "weight": 0.25
+          },
+          {
+            "text": "75%",
+            "weight": 0.25
+          },
+          {
+            "text": "90%",
+            "weight": 0.25
+          }
+        ],
+        "model_answer_mdx": "Operating leases are short-term rentals with no ownership. The cost runs through **operating expenses**. Capital leases cover longer-lived items and convey ownership rights: the asset is depreciated, interest is paid, and the obligation counts as **debt**. Under the classic US test, a lease is capital if any of four conditions holds: ownership transfers at the end, there is a bargain purchase option, the term exceeds **75%** of the asset's useful life, or the present value of payments exceeds **90%** of its fair value."
+      }
+    },
+    {
+      "external_key": "ibq400-acc-adv-q015",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "400 Questions, Accounting Advanced, Q15",
+      "concepts": [
+        "da-impact"
+      ],
+      "prompt_mdx": "Why would the D&A number on the Income Statement differ from the one on the Cash Flow Statement?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "embedded",
+            "weight": 0.5
+          },
+          {
+            "text": "cash flow statement",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Because part of D&A is **embedded** in other Income Statement lines such as COGS. In that case, use the **Cash Flow Statement** figure to compute EBITDA, or D&A will be undercounted."
+      }
+    }
+  ]
+}

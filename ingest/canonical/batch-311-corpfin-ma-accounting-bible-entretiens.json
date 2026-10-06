@@ -1,0 +1,67 @@
+{
+  "source": "La bible des entretiens en finance (The Big Win)",
+  "track": "corpfin",
+  "module": "ma-accounting",
+  "items": [
+    {
+      "external_key": "bible-p3-ma-q006",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, III M&A, Q6",
+      "concepts": [
+        "consolidation"
+      ],
+      "prompt_mdx": "Connaissez-vous les différentes méthodes de consolidation ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "intégration globale",
+            "weight": 0.3333
+          },
+          {
+            "text": "mise en équivalence",
+            "weight": 0.3333
+          },
+          {
+            "text": "proportionnelle",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "**Intégration globale** : au-delà de 50 % du capital. Toutes les lignes sont reprises à 100 %, avec des intérêts minoritaires au résultat net et aux capitaux propres. **Mise en équivalence** : entre 20 % et 50 %. Seule la quote-part du résultat net et des capitaux propres est reprise. Intégration **proportionnelle** : pour une joint-venture, chaque ligne est reprise au prorata de la détention, par exemple 50 % pour deux partenaires."
+      }
+    },
+    {
+      "external_key": "bible-p4-corp-q003",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Bible des entretiens, IV Corporate Finance, Q3",
+      "concepts": [
+        "goodwill"
+      ],
+      "prompt_mdx": "Que se passe-t-il lorsqu'un acheteur paie une entreprise plus cher que ce qu'elle vaut ?",
+      "payload": {
+        "max_words": 150
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "goodwill",
+            "weight": 0.3333
+          },
+          {
+            "text": "impairment",
+            "weight": 0.3333
+          },
+          {
+            "text": "perte",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Il inscrit un **goodwill** à son bilan, égal à l'écart entre le prix et l'actif net. Ce goodwill est soumis à un **impairment** : si sa valeur comptable dépasse sa valeur réelle, il est déprécié et la charge passe en **perte** au compte de résultat."
+      }
+    }
+  ]
+}
