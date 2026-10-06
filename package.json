@@ -21,7 +21,7 @@
     "katex": "^0.18.4",
     "lucide-react": "^1.31.0",
     "mathjs": "^15.2.0",
-    "next": "15.1.6",
+    "next": "15.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.6.0",
