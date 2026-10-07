@@ -1,0 +1,1410 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-swaps",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-163",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Un **swap de taux d'intérêt** (IRS) plain vanilla échange :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Des flux à taux fixe contre des flux à taux variable sur un notionnel commun"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le notionnel entre les deux contreparties"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Des dividendes contre des intérêts"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des flux en deux devises différentes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "IRS plain vanilla : une partie paie fixe, l'autre paie variable (ex : SOFR). Seuls les flux nets sont échangés.",
+        "distractor_explains": {
+          "b": "Le notionnel ne change pas de mains dans un IRS.",
+          "c": "C'est un equity swap.",
+          "d": "C'est un currency swap."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-164",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "IRS : notionnel 10 M USD, taux fixe $k=4\\%$, SOFR courant $=5\\%$, paiement semestriel. Flux net payé par le **payeur fixe** à cette échéance (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": -50000.0,
+        "steps_mdx": "Payeur fixe reçoit variable et paie fixe. Flux net $=(k-r_{var})\\times N\\times0.5=(0.04-0.05)\\times10\\,000\\,000\\times0.5=\\mathbf{-50\\,000}$ USD (perte).",
+        "formula_katex": "(k - r_{SOFR}) \\times N \\times \\tau"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-165",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "IRS 2 ans, notionnel 20 M USD, taux fixe $k=3.5\\%$, paiements annuels. Taux spot SOFR : $r_1=3\\%$, $r_2=3.8\\%$ (continus). Valorisez la **position fixe payeuse** en calculant : (a) la valeur de la jambe fixe, (b) la valeur de la jambe variable, (c) la valeur du swap.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Valeur jambe fixe (USD)",
+            "unit": "USD",
+            "tolerance": 100.0,
+            "solution_mdx": "$700\\,000\\,e^{-0.03}+20\\,700\\,000\\,e^{-0.076}=679\\,395+18\\,971\\,508=\\mathbf{19\\,650\\,903}$ USD",
+            "hint_mdx": "Actualiser les flux fixes $N\\times k$ aux taux spot"
+          },
+          {
+            "label": "Valeur jambe variable (USD)",
+            "unit": "USD",
+            "tolerance": 100.0,
+            "solution_mdx": "Juste après reset : valeur $=N=\\mathbf{20\\,000\\,000}$ USD (ou actualiser les flux variables prévus)",
+            "hint_mdx": "La jambe variable vaut le notionnel à la date de reset"
+          },
+          {
+            "label": "Valeur du swap payeur fixe (USD)",
+            "unit": "USD",
+            "tolerance": 100.0,
+            "solution_mdx": "$V_{swap}=V_{variable}-V_{fixe}=20\\,000\\,000-19\\,650\\,903=\\mathbf{+349\\,097}$ USD",
+            "trap_mdx": "Le payeur fixe gagne quand les taux montent."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 19650903.0
+          },
+          {
+            "answer": 20000000.0
+          },
+          {
+            "answer": 349097.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-166",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Le **taux de swap** (swap rate) à l'initiation est choisi de sorte que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La valeur initiale du swap soit nulle"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les paiements fixes soient toujours inférieurs aux paiements variables"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le swap soit avantageux pour le payeur fixe"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le notionnel soit minimisé"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "À l'initiation, $V_{swap}=0$ : le taux fixe $k$ est le taux de marché qui égalise jambe fixe et variable.",
+        "distractor_explains": {
+          "b": "Dépend des taux futurs.",
+          "c": "Valeur nulle = aucun avantage initial.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-167",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Taux SOFR 1 an $r_1=2.5\\%$, 2 ans $r_2=3.0\\%$, 3 ans $r_3=3.4\\%$ (continus). Quel est le **taux de swap 3 ans** $k$ (annuel, notionnel 1) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 3.35,
+        "steps_mdx": "$k = \\frac{1-e^{-r_3 T_3}}{\\sum_{i=1}^3 e^{-r_i T_i}} = \\frac{1-e^{-0.034\\times3}}{e^{-0.025}+e^{-0.06}+e^{-0.102}}$$=\\frac{1-0.9028}{0.9753+0.9418+0.9031}=\\frac{0.0972}{2.8202}=\\mathbf{3.45}\\%$",
+        "formula_katex": "\\frac{1-e^{-r_n T_n}}{\\sum e^{-r_i T_i}}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-168",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Expliquez comment un **swap** peut être vu comme un échange d'obligations.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Payeur fixe = long flottant + court fixe",
+            "weight": 0.5
+          },
+          {
+            "text": "Correspond à une obligation synthétique",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le payeur fixe dans un IRS peut être vu comme ayant :\n- **vendu** une obligation à taux fixe (obligation qu'il devrait payer des coupons fixes)\n- **acheté** une obligation à taux variable (qui lui verse SOFR)\nLa valeur du swap = $B_{flottant} - B_{fixe}$ pour le payeur fixe. Cette décomposition facilite la valorisation : $B_{flottant}=N$ au reset, $B_{fixe}$ s'actualise aux taux spot."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-169",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Dans un **currency swap**, le notionnel :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Est échangé au début et à la fin, en deux devises différentes"
+          },
+          {
+            "key": "b",
+            "text_mdx": "N'est jamais échangé"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Est échangé uniquement à l'échéance"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Est déterminé par le taux de change à l'échéance"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Currency swap : échange du principal en devises au début (et souvent à la fin), plus les intérêts.",
+        "distractor_explains": {
+          "b": "Contrairement à l'IRS où le notionnel n'est pas échangé.",
+          "c": "En général, échangé aussi au début.",
+          "d": "Taux de change fixé au début."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-170",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Currency swap : société A paie $4\\%$ sur 10 M USD, reçoit $2\\%$ sur 8 M EUR. EUR/USD $=1.25$. Flux nets annuels en USD si l'EUR monte à $1.30$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": -240000.0,
+        "steps_mdx": "Paie $: 10\\,000\\,000\\times0.04=400\\,000$ USD. Reçoit $: 8\\,000\\,000\\times0.02\\times1.30=208\\,000$ USD. Flux net $=208\\,000-400\\,000=\\mathbf{-192\\,000}$ USD.",
+        "formula_katex": "reçoit_{EUR}\\times FX - paie_{USD}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-171",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Pourquoi les entreprises utilisent-elles des **swaps de devises** pour réduire leur coût d'emprunt ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Avantage comparatif sur différents marchés",
+            "weight": 0.5
+          },
+          {
+            "text": "Arbitrage réglementaire et accès au marché",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Chaque entreprise a un avantage comparatif sur un marché obligataire particulier. Par exemple, une firme américaine emprunte en USD à conditions avantageuses mais veut des EUR. Une firme européenne a l'avantage inverse. Elles empruntent chacune sur leur marché naturel puis **échangent** les flux via un swap. Les deux réduisent leur coût d'emprunt grâce à l'avantage comparatif."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-172",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Un **equity swap** verse :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le rendement total d'un indice contre un taux fixe ou variable"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Des dividendes contre des coupons"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La valeur d'une option sur action"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des dividendes en actions contre des dividendes en espèces"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Equity swap : une partie reçoit le rendement d'un indice (gains + dividendes), l'autre paie fixe ou LIBOR.",
+        "distractor_explains": {
+          "b": "Incomplet.",
+          "c": "Ce n'est pas un swap.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-173",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "IRS 1 an, notionnel 5 M USD, taux fixe $k=4\\%$, paiements trimestriels. SOFR trimestriels : Q1=3.8%, Q2=4.1%, Q3=4.3%, Q4=4.5%. Gain **net** pour le receveur fixe sur l'année (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 8750.0,
+        "steps_mdx": "Flux nets trimestriels $(r_{var}-k)\\times N\\times0.25$ : Q1=$(3.8-4)\\times5M\\times0.25=-2500$, Q2=+1250, Q3=+3750, Q4=+6250. Total $=-2500+1250+3750+6250=\\mathbf{8750}$ USD.",
+        "formula_katex": "\\sum (r_i - k) \\times N \\times \\tau"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-174",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Le **risque de crédit** d'un swap est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le risque que la contrepartie ne respecte pas ses obligations"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le risque de variation des taux d'intérêt"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le risque de change"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le risque de liquidité du marché"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le risque de crédit (contrepartie) est la préoccupation principale dans les swaps OTC non compensés.",
+        "distractor_explains": {
+          "b": "C'est le risque de marché.",
+          "c": "Faux pour un IRS en USD.",
+          "d": "Risque de liquidité ≠ crédit."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-175",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Société A : notation AAA, emprunte fixe à 4%, variable à SOFR+0.3%. Société B : notation BBB, emprunte fixe à 5.2%, variable à SOFR+0.8%. Montrez le **gain d'arbitrage** d'un swap où A emprunte fixe et B variable.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Avantage comparatif de A (pb fixe vs variable)",
+            "unit": "bp",
+            "tolerance": 0.5,
+            "solution_mdx": "Fixe : $5.2-4=1.2\\%$. Variable : $0.8-0.3=0.5\\%$. Avantage A sur fixe : $1.2-0.5=\\mathbf{70}$ bp.",
+            "hint_mdx": "Différentiel fixe $-$ différentiel variable"
+          },
+          {
+            "label": "Gain total à partager (bp)",
+            "unit": "bp",
+            "tolerance": 0.5,
+            "solution_mdx": "Gain total $=\\mathbf{70}$ bp (partagé entre A, B et le dealer)."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 70.0
+          },
+          {
+            "answer": 70.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-176",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Un **amortizing swap** se distingue d'un vanilla IRS par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Son notionnel qui diminue dans le temps"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Ses taux qui varient à chaque échéance"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Son règlement en capital"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Sa duration nulle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Amortizing swap : notionnel réduit selon un calendrier, utilisé pour couvrir des prêts immobiliers.",
+        "distractor_explains": {
+          "b": "Le taux fixe est constant.",
+          "c": "Comme un IRS standard.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-177",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "IRS : payeur fixe $k=3\\%$, notionnel 10 M USD, 2 ans restants. Courbe plate à $r=4\\%$ (continu). La **valeur mark-to-market** du swap (payeur fixe) est :",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 500.0
+        }
+      },
+      "solution": {
+        "value": 190800.0,
+        "steps_mdx": "$V=B_{flot}-B_{fixe}$. $B_{flot}=10\\,000\\,000$ (au prochain reset). $B_{fixe}=300\\,000\\,e^{-0.04}+10\\,300\\,000\\,e^{-0.08}=288\\,534+9\\,520\\,666=9\\,809\\,200$. $V=10\\,000\\,000-9\\,809\\,200=\\mathbf{+190\\,800}$ USD.",
+        "formula_katex": "B_{float} - B_{fix}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-178",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Quels sont les **usages principaux** d'un swap de taux d'intérêt pour une entreprise ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Convertir dette fixe en variable ou vice-versa",
+            "weight": 0.5
+          },
+          {
+            "text": "Spéculation sur la direction des taux",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un IRS permet à une entreprise de : (1) **convertir** un emprunt à taux fixe en taux variable (ou l'inverse) sans rembourser la dette, (2) **arbitrer** son avantage comparatif sur certains marchés, (3) **gérer** l'actif-passif (ALM) en alignant la sensibilité aux taux des actifs et passifs. Les banques utilisent massivement les IRS pour gérer leur risque de taux."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-179",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Un **total return swap** (TRS) permet à l'acheteur de protection de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Transférer le risque de crédit ET le risque de marché d'un actif"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Assurer uniquement le risque de défaut"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Recevoir les coupons d'une obligation sans la détenir"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Vendre l'obligation sous-jacente à terme"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "TRS : le vendeur de protection reçoit le rendement total (coupons + variation de prix), paie LIBOR±spread.",
+        "distractor_explains": {
+          "b": "C'est un CDS.",
+          "c": "Le vendeur de protection reçoit le rendement total.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-180",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Swap de taux $k=3.5\\%$, notionnel 50 M USD, 3 ans, paiements annuels. Taux spot : $r_1=3\\%$, $r_2=3.5\\%$, $r_3=4\\%$ (continus). Vérifiez que $k$ donne $V_{swap}=0$.",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "Jambe fixe : $\\sum 1\\,750\\,000\\,e^{-r_i}+50\\,000\\,000\\,e^{-0.12}$. Jambe variable = 50 M USD. Avec $k=3.5\\%$, on peut vérifier numériquement que $V=0$ au taux de marché initial.",
+        "formula_katex": "V_{swap}=B_{float}-B_{fixed}=0"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-181",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Dans un IRS, le **risque de crédit net** est typiquement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Inférieur au notionnel, car seuls les flux nets sont exposés"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Égal au notionnel"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Supérieur au notionnel à cause du levier"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Nul grâce à la chambre de compensation"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Seul le flux net (différence fixe/variable) est à risque, pas le notionnel (qui n'est pas échangé).",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Vrai si compensé centralement, mais pas toujours."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-182",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Swap de devises : A paie $3\\%$ sur 8 M USD, reçoit $1.5\\%$ sur 7 M EUR. Taux forward EUR/USD dans 1 an $=1.12$. Valeur du flux variable EUR en USD ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 117600.0,
+        "steps_mdx": "Flux EUR $= 7\\,000\\,000\\times0.015=105\\,000$ EUR. En USD $: 105\\,000\\times1.12=\\mathbf{117\\,600}$ USD.",
+        "formula_katex": "CF_{EUR} \\times FX_{forward}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-183",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Comment un swap peut-il être utilisé pour **transformer un actif** (asset swap) ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Convertit le rendement d'une obligation fixe en rendement variable",
+            "weight": 0.5
+          },
+          {
+            "text": "Utile pour les institutions à passifs variables",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Dans un asset swap, un investisseur détient une obligation à coupon fixe $c$ et entre dans un IRS où il **paie fixe** $c$ et **reçoit** SOFR + spread. Le résultat synthétique est une obligation à taux variable. L'asset swap spread mesure la qualité de crédit de l'émetteur au-dessus de SOFR."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-184",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "Le **DV01** d'un IRS payeur fixe est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Positif : si les taux montent, la valeur du swap augmente pour le payeur fixe"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Négatif : le payeur fixe perd quand les taux montent"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Nul car les flux se compensent"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Égal au DV01 du notionnel"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Payeur fixe = position longue duration variable, courte duration fixe. Net : duration positive. Taux montent → valeur augmente.",
+        "distractor_explains": {
+          "b": "Inverse.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-185",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps"
+      ],
+      "prompt_mdx": "IRS de 5 ans, notionnel 100 M USD, taux fixe $k=5\\%$. DV01 = 4 200 USD/bp. Si les taux baissent de 30 bp, gain/perte pour le **receveur fixe** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 500.0
+        }
+      },
+      "solution": {
+        "value": -126000.0,
+        "steps_mdx": "Receveur fixe a un DV01 **négatif** (positions inverses du payeur). Perte $= -4\\,200\\times30=\\mathbf{-126\\,000}$ USD.",
+        "formula_katex": "-DV01 \\times \\Delta bp"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-674",
+      "type": "mcq",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "L'**ajustement de convexité** pour passer du taux futures au taux forward est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Positif : le taux futures est supérieur au taux forward"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Nul : les deux taux sont identiques"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Négatif : le futures est inférieur au forward"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Variable selon la durée du contrat uniquement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le marking-to-market du futures crée un biais positif : taux futures $>$ taux forward de même maturité.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "L'ajustement dépend aussi de la volatilité."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-675",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Taux futures Eurodollar à 5 ans : $4.80\\%$. Volatilité $\\sigma=1.2\\%$ annuel. Ajustement de convexité approx $=\\frac{1}{2}\\sigma^2 t_1 t_2$ (Hull). Avec $t_1=5$ ans, $t_2=5.25$ ans, taux forward $\\approx$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 4.611,
+        "steps_mdx": "Ajustement $= \\frac{1}{2}(0.012)^2\\times5\\times5.25=\\frac{1}{2}\\times0.000144\\times26.25=0.00189=\\mathbf{0.189}\\%$. Forward $\\approx4.80-0.189=\\mathbf{4.611}\\%$.",
+        "formula_katex": "r_f \\approx r_{futures} - \\frac{1}{2}\\sigma^2 t_1 t_2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-676",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "L'**ajustement de timing** est nécessaire quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le paiement du flux se produit à un moment différent de la période d'observation"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux n'est pas le LIBOR"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le notionnel varie dans le temps"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'ajustement de convexité est nul"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Si un taux SOFR 6 mois est observé en $t$ mais payé en $t + 6$ mois, un ajustement de timing est requis.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-677",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "SOFR 6 mois dans 2 ans : forward $=3.5\\%$, $\\sigma=0.8\\%$, corrélation taux/FX $\\rho=0.3$, volatilité FX $\\sigma_{FX}=10\\%$, $t=2$ ans. Ajustement quanto approx $=-\\rho\\sigma\\sigma_{FX}t$ : valeur ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": -0.048,
+        "steps_mdx": "$= -0.3\\times0.008\\times0.10\\times2 = \\mathbf{-0.048}\\%$",
+        "formula_katex": "-\\rho \\sigma_r \\sigma_{FX} t"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-678",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un **quanto** et pourquoi nécessite-t-il un ajustement de valorisation ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Payoff dans une devise, sous-jacent dans une autre",
+            "weight": 0.5
+          },
+          {
+            "text": "Corrélation taux/FX crée un biais",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un quanto est un dérivé dont le payoff est calculé dans une devise mais réglé dans une autre à taux de change fixé. Par exemple, un investisseur européen reçoit le rendement du S&P500 en EUR à 1:1. La corrélation entre le sous-jacent et le taux de change crée un biais dans l'espérance du payoff : l'ajustement quanto est $\\exp(-\\rho\\sigma_S\\sigma_{FX}T)$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-679",
+      "type": "mcq",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "L'ajustement de convexité pour les SOFR futures à longue maturité est important car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La volatilité des taux amplifiée sur de longues périodes crée un écart significatif"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les contrats lointains ont moins de liquidité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux SOFR est naturellement plus convexe que le LIBOR"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les marchés à terme sont inefficients sur les longues maturités"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "L'ajustement $\\propto \\sigma^2 t_1 t_2$ croît avec le temps, devenant significatif au-delà de 2 ans.",
+        "distractor_explains": {
+          "b": "Liquidité ≠ convexité.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-680",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Taux forward à 3 ans : $4.0\\%$. Ajustement de convexité calculé : $+15$ bp. Taux futures correspondant ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 4.15,
+        "steps_mdx": "Taux futures $=$ forward $+$ ajustement $= 4.0+0.15=\\mathbf{4.15}\\%$.",
+        "formula_katex": "r_{futures} = r_{forward} + CA"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-681",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Un contrat futures Eurodollar à 4 ans cote 94.50. Volatilité $\\sigma=1.5\\%$, $t_1=4$, $t_2=4.25$ ans. Estimez : (a) l'ajustement de convexité, (b) le taux forward.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Ajustement de convexité (bp)",
+            "unit": "bp",
+            "tolerance": 0.5,
+            "solution_mdx": "$CA=\\frac{1}{2}(0.015)^2\\times4\\times4.25=\\frac{1}{2}\\times0.000225\\times17=0.001913=\\mathbf{19.1}$ bp",
+            "hint_mdx": "$CA=\\frac{1}{2}\\sigma^2 t_1 t_2$"
+          },
+          {
+            "label": "Taux forward (%)",
+            "unit": "%",
+            "tolerance": 0.01,
+            "solution_mdx": "Taux futures $=100-94.50=5.50\\%$. Forward $=5.50-0.191=\\mathbf{5.309}\\%$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 19.1
+          },
+          {
+            "answer": 5.309
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-682",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Expliquez intuitivement pourquoi le **taux futures est supérieur au taux forward** de même maturité.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Marking-to-market avantage le court sur futures de taux",
+            "weight": 0.5
+          },
+          {
+            "text": "Corrélation gains/réinvestissement",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le détenteur d'une position **courte** sur un futures de taux (qui bénéficie d'une hausse des taux) reçoit des flux de marge précisément quand les taux sont élevés → ces flux sont réinvestis à un taux élevé. À l'inverse, le long paie des flux quand les taux sont élevés et reçoit quand ils sont bas. Pour compenser ce désavantage du long, le taux futures doit être plus élevé que le taux forward."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-683",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Dans un **CMS swap** (Constant Maturity Swap), un ajustement est nécessaire car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le taux CMS est observé mais payé à une fréquence différente de sa maturité naturelle"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le CMS est toujours plus élevé que le taux swap court"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le notionnel est en devises étrangères"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le CMS n'est pas un taux de marché standard"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le taux swap 10 ans observé à chaque trimestre et payé trimestriellement nécessite un ajustement de convexité et de timing.",
+        "distractor_explains": {
+          "b": "Pas toujours.",
+          "c": "Pas lié.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-684",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Swap CMS : taux 5 ans forward $=3.8\\%$, ajustement de convexité $=12$ bp, ajustement de timing $=-3$ bp. Taux CMS ajusté ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 3.89,
+        "steps_mdx": "$r_{CMS}=3.80+0.12-0.03=\\mathbf{3.89}\\%$",
+        "formula_katex": "r_{fwd} + CA + TA"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-685",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "convexity-timing-and-quanto-adjustments"
+      ],
+      "prompt_mdx": "Pourquoi les ajustements de **quanto, timing et convexité** sont-ils souvent groupés dans les modèles de taux ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Ils corrigent tous des biais liés à la non-linéarité ou au décalage temporel",
+            "weight": 0.5
+          },
+          {
+            "text": "Nécessaires pour pricing cohérent",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Ces trois ajustements corrigent des **biais systématiques** introduits par (1) la convexité de la relation prix/taux, (2) le décalage entre la date d'observation et la date de paiement, (3) la corrélation entre le taux et le taux de change dans les produits multi-devises. Dans un modèle de taux cohérent (HJM, BGM), ces ajustements émergent naturellement du changement de mesure."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-733",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited"
+      ],
+      "prompt_mdx": "Comment les **OIS** (Overnight Index Swaps) diffèrent-ils des IRS classiques, et pourquoi sont-ils devenus la référence d'actualisation post-2008 ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "OIS indexé sur taux overnight",
+            "weight": 0.5
+          },
+          {
+            "text": "Risque de crédit quasi-nul → taux sans risque de marché",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un OIS échange un taux fixe contre le taux overnight composé (SOFR, €STR...) sur la période. Contrairement au LIBOR (panel de banques, risque de crédit intégré), l'OIS reflète quasi exactement le taux sans risque à court terme. Post-2008, l'écart LIBOR-OIS s'est élargi, montrant que le LIBOR contenait une prime de crédit significative. Les desks de dérivés actualisent désormais à l'OIS."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-734",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited"
+      ],
+      "prompt_mdx": "IRS avec **CSA** (Credit Support Annex) : notionnel 10 M USD, payeur fixe $k=3\\%$, 1 an restant. Taux OIS 1 an $=2.5\\%$ (continu). Valorisez le swap payeur fixe.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Flux fixe actualisé à l'OIS (USD)",
+            "unit": "USD",
+            "tolerance": 10.0,
+            "solution_mdx": "$300\\,000\\,e^{-0.025}=300\\,000\\times0.9753=\\mathbf{292\\,590}$ USD",
+            "hint_mdx": "Actualiser le flux fixe $N\\times k$ à l'OIS"
+          },
+          {
+            "label": "Flux variable actualisé (USD)",
+            "unit": "USD",
+            "tolerance": 10.0,
+            "solution_mdx": "La jambe variable vaut $N=10\\,000\\,000$ USD au reset (actualisation OIS)."
+          },
+          {
+            "label": "Valeur du swap payeur fixe (USD)",
+            "unit": "USD",
+            "tolerance": 10.0,
+            "solution_mdx": "$V = 10\\,000\\,000 - (292\\,590+10\\,000\\,000\\,e^{-0.025})$$= 10\\,000\\,000 - (292\\,590+9\\,753\\,099) = 10\\,000\\,000-10\\,045\\,689 = \\mathbf{-45\\,689}$ USD",
+            "trap_mdx": "Taux fixe > OIS : payeur fixe est en perte."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 292590.0
+          },
+          {
+            "answer": 10000000.0
+          },
+          {
+            "answer": -45689.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-735",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited"
+      ],
+      "prompt_mdx": "Le **SOFR** (Secured Overnight Financing Rate) remplace le LIBOR USD car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il est basé sur des transactions réelles de repo, non sur des déclarations bancaires"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il est plus élevé que le LIBOR"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il intègre le risque de crédit bancaire"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il n'est disponible que pour les maturités courtes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "SOFR = taux de marché des repos overnight sur T-Bills. Objectif : éliminér la manipulation possible du LIBOR.",
+        "distractor_explains": {
+          "b": "En général plus bas (sans prime crédit).",
+          "c": "Sans risque de crédit.",
+          "d": "Des term rates SOFR existent."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-736",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited"
+      ],
+      "prompt_mdx": "Spread LIBOR-OIS = 25 bp. Valeur d'un IRS à taux LIBOR vs IRS à taux OIS, notionnel 100 M USD, 5 ans, paiements annuels ? Différence de valeur approx (USD) en supposant 25 bp de spread constant ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 10000.0
+        }
+      },
+      "solution": {
+        "value": 1175000.0,
+        "steps_mdx": "VA d'un spread de 25 bp annuel sur 5 ans $\\approx 0.0025\\times100\\,000\\,000\\times\\sum_{t=1}^5 e^{-r_t t}$. Avec $r=2\\%$ : $\\sum = 4.71$. Valeur $\\approx 250\\,000\\times4.71=\\mathbf{1\\,177\\,500}$ USD.",
+        "formula_katex": "N \\times \\Delta r \\times \\sum e^{-r_t t}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-737",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited"
+      ],
+      "prompt_mdx": "Qu'est-ce que le **swap spread** et qu'indique-t-il sur les conditions de marché ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Écart entre taux swap et taux T-Bond de même maturité",
+            "weight": 0.5
+          },
+          {
+            "text": "Reflète le risque de crédit bancaire agrégé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le swap spread = taux fixe d'un IRS − taux T-Bond de même maturité. Il reflète : (1) la **prime de crédit** du secteur bancaire (les contreparties swaps sont typiquement des banques), (2) la **demande de couverture** de duration par les assureurs et fonds de pension, (3) des effets de liquidité. Un swap spread négatif (observé post-2008 aux USA) indique que les T-Bonds sont perçus comme moins liquides que les swaps, phénomène paradoxal."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-738",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited"
+      ],
+      "prompt_mdx": "Un **swaption** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une option pour entrer dans un swap à des conditions prédéfinies"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un swap où les taux sont des options"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un swap avec option de remboursement anticipé"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Une obligation avec des clauses swap intégrées"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Une payer swaption donne le droit (sans obligation) d'entrer dans un IRS en tant que payeur fixe.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "C'est un callable swap.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-739",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited"
+      ],
+      "prompt_mdx": "Swap 3 ans existant : payeur fixe $k=3\\%$, notionnel 20 M USD. Taux de marché actuels : $r_1=2.8\\%, r_2=3.2\\%, r_3=3.5\\%$ (continus). Calculez la **valeur du swap payeur fixe**.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Valeur jambe variable (USD)",
+            "unit": "USD",
+            "tolerance": 100.0,
+            "solution_mdx": "Juste après reset : $B_{float}=\\mathbf{20\\,000\\,000}$ USD"
+          },
+          {
+            "label": "Valeur jambe fixe (USD)",
+            "unit": "USD",
+            "tolerance": 100.0,
+            "solution_mdx": "$=600\\,000\\times0.9724+600\\,000\\times0.9394+20\\,600\\,000\\times0.9003$$=583\\,440+563\\,640+18\\,546\\,180=\\mathbf{19\\,693\\,260}$ USD",
+            "hint_mdx": "$B_{fix}=600\\,000\\,e^{-r_1}+600\\,000\\,e^{-2r_2}+20\\,600\\,000\\,e^{-3r_3}$"
+          },
+          {
+            "label": "Valeur du swap payeur fixe (USD)",
+            "unit": "USD",
+            "tolerance": 100.0,
+            "solution_mdx": "$V=B_{float}-B_{fix}=20\\,000\\,000-19\\,693\\,260=\\mathbf{+306\\,740}$ USD",
+            "trap_mdx": "Payeur fixe gagne quand les taux de marché > taux du swap."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 20000000.0
+          },
+          {
+            "answer": 19693260.0
+          },
+          {
+            "answer": 306740.0
+          }
+        ]
+      }
+    }
+  ]
+}

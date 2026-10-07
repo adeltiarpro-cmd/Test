@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "In your internship this past summer, what feedback did you receive?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -35,7 +36,8 @@
       ],
       "prompt_mdx": "What were a few areas that your team said you should try to improve upon?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -57,7 +59,8 @@
       ],
       "prompt_mdx": "Did you get an offer to return to where you worked last summer?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -79,7 +82,8 @@
       ],
       "prompt_mdx": "After going through the accounting program at PricewaterhouseCoopers for the past year, what sort of end-of-year review did you get?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -101,7 +105,8 @@
       ],
       "prompt_mdx": "Let's imagine that your best friend is describing you in 3 words, which words would he/she use and why?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -123,7 +128,8 @@
       ],
       "prompt_mdx": "Imagine that I'm speaking to someone with whom you have not gotten along in the past, what would he/she say about you?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -145,7 +151,8 @@
       ],
       "prompt_mdx": "Why would we decide not to give you an offer today?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -167,7 +174,8 @@
       ],
       "prompt_mdx": "Tell me why we should hire you in 3 sentences.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -189,7 +197,8 @@
       ],
       "prompt_mdx": "What was your greatest failure?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -211,7 +220,8 @@
       ],
       "prompt_mdx": "Can you talk about a team project or some kind of group activity you've worked on before?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -233,7 +243,8 @@
       ],
       "prompt_mdx": "Can you describe a situation where a team did not work as intended? Whose fault was it?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -255,7 +266,8 @@
       ],
       "prompt_mdx": "Can you discuss an ethical challenge you were confronted with and how you responded?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -277,7 +289,8 @@
       ],
       "prompt_mdx": "What was the most difficult situation you faced as a leader and how did you respond?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -299,7 +312,8 @@
       ],
       "prompt_mdx": "Can you discuss a time where you had to sacrifice your time for the sake of a team project?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -321,7 +335,8 @@
       ],
       "prompt_mdx": "Do you work better as a leader or a follower?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -343,7 +358,8 @@
       ],
       "prompt_mdx": "What is your leadership style?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -365,7 +381,8 @@
       ],
       "prompt_mdx": "Does the leader make the team?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -387,7 +404,8 @@
       ],
       "prompt_mdx": "What's your greatest fear about investment banking?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -409,7 +427,8 @@
       ],
       "prompt_mdx": "What's your \"Plan B\" if you can't get into investment banking this year?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -431,7 +450,8 @@
       ],
       "prompt_mdx": "That guy over there has a 4.0 from Wharton/Harvard, why should I hire you over him, given that you're much less impressive?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -453,7 +473,8 @@
       ],
       "prompt_mdx": "Let's say your MD is meeting with a client and you have been invited. As he's presenting, you notice a mistake in the materials, do you point it out?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -475,7 +496,8 @@
       ],
       "prompt_mdx": "I see you have a big gap in your work experience over the past few months / few years / I see you have a gap of 2-3 years a few years ago, what happened there?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -497,7 +519,8 @@
       ],
       "prompt_mdx": "Why did you get a C in accounting? (Or other bad grade in highly relevant class)",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -519,7 +542,8 @@
       ],
       "prompt_mdx": "Why did you NOT receive a return offer from your internship?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -541,7 +565,8 @@
       ],
       "prompt_mdx": "You graduated last year and don't have anything listed on your resume since then, what have you been doing, and did you participate in recruiting last year?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -563,7 +588,8 @@
       ],
       "prompt_mdx": "Why are we your first choice? Wouldn't you like London or New York more?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -585,7 +611,8 @@
       ],
       "prompt_mdx": "Why are you so old? (Stated more tactfully)",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -607,7 +634,8 @@
       ],
       "prompt_mdx": "What type of animal / vegetable would you be?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -629,7 +657,8 @@
       ],
       "prompt_mdx": "Let's say that in the future your name turns up as the front page headline of a newspaper one day, what would the story be about?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -651,7 +680,8 @@
       ],
       "prompt_mdx": "Tell me a joke.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -673,7 +703,8 @@
       ],
       "prompt_mdx": "What's your personal Beta?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -695,7 +726,8 @@
       ],
       "prompt_mdx": "What's the riskiest thing you've ever done?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -717,7 +749,8 @@
       ],
       "prompt_mdx": "Let's say that you have USD 1 million, but you are NOT allowed to invest it or otherwise use it to create more money. What would you spend the capital on instead?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

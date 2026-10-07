@@ -4,8 +4,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 interface ShortAnswerRunnerProps {
-  payload: { max_words: number };
+  payload: { max_words: number; scoring_mode?: string };
   onSubmit: (text: string) => void;
+  /** For self_eval mode — called instead of onSubmit to reveal the answer first. */
+  onPeek?: (text: string) => void;
   disabled?: boolean;
 }
 
@@ -13,10 +15,19 @@ function countWords(s: string) {
   return s.trim().split(/\s+/).filter(Boolean).length;
 }
 
-export function ShortAnswerRunner({ payload, onSubmit, disabled }: ShortAnswerRunnerProps) {
+export function ShortAnswerRunner({ payload, onSubmit, onPeek, disabled }: ShortAnswerRunnerProps) {
   const [text, setText] = useState("");
   const words = countWords(text);
   const overLimit = words > payload.max_words;
+  const isSelfEval = payload.scoring_mode === "self_eval";
+
+  function handleAction() {
+    if (isSelfEval && onPeek) {
+      onPeek(text.trim());
+    } else {
+      onSubmit(text.trim());
+    }
+  }
 
   return (
     <div className="flex flex-col gap-3">
@@ -46,9 +57,9 @@ export function ShortAnswerRunner({ payload, onSubmit, disabled }: ShortAnswerRu
         variant="primary"
         size="md"
         disabled={text.trim().length === 0 || overLimit || disabled}
-        onClick={() => onSubmit(text.trim())}
+        onClick={handleAction}
       >
-        Valider
+        {isSelfEval ? "Voir la correction" : "Valider"}
       </Button>
     </div>
   );

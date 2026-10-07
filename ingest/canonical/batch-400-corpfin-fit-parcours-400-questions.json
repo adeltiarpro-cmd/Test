@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "I see you've done mostly journalism and research internships before. Can you discuss your quantitative skills?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -35,7 +36,8 @@
       ],
       "prompt_mdx": "In your last internship, you analyzed portfolios and recommended investments to clients. Can you walk me through your thought process for analyzing the returns of a client portfolio?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -57,7 +59,8 @@
       ],
       "prompt_mdx": "Can you tell me about the process you used to analyze space requirements for the building designs you worked on this past summer?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -79,7 +82,8 @@
       ],
       "prompt_mdx": "You've been working as a lawyer for the past 3 years, what initiative have you taken on your own to learn more about finance?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -101,7 +105,8 @@
       ],
       "prompt_mdx": "You were an English major, how do you know you can handle the quantitative rigor required in investment banking?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -123,7 +128,8 @@
       ],
       "prompt_mdx": "Can you tell me about a time when you submitted a report or project with misspellings or grammatical mistakes?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -145,7 +151,8 @@
       ],
       "prompt_mdx": "What's the most number of classes you ever took at once and how well did you do in each of them?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -167,7 +174,8 @@
       ],
       "prompt_mdx": "How well can you multi-task?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -189,7 +197,8 @@
       ],
       "prompt_mdx": "Have you ever worked on a project or report that was shown to a large number of people?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -211,7 +220,8 @@
       ],
       "prompt_mdx": "Walk me through your resume.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -233,7 +243,8 @@
       ],
       "prompt_mdx": "Why did you attend [Your University / Business School]? I'm sure you had many options. / Why did you transfer to [University Name]?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -255,7 +266,8 @@
       ],
       "prompt_mdx": "I noticed you studied abroad in [Location]. Can you tell me about that experience and why you went there?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -277,7 +289,8 @@
       ],
       "prompt_mdx": "Why did you major in [Your Major]?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -299,7 +312,8 @@
       ],
       "prompt_mdx": "Where else did you apply for school? Did you get in anywhere else?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -321,7 +335,8 @@
       ],
       "prompt_mdx": "I see you wrote here that you're fluent in [Language]. Can you tell me about your most recent internship in [Language]?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -343,7 +358,8 @@
       ],
       "prompt_mdx": "What do you do for fun?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -365,7 +381,8 @@
       ],
       "prompt_mdx": "What was your favorite class in college / business school?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -387,7 +404,8 @@
       ],
       "prompt_mdx": "What are your favorite movies / books?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -409,7 +427,8 @@
       ],
       "prompt_mdx": "Tell me something interesting about you that's not listed on your resume.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

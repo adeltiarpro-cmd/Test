@@ -17,6 +17,46 @@ FICHIERS CLÉS: <chemins créés/modifiés, pour que la session suivante sache o
 
 ---
 
+## 2026-10-07 — CHANTIER-1 — Remplacement des 762 exercices Hull (dérivés)
+STATUT: FAIT
+FAIT: 762 exercices originaux générés pour les 9 sous-chapitres de `markets/derivatives`, remplaçant les anciens exercices Hull (type `short_answer` avec faux `key_points`). UPSERT par `external_key` (`markets-derivatives-short_answer-001` à `-762`) : les clés existantes sont mises à jour en base sans recréation. Types utilisés : numeric (calculs BSM, Greeks, VaR, CDS), numeric_steps (arbres binomiaux, EWMA, LMM), mcq (définitions, propriétés), short_answer/self_eval (analyse, comparaisons). Formules KaTeX, montants en USD. 9 fichiers JSON produits dans `ingest/canonical/` : batch-002-1 (112) + batch-002-2 (50) + batch-002-3 (42) + batch-002-4 (69) + batch-002-5 (124) + batch-002-6 (67) + batch-002-7 (177) + batch-002-8 (98) + batch-002-9 (23) = 762 items. Migration additive `20240019` crée les 9 modules dérivés et leurs `module_targets`. `npm run build` : vert.
+RESTE:
+  1. `npx supabase db push` pour appliquer la migration 20240019 (9 sous-chapitres dérivés).
+  2. `charger-lots.command` (ou `npx ts-node ingest/scripts/load.ts`) sur les 9 fichiers batch-002-* pour ingérer les 762 exercices en base (UPSERT par external_key).
+  3. Test navigateur : /session avec filière markets → dérivés, vérifier que les 4 types s'affichent correctement.
+DÉCISIONS:
+  - Scripts générateurs écrits en blocs `items+=[...]` séparés (pas de `items[-1]` dans un littéral de liste) — évite le SyntaxError Python appris sur les batches 4 et 5.
+  - Batches 4 et 5 (générés en session précédente avec `items[-1]` à l'intérieur du littéral) corrigés via `fix_batch5.py` et une transformation similaire pour le batch 4 ; les JSON résultants sont valides.
+  - Batch 7 (der-exotic-models) comportait une ligne `python3 -c` parasite issue d'un heredoc mal délimité — filtrée en post-processing.
+  - `scoring_mode: "self_eval"` sur tous les `short_answer` : pas de scoring automatique, corrigé passé uniquement après que l'étudiant a soumis sa réponse.
+FICHIERS CLÉS: supabase/migrations/20240019000000_derivatives_subchapters.sql (nouveau), ingest/canonical/batch-002-{1..9}-der-*.json (762 items), ingest/scripts/gen-batch-002-{1..9}.py, ingest/scripts/fix_batch5.py
+
+---
+
+## 2026-10-06 — CHANTIER-3 — Exercice à étapes (numeric_steps)
+STATUT: FAIT
+FAIT: Nouveau type d'exercice numeric_steps entièrement câblé. Migration additive ALTER TYPE exercise_type ADD VALUE 'numeric_steps'. Schéma Zod complet (NumericStepsPayloadSchema, NumericStepsSolutionSchema) ajouté au discriminated union. Correction côté serveur dans scoreNumericSteps : tolérance absolue par étape, score = correct/total, isCorrect si >= 70%. stepResults (isCorrect, correctValue, solutionMdx, trapMdx) retournés dans AttemptResult. Runner NumericStepsRunner : progression séquentielle par étape avec barre de progression, indices collapsibles (bleu), soumission unique de toutes les étapes, affichage post-correction (bordure verte/rouge, valeur attendue, solution mono, boîte piège ambre). Ajout à PERSISTENT_TYPES (runner reste monté après correction pour afficher les solutions). session/page.tsx et exercise-runner/index.tsx mis à jour. tsc --noEmit : 0 nouvelles erreurs.
+DÉCISIONS:
+  - Soumission en une seule fois (pas de validation étape par étape côté serveur) — règle "solution jamais envoyée avant réponse" respectée ; l'UX séquentielle est purement côté client.
+  - isCorrect >= 0.7 (70%) — cohérent avec partial scoring du C2.
+  - numeric_steps ajouté à PERSISTENT_TYPES : le runner doit rester monté après correction pour afficher les solutions et pièges par étape.
+  - NumericStepsPayloadSchema ne contient pas prompt_mdx : il est injecté par load.ts au moment de l'ingestion (payloadWithPrompt).
+FICHIERS CLÉS: supabase/migrations/20240018000000_numeric_steps_type.sql (nouveau), packages/schemas/exercises.ts (+NumericSteps*), src/lib/session-actions.ts (+scoreNumericSteps, +StepResult, +stepResults dans AttemptResult), src/components/exercise-runner/runners/numeric-steps.tsx (nouveau), src/components/exercise-runner/index.tsx (+NumericStepsRunner), src/app/session/page.tsx (+numeric_steps dans SUPPORTED_TYPES)
+
+---
+
+## 2026-10-06 — CHANTIER-2 — Auto-évaluation (sans verdict)
+STATUT: FAIT
+FAIT: scoring_mode ajouté à ShortAnswerPayloadSchema (auto | self_eval | partial). self_eval : flux en 2 étapes — "Voir la correction" → révèle corrigé via peekSelfEvalAnswer (aucun attempt stocké à ce stade) → 3 boutons "À revoir / Moyen / Maîtrisé" → submitAttempt avec selfEvalRating. partial : scoreShortAnswer retourne pointResults (couvert/manqué par key_point) + bouton "Ma réponse était juste" → overrideToCorrect (reschedule SRS + WMA mastery). Statistiques dashboard non affectées (concept_mastery et review_states s'alimentent dans les deux modes). Sélecteur de confiance masqué pour self_eval (remplacé par les boutons de notation).
+DÉCISIONS:
+  - peekSelfEvalAnswer retourne model_answer_mdx uniquement après authentification ; appelé côté client après que l'utilisateur a rédigé sa réponse (jamais pré-chargé dans le payload → solution jamais envoyée avant la réponse).
+  - overrideToCorrect utilise confidence=2 par défaut pour le reschedule SRS.
+  - is_correct dans attempts reste boolean (true/false) même pour self_eval — null uniquement si l'utilisateur ferme la page avant de noter.
+  - Fit batches (400-423) à régénérer en scoring_mode: 'self_eval' via sessions INGEST-RUNBOOK (hors scope code).
+FICHIERS CLÉS: packages/schemas/exercises.ts, src/lib/session-actions.ts (+peekSelfEvalAnswer, +overrideToCorrect), src/components/exercise-runner/runners/short-answer.tsx, src/components/exercise-runner/index.tsx, src/components/exercise-runner/result-panel.tsx
+
+---
+
 ## 2026-08-27 — STEP-10 — Durcissement et déploiement
 STATUT: FAIT (partiel — tâches manuelles restantes documentées ci-dessous)
 FAIT: Page /login complète — onglets Connexion/Créer un compte, gestion invitation error (trigger check_invitation → message clair côté UI), reset password (email envoyé via resetPasswordForEmail). .env.example documenté (4 variables : NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, ANTHROPIC_API_KEY + NEXT_PUBLIC_SITE_URL). Audit RLS : migration 20240009 couvre toutes les tables user-scoped (attempts/review_states/concept_mastery/profiles) avec user_id = auth.uid() + WITH CHECK. invitations : aucune policy user, service_role only, trigger SECURITY DEFINER — correct. Accessibilité : focus-ring visible sur Button (focus-visible:ring-2) et Input (focus:ring-2), min-h-[44px] sur les deux, aria-invalid + aria-describedby sur Input, labels htmlFor corrects.

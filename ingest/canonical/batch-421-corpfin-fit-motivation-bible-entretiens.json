@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "Pourquoi ce poste ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -35,7 +36,8 @@
       ],
       "prompt_mdx": "Qu'avez-vous compris du poste à pourvoir ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -57,7 +59,8 @@
       ],
       "prompt_mdx": "Pourquoi ce secteur en particulier ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -79,7 +82,8 @@
       ],
       "prompt_mdx": "Pourquoi notre entreprise ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -101,7 +105,8 @@
       ],
       "prompt_mdx": "Comment vous voyez vous dans 5 ans / 10 ans ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -123,7 +128,8 @@
       ],
       "prompt_mdx": "Avez-vous d'autres processus de recrutement en cours ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -145,7 +151,8 @@
       ],
       "prompt_mdx": "Avez-vous une question ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -167,7 +174,8 @@
       ],
       "prompt_mdx": "Pourquoi le M&A ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -189,7 +197,8 @@
       ],
       "prompt_mdx": "Pourquoi postulez-vous dans notre banque et pas dans une banque concurrente ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -211,7 +220,8 @@
       ],
       "prompt_mdx": "Pensez-vous être capable de supporter les horaires d'un analyste M&A ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -233,7 +243,8 @@
       ],
       "prompt_mdx": "Pourquoi souhaitez-vous changer de banque d'affaires ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -255,7 +266,8 @@
       ],
       "prompt_mdx": "Quelles sont les qualités requises pour faire du M&A ?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -285,7 +297,8 @@
       ],
       "prompt_mdx": "Pourquoi le Private Equity plutôt que du M&A ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -307,7 +320,8 @@
       ],
       "prompt_mdx": "Selon vous, quelles sont les principales qualités d'un analyste Private Equity ?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

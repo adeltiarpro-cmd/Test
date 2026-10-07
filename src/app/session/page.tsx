@@ -64,6 +64,7 @@ const SUPPORTED_TYPES = [
   "case_math",
   "case_structuring",
   "market_sizing",
+  "numeric_steps",
 ] as const;
 
 const EXERCISE_COLUMNS = "id, type, difficulty, payload, tags, module_id";

@@ -1,0 +1,2364 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-options-mechanics",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-206",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Sur un marché d'options organisé, la **chambre de compensation** :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Garantit l'exécution de chaque contrat en s'interposant"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Fixe les prix des options"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Évalue les primes chaque semaine"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Regroupe acheteurs et vendeurs directement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La CCP élimine le risque de contrepartie : elle est l'acheteur de tout vendeur et le vendeur de tout acheteur.",
+        "distractor_explains": {
+          "b": "Les prix sont déterminés par le marché.",
+          "c": "Marking-to-market quotidien.",
+          "d": "C'est le rôle du marché."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-207",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "La **marge initiale** pour un vendeur d'options est exigée car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le vendeur a une perte potentiellement illimitée"
+          },
+          {
+            "key": "b",
+            "text_mdx": "L'acheteur risque de ne pas payer la prime"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La CCP doit financer ses activités"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le régulateur l'impose uniquement pour les calls"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "L'acheteur a déjà payé la prime (perte max = prime). Le vendeur peut perdre bien plus → marge.",
+        "distractor_explains": {
+          "b": "La prime est payée à l'entrée.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-208",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Un trader vend 5 calls à prime $c=3.50$ USD, chaque contrat couvre 100 actions. Encaissement total (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 1750.0,
+        "steps_mdx": "$5\\times100\\times3.50=\\mathbf{1\\,750}$ USD",
+        "formula_katex": "n\\times N\\times c"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-209",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "La date d'**expiration** d'une option américaine est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La dernière date à laquelle elle peut être exercée"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La date de création du contrat"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La date du premier appel de marge"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Toujours un mardi"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Une option américaine peut être exercée à tout moment jusqu'à la date d'expiration incluse.",
+        "distractor_explains": {
+          "b": "C'est la date d'émission.",
+          "c": "Faux.",
+          "d": "Typiquement troisième vendredi du mois."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-210",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "L'**exercice automatique** (automatic exercise) à l'échéance s'applique quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'option est in-the-money d'au moins 0.01 USD"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le détenteur n'a pas annulé son contrat"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La prime initiale était supérieure à 1 USD"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'option est de type américain"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les options ITM de plus d'un cent sont automatiquement exercées à l'échéance sauf instruction contraire.",
+        "distractor_explains": {
+          "b": "Non lié.",
+          "c": "Faux.",
+          "d": "L'exercice automatique concerne surtout les européennes à l'échéance."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-211",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Un call $K=50$ USD est ITM de 3 USD. Prix spot actuel (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 53.0,
+        "steps_mdx": "$S=K+\\text{ITM}=50+3=\\mathbf{53}$ USD",
+        "formula_katex": "K + \\text{ITM}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-212",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "La **taille standard** d'un contrat d'option sur action aux USA est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "100 actions"
+          },
+          {
+            "key": "b",
+            "text_mdx": "1 000 actions"
+          },
+          {
+            "key": "c",
+            "text_mdx": "10 actions"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Variable selon le broker"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Convention : 1 contrat = 100 actions sous-jacentes.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Standardisé par la bourse."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-213",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "L'**open interest** sur les options représente :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le nombre de contrats ouverts non liquidés"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le volume journalier"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La somme des options calls ouvertes"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le nombre d'options exercées"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Open interest = positions ouvertes. Volume = transactions de la journée.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "OI inclut calls et puts.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-214",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Prix spot $S=75$ USD. Call $K=80$ USD. Valeur intrinsèque du call (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "Call OTM : $\\max(75-80,0)=\\mathbf{0}$ USD",
+        "formula_katex": "\\max(S-K,0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-215",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Un **put protecteur** (protective put) consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Acheter un put sur une action qu'on détient déjà"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Vendre un put à découvert"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Acheter un call pour protéger un put court"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Combiner un call et un put OTM"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Protective put = long action + long put. Limite la perte à la baisse tout en gardant le potentiel haussier.",
+        "distractor_explains": {
+          "b": "Position nue risquée.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-216",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Un **covered call** consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Vendre un call sur une action qu'on détient"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter un call couvert par de la marge"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Acheter un call et un put simultanément"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Vendre un put couvert par des obligations"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Covered call : long action + short call. Génère un revenu (prime) en échange du plafond de gain.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "C'est un straddle.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-217",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Covered call : achat action à 48 USD, vente call $K=50$ USD, prime $c=2$ USD. Profit maximum de la stratégie (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 4.0,
+        "steps_mdx": "Profit max si $S_T\\geq K$: $(K-S_0)+c=2+2=\\mathbf{4}$ USD",
+        "formula_katex": "(K-S_0)+c"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-218",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Décrivez le mécanisme de l'**exercice d'une option américaine** et ses implications pour le vendeur.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Notification via le broker",
+            "weight": 0.5
+          },
+          {
+            "text": "Vendeur obligé de livrer/recevoir l'actif",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "L'acheteur notifie son broker de son intention d'exercer. Le broker transmet à la CCP qui assigne aléatoirement un vendeur (short) du même contrat. Ce vendeur doit alors livrer les actions (call) ou les acheter (put) au prix d'exercice $K$. L'exercice anticipé d'un call américain sur action sans dividende n'est généralement pas optimal."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-219",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Les options **LEAPS** sont :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Des options à longue échéance (jusqu'à 3 ans)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Des options sur indices uniquement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Des options à règlement journalier"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des options sans valeur temps"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Long-term Equity AnticiPation Securities = options avec des maturités pouvant atteindre 2-3 ans.",
+        "distractor_explains": {
+          "b": "Disponibles sur actions et indices.",
+          "c": "Faux.",
+          "d": "Elles ont une valeur temps importante."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-220",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Prime d'un call = 4.50 USD. Valeur intrinsèque = 2.00 USD. Valeur temps (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 2.5,
+        "steps_mdx": "$\\text{Valeur temps}=c-\\max(S-K,0)=4.50-2.00=\\mathbf{2.50}$ USD",
+        "formula_katex": "c-\\max(S-K,0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-221",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Le prix d'exercice **at-the-money** signifie que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$K \\approx S_0$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$K < S_0$ pour un call"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$K > S_0$ pour un put"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'option vaut sa valeur intrinsèque"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "ATM = strike proche du prix spot actuel.",
+        "distractor_explains": {
+          "b": "Ce serait ITM pour un call.",
+          "c": "Ce serait ITM pour un put.",
+          "d": "ATM a valeur intrinsèque ~0."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-222",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Un investisseur achète 10 puts $K=40$ USD, prime $p=2.50$ USD (100 actions/contrat). Investissement initial total (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 2500.0,
+        "steps_mdx": "$10\\times100\\times2.50=\\mathbf{2\\,500}$ USD",
+        "formula_katex": "n\\times N\\times p"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-223",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Expliquez la différence entre **options européennes** et **américaines** en termes de prime.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Option américaine ≥ européenne (droit supplémentaire)",
+            "weight": 0.5
+          },
+          {
+            "text": "Parité put-call différente",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Une option américaine donne **plus de droits** qu'une européenne (exercice possible à tout moment vs seulement à maturité). Elle vaut donc au moins autant : $C_{am}\\geq C_{eu}$, $P_{am}\\geq P_{eu}$. En pratique, pour un call sur action sans dividende, $C_{am}=C_{eu}$ car l'exercice anticipé n'est jamais optimal. Pour les puts ou les calls sur actions avec dividendes importants, la prime américaine peut être strictement supérieure."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-224",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "La **prime** d'une option est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le prix payé par l'acheteur au vendeur pour acquérir le droit"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La différence entre le prix spot et le strike"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le dépôt de marge initial"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le profit à l'exercice"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La prime = prix de l'option, versée au vendeur à l'entrée.",
+        "distractor_explains": {
+          "b": "C'est la valeur intrinsèque.",
+          "c": "La marge est exigée du vendeur, pas de l'acheteur.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-225",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Une option **deep out-of-the-money** a une valeur temps :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Faible, car la probabilité d'expirer ITM est très faible"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Maximale, car tout est valeur temps"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Nulle"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Égale à sa prime totale"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Deep OTM : faible probabilité d'ITM → valeur temps faible. ATM a la valeur temps maximale.",
+        "distractor_explains": {
+          "b": "ATM a la valeur temps maximale, pas deep OTM.",
+          "c": "Non nulle mais faible.",
+          "d": "Vrai, mais la prime totale est faible."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-226",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Option call $K=100$ USD, prime $c=6$ USD. L'action est à $S=104$ USD. Quel est le **levier implicite** (ratio exposition/investissement) ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 17.33,
+        "steps_mdx": "Levier $=S/c=104/6=\\mathbf{17.33}$",
+        "formula_katex": "S/c"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-227",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "mechanics-of-options-markets"
+      ],
+      "prompt_mdx": "Lors d'un **split 2-pour-1**, les contrats d'options existants sont ajustés ainsi :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Strike divisé par 2, nombre de contrats multiplié par 2"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Prime divisée par 2 uniquement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Aucun ajustement, les contrats sont annulés"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Strike multiplié par 2, taille réduite de moitié"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La chambre ajuste automatiquement pour maintenir la valeur totale de la position.",
+        "distractor_explains": {
+          "b": "La taille et le strike sont ajustés.",
+          "c": "Faux.",
+          "d": "Inverse."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-228",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "La **parité put-call** pour des options européennes stipule que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$c + Ke^{-rT} = p + S_0$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$c = p$ toujours"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$c + p = S_0 + K$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$c - p = S_0 - K$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Parité : $c + Ke^{-rT} = p + S_0$ (sans dividende).",
+        "distractor_explains": {
+          "b": "Seulement si ATM et $r=0$.",
+          "c": "Pas d'actualisation correcte.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-229",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Call européen $c=5$ USD, $K=50$ USD, $T=0.5$ an, $r=4\\%$. Quel doit être le prix du put (parité) si $S_0=52$ USD ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.02
+        }
+      },
+      "solution": {
+        "value": 2.02,
+        "steps_mdx": "$p=c+Ke^{-rT}-S_0=5+50e^{-0.02}-52=5+49.01-52=\\mathbf{2.01}$ USD",
+        "formula_katex": "c+Ke^{-rT}-S_0"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-230",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "La borne **inférieure** d'un call européen sur action sans dividende est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\max(S_0-Ke^{-rT},0)$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$S_0-K$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$Ke^{-rT}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$S_0$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$c\\geq\\max(S_0-Ke^{-rT},0)$ car on peut arbitrer si $c < S_0-Ke^{-rT}$.",
+        "distractor_explains": {
+          "b": "Pas d'actualisation.",
+          "c": "Borne supérieure du put.",
+          "d": "Borne supérieure du call."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-231",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "$S_0=60$ USD, $K=55$ USD, $r=5\\%$, $T=0.5$ an. Borne inférieure du call européen (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.02
+        }
+      },
+      "solution": {
+        "value": 6.35,
+        "steps_mdx": "$\\max(60-55e^{-0.025},0)=\\max(60-53.65,0)=\\mathbf{6.35}$ USD",
+        "formula_katex": "\\max(S_0-Ke^{-rT},0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-232",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "L'exercice anticipé d'un **call américain** sur action sans dividende :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "N'est jamais optimal car il détruit la valeur temps"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Est toujours optimal quand l'option est très ITM"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Est optimal dès que $S > K$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Dépend uniquement du taux sans risque"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Exercer anticipément détruit la valeur temps résiduelle. Mieux vaut vendre l'option.",
+        "distractor_explains": {
+          "b": "Même très ITM, la valeur temps > 0.",
+          "c": "Faux.",
+          "d": "Pas uniquement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-233",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "L'exercice anticipé d'un **put américain** peut être optimal quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le put est très ITM et les taux d'intérêt sont élevés"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le put est ATM"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le put est OTM"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'action ne verse pas de dividende"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Put profond ITM : gain d'intérêts sur $K$ justifie l'exercice anticipé. Plus les taux sont élevés, plus c'est avantageux.",
+        "distractor_explains": {
+          "b": "Valeur temps trop élevée.",
+          "c": "Exercice inutile.",
+          "d": "Sans dividende, l'exercice anticipé peut toujours être optimal pour les puts."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-234",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "$S_0=45$ USD, $K=50$ USD, $r=3\\%$, $T=1$ an. Borne inférieure du put européen (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.02
+        }
+      },
+      "solution": {
+        "value": 3.52,
+        "steps_mdx": "$\\max(Ke^{-rT}-S_0,0)=\\max(50e^{-0.03}-45,0)=\\max(48.52-45,0)=\\mathbf{3.52}$ USD",
+        "formula_katex": "\\max(Ke^{-rT}-S_0,0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-235",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Si la volatilité du sous-jacent **augmente**, les primes des calls et puts :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Augmentent toutes les deux"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le call monte, le put baisse"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le put monte, le call baisse"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Restent inchangées"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La volatilité accroît la probabilité d'un grand mouvement dans les deux sens → les deux options valent plus.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-236",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Call : $c=8$ USD, $S_0=55$, $K=50$, $r=6\\%$, $T=0.5$ an. Vérifiez la parité put-call. Prix du put $p$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 1.52,
+        "steps_mdx": "$p=c-S_0+Ke^{-rT}=8-55+50e^{-0.03}=8-55+48.52=\\mathbf{1.52}$ USD",
+        "formula_katex": "c-S_0+Ke^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-237",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Une **prime élevée** pour un call correspond à (toutes choses égales) :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Volatilité élevée, maturité longue, $S$ élevé par rapport à $K$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Volatilité faible et maturité courte"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Strike élevé et spot faible"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Taux d'intérêt nul"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Call monte avec : $\\sigma\\uparrow$, $T\\uparrow$, $S\\uparrow$, $r\\uparrow$, $K\\downarrow$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Un taux nul réduit la VA du strike → call légèrement affecté."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-238",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "$S_0=100$, dividende $D=2$ USD versé dans 3 mois ($t=0.25$). $r=5\\%$. Valeur actuelle du dividende (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 1.975,
+        "steps_mdx": "$PV(D)=2e^{-0.05\\times0.25}=2\\times0.9876=\\mathbf{1.975}$ USD",
+        "formula_katex": "De^{-rT_D}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-239",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "L'**effet** d'une hausse du taux sans risque sur le prix d'un call européen est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le call monte (la VA du strike baisse)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le call baisse"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Aucun effet car le call ne dépend pas de $r$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Ambigu selon la maturité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$r\\uparrow$ → $Ke^{-rT}\\downarrow$ → $c\\uparrow$. Aussi : le taux de croissance du spot est $r$ dans le monde risque-neutre.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Effet positif clair."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-240",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Actions paient un dividende $q=3\\%$ continu. Parité put-call : $c+Ke^{-rT}=p+S_0e^{-qT}$. $S_0=80$, $K=78$, $r=4\\%$, $q=3\\%$, $T=1$ an, $c=7$ USD. Prix du put $p$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 4.36,
+        "steps_mdx": "$p=c+Ke^{-rT}-S_0e^{-qT}=7+78e^{-0.04}-80e^{-0.03}=7+74.99-77.63=\\mathbf{4.36}$ USD",
+        "formula_katex": "c+Ke^{-rT}-S_0e^{-qT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-241",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "La borne **supérieure** d'un call européen est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$S_0$ — on ne paiera jamais plus que le sous-jacent lui-même"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$K$ — on ne paiera jamais plus que le strike"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$S_0+K$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Illimitée"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$c\\leq S_0$ : un call qui donne le droit d'acheter $S$ ne peut valoir plus que $S$ lui-même.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-242",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "$S_0=45$, $K=45$, $r=5\\%$, $T=3$ mois. Borne inférieure du call européen ATM (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.556,
+        "steps_mdx": "$\\max(45-45e^{-0.05\\times0.25},0)=\\max(45-44.44,0)=\\mathbf{0.556}$ USD",
+        "formula_katex": "\\max(S_0-Ke^{-rT},0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-243",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Pourquoi la **prime d'une option augmente-t-elle avec la maturité** ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Plus de temps = plus de probabilité d'un grand mouvement",
+            "weight": 0.5
+          },
+          {
+            "text": "Valeur temps croît avec T",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La valeur temps d'une option reflète la probabilité que le sous-jacent évolue favorablement. Plus la maturité est longue, plus cette probabilité est élevée (le sous-jacent peut se déplacer plus). Mathématiquement, dans BSM : la valeur $\\propto \\sigma\\sqrt{T}$. Exception : pour les puts profonds ITM à taux élevés, un put européen peut valoir moins avec une maturité plus longue."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-244",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Si $c > S_0 - Ke^{-rT}$ n'est pas respecté, l'arbitrage consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Acheter le call, vendre le stock, investir $Ke^{-rT}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter le stock et le call"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Vendre le call, acheter le put"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Aucun arbitrage possible"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Si $c < S_0-Ke^{-rT}$: acheter le call (sous-évalué) et vendre le stock + investir $Ke^{-rT}$.",
+        "distractor_explains": {
+          "b": "Renforce la sous-évaluation.",
+          "c": "Stratégie différente.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-245",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Une action paiera un dividende de 3 USD dans 2 mois. $S_0=60$, $r=5\\%$, $T=6$ mois, $K=58$. Prix forward ajusté du dividende $S^*=S_0-PV(D)$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 57.02,
+        "steps_mdx": "$PV(D)=3e^{-0.05\\times2/12}=3\\times0.9917=2.975$. $S^*=60-2.975=\\mathbf{57.02}$ USD",
+        "formula_katex": "S_0-De^{-rT_D}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-246",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Toutes choses égales, un **put américain** vaut **plus** qu'un put européen car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'exercice anticipé peut être optimal — on récupère $K$ maintenant"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La prime américaine inclut une prime de liquidité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les options américaines ont toujours une maturité plus longue"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La chambre de compensation garantit un prix minimum"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Pour les puts profonds ITM, encaisser $K$ maintenant et placer au taux $r$ peut valoir plus que d'attendre.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-247",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Parité put-call violée : call $c=3$, put $p=8$, $S_0=40$, $K=45$, $r=6\\%$, $T=0.5$. Profit d'arbitrage sans risque (USD) si $c+Ke^{-rT}<p+S_0$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 1.33,
+        "steps_mdx": "$c+Ke^{-rT}=3+45e^{-0.03}=3+43.67=46.67$. $p+S_0=8+40=48$. Arbitrage : acheter call + investir $Ke^{-rT}$, vendre put + vendre stock. Profit $=48-46.67=\\mathbf{1.33}$ USD",
+        "formula_katex": "p+S_0-(c+Ke^{-rT})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-248",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Le **prix d'une option augmente avec la maturité** parce que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La valeur temps croît car la probabilité d'un mouvement favorable augmente"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les dividendes futurs réduisent le prix spot"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux sans risque baisse"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La CCP exige plus de marge"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Maturité plus longue = plus d'incertitude = plus de valeur temps pour l'acheteur.",
+        "distractor_explains": {
+          "b": "Effet opposé (réduit la prime pour le call).",
+          "c": "Non lié.",
+          "d": "Non lié à la prime."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-249",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Call $c=6$ USD, put $p=4$ USD, $K=100$, $T=1$ an, $r=3\\%$. Parité : $S_0$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 99.06,
+        "steps_mdx": "$S_0=c-p+Ke^{-rT}=6-4+100e^{-0.03}=2+97.04=\\mathbf{99.06}$ USD",
+        "formula_katex": "c-p+Ke^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-250",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Expliquez la relation entre la **prime d'un call** et le taux de dividende du sous-jacent.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Dividende réduit S_0 effectif",
+            "weight": 0.5
+          },
+          {
+            "text": "Call baisse quand le dividende monte",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un dividende versé pendant la vie de l'option fait chuter le prix de l'action d'un montant équivalent. L'acheteur d'un call ne reçoit pas ce dividende — la prime baisse donc quand les dividendes attendus augmentent. Dans BSM avec dividende continu $q$ : on remplace $S_0$ par $S_0e^{-qT}$. Pour le put, c'est l'inverse : les dividendes augmentent la prime."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-251",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Deux options européennes identiques (même $K$, $T$, sous-jacent) mais l'une a $\\sigma=20\\%$ et l'autre $\\sigma=30\\%$. Laquelle a la prime la plus élevée ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Celle à $\\sigma=30\\%$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Celle à $\\sigma=20\\%$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Égales"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Dépend du type call/put"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\sigma$ élevé → plus de chances d'être ITM → prime plus élevée (vrai pour call ET put).",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux pour les deux types."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-252",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "Put européen $K=50$, $S_0=52$, $r=4\\%$, $T=1$ an. Borne supérieure du put (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 49.02,
+        "steps_mdx": "$p\\leq Ke^{-rT}=50e^{-0.04}=\\mathbf{49.02}$ USD",
+        "formula_katex": "Ke^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-253",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "properties-of-stock-options"
+      ],
+      "prompt_mdx": "La prime d'un put européen **diminue** quand le taux sans risque augmente car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La VA du strike diminue, réduisant l'avantage du put"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le put devient plus difficile à exercer"
+          },
+          {
+            "key": "c",
+            "text_mdx": "L'action monte avec les taux"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La marge exigée augmente"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$r\\uparrow$ → $Ke^{-rT}\\downarrow$ → $p\\downarrow$. La valeur du droit de vendre à $K$ est moindre.",
+        "distractor_explains": {
+          "b": "Exercice non affecté directement.",
+          "c": "C'est indirect, pas la cause principale.",
+          "d": "Non lié."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-254",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un **bull call spread** consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Acheter un call $K_1$ et vendre un call $K_2>K_1$ (même maturité)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter deux calls de strikes différents"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Vendre un call et acheter le sous-jacent"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Acheter un call et un put de même strike"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Bull spread : long call bas strike, short call haut strike. Coût réduit, gain plafonné.",
+        "distractor_explains": {
+          "b": "Pas un spread standard.",
+          "c": "C'est un covered call.",
+          "d": "C'est un straddle."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-255",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Bull call spread : achat call $K_1=45$, prime $c_1=5$ USD ; vente call $K_2=55$, prime $c_2=1.50$ USD. Coût net du spread (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 3.5,
+        "steps_mdx": "$\\text{Coût}=c_1-c_2=5-1.50=\\mathbf{3.50}$ USD",
+        "formula_katex": "c_1-c_2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-256",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Bull call spread : $K_1=45$, $c_1=5$, $K_2=55$, $c_2=1.50$. Calculez (a) le coût net, (b) le profit max, (c) le seuil de rentabilité.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Coût net (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$c_1-c_2=5-1.50=\\mathbf{3.50}$ USD"
+          },
+          {
+            "label": "Profit maximum (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$(K_2-K_1)-\\text{coût}=(55-45)-3.50=\\mathbf{6.50}$ USD"
+          },
+          {
+            "label": "Seuil de rentabilité (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$45+3.50=\\mathbf{48.50}$ USD",
+            "hint_mdx": "$K_1+\\text{coût net}$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 3.5
+          },
+          {
+            "answer": 6.5
+          },
+          {
+            "answer": 48.5
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-257",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un **straddle** acheté est rentable quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le sous-jacent fait un grand mouvement dans un sens ou l'autre"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le sous-jacent reste stable autour du strike"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La volatilité implicite baisse"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les dividendes sont élevés"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Straddle long = call + put ATM. Gain si $|S_T-K|>c+p$.",
+        "distractor_explains": {
+          "b": "C'est le straddle vendu qui profite de la stabilité.",
+          "c": "Baisse de vol réduit les primes.",
+          "d": "Non lié."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-258",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Straddle long : call $c=4$ USD, put $p=3.50$ USD, $K=50$ USD. Seuil de rentabilité supérieur (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 57.5,
+        "steps_mdx": "$K+c+p=50+4+3.50=\\mathbf{57.50}$ USD",
+        "formula_katex": "K+c+p"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-259",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un **strangle** diffère d'un straddle car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il utilise des strikes différents pour le call et le put (OTM)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il n'utilise que des calls"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le put est vendu, pas acheté"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La maturité est différente pour call et put"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Strangle long : achat call $K_2>S$ et put $K_1<S$. Moins cher qu'un straddle mais nécessite un mouvement plus grand.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Les deux sont achetés.",
+          "d": "Même maturité."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-260",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Strangle long : call $K_2=55$, $c=2$ USD ; put $K_1=45$, $p=1.50$ USD. $S_0=50$ USD. Seuil de rentabilité supérieur (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 58.5,
+        "steps_mdx": "$K_2+c+p=55+2+1.50=\\mathbf{58.50}$ USD",
+        "formula_katex": "K_2+c+p"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-261",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un **butterfly spread** (call) est construit par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Achat call $K_1$, vente 2 calls $K_2$, achat call $K_3$ ($K_1<K_2<K_3$)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Achat 2 calls ATM et vente 1 call OTM"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Vente call $K_1$ et achat call $K_2>K_1$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Achat call et put de même strike"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Butterfly : profits si $S_T\\approx K_2$ (middle strike). Risque limité et coût faible.",
+        "distractor_explains": {
+          "b": "Pas un butterfly standard.",
+          "c": "C'est un bear call spread.",
+          "d": "Straddle."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-262",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Butterfly spread : achat call $K_1=45$ ($c_1=6$), vente 2 calls $K_2=50$ ($c_2=3$ chacun), achat call $K_3=55$ ($c_3=1$). Coût net (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 1.0,
+        "steps_mdx": "$6-2\\times3+1=6-6+1=\\mathbf{1}$ USD",
+        "formula_katex": "c_1-2c_2+c_3"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-263",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Expliquez la stratégie **risk reversal** et dans quel contexte elle est utilisée.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Achat call OTM + vente put OTM",
+            "weight": 0.5
+          },
+          {
+            "text": "Exposition haussière à coût réduit ou nul",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un risk reversal consiste à acheter un call OTM et simultanément vendre un put OTM de même maturité. Si la prime du put finance entièrement le call, la stratégie est à coût nul. L'investisseur bénéficie d'une hausse du sous-jacent et perd si il baisse fortement. Utilisé pour des vues directionnelles haussières avec budget limité."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-264",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "La stratégie **condor** diffère du butterfly car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Elle utilise quatre strikes différents, donnant une zone de profit plus large"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elle n'utilise que des puts"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elle est toujours vendeuse"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le profit max est illimité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Condor : $K_1<K_2<K_3<K_4$. Zone de profit entre $K_2$ et $K_3$, plus large qu'un butterfly.",
+        "distractor_explains": {
+          "b": "Peut utiliser calls, puts ou les deux.",
+          "c": "Peut être long ou court.",
+          "d": "Profit plafonné."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-265",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Bear put spread : achat put $K_2=55$, prime $p_2=5$ USD ; vente put $K_1=45$, prime $p_1=1.50$ USD. Calculez (a) coût net, (b) profit max, (c) seuil de rentabilité.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Coût net (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$p_2-p_1=5-1.50=\\mathbf{3.50}$ USD"
+          },
+          {
+            "label": "Profit max (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$(K_2-K_1)-\\text{coût}=(55-45)-3.50=\\mathbf{6.50}$ USD"
+          },
+          {
+            "label": "Seuil de rentabilité (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$55-3.50=\\mathbf{51.50}$ USD",
+            "hint_mdx": "$K_2-\\text{coût net}$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 3.5
+          },
+          {
+            "answer": 6.5
+          },
+          {
+            "answer": 51.5
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-266",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un **calendar spread** exploite :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La décroissance plus rapide de la valeur temps de l'option court terme"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La différence de volatilité entre deux sous-jacents"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La corrélation entre deux actions"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'écart de dividende entre deux périodes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Calendar spread : vente option court terme + achat même option long terme. La vente s'érode vite, achat lentement.",
+        "distractor_explains": {
+          "b": "C'est un vol arbitrage.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-267",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Straddle court : vente call $c=5$ USD + vente put $p=4$ USD, $K=60$ USD. Profit max du straddle court (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 9.0,
+        "steps_mdx": "Profit max = primes encaissées $=c+p=5+4=\\mathbf{9}$ USD (si $S_T=K$)",
+        "formula_katex": "c+p"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-268",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un trader pense que la **volatilité implicite est trop élevée**. Quelle stratégie convient ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Vendre un straddle ou strangle"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter un straddle"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Acheter un bull spread"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Acheter des calls OTM"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vendre de la volatilité via straddle/strangle court. Profit si le sous-jacent reste calme.",
+        "distractor_explains": {
+          "b": "Achat de vol.",
+          "c": "Stratégie directionnelle, pas volatilité.",
+          "d": "Directionnel."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-269",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Butterfly long : max profit = 4 USD, coût = 1 USD, $K_2=50$. Si $S_T=50$, quel est le **profit net** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 4.0,
+        "steps_mdx": "Le max profit du butterfly est atteint à $K_2$: $\\mathbf{4}$ USD.",
+        "formula_katex": "K_2-K_1-\\text{coût}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-270",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un **box spread** génère un profit d'arbitrage sans risque quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La somme des quatre primes est différente de la VA de l'écart des strikes"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le sous-jacent est très volatil"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les taux d'intérêt sont négatifs"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les options sont américaines"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Box spread = bull call spread + bear put spread = flux fixe $=K_2-K_1$. Arbitrage si coût $\\neq (K_2-K_1)e^{-rT}$.",
+        "distractor_explains": {
+          "b": "Non lié.",
+          "c": "Non lié.",
+          "d": "Les box spreads sont sur options européennes."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-271",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Box spread : $K_1=40$, $K_2=50$, $r=5\\%$, $T=1$ an. Valeur théorique du box (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 9.51,
+        "steps_mdx": "$(K_2-K_1)e^{-rT}=10\\times e^{-0.05}=10\\times0.9512=\\mathbf{9.51}$ USD",
+        "formula_katex": "(K_2-K_1)e^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-272",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Comparez le **straddle** et le **strangle** en termes de coût, risque et conditions de profit.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Straddle plus cher mais profits dès petit mouvement",
+            "weight": 0.5
+          },
+          {
+            "text": "Strangle moins cher mais nécessite grand mouvement",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le **straddle** (call + put ATM) coûte plus cher car les deux options sont ATM (valeur temps maximale). Il devient profitable dès que $|S_T-K|>c+p$. Le **strangle** (call OTM + put OTM) coûte moins car les options sont OTM, mais nécessite un mouvement plus grand. Le strangle a un seuil de rentabilité plus éloigné. Les deux strategies parient sur une hausse de volatilité."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-273",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Un **ratio spread** (call) consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Acheter un call et vendre plus d'un call à un strike plus élevé"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter deux calls de même strike"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Vendre un call et acheter un put"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Acheter des calls à différentes maturités"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Ratio spread 1x2 : long 1 call $K_1$, short 2 calls $K_2>K_1$. Profit si hausse modérée, perte si forte hausse.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Risk reversal.",
+          "d": "Calendar spread."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-274",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "trading-strategies-involving-options"
+      ],
+      "prompt_mdx": "Strangle long : call $K_2=60$, $c=2.50$ USD ; put $K_1=40$, $p=2.00$ USD. Perte maximum (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 4.5,
+        "steps_mdx": "Perte max = primes payées $= c+p=2.50+2.00=\\mathbf{4.50}$ USD (si $40\\leq S_T\\leq60$)",
+        "formula_katex": "c+p"
+      }
+    }
+  ]
+}

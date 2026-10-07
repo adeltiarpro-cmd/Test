@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Callout } from "@/components/ui/callout";
 import { cn } from "@/lib/cn";
 import { MathText } from "./mdx";
 import { ResultPanel } from "./result-panel";
@@ -15,7 +16,12 @@ import { StatementInteractiveRunner } from "./runners/statement-interactive";
 import { CaseMathRunner } from "./runners/case-math";
 import { CaseStructuringRunner } from "./runners/case-structuring";
 import { MarketSizingRunner } from "./runners/market-sizing";
-import { submitAttempt } from "@/lib/session-actions";
+import { NumericStepsRunner } from "./runners/numeric-steps";
+import {
+  submitAttempt,
+  peekSelfEvalAnswer,
+  overrideToCorrect,
+} from "@/lib/session-actions";
 import type { AttemptResult } from "@/lib/session-actions";
 
 export type SessionExercise = {
@@ -30,7 +36,8 @@ export type SessionExercise = {
     | "statement_interactive"
     | "case_math"
     | "case_structuring"
-    | "market_sizing";
+    | "market_sizing"
+    | "numeric_steps";
   difficulty: number;
   payload: Record<string, unknown>;
   tags: string[];
@@ -51,10 +58,17 @@ const DIFFICULTY_LABELS: Record<number, string> = {
   4: "Difficile",
   5: "Expert",
 };
+
 const CONFIDENCE_LABELS: Record<1 | 2 | 3, string> = {
   1: "Au hasard",
   2: "Incertain",
   3: "Sûr",
+};
+
+const SELF_EVAL_LABELS: Record<1 | 2 | 3, string> = {
+  1: "À revoir",
+  2: "Moyen",
+  3: "Maîtrisé",
 };
 
 const TYPE_LABELS: Record<string, string> = {
@@ -68,13 +82,15 @@ const TYPE_LABELS: Record<string, string> = {
   case_math: "Math de Cas",
   case_structuring: "Structuration de Cas",
   market_sizing: "Market Sizing",
+  numeric_steps: "Exercice à étapes",
 };
 
 // Grid-based runners stay mounted so colored cells remain visible.
 const GRID_TYPES = new Set(["excel_model", "statement_interactive"]);
 // Case runners stay mounted so rubric results and LLM button remain visible.
 const CASE_TYPES = new Set(["case_structuring", "market_sizing"]);
-const PERSISTENT_TYPES = new Set([...GRID_TYPES, ...CASE_TYPES]);
+// numeric_steps stays mounted so per-step results and solutions remain visible.
+const PERSISTENT_TYPES = new Set([...GRID_TYPES, ...CASE_TYPES, "numeric_steps"]);
 
 export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRunnerProps) {
   const [result, setResult] = useState<AttemptResult | null>(null);
@@ -83,9 +99,19 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
   const resultRef = useRef<HTMLDivElement>(null);
   const [confidence, setConfidence] = useState<1 | 2 | 3>(2);
 
+  // Self-eval two-step state
+  const [selfEvalPhase, setSelfEvalPhase] = useState<"input" | "revealed">("input");
+  const [selfEvalText, setSelfEvalText] = useState("");
+  const [revealedModelAnswer, setRevealedModelAnswer] = useState<string | null>(null);
+
   const pay = exercise.payload as Record<string, unknown>;
   const promptMdx = (pay.prompt_mdx as string | undefined) ?? "";
-  const isPersistent = PERSISTENT_TYPES.has(exercise.type);
+  const scoringMode =
+    exercise.type === "short_answer"
+      ? ((pay.scoring_mode as string | undefined) ?? "auto")
+      : "auto";
+  const isSelfEval = scoringMode === "self_eval";
+  const isPersistent = PERSISTENT_TYPES.has(exercise.type) || isSelfEval;
   const isGrid = GRID_TYPES.has(exercise.type);
 
   async function handleSubmit(answer: Record<string, unknown>) {
@@ -107,6 +133,52 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
       console.error(e);
     } finally {
       setIsSubmitting(false);
+    }
+  }
+
+  async function handlePeek(text: string) {
+    if (preview || isSubmitting) return;
+    setIsSubmitting(true);
+    setSelfEvalText(text);
+    try {
+      const { model_answer_mdx } = await peekSelfEvalAnswer(exercise.id);
+      setRevealedModelAnswer(model_answer_mdx);
+      setSelfEvalPhase("revealed");
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  async function handleSelfEvalSubmit(rating: 1 | 2 | 3) {
+    if (preview || isSubmitting || result) return;
+    setIsSubmitting(true);
+    try {
+      const res = await submitAttempt(
+        exercise.id,
+        { type: "short_answer", text: selfEvalText },
+        Date.now() - startRef.current,
+        rating,
+        rating
+      );
+      setResult(res);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  async function handleOverride() {
+    if (preview) return;
+    try {
+      await overrideToCorrect(exercise.id);
+      setResult((prev) =>
+        prev ? { ...prev, isCorrect: true, score: 1, scoringMode: "partial" } : prev
+      );
+    } catch (e) {
+      console.error(e);
     }
   }
 
@@ -140,8 +212,8 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
         </div>
       )}
 
-      {/* Confidence selector — set before submitting */}
-      {!result && (
+      {/* Confidence selector — hidden for self_eval (rating replaces it) */}
+      {!result && !isSelfEval && (
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs text-muted-foreground shrink-0">Confiance :</span>
           {([1, 2, 3] as const).map((c) => (
@@ -190,7 +262,8 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
             <ShortAnswerRunner
               payload={pay as Parameters<typeof ShortAnswerRunner>[0]["payload"]}
               onSubmit={(text) => handleSubmit({ text })}
-              disabled={isSubmitting}
+              onPeek={isSelfEval ? handlePeek : undefined}
+              disabled={isSubmitting || (isSelfEval && selfEvalPhase === "revealed")}
             />
           )}
           {exercise.type === "graph_fill" && (
@@ -241,11 +314,50 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
               submitted={!!result}
             />
           )}
+          {exercise.type === "numeric_steps" && (
+            <NumericStepsRunner
+              payload={pay as Parameters<typeof NumericStepsRunner>[0]["payload"]}
+              onSubmit={(steps) => handleSubmit({ steps })}
+              disabled={isSubmitting || !!result}
+              stepResults={result?.stepResults}
+            />
+          )}
           {isSubmitting && (
             <p className="text-sm text-muted-foreground animate-pulse mt-2">
               Correction en cours…
             </p>
           )}
+        </div>
+      )}
+
+      {/* Self-eval: revealed model answer + rating buttons */}
+      {isSelfEval && selfEvalPhase === "revealed" && revealedModelAnswer && !result && (
+        <div className="flex flex-col gap-3 border-t border-border pt-4">
+          <Callout variant="info" title="Corrigé">
+            <MathText>{revealedModelAnswer}</MathText>
+          </Callout>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-xs text-muted-foreground shrink-0">Votre auto-évaluation :</span>
+            {([1, 2, 3] as const).map((r) => (
+              <button
+                key={r}
+                type="button"
+                disabled={isSubmitting}
+                onClick={() => handleSelfEvalSubmit(r)}
+                className={cn(
+                  "px-3 py-1.5 rounded text-sm font-medium border transition-colors min-h-[36px]",
+                  r === 1
+                    ? "border-destructive/40 text-destructive hover:bg-destructive/10"
+                    : r === 2
+                    ? "border-amber-400/60 text-amber-700 hover:bg-amber-50"
+                    : "border-green-500/50 text-green-700 hover:bg-green-50",
+                  isSubmitting && "opacity-50 cursor-not-allowed"
+                )}
+              >
+                {SELF_EVAL_LABELS[r]}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
@@ -261,11 +373,19 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
               )}
             >
               {result.isCorrect
-                ? "✓ Tout correct"
+                ? "Tout correct"
                 : `Score : ${Math.round(result.score * 100)} %`}
             </p>
           ) : (
-            <ResultPanel result={result} exerciseType={exercise.type} />
+            <ResultPanel
+              result={result}
+              exerciseType={exercise.type}
+              onOverride={
+                result.scoringMode === "partial" && !result.isCorrect
+                  ? handleOverride
+                  : undefined
+              }
+            />
           )}
           <button
             type="button"

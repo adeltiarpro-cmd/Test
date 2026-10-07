@@ -1,0 +1,3105 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-credit-var",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-186",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "La **titrisation** (securitization) consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Regrouper des actifs illiquides et émettre des titres négociables adossés à ces actifs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Convertir des actions en obligations"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Vendre une obligation à terme"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Créer des produits dérivés sur actions"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Titrisation : pool d'actifs (prêts, hypothèques) → ABS (Asset-Backed Securities) négociables.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-187",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Un **MBS** (Mortgage-Backed Security) est adossé à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Des prêts hypothécaires"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Des créances commerciales"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Des prêts auto"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des obligations d'État"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "MBS : titrisation de prêts immobiliers. Agence MBS (Fannie Mae, Freddie Mac) ou privés.",
+        "distractor_explains": {
+          "b": "ABS.",
+          "c": "ABS auto.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-188",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Pool MBS : 1000 prêts de 200 000 USD chacun, taux d'intérêt moyen 4%, WAM (Weighted Average Maturity) 25 ans. Notionnel total du pool (M USD) ?",
+      "payload": {
+        "unit": "M USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 200.0,
+        "steps_mdx": "$1000\\times200\\,000=200\\,000\\,000=\\mathbf{200}$ M USD.",
+        "formula_katex": "n\\times\\text{prêt moyen}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-189",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Le **risque de prépaiement** dans les MBS survient quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les emprunteurs remboursent anticipativement quand les taux baissent, réduisant le rendement de l'investisseur"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les emprunteurs font défaut"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les taux montent"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le pool se concentre"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Prépaiement = extension risk si taux montent (prépaiements ralentissent), contraction risk si taux baissent.",
+        "distractor_explains": {
+          "b": "C'est le défaut.",
+          "c": "Taux montants ralentissent les prépaiements.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-190",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Expliquez la différence entre un **pass-through MBS** et un **CMO** (Collateralized Mortgage Obligation).",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Pass-through : tous investisseurs reçoivent la même tranche",
+            "weight": 0.5
+          },
+          {
+            "text": "CMO : tranches de prépaiement différenciées",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pass-through : les flux du pool (intérêts + principal) sont redistribués proportionnellement. Tous les investisseurs ont la même exposition au prépaiement. CMO : les tranches (classes) reçoivent les flux dans un ordre défini. PAC (Planned Amortization Class) : tranche protégée contre le prépaiement, soutenue par des companion bonds. Permet de créer des instruments avec différents profils de duration/convexité."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-191",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Le **taux CPR** (Conditional Prepayment Rate) mesure :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le pourcentage annualisé du principal prépayé chaque année"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux de défaut du pool"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La duration de l'obligation"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le coupon versé"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CPR = taux de prépaiement annuel. SMM (Single Monthly Mortality) = $1-(1-CPR)^{1/12}$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-192",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "CPR = 6% par an. SMM (Single Monthly Mortality) = $1-(1-0.06)^{1/12}$ = ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.5143,
+        "steps_mdx": "$SMM=1-(0.94)^{1/12}=1-0.94^{0.0833}=1-0.9948=\\mathbf{0.5143}\\%$.",
+        "formula_katex": "1-(1-CPR)^{1/12}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-193",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "La **convexité négative** des MBS (callable bonds) signifie :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Quand les taux baissent, le prix monte moins qu'une obligation bullet (prépaiements accélèrent)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La duration augmente quand les taux baissent"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La duration est toujours négative"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le prix chute quand les taux baissent"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Convexité $<0$ pour les MBS : l'option de prépaiement réduit la sensibilité positive aux taux bas.",
+        "distractor_explains": {
+          "b": "Faux — duration diminue.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-194",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Option-Adjusted Spread (OAS) : rendement nominal d'un MBS = 5.5%, taux de swap = 4.8%, cost of optionality = 0.4%. OAS ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 0.3,
+        "steps_mdx": "$OAS=\\text{spread nominal}-\\text{option cost}=(5.5-4.8)-0.4=0.7-0.4=\\mathbf{0.3}\\%$.",
+        "formula_katex": "\\text{yield spread}-\\text{option cost}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-195",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Décrivez la crise des **subprimes 2007-2008** en lien avec les MBS et CDOs.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Prêts subprime titrisés en MBS",
+            "weight": 0.5
+          },
+          {
+            "text": "Corrélation sous-estimée → pertes massives sur CDOs",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les prêts subprime (emprunteurs à faible solvabilité) ont été massivement titrisés en MBS, puis packagés en CDOs. Les modèles (Gaussian copula) ont sous-estimé la corrélation des défauts — quand les prix immobiliers ont chuté nationalement, les défauts ont été corrélés, dévastant les tranches 'senior' AAA des CDOs. Les agences de notation avaient mal évalué le risque systémique."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-196",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "Un **ABCP (Asset-Backed Commercial Paper) conduit** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un véhicule hors bilan qui finance des actifs à long terme avec du CP à court terme"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un fonds d'obligations"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un ETF"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Une banque traditionnelle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "ABCP conduit : SIV (Special Investment Vehicle) finançant MBS/ABS avec du CP. Risque de transformation de maturité.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-197",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "securitization"
+      ],
+      "prompt_mdx": "CDO-squared : CDO adossé à des tranches de CDOs. Tranche mezzanine CDO1 = 5% du notionnel, mezzanine CDO2 = 5%. Notionnel CDO-squared sur pool 100 M USD de CDO1 + 100 M USD de CDO2. Tranche equity CDO² 3% ?",
+      "payload": {
+        "unit": "M USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 6.0,
+        "steps_mdx": "$3\\%\\times(100+100)=3\\%\\times200=\\mathbf{6}$ M USD.",
+        "formula_katex": "\\text{tranche}\\%\\times\\text{notionnel total}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-198",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "Le **CVA** (Credit Valuation Adjustment) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'ajustement de la valeur d'un dérivé pour le risque de défaut de la contrepartie"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La commission de courtage"
+          },
+          {
+            "key": "c",
+            "text_mdx": "L'ajustement pour la liquidité"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le coût de financement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CVA = $E^Q[\\text{perte si contrepartie fait défaut}]$. Réduit la valeur d'un dérivé.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "LVA/MVA.",
+          "d": "FVA."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-199",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "CVA unilatéral : probabilité de défaut annuelle $\\lambda=2\\%$, LGD $=60\\%$, EPE (expected positive exposure) $=5$ M USD, $T=3$ ans. CVA $\\approx\\lambda\\times LGD\\times EPE\\times T$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5000.0
+        }
+      },
+      "solution": {
+        "value": 180000.0,
+        "steps_mdx": "$CVA\\approx0.02\\times0.60\\times5\\,000\\,000\\times3=\\mathbf{180\\,000}$ USD.",
+        "formula_katex": "\\lambda\\times LGD\\times EPE\\times T"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-200",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "Le **DVA** (Debt Valuation Adjustment) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'ajustement pour le risque de défaut propre de l'entité elle-même"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Une réduction du CVA"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le coût de financement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'ajustement de marge"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "DVA = bénéfice de son propre risque de défaut. CVA net = CVA de la contrepartie $-$ DVA.",
+        "distractor_explains": {
+          "b": "Partiellement.",
+          "c": "FVA.",
+          "d": "MVA."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-201",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "Expliquez la **Wrong-Way Risk** dans le calcul du CVA.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Exposition corrélée positivement au défaut",
+            "weight": 0.5
+          },
+          {
+            "text": "Sous-estimation du CVA si ignorée",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Wrong-Way Risk (WWR) : la probabilité de défaut de la contrepartie est corrélée positivement avec l'exposition. Exemple : vente d'un put sur les actions d'une banque à cette même banque — si la banque fait défaut (baisse des actions), l'exposition du put est élevée. Le WWR augmente le CVA réel par rapport au CVA calculé sous indépendance."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-202",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "FVA (Funding Valuation Adjustment) : position non collatéralisée, EPE = 10 M USD, coût de financement = 80 bps. FVA annuel (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1000.0
+        }
+      },
+      "solution": {
+        "value": 80000.0,
+        "steps_mdx": "$FVA=EPE\\times\\text{spread}=10\\,000\\,000\\times0.008=\\mathbf{80\\,000}$ USD.",
+        "formula_katex": "EPE\\times\\text{funding spread}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-203",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "Le **KVA** (Capital Valuation Adjustment) représente :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le coût du capital réglementaire alloué à une transaction"
+          },
+          {
+            "key": "b",
+            "text_mdx": "L'ajustement pour les dividendes"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La valeur de la garantie"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le coût de la chambre de compensation"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "KVA = coût d'opportunité du capital réglementaire (Bâle III) réservé pour couvrir le risque de contrepartie.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "CVA.",
+          "d": "MVA."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-204",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "MVA (Margin Valuation Adjustment) : appels de marge initiaux = 2 M USD, durée 1 an, coût du financement de marge = 1.5%. MVA ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 500.0
+        }
+      },
+      "solution": {
+        "value": 30000.0,
+        "steps_mdx": "$MVA=2\\,000\\,000\\times0.015=\\mathbf{30\\,000}$ USD.",
+        "formula_katex": "IM\\times\\text{cost}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-205",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "xvas-and-counterparty-credit-risk"
+      ],
+      "prompt_mdx": "Quels sont les **xVAs** principaux et leurs impacts sur le pricing des dérivés OTC ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "CVA, DVA, FVA, MVA, KVA",
+            "weight": 0.5
+          },
+          {
+            "text": "Réduisent la valeur nette d'un dérivé pour la banque",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les xVAs sont des ajustements à la valeur mid-market d'un dérivé : CVA (-) : risque de défaut contrepartie. DVA (+) : propre risque de défaut (controversé). FVA (-) : coût de financement des positions non collatéralisées. MVA (-) : coût de financement des marges initiales. KVA (-) : coût du capital réglementaire. Total : prix client = mid + xVA. Les xVAs ont significativement réduit la rentabilité des dérivés OTC post-2008."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-476",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "La **VaR** (Value at Risk) à 99% sur 1 jour représente :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La perte maximale attendue à ne pas être dépassée 99% du temps sur 1 jour"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La perte moyenne sur 1 jour"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La perte en cas de crise"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le capital réglementaire"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "VaR 99% 1J : dans 99% des cas, la perte journalière sera inférieure à ce montant.",
+        "distractor_explains": {
+          "b": "C'est l'Expected Shortfall.",
+          "c": "VaR est pour les conditions normales.",
+          "d": "VaR est l'input, pas le capital."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-477",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "VaR paramétrique (normale) : $\\mu=0$, $\\sigma=1\\%$, $N=1$ jour, $z_{99\\%}=2.326$. VaR 99% 1J sur 100 M USD ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 10000.0
+        }
+      },
+      "solution": {
+        "value": 2326000.0,
+        "steps_mdx": "$VaR=z_{99\\%}\\times\\sigma\\times N=2.326\\times0.01\\times100\\,M=\\mathbf{2\\,326\\,000}$ USD.",
+        "formula_katex": "z_{99\\%}\\times\\sigma\\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-478",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Pour passer d'une VaR 1 jour à une VaR 10 jours (sous GBM) :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$VaR_{10J}=VaR_{1J}\\times\\sqrt{10}$ (sous hypothèse de rendements i.i.d.)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$VaR_{10J}=VaR_{1J}\\times10$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$VaR_{10J}=VaR_{1J}/10$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$VaR_{10J}=VaR_{1J}^{10}$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Règle de la racine carrée : vaut sous i.i.d. et normalité.",
+        "distractor_explains": {
+          "b": "Overestimate pour la vol.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-479",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "VaR 1J 99% = 500 000 USD. VaR 10J 99% ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5000.0
+        }
+      },
+      "solution": {
+        "value": 1581139.0,
+        "steps_mdx": "$VaR_{10J}=500\\,000\\times\\sqrt{10}=500\\,000\\times3.1623=\\mathbf{1\\,581\\,139}$ USD.",
+        "formula_katex": "VaR_{1J}\\times\\sqrt{10}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-480",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "La **simulation historique** pour la VaR :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Utilise les rendements historiques passés (ex : 500 jours) pour simuler les P&L et prend le 5e percentile"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Suppose une distribution normale"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Utilise Monte Carlo avec les paramètres actuels"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Ignore les queues de distribution"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "HS : on reprend les 500 scénarios historiques tels quels, on trie les P&L, et la VaR 99% est le 5e pire.",
+        "distractor_explains": {
+          "b": "C'est la méthode paramétrique.",
+          "c": "Monte Carlo.",
+          "d": "Faux, HS capture les queues historiques."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-481",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Listez les **limites de la VaR** comme mesure de risque.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Non sous-additive — pas une mesure cohérente",
+            "weight": 0.5
+          },
+          {
+            "text": "Ne dit rien sur la perte au-delà du seuil",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Limites : (1) Non sous-additive (VaR peut violer la diversification). (2) Ne donne pas d'information sur la perte au-delà du seuil (tail risk). (3) Dépend de l'hypothèse de distribution (normalité sous-estime les fat tails). (4) Horizon court (1J) inadapté pour les positions illiquides. (5) Encourage les risk managers à vendre des options OTM deep (pic de VaR invisible). Ces limites ont motivé l'adoption de l'Expected Shortfall (ES) par Bâle III."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-482",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Portefeuille : actif A ($\\sigma_A=2\\%$, $w_A=0.6$), actif B ($\\sigma_B=3\\%$, $w_B=0.4$, $\\rho=0.3$). $\\sigma_p=\\sqrt{0.36\\times0.0004+0.16\\times0.0009+2\\times0.6\\times0.4\\times0.3\\times0.02\\times0.03}$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.02
+        }
+      },
+      "solution": {
+        "value": 1.859,
+        "steps_mdx": "$\\sigma_p=\\sqrt{0.000144+0.000144+2\\times0.24\\times0.3\\times0.0006}$$=\\sqrt{0.000144+0.000144+0.0000864}=\\sqrt{0.000374}=\\mathbf{1.935}\\%$.",
+        "formula_katex": "\\sqrt{w_A^2\\sigma_A^2+w_B^2\\sigma_B^2+2w_Aw_B\\rho\\sigma_A\\sigma_B}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-483",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Le **back-testing** de la VaR consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Comparer le nombre de dépassements observés avec le nombre théorique"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Remonter le modèle en arrière dans le temps"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Stresser les paramètres"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Comparer VaR à l'ES"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Back-test : sur 250 jours, VaR 99% devrait être dépassée ~2.5 fois. >5 dépassements = modèle problématique.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Stress test.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-484",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Back-test VaR 99% sur 250 jours de trading. Nombre d'exceptions attendues ?",
+      "payload": {
+        "unit": "exceptions",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 2.5,
+        "steps_mdx": "$(1-0.99)\\times250=0.01\\times250=\\mathbf{2.5}$ exceptions.",
+        "formula_katex": "(1-c)\\times T"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-485",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "La VaR **Delta-Normal** (paramétrique) pour un portefeuille d'options :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Utilise les deltas des options pour linéariser les positions et suppose une distribution normale"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Simule les options exactement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Utilise les données historiques"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Ignore le gamma"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Delta-normal : approximation linéaire. Ignore le gamma → sous-estime la VaR si le portefeuille est long gamma.",
+        "distractor_explains": {
+          "b": "Full valuation MC.",
+          "c": "Simulation historique.",
+          "d": "Partiellement — Delta-Gamma-Normal inclut le gamma."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-486",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "VaR delta-gamma : $\\Delta=0.5$, $\\Gamma=0.02$, $\\sigma_S=1.5\\%$, $S=100$. $VaR_{delta}=z\\times|\\Delta|\\times\\sigma_S\\times S=2.326\\times0.5\\times0.015\\times100=1.745$ USD. Correction gamma : $+\\frac{1}{2}\\Gamma\\sigma_S^2 S^2=0.5\\times0.02\\times0.0225\\times10000$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 2.25,
+        "steps_mdx": "$\\frac{1}{2}\\times0.02\\times0.0225\\times10000=\\mathbf{2.25}$ USD.",
+        "formula_katex": "\\frac{1}{2}\\Gamma\\sigma_S^2 S^2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-487",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "La **VaR conditionnelle** (CVaR) ou **Expected Shortfall** (ES) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'espérance de la perte conditionnellement au fait que la perte dépasse la VaR"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La VaR au seuil de confiance suivant"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La perte maximale"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La VaR divisée par 2"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$ES_{\\alpha}=E[L|L>VaR_{\\alpha}]$. Toujours $\\geq VaR$. Mesure cohérente (sous-additive).",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "La perte max peut être arbitrairement grande.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-488",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Distribution normale : VaR 99% = $z_{99}\\sigma=2.326\\sigma$. ES 99% = $\\phi(z_{99})/0.01\\times\\sigma$ où $\\phi=N'(z_{99})=0.0267$. $ES_{99\\%}/\\sigma$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 2.67,
+        "steps_mdx": "$ES_{99\\%}=\\phi(z_{99\\%})/(1-0.99)\\times\\sigma=0.0267/0.01\\times\\sigma=\\mathbf{2.67}\\sigma$.",
+        "formula_katex": "\\phi(z)/\\alpha\\times\\sigma"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-489",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "La **Monte Carlo VaR** est préférable à la simulation historique quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "On veut explorer des scénarios non observés historiquement (stress, nouveaux produits)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "On veut être non-paramétrique"
+          },
+          {
+            "key": "c",
+            "text_mdx": "L'historique est long"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le calcul doit être instantané"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "MC VaR : paramétrique mais avec distribution plus flexible. Permet de modéliser des scénarios de crise.",
+        "distractor_explains": {
+          "b": "Simulation historique est non-paramétrique.",
+          "c": "Long historique favorise HS.",
+          "d": "MC est lent."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-490",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Portefeuille 3 actifs non corrélés : VaR individuelles $=5$, $3$, $4$ M USD. VaR agrégée sous normalité et corrélation nulle ?",
+      "payload": {
+        "unit": "M USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 7.071,
+        "steps_mdx": "$VaR_p=\\sqrt{5^2+3^2+4^2}=\\sqrt{25+9+16}=\\sqrt{50}=\\mathbf{7.07}$ M USD.",
+        "formula_katex": "\\sqrt{\\sum VaR_i^2}\\text{ (corrélation nulle)}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-491",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Le **Stressed VaR** (SVaR) dans Bâle 2.5 est calculé en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Utilisant une fenêtre historique de crise (ex 2008-2009) pour calibrer les paramètres"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Multipliant la VaR par 3"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Utilisant des scénarios réglementaires définis"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Ajoutant un buffer de 99.9%"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "SVaR = VaR recalculée sur la période de stress la plus défavorable (12 mois). Capital = max(VaR, SVaR).",
+        "distractor_explains": {
+          "b": "Facteur multiplicatif s'applique à VaR mais ce n'est pas la définition.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-492",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Exigence de capital Bâle (marché) : $max(VaR_{t-1}, m_c\\times\\frac{1}{60}\\sum VaR_{60J})$. $m_c=3$, VaR hier $=8$ M USD, moyenne 60J $=7$ M USD. Capital requis ?",
+      "payload": {
+        "unit": "M USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 21.0,
+        "steps_mdx": "$\\max(8,3\\times7)=\\max(8,21)=\\mathbf{21}$ M USD.",
+        "formula_katex": "\\max(VaR_{t-1},m_c\\times\\bar{VaR}_{60})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-493",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "VaR 1J 99% d'un bond : duration $=5$, $\\Delta r=2.326\\times\\sigma_r=2.326\\times0.5\\%=1.163\\%$. $\\Delta P\\approx -D\\Delta r\\times P$. $P=100$ USD. $\\Delta P=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 5.815,
+        "steps_mdx": "$\\Delta P=-5\\times0.01163\\times100=-\\mathbf{5.815}$ USD.",
+        "formula_katex": "-D\\times\\Delta r\\times P"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-494",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "value-at-risk"
+      ],
+      "prompt_mdx": "Expliquez les différences entre **VaR** et **Expected Shortfall** du point de vue de la gestion des risques.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "ES capture le tail risk",
+            "weight": 0.5
+          },
+          {
+            "text": "ES est sous-additive contrairement à VaR",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "VaR : seuil de perte non dépassé avec probabilité $c$. Ne dit rien sur la distribution des pertes au-delà. ES (CVaR) : perte moyenne conditionnelle au dépassement de la VaR. Mesure cohérente. Avantages ES : capture le tail risk, sous-additive (diversification), adoptée par Bâle IV. Inconvénient : plus difficile à back-tester (pas de niveau de quantile fixe observable)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-515",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Le **risque de crédit** comprend principalement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le risque de défaut et le risque de dégradation de notation"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le risque de taux d'intérêt"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le risque de change"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le risque de liquidité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Risque de crédit : défaut (non-paiement) + migration (dégradation notation).",
+        "distractor_explains": {
+          "b": "Risque de marché.",
+          "c": "Risque FX.",
+          "d": "Risque de liquidité."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-516",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "La **probabilité de défaut** (PD) dans le modèle de Merton est liée à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La probabilité que la valeur des actifs tombe sous la valeur des dettes à maturité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le spread de crédit directement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le ratio dette/equity"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux de recouvrement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Merton (1974) : l'equity = call sur la valeur des actifs. Défaut si $V_A(T)<D$.",
+        "distractor_explains": {
+          "b": "Non directement.",
+          "c": "Partiellement, mais pas la définition.",
+          "d": "LGD, différent."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-517",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Merton : $V_A=100$ M USD, $D=80$ M USD, $\\sigma_A=20\\%$, $r=4\\%$, $T=1$ an. $d_2=[\\ln(100/80)+(0.04-0.02)\\times1]/(0.20)=[0.2231+0.02]/0.20=1.2155$. $N(-d_2)=N(-1.22)=0.1112$. PD risque-neutre (%) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 11.12,
+        "steps_mdx": "$PD=N(-d_2)=N(-1.2155)=\\mathbf{11.12}\\%$.",
+        "formula_katex": "N(-d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-518",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Expliquez le modèle **KMV** (Kealhofer-McQuown-Vasicek) de prédiction du défaut.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Distance au défaut = (V_A - D)/σ_A",
+            "weight": 0.5
+          },
+          {
+            "text": "Plus la distance est petite, plus le risque est élevé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "KMV (Moody's KMV) : 1) Estimer $V_A$ et $\\sigma_A$ à partir du prix boursier (modèle de Merton). 2) Calculer la Distance au Défaut (DD) : $DD=(V_A-D_{default\\ point})/(V_A\\sigma_A)$. 3) Mapper DD sur l'Expected Default Frequency (EDF) via une base de données historique. Le default point est souvent entre les dettes CT et la dette totale."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-519",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Spread de crédit : $Y_{bond}=6\\%$, $r=4\\%$. Spread de crédit ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 2.0,
+        "steps_mdx": "$s=Y-r=6-4=\\mathbf{2}\\%$.",
+        "formula_katex": "Y_{bond}-r"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-520",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "La relation entre **spread de crédit** et probabilité de défaut (risque-neutre) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$s\\approx\\lambda\\times LGD$ où $\\lambda$ est le taux d'intensité de défaut"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$s=PD$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$s=LGD$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$s=\\lambda/LGD$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Intensité de défaut $\\lambda$ : $s=\\lambda\\times(1-R)=\\lambda\\times LGD$.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-521",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Spread CDS = 150 bps, LGD = 60%. Taux d'intensité risque-neutre $\\lambda$ (approx) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 2.5,
+        "steps_mdx": "$\\lambda=s/LGD=0.015/0.60=\\mathbf{2.5}\\%$ par an.",
+        "formula_katex": "s/(1-R)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-522",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "La **migration de notation** (rating migration) est modélisée par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une matrice de transition : $P(A\\to B,1\\text{ an})$ pour chaque paire de notations"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le modèle de Merton uniquement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un processus de Poisson"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un modèle Markov à 2 états"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Matrix de transition annuelle (Moody's, S&P) : probabilités de passer d'une notation à une autre.",
+        "distractor_explains": {
+          "b": "Merton donne la PD mais pas la transition.",
+          "c": "Pour le défaut uniquement.",
+          "d": "Extension possible mais la matrice complète est standard."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-523",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Matrice de transition 1 an : $P(BBB\\to BB)=5\\%$, $P(BBB\\to défaut)=0.5\\%$. Probabilité de rester BBB ou monter = 1 - 5% - 0.5% - autres baisses (7%) = ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 87.5,
+        "steps_mdx": "$100-5-0.5-7=\\mathbf{87.5}\\%$ (exemple illustratif).",
+        "formula_katex": "1-\\sum P(\\text{migration\\,ou\\,défaut})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-524",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Comparez la **probabilité de défaut risque-neutre** et la **probabilité physique** de défaut.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "PD risque-neutre > PD physique (prime de risque de crédit)",
+            "weight": 0.5
+          },
+          {
+            "text": "Issues des spreads de marché vs données historiques",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "PD risque-neutre : extraite des spreads de CDS ou obligations. Inclut une prime de risque. PD physique : estimée à partir de données historiques de défaut (Moody's, S&P). En général, PD risque-neutre > PD physique car le marché exige une prime pour le risque de crédit. L'écart ($=$ prime de risque crédit) est positif et varie avec le cycle économique."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-525",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Intensité de défaut $\\lambda=3\\%$/an. Probabilité de survie à 2 ans ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 94.18,
+        "steps_mdx": "$P(\\text{survive})=e^{-\\lambda T}=e^{-0.06}=\\mathbf{94.18}\\%$.",
+        "formula_katex": "e^{-\\lambda T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-526",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Le **taux de recouvrement** (Recovery Rate) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le pourcentage du nominal récupéré en cas de défaut (typiquement 40% pour les obligations non sécurisées)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux de coupon après défaut"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux de roulage de la dette"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux de migration vers BBB"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Recovery rate $R\\approx40\\%$ pour senior unsecured. LGD $=1-R=60\\%$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-527",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Obligation zero-coupon 1 an, $K=1000$ USD, PD=5%, R=40%. Prix risque-neutre sous r=4% ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 917.4,
+        "steps_mdx": "$P_{bond}=e^{-r}[(1-PD)\\times1000+PD\\times R\\times1000]=e^{-0.04}[0.95\\times1000+0.05\\times400]$$=0.9608[950+20]=0.9608\\times970=\\mathbf{932.0}$ USD.",
+        "formula_katex": "e^{-r}[(1-PD)\\times K+PD\\times R\\times K]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-528",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Le modèle à **intensité** (réduit) modélise le défaut par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un processus de Poisson de taux $\\lambda(t)$ — le défaut survient aléatoirement"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La valeur des actifs sous un seuil"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un arbre binomial"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un modèle GARCH"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Modèle d'intensité (Jarrow-Turnbull, Duffie-Singleton) : temps de défaut = premier saut d'un Poisson.",
+        "distractor_explains": {
+          "b": "C'est le modèle structurel (Merton).",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-529",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "CDS sur 1 an, $\\lambda=200$ bps, $LGD=60\\%$, discount $e^{-rT}=0.96$. Jambe protection (valeur actualisée) : $\\lambda\\times LGD\\times e^{-rT}\\times N$ ($N=1$) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 1.152,
+        "steps_mdx": "$0.02\\times0.6\\times0.96=\\mathbf{1.152}\\%$.",
+        "formula_katex": "\\lambda\\times LGD\\times e^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-530",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Expliquez la **corrélation de défaut** et son impact sur les CDOs.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Corrélation positive amplifie les pertes simultanées",
+            "weight": 0.5
+          },
+          {
+            "text": "Impact asymétrique sur les tranches",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Corrélation de défaut : tendance des défauts à se produire simultanément. Si $\\rho=0$ : la diversification réduit le risque senior. Si $\\rho=1$ : tous les émetteurs font défaut ensemble, les tranches seniors sont exposées. Impact CDO : faible corrélation protège la tranche senior (bonne pour les seniors, mauvaise pour l'equity). Forte corrélation : mauvaise pour les seniors, profite à l'equity car le scénario 'tous défauts' est possible."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-531",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Correlation de défaut implicite (base correlation). Tranche 0-3% (equity) : $\\rho=15\\%$. Tranche 3-6% : $\\rho=25\\%$. La base correlation est croissante : vrai ou faux ? Vrai = 1, Faux = 0.",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 1.0,
+        "steps_mdx": "La base correlation est par construction croissante avec le point d'attachement. $\\mathbf{1}$ (Vrai).",
+        "formula_katex": "\\text{par définition}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-532",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Le **VaR économique** (Economic Capital) pour le crédit est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La perte inattendue (UL = percentile élevé $-$ EL), pas la perte attendue"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La perte attendue"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La VaR à 99%"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le spread de crédit moyen"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Capital économique = perte inattendue : $UL_{99.9\\%}=VaR_{99.9\\%}-EL$. EL est couverte par des provisions.",
+        "distractor_explains": {
+          "b": "La perte attendue est couverte par le pricing.",
+          "c": "99.9% pour le crédit.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-533",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "EL (Expected Loss) : $PD=1\\%$, $LGD=50\\%$, $EAD=1$ M USD. EL (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 50.0
+        }
+      },
+      "solution": {
+        "value": 5000.0,
+        "steps_mdx": "$EL=PD\\times LGD\\times EAD=0.01\\times0.5\\times1\\,000\\,000=\\mathbf{5\\,000}$ USD.",
+        "formula_katex": "PD\\times LGD\\times EAD"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-534",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Un **credit default swap (CDS) index** (iTraxx, CDX) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un CDS standardisé sur un panier d'entités de référence — permet de prendre une vue sur le marché du crédit global"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un fonds d'obligations"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un dérivé de taux"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un indice boursier de banques"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "iTraxx Europe 125 : CDS sur 125 émetteurs européens IG. CDX IG : 125 émetteurs US.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-535",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Corrélation de défaut implicite : CDX IG spread $=80$ bps, spread moyen des composants $=70$ bps. L'écart (10 bps) reflète la :",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "La corrélation positive entre les défauts implique que l'index s'écarte légèrement de la moyenne, mais l'explication est qualitative. Valeur numérique : $\\rho$ implicite $\\approx\\mathbf{0}$ (exercice qualitatif).",
+        "formula_katex": "\\text{qualitative}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-536",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Expliquez comment les **agences de notation** (Moody's, S&P, Fitch) évaluent le risque de crédit.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Analyse quantitative (ratios financiers) et qualitative (management, secteur)",
+            "weight": 0.5
+          },
+          {
+            "text": "Notation reflète la PD relative",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les agences analysent : (1) Ratios financiers (EBITDA/intérêts, dette/fonds propres, free cash flow). (2) Qualité du management, positionnement concurrentiel. (3) Secteur et macro. (4) Structure de la dette (séniorité, covenants). La notation (AAA à D) reflète la probabilité de défaut relative. Critiques : lenteur des révisions, conflits d'intérêts (modèle émetteur-payeur), pro-cyclicité."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-537",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Le modèle de **Jarrow-Turnbull (1995)** est un modèle :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "À intensité — le défaut est modélisé comme un processus de Poisson de taux $\\lambda$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Structurel basé sur la valeur des actifs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "À volatilité stochastique"
+          },
+          {
+            "key": "d",
+            "text_mdx": "À saut de crédit"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "JT : modèle réduit, $\\lambda$ peut être stochastique (ex: CIR).",
+        "distractor_explains": {
+          "b": "Merton/Black-Cox sont structurels.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-538",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Temps de défaut $\\tau$ : $P(\\tau>t)=e^{-\\lambda t}$. Demi-vie ($t$ tel que $P(\\tau>t)=0.5$) pour $\\lambda=5\\%$ ?",
+      "payload": {
+        "unit": "ans",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "value": 13.86,
+        "steps_mdx": "$0.5=e^{-0.05t}\\Rightarrow t=\\ln(2)/0.05=0.693/0.05=\\mathbf{13.86}$ ans.",
+        "formula_katex": "\\ln(2)/\\lambda"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-539",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Le **LGD** (Loss Given Default) varie selon :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La séniorité de la dette et la qualité du collatéral"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux d'intérêt"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La maturité de la dette uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La nationalité de l'émetteur"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "LGD : secured bonds $<30\\%$, senior unsecured $\\approx60\\%$, subordinated $>70\\%$.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-540",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Bond : $PD=3\\%$, $R=40\\%$, $EAD=1000$ USD, $r=4\\%$, $T=1$. Prix bond risque-neutre ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 931.2,
+        "steps_mdx": "$V=e^{-0.04}[(1-0.03)\\times1000+0.03\\times400]=0.9608[970+12]=0.9608\\times982=\\mathbf{943.9}$ USD.",
+        "formula_katex": "e^{-r}[(1-PD)\\times F+PD\\times R\\times F]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-541",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Le ratio **Tier 1** (CET1) dans Bâle III est calculé par rapport à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les actifs pondérés des risques (RWA) — minimum 4.5%"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les actifs totaux"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le passif total"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le bénéfice annuel"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CET1 = Capital ordinaire / RWA. Bâle III : min 4.5% CET1 + 2.5% buffer = 7%.",
+        "distractor_explains": {
+          "b": "Ratio de levier.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-542",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "RWA crédit : exposition $=1$ M USD, pondération risque $=50\\%$ (BBB). RWA ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 500000.0,
+        "steps_mdx": "$RWA=1\\,000\\,000\\times50\\%=\\mathbf{500\\,000}$ USD.",
+        "formula_katex": "EAD\\times\\text{risk weight}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-543",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-risk"
+      ],
+      "prompt_mdx": "Capital crédit (Bâle III) : RWA $=500$ K USD, CET1 minimum $=7\\%$. Capital requis (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 35000.0,
+        "steps_mdx": "$C=RWA\\times7\\%=500\\,000\\times0.07=\\mathbf{35\\,000}$ USD.",
+        "formula_katex": "RWA\\times\\text{CET1 ratio}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-544",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Un **CDS (Credit Default Swap)** est un contrat où :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le vendeur de protection paie le pair moins le recouvrement en cas de défaut de l'entité de référence"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le vendeur reçoit le pair"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les deux parties échangent des taux fixes"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'entité de référence garantit le paiement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CDS : acheteur paie une prime (spread), vendeur paie $LGD\\times N$ en cas de défaut.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "IRS.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-545",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDS 5 ans, spread = 120 bps, notionnel 10 M USD, paiements trimestriels. Prime trimestrielle (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 30000.0,
+        "steps_mdx": "$120\\,bps\\times10\\,M\\times0.25=0.012\\times10\\,000\\,000\\times0.25=\\mathbf{30\\,000}$ USD.",
+        "formula_katex": "\\text{spread}\\times N\\times\\delta"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-546",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "La **jambe protection** d'un CDS vaut :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La valeur actualisée des paiements de protection conditionnels au défaut"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La valeur actualisée des primes"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La valeur de l'obligation de référence"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La VaR du CDS"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Jambe protection = $\\sum_i \\lambda_i LGD\\times B(0,T_i)$. S'oppose à la jambe premium.",
+        "distractor_explains": {
+          "b": "C'est la jambe premium.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-547",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDS pricing : $\\lambda=200$ bps, $LGD=60\\%$, 1 an. Jambe protection (non actualisée) $=\\lambda\\times LGD=0.02\\times0.60$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 1.2,
+        "steps_mdx": "$0.02\\times0.60=\\mathbf{1.2}\\%$ du notionnel.",
+        "formula_katex": "\\lambda\\times LGD"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-548",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Expliquez comment un CDS peut être utilisé pour **créer une position synthétique longue** sur une obligation.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vendre protection CDS = risque similaire à détenir l'obligation",
+            "weight": 0.5
+          },
+          {
+            "text": "Évite le financement de l'actif",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Vendre protection sur un CDS = position longue synthétique sur le risque de crédit. En cas de défaut, le vendeur de protection paie le LGD (comme un détenteur d'obligation). Avantages : (1) Pas besoin de financer l'actif. (2) Levier naturel. (3) Exposition sélective à la duration de crédit. Utilisé par les hedge funds pour s'exposer au crédit d'une entité sans acheter son obligation."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-549",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDS spread = 200 bps, rendement risk-free = 4%, rendement obligation = 6%. Basis ?",
+      "payload": {
+        "unit": "bps",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5.0
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "$\\text{Basis}=\\text{CDS spread}-(\\text{bond spread})=200-(6-4)\\%\\times100=200-200=\\mathbf{0}$ bps. (Basis nulle si marché parfait.)",
+        "formula_katex": "\\text{CDS spread}-\\text{bond spread}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-550",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Le **ISDA Credit Event** déclenche le paiement d'un CDS pour :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Défaut de paiement, faillite, restructuration (selon le contrat)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La dégradation de notation uniquement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La hausse des spreads CDS"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'abaissement de note en zone spéculative"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Événements de crédit ISDA : failure to pay, bankruptcy, restructuring (optional en NA vs Europe).",
+        "distractor_explains": {
+          "b": "Non, pas un événement de crédit.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-551",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Le **CDS index (CDX/iTraxx)** permet de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Prendre une vue sur le crédit global d'un secteur ou d'une région géographique en une transaction"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter individuellement des CDS"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Investir dans des actions"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Gérer le risque de taux"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "iTraxx/CDX : hedge macro du portefeuille de crédit, trading de spread global.",
+        "distractor_explains": {
+          "b": "CDS individuels.",
+          "c": "Faux.",
+          "d": "IRS."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-552",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Valeur d'un CDS à mi-vie : spread initial $=150$ bps, spread actuel $=200$ bps, duration $=3$ ans. P&L d'un acheteur de protection (vendeur de risque) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 500.0
+        }
+      },
+      "solution": {
+        "value": 15000.0,
+        "steps_mdx": "$\\Delta\\text{valeur}=(200-150)\\,bps\\times3\\,ans=50\\,bps\\times3=1.5\\%$ du notionnel (1 M). $=0.015\\times1\\,000\\,000=\\mathbf{15\\,000}$ USD de profit pour l'acheteur de protection.",
+        "formula_katex": "(s_{new}-s_{old})\\times\\text{duration}\\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-553",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un **Total Return Swap (TRS)** et en quoi diffère-t-il d'un CDS ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "TRS transfère aussi le risque de marché",
+            "weight": 0.5
+          },
+          {
+            "text": "CDS ne couvre que le défaut",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "TRS : le payeur TRS envoie le rendement total (coupons + variation de prix) et reçoit SOFR+spread. CDS : couvre uniquement le risque de défaut (paiement conditionnel). TRS transfère donc le risque de taux, de crédit ET de marché. CDS est plus ciblé : seul le défaut déclenche le paiement. TRS est utilisé pour le financement synthétique, CDS pour la couverture du risque de défaut pur."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-554",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Un **CLN (Credit-Linked Note)** combine :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une obligation + un CDS embedded : l'émetteur a une protection de crédit sur l'entité de référence"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un CDO + un MBS"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un call + un bond"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un TRS + un cap"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CLN : émetteur émet une obligation à coupon élevé, mais si l'entité de référence fait défaut, le remboursement est réduit.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Convertible bond.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-555",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CLN : coupon 5%, notionnel 1000 USD. Défaut de l'entité de référence (R=40%). Remboursement à maturité ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 400.0,
+        "steps_mdx": "$1000\\times R=1000\\times0.40=\\mathbf{400}$ USD.",
+        "formula_katex": "N\\times R"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-556",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Un **First-to-Default** (FtD) basket CDS paie :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Lors du premier défaut dans un panier d'entités de référence"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Lors du dernier défaut"
+          },
+          {
+            "key": "c",
+            "text_mdx": "À chaque défaut"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Uniquement pour les obligations souveraines"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "FtD : concentre le risque de crédit du premier défaut du panier. Spread > CDS individuel max.",
+        "distractor_explains": {
+          "b": "Last-to-default.",
+          "c": "nth-to-default.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-557",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "FtD panier 5 entités, $\\lambda_i=100$ bps chacune, indépendantes. Intensité du premier défaut ?",
+      "payload": {
+        "unit": "bps",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 500.0,
+        "steps_mdx": "$\\lambda_{FtD}=\\sum\\lambda_i=5\\times100=\\mathbf{500}$ bps (indépendance).",
+        "formula_katex": "\\sum_{i}\\lambda_i"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-558",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Décrivez la **replication synthétique** d'un CDO avec des CDS.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "CDS sur chaque entité de référence",
+            "weight": 0.5
+          },
+          {
+            "text": "Tranches synthétiques par allocation des pertes",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "CDO synthétique : au lieu d'acheter les obligations physiquement, le SPV vend des CDS sur le pool d'entités. Les primes CDS remplacent les coupons des obligations. Les pertes sur défaut sont absorbées par les tranches dans l'ordre equity → mezzanine → senior. Avantage : rapidité, flexibilité, pas besoin de trouver les obligations physiques. Bilan négatif : les CDO synthétiques permettaient de 'créer' plus d'exposition au crédit que la capacité de l'économie réelle."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-559",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDO synthétique : vendeur protection sur 100 M USD de CDS. Spread moyen = 150 bps. Prime reçue annuelle (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 10000.0
+        }
+      },
+      "solution": {
+        "value": 1500000.0,
+        "steps_mdx": "$150\\,bps\\times100\\,M=0.015\\times100\\,000\\,000=\\mathbf{1\\,500\\,000}$ USD.",
+        "formula_katex": "\\text{spread}\\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-560",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Le **CDS spread** reflète approximativement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La prime de risque de crédit annuelle pour se protéger contre le défaut"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le rendement de l'obligation"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La probabilité de défaut seule"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux de recouvrement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$s\\approx\\lambda\\times LGD$. Le spread est la prime de risque annualisée.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Seulement sous LGD=100%.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-561",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDS bootstrap : obligations 1 an (PD1=1%) et 2 ans (PD cumul=3%). PD2 marginale ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 2.02,
+        "steps_mdx": "$PD_2^{marginal}=1-(1-0.03)/(1-0.01)=1-0.97/0.99=1-0.9798=\\mathbf{2.02}\\%$.",
+        "formula_katex": "1-(1-PD_{cum,2})/(1-PD_{cum,1})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-562",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "La **Big Bang Protocol** ISDA (2009) a standardisé les CDS en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Introduisant des dates de paiement standard et des upfront payments pour les spreads non ATM"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Éliminant les CDS des marchés OTC"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Rendant les CDS exchange-traded"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Supprimant les événements de restructuration"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Big Bang : coupons standard 100 bps ou 500 bps + upfront. Clearance via CCP. Small Bang pour l'Europe.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Partiellement, via CCPs.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-563",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDS Big Bang : coupon standard = 100 bps, spread de marché = 80 bps. L'acheteur reçoit un upfront (vendeur de protection paie) car spread < coupon. Upfront approx = (100-80) bps × duration 5 ans ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 1.0,
+        "steps_mdx": "$Upfront=(100-80)\\,bps\\times5=20\\,bps\\times5=100\\,bps=\\mathbf{1}\\%$ du notionnel.",
+        "formula_katex": "(K-s)\\times\\text{duration}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-564",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Expliquez le rôle des **CCPs** (Central Clearing Counterparties) dans les marchés de CDS.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Réduction du risque de contrepartie",
+            "weight": 0.5
+          },
+          {
+            "text": "Compression des positions",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Post-crise 2008, les CDS standardisés sont compensés via des CCPs (ex : ICE Clear Credit). La CCP devient l'acheteur pour chaque vendeur et vice versa → risque bilatéral devient risque face CCP. Avantages : mutualisation du risque de défaut, compression nette des positions, transparence des expositions. La réglementation Dodd-Frank (US) et EMIR (EU) ont mandaté la compensation centrale pour les CDS standardisés."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-565",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Le **basis trade** CDS-Bond exploite :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'écart entre le spread CDS et le spread de l'obligation (bond basis)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La différence de vol implicite entre deux CDS"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les différences de taux entre marchés"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'écart entre CDS IG et HY"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Bond basis = CDS spread $-$ Z-spread. Peut diverger lors de stress de marché (financement, réglementation).",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-566",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Z-spread d'une obligation = 180 bps, CDS spread = 200 bps. Basis (bps) ?",
+      "payload": {
+        "unit": "bps",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 20.0,
+        "steps_mdx": "$Basis=200-180=\\mathbf{20}$ bps (positive basis — CDS plus cher).",
+        "formula_katex": "CDS_{spread}-Z_{spread}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-567",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "La **restructuration** comme événement de crédit CDS est controversée car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Elle peut être voluntary/distressed et les créanciers reçoivent de nouvelles obligations pas nécessairement au prix de marché"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elle est trop rare"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elle avantage le vendeur de protection"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Elle n'existe pas dans les CDS modernes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Restructuration 'soft' : l'acheteur peut choisir quelle obligation livrer (cheapest-to-deliver) → surcompensation.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Avantage l'acheteur (cheapest-to-deliver).",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-568",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Cheapest-to-Deliver (CTD) dans un CDS sur restructuration : obligations éligibles à 85, 88, 80 USD. CTD (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 80.0,
+        "steps_mdx": "L'obligation à $\\mathbf{80}$ USD est la moins chère à livrer (maximise le paiement de l'acheteur).",
+        "formula_katex": "\\min(\\text{prix obligataires})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-569",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Comment les **sovereign CDS** sont-ils utilisés par les investisseurs internationaux ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Couverture du risque souverain",
+            "weight": 0.5
+          },
+          {
+            "text": "Spéculation sur la solvabilité d'un pays",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les CDS souverains permettent : (1) **Couverture** : les détenteurs d'obligations souveraines achètent des CDS pour se protéger contre le défaut. (2) **Spéculation** : sans détenir les obligations, acheter un CDS est un pari sur la dégradation du crédit. (3) **Indicateur** : les spreads CDS souverains sont un baromètre du risque de défaut perçu par le marché. Controverse (crise euro 2010-2012) : vente à découvert de CDS souverains accusée d'amplifier les crises."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-570",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDS souverain Grèce 2012 : spread 3500 bps, LGD=60%. PD implicite annuelle ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 58.3,
+        "steps_mdx": "$PD=s/LGD=3500\\,bps/6000\\,bps=0.583=\\mathbf{58.3}\\%$/an.",
+        "formula_katex": "s/LGD"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-571",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Le **CDS swaption** est une option sur :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le spread d'un CDS à une date future"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux d'intérêt d'un swap"
+          },
+          {
+            "key": "c",
+            "text_mdx": "L'obligation de référence"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le prix du CDS index"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CDS swaption : call (ou put) sur le spread d'un CDS à une date future. Utile pour gérer la volatilité du crédit.",
+        "distractor_explains": {
+          "b": "Swaption IR.",
+          "c": "Bond option.",
+          "d": "CDS index option."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-572",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "CDS swaption : strike $K=150$ bps, forward CDS spread $F=180$ bps, $\\sigma=30\\%$, $T=0.5$ an, duration $=4$ ans. $d_1=[\\ln(180/150)+0.5\\times0.09\\times0.5]/(0.30\\sqrt{0.5})=[0.182+0.0225]/0.2121=0.963$. $N(0.963)=0.832$. Valeur payer swaption CDS ?",
+      "payload": {
+        "unit": "bps",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 15.2,
+        "steps_mdx": "$V\\approx4\\times e^{-rT}[FN(d_1)-KN(d_2)]$. $d_2=0.963-0.2121=0.751$. $N(0.751)=0.774$. $V=4[180\\times0.832-150\\times0.774]=4[149.8-116.1]=4\\times33.7=\\mathbf{134.8}$ bps $\\times e^{-r}$.",
+        "formula_katex": "D[FN(d_1)-KN(d_2)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-573",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "credit-derivatives"
+      ],
+      "prompt_mdx": "Expliquez comment les **CDS** peuvent être utilisés pour gérer le risque de concentration dans un portefeuille de crédit.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Acheter protection sur les émetteurs concentrés",
+            "weight": 0.5
+          },
+          {
+            "text": "Réduire les large single-name exposures",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Gestion de concentration : si un portefeuille est surexposé à un émetteur spécifique (ex : 10% en une seule obligation), acheter un CDS sur cet émetteur réduit l'exposition nette sans vendre l'obligation. Avantages : pas de réalisation de plus/moins-value, confidentialité, efficacité fiscale possible. La CCP permet la compression nette des positions entre différents participants du marché."
+      }
+    }
+  ]
+}

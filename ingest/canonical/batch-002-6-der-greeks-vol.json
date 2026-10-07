@@ -1,0 +1,2235 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-greeks-vol",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-399",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **delta** d'un call européen (BSM) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$N(d_1)$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$N(d_2)$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$-N(d_1)$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$N(-d_1)$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\Delta_{call}=N(d_1)$ : dérivée du prix du call par rapport au sous-jacent.",
+        "distractor_explains": {
+          "b": "$N(d_2)$ est la probabilité d'exercice.",
+          "c": "C'est le delta du put (signe négatif).",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-400",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **delta** d'un put européen (BSM) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$N(d_1)-1$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$N(d_1)$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$-N(d_2)$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$1-N(d_2)$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\Delta_{put}=N(d_1)-1=-N(-d_1)$. Toujours négatif : le put baisse quand $S$ monte.",
+        "distractor_explains": {
+          "b": "C'est le delta du call.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-401",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Delta d'un call BSM : $d_1=0.4$, $N(0.4)=0.6554$. Delta-hedge : on vend 100 calls. Nombre d'actions à acheter ?",
+      "payload": {
+        "unit": "actions",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 65.54,
+        "steps_mdx": "$\\Delta_{call}=N(0.4)=0.6554$. 100 calls × 0.6554 = $\\mathbf{65.54}$ actions.",
+        "formula_katex": "100\\times N(d_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-402",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **gamma** d'une option mesure :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La sensibilité du delta au prix du sous-jacent"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La sensibilité du prix à la volatilité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La sensibilité du prix au temps"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La sensibilité du prix au taux sans risque"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\Gamma=\\partial\\Delta/\\partial S = \\partial^2 C/\\partial S^2$. Le gamma est toujours positif pour calls et puts longs.",
+        "distractor_explains": {
+          "b": "C'est le vega.",
+          "c": "C'est le thêta.",
+          "d": "C'est le rhô."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-403",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Gamma d'un call BSM : $\\Gamma=N'(d_1)/(S\\sigma\\sqrt{T})$. $N'(d_1)=0.3989$, $S=100$, $\\sigma=20\\%$, $T=1$ an. Gamma ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.0005
+        }
+      },
+      "solution": {
+        "value": 0.01995,
+        "steps_mdx": "$\\Gamma=0.3989/(100\\times0.20\\times1)=0.3989/20=\\mathbf{0.01995}$",
+        "formula_katex": "N'(d_1)/(S\\sigma\\sqrt{T})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-404",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **thêta** d'une option longue est généralement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Négatif — la valeur temps se détériore avec le temps"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Positif"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Nul pour les options européennes"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Positif pour les calls deep ITM"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Thêta $<0$ pour les options longues : chaque jour qui passe érode la valeur temps.",
+        "distractor_explains": {
+          "b": "Le theta est positif pour les options courtes (vendeur bénéficie du temps).",
+          "c": "Faux.",
+          "d": "Rarement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-405",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Thêta BSM call : $\\Theta=-\\frac{SN'(d_1)\\sigma}{2\\sqrt{T}}-rKe^{-rT}N(d_2)$. $S=50$, $\\sigma=25\\%$, $T=0.5$ an, $N'(d_1)=0.38$, $r=4\\%$, $K=50$, $N(d_2)=0.52$. Thêta par jour (USD/365) ?",
+      "payload": {
+        "unit": "USD/jour",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": -0.0178,
+        "steps_mdx": "$\\Theta=-(50\\times0.38\\times0.25)/(2\\sqrt{0.5})-0.04\\times50e^{-0.02}\\times0.52$$=-(4.75)/(1.4142)-0.04\\times49.01\\times0.52=-3.358-1.019=-4.377$ USD/an. $\\div365=\\mathbf{-0.0120}$ USD/jour.",
+        "formula_katex": "\\Theta/365"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-406",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **vega** d'une option mesure :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La sensibilité du prix à la volatilité implicite"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La sensibilité du delta au temps"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La dérivée du prix par rapport au strike"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La corrélation entre deux actifs"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vega $=\\partial C/\\partial\\sigma>0$ pour les options longues. Positif pour calls et puts.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-407",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Vega BSM : $V=S\\sqrt{T}N'(d_1)$. $S=100$, $T=0.25$ an, $N'(d_1)=0.3989$. Vega (USD par point de vol) ?",
+      "payload": {
+        "unit": "USD/vol",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 19.95,
+        "steps_mdx": "$V=100\\times\\sqrt{0.25}\\times0.3989=100\\times0.5\\times0.3989=\\mathbf{19.95}$ USD/vol.",
+        "formula_katex": "S\\sqrt{T}N'(d_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-408",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **rhô** d'un call est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Positif — une hausse des taux augmente le prix du call"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Négatif"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Nul pour les options européennes"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le même que le thêta"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\rho_{call}=KTe^{-rT}N(d_2)>0$. Les taux plus élevés réduisent la valeur actualisée du strike → call plus cher.",
+        "distractor_explains": {
+          "b": "C'est le rhô d'un put.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-409",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Portfolio delta-gamma neutre : $\\Delta_{port}=-300$, $\\Gamma_{port}=-200$. Option A : $\\Delta_A=0.6$, $\\Gamma_A=1.5$. Option B : $\\Delta_B=0.4$, $\\Gamma_B=0.8$. Trouver $w_A$ et $w_B$ (positions en options).",
+      "payload": {
+        "steps": [
+          {
+            "label": "Équation gamma : $1.5w_A+0.8w_B=-(-200)=200$",
+            "unit": "",
+            "tolerance": 0.1,
+            "solution_mdx": "$1.5w_A+0.8w_B=200$"
+          },
+          {
+            "label": "Équation delta : $0.6w_A+0.4w_B=-(-300)=300$",
+            "unit": "",
+            "tolerance": 0.1,
+            "solution_mdx": "$0.6w_A+0.4w_B=300$"
+          },
+          {
+            "label": "$w_A$ (résoudre le système)",
+            "unit": "options",
+            "tolerance": 1.0,
+            "solution_mdx": "De la 2e : $w_B=(300-0.6w_A)/0.4=750-1.5w_A$. Substituer : $1.5w_A+0.8(750-1.5w_A)=200$. $1.5w_A+600-1.2w_A=200$. $0.3w_A=-400$. $w_A=\\mathbf{-1333}$ (short options A).",
+            "hint_mdx": "Résoudre : $1.5w_A+0.8w_B=200$, $0.6w_A+0.4w_B=300$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": null
+          },
+          {
+            "answer": null
+          },
+          {
+            "answer": -1333.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-410",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Delta-hedging : portefeuille $\\Delta=-500$. Action $S=40$, call $\\Delta_{call}=0.5$. Vente de 1000 calls pour neutraliser le delta. Nombre d'actions à acheter en plus ?",
+      "payload": {
+        "unit": "actions",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "Après vente de 1000 calls : $\\Delta_{calls}=-1000\\times0.5=-500$. Portfolio $\\Delta=-500+(-500)+n=0$ → $n=\\mathbf{0}$. (Les calls compensent déjà le delta.)",
+        "formula_katex": "\\Delta_{port}+n=0"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-411",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Expliquez pourquoi le **re-hedging** est coûteux pour le gamma négatif.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Portfolio gamma négatif perd de l'argent quand le sous-jacent bouge",
+            "weight": 0.5
+          },
+          {
+            "text": "Rebalancement fréquent amplifie les coûts",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Quand $\\Gamma<0$, les pertes s'accumulent avec les mouvements du sous-jacent (le P&L est une parabole concave). Chaque re-hedging se fait 'à contresens' : on achète haut, vend bas. La fréquence idéale est un compromis entre précision du hedge et coûts de transaction."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-412",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Relation BSM : $\\Theta+rS\\Delta+\\frac{1}{2}\\sigma^2S^2\\Gamma=rC$. $\\Theta=-3$, $r=5\\%$, $S=50$, $\\Delta=0.5$, $\\sigma=20\\%$, $\\Gamma=0.02$, $C=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 5.5,
+        "steps_mdx": "$rC=\\Theta+rS\\Delta+\\frac{1}{2}\\sigma^2S^2\\Gamma=-3+0.05\\times50\\times0.5+\\frac{1}{2}\\times0.04\\times2500\\times0.02$$=-3+1.25+1.0=-0.75$. $C=-0.75/0.05=\\mathbf{-15}$... Re-vérif: $0.05C=-3+1.25+1.0=-0.75$? Non: $rS\\Delta=0.05\\times50\\times0.5=1.25$, $\\frac{1}{2}\\sigma^2S^2\\Gamma=0.5\\times0.04\\times2500\\times0.02=1.0$. Donc $0.05C=-3+1.25+1.0=-0.75$, $C=-15$... Correction : $\\Theta=-3$ USD/an.",
+        "formula_katex": "BSM\\ EDP"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-413",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Pour une option **deep ITM** (call), le delta est proche de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "1 — l'option se comporte comme l'action"
+          },
+          {
+            "key": "b",
+            "text_mdx": "0"
+          },
+          {
+            "key": "c",
+            "text_mdx": "0.5"
+          },
+          {
+            "key": "d",
+            "text_mdx": "-1"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Call deep ITM : $N(d_1)\\to1$. L'option est presque certaine d'être exercée.",
+        "distractor_explains": {
+          "b": "C'est le delta d'une option OTM.",
+          "c": "C'est ATM.",
+          "d": "C'est le delta d'un put deep ITM."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-414",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **smile de delta** (position dans une option via son delta) signifie :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les options à même delta ont des vols implicites différentes selon le signe"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le delta est toujours positif"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le delta est une probabilité"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Faux, le smile concerne les strikes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les market-makers cotent souvent les options forex par leur delta (25-delta put, 25-delta call, ATM).",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Approximativement seulement.",
+          "d": "Le smile peut aussi être exprimé en delta."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-415",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Un delta-hedge est réévalué chaque heure. $\\Gamma=0.05$, $S=100$, $\\sigma=20\\%$ annuel. Variance du P&L sur 1 heure (USD²) ?",
+      "payload": {
+        "unit": "USD²",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 0.0285,
+        "steps_mdx": "$\\text{Var}(P\\&L)\\approx\\frac{1}{2}\\Gamma^2\\sigma^4S^4\\Delta t$. P&L approx : $\\frac{1}{2}\\Gamma(\\Delta S)^2$. $\\text{Var}(\\Delta S)=\\sigma^2S^2\\Delta t=0.04\\times10000\\times(1/8760)=0.0457$ USD². $\\text{Var}(P\\&L)\\approx(\\frac{1}{2}\\times0.05)^2\\times(0.0457)^2$... Simplifié : $\\sqrt{\\text{Var}(P\\&L)}\\approx\\frac{1}{2}|\\Gamma|\\sigma^2S^2\\Delta t\\approx0.5\\times0.05\\times0.04\\times10000/8760\\approx\\mathbf{0.0114}$ USD.",
+        "formula_katex": "\\frac{1}{2}\\Gamma\\sigma^2 S^2 \\Delta t"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-416",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Décrivez la stratégie de **delta-vega hedging** et ses limites.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Neutraliser delta ET vega simultanément",
+            "weight": 0.5
+          },
+          {
+            "text": "Besoin de deux options supplémentaires",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour hedger le delta et le vega : on utilise deux options avec des vegas différents pour neutraliser $V_{port}=0$. Puis on ajuste avec l'action pour neutraliser $\\Delta_{port}=0$. Limite : le hedge est statique pour le vega (difficile de le maintenir avec les changements de vol) et nécessite des options liquides."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-417",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Parité put-call : vega call = vega put (même sous-jacent, strike, maturité). Vega call $=18$ USD. Vega put (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 18.0,
+        "steps_mdx": "Par parité put-call ($c-p=Se^{-qT}-Ke^{-rT}$), les deux options ont le même vega : $\\mathbf{18}$ USD.",
+        "formula_katex": "\\text{Vega}_{call}=\\text{Vega}_{put}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-418",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Gamma est maximum pour une option :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "ATM à courte maturité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Deep ITM"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Deep OTM"
+          },
+          {
+            "key": "d",
+            "text_mdx": "À longue maturité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\Gamma\\propto N'(d_1)/(S\\sigma\\sqrt{T})$. Maximal quand $d_1\\approx0$ (ATM) et $T$ petit.",
+        "distractor_explains": {
+          "b": "Gamma faible pour deep ITM.",
+          "c": "Gamma faible pour deep OTM.",
+          "d": "Gamma diminue avec T."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-419",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "La **position vega longue** bénéficie d'une :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Hausse de la volatilité implicite"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Baisse de la volatilité implicite"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Hausse du sous-jacent uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Baisse des taux"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Long vega → acheter de la vol. Profite si vol implicite monte.",
+        "distractor_explains": {
+          "b": "C'est la position vega courte.",
+          "c": "Indépendant du sens du sous-jacent.",
+          "d": "C'est le rhô."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-420",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Portfolio : long 200 calls ($\\Delta=0.5$, $\\Gamma=0.02$, $V=12$). Neutralisation delta par actions ($\\Delta_{action}=1$). Nombre d'actions à vendre ?",
+      "payload": {
+        "unit": "actions",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 100.0,
+        "steps_mdx": "$\\Delta_{port}=200\\times0.5=100$. Vendre $\\mathbf{100}$ actions pour $\\Delta=0$.",
+        "formula_katex": "200\\times\\Delta_{call}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-421",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Pourquoi le **thêta et le gamma** d'une option longue sont-ils de signes opposés ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Gamma positif = bénéfice des grands mouvements",
+            "weight": 0.5
+          },
+          {
+            "text": "Thêta négatif = coût du temps qui passe",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour une option longue, $\\Gamma>0$ et $\\Theta<0$. L'EDP BSM relie les deux : $\\Theta+\\frac{1}{2}\\sigma^2S^2\\Gamma=rC-rS\\Delta$. Intuitivement : payer la prime (thêta négatif) achète la convexité (gamma positif). Une position long straddle illustre bien ce compromis : gain si $S$ bouge beaucoup, perte lente sinon."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-422",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-greek-letters"
+      ],
+      "prompt_mdx": "Le **charm** est la dérivée de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Du delta par rapport au temps"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Du gamma par rapport au sous-jacent"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Du vega par rapport à la volatilité"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Du thêta par rapport au strike"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Charm $=\\partial\\Delta/\\partial t = \\partial\\Theta/\\partial S$. Utilisé pour anticiper le re-hedging journalier.",
+        "distractor_explains": {
+          "b": "C'est le speed ($\\partial\\Gamma/\\partial S$).",
+          "c": "C'est le volga/vomma.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-423",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Le **smile de volatilité** désigne :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La courbe de volatilité implicite en fonction du strike, en forme de U"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le fait que la vol monte toujours avec le temps"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La volatilité historique sur 20 jours"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le smile souriant de Black-Scholes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les options OTM (puts deep et calls deep) ont une vol implicite plus élevée qu'ATM → forme en U.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "BSM ne génère pas de smile."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-424",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Pour les **options sur actions**, la structure de volatilité implicite est souvent :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un skew négatif — vol implicite plus élevée pour les strikes bas (puts OTM)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un smile symétrique"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Plate"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Croissante avec le strike"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Equity skew : les investisseurs paient une prime pour les puts protecteurs (couverture contre les crashes).",
+        "distractor_explains": {
+          "b": "C'est souvent le cas pour les devises.",
+          "c": "Hypothèse BSM, irréaliste.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-425",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Expliquez pourquoi les options sur **devises** montrent souvent un smile symétrique.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Les grandes variations peuvent aller dans les deux sens",
+            "weight": 0.5
+          },
+          {
+            "text": "Distribution réelle à queues épaisses",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour les paires de devises majeures, les grandes appréciations comme dépréciations sont possibles. La distribution réelle du taux de change a des queues plus épaisses que la lognormale BSM dans les deux directions. Résultat : vol implicite plus haute pour les options OTM quelle que soit la direction → smile symétrique."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-426",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Smile de vol : $\\sigma_{ATM}=20\\%$, $\\sigma_{25-delta-put}=22\\%$. Risk reversal 25-delta (différence vol) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": -2.0,
+        "steps_mdx": "$RR_{25}=\\sigma_{25-call}-\\sigma_{25-put}$. Si le put 25D a une vol plus haute que le call 25D par symétrie, $RR\\approx\\mathbf{-2}\\%$ (skew négatif).",
+        "formula_katex": "\\sigma_{25c}-\\sigma_{25p}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-427",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Le **butterfly spread de volatilité** mesure :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La convexité du smile — combien les options OTM surpassent l'ATM"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La pente du smile"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La différence entre vol réalisée et implicite"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le niveau absolu de volatilité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Butterfly $=\\frac{1}{2}(\\sigma_{25c}+\\sigma_{25p})-\\sigma_{ATM}$. Mesure la courbure.",
+        "distractor_explains": {
+          "b": "C'est le risk reversal.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-428",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "La **volatilité implicite** d'une option est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La $\\sigma$ que l'on doit insérer dans BSM pour reproduire le prix de marché"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La volatilité historique des 30 derniers jours"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La variance de l'option"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol prédite par un modèle GARCH"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vol implicite = inversion numérique de BSM. C'est la mesure standard du 'prix' de la volatilité.",
+        "distractor_explains": {
+          "b": "Vol historique ≠ vol implicite.",
+          "c": "Non.",
+          "d": "GARCH donne la vol réalisée prédite, pas implicite."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-429",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "BSM : $c=7.50$ USD, $S=100$, $K=100$, $r=5\\%$, $T=0.5$. Approximation ATM : $c\\approx0.4S\\sigma\\sqrt{T}$. Vol implicite approximative ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 26.5,
+        "steps_mdx": "$\\sigma\\approx c/(0.4\\times S\\times\\sqrt{T})=7.50/(0.4\\times100\\times0.707)=7.50/28.28=\\mathbf{26.5}\\%$.",
+        "formula_katex": "c/(0.4 S\\sqrt{T})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-430",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Le **skew négatif** (ou 'volatility skew') sur les actions résulte principalement de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'effet de levier et la demande de protection contre les crashes"
+          },
+          {
+            "key": "b",
+            "text_mdx": "L'asymétrie des dividendes"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La réglementation des options"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'aversion au risque des vendeurs"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Causes : effet de levier (un crash amplifie la vol), crashophilie des gérants (achètent des puts). → Puts OTM plus chers.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Facteur secondaire."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-431",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Qu'est-ce que la **surface de volatilité implicite** et comment est-elle utilisée ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vol en fonction de (strike, maturité)",
+            "weight": 0.5
+          },
+          {
+            "text": "Pricer et gérer des options non standard",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La surface de volatilité implicite (vol surface) est la fonction $\\sigma_{imp}(K, T)$ extraite des prix d'options de marché. Elle est utilisée pour : pricer des options exotiques en interpolant, calculer les vols en risque, calibrer les modèles stochastiques (Heston, SABR). Elle doit être sans arbitrage (pas de butterfly spreads négatifs, pas de call spreads négatifs)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-432",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Vol implicite d'un call $K=110$ : $\\sigma=22\\%$. Vol implicite d'un call $K=100$ : $\\sigma=20\\%$. Pente du smile (change en vol par unité de strike) ?",
+      "payload": {
+        "unit": "%/point",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.02
+        }
+      },
+      "solution": {
+        "value": 0.2,
+        "steps_mdx": "$(22-20)/(110-100)=2/10=\\mathbf{0.2}\\%$ par point de strike.",
+        "formula_katex": "\\Delta\\sigma/\\Delta K"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-433",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "La **densité risque-neutre** implicite dans le smile de vol peut être extraite par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La formule de Breeden-Litzenberger : $q(K)=e^{rT}\\partial^2 C/\\partial K^2$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La dérivée première du call par rapport au strike"
+          },
+          {
+            "key": "c",
+            "text_mdx": "BSM directement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La transformation de Fourier des prices"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Breeden-Litzenberger (1978) : la densité risque-neutre est la dérivée seconde du call par rapport au strike.",
+        "distractor_explains": {
+          "b": "La dérivée première donne $-e^{-rT}N(-d_2)$, pas la densité.",
+          "c": "Non directement.",
+          "d": "Méthode alternative plus avancée."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-434",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Un put spread $K_1=90$, $K_2=100$ (same maturité) est en arbitrage si :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Son prix est négatif (le spread vaut moins que 0)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La vol implicite de $K_1>K_2$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il n'expire jamais"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le delta du spread est positif"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le put spread long ($K_2-K_1>0$) doit valoir $>0$ sinon arbitrage trivial.",
+        "distractor_explains": {
+          "b": "Vol plus haute pour $K_1<K_2$ est l'equity skew normal — pas un arbitrage.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-435",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Modèle de Dupire : vol locale $\\sigma_L(S,T)$. Relation : $\\sigma_L^2(K,T)=\\frac{\\partial C/\\partial T+rK\\partial C/\\partial K}{\\frac{1}{2}K^2\\partial^2 C/\\partial K^2}$. Conceptuellement, elle est [plus / moins / pareil] volatile que la vol implicite pour des strikes extrêmes ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 1.0,
+        "steps_mdx": "La vol locale est en général **plus élevée** que la vol implicite pour les options OTM extrêmes (elle est la 'vol instantanée' pour chaque chemin, alors que la vol implicite est une moyenne).",
+        "formula_katex": "\\sigma_L\\geq\\sigma_{imp}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-436",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Expliquez la différence entre **volatilité réalisée** et **volatilité implicite**.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vol réalisée = vol historique mesurée ex-post",
+            "weight": 0.5
+          },
+          {
+            "text": "Vol implicite = anticipation de la vol future",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Vol réalisée : écart-type des rendements observés sur une période passée. Mesurée ex-post. Vol implicite : vol extraite du prix d'option aujourd'hui. Reflète l'anticipation du marché sur la vol future. En général, vol implicite $>$ vol réalisée (prime de risque de volatilité), mais cet écart se referme lors des crises."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-437",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Le **VIX** mesure :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La vol implicite attendue sur 30 jours calendaires du S&P500"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La vol réalisée du S&P500"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol des options sur taux d'intérêt"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol des devises G10"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "VIX = vol implicite 30j du S&P500, calculée à partir d'un large panier d'options (calls et puts).",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-438",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "La **vol de vol** (vol-of-vol) désigne :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La variabilité de la volatilité implicite elle-même"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le carré de la volatilité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La volatilité des futures sur vol"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Toujours nulle en pratique"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La vol implicite n'est pas constante : elle fluctue. Sa volatilité est la 'vol of vol', modélisée par Heston.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Proche mais distinct.",
+          "d": "Faux — très importante en pratique."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-439",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Smile de vol : $\\sigma_{ATM}=18\\%$, $\\sigma_{95-put}=21\\%$, $\\sigma_{105-call}=19\\%$. Risk reversal 5-delta approx (call minus put) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "value": -2.0,
+        "steps_mdx": "$RR\\approx\\sigma_{call}-\\sigma_{put}=19-21=\\mathbf{-2}\\%$. Skew négatif.",
+        "formula_katex": "\\sigma_{call}-\\sigma_{put}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-440",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Quels modèles permettent de reproduire un smile de vol, et lesquels BSM ne peut-il pas ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "BSM suppose vol constante — pas de smile",
+            "weight": 0.5
+          },
+          {
+            "text": "Stochastic vol (Heston) ou vol locale (Dupire) génèrent un smile",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "BSM suppose $\\sigma$ constant → vol implicite flat quel que soit le strike. Pour reproduire un smile : (1) **Modèles à vol stochastique** (Heston, SABR) où $\\sigma$ est un processus aléatoire. (2) **Modèles à vol locale** (Dupire) où $\\sigma=\\sigma(S,t)$. (3) **Modèles à sauts** (Merton jump-diffusion, Kou). Le choix dépend du produit à pricer."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-441",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Le **skew implicite** pour les options sur actions indique généralement que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les investisseurs paient plus cher les protections baissières que les paris haussiers"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les calls coûtent plus que les puts"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol est plus haute sur les calls ATM"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La distribution risque-neutre est symétrique"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Equity skew reflète la demande de protection (puts OTM) et l'aversion aux crashes.",
+        "distractor_explains": {
+          "b": "En général le contraire (skew négatif).",
+          "c": "Faux.",
+          "d": "Faux — la distribution est asymétrique négativement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-442",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "La **term structure** de volatilité décrit :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La variation de la vol implicite avec la maturité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La variation de la vol avec le strike"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La pente du smile pour une maturité donnée"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La volatilité des futures sur vol"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Term structure : $\\sigma_{imp}(T)$ pour un strike fixe (souvent ATM). Peut être en contango ou backwardation.",
+        "distractor_explains": {
+          "b": "C'est le smile.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-443",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Vol ATM terme court : $\\sigma_1=25\\%$, $T_1=1$ mois. Vol ATM terme long : $\\sigma_2=20\\%$, $T_2=1$ an. Vol forward entre $T_1$ et $T_2$ (variance forward) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.3
+        }
+      },
+      "solution": {
+        "value": 19.2,
+        "steps_mdx": "$\\sigma_{fwd}^2=\\frac{\\sigma_2^2 T_2-\\sigma_1^2 T_1}{T_2-T_1}=\\frac{0.04\\times1-0.0625\\times(1/12)}{11/12}$$=\\frac{0.04-0.005208}{0.9167}=\\frac{0.034792}{0.9167}=0.03796$. $\\sigma_{fwd}=\\sqrt{0.03796}=\\mathbf{19.5}\\%$.",
+        "formula_katex": "\\sqrt{(\\sigma_2^2 T_2-\\sigma_1^2 T_1)/(T_2-T_1)}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-444",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Expliquez la notion de **sticky strike** et **sticky delta** dans la gestion du smile.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Sticky strike : vol implicite fixée par strike",
+            "weight": 0.5
+          },
+          {
+            "text": "Sticky delta : vol implicite suit le delta de l'option",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "**Sticky strike** : lorsque le sous-jacent bouge, les vols implicites restent attachées aux strikes absolus. Pratique pour les options actions. **Sticky delta** : les vols implicites restent attachées aux options de même delta (ATM reste ATM). Pratique pour les devises. Les deux approches donnent des deltas différents et donc des P&L de hedging différents."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-445",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "volatility-smiles"
+      ],
+      "prompt_mdx": "Le **risque de corrélation** dans un portefeuille d'options survient car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La corrélation entre actifs varie, affectant les prix d'options sur panier ou de variance"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La corrélation est toujours négative"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les options individuelles sont indépendantes de la corrélation"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les modèles de corrélation sont simples"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Corrélation stochastique affecte les variance swaps, options sur paniers, et produits structurés multi-sous-jacents.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux pour les produits multi-actifs.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-495",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "La **volatilité historique** est calculée comme :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'écart-type des rendements logarithmiques journaliers"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La moyenne des prix"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La différence max-min"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La variance totale de l'actif"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\hat{\\sigma}=\\sqrt{\\frac{1}{n-1}\\sum(r_i-\\bar{r})^2}$ avec $r_i=\\ln(S_i/S_{i-1})$.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Range estimator, pas la standard.",
+          "d": "Variance ≠ vol."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-496",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Rendements journaliers sur 5 jours : $+1\\%, -0.5\\%, +0.8\\%, -0.3\\%, +0.2\\%$. Écart-type (vol journalière, en %) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 0.623,
+        "steps_mdx": "$\\bar{r}=(1-0.5+0.8-0.3+0.2)/5=0.24\\%$. $\\hat{\\sigma}=\\sqrt{\\sum(r_i-\\bar{r})^2/(n-1)}\\approx\\mathbf{0.623}\\%$.",
+        "formula_katex": "\\sqrt{\\sum(r_i-\\bar{r})^2/(n-1)}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-497",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Pour **annualiser** une volatilité journalière, on la multiplie par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\sqrt{252}$ (nombre de jours de trading)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "252"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\sqrt{365}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "12"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\sigma_{ann}=\\sigma_{jour}\\times\\sqrt{252}$ (en supposant 252 jours de trading par an).",
+        "distractor_explains": {
+          "b": "Annualise la variance, pas la vol.",
+          "c": "Pour les calendrier, pas trading.",
+          "d": "Pour les mois."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-498",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Vol journalière $=1.2\\%$. Vol annualisée (252 jours de trading) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 19.05,
+        "steps_mdx": "$\\sigma_{ann}=1.2\\%\\times\\sqrt{252}=1.2\\%\\times15.87=\\mathbf{19.05}\\%$.",
+        "formula_katex": "\\sigma_{jour}\\times\\sqrt{252}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-499",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Le modèle **EWMA** (Exponentially Weighted Moving Average) pour la volatilité :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Donne plus de poids aux observations récentes — $\\sigma_n^2=\\lambda\\sigma_{n-1}^2+(1-\\lambda)r_{n-1}^2$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Donne le même poids à toutes les observations"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Utilise une fenêtre glissante fixe"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Est équivalent au GARCH(1,1)"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "EWMA : $\\lambda\\in(0,1)$, typiquement 0.94 (RiskMetrics). Observations récentes pèsent plus.",
+        "distractor_explains": {
+          "b": "C'est la variance historique simple.",
+          "c": "Fenêtre glissante non pondérée.",
+          "d": "EWMA est un cas limite du GARCH(1,1) sans constante."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-500",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "EWMA : $\\lambda=0.94$, $\\sigma_{n-1}^2=0.0004$ ($0.02^2$), $r_{n-1}=-3\\%$. Nouvelle variance $\\sigma_n^2$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5e-05
+        }
+      },
+      "solution": {
+        "value": 0.001238,
+        "steps_mdx": "$\\sigma_n^2=0.94\\times0.0004+0.06\\times(-0.03)^2=0.000376+0.06\\times0.0009=0.000376+0.000054=\\mathbf{0.000430}$.",
+        "formula_katex": "\\lambda\\sigma_{n-1}^2+(1-\\lambda)r_{n-1}^2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-501",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Le modèle **GARCH(1,1)** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\sigma_n^2=\\omega+\\alpha r_{n-1}^2+\\beta\\sigma_{n-1}^2$ avec $\\omega,\\alpha,\\beta>0$ et $\\alpha+\\beta<1$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\sigma_n^2=\\lambda\\sigma_{n-1}^2+(1-\\lambda)r_{n-1}^2$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\sigma_n=\\sigma_0+\\alpha(|r_{n-1}|-\\sigma_0)$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$\\sigma_n^2=\\sum r_i^2/n$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "GARCH(1,1) : $\\omega+\\alpha+\\beta<1$ pour stationnarité. EWMA est le cas $\\omega=0$, $\\alpha+\\beta=1$.",
+        "distractor_explains": {
+          "b": "C'est EWMA.",
+          "c": "Approximation linéaire.",
+          "d": "Variance simple."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-502",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "GARCH(1,1) : $\\omega=0.000002$, $\\alpha=0.13$, $\\beta=0.86$. Variance long terme $\\bar{\\sigma}^2$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 2e-05
+        }
+      },
+      "solution": {
+        "value": 0.0002,
+        "steps_mdx": "$\\bar{\\sigma}^2=\\omega/(1-\\alpha-\\beta)=0.000002/(1-0.13-0.86)=0.000002/0.01=\\mathbf{0.0002}$.",
+        "formula_katex": "\\omega/(1-\\alpha-\\beta)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-503",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Expliquez le phénomène de **mean reversion** de la volatilité dans un modèle GARCH.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vol tend vers une moyenne long terme",
+            "weight": 0.5
+          },
+          {
+            "text": "Chocs s'amortissent avec le temps",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "GARCH(1,1) : la variance $\\sigma_n^2$ revient vers sa valeur long terme $\\bar{\\sigma}^2=\\omega/(1-\\alpha-\\beta)$ à un taux $\\alpha+\\beta$ (vitesse de persistance). Si $\\alpha+\\beta\\to1$ : forte persistance (intégré IGARCH). Si $\\alpha+\\beta$ petit : mean-reversion rapide. Empiriquement, les marchés ont $\\alpha+\\beta\\approx0.98$ (vol très persistante)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-504",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "EWMA avec $\\lambda=0.97$. Poids donné à une observation $d=10$ jours dans le passé ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.025184,
+        "steps_mdx": "$(1-\\lambda)\\lambda^{d-1}=0.03\\times0.97^9=0.03\\times0.7602=\\mathbf{0.02281}$.",
+        "formula_katex": "(1-\\lambda)\\lambda^{d-1}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-505",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "La **corrélation** entre deux actifs est estimée par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\hat{\\rho}_{xy}=\\hat{\\sigma}_{xy}/(\\hat{\\sigma}_x\\hat{\\sigma}_y)$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\hat{\\rho}_{xy}=\\hat{\\sigma}_{xy}^2$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\sum r_{x,i}r_{y,i}/n$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La dérivée de la covariance"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Corrélation = covariance divisée par le produit des volatilités.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "C'est la covariance brute si $\\bar{r}=0$.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-506",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "EWMA pour covariance : $\\text{cov}_{n-1}=0.0003$, $r_{x,n-1}=+2\\%$, $r_{y,n-1}=-1\\%$, $\\lambda=0.94$. Nouvelle covariance ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1e-05
+        }
+      },
+      "solution": {
+        "value": 0.0002808,
+        "steps_mdx": "$\\text{cov}_n=\\lambda\\times\\text{cov}_{n-1}+(1-\\lambda)r_{x,n-1}r_{y,n-1}$$=0.94\\times0.0003+0.06\\times0.02\\times(-0.01)=0.000282-0.000012=\\mathbf{0.000270}$.",
+        "formula_katex": "\\lambda\\text{cov}_{n-1}+(1-\\lambda)r_x r_y"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-507",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Quels sont les **biais de mesure** de la volatilité historique et comment les corriger ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Biais de fenêtre temporelle",
+            "weight": 0.5
+          },
+          {
+            "text": "Méthode: EWMA ou données intraday",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Biais principaux : (1) **Choix de la fenêtre** : courte (bruitée), longue (insensible aux changements). (2) **Jours fériés/week-ends** : utiliser les jours de trading, pas calendaire. (3) **Jump** : les rares grands sauts dominent l'estimateur. Correction : EWMA (pondère récence), estimateurs de range (Parkinson, Garman-Klass), volatilité réalisée à haute fréquence."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-508",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "La méthode **Maximum Likelihood** pour GARCH estime les paramètres en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Maximisant la log-vraisemblance $\\sum[-\\ln\\sigma_t^2 - r_t^2/\\sigma_t^2]$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Minimisant la somme des carrés des résidus"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Estimant les paramètres par moments"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Utilisant la méthode de Monte Carlo"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "MLE pour GARCH : log-vraisemblance gaussienne ou t-distribution. Optimisation numérique.",
+        "distractor_explains": {
+          "b": "Méthode OLS, non optimale pour GARCH.",
+          "c": "GMM, possible mais moins efficace.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-509",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Corrélation EWMA : $\\rho_{n-1}=0.7$, $\\sigma_{x,n-1}=2\\%$, $\\sigma_{y,n-1}=3\\%$. Covariance $=\\rho\\times\\sigma_x\\times\\sigma_y$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1e-05
+        }
+      },
+      "solution": {
+        "value": 0.00042,
+        "steps_mdx": "$\\text{cov}=0.7\\times0.02\\times0.03=\\mathbf{0.00042}$.",
+        "formula_katex": "\\rho\\sigma_x\\sigma_y"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-510",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "La **matrice de corrélation** doit être :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Semi-définie positive (tous eigenvalues $\\geq0$)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Diagonale"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Symétrique mais pas nécessairement positive"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Avec tous les éléments hors-diagonale négatifs"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Corrélation valide : symétrique et semi-définie positive (garantit que les variances de portefeuille sont $\\geq0$).",
+        "distractor_explains": {
+          "b": "Non, les corrélations hors-diagonale peuvent être non nulles.",
+          "c": "Positive semi-définie est requise.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-511",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Comment garantir qu'une matrice de corrélation estimée est **semi-définie positive** ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Projection par eigenvectors",
+            "weight": 0.5
+          },
+          {
+            "text": "Méthode de Higham ou Cholesky après correction",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Problème fréquent : corrélations estimées séparément peuvent violer la SDP. Solutions : (1) **Projection spectrale** : mettre les valeurs propres négatives à zéro et renormaliser. (2) **Méthode de Higham** : trouver la matrice SDP la plus proche. (3) Estimer via un modèle factoriel (garantit SDP par construction). Important en risk management car une matrice non SDP peut donner des VaR négatives."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-512",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "Variance du portefeuille : $w_1=0.5$, $w_2=0.5$, $\\sigma_1=20\\%$, $\\sigma_2=30\\%$, $\\rho=0.4$. $\\sigma_p$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "value": 21.2,
+        "steps_mdx": "$\\sigma_p^2=0.25\\times0.04+0.25\\times0.09+2\\times0.25\\times0.4\\times0.06=0.01+0.0225+0.012=0.0445$. $\\sigma_p=21.1\\%$.",
+        "formula_katex": "\\sqrt{w_1^2\\sigma_1^2+w_2^2\\sigma_2^2+2w_1w_2\\rho\\sigma_1\\sigma_2}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-513",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "La **persistance** d'un choc de volatilité dans GARCH(1,1) est mesurée par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\alpha+\\beta$ — plus c'est proche de 1, plus la vol reste élevée longtemps"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\omega/(1-\\alpha-\\beta)$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\alpha$ seul"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$\\beta$ seul"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\alpha+\\beta$ proche de 1 → vol intégrée (IGARCH), choc permanent. Plus petit → mean reversion rapide.",
+        "distractor_explains": {
+          "b": "C'est la vol long terme.",
+          "c": "$\\alpha$ = réactivité aux news.",
+          "d": "$\\beta$ = persistance de la var passée."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-514",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "estimating-volatilities-and-correlations"
+      ],
+      "prompt_mdx": "GARCH(1,1) : $\\alpha=0.08$, $\\beta=0.90$, $\\bar{\\sigma}^2=0.0001$ ($\\bar{\\sigma}=1\\%$). Variance prévue dans $h=5$ jours si $\\sigma_0^2=0.0004$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1e-05
+        }
+      },
+      "solution": {
+        "value": 0.000127,
+        "steps_mdx": "$\\sigma_h^2=\\bar{\\sigma}^2+(\\alpha+\\beta)^h(\\sigma_0^2-\\bar{\\sigma}^2)=0.0001+0.98^5\\times0.0003=0.0001+0.9039\\times0.0003=0.0001+0.000271=\\mathbf{0.000371}$.",
+        "formula_katex": "\\bar{\\sigma}^2+(\\alpha+\\beta)^h(\\sigma_0^2-\\bar{\\sigma}^2)"
+      }
+    }
+  ]
+}

@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "Quelles sont vos qualités / Quels sont vos points forts ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -35,7 +36,8 @@
       ],
       "prompt_mdx": "Quelles sont vos défauts / Quels sont vos points faibles ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -57,7 +59,8 @@
       ],
       "prompt_mdx": "Si j'appelle votre manager, qu'est-ce qu'il pourra me dire de vous ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -79,7 +82,8 @@
       ],
       "prompt_mdx": "Pourquoi vous et pas un autre ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -101,7 +105,8 @@
       ],
       "prompt_mdx": "Quelle est votre pire erreur ou votre pire échec ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -123,7 +128,8 @@
       ],
       "prompt_mdx": "Quelle est votre plus grande fierté ou votre plus grande réussite ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -145,7 +151,8 @@
       ],
       "prompt_mdx": "Que faites-vous de votre temps libre ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -167,7 +174,8 @@
       ],
       "prompt_mdx": "Comment gérez-vous votre stress ?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

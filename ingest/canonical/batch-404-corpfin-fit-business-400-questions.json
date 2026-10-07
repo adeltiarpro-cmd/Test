@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "Let's say you had USD 10 million to invest in anything. What would you do with it?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -35,7 +36,8 @@
       ],
       "prompt_mdx": "If you owned a small business and were approached by a larger company about an acquisition, how would you think about the offer, and how would you make a decision on what to do?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -65,7 +67,8 @@
       ],
       "prompt_mdx": "We do most of our work with technology companies. Can you talk about a trend or company in the industry that has piqued your interest lately?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -87,7 +90,8 @@
       ],
       "prompt_mdx": "Let's say you could start any type of business you wanted, and you had USD 1 million in initial funds. What would you do?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -109,7 +113,8 @@
       ],
       "prompt_mdx": "Can you talk about a company you admire and what makes them attractive to you?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -131,7 +136,8 @@
       ],
       "prompt_mdx": "Let's assume you are going to start a laundry machine business. How would you analyze whether it's viable?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -161,7 +167,8 @@
       ],
       "prompt_mdx": "Tell me about an M&A deal that interested you recently.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -183,7 +190,8 @@
       ],
       "prompt_mdx": "Pitch me a stock.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -205,7 +213,8 @@
       ],
       "prompt_mdx": "Can you explain to me, in simple terms, the subprime crisis?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -235,7 +244,8 @@
       ],
       "prompt_mdx": "Do you agree with the USD 700 billion bank bailout?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

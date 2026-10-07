@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "Walk me through one of the deals listed on your resume.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -35,7 +36,8 @@
       ],
       "prompt_mdx": "Did you do anything quantitative for this deal? It looks like it just involved research.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -57,7 +59,8 @@
       ],
       "prompt_mdx": "Why did the company you were representing want to sell?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -83,7 +86,8 @@
       ],
       "prompt_mdx": "Why did the company you were representing want to buy another company?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -109,7 +113,8 @@
       ],
       "prompt_mdx": "Describe the deal process.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -131,7 +136,8 @@
       ],
       "prompt_mdx": "What were the major selling points of your client? What was attractive about it?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -153,7 +159,8 @@
       ],
       "prompt_mdx": "What about its weaknesses? Why might investors be hesitant?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -175,7 +182,8 @@
       ],
       "prompt_mdx": "What were the major obstacles to getting the deal done? What happened?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -197,7 +205,8 @@
       ],
       "prompt_mdx": "What kind of standalone operating model did you create for your client?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -219,7 +228,8 @@
       ],
       "prompt_mdx": "What was the status of this deal when you left your bank?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -241,7 +251,8 @@
       ],
       "prompt_mdx": "What did you look at in the due diligence process?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -267,7 +278,8 @@
       ],
       "prompt_mdx": "Tell me about the market your client was in.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -289,7 +301,8 @@
       ],
       "prompt_mdx": "How did you narrow down potential targets (or potential investors)?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -311,7 +324,8 @@
       ],
       "prompt_mdx": "How did you value your client?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -341,7 +355,8 @@
       ],
       "prompt_mdx": "How did you personally contribute to this deal?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

@@ -268,6 +268,7 @@ export const KeyPointSchema = z.object({
 
 export const ShortAnswerPayloadSchema = z.object({
   max_words: z.number().int().positive(),
+  scoring_mode: z.enum(["auto", "self_eval", "partial"]).optional(),
 });
 
 export const ShortAnswerAnswerSchema = z.object({
@@ -281,10 +282,40 @@ const ShortAnswerExercise = z.object({
   solution: ShortAnswerAnswerSchema,
 });
 
+// ── numeric_steps ─────────────────────────────────────────────────────────────
+
+export const NumericStepsStepSchema = z.object({
+  label: z.string(),
+  unit: z.string(),
+  tolerance: z.number().min(0),
+  hint_mdx: z.string().optional(),
+  solution_mdx: z.string(),
+  trap_mdx: z.string().optional(),
+});
+
+export const NumericStepsPayloadSchema = z.object({
+  steps: z.array(NumericStepsStepSchema).min(2).max(6),
+});
+
+export const NumericStepsStepSolutionSchema = z.object({
+  answer: z.number(),
+});
+
+export const NumericStepsSolutionSchema = z.object({
+  steps: z.array(NumericStepsStepSolutionSchema),
+});
+
+const NumericStepsExercise = z.object({
+  type: z.literal("numeric_steps"),
+  payload: NumericStepsPayloadSchema,
+  solution: NumericStepsSolutionSchema,
+});
+
 // ── Union discriminée ─────────────────────────────────────────────────────────
 
 export const ExerciseSchema = z.discriminatedUnion("type", [
   NumericExercise,
+  NumericStepsExercise,
   FormulaClozeExercise,
   ExcelModelExercise,
   StatementInteractiveExercise,
@@ -307,3 +338,4 @@ export type MarketSizingExercise = z.infer<typeof MarketSizingExercise>;
 export type CaseMathExercise = z.infer<typeof CaseMathExercise>;
 export type McqExercise = z.infer<typeof McqExercise>;
 export type ShortAnswerExercise = z.infer<typeof ShortAnswerExercise>;
+export type NumericStepsExercise = z.infer<typeof NumericStepsExercise>;

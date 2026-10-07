@@ -1,0 +1,3605 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-futures-forwards",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-001",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un dérivé financier ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un actif dont la valeur dépend d'un actif sous-jacent"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Une obligation à taux variable"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une action émise par une société dérivée"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un dépôt bancaire garanti"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Un dérivé tire sa valeur d'un actif sous-jacent (action, taux, matière première, etc.).",
+        "distractor_explains": {
+          "b": "C'est un instrument de taux fixe ou variable, pas un dérivé au sens strict.",
+          "c": "Cette formulation n'a pas de sens financier.",
+          "d": "Un dépôt n'est pas un dérivé."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-002",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un investisseur prend une **position longue** sur un contrat forward. Quel est son gain si $S_T > F_0$ à l'échéance ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$S_T - F_0 > 0$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$F_0 - S_T < 0$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Aucun gain : le forward est toujours nul à l'échéance"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$-(S_T - F_0)$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La position longue oblige à acheter à $F_0$ ; si $S_T > F_0$ le gain est $S_T - F_0$.",
+        "distractor_explains": {
+          "b": "C'est le gain de la position courte.",
+          "c": "La valeur du forward à l'émission est nulle, pas à l'échéance.",
+          "d": "Signe inversé."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-003",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un trader entre en position courte sur un contrat forward portant sur 100 000 GBP au taux $F_0 = 1{,}3000$ USD/GBP. À l'échéance, le taux spot est $S_T = 1{,}2850$ USD/GBP. Quel est son gain (en USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 1500.0,
+        "steps_mdx": "Gain courte = $(F_0 - S_T) \\times N = (1{,}3000 - 1{,}2850) \\times 100\\,000 = \\mathbf{1\\,500}$ USD",
+        "formula_katex": "(F_0 - S_T) \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-004",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un trader prend une position **longue** sur un forward 100 000 EUR au taux $F_0 = 1{,}0800$ USD/EUR. À l'échéance $S_T = 1{,}1050$ USD/EUR. Quel est le gain (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 2500.0,
+        "steps_mdx": "Gain longue = $(S_T - F_0) \\times N = (1{,}1050 - 1{,}0800) \\times 100\\,000 = \\mathbf{2\\,500}$ USD",
+        "formula_katex": "(S_T - F_0) \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-005",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Quelle est la principale différence entre un **forward** et un **futures** ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le forward est négocié de gré à gré (OTC) ; le futures sur un marché organisé"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le forward est standardisé ; le futures est personnalisable"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le futures ne peut porter que sur des matières premières"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le forward est réglé quotidiennement en espèces"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Forward = OTC (personnalisable, risque de contrepartie) ; Futures = bourse (standardisé, chambre de compensation).",
+        "distractor_explains": {
+          "b": "C'est l'inverse.",
+          "c": "Les futures existent sur indices, taux, devises, etc.",
+          "d": "C'est le futures qui est marqué au marché quotidiennement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-006",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Expliquez la différence entre **couvrir** (hedging) et **spéculer** avec des dérivés.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Le hedger réduit un risque existant",
+            "weight": 0.5
+          },
+          {
+            "text": "Le spéculateur prend un risque pour espérer un gain",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un **hedger** possède déjà une exposition (un exportateur qui recevra des EUR) et utilise un dérivé pour la neutraliser. Un **spéculateur** n'a pas de position sous-jacente : il parie sur la direction du marché pour réaliser un profit. Les deux sont nécessaires : le spéculateur apporte la liquidité dont le hedger a besoin."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-007",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un **arbitragiste** sur les marchés dérivés ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un opérateur qui exploite des écarts de prix pour réaliser un profit sans risque"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un régulateur qui vérifie l'équité des prix"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un courtier qui exécute les ordres des clients"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un investisseur qui achète toujours des options d'achat"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "L'arbitrage consiste à acheter et vendre simultanément des actifs liés pour capturer un profit sans risque.",
+        "distractor_explains": {
+          "b": "Rôle d'un régulateur, pas d'un opérateur de marché.",
+          "c": "Rôle d'un broker.",
+          "d": "Stratégie directionnelle, pas arbitrage."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-008",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un investisseur achète un **call européen** de strike $K = 50$ USD sur une action. À l'échéance $S_T = 58$ USD. Quel est le payoff (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 8.0,
+        "steps_mdx": "$\\max(S_T - K, 0) = \\max(58 - 50, 0) = \\mathbf{8}$ USD",
+        "formula_katex": "\\max(S_T - K, 0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-009",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un investisseur achète un **put européen** de strike $K = 45$ USD. À l'échéance $S_T = 38$ USD. Quel est le payoff (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 7.0,
+        "steps_mdx": "$\\max(K - S_T, 0) = \\max(45 - 38, 0) = \\mathbf{7}$ USD",
+        "formula_katex": "\\max(K - S_T, 0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-010",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un call **out-of-the-money** signifie que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$S < K$ pour un call"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$S > K$ pour un call"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La prime est nulle"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'option est exercée automatiquement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Un call OTM : le sous-jacent est en dessous du strike, exercer serait perdant.",
+        "distractor_explains": {
+          "b": "C'est un call ITM.",
+          "c": "La prime est positive même OTM (valeur temps).",
+          "d": "L'exercice automatique n'existe pas pour les options européennes standard."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-011",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un producteur de pétrole veut se couvrir contre une baisse des prix. Doit-il prendre une position longue ou courte sur un futures pétrolier ? Justifiez.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Position courte sur futures",
+            "weight": 0.5
+          },
+          {
+            "text": "Compense une éventuelle baisse du prix spot",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le producteur **vend des futures** (position courte). Si le prix baisse, le gain sur les futures compensera la perte de revenus sur la vente physique. Sa position naturelle est longue pétrole (il le détient), donc le futures court la neutralise."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-012",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Quel est le **payoff** à l'échéance pour la vente (écriture) d'un call de strike $K$ ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\min(K - S_T, 0)$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\max(S_T - K, 0)$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$S_T - K$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$K - S_T$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Écrire un call = gain si $S_T \\leq K$ (prime gardée), perte si $S_T > K$. Payoff $= -\\max(S_T-K,0) = \\min(K-S_T,0)$.",
+        "distractor_explains": {
+          "b": "Payoff de l'acheteur du call.",
+          "c": "Pas de borne inférieure, incorrect.",
+          "d": "Payoff d'un forward court."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-013",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un investisseur **vend un put** de strike $K = 40$ USD. À l'échéance $S_T = 33$ USD. Quel est son payoff (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": -7.0,
+        "steps_mdx": "Payoff vendeur put $= -\\max(K - S_T, 0) = -(40-33) = \\mathbf{-7}$ USD",
+        "formula_katex": "-\\max(K - S_T, 0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-014",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Quelle affirmation est **vraie** concernant les options américaines vs européennes ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une option américaine peut être exercée à tout moment jusqu'à l'échéance"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Une option européenne est toujours plus chère"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les options américaines ne s'échangent qu'en Europe"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Une option européenne peut être exercée avant l'échéance si ITM"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Américaine = exercice à tout moment ; européenne = exercice uniquement à l'échéance.",
+        "distractor_explains": {
+          "b": "L'américaine vaut au moins autant que l'européenne (droit supplémentaire).",
+          "c": "Faux.",
+          "d": "C'est la définition de l'option américaine."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-015",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Vous achetez un call de prime $c = 3$ USD, strike $K = 50$ USD. Quel est votre **seuil de rentabilité** (breakeven) à l'échéance ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 53.0,
+        "steps_mdx": "Breakeven = $K + c = 50 + 3 = \\mathbf{53}$ USD",
+        "formula_katex": "K + c"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-016",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Pourquoi dit-on que l'acheteur d'un put bénéficie d'une **assurance** sur son portefeuille ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Limite la perte en cas de baisse",
+            "weight": 0.5
+          },
+          {
+            "text": "Payoff positif si S_T < K",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Acheter un put protective garantit un prix de vente minimum $K$ pour l'actif détenu. Si $S_T < K$, le put génère $K - S_T$, compensant exactement la dépréciation au-delà du strike. Le coût de cette assurance est la prime $p$ payée à l'achat."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-017",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un opérateur achète un call et vend un put, même strike, même échéance. Quelle position synthétique crée-t-il ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un forward long"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un forward court"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un straddle"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un butterfly"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Call long – Put long = forward synthétique long (parité put-call).",
+        "distractor_explains": {
+          "b": "Ce serait put long – call long.",
+          "c": "Straddle = achat call ET put même strike.",
+          "d": "Butterfly implique trois strikes."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-018",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "La prime d'un put est $p = 4$ USD, strike $K = 60$ USD. En dessous de quel prix spot $S_T$ le put devient-il **profitable** pour l'acheteur ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 56.0,
+        "steps_mdx": "Profitable si $K - S_T > p \\Rightarrow S_T < K - p = 60 - 4 = \\mathbf{56}$ USD",
+        "formula_katex": "K - p"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-019",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un **swap** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un accord d'échange de flux de trésorerie futurs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un droit d'acheter un actif à prix fixe"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un contrat de livraison différée standardisé"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Une obligation zéro-coupon"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Un swap échange des flux (taux fixe vs variable, EUR vs USD, etc.) sur une période.",
+        "distractor_explains": {
+          "b": "C'est la définition d'une option call.",
+          "c": "C'est la définition d'un futures.",
+          "d": "Instrument obligataire, pas un dérivé swap."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-020",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Décrivez comment un **importateur américain** utilise un forward sur l'EUR/USD pour se couvrir.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Achat forward EUR",
+            "weight": 0.5
+          },
+          {
+            "text": "Fixe le taux de change à l'avance",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "L'importateur devra payer en EUR dans 6 mois. Il **achète** un forward EUR/USD (position longue EUR) pour fixer aujourd'hui le taux auquel il acquerra les euros. Quelle que soit l'évolution du change, son coût en USD est connu à l'avance, éliminant le risque de change."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-021",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un investisseur achète 1 contrat futures sur l'or (100 oz) à $F_0 = 1\\,900$ USD/oz. Le cours monte à $F_1 = 1\\,930$ USD/oz le lendemain. Quel est son gain journalier (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 3000.0,
+        "steps_mdx": "Gain $= (F_1 - F_0) \\times 100 = (1930 - 1900) \\times 100 = \\mathbf{3\\,000}$ USD",
+        "formula_katex": "(F_1 - F_0) \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-022",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Quelle est la différence de risque entre l'**acheteur d'un call** et le **vendeur d'un call** ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'acheteur perd au maximum sa prime ; le vendeur peut perdre illimité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les deux ont un risque illimité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le vendeur perd au maximum la prime ; l'acheteur peut perdre illimité"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les deux ont un risque limité à la prime"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "L'acheteur paie la prime et ne peut perdre plus. Le vendeur encaisse la prime mais perd si $S_T \\gg K$.",
+        "distractor_explains": {
+          "b": "L'acheteur est protégé à la baisse.",
+          "c": "Rôles inversés.",
+          "d": "Le vendeur a un risque illimité."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-023",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un call de strike $K = 100$ USD est vendu à $c = 5$ USD. À l'échéance $S_T = 112$ USD. Quel est le **profit net** du vendeur (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": -7.0,
+        "steps_mdx": "Profit vendeur $= c - \\max(S_T - K, 0) = 5 - 12 = \\mathbf{-7}$ USD",
+        "formula_katex": "c - \\max(S_T - K, 0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-024",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un dérivé **OTC** est caractérisé par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Des termes négociés bilatéralement, risque de contrepartie non centralisé"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La standardisation des contrats et compensation centrale obligatoire"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une négociation uniquement sur des plateformes électroniques réglementées"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'absence totale de risque de marché"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "OTC = over-the-counter : contrats sur mesure, sans chambre de compensation centrale (sauf post-2008).",
+        "distractor_explains": {
+          "b": "C'est le marché organisé (exchange-traded).",
+          "c": "Pas de restriction de plateforme.",
+          "d": "Le risque de marché existe toujours."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-025",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Comment un **arbitragiste** exploite-t-il un écart de prix entre le marché spot et le marché futures ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Achat (vente) sur le marché le moins (plus) cher",
+            "weight": 0.5
+          },
+          {
+            "text": "Profit sans risque si coûts de transaction faibles",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Si $F_0 > S_0 e^{rT}$, l'arbitragiste **emprunte** pour acheter le sous-jacent spot et **vend** le futures. À l'échéance, il livre l'actif au prix $F_0$ et rembourse l'emprunt $S_0 e^{rT}$, encaissant la différence. Cet arbitrage est dit \"cash-and-carry\". La concurrence ramène rapidement $F_0 = S_0 e^{rT}$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-026",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un put de strike $K = 80$ USD coûte $p = 6$ USD. À l'échéance $S_T = 71$ USD. Quel est le **profit net** de l'acheteur (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 3.0,
+        "steps_mdx": "Profit $= \\max(K - S_T, 0) - p = 9 - 6 = \\mathbf{3}$ USD",
+        "formula_katex": "\\max(K - S_T, 0) - p"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-027",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "L'**effet de levier** d'un dérivé signifie que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une faible mise initiale contrôle une grande exposition notionnelle"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le dérivé amplifie toujours les gains sans amplifier les pertes"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le dérivé est réservé aux investisseurs institutionnels"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le prix du dérivé est toujours supérieur à celui du sous-jacent"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Avec un futures ou une option, la marge ou prime initiale est faible par rapport au notionnel contrôlé.",
+        "distractor_explains": {
+          "b": "L'effet de levier amplifie gains ET pertes.",
+          "c": "Faux, les particuliers y accèdent.",
+          "d": "Généralement faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-028",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un investisseur achète 10 contrats call, chaque contrat portant sur 100 actions, prime $c = 2$ USD/action, strike $K = 50$ USD. À l'échéance $S_T = 56$ USD. Quel est le **profit total** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 4000.0,
+        "steps_mdx": "Profit/contrat $= (S_T - K - c) \\times 100 = (6-2) \\times 100 = 400$ USD. Total = $10 \\times 400 = \\mathbf{4\\,000}$ USD",
+        "formula_katex": "(S_T - K - c) \\times 100 \\times n"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-029",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Qu'est-ce que la **livraison physique** vs le **règlement en espèces** dans un contrat dérivé ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Livraison physique : transfert de l'actif sous-jacent",
+            "weight": 0.5
+          },
+          {
+            "text": "Règlement cash : versement de la différence de prix",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "En **livraison physique**, le vendeur du futures livre effectivement l'actif (blé, pétrole, obligation) à l'acheteur. En **règlement en espèces** (cash settlement), aucun actif ne change de mains : on verse simplement la différence $S_T - F_0$ au détenteur de la position longue (ou vice versa). Les futures sur indices et sur taux sont typiquement cash-settled."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-030",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Quelle est la valeur intrinsèque d'un call de strike $K = 55$ USD quand $S = 60$ USD ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "5 USD"
+          },
+          {
+            "key": "b",
+            "text_mdx": "0 USD"
+          },
+          {
+            "key": "c",
+            "text_mdx": "60 USD"
+          },
+          {
+            "key": "d",
+            "text_mdx": "55 USD"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Valeur intrinsèque call $= \\max(S - K, 0) = \\max(60-55,0) = 5$ USD.",
+        "distractor_explains": {
+          "b": "Serait OTM.",
+          "c": "Valeur du sous-jacent, pas valeur intrinsèque.",
+          "d": "Strike, pas valeur intrinsèque."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-031",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "La prime totale d'un call est $c = 7$ USD et sa valeur intrinsèque est $4$ USD. Quelle est sa **valeur temps** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 3.0,
+        "steps_mdx": "Valeur temps $= c - \\text{valeur intrinsèque} = 7 - 4 = \\mathbf{3}$ USD",
+        "formula_katex": "c - \\max(S - K, 0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-032",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Une option **deep in-the-money** a une valeur temps :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Faible, car l'incertitude sur l'exercice est quasi nulle"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Élevée, car elle est très profitable"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Égale à sa valeur intrinsèque"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Nulle uniquement à l'échéance"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La valeur temps représente la probabilité que l'option devienne encore plus profitable. Deep ITM : quasi-certitude d'exercice, donc valeur temps faible.",
+        "distractor_explains": {
+          "b": "La valeur totale est élevée, pas la valeur temps.",
+          "c": "Valeur temps = prime – valeur intrinsèque.",
+          "d": "Vrai à l'échéance pour tout strike."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-033",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Pourquoi la **valeur temps** d'une option est-elle toujours positive avant l'échéance ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Probabilité non nulle que l'option soit exercée ou davantage ITM",
+            "weight": 0.5
+          },
+          {
+            "text": "Coût d'opportunité du temps",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Même une option ATM ou OTM peut finir ITM avant l'échéance : il existe toujours une probabilité positive. Cette espérance de gain supplémentaire a une valeur. À l'échéance, cette probabilité tombe à zéro et la valeur temps disparaît (time decay ou thêta)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-034",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "introduction"
+      ],
+      "prompt_mdx": "Un call et un put ATM ($S = K = 75$ USD) ont des valeurs intrinsèques respectives de __ et __. Quelle est la **valeur intrinsèque du put** ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "ATM : $S = K$. Valeur intrinsèque put $= \\max(K - S, 0) = \\max(0,0) = \\mathbf{0}$ USD.",
+        "formula_katex": "\\max(K - S, 0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-035",
+      "type": "numeric_steps",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un trader achète 2 contrats futures sur l'or (100 oz chacun) à $F_0 = 1\\,950$ USD/oz. La marge initiale est de 6 000 USD par contrat et la marge de maintenance de 4 500 USD. Le cours tombe à $F_1 = 1\\,920$ USD/oz. Calculez : (a) la perte journalière, (b) le solde de marge, (c) si un appel de marge est déclenché et son montant.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Perte journalière (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "$(1920-1950) \\times 100 \\times 2 = -30 \\times 200 = \\mathbf{-6\\,000}$ USD",
+            "hint_mdx": "Perte $= (F_1 - F_0) \\times \\text{taille} \\times n$",
+            "trap_mdx": "Attention : la perte s'applique sur le **notionnel total** (2 × 100 oz)."
+          },
+          {
+            "label": "Solde de marge après perte (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "$12\\,000 - 6\\,000 = \\mathbf{6\\,000}$ USD",
+            "hint_mdx": "Marge initiale totale = $6\\,000 \\times 2 = 12\\,000$ USD"
+          },
+          {
+            "label": "Montant de l'appel de marge (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "Solde 6 000 < seuil 9 000 → appel de marge de $12\\,000 - 6\\,000 = \\mathbf{6\\,000}$ USD pour revenir à la marge initiale.",
+            "hint_mdx": "Seuil = marge de maintenance $\\times 2 = 9\\,000$ USD",
+            "trap_mdx": "L'appel de marge ramène au niveau **initial**, pas au niveau de maintenance."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": -6000.0
+          },
+          {
+            "answer": 6000.0
+          },
+          {
+            "answer": 6000.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-036",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Le **marquage au marché** (marking-to-market) d'un contrat futures signifie :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les gains et pertes sont réglés en espèces chaque jour"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix du futures est fixé une fois à l'ouverture"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La valeur du contrat est garantie par la chambre de compensation"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le contrat ne peut être cédé qu'à son prix d'émission"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Chaque soir, la chambre débite/crédite les comptes de marge selon l'évolution du prix futures.",
+        "distractor_explains": {
+          "b": "Le prix évolue quotidiennement.",
+          "c": "La garantie est assurée par la marge, pas le marquage.",
+          "d": "Faux, le contrat se transfère librement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-037",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un trader long sur 3 contrats futures pétrole (1 000 barils chacun) à $F_0 = 82$ USD. Cours final $F_T = 88$ USD. Quel est son **gain total** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 18000.0,
+        "steps_mdx": "$(F_T - F_0) \\times 1\\,000 \\times 3 = 6 \\times 3\\,000 = \\mathbf{18\\,000}$ USD",
+        "formula_katex": "(F_T - F_0) \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-038",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "L'**open interest** sur un marché futures représente :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le nombre total de contrats ouverts (non liquidés)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le volume échangé sur la journée"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La somme des positions longues et courtes"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le nombre de contrats arrivés à échéance"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Open interest = positions encore ouvertes. Volume = transactions de la journée.",
+        "distractor_explains": {
+          "b": "C'est le volume, pas l'OI.",
+          "c": "Long + court = 2 × OI, pas l'OI lui-même.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-039",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un trader détient une position courte sur 5 contrats futures (1 000 barils chacun) à $F_0 = 90$ USD. Il ferme sa position à $F_1 = 86$ USD. Quel est son **profit** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 20000.0,
+        "steps_mdx": "Profit court $= (F_0 - F_1) \\times N = (90-86) \\times 5\\,000 = \\mathbf{20\\,000}$ USD",
+        "formula_katex": "(F_0 - F_1) \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-040",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Quel est le rôle d'une **chambre de compensation** (CCP) dans un marché futures ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Interpose entre acheteur et vendeur",
+            "weight": 0.3333333333333333
+          },
+          {
+            "text": "Garantit l'exécution des contrats",
+            "weight": 0.3333333333333333
+          },
+          {
+            "text": "Gère la marge",
+            "weight": 0.3333333333333333
+          }
+        ],
+        "model_answer_mdx": "La CCP **s'interpose** entre acheteur et vendeur, devenant la contrepartie de chaque partie. Elle collecte des marges et marque les positions au marché quotidiennement. Si un participant ne peut honorer ses engagements, la CCP utilise sa marge et son fonds de défaut. Cela **élimine le risque de contrepartie bilatéral** et centralise la gestion du risque."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-041",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Qu'est-ce qu'un **appel de marge** (margin call) ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une demande de renflouer le compte de marge sous le seuil de maintenance"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le montant initial déposé pour ouvrir une position"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un ordre de clôturer immédiatement sa position"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les frais de courtage sur un contrat futures"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Quand les pertes font passer le solde sous la marge de maintenance, la chambre exige un dépôt complémentaire.",
+        "distractor_explains": {
+          "b": "C'est la marge initiale.",
+          "c": "L'appel de marge ne force pas la liquidation (sauf défaut).",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-042",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Marge initiale = 5 000 USD, marge de maintenance = 3 500 USD. Après marking-to-market, le solde tombe à 3 200 USD. Quel est le **montant de l'appel de marge** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 1800.0,
+        "steps_mdx": "Appel de marge $= $ marge initiale $-$ solde $= 5\\,000 - 3\\,200 = \\mathbf{1\\,800}$ USD",
+        "formula_katex": "M_{init} - \\text{solde}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-043",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Comment clôture-t-on une position futures avant l'échéance ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "En prenant la position opposée sur le même contrat"
+          },
+          {
+            "key": "b",
+            "text_mdx": "En livrant l'actif sous-jacent"
+          },
+          {
+            "key": "c",
+            "text_mdx": "En signant un accord bilatéral avec la contrepartie initiale"
+          },
+          {
+            "key": "d",
+            "text_mdx": "En déposant une marge supplémentaire"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "On prend une position inverse (long si on était court) sur le même contrat, maturité, actif.",
+        "distractor_explains": {
+          "b": "C'est la livraison physique à l'échéance.",
+          "c": "Le futures est anonyme, pas bilatéral.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-044",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un trader achète 1 contrat futures sur indice S&P500 (multiplicateur 250) à $F_0 = 4\\,200$. Marge initiale = 20 000 USD. Les cours évoluent ainsi : J1 : 4 180, J2 : 4 215, J3 : 4 190. Calculez le flux de marge à J1, J2 et J3.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Flux J1 (USD)",
+            "unit": "USD",
+            "tolerance": 0.5,
+            "solution_mdx": "$(4180-4200)\\times 250 = -20 \\times 250 = \\mathbf{-5\\,000}$ USD (débit)"
+          },
+          {
+            "label": "Flux J2 (USD)",
+            "unit": "USD",
+            "tolerance": 0.5,
+            "solution_mdx": "$(4215-4180)\\times 250 = 35 \\times 250 = \\mathbf{+8\\,750}$ USD (crédit)"
+          },
+          {
+            "label": "Flux J3 (USD)",
+            "unit": "USD",
+            "tolerance": 0.5,
+            "solution_mdx": "$(4190-4215)\\times 250 = -25 \\times 250 = \\mathbf{-6\\,250}$ USD (débit)"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": -5000.0
+          },
+          {
+            "answer": 8750.0
+          },
+          {
+            "answer": -6250.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-045",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Sur un marché futures, le **règlement à l'échéance** (delivery) concerne :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Moins de 5 % des contrats en général"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La totalité des contrats ouverts"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Uniquement les contrats sur matières premières"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Tous les contrats dont la marge a été appelée"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La grande majorité des positions sont clôturées avant l'échéance par une position inverse.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Les futures financiers ont aussi une livraison (ou cash settlement).",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-046",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un investisseur est long 4 contrats futures sur blé (5 000 boisseaux chacun). Il entre à $F_0 = 5{,}80$ USD/boisseau et sort à $F_T = 6{,}15$ USD/boisseau. Quel est son **gain** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 7000.0,
+        "steps_mdx": "$(6{,}15 - 5{,}80) \\times 5\\,000 \\times 4 = 0{,}35 \\times 20\\,000 = \\mathbf{7\\,000}$ USD",
+        "formula_katex": "(F_T - F_0) \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-047",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Expliquez pourquoi le **convergence** du prix futures vers le prix spot à l'échéance est inévitable.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Arbitrage à l'échéance",
+            "weight": 0.5
+          },
+          {
+            "text": "Prix spot = prix de livraison",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "À l'échéance, le détenteur d'un futures long doit payer $F_T$ pour recevoir l'actif. Si $F_T \\neq S_T$, un arbitragiste achèterait sur le marché le moins cher et vendrait sur l'autre. Cette pression d'arbitrage force $F_T \\to S_T$ à l'expiration."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-048",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "La **marge initiale** d'un contrat futures est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un dépôt de garantie, pas un coût d'achat"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix d'achat du contrat"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une prime versée à la chambre de compensation"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La totalité de la valeur notionnelle du contrat"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La marge initiale est un dépôt de bonne foi, récupéré à la clôture. Le contrat vaut le notionnel.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "La prime est le concept des options, pas des futures.",
+          "d": "Le notionnel est bien supérieur à la marge (effet de levier)."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-049",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un trader court sur 10 contrats euros (125 000 EUR chacun) à $F_0 = 1{,}0820$ USD/EUR. Il ferme à $F_1 = 1{,}0910$ USD/EUR. Quelle est sa **perte** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": -11250.0,
+        "steps_mdx": "Perte court $= (F_0 - F_1) \\times N = (1{,}0820 - 1{,}0910) \\times 1\\,250\\,000 = -0{,}009 \\times 1\\,250\\,000 = \\mathbf{-11\\,250}$ USD",
+        "formula_katex": "(F_0 - F_1) \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-050",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Qu'est-ce que le **basis** dans un contexte de couverture futures ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Basis $=$ Prix spot $-$ Prix futures"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Basis $=$ Prix futures $-$ Prix forward"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Basis $=$ Marge initiale $-$ Marge de maintenance"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Basis $=$ Taux d'intérêt $-$ Rendement de dividende"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le basis mesure l'écart entre spot et futures à un instant $t$. Il converge vers 0 à l'échéance.",
+        "distractor_explains": {
+          "b": "Comparaison d'instruments différents, pas le basis standard.",
+          "c": "Faux.",
+          "d": "Faux, c'est une formule de coût de portage."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-051",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Prix spot d'une obligation = 98{,}5 USD. Prix futures 3 mois = 97{,}2 USD. Quel est le **basis** ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 1.3,
+        "steps_mdx": "Basis $= S - F = 98{,}5 - 97{,}2 = \\mathbf{1{,}3}$ USD",
+        "formula_katex": "S - F"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-052",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Pourquoi le **risque de basis** est-il plus faible que le risque de prix pur pour un hedger ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Le basis varie peu par rapport au prix",
+            "weight": 0.5
+          },
+          {
+            "text": "La couverture réduit l'exposition nette",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Sans couverture, l'exposition est $\\Delta S$ (variation du prix spot, souvent grande). Avec couverture futures, l'exposition résiduelle est $\\Delta(S - F) = \\Delta \\text{basis}$. Empiriquement, le basis est beaucoup plus stable que le prix spot, donc la couverture réduit fortement le risque."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-053",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Qu'appelle-t-on le **rollover** d'une couverture futures ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Clôturer un contrat arrivant à échéance et ouvrir un contrat plus lointain"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Augmenter sa position sur le même contrat"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Convertir un futures en option"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Transférer sa marge d'un contrat à un autre broker"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Quand la couverture s'étend au-delà d'une échéance futures, on roule : on liquide le court terme et on réouvre plus loin.",
+        "distractor_explains": {
+          "b": "C'est un ajout de position.",
+          "c": "Conversion impossible ainsi.",
+          "d": "Opération administrative, pas rollover."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-054",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un investisseur ouvre un compte de marge avec 8 000 USD pour 1 contrat (marge initiale 8 000 USD, maintenance 5 500 USD). Après J1 : perte de 3 000 USD. Solde = 5 000 USD. Quel est le **montant de l'appel de marge** pour revenir à la marge initiale (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 3000.0,
+        "steps_mdx": "Appel $= 8\\,000 - 5\\,000 = \\mathbf{3\\,000}$ USD",
+        "formula_katex": "M_{init} - \\text{solde}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-055",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "La **variation margin** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le flux quotidien de marking-to-market sur un compte de marge futures"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La marge initiale ajustée à la volatilité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La différence entre marge initiale et marge de maintenance"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un supplément de marge exigé en période de stress"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Variation margin = débit/crédit quotidien selon l'évolution du prix futures.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "C'est l'écart de marge, pas la variation margin.",
+          "d": "C'est plutôt l'\"initial margin add-on\" en période de stress."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-056",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un trader détient une position longue : 5 contrats S&P500 (multiplicateur 250) à 4 500. Fermeture à 4 550. Gain **total** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 62500.0,
+        "steps_mdx": "$(4550-4500)\\times 250 \\times 5 = 50 \\times 1\\,250 = \\mathbf{62\\,500}$ USD",
+        "formula_katex": "(F_T - F_0) \\times \\text{mult} \\times n"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-057",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Quelle est la différence entre le **settlement price** et le **closing price** d'un futures ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Settlement price : prix officiel fin de journée pour marking-to-market",
+            "weight": 0.5
+          },
+          {
+            "text": "Closing price : dernier prix de transaction",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le **settlement price** est calculé par la bourse (souvent moyenne des dernières transactions) et sert de référence pour le marking-to-market et les appels de marge. Le **closing price** est simplement le dernier prix de transaction de la séance, qui peut être peu représentatif si illiquide."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-058",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un contrat futures sur indice est généralement réglé en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Espèces (cash settlement)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Livraison d'un panier d'actions"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Obligations d'État"
+          },
+          {
+            "key": "d",
+            "text_mdx": "ETF correspondant"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "On ne peut pas livrer physiquement un indice ; le règlement est donc toujours en espèces.",
+        "distractor_explains": {
+          "b": "Irréaliste à grande échelle.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-059",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Open interest en début de séance : 12 000 contrats. Sur la séance : 3 000 nouveaux longs ouverts, 1 500 fermetures. Open interest en **fin de séance** ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 13500.0,
+        "steps_mdx": "Ouvertures $+3\\,000$, fermetures $-1\\,500$ → OI $= 12\\,000 + 3\\,000 - 1\\,500 = \\mathbf{13\\,500}$ contrats",
+        "formula_katex": "OI + \\Delta_{new} - \\Delta_{closed}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-060",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un **contrat futures standardisé** inclut généralement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'actif sous-jacent, la taille du lot, la date d'échéance et les modalités de livraison"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Uniquement le prix et la quantité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le nom de l'acheteur et du vendeur"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La marge initiale négociée bilatéralement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Standardisation = lot, échéance, modalités de livraison/settlement fixés par la bourse.",
+        "distractor_explains": {
+          "b": "Insuffisant.",
+          "c": "Contrat anonyme.",
+          "d": "Marge fixée par la chambre, pas négociée."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-061",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-markets-and-central-counterparties"
+      ],
+      "prompt_mdx": "Un trader long 1 contrat futures cuivre (25 000 livres) entre à $3{,}60$ USD/livre. Il reçoit deux crédits de marge de 1 250 USD et 800 USD, puis un débit de 2 100 USD. Quel est son **gain net de marge** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": -50.0,
+        "steps_mdx": "$1\\,250 + 800 - 2\\,100 = \\mathbf{-50}$ USD",
+        "formula_katex": "\\sum_{t} \\Delta M_t"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-062",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Un gestionnaire détient 500 000 actions dont $\\beta = 1{,}4$ vs le S&P500. Le S&P500 spot est à 4 000, multiplicateur futures = 250. Il veut couvrir le risque marché en vendant des futures. Calculez le **nombre optimal de contrats** à vendre.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Nombre de contrats (arrondi)",
+            "unit": "contrats",
+            "tolerance": 0.5,
+            "solution_mdx": "Si $V_P = 40\\,000\\,000$ USD : $N^* = 1{,}4 \\times \\frac{40\\,000\\,000}{4\\,000 \\times 250} = 1{,}4 \\times 40 = \\mathbf{56}$ contrats",
+            "hint_mdx": "$N^* = \\beta \\times \\dfrac{V_P}{F \\times \\text{mult}}$ avec $V_P$ = valeur portefeuille",
+            "trap_mdx": "Arrondir au nombre entier le plus proche."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 56.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-063",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Le **ratio de couverture optimal** (hedge ratio) est défini comme :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$h^* = \\rho_{SF} \\dfrac{\\sigma_S}{\\sigma_F}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$h^* = \\dfrac{\\sigma_F}{\\sigma_S}$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$h^* = \\dfrac{V_P}{F_0}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$h^* = \\beta \\times \\dfrac{\\sigma_F}{\\sigma_S}$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$h^* = \\rho \\cdot \\sigma_S / \\sigma_F$ minimise la variance du portefeuille couvert.",
+        "distractor_explains": {
+          "b": "Inverse.",
+          "c": "Ratio de valeurs, pas de couverture de variance.",
+          "d": "Mélange beta et volatilités sans sens précis."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-064",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Corrélation spot/futures $\\rho = 0{,}92$. Écart-type des variations mensuelles du spot : $\\sigma_S = 0{,}031$. Écart-type des variations mensuelles du futures : $\\sigma_F = 0{,}028$. Quel est le **ratio de couverture optimal** $h^*$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 1.0171,
+        "steps_mdx": "$h^* = \\rho \\dfrac{\\sigma_S}{\\sigma_F} = 0{,}92 \\times \\dfrac{0{,}031}{0{,}028} = 0{,}92 \\times 1{,}1071 = \\mathbf{1{,}0186}$",
+        "formula_katex": "\\rho \\dfrac{\\sigma_S}{\\sigma_F}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-065",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Une **couverture courte** (short hedge) est utilisée lorsque :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "On détient un actif et on craint une baisse de prix"
+          },
+          {
+            "key": "b",
+            "text_mdx": "On doit acheter un actif et on craint une hausse"
+          },
+          {
+            "key": "c",
+            "text_mdx": "On veut spéculer à la baisse"
+          },
+          {
+            "key": "d",
+            "text_mdx": "On veut fermer une position longue existante"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Long sous-jacent + court futures = couverture de la position longue.",
+        "distractor_explains": {
+          "b": "C'est une couverture longue.",
+          "c": "La spéculation n'est pas une couverture.",
+          "d": "C'est de la clôture de position."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-066",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Un agriculteur vendra 200 000 boisseaux de maïs dans 3 mois. Chaque contrat futures = 5 000 boisseaux. Ratio de couverture $h^* = 0{,}95$. Quel est le **nombre optimal de contrats** à vendre (arrondi) ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 38.0,
+        "steps_mdx": "$N^* = h^* \\times \\frac{200\\,000}{5\\,000} = 0{,}95 \\times 40 = \\mathbf{38}$ contrats",
+        "formula_katex": "h^* \\times \\frac{Q_S}{Q_F}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-067",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Qu'est-ce que le **risque de basis** dans une couverture futures, et quand est-il nul ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Incertitude sur la valeur finale du basis",
+            "weight": 0.5
+          },
+          {
+            "text": "Nul si couverture parfaite à l'échéance",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le risque de basis est l'incertitude sur la valeur de $b_2 = S_2 - F_2$ à la date de clôture. Si la couverture est liquidée **à l'échéance du contrat futures**, $b_2 = 0$ (convergence) et le risque est nul. Si on clôture avant l'échéance, ou si le futures ne porte pas exactement sur l'actif couvert (cross-hedge), le basis peut être non nul et incertain."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-068",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Une compagnie aérienne consommera 2 millions de gallons de kérosène dans 3 mois. Elle se couvre avec des futures sur le **pétrole brut** (corrélation $\\rho = 0{,}88$, $\\sigma_S = 0{,}032$, $\\sigma_F = 0{,}025$). Chaque contrat = 42 000 gallons. Calculez : (a) le ratio de couverture, (b) le nombre de contrats.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Ratio de couverture $h^*$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$h^* = 0{,}88 \\times 0{,}032 / 0{,}025 = 0{,}88 \\times 1{,}28 = \\mathbf{1{,}1264}$",
+            "hint_mdx": "$h^* = \\rho \\sigma_S / \\sigma_F$"
+          },
+          {
+            "label": "Nombre de contrats (arrondi)",
+            "unit": "contrats",
+            "tolerance": 0.5,
+            "solution_mdx": "$N^* = 1{,}1264 \\times 2\\,000\\,000 / 42\\,000 = 1{,}1264 \\times 47{,}62 \\approx \\mathbf{54}$ contrats",
+            "hint_mdx": "$N^* = h^* \\times Q_S / Q_F$",
+            "trap_mdx": "Arrondir à l'entier supérieur car sous-couverture préférable à sur-couverture."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 1.1264
+          },
+          {
+            "answer": 54.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-069",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Le **tailing the hedge** (ajustement de la queue) consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Multiplier le nombre de contrats par $F_0 / S_0$ pour tenir compte du marking-to-market"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Ajouter des contrats supplémentaires pour sur-couvrir"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Supprimer les contrats à courte échéance"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Réduire la couverture quand les marchés sont volatils"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le marking-to-market des futures crée un biais par rapport au forward. On ajuste : $N^* = h^* \\times Q_S / Q_F \\times S_0 / F_0$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-070",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Portefeuille actions de valeur 10 M USD, $\\beta = 1{,}25$. Index futures S&P500 à 4 200, multiplicateur 250. Pour ramener le $\\beta$ cible à **0{,}6**, combien de contrats vendre ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 24.0,
+        "steps_mdx": "$N = (\\beta_P - \\beta_T) \\times \\frac{V_P}{F \\times m} = (1{,}25 - 0{,}6) \\times \\frac{10\\,000\\,000}{4\\,200 \\times 250} = 0{,}65 \\times 9{,}52 \\approx \\mathbf{24}$ contrats",
+        "formula_katex": "(\\beta_P - \\beta_T) \\times \\frac{V_P}{F \\times m}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-071",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Pourquoi une **couverture croisée** (cross-hedge) génère-t-elle du risque de basis supplémentaire ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Actif couvert ≠ sous-jacent du futures",
+            "weight": 0.5
+          },
+          {
+            "text": "Corrélation imparfaite",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Dans un cross-hedge, l'actif à couvrir (ex : kérosène) **diffère** du sous-jacent du futures (ex : pétrole brut). Même si les deux prix sont corrélés, leur relation n'est pas parfaite ($\\rho < 1$). Cette corrélation imparfaite est la source de risque de basis résiduel : $h^*$ minimise la variance mais ne l'annule pas."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-072",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Un exportateur recevra 5 M EUR dans 4 mois. Futures EUR/USD à $F_0 = 1{,}085$, taille = 125 000 EUR. Il vend des futures pour se couvrir. À l'échéance : $S_T = 1{,}072$, $F_T = 1{,}072$. Calculez : (a) gain sur futures, (b) recette en USD, (c) recette effective vs non-couverte.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Nombre de contrats vendus",
+            "unit": "contrats",
+            "tolerance": 0.5,
+            "solution_mdx": "$N = 5\\,000\\,000 / 125\\,000 = \\mathbf{40}$ contrats"
+          },
+          {
+            "label": "Gain sur futures (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "$(1{,}085 - 1{,}072) \\times 125\\,000 \\times 40 = 0{,}013 \\times 5\\,000\\,000 = \\mathbf{65\\,000}$ USD"
+          },
+          {
+            "label": "Recette effective (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "Spot : $5\\,000\\,000 \\times 1{,}072 = 5\\,360\\,000$ + gain $65\\,000 = \\mathbf{5\\,425\\,000}$ USD",
+            "trap_mdx": "La recette effective ≈ $5\\,000\\,000 \\times F_0 = 5\\,425\\,000$ USD, confirmant la couverture."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 40.0
+          },
+          {
+            "answer": 65000.0
+          },
+          {
+            "answer": 5425000.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-073",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Quelle est la **limite principale** d'une couverture futures sur portefeuille d'actions ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Elle couvre le risque systématique (marché) mais pas le risque idiosyncratique"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elle couvre uniquement les actions technologiques"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elle est inefficace si beta > 1"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Elle oblige à vendre les actions physiques"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les futures d'indices couvrent $\\beta \\times \\Delta_\\text{indice}$, mais pas la performance relative du portefeuille vs l'indice.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Beta élevé = plus de contrats nécessaires, pas d'inefficacité.",
+          "d": "Faux, les actions restent en portefeuille."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-074",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Un gestionnaire veut **augmenter** le $\\beta$ de son portefeuille de 0{,}8 à 1{,}5. Valeur = 8 M USD, S&P500 futures à 4 400, multiplicateur 250. Combien de contrats faut-il **acheter** ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 5.0,
+        "steps_mdx": "$N = (1{,}5 - 0{,}8) \\times \\frac{8\\,000\\,000}{4\\,400 \\times 250} = 0{,}7 \\times 7{,}27 \\approx \\mathbf{5}$ contrats",
+        "formula_katex": "(\\beta_T - \\beta_P) \\times \\frac{V_P}{F \\times m}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-075",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Expliquez en quoi une **couverture statique** diffère d'une **couverture dynamique**.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Statique : position fixée jusqu'à clôture",
+            "weight": 0.5
+          },
+          {
+            "text": "Dynamique : ajustements fréquents",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Une couverture **statique** est mise en place une fois et maintenue sans ajustement jusqu'à la clôture ou l'échéance. Simple mais exposée au risque de basis et aux variations de corrélation. Une couverture **dynamique** ajuste régulièrement le nombre de contrats en fonction des variations du beta, de la valeur du portefeuille ou de la corrélation. Plus précise mais coûteuse en frais de transaction."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-076",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Pourquoi le **rolling hedge** (couverture en roulement) est-il parfois nécessaire ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les contrats futures liquides ont souvent des échéances courtes"
+          },
+          {
+            "key": "b",
+            "text_mdx": "On ne peut vendre que des contrats courts terme"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les longues échéances ont des marges plus élevées"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les régulateurs imposent des maturités maximales"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Quand la couverture s'étend sur plusieurs années, les contrats lointains sont illiquides. On couvre avec des contrats courts et on les renouvelle (roll).",
+        "distractor_explains": {
+          "b": "Les contrats longue échéance existent mais sont illiquides.",
+          "c": "Pas nécessairement.",
+          "d": "Pas de telle règle générale."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-077",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Un producteur d'or vendra 300 oz dans 6 mois. Futures 6 mois à $F_0 = 1\\,980$ USD/oz. Il vend 3 contrats (100 oz chacun). À l'échéance : $S_T = 1\\,940$, $F_T = 1\\,940$. Quel est son **revenu effectif** (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 594000.0,
+        "steps_mdx": "Vente spot : $300 \\times 1\\,940 = 582\\,000$. Gain futures : $(1\\,980-1\\,940)\\times 300 = 12\\,000$. Total $= \\mathbf{594\\,000}$ USD $\\approx 300 \\times F_0$.",
+        "formula_katex": "Q \\times F_0 \\text{ (avec couverture parfaite)}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-078",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "La **variance minimale** d'un portefeuille couvert est atteinte quand $h = h^*$. Quelle est la **variance résiduelle** minimale en fonction de $\\rho$ ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$(1 - \\rho^2) \\sigma_S^2$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\sigma_S^2 - \\sigma_F^2$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\rho^2 \\sigma_S^2$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$\\sigma_S^2 / \\rho^2$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Variance du portefeuille couvert optimal $= (1-\\rho^2)\\sigma_S^2$. Si $\\rho=1$, variance nulle.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "C'est la variance couverte, pas résiduelle.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-079",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Quels sont les **deux sources de risque** dans un rolling hedge ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Risque de basis à chaque renouvellement",
+            "weight": 0.5
+          },
+          {
+            "text": "Incertitude sur le prix futures futur",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "À chaque renouvellement, le trader ferme le contrat proche et ouvre le lointain à un prix différent. La différence (roll yield ou coût du rollover) est incertaine. De plus, le **basis** entre l'actif couvert et le futures peut varier. Ces deux incertitudes s'accumulent sur la durée de la couverture."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-080",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Couverture parfaite : $h = 1$, taille du futures = 1 000 unités. Un gestionnaire détient 7 500 unités du sous-jacent. Combien de contrats vend-il ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 7.5,
+        "steps_mdx": "$N = h \\times Q_S / Q_F = 1 \\times 7\\,500 / 1\\,000 = \\mathbf{7{,}5}$ contrats",
+        "formula_katex": "h \\times Q_S / Q_F"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-081",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Une couverture avec $h^* > 1$ signifie que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il faut vendre plus de futures que la quantité sous-jacente en valeur"
+          },
+          {
+            "key": "b",
+            "text_mdx": "On est en position longue sur les futures"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La couverture est impossible"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le ratio de variance est supérieur à 1"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Quand $\\sigma_S / \\sigma_F$ est grand ou que $\\rho$ est élevé, $h^* > 1$ indique une sur-couverture en notionnel.",
+        "distractor_explains": {
+          "b": "On reste court sur les futures pour couvrir une position longue.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-082",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Une société veut emprunter 10 M USD dans 3 mois à taux variable. Elle se couvre avec des futures Eurodollar (100 contrats de 1 M USD, taux implicite 5{,}20 %). Le taux monte à 5{,}60 % à l'emprunt. Gain sur futures (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 500.0
+        }
+      },
+      "solution": {
+        "value": 100000.0,
+        "steps_mdx": "Hausse de 40 bps = 0{,}40 %. Gain par contrat = $0{,}004/4 \\times 1\\,000\\,000 = 1\\,000$ USD. Total = $100 \\times 1\\,000 = \\mathbf{100\\,000}$ USD. Compense la hausse du coût d'emprunt.",
+        "formula_katex": "n \\times \\frac{\\Delta r}{4} \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-083",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Qu'est-ce que le **stack hedge** et en quoi diffère-t-il du strip hedge ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Stack : concentration sur un seul contrat proche",
+            "weight": 0.5
+          },
+          {
+            "text": "Strip : répartition sur plusieurs échéances",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un **strip hedge** répartit les contrats sur plusieurs échéances successives, chacune correspondant au besoin de couverture à cette date (ex : un contrat par mois pendant 12 mois). Un **stack hedge** concentre tous les contrats sur la maturité la plus proche et liquide, puis les renouvelle (roll). Avantage : liquidité. Inconvénient : risque de rollover accumulé."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-084",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Efficacité de couverture : $\\rho = 0{,}95$. Quel pourcentage de la variance est **éliminé** par la couverture optimale ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 90.25,
+        "steps_mdx": "Variance éliminée = $\\rho^2 = 0{,}95^2 = \\mathbf{90{,}25}\\%$",
+        "formula_katex": "\\rho^2 \\times 100"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-085",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Pourquoi un **hedger** préfère-t-il souvent une couverture **imparfaite** à une couverture théoriquement parfaite ?",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les coûts de transaction et la liquidité rendent la couverture exacte prohibitive"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La couverture parfaite est toujours plus coûteuse"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les régulateurs interdisent la couverture à 100 %"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Une couverture imparfaite a un rendement attendu plus élevé"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les frais de transaction, le bid-ask et la faible liquidité des contrats exacts rendent la couverture optimale coûteuse.",
+        "distractor_explains": {
+          "b": "Pas nécessairement.",
+          "c": "Faux.",
+          "d": "Les deux ont le même rendement attendu, pas de prime de risque."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-086",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hedging-strategies-using-futures"
+      ],
+      "prompt_mdx": "Un gestionnaire détient 2 000 actions à 45 USD chacune, $\\beta = 1{,}3$. S&P500 futures à 4 600, multiplicateur 50. Nombre de contrats à vendre pour **neutraliser totalement** le beta ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 5.0,
+        "steps_mdx": "$N = 1{,}3 \\times \\frac{2\\,000 \\times 45}{4\\,600 \\times 50} = 1{,}3 \\times \\frac{90\\,000}{230\\,000} = 1{,}3 \\times 0{,}391 \\approx \\mathbf{5}$ contrats",
+        "formula_katex": "\\beta \\times \\frac{V_P}{F \\times m}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-113",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Prix spot d'une action $S_0 = 50$ USD, taux sans risque $r = 5\\%$ (continu), maturité $T = 0{,}5$ an. L'action ne verse pas de dividende. Quel est le **prix forward théorique** $F_0$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 51.27,
+        "steps_mdx": "$F_0 = S_0 e^{rT} = 50 \\times e^{0{,}05 \\times 0{,}5} = 50 \\times e^{0{,}025} = 50 \\times 1{,}02532 = \\mathbf{51{,}27}$ USD",
+        "formula_katex": "S_0 e^{rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-114",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Prix spot $S_0 = 120$ USD, dividende continu $q = 2\\%$, taux sans risque $r = 6\\%$ (continus), $T = 1$ an. Calculez : (a) le prix forward, (b) la valeur initiale du contrat forward, (c) la valeur du forward si 6 mois plus tard $S = 125$ USD.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Prix forward $F_0$ (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$F_0 = 120 e^{(0{,}06-0{,}02)\\times1} = 120 e^{0{,}04} = 120 \\times 1{,}04081 = \\mathbf{124{,}90}$ USD",
+            "hint_mdx": "$F_0 = S_0 e^{(r-q)T}$"
+          },
+          {
+            "label": "Valeur initiale du forward (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "À l'émission, valeur d'un forward $= \\mathbf{0}$ USD (pas de coût à entrer)."
+          },
+          {
+            "label": "Valeur du long forward à $t=0{,}5$ an (USD)",
+            "unit": "USD",
+            "tolerance": 0.05,
+            "solution_mdx": "$f = 125 e^{-0{,}02\\times0{,}5} - 124{,}90 e^{-0{,}06\\times0{,}5} = 125\\times0{,}9900 - 124{,}90\\times0{,}9704$$= 123{,}75 - 121{,}21 = \\mathbf{2{,}54}$ USD",
+            "hint_mdx": "$f = S_t e^{-q(T-t)} - F_0 e^{-r(T-t)}$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 124.9
+          },
+          {
+            "answer": 0.0
+          },
+          {
+            "answer": 2.54
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-115",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Le coût de portage (cost of carry) d'un forward est défini comme :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les coûts de stockage + le taux d'intérêt − le rendement de commodité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Uniquement le taux d'intérêt"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le dividende moins le taux sans risque"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La différence entre futures et forward"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Pour les commodités : $c = r + u - y$ où $u$ = coût de stockage, $y$ = convenience yield.",
+        "distractor_explains": {
+          "b": "Incomplet.",
+          "c": "Inverse.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-116",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Prix spot du CHF = 0{,}9200 USD/CHF, taux USD $r = 4{,}5\\%$, taux CHF $r_f = 1{,}5\\%$ (continus), $T = 1$ an. Quel est le prix forward USD/CHF ?",
+      "payload": {
+        "unit": "USD/CHF",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 0.9478,
+        "steps_mdx": "$F_0 = S_0 e^{(r-r_f)T} = 0{,}92 \\times e^{(0{,}045-0{,}015)} = 0{,}92 \\times e^{0{,}03} = 0{,}92 \\times 1{,}03045 = \\mathbf{0{,}9480}$ USD/CHF",
+        "formula_katex": "S_0 e^{(r-r_f)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-117",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Si $F_0 > S_0 e^{rT}$ (pas de dividende), un arbitragiste devrait :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Emprunter, acheter le sous-jacent spot, et vendre le forward"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter le forward et vendre le sous-jacent spot"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Ne rien faire car les marchés sont efficients"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Acheter les deux et attendre l'échéance"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Cash-and-carry : emprunt à $r$, achat spot à $S_0$, vente forward à $F_0 > S_0 e^{rT}$ → profit sans risque.",
+        "distractor_explains": {
+          "b": "Si $F_0$ est trop haut, il faut le vendre, pas l'acheter.",
+          "c": "L'arbitrage force le retour à l'équilibre.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-118",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Commodity : $S_0 = 25$ USD, $r = 8\\%$, coût de stockage $u = 3\\%$ (continu), $T = 1$ an. Quel est le prix forward théorique ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.003
+        }
+      },
+      "solution": {
+        "value": 27.87,
+        "steps_mdx": "$F_0 = S_0 e^{(r+u)T} = 25 \\times e^{0{,}11} = 25 \\times 1{,}11628 = \\mathbf{27{,}91}$ USD",
+        "formula_katex": "S_0 e^{(r+u)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-119",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Qu'est-ce que le **convenience yield** d'une commodité et pourquoi peut-il rendre $F_0 < S_0 e^{rT}$ ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Valeur de détention physique de la commodité",
+            "weight": 0.5
+          },
+          {
+            "text": "Réduit le prix forward théorique",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le convenience yield $y$ mesure l'avantage à détenir **physiquement** la commodité (garantit la production, répond aux pics de demande). Il entre dans la formule comme un rendement négatif : $F_0 = S_0 e^{(r+u-y)T}$. Si $y > r + u$, alors $F_0 < S_0$ (backwardation). Les commodités en tension ont un $y$ élevé."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-120",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Taux sans risque $r = 5\\%$, dividendes futurs : $D_1 = 0{,}50$ USD dans 3 mois, $D_2 = 0{,}50$ USD dans 9 mois. Prix spot $S_0 = 40$ USD, forward 1 an. Quel est $F_0$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 41.03,
+        "steps_mdx": "VA(dividendes) $= 0{,}5 e^{-0{,}05\\times0{,}25} + 0{,}5 e^{-0{,}05\\times0{,}75} = 0{,}4938 + 0{,}4814 = 0{,}9752$. $F_0 = (S_0 - I) e^{rT} = (40 - 0{,}9752) e^{0{,}05} = 39{,}025 \\times 1{,}05127 = \\mathbf{41{,}03}$ USD",
+        "formula_katex": "(S_0 - I) e^{rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-121",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "En situation de **contango**, le prix futures est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Supérieur au prix spot anticipé"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Égal au prix spot anticipé"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Inférieur au prix spot actuel"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Toujours croissant avec la maturité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Contango = $F_0 > E[S_T]$. Cela arrive quand le coût de portage domine le convenience yield.",
+        "distractor_explains": {
+          "b": "Ce serait une hypothèse théorique spécifique.",
+          "c": "Ce serait backwardation.",
+          "d": "Pas nécessairement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-122",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Prix forward or 6 mois : $F_0 = 2\\,010$ USD. Spot $S_0 = 1\\,960$ USD, $r = 4\\%$ (continu). Quel est le **coût de stockage implicite** $u$ (en % annuel continu) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 1.04,
+        "steps_mdx": "$F_0 = S_0 e^{(r+u)T}$ → $u = \\frac{\\ln(F_0/S_0)}{T} - r = \\frac{\\ln(2010/1960)}{0{,}5} - 0{,}04 = \\frac{0{,}02520}{0{,}5} - 0{,}04 = 0{,}0504 - 0{,}04 = \\mathbf{1{,}04}\\%$",
+        "formula_katex": "\\frac{\\ln(F_0/S_0)}{T} - r"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-123",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "La **parité des taux d'intérêt couverte** stipule que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$F_0 = S_0 e^{(r-r_f)T}$ — le forward est déterminé par le différentiel de taux"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les taux d'intérêt de deux pays convergent toujours"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$F_0 = S_0$ si les marchés sont efficients"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux de change à terme est toujours supérieur au taux spot"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La parité couverte : arbitrage entre placement domestique et étranger couvert donne $F_0/S_0 = e^{(r-r_f)T}$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Seulement si $r = r_f$.",
+          "d": "Dépend du différentiel de taux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-124",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Prix spot USD/JPY = 110{,}50 (USD pour 1 JPY : $S_0 = 1/110{,}50$ USD/JPY). Simplifions : $S_0 = 110{,}50$ JPY/USD. $r_{USD} = 3\\%$, $r_{JPY} = 0{,}1\\%$, $T = 1$ an. Prix forward JPY/USD ?",
+      "payload": {
+        "unit": "JPY/USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.003
+        }
+      },
+      "solution": {
+        "value": 113.75,
+        "steps_mdx": "$F_0 = 110{,}50 \\times e^{(0{,}03-0{,}001)} = 110{,}50 \\times e^{0{,}029} = 110{,}50 \\times 1{,}02942 = \\mathbf{113{,}75}$ JPY/USD",
+        "formula_katex": "S_0 e^{(r-r_f)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-125",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Expliquez l'arbitrage **reverse cash-and-carry** quand $F_0 < S_0 e^{rT}$.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vente spot + dépôt + achat forward",
+            "weight": 0.5
+          },
+          {
+            "text": "Profit si F0 trop bas",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Quand $F_0 < S_0 e^{rT}$ : on **vend** le sous-jacent à $S_0$, on place le produit au taux $r$, et on **achète** le forward à $F_0$. À l'échéance, on reçoit $S_0 e^{rT}$ du placement et on paie $F_0$ pour récupérer l'actif. Profit $= S_0 e^{rT} - F_0 > 0$ sans risque. Cet arbitrage reste difficile sur les actifs non-stockables (ex : actions avec dividendes incertains)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-126",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Obligation zéro-coupon de maturité 2 ans, valeur nominale 1 000 USD, taux spot 2 ans $= 4\\%$ (continu). Quel est le **prix forward 1 an** sur cette obligation (remise dans 1 an pour livraison dans 2 ans) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.003
+        }
+      },
+      "solution": {
+        "value": 951.23,
+        "steps_mdx": "Prix obligataire aujourd'hui : $P_0 = 1\\,000 e^{-0{,}04 \\times 2} = 1\\,000 \\times 0{,}92312 = 923{,}12$ USD. Forward 1 an : $F_0 = P_0 e^{r_1 \\times 1}$ avec $r_1 = $ taux 1 an. Taux forward implicite : $r_{1,2} = 2r_2 - r_1$. Supposons $r_1 = 3\\%$ : $F_0 = 923{,}12 \\times e^{0{,}03} = 923{,}12 \\times 1{,}03045 = \\mathbf{951{,}23}$ USD",
+        "formula_katex": "P_0 e^{r_1 T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-127",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Un **futures sur indice** valorisé $F_0 = (S_0 - I) e^{rT}$ où $I$ est la valeur actuelle des dividendes. Si les dividendes **augmentent**, le prix futures :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Diminue"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Augmente"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Ne change pas"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Dépend du taux sans risque"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$I$ croît → $S_0 - I$ diminue → $F_0$ diminue. Les dividendes profitent au détenteur spot, pas au long futures.",
+        "distractor_explains": {
+          "b": "Inverse.",
+          "c": "Faux.",
+          "d": "La relation est directe, indépendante de $r$ dans ce sens."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-128",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Prix spot EUR/USD $S_0 = 1{,}0800$. Taux EUR $r_f = 3{,}5\\%$, taux USD $r = 5{,}0\\%$ (continus), $T = 3$ mois = 0{,}25 an. Quel est le prix forward EUR/USD ?",
+      "payload": {
+        "unit": "USD/EUR",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 1.084,
+        "steps_mdx": "$F_0 = 1{,}08 \\times e^{(0{,}05-0{,}035)\\times0{,}25} = 1{,}08 \\times e^{0{,}00375} = 1{,}08 \\times 1{,}003757 = \\mathbf{1{,}0841}$",
+        "formula_katex": "S_0 e^{(r-r_f)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-129",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "La **backwardation** normale (Keynes) implique que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les hedgers en position courte paient une prime de risque aux spéculateurs longs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix futures est toujours inférieur au spot"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il n'y a pas de spéculateurs sur ce marché"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux sans risque est négatif"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les producteurs (hedgers courts) acceptent $F_0 < E[S_T]$ pour sécuriser leur prix. Cette prime attire les spéculateurs longs.",
+        "distractor_explains": {
+          "b": "La backwardation concerne $F_0$ vs $E[S_T]$, pas vs $S_0$.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-130",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Contrat forward sur 1 000 actions, $F_0 = 52$ USD, $S_0 = 50$ USD, $r = 4\\%$, $T = 1$ an. Action verse un dividende de 1{,}5 USD dans 6 mois. Le forward est-il correctement valorisé ? Calculez le prix théorique.",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.003
+        }
+      },
+      "solution": {
+        "value": 50.51,
+        "steps_mdx": "$I = 1{,}5 e^{-0{,}04 \\times 0{,}5} = 1{,}5 \\times 0{,}9802 = 1{,}4703$. $F_0^{\\text{théo}} = (50 - 1{,}4703) e^{0{,}04} = 48{,}5297 \\times 1{,}04081 = \\mathbf{50{,}51}$ USD. Le forward à 52 est **surévalué** → arbitrage cash-and-carry.",
+        "formula_katex": "(S_0 - I) e^{rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-131",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Pourquoi les prix forward et futures **divergent-ils** quand les taux d'intérêt sont corrélés avec le sous-jacent ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Marking-to-market des futures crée un avantage/désavantage selon corrélation",
+            "weight": 0.5
+          },
+          {
+            "text": "Forward non affecté",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Avec un futures, les flux de marge sont réinvestis. Si le sous-jacent est positivement corrélé aux taux : quand le futures monte (gain de marge), les taux sont élevés → le réinvestissement est avantageux. Le détenteur long bénéficie d'un effet de convexité positif → $F_0 > \\text{Forward}_0$. Pour les obligations (corrélation négative taux/prix), c'est l'inverse."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-132",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Stock-index futures : S&P500 à $S_0 = 4\\,500$, rendement dividende $q = 1{,}5\\%$, $r = 4\\%$, $T = 0{,}25$ an. Prix futures théorique ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 4528.0,
+        "steps_mdx": "$F_0 = 4\\,500 \\times e^{(0{,}04-0{,}015)\\times0{,}25} = 4\\,500 \\times e^{0{,}00625} = 4\\,500 \\times 1{,}006270 = \\mathbf{4\\,528}$",
+        "formula_katex": "S_0 e^{(r-q)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-133",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Dans la formule $F_0 = S_0 e^{(r+u-y)T}$ pour une commodité, $y$ représente :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le convenience yield (valeur de détention physique)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux de dividende"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux de change"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le coût de stockage"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$y$ = convenience yield ; $u$ = coût de stockage ; $r$ = taux sans risque.",
+        "distractor_explains": {
+          "b": "Pour les actions, pas les commodités.",
+          "c": "Faux.",
+          "d": "C'est $u$."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-134",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Commodity spot $S_0 = 30$ USD, $r = 6\\%$, $u = 2\\%$, $y = 4\\%$ (continus), $T = 0{,}5$ an. Prix forward ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 30.61,
+        "steps_mdx": "$F_0 = 30 e^{(0{,}06+0{,}02-0{,}04)\\times0{,}5} = 30 e^{0{,}02} = 30 \\times 1{,}02020 = \\mathbf{30{,}61}$ USD",
+        "formula_katex": "S_0 e^{(r+u-y)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-135",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Expliquez pourquoi le **prix forward** est le meilleur prédicteur non-biaisé du prix spot futur sous l'hypothèse d'**absence de prime de risque**.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Sous neutralité au risque F0 = E[S_T]",
+            "weight": 0.5
+          },
+          {
+            "text": "Spéculateurs indifférents entre long et court",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "En neutralité au risque, les spéculateurs sont indifférents entre prendre une position longue futures (dont la valeur attendue est $E[S_T] - F_0$) et un placement sans risque (rendement nul). Pour être indifférent, $E[S_T] = F_0$. En pratique, une prime de risque peut exister : $E[S_T] = F_0 + \\lambda\\sigma_F$ selon la théorie de la pression (Hicks/Keynes)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-136",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Taux spot 6 mois (continu) $r_{0.5} = 3{,}8\\%$, taux spot 1 an $r_1 = 4{,}5\\%$. Quel est le **taux forward 6 mois dans 6 mois** $r_{0.5,1}$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 5.2,
+        "steps_mdx": "$r_{0{,}5,1} = \\frac{r_1 \\times 1 - r_{0{,}5} \\times 0{,}5}{0{,}5} = \\frac{0{,}045 - 0{,}019}{0{,}5} = \\frac{0{,}026}{0{,}5} = \\mathbf{5{,}2}\\%$",
+        "formula_katex": "\\frac{r_T \\cdot T - r_t \\cdot t}{T-t}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-137",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "La valeur d'un **long forward** en cours de vie ($t < T$) vaut :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$f = S_t e^{-q(T-t)} - F_0 e^{-r(T-t)}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$f = F_0 - S_t$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$f = S_t - F_0 e^{r(T-t)}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$f = 0$ toujours"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Valeur du long forward $= $ VA(actif sous-jacent) $-$ VA(prix de livraison).",
+        "distractor_explains": {
+          "b": "Pas de facteur d'actualisation.",
+          "c": "Pas de facteur d'actualisation correctement placé.",
+          "d": "Nulle seulement à l'émission."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-138",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "determination-of-forward-and-futures-prices"
+      ],
+      "prompt_mdx": "Long forward EUR/USD conclu à $F_0 = 1{,}0750$, $T = 1$ an. À $t = 0{,}5$ an : $S_t = 1{,}0850$ USD/EUR, $r_{USD} = 4\\%$, $r_{EUR} = 2\\%$ (continus). Valeur actuelle du forward (USD) pour 1 EUR ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.0005
+        }
+      },
+      "solution": {
+        "value": 0.0145,
+        "steps_mdx": "$f = S_t e^{-r_f(T-t)} - F_0 e^{-r(T-t)} = 1{,}0850 e^{-0{,}02\\times0{,}5} - 1{,}0750 e^{-0{,}04\\times0{,}5}$$= 1{,}0850\\times0{,}9900 - 1{,}0750\\times0{,}9802 = 1{,}0742 - 1{0539} = \\mathbf{0{,}0145}$ USD",
+        "formula_katex": "S_t e^{-r_f(T-t)} - F_0 e^{-r(T-t)}"
+      }
+    }
+  ]
+}

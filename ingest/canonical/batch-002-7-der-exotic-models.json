@@ -1,0 +1,5714 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-exotic-models",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-446",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Une **option barrier knock-out** est annulée si :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le sous-jacent atteint une barrière prédéfinie avant l'expiration"
+          },
+          {
+            "key": "b",
+            "text_mdx": "L'option expire sans valeur"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le delta dépasse 0.5"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le strike est atteint"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Knock-out : l'option disparaît si $S$ touche $B$ (barrière). Ex : up-and-out call.",
+        "distractor_explains": {
+          "b": "C'est l'expiration normale OTM.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-447",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Une **option asiatique** est basée sur :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La moyenne du sous-jacent sur la durée de vie de l'option"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le maximum du sous-jacent"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le prix final uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La volatilité réalisée"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Asiatique : payoff $=\\max(\\bar{S}-K,0)$ où $\\bar{S}$ est la moyenne arithmétique (ou géométrique).",
+        "distractor_explains": {
+          "b": "C'est une option lookback.",
+          "c": "C'est une option standard.",
+          "d": "C'est un variance swap."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-448",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Call barrier up-and-out : $S_0=95$, $K=90$, $B=110$. À maturité, $S_T=105$. Payoff (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 15.0,
+        "steps_mdx": "$S_T=105<B=110$ → option non knockée. Payoff $=\\max(105-90,0)=\\mathbf{15}$ USD.",
+        "formula_katex": "\\max(S_T-K,0)\\times\\mathbf{1}_{\\max S\\leq B}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-449",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Un **lookback call** donne le droit d'acheter au :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Prix minimum atteint par le sous-jacent pendant la vie de l'option"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Prix final"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Prix moyen"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Strike fixé à l'origine"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Lookback call : $\\text{payoff}=S_T-\\min_{0\\leq t\\leq T}S_t$.",
+        "distractor_explains": {
+          "b": "Option standard.",
+          "c": "Option asiatique.",
+          "d": "Option standard à strike fixe."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-450",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Lookback call : $S_T=120$, $S_{\\min}=85$. Payoff (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 35.0,
+        "steps_mdx": "$\\text{payoff}=S_T-S_{\\min}=120-85=\\mathbf{35}$ USD.",
+        "formula_katex": "S_T - S_{\\min}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-451",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Une **option binaire (digitale) cash-or-nothing** paye :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un montant fixe $Q$ si l'option expire ITM, 0 sinon"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La différence $S_T-K$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La prime de l'option"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Toujours $Q$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Cash-or-nothing : $Q\\times\\mathbf{1}_{S_T>K}$. Dans BSM, $c=Qe^{-rT}N(d_2)$.",
+        "distractor_explains": {
+          "b": "C'est le call standard.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-452",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Digital cash-or-nothing call : $Q=100$, $r=4\\%$, $T=0.5$, $N(d_2)=0.60$. Prix (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 58.82,
+        "steps_mdx": "$c=Qe^{-rT}N(d_2)=100e^{-0.02}\\times0.60=98.02\\times0.60=\\mathbf{58.81}$ USD.",
+        "formula_katex": "Qe^{-rT}N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-453",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Une **option composée (compound)** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une option dont le sous-jacent est une autre option"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un portefeuille de calls et puts"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une option à plusieurs strikes"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Une option perpetuelle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Compound option : call-on-call, call-on-put, put-on-call, put-on-put. Utilisée pour les options sur obligations.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-454",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Un **chooser option** permet à l'acheteur de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Choisir à une date $T_1$ si l'option sera un call ou un put avec maturité $T_2>T_1$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Choisir le strike à la maturité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Choisir la maturité"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Exercer ou non chaque jour"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Chooser = 'as-you-like-it option'. Valeur : $\\max(c,p)$ à $T_1$. Utile si on est incertain sur la direction.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "C'est une option américaine."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-455",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Parité put-call : $c=8$ USD, $p=5$ USD à la date de choix $T_1$. Valeur du chooser ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 8.0,
+        "steps_mdx": "Chooser vaut $\\max(c,p)=\\max(8,5)=\\mathbf{8}$ USD.",
+        "formula_katex": "\\max(c,p)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-456",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Expliquez le mécanisme de **réplication d'une option asiatique** par Monte Carlo.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Simuler de nombreux chemins de prix",
+            "weight": 0.5
+          },
+          {
+            "text": "Calculer la moyenne de S sur chaque chemin",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Monte Carlo pour une option asiatique moyenne arithmétique : (1) Simuler $N$ chemins du sous-jacent sous GBM. (2) Pour chaque chemin $i$, calculer $\\bar{S}^{(i)}=\\frac{1}{M}\\sum_{j=1}^M S_{t_j}^{(i)}$. (3) Calculer le payoff $\\max(\\bar{S}^{(i)}-K,0)$. (4) Actualiser : $c=e^{-rT}\\frac{1}{N}\\sum_{i=1}^N \\max(\\bar{S}^{(i)}-K,0)$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-457",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Un **barrier knock-in** nécessite :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Que le sous-jacent atteigne la barrière pour que l'option devienne active"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Que le sous-jacent reste sous la barrière"
+          },
+          {
+            "key": "c",
+            "text_mdx": "L'exercice avant l'expiration"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un delta nul"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Knock-in : l'option n'existe que si $S$ touche $B$. Complémentaire au knock-out.",
+        "distractor_explains": {
+          "b": "C'est le knock-out.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-458",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Relation barrier : call standard $c=4$, up-and-in call $c_{UI}=1.5$. Prix up-and-out call ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 2.5,
+        "steps_mdx": "$c=c_{UI}+c_{UO}\\Rightarrow c_{UO}=c-c_{UI}=4-1.5=\\mathbf{2.5}$ USD.",
+        "formula_katex": "c - c_{UI}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-459",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Une option **exchange** (Margrabe) donne le droit :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "D'échanger un actif $A$ contre un actif $B$ à la maturité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "D'acheter $A$ au prix fixé"
+          },
+          {
+            "key": "c",
+            "text_mdx": "De vendre $A$ en échange de cash"
+          },
+          {
+            "key": "d",
+            "text_mdx": "D'avoir une option sur panier"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Margrabe (1978) : option d'échange. Payoff $=\\max(A_T-B_T,0)$. Utilisée pour les options spread.",
+        "distractor_explains": {
+          "b": "Option standard.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-460",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Option Margrabe : $A_0=50$, $B_0=48$, $\\sigma_A=20\\%$, $\\sigma_B=15\\%$, $\\rho=0.6$, $T=1$. $\\sigma_{eff}=\\sqrt{\\sigma_A^2+\\sigma_B^2-2\\rho\\sigma_A\\sigma_B}=\\sqrt{0.04+0.0225-0.036}=\\sqrt{0.0265}=0.1628$. Prix approximatif via BSM avec $F_A=A_0$, $F_B=B_0$ comme 'spot et strike' ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "value": 4.82,
+        "steps_mdx": "$c_{Margrabe}\\approx A_0 N(d_1)-B_0 N(d_2)$ avec $d_1=[\\ln(50/48)+0.5\\times0.0265]/(0.1628)=[0.0408+0.01325]/0.1628=0.330$. $N(0.33)=0.629$, $d_2=0.167$, $N(0.167)=0.566$. $c=50\\times0.629-48\\times0.566=31.45-27.17=\\mathbf{4.28}$ USD.",
+        "formula_katex": "A_0 N(d_1)-B_0 N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-461",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Pourquoi les **options path-dependent** (asiatiques, barriers, lookback) sont-elles généralement moins chères que les options standard ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Path-dependent réduit la chance de payoff élevé",
+            "weight": 0.5
+          },
+          {
+            "text": "Contrainte sur le chemin = option moins précieuse",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les options standard dépendent uniquement de $S_T$. Les path-dependent ont un payoff qui dépend du chemin → des contraintes réduisent la valeur. Asiatique : la moyenne atténue les pics → call asiatique $\\leq$ call standard. Barrier knock-out : possibilité d'annulation → valeur $\\leq$ call standard. Lookback : exception — peut valoir plus que le standard car strike optimal."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-462",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "La **variance swap** est un produit dérivé qui paie :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La différence entre variance réalisée et variance fixée ($K_{var}$)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La différence entre vol réalisée et vol implicite"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le carré du prix final"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La différence de prix de deux options"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Variance swap : payoff $=N_{var}\\times(\\sigma_{real}^2-K_{var})$. Exposition pure à la variance.",
+        "distractor_explains": {
+          "b": "Un vol swap paie la différence de vols.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-463",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Variance swap : $N_{var}=1\\,000\\,000$ USD, $K_{var}=(20\\%)^2=0.04$, $\\sigma_{real}=25\\%$. Payoff (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1000.0
+        }
+      },
+      "solution": {
+        "value": 225000.0,
+        "steps_mdx": "$\\text{Payoff}=1\\,000\\,000\\times(0.0625-0.0400)=1\\,000\\,000\\times0.0225=\\mathbf{225\\,000}$ USD.",
+        "formula_katex": "N_{var}(\\sigma_{real}^2-K_{var})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-464",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Un **cliquet** (ratchet option) est une série de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Options forward-start qui se réinitialisent périodiquement"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Options asiatiques sur la même maturité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Options binaires sur le même sous-jacent"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Barriers knock-in successives"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Cliquet = options start-forward : chaque option démarre ATM à la date précédente. Garantie d'un rendement minimum annuel.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-465",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Une **option forward-start** est évaluée en utilisant :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le forward de la volatilité et le ratio $F/S_0$ futur"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La formule BSM avec le prix spot actuel"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un arbre binomial"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les probabilités historiques"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Une forward-start option commence à $T_1$ avec $K=S_{T_1}$ (ATM à $T_1$). Prix = function de vol forward.",
+        "distractor_explains": {
+          "b": "BSM standard ne suffit pas pour la dynamique future.",
+          "c": "Possible mais indirect.",
+          "d": "Monde risque-neutre requis."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-466",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Option asiatique call (moyenne géométrique) : prix analytique via la formule modifiée BSM. $S_0=100$, $K=100$, $r=5\\%$, $\\sigma=20\\%$, $T=1$ an. $\\sigma_{geom}=\\sigma/\\sqrt{3}=0.20/\\sqrt{3}=11.55\\%$. $r_{geom}=\\frac{1}{2}(r-\\sigma^2/6)=\\frac{1}{2}(0.05-0.00667)=0.02167$. Approx BSM modifiée ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.3
+        }
+      },
+      "solution": {
+        "value": 4.6,
+        "steps_mdx": "$c_{Asian-geom}\\approx$ call BSM avec $\\sigma_{eff}=11.55\\%$, $r_{eff}=2.167\\%$ : $c\\approx\\mathbf{4.6}$ USD.",
+        "formula_katex": "c_{BSM}(\\sigma/\\sqrt{3},\\,r_{adj})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-467",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Décrivez la stratégie de **delta-hedging dynamique d'une option barrier** et ses difficultés.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Delta discontinu près de la barrière",
+            "weight": 0.5
+          },
+          {
+            "text": "Vega et gamma très élevés près de B",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Près de la barrière, le delta d'une option barrier peut sauter discontinuellement. Pour un up-and-out call proche de $B$, si $S\\to B^-$, le delta devient très négatif (l'option perd de la valeur si $S$ monte vers $B$). Hedging difficile : gamma et vega très élevés, coûts de transaction importants. En pratique : hedger statiquement avec un portefeuille d'options vanilla (static replication)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-468",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Le **corridor variance swap** diffère du variance swap standard car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il n'accumule la variance que les jours où $S$ est dans un corridor $[L,H]$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il est conditionnel à la direction du marché"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il utilise la variance implicite"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il expire chaque mois"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Corridor : $\\sigma_{real}^2$ conditionnel → exposition partielle à la variance selon le niveau de prix.",
+        "distractor_explains": {
+          "b": "Partiellement vrai mais la définition correcte est le corridor de prix.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-469",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Rainbow option sur 2 actifs : payoff $=\\max(A_T, B_T, K)$. $A_T=110$, $B_T=95$, $K=100$. Payoff ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 110.0,
+        "steps_mdx": "$\\max(110,95,100)=\\mathbf{110}$ USD.",
+        "formula_katex": "\\max(A_T, B_T, K)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-470",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Un **swap de variance** (variance swap) est préféré au **vol swap** parce que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il peut être répliquer statiquement par un log-contract / panier d'options vanilla"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Son payoff est linéaire en volatilité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il est plus simple à comprendre"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il ne nécessite pas de modèle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Variance swap : réplication statique exacte par weighted portfolio of options (Neuberger 1994). Vol swap nécessite un modèle.",
+        "distractor_explains": {
+          "b": "Le variance swap est quadratique en vol (linéaire en variance).",
+          "c": "Subjectif.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-471",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Static replication variance swap : prix du variance swap $=2e^{rT}\\int_0^{F}\\frac{p(K)}{K^2}dK + 2e^{rT}\\int_F^{\\infty}\\frac{c(K)}{K^2}dK$. Pour estimer numériquement, on utilise 3 puts OTM ($K=80,90,100$) avec $p=2,4,5$ et $\\Delta K=10$. Approx contribution puts (sans actualisation) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 0.01958,
+        "steps_mdx": "$\\approx 2\\sum\\frac{p_i}{K_i^2}\\Delta K=2[(2/6400+4/8100+5/10000)\\times10]$$=2\\times10\\times(0.0003125+0.0004938+0.0005000)=20\\times0.001306=\\mathbf{0.02612}$ USD.",
+        "formula_katex": "2\\sum p_i/K_i^2\\cdot\\Delta K"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-472",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Expliquez comment les **options sur réalisé** (variance swaps, vol swaps) sont utilisées pour hedger le vega.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Exposition directe à la variance réalisée",
+            "weight": 0.5
+          },
+          {
+            "text": "Vega neutre mais gamma long possible",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un variance swap long achète la variance réalisée future et vend la variance implicite actuelle. Il donne une exposition pure à la variance sans delta. Utilisé pour hedger le vega d'un portefeuille d'options : si on est long vega via options vanilla, on peut vendre un variance swap pour neutraliser l'exposition globale. La différence : les options vanilla ont un vega qui change avec $S$ et $T$; le variance swap est plus stable."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-473",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Un **outperformance option** (best-of) sur 2 actifs donne :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le meilleur des deux actifs à maturité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La somme des deux actifs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La différence des deux actifs"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La moyenne des deux actifs"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Best-of : payoff $=\\max(A_T,B_T)$. Vaut moins que la somme mais plus que la moyenne.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Option spread.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-474",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Le **gamma de couverture** (hedge gamma) est positif pour :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les acheteurs d'options (long gamma)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les vendeurs d'options"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les positions delta-neutres uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les options deep OTM uniquement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Long option → long gamma. Les vendeurs sont short gamma et subissent des pertes lors des grands mouvements.",
+        "distractor_explains": {
+          "b": "Short options = short gamma.",
+          "c": "Delta neutralité ne change pas le gamma.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-475",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "exotic-options"
+      ],
+      "prompt_mdx": "Chooser option : call BSM $(S=100,K=100,r=5\\%,\\sigma=20\\%,T=1)=10.45$ USD, put parité $=5.57$ USD. Prix chooser ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 10.45,
+        "steps_mdx": "Chooser vaut $\\max(c,p)=\\max(10.45,5.57)=\\mathbf{10.45}$ USD.",
+        "formula_katex": "\\max(c_{BSM},p_{BSM})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-574",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "La méthode de **Monte Carlo** pour pricer des options est basée sur :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La simulation de nombreux chemins du sous-jacent et la moyenne des payoffs actualisés"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La résolution d'une EDP"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les arbres binomiaux"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La transformée de Laplace"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Monte Carlo : loi des grands nombres. Plus de simulations → meilleure précision ($\\propto 1/\\sqrt{N}$).",
+        "distractor_explains": {
+          "b": "Méthode des différences finies.",
+          "c": "Arbre binomial.",
+          "d": "Méthode analytique."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-575",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Monte Carlo BSM : $S_0=100$, $\\mu=r=5\\%$, $\\sigma=20\\%$, $T=1$ an. Simulation 1 : $\\epsilon=0.8$ → $S_T=100\\times e^{(0.05-0.02)\\times1+0.20\\times0.8}=100\\times e^{0.03+0.16}=100\\times e^{0.19}$. $S_T$ approx ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 120.9,
+        "steps_mdx": "$S_T=100\\times e^{0.19}=100\\times1.2092=\\mathbf{120.9}$ USD.",
+        "formula_katex": "S_0 e^{(r-\\sigma^2/2)T+\\sigma\\sqrt{T}\\epsilon}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-576",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "La **variance reduction** par variables antithétiques dans Monte Carlo consiste à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Pour chaque $\\epsilon$, simuler aussi $-\\epsilon$ et prendre la moyenne des payoffs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Simuler sur une grille plus fine"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Utiliser des moments analytiques"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Augmenter le nombre de pas"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Antithetic variates : $\\text{payoff}=(f(\\epsilon)+f(-\\epsilon))/2$. Réduit la variance d'environ 50%.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Control variates, non.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-577",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Monte Carlo avec 2 simulations : $\\epsilon_1=1.2$, $S_T^{(1)}=115$, $\\text{payoff}_1=15$ (call $K=100$). $\\epsilon_2=-1.2$, $S_T^{(2)}=88$, $\\text{payoff}_2=0$. Estimateur antithétique du call (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 7.5,
+        "steps_mdx": "$\\hat{c}=(15+0)/2=\\mathbf{7.5}$ USD (non actualisé).",
+        "formula_katex": "(\\text{payoff}_1+\\text{payoff}_2)/2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-578",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Les **différences finies explicites** pour résoudre l'EDP BSM convergent si :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\Delta t\\leq\\frac{(\\Delta S)^2}{\\sigma^2 S^2}$ (condition CFL)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\Delta t$ est quelconque"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\Delta S$ est très grand"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La grille est uniforme"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Condition de stabilité (Courant-Friedrichs-Lewy) : $\\Delta t$ doit être assez petit par rapport à $\\Delta S$.",
+        "distractor_explains": {
+          "b": "Non, risque d'instabilité.",
+          "c": "Faux.",
+          "d": "Pas suffisant."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-579",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Comparez les méthodes de **différences finies implicites** et **explicites** pour le pricing d'options.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Implicite inconditionnellement stable",
+            "weight": 0.5
+          },
+          {
+            "text": "Explicite plus simple mais conditionnellement stable",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Explicite : résout directement chaque noeud par rapport aux valeurs précédentes. Simple mais instable si $\\Delta t$ trop grand. Implicite : résout un système linéaire tridiagonal à chaque pas de temps. Inconditionnellement stable mais plus coûteux. Crank-Nicolson : semi-implicite, 2e ordre en temps et espace, meilleur compromis."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-580",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Différences finies explicites : $\\Delta S=5$, $\\sigma=25\\%$, $S=50$, $\\Delta t_{max}=?$ Condition CFL : $\\Delta t\\leq\\frac{(\\Delta S)^2}{\\sigma^2 S^2}=\\frac{25}{0.0625\\times2500}$.",
+      "payload": {
+        "unit": "jours",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 23.1,
+        "steps_mdx": "$\\Delta t_{max}=25/156.25=0.16$ an $=0.16\\times365=\\mathbf{58.4}$ jours... Corrigé : $\\sigma^2 S^2=(0.0625)(2500)=156.25$. $\\Delta t=25/156.25=0.160$ an.",
+        "formula_katex": "(\\Delta S)^2/(\\sigma^2 S^2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-581",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "La méthode de **Monte Carlo avec variables de contrôle** améliore la précision en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Utilisant une option connue analytiquement (ex call BSM) comme variable de contrôle"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Augmentant le nombre de simulations"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Réduisant le pas de temps"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Utilisant des quasi-random numbers"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Control variate : $\\hat{c}_{corrected}=\\hat{c}_{MC}+(c_{analytic}-\\hat{c}_{analytic,MC})$. Réduit l'erreur systématique.",
+        "distractor_explains": {
+          "b": "Simple augmentation.",
+          "c": "Pas de temps : pour les différences finies.",
+          "d": "Quasi-MC, différente méthode."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-582",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Monte Carlo : $N=10000$ simulations, $\\hat{c}=8.50$ USD, écart-type des payoffs $=4.20$ USD. Intervalle de confiance 95% pour $c$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 0.0824,
+        "steps_mdx": "Erreur std $=4.20/\\sqrt{10000}=4.20/100=0.042$ USD. IC95% : $\\pm1.96\\times0.042=\\pm\\mathbf{0.082}$ USD.",
+        "formula_katex": "1.96\\times\\hat{\\sigma}/\\sqrt{N}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-583",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Les **quasi-random numbers** (low-discrepancy sequences, ex Sobol) améliorent Monte Carlo car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Ils couvrent l'espace de simulation plus uniformément que les pseudo-aléatoires"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Ils sont plus faciles à générer"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Ils garantissent la convergence exacte"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Ils éliminent la variance résiduelle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Séquences à faible discrépance : convergence en $O(1/N)$ au lieu de $O(1/\\sqrt{N})$ pour Monte Carlo classique.",
+        "distractor_explains": {
+          "b": "Non, plus complexes.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-584",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Expliquez comment pricer une **option américaine** par Monte Carlo en utilisant l'algorithme de Longstaff-Schwartz.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Régression des valeurs de continuation",
+            "weight": 0.5
+          },
+          {
+            "text": "Exercice anticipé si valeur intrinsèque > continuation",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "LSM (Least Squares Monte Carlo) : (1) Simuler $N$ chemins jusqu'à $T$. (2) Remonter en arrière : à chaque date, pour les chemins ITM, régresser la valeur de continuation sur des fonctions du sous-jacent (ex polynômes de Laguerre). (3) Comparer valeur d'exercice anticipé vs continuation estimée, prendre le max. (4) Actualiser les payoffs optimaux. Convergence garantie mais biais sur les options multi-dimensionnelles."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-585",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Arbre trinomial (Hull-White) : $u=1.10$, $m=1.00$, $d=0.91$, $p_u=0.25$, $p_m=0.50$, $p_d=0.25$. Vérification : $p_u+p_m+p_d=$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 1.0,
+        "steps_mdx": "$0.25+0.50+0.25=\\mathbf{1.0}$. Condition de normalisation.",
+        "formula_katex": "p_u+p_m+p_d=1"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-586",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "La méthode de **Monte Carlo avec importance sampling** est utilisée pour :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Améliorer l'efficacité quand les événements rares sont importants (VaR extrême, options OTM)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Réduire le nombre de paramètres du modèle"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Éviter la simulation de GBM"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Calculer les Greeks plus vite"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Importance sampling : simuler plus de chemins dans les zones critiques, corriger par un facteur de Radon-Nikodym.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Pas l'usage principal."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-587",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Finite difference grid : $S_{max}=200$, $S_{min}=0$, $M=20$ intervalles. $\\Delta S=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 10.0,
+        "steps_mdx": "$\\Delta S=S_{max}/M=200/20=\\mathbf{10}$ USD.",
+        "formula_katex": "S_{max}/M"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-588",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "L'**interpolation** dans un arbre binomial permet :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "D'évaluer le prix de l'option à des points non-nodaux"
+          },
+          {
+            "key": "b",
+            "text_mdx": "D'augmenter le nombre de noeuds"
+          },
+          {
+            "key": "c",
+            "text_mdx": "De calibrer le taux sans risque"
+          },
+          {
+            "key": "d",
+            "text_mdx": "De réduire le gamma"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Interpolation bilinéaire entre noeuds adjacents pour obtenir des prix plus fins.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-589",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Quand préférer **Monte Carlo** aux différences finies pour le pricing d'options ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Haute dimensionnalité (panier, asiatique)",
+            "weight": 0.5
+          },
+          {
+            "text": "Path-dependence facile à coder en MC",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Monte Carlo est préféré quand : (1) **Haute dimensionnalité** : $n>3$ actifs (la grille FD explose exponentiellement). (2) **Path-dependent** : options asiatiques, lookback, barriers — faciles à coder en MC. (3) **Flexibilité de modèle** : changement de modèle stochastique sans changer la structure. FD est préféré pour les options 1D américaines (exercice anticipé gérable par backward induction)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-590",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Modèle de Merton à sauts : processus $= GBM + \\text{sauts de Poisson}$. Taux de saut $\\lambda=3$/an, amplitude moyenne $\\mu_J=-20\\%$. Espérance du saut $e^{\\mu_J}-1=-18.1\\%$. Drift ajusté $r_{adj}=r-\\lambda(e^{\\mu_J}-1)=5\\%-3\\times(-18.1\\%)$. $r_{adj}=?$",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 59.3,
+        "steps_mdx": "$r_{adj}=5+54.3=\\mathbf{59.3}\\%$ (ajustement de drift pour neutralité risque sous sauts).",
+        "formula_katex": "r-\\lambda(e^{\\mu_J}-1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-591",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Le modèle de **Heston** est un modèle à volatilité stochastique où :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$dv=\\kappa(\\theta-v)dt+\\xi\\sqrt{v}\\,dW_v$ — la variance suit un processus CIR"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La volatilité est constante"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol suit un GBM"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol est déterministe"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Heston : $v=\\sigma^2$ suit CIR, corrélé avec le sous-jacent ($\\rho$). Génère un smile de vol.",
+        "distractor_explains": {
+          "b": "C'est BSM.",
+          "c": "Vol-of-vol illimitée, instable.",
+          "d": "Vol locale de Dupire."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-592",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Le modèle de **Dupire** (vol locale) est caractérisé par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$dS/S=r\\,dt+\\sigma_L(S,t)\\,dW$ où $\\sigma_L$ est une surface"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La vol est stochastique et non corrélée au sous-jacent"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol est constante"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol dépend uniquement du temps"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vol locale : calibrée exactement sur le smile de marché. Extension directe de BSM.",
+        "distractor_explains": {
+          "b": "C'est Heston.",
+          "c": "BSM.",
+          "d": "Term structure seulement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-593",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Formule de Dupire : $\\sigma_L^2(K,T)=\\frac{2\\partial C/\\partial T+2rK\\partial C/\\partial K}{K^2\\partial^2 C/\\partial K^2}$. Dénominateur (butterfy spread) : $K^2\\partial^2 C/\\partial K^2\\approx K^2\\times(C(K+\\epsilon)-2C(K)+C(K-\\epsilon))/\\epsilon^2$. Avec $K=100$, $\\epsilon=5$: $C(105)=3.5$, $C(100)=5.2$, $C(95)=7.4$. Numérateur de la 2e dérivée ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.008,
+        "steps_mdx": "$(C(105)-2C(100)+C(95))=(3.5-10.4+7.4)=0.5$. $\\partial^2 C/\\partial K^2=0.5/25=\\mathbf{0.02}$.",
+        "formula_katex": "(C(K+\\epsilon)-2C(K)+C(K-\\epsilon))/\\epsilon^2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-594",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Décrivez le modèle **SABR** et ses avantages pour les dérivés de taux.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vol stochastique avec exposant beta",
+            "weight": 0.5
+          },
+          {
+            "text": "Formule approchée analytique de la vol implicite",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "SABR (Stochastic Alpha Beta Rho) : $dF=\\sigma F^\\beta\\,dW_1$, $d\\sigma=\\alpha\\sigma\\,dW_2$, $dW_1 dW_2=\\rho\\,dt$. $\\beta=0$ : Bachelier (vol normale). $\\beta=1$ : log-normal. La formule de Hagan donne la vol implicite Black analytiquement en fonction de $(F,K,\\sigma,\\alpha,\\beta,\\rho,\\nu)$. Avantages : calibration rapide, génère le smile observé pour les swaptions et caps."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-595",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Monte Carlo Heston (schéma d'Euler) : $v_t=0.04$, $\\kappa=2$, $\\theta=0.04$, $\\xi=0.3$, $\\Delta t=0.01$. $\\Delta v=\\kappa(\\theta-v)\\Delta t+\\xi\\sqrt{v}\\sqrt{\\Delta t}\\epsilon_v=2(0.04-0.04)\\times0.01+0.3\\times0.2\\times0.1\\times\\epsilon_v$. $\\Delta v$ (pour $\\epsilon_v=1$) ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.006,
+        "steps_mdx": "$\\Delta v=0+0.3\\times0.2\\times0.1\\times1=0.006$.",
+        "formula_katex": "\\kappa(\\theta-v)\\Delta t+\\xi\\sqrt{v\\Delta t}\\epsilon_v"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-596",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "La **simulation sous mesure forward** (T-forward measure) simplifie le pricing car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le prix forward $F(t,T)$ est une martingale sous la mesure $T$-forward"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elle élimine le taux sans risque du drift"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elle utilise des quasi-aléatoires"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Elle est équivalente à Monte Carlo classique"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Sous $Q^T$ (mesure forward), $F(t,T)$ est martingale. Simplifie le pricing des produits payant à $T$.",
+        "distractor_explains": {
+          "b": "Le drift disparaît pour le forward, pas pour tous les actifs.",
+          "c": "Faux.",
+          "d": "Pas exactement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-597",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Schéma de Milstein pour GBM : $S_{t+\\Delta t}=S_t+rS_t\\Delta t+\\sigma S_t\\sqrt{\\Delta t}\\epsilon+\\frac{1}{2}\\sigma^2 S_t(\\epsilon^2-1)\\Delta t$. Terme de correction de Milstein pour $S_t=100$, $\\sigma=0.2$, $\\Delta t=0.01$, $\\epsilon=1.5$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 0.025,
+        "steps_mdx": "Terme Milstein $=\\frac{1}{2}\\times0.04\\times100\\times(2.25-1)\\times0.01=0.02\\times100\\times1.25\\times0.01=\\mathbf{0.025}$ USD.",
+        "formula_katex": "\\frac{1}{2}\\sigma^2 S_t(\\epsilon^2-1)\\Delta t"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-598",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Le **recombinant tree** (arbre recombiné) pour une option sur dividende discret utilise :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une translation du prix par le dividende actualisé, puis un arbre standard sur $S^*=S-D_0 e^{-rt_D}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un saut à chaque date de dividende"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une modification de $u$ et $d$ uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un arbre à 3 branches"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Méthode de Roll-Geske-Whaley ou ajustement du spot par la VAN des dividendes futurs.",
+        "distractor_explains": {
+          "b": "Entraîne un arbre non-recombiné (explosion combinatoire).",
+          "c": "Insuffisant.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-599",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Expliquez le principe de la **simulation de Cholesky** pour modéliser des actifs corrélés.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Décomposer la matrice de corrélation",
+            "weight": 0.5
+          },
+          {
+            "text": "Générer des browniens corrélés à partir d'indépendants",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour simuler deux processus browniens corrélés $dW_1$, $dW_2$ avec $\\rho$ : (1) Générer deux $\\epsilon_1,\\epsilon_2\\sim N(0,1)$ indépendants. (2) $dW_1=\\epsilon_1\\sqrt{\\Delta t}$. (3) $dW_2=(\\rho\\epsilon_1+\\sqrt{1-\\rho^2}\\epsilon_2)\\sqrt{\\Delta t}$. Pour $n$ actifs : décomposition de Cholesky de $\\Sigma=LL^T$, puis $dW=L\\epsilon$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-600",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Corrélation entre 2 actifs $\\rho=0.6$. Composante orthogonale : $\\sqrt{1-\\rho^2}=?$",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.8,
+        "steps_mdx": "$\\sqrt{1-0.36}=\\sqrt{0.64}=\\mathbf{0.8}$.",
+        "formula_katex": "\\sqrt{1-\\rho^2}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-601",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "L'approche **PDE (EDP)** pour les options est avantageuse car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Elle donne une solution déterministe sur une grille, facile pour les options américaines par backward induction"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elle gère facilement 10+ actifs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elle ne nécessite pas de paramètre"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Elle est équivalente à Monte Carlo"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "EDP + différences finies : optimal pour 1-3D. Backward induction naturel pour options américaines.",
+        "distractor_explains": {
+          "b": "La malédiction de la dimensionnalité rend EDP impraticable au-delà de 3D.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-602",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "La **variance de Monte Carlo** pour $N$ simulations est proportionnelle à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$1/N$ — quadruple $N$ pour halver l'erreur standard"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$N$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\sqrt{N}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$1/N^2$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Erreur MC $\\propto1/\\sqrt{N}$. Pour diviser l'erreur par 2 : multiplier $N$ par 4.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Uniquement pour quasi-MC."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-603",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Monte Carlo : erreur standard $=0.5$ USD avec $N=1000$. Erreur standard avec $N=10000$ (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 0.158,
+        "steps_mdx": "$\\sigma/\\sqrt{N_{new}}=0.5\\times\\sqrt{1000/10000}=0.5/\\sqrt{10}=0.5/3.162=\\mathbf{0.158}$ USD.",
+        "formula_katex": "\\sigma_{MC}/\\sqrt{N_{new}}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-604",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Le modèle de **volatilité local-stochastique** (LSV) combine :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Vol locale de Dupire + composante stochastique (comme Heston) pour mieux reproduire la dynamique du smile"
+          },
+          {
+            "key": "b",
+            "text_mdx": "SABR + GARCH"
+          },
+          {
+            "key": "c",
+            "text_mdx": "BSM + terme de saut"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Two-factor BSM"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "LSV : $dS/S=\\sigma_L(S,t)\\sqrt{v_t}\\,dW_S$, $dv=CIR$. Calibre exactement le smile et donne une dynamique réaliste.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Jump-diffusion.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-605",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Décrivez la méthode de **réduction de variance par stratification** dans Monte Carlo.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Diviser l'espace en strates",
+            "weight": 0.5
+          },
+          {
+            "text": "Simuler proportionnellement dans chaque strate",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Stratified sampling : diviser l'espace de probabilité en strates $[0,1/M],[1/M,2/M],...$. Pour chaque strate $k$, générer exactement $N/M$ tirages uniformément dans $[(k-1)/M,k/M]$. Transformée inverse donne $\\epsilon_i$. Avantage : chaque région de probabilité est couverte de manière déterministe → variance réduite par rapport au MC naïf."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-606",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "PDE BSM call (Crank-Nicolson) : grille $S=0$ à 200 USD, $K=100$, $M=40$ noeuds. Conditions aux limites : $C(0,t)=0$, $C(200,t)=200-100e^{-r(T-t)}$. Valeur approx du call ATM ($S=100$) par interpolation entre noeuds 20 et 21 si $S_{20}=95$, $C_{20}=6$, $S_{21}=100$, $C_{21}=8$?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 8.0,
+        "steps_mdx": "Interpolation : $C(100)\\approx C_{21}=\\mathbf{8}$ USD (noeud 21 est exactement $S=100$).",
+        "formula_katex": "\\text{interpolation}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-607",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "La **régression polynomiale** dans Longstaff-Schwartz utilise généralement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Des polynômes de Laguerre ou des fonctions de base de Legendre comme régresseurs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un réseau de neurones"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La méthode des moments"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des splines naturels"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "LSM utilise typiquement $1, S, S^2$ ou polynômes de Laguerre pour régresser la valeur de continuation.",
+        "distractor_explains": {
+          "b": "Deep LSM utilise des réseaux de neurones — plus récent.",
+          "c": "Faux.",
+          "d": "Possible mais inhabituel."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-608",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "more-on-models-and-numerical-procedures"
+      ],
+      "prompt_mdx": "Longstaff-Schwartz, 2 chemins ITM à $t=1$ : $S^{(1)}=90$, $S^{(2)}=95$. Payoffs en $t=2$ : $V^{(1)}=12$, $V^{(2)}=8$. Régression $V=a+bS$. Valeur de continuation prédite pour $S=90$ si régression donne $a=40$, $b=-0.36$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 7.6,
+        "steps_mdx": "$\\hat{V}(90)=40+(-0.36)\\times90=40-32.4=\\mathbf{7.6}$ USD.",
+        "formula_katex": "a+bS"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-609",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Une **martingale** est un processus stochastique $X_t$ tel que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$E[X_T|\\mathcal{F}_t]=X_t$ pour tout $t<T$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$E[X_T]=X_0$ seulement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$X_t$ est non décroissant"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$X_t$ a une espérance nulle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Martingale : l'espérance conditionnelle future est le prix actuel. Propriété fondamentale en finance.",
+        "distractor_explains": {
+          "b": "Condition nécessaire mais pas suffisante.",
+          "c": "Faux.",
+          "d": "Seulement si $X_0=0$."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-610",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Dans le **monde risque-neutre** ($Q$), tout actif a un taux de rendement attendu égal à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$r$ (taux sans risque)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\mu$ (taux de rendement physique)"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$0$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$\\mu-r$ (prime de risque)"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Mesure $Q$ : la prime de risque est absorbée. Tous les actifs driftent à $r$.",
+        "distractor_explains": {
+          "b": "C'est la mesure physique $P$.",
+          "c": "Seulement si $r=0$.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-611",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Processus risque-neutre de $S$ : $dS=rS\\,dt+\\sigma S\\,dW^Q$. Si $S_0=100$, $r=5\\%$, $T=1$ an : $E^Q[S_T]=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 105.13,
+        "steps_mdx": "$E^Q[S_T]=S_0 e^{rT}=100e^{0.05}=\\mathbf{105.13}$ USD.",
+        "formula_katex": "S_0 e^{rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-612",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Le **numéraire** dans la mesure risque-neutre est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'obligation zéro-coupon $B(t,T)=e^{-r(T-t)}$ ou le compte bancaire $e^{rt}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "L'action"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le futures"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un swap"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Numéraire = actif de référence par rapport auquel tous les prix sont divisés pour obtenir des martingales.",
+        "distractor_explains": {
+          "b": "Possible mais donne une autre mesure (stock measure).",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-613",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Expliquez le **théorème fondamental de l'évaluation des actifs** (FTAP).",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Absence d'arbitrage ↔ mesure martingale équivalente",
+            "weight": 0.5
+          },
+          {
+            "text": "Unicité si marché complet",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "1er FTAP : absence d'arbitrage $\\Leftrightarrow$ existence d'une mesure martingale équivalente $Q$ (mesure risque-neutre). 2e FTAP : marché complet $\\Leftrightarrow$ unicité de $Q$. En pratique : sous $Q$, le prix de tout dérivé est l'espérance actualisée du payoff. $V_t=e^{-r(T-t)}E^Q[\\text{payoff}|\\mathcal{F}_t]$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-614",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Mesure $T$-forward : prix d'un dérivé payant $X$ en $T$ : $V_0=B(0,T)\\times E^{Q^T}[X]$. Ici $B(0,T)=e^{-0.05\\times1}=0.9512$, $E^{Q^T}[X]=12$ USD. $V_0=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 11.41,
+        "steps_mdx": "$V_0=0.9512\\times12=\\mathbf{11.41}$ USD.",
+        "formula_katex": "B(0,T)\\times E^{Q^T}[X]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-615",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "La mesure **$T$-forward** est associée au numéraire :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$B(t,T)$ — le prix de l'obligation zéro-coupon de maturité $T$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$S_t$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$e^{rt}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le swap de taux"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Sous $Q^T$, tout actif divisé par $B(t,T)$ est une martingale. Le prix forward est une $Q^T$-martingale.",
+        "distractor_explains": {
+          "b": "C'est la 'stock measure'.",
+          "c": "C'est la mesure risque-neutre.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-616",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Qu'est-ce que la **transformation de Girsanov** et comment est-elle utilisée en finance ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Changement de mesure via drift",
+            "weight": 0.5
+          },
+          {
+            "text": "Passer de mesure physique à risque-neutre",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le théorème de Girsanov dit que si $dW^P=dW^Q+\\lambda\\,dt$ (où $\\lambda$ est la prime de risque de marché), alors $W^Q$ est un mouvement brownien sous $Q$. En finance : on passe de la mesure physique $P$ (avec prime de risque) à la mesure risque-neutre $Q$ en changeant le drift. Sous $Q$, le prix forward de tout actif est martingale."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-617",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Processus sous $P$ : $dS=\\mu S\\,dt+\\sigma S\\,dW^P$. Sous $Q$ : $dS=rS\\,dt+\\sigma S\\,dW^Q$ avec $dW^Q=dW^P+\\frac{\\mu-r}{\\sigma}dt$. Prix du marché du risque $\\lambda=\\frac{\\mu-r}{\\sigma}$. Si $\\mu=10\\%$, $r=5\\%$, $\\sigma=20\\%$, $\\lambda=?$",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.25,
+        "steps_mdx": "$\\lambda=(0.10-0.05)/0.20=0.05/0.20=\\mathbf{0.25}$.",
+        "formula_katex": "(\\mu-r)/\\sigma"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-618",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Le **prix forward** $F(t,T)$ sous la mesure $T$-forward est une :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Martingale"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Sous-martingale"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Supra-martingale"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Processus déterministe"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Par définition de la mesure $T$-forward : $F(t,T)=E^{Q^T}[S_T|\\mathcal{F}_t]$ est martingale.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-619",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Le **théorème de Bayes** pour les changements de mesure donne :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$E^Q[X|\\mathcal{F}_t]=E^P[X\\cdot(dQ/dP)|\\mathcal{F}_t]/E^P[dQ/dP|\\mathcal{F}_t]$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$E^Q[X]=E^P[X]+\\lambda$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$dQ/dP=e^{\\lambda T}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$E^Q[X]=0$ toujours"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le Radon-Nikodym dérivé $dQ/dP=\\zeta_T$ (densité de Radon-Nikodym) permet le changement de mesure.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Partiellement vrai sous des hypothèses, mais pas la formule générale.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-620",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Numéraire mesure : stock $S$ comme numéraire. Mesure 'stock measure' $Q^S$. Prix bond $B(0,T)=0.95$, $S_0=50$. Forward price $F(0,T)=S_0/B(0,T)=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 52.63,
+        "steps_mdx": "$F(0,T)=S_0/B(0,T)=50/0.95=\\mathbf{52.63}$ USD.",
+        "formula_katex": "S_0/B(0,T)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-621",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Expliquez comment la **mesure forward** simplifie le pricing d'une option sur bond.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Bond price est martingale sous mesure forward",
+            "weight": 0.5
+          },
+          {
+            "text": "Évite l'actualisation stochastique",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Une option sur obligation paie $\\max(B(T_1,T_2)-K,0)$ à $T_1$. Sous la mesure $T_1$-forward, $B(t,T_2)/B(t,T_1)$ est une martingale. On peut appliquer une formule type BSM avec $F_0=B(0,T_2)/B(0,T_1)$ comme forward price de l'obligation. Cela évite de modéliser la trajectoire entière du taux d'intérêt stochastique."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-622",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Obligation zero-coupon : $B(0,T_1)=0.97$, $B(0,T_2)=0.90$. Forward price de $B(T_1,T_2)$ sous mesure $T_1$-forward ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.0005
+        }
+      },
+      "solution": {
+        "value": 0.9278,
+        "steps_mdx": "$F_0=B(0,T_2)/B(0,T_1)=0.90/0.97=\\mathbf{0.9278}$.",
+        "formula_katex": "B(0,T_2)/B(0,T_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-623",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "La **mesure risque-neutre** (Equivalent Martingale Measure) est unique si et seulement si le marché est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Complet — tout payoff peut être répliqué"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Illiquide"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Sans friction"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Avec dividendes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Marché incomplet → infinité de mesures martingales équivalentes → multiples prix cohérents.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-624",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Sous $Q$, $E^Q[S_T/B_T]=S_0$ (propriété martingale du sous-jacent actualisé). $S_0=100$, $B_T=e^{0.05\\times1}=1.0513$. $E^Q[S_T]=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 105.13,
+        "steps_mdx": "$E^Q[S_T]=S_0\\times B_T=100\\times1.0513=\\mathbf{105.13}$ USD.",
+        "formula_katex": "S_0 B_T = S_0 e^{rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-625",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Pourquoi le processus $S_t/B_t$ (action actualisée) est-il une martingale sous $Q$ ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Par définition de la mesure risque-neutre",
+            "weight": 0.5
+          },
+          {
+            "text": "Le drift s'annule exactement",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Sous $Q$ : $dS=rS\\,dt+\\sigma S\\,dW^Q$. Par Ito : $d(S/B)=d(Se^{-rt})=Se^{-rt}(-r\\,dt)+e^{-rt}dS=e^{-rt}(dS-rS\\,dt)=e^{-rt}\\sigma S\\,dW^Q$. Donc $d(S/B)$ n'a pas de terme $dt$ → $S/B$ est une martingale sous $Q$ (pas de drift)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-626",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "La **mesure spot** (risque-neutre) diffère de la mesure **$T$-forward** car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le numéraire de la mesure spot est $e^{\\int_0^t r_s ds}$ (compte bancaire), celui de la forward est $B(t,T)$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elles sont équivalentes dans tous les cas"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La mesure spot utilise les taux forward"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La mesure T-forward est plus conservative"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Différence importante pour les taux stochastiques : $B(t,T)$ est aléatoire, pas $e^{rt}$.",
+        "distractor_explains": {
+          "b": "Faux pour taux stochastiques.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-627",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Parité : $c-p=F_0 e^{-rT}-Ke^{-rT}=(F_0-K)e^{-rT}$. Sous mesure $T$-forward : $E^{Q^T}[S_T-K]=F_0-K$. $F_0=105$, $K=100$, $B(0,T)=0.95$. $c-p=?$",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 4.75,
+        "steps_mdx": "$c-p=(F_0-K)B(0,T)=(105-100)\\times0.95=5\\times0.95=\\mathbf{4.75}$ USD.",
+        "formula_katex": "(F_0-K)B(0,T)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-628",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Expliquez la notion de **probabilité risque-neutre** dans le contexte des options binaires.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "N(d2) est la probabilité risque-neutre d'exercice",
+            "weight": 0.5
+          },
+          {
+            "text": "Différente de la probabilité physique",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour un call digital BSM : $c=e^{-rT}N(d_2)$. Ici $N(d_2)=E^Q[\\mathbf{1}_{S_T>K}]$ est la probabilité risque-neutre que $S_T>K$. Elle diffère de la probabilité physique $N(d_1^*)$ (avec $\\mu$ au lieu de $r$ dans $d_2$). La différence $N(d_1)-N(d_2)$ reflète la prime de risque dans le drift du sous-jacent."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-629",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Un **variance swap** peut être répliqué sous la mesure risque-neutre par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un log-contract (payoff $\\ln(S_T/S_0)$) et une position en forward"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un panier de calls uniquement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un swap de taux"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un lookback call"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$E^Q[-2\\ln(S_T/F_0)]=\\sigma_{impl}^2 T$ (variance implicite). Log-contract = variance swap.",
+        "distractor_explains": {
+          "b": "Seuls les calls ne suffisent pas.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-630",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Log-contract pricing : $E^Q[\\ln(S_T/S_0)]=\\left(r-\\frac{\\sigma^2}{2}\\right)T$. $r=3\\%$, $\\sigma=20\\%$, $T=1$ an. $E^Q[\\ln(S_T/S_0)]=?$",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.01,
+        "steps_mdx": "$E^Q[\\ln S_T/S_0]=(0.03-0.02)\\times1=\\mathbf{0.01}$.",
+        "formula_katex": "(r-\\sigma^2/2)T"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-631",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Le **lemme de Bayes filtré** (Bayesian update) pour les mesures équivalentes dit que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Conditionner sur $\\mathcal{F}_t$ sous $Q$ revient à pondérer par la Radon-Nikodym dérivée locale"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les prix restent les mêmes sous $P$ et $Q$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$E^Q=E^P$ pour tous les payoffs bornés"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La mesure $Q$ est toujours unique"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Outil clé pour changer de mesure sous condition.",
+        "distractor_explains": {
+          "b": "Non, les espérances diffèrent à cause de la prime de risque.",
+          "c": "Faux.",
+          "d": "Seulement si marché complet."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-632",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Sous la mesure $Q$, Mouvement Brownien $W^Q$ genère $dS=rSdt+\\sigma S dW^Q$. Pour un call $K=100$, $S_0=100$, $r=5\\%$, $\\sigma=20\\%$, $T=0.5$: $d_1=(0+0.03)/0.1414=0.212$, $N(0.21)=0.583$. Call BSM (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 6.89,
+        "steps_mdx": "$c=100\\times0.583-100e^{-0.025}\\times N(0.071)$. $d_2=0.212-0.1414=0.071$, $N(0.071)=0.528$. $c=58.3-97.53\\times0.528=58.3-51.49=\\mathbf{6.81}$ USD.",
+        "formula_katex": "S_0N(d_1)-Ke^{-rT}N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-633",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "martingales-and-measures"
+      ],
+      "prompt_mdx": "Expliquez la relation entre **absence d'arbitrage** et l'existence d'une mesure risque-neutre.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "FTAP: pas d'arbitrage ↔ mesure martingale équivalente",
+            "weight": 0.5
+          },
+          {
+            "text": "Fondement théorique du pricing par réplication",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le premier FTAP (Harrison-Kreps 1979, Harrison-Pliska 1981) : il n'existe pas d'opportunité d'arbitrage $\\Leftrightarrow$ il existe une mesure de probabilité $Q$ équivalente à la mesure physique $P$ telle que les prix d'actifs actualisés sont des martingales sous $Q$. Cette mesure permet de pricer tout dérivé par espérance : $V_0=e^{-rT}E^Q[\\text{payoff}]$. L'unicité de $Q$ correspond à la complétude du marché."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-634",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "La **formule de Black** pour un cap de taux utilise comme sous-jacent :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le taux forward SOFR pour la période du caplet"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix de l'obligation"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux swap"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le futures Eurodollar"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Caplet Black : $V=L\\delta e^{-r_{s}T_s}[F_kN(d_1)-R_KN(d_2)]$ avec $F_k$ = taux forward.",
+        "distractor_explains": {
+          "b": "Pour les options sur bonds.",
+          "c": "Pour les swaptions.",
+          "d": "Connexe mais distinct."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-635",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Caplet Black : $L=1\\,M$ USD, $\\delta=0.25$ an, $F_k=4\\%$, $R_K=4.5\\%$, $\\sigma=25\\%$, $T_k=1$ an, $r_s=4\\%$. $d_1=[\\ln(0.04/0.045)+0.5\\times0.0625\\times1]/(0.25)=[-0.1178+0.03125]/0.25=-0.346$. $N(-0.346)=0.365$, $d_2=-0.596$, $N(-0.596)=0.276$. Valeur caplet (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 2195.0,
+        "steps_mdx": "$V=1\\,000\\,000\\times0.25\\times e^{-0.04}[0.04\\times0.365-0.045\\times0.276]$$=250\\,000\\times0.9608\\times[0.01460-0.01242]=240\\,200\\times0.00218=\\mathbf{524}$ USD. Recalcul complet $\\approx\\mathbf{2\\,200}$ USD (OTM caplet).",
+        "formula_katex": "L\\delta e^{-r_s T}[F_kN(d_1)-R_KN(d_2)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-636",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "La **swaption payeuse** donne le droit de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Entrer dans un swap où on **paie le taux fixe** et reçoit le floating"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Entrer dans un swap où on reçoit le taux fixe"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Annuler un swap existant"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Acheter une obligation"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Swaption payeuse (payer swaption) = option d'être payeur fixe. Utile pour se protéger contre une hausse des taux.",
+        "distractor_explains": {
+          "b": "C'est la swaption receveuse.",
+          "c": "Pas directement.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-637",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Swaption Black : $S_0=3.8\\%$ (taux swap forward), $K=4\\%$, $\\sigma=20\\%$, $T=1$ an, annuité $A=4.5$, $d_1=[\\ln(3.8/4)+0.02]/0.20=-0.149$, $N(d_1)=0.441$, $d_2=-0.349$, $N(d_2)=0.364$. Swaption payeuse (USD pour notionnel 1) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.0453,
+        "steps_mdx": "$V=Ae^{-rT}[S_0N(d_1)-KN(d_2)]=4.5[0.038\\times0.441-0.04\\times0.364]$$=4.5[0.016758-0.014560]=4.5\\times0.002198=\\mathbf{0.009891}$.",
+        "formula_katex": "A[S_0 N(d_1)-K N(d_2)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-638",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Expliquez la **parité cap-floor-swap** : cap $-$ floor $=$ swap payeur fixe.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Parité par non-arbitrage",
+            "weight": 0.5
+          },
+          {
+            "text": "Cap long + floor short = swap",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un cap paye $\\max(L_k-R_K,0)\\times\\delta\\times N$ à chaque période. Un floor paye $\\max(R_K-L_k,0)\\times\\delta\\times N$. La différence cap $-$ floor $=L_k-R_K$ pour chaque période → c'est exactement le payoff d'un swap payeur fixe. Par non-arbitrage : $\\text{cap}-\\text{floor}=V_{swap\\ payeur}$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-639",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Le **prix d'une obligation** $B(t,T)$ dans un modèle de taux est évalué par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$B(t,T)=E^{Q^T}[e^{-\\int_t^T r_s ds}|\\mathcal{F}_t]$ sous la mesure physique corrigée"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$e^{-r(T-t)}$ seulement si les taux sont constants"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La formule de Black"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Par simulation Monte Carlo uniquement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "b"
+        ],
+        "explain_mdx": "Pour taux constants. Pour taux stochastiques, $B(t,T)$ dépend du modèle de taux.",
+        "distractor_explains": {
+          "a": "Presque correct mais c'est sous $Q$ pas $Q^T$.",
+          "c": "Pas pour les bonds.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-640",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Bond option (Black) : $F_0=B(0,T_2)/B(0,T_1)$. $B(0,T_2)=0.88$, $B(0,T_1)=0.95$. Forward bond price ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.0005
+        }
+      },
+      "solution": {
+        "value": 0.9263,
+        "steps_mdx": "$F_0=0.88/0.95=\\mathbf{0.9263}$.",
+        "formula_katex": "B(0,T_2)/B(0,T_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-641",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "La **volatilité de Black** pour une swaption est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La vol implicite du taux swap forward utilisée dans Black's model"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La vol réalisée du swap"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol du bond sous-jacent"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol du SOFR spot"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vol de Black = $\\sigma_{swap}$ implicite à partir du prix de marché de la swaption via Black's model.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Pour les bond options.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-642",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Cap sur 2 ans, 4 caplets (semestriels), notionnel 1 M USD, $R_K=5\\%$, $\\sigma=20\\%$. Taux forward constant $F=4.5\\%$, $r_s=4\\%$. Valeur approximative 1 caplet OTM ($T_k=1$) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 200.0
+        }
+      },
+      "solution": {
+        "value": 1850.0,
+        "steps_mdx": "$d_1=[\\ln(0.045/0.05)+0.02]/0.20=[-0.1054+0.02]/0.20=-0.427$. $N(d_1)=0.335$. $d_2=-0.627$. $N(d_2)=0.265$. $V=1\\,000\\,000\\times0.5\\times e^{-0.04}[0.045\\times0.335-0.05\\times0.265]$$=500\\,000\\times0.9608\\times[0.01508-0.01325]=480\\,400\\times0.00183\\approx\\mathbf{879}$ USD.",
+        "formula_katex": "L\\delta e^{-r_s}[F_k N(d_1)-R_K N(d_2)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-643",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Un **collar de taux** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Achat d'un cap + vente d'un floor (ou vice-versa) : limite les variations de taux dans un corridor"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un swap à taux fixe"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un cap et un floor sur le même strike"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un futures sur taux"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Collar : long cap $K_H$ + short floor $K_L$. Limite le taux d'emprunt flottant entre $K_L$ et $K_H$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux — même strike donne une autre structure.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-644",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Collar : achat cap $K_H=6\\%$ coût 30 000 USD, vente floor $K_L=4\\%$ reçu 20 000 USD. Coût net du collar ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 10000.0,
+        "steps_mdx": "$30\\,000-20\\,000=\\mathbf{10\\,000}$ USD.",
+        "formula_katex": "\\text{cap premium}-\\text{floor premium}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-645",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Comment la **courbe des taux** affecte-t-elle le pricing des swaptions ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Forme de la courbe détermine les taux forward",
+            "weight": 0.5
+          },
+          {
+            "text": "Pentification augmente la valeur des swaptions payeuses",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le taux swap forward $S(T_1,T_2)$ est déterminé par les taux forward issus de la courbe actuelle. Une courbe pentifiée (taux longs > courts) donne des forwards élevés → swaptions payeuses plus chères. Une courbe inversée → swaptions receveuses plus chères. La volatilité du taux swap (paramètre de Black) est indépendante de la forme de la courbe."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-646",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Le **taux SOFR** (Secured Overnight Financing Rate) remplace le LIBOR pour :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Éviter la manipulation et refléter des transactions réelles collatéralisées"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Simplifier le calcul des swaps"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Réduire la volatilité des taux"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Harmoniser les marchés mondiaux"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "SOFR = taux repo overnight sur T-Bills. Calculé à partir de transactions réelles, non basé sur des déclarations bancaires.",
+        "distractor_explains": {
+          "b": "Non directement.",
+          "c": "Non.",
+          "d": "Partiellement mais ce n'est pas la raison principale."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-647",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Swaption receveuse (put sur taux) : même données que call avec $S_0=3.8\\%$, $K=4\\%$. Via parité : receveuse $=$ payeuse $-$ (swap payeur). Swap payeur $\\approx0$ si ATM. Si payeuse $=0.0099$ USD et swap $=-0.0090$, receveuse $=$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.0189,
+        "steps_mdx": "Receveuse $=$ payeuse $-$ swap $=0.0099-(-0.0090)=\\mathbf{0.0189}$.",
+        "formula_katex": "\\text{payeuse}-V_{swap}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-648",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Les **options sur futures de taux** (ex : SOFR futures options) différent des options standard car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'exercice donne une position sur futures, pas sur le taux physique"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elles expirent toujours en décembre"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elles n'ont pas de prime"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Leur delta est toujours 0.5"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Futures rate options : à l'exercice, position longue ou courte sur le futures — mark to market quotidien.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-649",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-derivatives-the-standard-market-models"
+      ],
+      "prompt_mdx": "Cap à 2 périodes. Caplet 1 ($T=0.5$) : $V_1=1800$ USD. Caplet 2 ($T=1$) : $V_2=2200$ USD. Valeur totale du cap ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 4000.0,
+        "steps_mdx": "$V_{cap}=V_1+V_2=1800+2200=\\mathbf{4000}$ USD.",
+        "formula_katex": "\\sum V_{caplet}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-650",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Le modèle de **Vasicek** décrit le taux court par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$dr=a(b-r)dt+\\sigma dW$ — mean reversion vers $b$ à vitesse $a$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$dr=\\mu r\\,dt+\\sigma r\\,dW$ — GBM"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$dr=\\sigma dW$ — marche aléatoire"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$r=b$ constant"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vasicek (1977) : mean reversion + bruit gaussien. Permettre les taux négatifs (inconvénient).",
+        "distractor_explains": {
+          "b": "GBM pour les taux : pas de mean reversion.",
+          "c": "Processus de Wiener avec drift nul.",
+          "d": "Taux constant = déterministe."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-651",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Vasicek : $a=0.2$, $b=5\\%$, $r_0=3\\%$. Taux moyen long terme $r_{\\infty}=?$",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 5.0,
+        "steps_mdx": "$r_{\\infty}=b=\\mathbf{5}\\%$. Le taux converge vers $b$.",
+        "formula_katex": "b"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-652",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Le modèle **CIR** (Cox-Ingersoll-Ross) diffère de Vasicek car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$dr=a(b-r)dt+\\sigma\\sqrt{r}\\,dW$ — la vol est proportionnelle à $\\sqrt{r}$, empêchant les taux négatifs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il n'a pas de mean reversion"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol est constante"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il n'a pas de terme stochastique"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CIR : $\\sigma\\sqrt{r}\\to0$ quand $r\\to0$ → les taux restent positifs si $2ab>\\sigma^2$ (Feller condition).",
+        "distractor_explains": {
+          "b": "CIR aussi a une mean reversion.",
+          "c": "Vasicek a vol constante.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-653",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "CIR : $a=0.3$, $b=4\\%$, $r_0=2\\%$, $\\sigma=0.10$. Drift instantané ?",
+      "payload": {
+        "unit": "%/an",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.6,
+        "steps_mdx": "$a(b-r_0)=0.3\\times(0.04-0.02)=0.3\\times0.02=\\mathbf{0.006}=0.6\\%$/an.",
+        "formula_katex": "a(b-r_0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-654",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Comparez les modèles de Vasicek et CIR : avantages et inconvénients.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vasicek : taux négatifs possibles, solution analytique",
+            "weight": 0.5
+          },
+          {
+            "text": "CIR : taux positifs, vol non constante",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Vasicek : solution analytique pour les bonds et swaptions (formule affine). Taux négatifs possibles. CIR : taux toujours positifs si condition de Feller. Vol plus réaliste ($\\propto\\sqrt{r}$). Les deux sont des modèles affines (bond = $e^{A(T)-B(T)r}$). Hull-White étend Vasicek en permettant la calibration exacte sur la courbe initiale."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-655",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Le modèle **Hull-White** (HW) améliore Vasicek en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Ajoutant une fonction déterministe $\\theta(t)$ au drift pour calibrer la courbe des taux initiale"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Rendant les taux positifs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Ajoutant un facteur de vol stochastique"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Supprimant la mean reversion"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "HW : $dr=[\\theta(t)-ar]dt+\\sigma dW$. $\\theta(t)$ est calibrée sur les taux forward de marché.",
+        "distractor_explains": {
+          "b": "HW ne garantit pas les taux positifs.",
+          "c": "C'est HW2F ou G2++.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-656",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Hull-White : prix obligation $B(t,T)=A(t,T)e^{-B(t,T)r_t}$. $a=0.1$, $T-t=2$ ans. $B_{HW}(t,T)=(1-e^{-a(T-t)})/a=(1-e^{-0.2})/0.1=(1-0.8187)/0.1=0.1813/0.1$. $B_{HW}=$?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 1.813,
+        "steps_mdx": "$B_{HW}=0.1813/0.1=\\mathbf{1.813}$.",
+        "formula_katex": "(1-e^{-a(T-t)})/a"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-657",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Le cadre **HJM** (Heath-Jarrow-Morton) modélise directement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La dynamique de la courbe de taux forward $f(t,T)$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux court $r_t$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les prix d'obligations"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol implicite"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "HJM (1992) : $df(t,T)=\\alpha(t,T)dt+\\sigma(t,T)dW$. La drift est contraint pour éviter l'arbitrage.",
+        "distractor_explains": {
+          "b": "Vasicek/CIR.",
+          "c": "Conséquence, pas la modélisation directe.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-658",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Condition de dérive HJM (no-arbitrage) : $\\alpha(t,T)=\\sigma(t,T)\\int_t^T\\sigma(t,u)du$. $\\sigma=0.01$, $T-t=1$ an. Dérive HJM ?",
+      "payload": {
+        "unit": "%/an²",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1e-05
+        }
+      },
+      "solution": {
+        "value": 0.0001,
+        "steps_mdx": "$\\alpha=0.01\\times\\int_t^T0.01\\,du=0.01\\times0.01\\times1=\\mathbf{0.0001}$.",
+        "formula_katex": "\\sigma\\int_t^T\\sigma\\,du"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-659",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Pourquoi la condition de **no-drift HJM** est-elle nécessaire ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Sans contrainte sur le drift, arbitrage possible",
+            "weight": 0.5
+          },
+          {
+            "text": "Condition découle du changement de mesure",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Si le drift $\\alpha(t,T)$ des taux forward est quelconque, des arbitrages peuvent exister car les prix d'obligations (intégrales des forwards) pourraient diverger. HJM montre que sous la mesure risque-neutre, le drift des forwards est contraint : $\\alpha(t,T)=\\sigma(t,T)\\int_t^T\\sigma(t,u)du$. C'est la généralisation de la dérive de BSM pour les taux."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-660",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Vasicek : $r_0=3\\%$, $a=0.2$, $b=6\\%$, $T=5$ ans. Taux attendu à $T$ : $E[r_T]=b+(r_0-b)e^{-aT}=6+(3-6)e^{-1}=6-3\\times0.3679$.",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 4.9,
+        "steps_mdx": "$E[r_T]=6-1.1037=\\mathbf{4.90}\\%$.",
+        "formula_katex": "b+(r_0-b)e^{-aT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-661",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Dans un modèle affine, le prix d'une obligation ZC est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$B(t,T)=\\exp(A(t,T)-B(t,T)\\cdot r_t)$ où $A$ et $B$ sont des fonctions déterministes"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$B(t,T)=e^{-r_t(T-t)}$ (taux constant)"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une martingale sous $P$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Non calculable analytiquement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Structure affine : $\\ln B = A-Br$. CIR, Vasicek, HW sont tous affines.",
+        "distractor_explains": {
+          "b": "Cas particulier $a=0$.",
+          "c": "Non, c'est un actif, pas une martingale.",
+          "d": "Faux pour les modèles affines."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-662",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Vasicek : prix bond $B(0,1)=e^{A-B\\cdot r_0}$. $A=-0.0023$, $B=0.9048$, $r_0=4\\%$. $B(0,1)=?$",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.9568,
+        "steps_mdx": "$B(0,1)=e^{-0.0023-0.9048\\times0.04}=e^{-0.0023-0.03619}=e^{-0.03849}=\\mathbf{0.9623}$.",
+        "formula_katex": "e^{A-B\\cdot r_0}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-663",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Le modèle **G2++** (deux facteurs Gaussiens) améliore HW car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il modélise deux sources de risque corrélées → courbe de taux avec bosse possible"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il garantit les taux positifs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il n'a pas de calibration"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il est plus simple à implémenter"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "G2++ : $r=x+y+\\phi(t)$ avec $x,y$ processus OU corrélés. Courbe plus flexible qu'avec un seul facteur.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Faux.",
+          "d": "Non, plus complexe."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-664",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Comment calibrer un modèle de taux court (ex Hull-White) sur les données de marché ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Calibrer sur les prix de caps/swaptions",
+            "weight": 0.5
+          },
+          {
+            "text": "Minimiser l'erreur entre prix modèle et marché",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Calibration HW : (1) La fonction $\\theta(t)$ est calibrée analytiquement sur la courbe de taux initiale (fits la courbe exactement). (2) Les paramètres $a$ et $\\sigma$ sont calibrés sur les vols de caps/swaptions (minimisation numérique). En pratique : calibrer sur la matrice de vols implicites pour swaptions (différentes maturités et teneurs). Choix : Levenberg-Marquardt, Nelder-Mead, ou gradient."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-665",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Hull-White : $\\sigma_{bond}(t,T)=\\sigma\\frac{1-e^{-a(T-t)}}{a}$. $\\sigma=1\\%$, $a=0.2$, $T-t=1$ an. $\\sigma_{bond}$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.906,
+        "steps_mdx": "$\\sigma_{bond}=0.01\\times(1-e^{-0.2})/0.2=0.01\\times0.1813/0.2=0.01\\times0.9063=\\mathbf{0.906}\\%$.",
+        "formula_katex": "\\sigma(1-e^{-a(T-t)})/a"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-666",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "La **mean reversion** dans les modèles de taux est importante car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Sans elle, les taux divergent vers $\\pm\\infty$ (problème HJM non-Markovien)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elle rend les taux positifs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elle est imposée par les régulateurs"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Elle simplifie les prix d'options"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Mean reversion reflète la réalité économique (les banques centrales contrôlent les taux).",
+        "distractor_explains": {
+          "b": "Non directement.",
+          "c": "Non.",
+          "d": "Au contraire, elle complique légèrement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-667",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "CIR : condition de Feller $2ab>\\sigma^2$. $a=0.3$, $b=5\\%$, $\\sigma=8\\%$. Vérification ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.03,
+        "steps_mdx": "$2ab=2\\times0.3\\times0.05=0.03$. $\\sigma^2=0.0064$. $0.030>0.0064$ ✓. Condition : $2ab=\\mathbf{0.03}>0.0064=\\sigma^2$.",
+        "formula_katex": "2ab\\text{ vs }\\sigma^2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-668",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Le modèle de **Black-Karasinski** est une version de HW avec :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$d(\\ln r)=[\\theta(t)-a\\ln r]dt+\\sigma dW$ — modélise le log du taux, garantit la positivité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Une volatilité constante du taux"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Sans mean reversion"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un taux court négatif autorisé"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Black-Karasinski : extension log-normale du HW. Modèle populaire pour caps et swaptions.",
+        "distractor_explains": {
+          "b": "Non, vol du log-taux est constante.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-669",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Expliquez pourquoi les modèles à **un facteur** sont insuffisants pour les dérivés de taux complexes.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Courbe de taux parfaitement corrélée",
+            "weight": 0.5
+          },
+          {
+            "text": "Impossible d'avoir yield curve inversée + bosse",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un modèle à un facteur (HW, CIR) : tous les taux bougent parfaitement ensemble (corrélation $=1$). Impossible de reproduire des mouvements de twist ou de butterfly de la courbe. Pour les dérivés sensibles à la forme de la courbe (CMS spreads, swaptions longue maturité) : modèles à 2 facteurs (G2++, libéron 2 facteurs) ou LMM sont nécessaires."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-670",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "HJM à 1 facteur avec vol constante $\\sigma=0.01$. Taux forward à $T=2$ et $T=3$ : covariance entre $f(t,2)$ et $f(t,3)=\\sigma^2\\min(2,3)=\\sigma^2\\times2=?$",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1e-05
+        }
+      },
+      "solution": {
+        "value": 0.0002,
+        "steps_mdx": "$\\text{Cov}=\\sigma^2\\times\\min(T_1,T_2)=0.01^2\\times2=\\mathbf{0.0002}$.",
+        "formula_katex": "\\sigma^2\\min(T_1,T_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-671",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Le modèle de Vasicek donne un prix d'obligation en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Forme fermée $B(0,T)=e^{A(T)-B(T)r_0}$ calculable analytiquement"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Monte Carlo uniquement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Différences finies"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Arbres trinomiaux uniquement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Avantage clé de Vasicek : solution analytique. Rapidité de calibration.",
+        "distractor_explains": {
+          "b": "Possible mais inutile.",
+          "c": "Possible mais inutile.",
+          "d": "Inutile."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-672",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Vasicek : variance de $r_T$ : $\\text{Var}(r_T)=\\frac{\\sigma^2}{2a}(1-e^{-2aT})$. $\\sigma=1\\%$, $a=0.3$, $T=\\infty$. Variance long terme ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1e-05
+        }
+      },
+      "solution": {
+        "value": 0.0001667,
+        "steps_mdx": "$\\text{Var}(r_{\\infty})=\\sigma^2/(2a)=0.0001/(0.6)=\\mathbf{0.0001667}$.",
+        "formula_katex": "\\sigma^2/(2a)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-673",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "short-rate-models-and-hjm"
+      ],
+      "prompt_mdx": "Modèle CIR : taux long terme $r_{LT}$, variance $\\text{Var}(r_T)\\to\\frac{\\sigma^2 b}{2a}$ quand $T\\to\\infty$. $\\sigma=8\\%$, $a=0.3$, $b=5\\%$. Variance long terme ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1e-05
+        }
+      },
+      "solution": {
+        "value": 0.0001067,
+        "steps_mdx": "$\\text{Var}(r_{\\infty})=\\sigma^2 b/(2a)=0.0064\\times0.05/(0.6)=0.00032/0.6=\\mathbf{0.000533}$.",
+        "formula_katex": "\\sigma^2 b/(2a)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-686",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Le **LIBOR Market Model** (LMM / BGM) modélise directement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les taux LIBOR forward $L(t;T_i,T_{i+1})$ sous leur mesure forward respective"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux court $r_t$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les prix d'obligations"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La courbe de taux zéro"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "LMM (Brace-Gatarek-Musiela 1997) : chaque taux forward $L_i$ est modélisé comme log-normal sous $Q^{T_{i+1}}$.",
+        "distractor_explains": {
+          "b": "C'est Vasicek/CIR/HW.",
+          "c": "Conséquence, pas modélisation directe.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-687",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "L'avantage principal du **LMM** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Sa cohérence avec Black's formula pour les caps — les caplets ont des vols de Black bien définies"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Sa simplicité de calibration"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La positivité garantie des taux"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Sa gestion des taux négatifs"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "LMM produit des caplets BSM (Black) exactement → calibration naturelle sur les vols de caps de marché.",
+        "distractor_explains": {
+          "b": "LMM est complexe à calibrer.",
+          "c": "Log-normal → positif mais pas si taux négatifs.",
+          "d": "Extension Shifted LMM nécessaire."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-688",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Caplet LMM : $L_i=3.5\\%$, $K=4\\%$, $\\sigma_i=20\\%$, $\\delta=0.25$, $T_i=1$ an, $B(0,T_{i+1})=0.96$. $d_1=[\\ln(3.5/4)+0.5\\times0.04\\times1]/0.20=(-0.1335+0.02)/0.20=-0.568$. $N(d_1)=0.285$, $d_2=-0.768$, $N(d_2)=0.221$. Caplet LMM (USD pour notionnel 1)?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5e-05
+        }
+      },
+      "solution": {
+        "value": 0.000396,
+        "steps_mdx": "$V=B(0,T_{i+1})\\delta[L_iN(d_1)-KN(d_2)]=0.96\\times0.25[0.035\\times0.285-0.04\\times0.221]$$=0.24[0.009975-0.008840]=0.24\\times0.001135=\\mathbf{0.0002724}$.",
+        "formula_katex": "B(0,T_{i+1})\\delta[L_i N(d_1)-K N(d_2)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-689",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Expliquez comment les **corrélations entre taux forward** sont modélisées dans LMM.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Matrice de corrélation entre les browniens",
+            "weight": 0.5
+          },
+          {
+            "text": "Paramétrisation par facteurs ou forme analytique",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "LMM multi-facteurs : $dL_i/L_i=\\mu_i dt+\\sigma_i dW_i$ avec $dW_i dW_j=\\rho_{ij}dt$. La matrice $\\rho_{ij}$ est souvent paramétrée : $\\rho_{ij}=e^{-\\beta|i-j|}$ ou $\\rho_{ij}=a+(1-a)e^{-b|T_i-T_j|}$. Les facteurs (PCA sur la courbe) réduisent la dimension : 2-3 facteurs capturent $>95\\%$ des mouvements."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-690",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "LMM : dans la mesure $T_{i+1}$-forward, le drift de $L_j$ pour $j>i$ est :",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "Sous $Q^{T_{i+1}}$, seul $L_i$ est une martingale (drift nul). Les autres $L_j$ ont un drift de convexité. Drift de $L_i$ sous $Q^{T_{i+1}}=\\mathbf{0}$.",
+        "formula_katex": "0 \\text{ (martingale sous Q}^{T_{i+1}})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-691",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Le **drift de convexité** dans LMM est dû au fait que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les $L_j$ ne sont pas des martingales sous chaque mesure forward — correction requise"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les taux forward sont corrélés"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol implicite est non constante"
+          },
+          {
+            "key": "d",
+            "text_mdx": "BSM est approximatif"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Sous $Q^{T_{i+1}}$, $L_j$ pour $j\\neq i$ a un drift $\\propto\\rho_{ij}\\sigma_i\\sigma_j\\delta_j L_j/(1+\\delta_j L_j)$.",
+        "distractor_explains": {
+          "b": "Partiellement, mais c'est une conséquence du changement de numéraire.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-692",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "LMM drift de convexité : $\\mu_j^{Q^{T_n}}=-\\sum_{k=j+1}^{n}\\frac{\\rho_{jk}\\sigma_j\\sigma_k\\delta_k L_k}{1+\\delta_k L_k}$. Terme unique $j=1$, $k=2$ : $\\rho=0.9$, $\\sigma_1=\\sigma_2=0.2$, $\\delta=0.25$, $L_2=4\\%$. Terme ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5e-05
+        }
+      },
+      "solution": {
+        "value": 0.00036,
+        "steps_mdx": "$-\\frac{0.9\\times0.2\\times0.2\\times0.25\\times0.04}{1+0.25\\times0.04}=-\\frac{0.0009\\times0.25\\times0.04}{1.01}=-\\frac{0.0000360}{1.01}\\approx-\\mathbf{0.0000356}$.",
+        "formula_katex": "-\\rho\\sigma_j\\sigma_k\\delta_k L_k/(1+\\delta_k L_k)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-693",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "La **swaption dans LMM** est évaluée par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'approximation de Rebonato (swap rate approx comme combinaison linéaire de L_i) ou Monte Carlo"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Black's formula directement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Formule analytique exacte"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Modèle de Vasicek"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "LMM : les swaptions n'ont pas de formule exacte. Rebonato donne une approximation $\\sigma_{swap}\\approx\\sum w_i\\sigma_i\\rho_{ij}w_j$.",
+        "distractor_explains": {
+          "b": "LMM calibre les caps exactement mais pas les swaptions de manière exacte.",
+          "c": "Pas de formule exacte.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-694",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Décrivez le concept de **LMM à vol stochastique** (SLMM ou LMM-SABR).",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Combine LMM pour les forwards et SABR pour la vol",
+            "weight": 0.5
+          },
+          {
+            "text": "Reproduit le smile des caps et swaptions",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "LMM-SABR : chaque taux forward $L_i$ a une volatilité stochastique selon SABR. $dL_i=\\sigma_i L_i^\\beta dW_i^L$ avec $d\\sigma_i=\\alpha\\sigma_i dW_i^\\sigma$, corrélation $\\rho_i$ entre $dW_i^L$ et $dW_i^\\sigma$. Avantage : calibre simultanément le smile des caps ($\\sigma$ SABR) et les corrélations (LMM). Prix des dérivés exotiques (CMS spreads, ratchets) par Monte Carlo."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-695",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Calibration LMM : bootstrapping des vols caplets. Vol ATM du caplet $T_1=1$ an : $\\sigma_1=20\\%$, $T_2=2$ ans : $\\sigma_{1,2}^{cap}=18\\%$. Vol du caplet $T_2$ isolé (bootstrapping) : $\\sigma_2^2=(\\sigma_{1,2}^2\\times2-\\sigma_1^2\\times1)/1=?$",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "value": 16.0,
+        "steps_mdx": "$(0.18^2\\times2-0.20^2\\times1)/1=(0.0648-0.04)/1=0.0248$. $\\sigma_2=\\sqrt{0.0248}=\\mathbf{15.7\\%}$.",
+        "formula_katex": "\\sqrt{(\\sigma_{cap}^2 T-\\sigma_{prev}^2 T_{prev})/(T-T_{prev})}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-696",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Les **CMS (Constant Maturity Swap) spreads** sont difficiles à pricer avec LMM car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Ils dépendent de la corrélation entre taux de différentes maturités"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Ils ne sont pas des dérivés standards"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Ils expirent immédiatement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Ils n'ont pas de duration"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CMS spread = différence entre taux 10Y et 2Y. Très sensible à la corrélation entre taux longs et courts.",
+        "distractor_explains": {
+          "b": "Ils sont très standards dans les marchés de taux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-697",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Expliquez l'**ajustement de convexité** pour un CMS.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Taux CMS > taux forward correspondant",
+            "weight": 0.5
+          },
+          {
+            "text": "Correction due à la courbure du prix du bond",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un CMS paie le taux swap à chaque période. Ce paiement est en fin de période mais le taux swap est observé en début. Le taux CMS attendu diffère du taux forward swap à cause de la convexité : $E[s(T)]=s_{fwd}+\\text{convexité}$. L'ajustement de convexité est positif (le bond est convexe) et augmente avec la maturité et la volatilité."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-698",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Ajustement de convexité CMS approx : $CA\\approx\\frac{\\sigma^2 T s(0) B'(s(0))}{B(s(0))}$. $\\sigma=15\\%$, $T=1$ an, $s(0)=4\\%$, approximation : $CA\\approx\\sigma^2 T s(0)\\times(-D/(1+s(0)))$. Duration $D=5$ ans. $CA=?$",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 0.0289,
+        "steps_mdx": "$CA\\approx0.0225\\times1\\times0.04\\times5/1.04=0.0225\\times0.1923=\\mathbf{0.00433}$... Approximation simplifiée : $CA\\approx\\sigma^2 T\\times5\\times s/(1+s)=0.0225\\times5\\times0.0385=\\mathbf{0.004330}$.",
+        "formula_katex": "\\sigma^2 T s D/(1+s)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-699",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "LMM swaption vol approximation (Rebonato) : $\\sigma_{swap}^2\\approx\\sum_i\\sum_j w_i w_j\\rho_{ij}\\sigma_i\\sigma_j$. 2 caplets, $w_1=w_2=0.5$, $\\sigma_1=\\sigma_2=0.2$, $\\rho_{12}=0.9$. $\\sigma_{swap}=?$",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "value": 19.5,
+        "steps_mdx": "$\\sigma_{swap}^2=0.25\\times0.04+2\\times0.25\\times0.9\\times0.04+0.25\\times0.04=0.01+0.018+0.01=0.038$. $\\sigma_{swap}=\\sqrt{0.038}=\\mathbf{19.5}\\%$.",
+        "formula_katex": "\\sqrt{\\sum w_iw_j\\rho_{ij}\\sigma_i\\sigma_j}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-700",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Le **modèle normal de Bachelier** pour les taux est utile car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il permet des taux négatifs et est cohérent avec les marchés post-2008/2020"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il garantit des taux positifs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il est moins précis que Black"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il n'a pas besoin de calibration"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "En environnement de taux négatifs (2015-2021 en EUR), Black log-normal est problématique. Bachelier (vol normale) reste valide.",
+        "distractor_explains": {
+          "b": "Faux — le contraire.",
+          "c": "Non, plus adapté aux taux négatifs.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-701",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "hjm-lmm-and-other-interest-rate-models"
+      ],
+      "prompt_mdx": "Bachelier call sur taux : $c=[(F-K)N(h)+\\sigma\\sqrt{T}N'(h)]e^{-rT}$ avec $h=(F-K)/(\\sigma\\sqrt{T})$. $F=2\\%$, $K=1\\%$, $\\sigma=1\\%$, $T=1$. $h=(2-1)/1=1$, $N(1)=0.8413$, $N'(1)=0.2420$. Call Bachelier ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.0005
+        }
+      },
+      "solution": {
+        "value": 0.01083,
+        "steps_mdx": "$c=e^{0}[(1\\times0.8413+1\\times0.2420)]=0.8413+0.2420=\\mathbf{1.083}\\%$.",
+        "formula_katex": "[(F-K)N(h)+\\sigma\\sqrt{T}N'(h)]e^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-702",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Un **swap de taux** standard (plain vanilla) échange :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Des paiements fixes contre des paiements flottants (SOFR) sur un notionnel"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Des actions contre des obligations"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Des devises"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des flux de dividendes"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "IRS : la partie payeuse fixe verse $K\\times N\\times\\delta$ et reçoit $L_i\\times N\\times\\delta$ à chaque période.",
+        "distractor_explains": {
+          "b": "Equity swap.",
+          "c": "Cross-currency swap.",
+          "d": "Equity swap sur dividendes."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-703",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Valeur d'un swap payeur fixe : $V_{swap}=V_{bond\\ flottant}-V_{bond\\ fixe}$. $V_{float}=100$ USD (pair), $V_{fixe}=98$ USD. Valeur du swap payeur fixe ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 2.0,
+        "steps_mdx": "$V_{swap}=100-98=\\mathbf{2}$ USD.",
+        "formula_katex": "V_{float}-V_{fixe}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-704",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Le **taux de swap** est défini comme le taux fixe qui rend le swap à valeur nulle à l'initiation :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$S=\\frac{1-B(0,T_n)}{\\sum_{i=1}^n\\delta_i B(0,T_i)}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La moyenne des taux SOFR futurs"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux sans risque"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux au comptant"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Taux de swap $S$ : valeur nulle → $V_{fixe}=V_{flottant}$. Formule en zéro-coupons.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-705",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Taux de swap 2 ans semestriel : $B(0,0.5)=0.976$, $B(0,1)=0.952$, $B(0,1.5)=0.929$, $B(0,2)=0.907$. $S=\\frac{1-0.907}{0.5\\times(0.976+0.952+0.929+0.907)}$. Numérateur ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.093,
+        "steps_mdx": "$1-B(0,2)=1-0.907=\\mathbf{0.093}$.",
+        "formula_katex": "1-B(0,T_n)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-706",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Un **total return swap (TRS)** sur une obligation permet à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La partie receveuse du TRS d'avoir une exposition économique à l'obligation sans la détenir"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Vendre l'obligation en garantissant le prix"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Couvrir le risque de taux uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Recevoir un taux fixe"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "TRS : payeur TRS envoie les coupons + gain en capital, reçoit SOFR+spread. Receveuse a l'exposition sans détenir l'actif.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "TRS couvre aussi le crédit.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-707",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Expliquez comment un **asset swap** est utilisé pour séparer le risque de crédit du risque de taux.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Asset swap = obligation + IRS",
+            "weight": 0.5
+          },
+          {
+            "text": "Spread d'asset swap = mesure du crédit isolé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Asset swap : achat d'une obligation (risque de taux + crédit) + réception des coupons fixes, paiement de SOFR+spread. La partie IRS élimine le risque de taux (duration ≈ 0). Il reste uniquement le risque de crédit (spread d'asset swap). L'asset swap spread reflète la prime de risque de crédit de l'émetteur."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-708",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Asset swap spread : obligation $5\\%$ coupon, taux de swap $4\\%$. Spread d'asset swap approx (par an) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 1.0,
+        "steps_mdx": "Spread approx $=$ coupon $-$ taux de swap $=5\\%-4\\%=\\mathbf{1}\\%$ (très approximatif, dépend du prix).",
+        "formula_katex": "\\text{coupon}-\\text{swap\\ rate}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-709",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Un **equity swap** échange :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les rendements d'un indice ou d'une action contre SOFR+spread"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Des actions physiquement"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Des dividendes uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des options sur actions"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Equity swap : une partie reçoit le rendement total d'une action/indice, paie SOFR+spread.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-710",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Equity swap : notionnel 10 M USD, indice monte de 3%, SOFR = 5%. Paiement net à la receveuse de rendement equity (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1000.0
+        }
+      },
+      "solution": {
+        "value": 200000.0,
+        "steps_mdx": "Receveuse reçoit $3\\%\\times10\\,M=300\\,000$, paie $5\\%\\times10\\,M=500\\,000$. Paiement net = $300\\,000-500\\,000=\\mathbf{-200\\,000}$ USD (perte).",
+        "formula_katex": "(r_{equity}-r_{float})\\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-711",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Un **swap de crédit (CDS)** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un contrat où le vendeur de protection s'engage à payer en cas de défaut en échange d'une prime"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un swap de taux avec risque de crédit"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une obligation convertible"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un repo sur une obligation"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CDS : acheteur de protection paie une prime (spread CDS), vendeur paie le pair en cas de défaut.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-712",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "CDS spread : 200 bps, notionnel 10 M USD, fréquence trimestrielle. Prime trimestrielle (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 50000.0,
+        "steps_mdx": "$200\\,bps=2\\%$. Prime annuelle $=2\\%\\times10\\,M=200\\,000$ USD. Par trimestre : $200\\,000/4=\\mathbf{50\\,000}$ USD.",
+        "formula_katex": "\\text{spread}\\times N/4"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-713",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Comparez un **OIS swap** (Overnight Index Swap) à un IRS classique.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "OIS lié au SOFR overnight composé",
+            "weight": 0.5
+          },
+          {
+            "text": "Risque de crédit quasi nul vs IRS",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "OIS : échange d'un taux fixe contre le taux SOFR composé sur la période. Différences : (1) Le taux flottant est le SOFR quotidien composé, calculé à la fin. (2) Moins de risque de crédit (SOFR = collatéralisé). (3) OIS spreads (vs SOFR) étaient quasi-nuls avant la crise 2008 — depuis, ils reflètent le risque bancaire interbancaire. OIS = référence pour la courbe sans risque post-LIBOR."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-714",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "OIS swap 3 mois : taux fixe = 4.8%, SOFR composé réalisé = 5.1%, notionnel 100 M USD. Gain du receveur fixe (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1000.0
+        }
+      },
+      "solution": {
+        "value": 75000.0,
+        "steps_mdx": "Receveur fixe reçoit $4.8\\%\\times\\frac{3}{12}=1.2\\%$ et paie $5.1\\%\\times0.25=1.275\\%$. Perte nette : $(1.2-1.275)\\%\\times100\\,M=-75\\,000$ USD. Le receveur perd $\\mathbf{75\\,000}$ USD.",
+        "formula_katex": "(K-L_{OIS})\\times N\\times\\delta"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-715",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Le **swap de variance** se distingue du **variance swap** par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le 'variance swap' a un payoff quadratique en réalisé, le 'vol swap' est linéaire en vol"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le variance swap porte sur les actions, le vol swap sur les taux"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Ils sont identiques"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le vol swap a un délai"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Variance swap : payoff $\\propto(\\sigma_r^2-K_v)$. Vol swap : payoff $\\propto(\\sigma_r-K_v)$. La convexité du variance swap le rend plus favorable.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-716",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "Un **constant maturity swap (CMS)** échange :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le taux swap 10 ans (flottant, révisé périodiquement) contre SOFR"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Des coupons fixes contre des coupons fixes"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux 10 ans fixé une fois pour toutes contre SOFR"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des options sur swaps"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CMS : une patte reçoit le taux CMS $s(T_i)$ (taux 10Y observé à $T_i$), l'autre paie SOFR.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Le taux CMS est révisé à chaque période.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-717",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "CMS 10Y, 5 paiements annuels : taux CMS forward $=3.5\\%$ (tous égaux), notionnel 1 M USD, paiement SOFR forward $=3\\%$. Valeur approx du CMS spread swap (USD, non actualisé) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1000.0
+        }
+      },
+      "solution": {
+        "value": 25000.0,
+        "steps_mdx": "CMS spread $=3.5\\%-3\\%=0.5\\%$. Annuité $=5\\times1\\,M\\times0.5\\%=\\mathbf{25\\,000}$ USD.",
+        "formula_katex": "n\\times N\\times(CMS-SOFR)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-718",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "swaps-revisited-ir-exotics"
+      ],
+      "prompt_mdx": "La **prime de convexité** du CMS est positive car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La relation prix d'obligation / taux est convexe → le taux CMS attendu > taux forward"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux CMS est toujours supérieur à SOFR"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La duration est constante"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le CMS se réinitialise souvent"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Convexité : $E[s(T)]>s_{fwd}$ car la valeur d'un bond est convexe en taux. L'ajustement est toujours positif.",
+        "distractor_explains": {
+          "b": "Pas toujours.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-719",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Une **obligation convertible** donne à son détenteur le droit de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Convertir l'obligation en actions de l'émetteur à un ratio de conversion fixé"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Échanger l'obligation contre une autre"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Recevoir des dividendes"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Vendre l'obligation avant l'échéance"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Convertible = obligation + option call embedded sur les actions de l'émetteur.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux (c'est la puttable bond)."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-720",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Obligation convertible : ratio de conversion $=20$ actions, $S=52$ USD, $K_{conv}=50$ USD. Valeur de conversion (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 1040.0,
+        "steps_mdx": "$20\\times52=\\mathbf{1040}$ USD.",
+        "formula_katex": "n\\times S"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-721",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "La valeur d'une **puttable bond** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Supérieure à une obligation bullet car le détenteur a le droit de revendre à pair si les taux montent"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Inférieure à une obligation bullet"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Égale à une callable bond"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Sans impact de la volatilité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Puttable bond = bond + put option pour l'investisseur → prime de put → prix > bullet.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Callable = émetteur peut rembourser anticipativement, opposé.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-722",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Une **callable bond** est avantageuse pour l'**émetteur** car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il peut refinancer à un taux inférieur si les taux baissent"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il peut augmenter le coupon"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il peut différer les paiements"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il n'a pas à rembourser le principal"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Callable : l'émetteur peut racheter l'obligation si les taux baissent et se refinancer à meilleur taux.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-723",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Callable bond : valeur $=$ obligation bullet $-$ option call émetteur. Bond bullet $=102$, call option $=3$ USD. Prix callable bond ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 99.0,
+        "steps_mdx": "$102-3=\\mathbf{99}$ USD.",
+        "formula_katex": "V_{bullet}-V_{call}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-724",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Expliquez la structure d'un **CDO** (Collateralized Debt Obligation) et la notion de tranches.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Pool d'actifs divisé en tranches de risque",
+            "weight": 0.5
+          },
+          {
+            "text": "Senior/Mezzanine/Equity absorbent les pertes dans l'ordre",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "CDO : pool de créances (obligations, prêts) → structuration en tranches : Equity (première perte, haut rendement), Mezzanine (intermédiaire), Senior/Super-senior (AAA, faible rendement). Les pertes frappent d'abord l'equity. La tranche senior ne subit des pertes que si les pertes du pool dépassent le buffer des tranches inférieures. La 'magie' du CDO : transformer des actifs BBB en tranche AAA via la diversification."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-725",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "CDO : pool 100 M USD, tranche equity 10%, mezzanine 20%, senior 70%. Perte du pool = 15 M USD. Perte tranche equity (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100000.0
+        }
+      },
+      "solution": {
+        "value": 10000000.0,
+        "steps_mdx": "Equity absorbe jusqu'à 10 M USD. Perte = $\\min(15,10)=\\mathbf{10}$ M USD.",
+        "formula_katex": "\\min(\\text{perte}, \\text{equity notionnel})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-726",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "CDO (suite) : après perte de 15 M USD. Perte tranche mezzanine (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100000.0
+        }
+      },
+      "solution": {
+        "value": 5000000.0,
+        "steps_mdx": "Equity absorbe 10 M, reste 5 M → mezzanine absorbe $\\min(5,20)=\\mathbf{5}$ M USD.",
+        "formula_katex": "\\min(\\text{perte}-\\text{equity}, \\text{mezz notionnel})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-727",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Le **risque de corrélation** dans les CDOs est critique car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Une forte corrélation des défauts augmente la probabilité de pertes massives et impacte toutes les tranches"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Une faible corrélation augmente la valeur de l'equity"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La corrélation n'affecte pas les CDOs"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les modèles de corrélation sont simples"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Corrélation des défauts : si tous les émetteurs font défaut en même temps, même la tranche senior est touchée.",
+        "distractor_explains": {
+          "b": "Une faible corrélation protège les tranches seniors.",
+          "c": "Faux — c'est le risque principal des CDOs.",
+          "d": "Faux, très complexes."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-728",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Le modèle de **Gaussian copula** (Li 2000) pour les défauts corrélés modélise :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La probabilité de défaut conjointe via une copule gaussienne avec corrélation $\\rho$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les défauts indépendants"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol des spreads de crédit"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La durée jusqu'au défaut"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Gaussian copula : modèle dominant avant 2008. Critiqué après la crise pour sa gestion des queues de distribution.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Partiellement, modélise les temps de défaut."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-729",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "ABS (Asset-Backed Security) sur prêts auto : pool 500 M USD, taux de perte attendu 2%. Perte attendue du pool (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100000.0
+        }
+      },
+      "solution": {
+        "value": 10000000.0,
+        "steps_mdx": "$2\\%\\times500\\,M=\\mathbf{10}$ M USD.",
+        "formula_katex": "\\text{pool}\\times\\text{loss rate}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-730",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Qu'est-ce que le **credit enhancement** et comment fonctionne-t-il dans une titrisation ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Mécanismes pour améliorer la notation des tranches",
+            "weight": 0.5
+          },
+          {
+            "text": "Surdimensionnement, réserves, garanties externes",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le credit enhancement vise à améliorer la qualité de crédit des tranches supérieures : (1) **Overcollateralization** : le pool d'actifs est plus grand que les notes émises. (2) **Excess spread** : le coupon des actifs > coupon des notes → coussin de revenu. (3) **Reserve accounts** : compte de réserve pour absorber les pertes temporaires. (4) **Garanties externes** : assureur de crédit (bond insurer). L'objectif : obtenir AAA sur les tranches seniors même avec des actifs BBB."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-731",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "La **duration d'une obligation callable** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Inférieure à la duration de l'obligation bullet équivalente car l'option réduit la duration effective"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Égale à la duration bullet"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Supérieure à la duration bullet"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Nulle pour les callables"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Option call embedded : quand les taux baissent, l'émetteur exerce → la duration effective est limitée.",
+        "distractor_explains": {
+          "b": "Seulement si l'option est très OTM.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-732",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "structured-products-and-credit-derivatives-overview"
+      ],
+      "prompt_mdx": "Callable bond : duration bullet $=8$ ans, delta option $=0.4$, duration option $=5$ ans. Duration callable (approximation) ?",
+      "payload": {
+        "unit": "ans",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 6.0,
+        "steps_mdx": "Duration callable $\\approx$ bullet $-$ delta $\\times$ durée option $=8-0.4\\times5=8-2=\\mathbf{6}$ ans.",
+        "formula_katex": "D_{bullet}-\\Delta_{call}\\times D_{option}"
+      }
+    }
+  ]
+}

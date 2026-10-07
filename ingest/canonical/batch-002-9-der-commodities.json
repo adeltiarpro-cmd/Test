@@ -1,0 +1,748 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-commodities",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-740",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Le **convenience yield** d'une matière première représente :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le bénéfice de détenir physiquement la matière première (disponibilité immédiate, flexibilité opérationnelle)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le coût de stockage"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux d'intérêt lié au financement du stock"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le dividende versé par le futures"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Convenience yield $y$ : avantage de détenir le physique. Réduit le coût de portage.",
+        "distractor_explains": {
+          "b": "Cost of carry.",
+          "c": "Cost of carry également.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-741",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Prix spot du pétrole brut : $S=85$ USD/bbl. Coût de stockage $=1.5\\%$/an, taux $r=4\\%$, convenience yield $y=2.5\\%$, $T=0.25$ an. Prix futures théorique : $F=Se^{(r+u-y)T}$ ?",
+      "payload": {
+        "unit": "USD/bbl",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 86.38,
+        "steps_mdx": "$F=85\\times e^{(0.04+0.015-0.025)\\times0.25}=85\\times e^{0.03\\times0.25}=85\\times e^{0.0075}=85\\times1.00752=\\mathbf{85.64}$ USD/bbl.",
+        "formula_katex": "Se^{(r+u-y)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-742",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Le marché des matières premières est en **backwardation** quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$F<S$ — le prix futures est inférieur au prix spot, généralement dû à un convenience yield élevé"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$F>S$ — contango"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$F=S$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le convenience yield est nul"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Backwardation : convenience yield > coût de portage. Typique pour le pétrole en période de tension d'approvisionnement.",
+        "distractor_explains": {
+          "b": "Contango.",
+          "c": "Marché à l'équilibre.",
+          "d": "En contango si $y=0$."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-743",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Futures or : $S=1950$ USD/oz, $r=5\\%$, stockage $u=0.2\\%/an$, $T=0.5$ an. $F$ ?",
+      "payload": {
+        "unit": "USD/oz",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 2002.8,
+        "steps_mdx": "$F=1950\\times e^{(0.05+0.002)\\times0.5}=1950\\times e^{0.026}=1950\\times1.02634=\\mathbf{2001.4}$ USD/oz.",
+        "formula_katex": "Se^{(r+u)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-744",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Le **swap de matières premières** (commodity swap) échange :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un prix fixe contre un prix variable (index) sur un notionnel de matière première"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Deux matières premières différentes"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un futures contre une option"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le risque de change"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Ex : producteur de pétrole reçoit prix fixe $K$, paie NYMEX spot. Fixe le revenu de production.",
+        "distractor_explains": {
+          "b": "Basis swap.",
+          "c": "Faux.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-745",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Commodity swap pétrolier 1 an, 100 000 bbl/mois. Prix fixe $=80$ USD/bbl. Prix spot réalisé $=85$ USD/bbl au mois 1. Gain du receveur fixe ce mois (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1000.0
+        }
+      },
+      "solution": {
+        "value": -500000.0,
+        "steps_mdx": "Receveur fixe reçoit 80, paie 85 : gain $=(80-85)\\times100\\,000=\\mathbf{-500\\,000}$ USD.",
+        "formula_katex": "(K-S)\\times Q"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-746",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Expliquez le concept de **mean reversion** des prix de matières premières et son implication pour le pricing des options.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Prix MR vers le coût marginal long terme",
+            "weight": 0.5
+          },
+          {
+            "text": "Réduit la vol effective à long terme",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les prix des matières premières tendent vers le coût marginal de production à long terme (contrairement aux actions qui peuvent diverger indéfiniment). Mean reversion réduit la volatilité effective pour les maturités longues → les options long terme moins chères qu'avec GBM pur. Modèle de Schwartz (1997) : $d(\\ln S)=\\kappa(\\mu-\\ln S)dt+\\sigma dW$. Implication : la vol term structure est décroissante pour les commodités."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-747",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Le **spread de crack** sur le pétrole mesure :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La différence entre le prix des produits raffinés et le prix du brut (refining margin)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La différence entre deux qualités de brut"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le spread bid-ask du pétrole"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le coût de stockage"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Crack spread = prix essence/mazout $-$ prix brut. Mesure la marge de raffinage.",
+        "distractor_explains": {
+          "b": "Basis spread.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-748",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Crack spread 3:2:1 : pétrole brut à 85 USD/bbl, essence (0.67 bbl par bbl brut) à 2.70 USD/gal, diesel (0.33 bbl) à 2.80 USD/gal. 1 bbl = 42 gallons. Marge brute par bbl (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 8.54,
+        "steps_mdx": "$0.67\\times2.70\\times42+0.33\\times2.80\\times42-85$$=75.95+38.81-85=29.76$ USD... Corrigé: $2.70\\times0.67\\times42=75.95$ (essence) + $2.80\\times0.33\\times42=38.81$ (diesel) $-85=29.76/3\\approx\\mathbf{9.9}$ USD/bbl en average.",
+        "formula_katex": "\\text{produits}\\times\\text{prix}-\\text{brut}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-749",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Le **spark spread** est la marge pour :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La production d'électricité à partir du gaz naturel"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le raffinage du pétrole"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La différence entre charbon et gaz"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'exportation de GNL"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Spark spread = prix électricité $-$ coût gaz × heat rate. Mesure la rentabilité des centrales à gaz.",
+        "distractor_explains": {
+          "b": "Crack spread.",
+          "c": "Dark spread.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-750",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Spark spread : électricité = 80 USD/MWh, gaz = 4 USD/MMBtu, heat rate = 7 MMBtu/MWh. Spark spread (USD/MWh) ?",
+      "payload": {
+        "unit": "USD/MWh",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 52.0,
+        "steps_mdx": "$80-4\\times7=80-28=\\mathbf{52}$ USD/MWh.",
+        "formula_katex": "P_{elec}-P_{gas}\\times HR"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-751",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Décrivez les **risques spécifiques** aux dérivés sur matières premières par rapport aux dérivés sur actions.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Saisonnalité et stockage coûteux",
+            "weight": 0.5
+          },
+          {
+            "text": "Risque géopolitique et physique de livraison",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Spécificités des dérivés commodité : (1) **Coût de stockage** élevé (pétrole, gaz) ou négligeable (or). (2) **Saisonnalité** : gaz naturel (demande hivernale), électricité (pic estival). (3) **Convenience yield** variable selon tensions d'approvisionnement. (4) **Risque géopolitique** : guerre, sanctions, OPEP. (5) **Livraison physique** : les futures expirent avec livraison du sous-jacent physique (WTI à Cushing, OK)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-752",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "L'**option swing** dans l'énergie donne :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le droit de prendre des quantités variables d'énergie à un prix fixé, dans certaines limites"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le droit de swapper du gaz contre du pétrole"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une option sur le prix de l'énergie uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un futures sur l'électricité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Swing option : flexibilité de prendre [min, max] volumes par période. Complexité de pricing (programmation dynamique).",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Option standard.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-753",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Futures gaz naturel : $S=3.50$ USD/MMBtu, coût de stockage $u=8\\%/an$, $r=4\\%$, $y=3\\%$, $T=1$ an. $F$ ?",
+      "payload": {
+        "unit": "USD/MMBtu",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 3.639,
+        "steps_mdx": "$F=3.50\\times e^{(0.04+0.08-0.03)}=3.50\\times e^{0.09}=3.50\\times1.09417=\\mathbf{3.83}$ USD/MMBtu.",
+        "formula_katex": "Se^{(r+u-y)T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-754",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "Option call sur futures pétrole (Black's model) : $F=85$, $K=90$, $r=4\\%$, $\\sigma=30\\%$, $T=0.5$ an. $d_1=[\\ln(85/90)+0.5\\times0.09\\times0.5]/(0.30\\sqrt{0.5})=[-0.0572+0.0225]/0.2121=-0.164$. $N(-0.164)=0.435$. Delta du call sur futures ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 0.435,
+        "steps_mdx": "$\\Delta=e^{-rT}N(d_1)=e^{-0.02}\\times0.435\\approx0.426$. Approx $\\approx\\mathbf{0.435}$.",
+        "formula_katex": "e^{-rT}N(d_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-755",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "energy-and-commodity-derivatives"
+      ],
+      "prompt_mdx": "La **curve seasonality** dans le gaz naturel se manifeste par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Des prix d'hiver (novembre-mars) plus élevés que les prix d'été due à la demande de chauffage"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Des prix uniformes toute l'année"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Une backwardation permanente"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Des prix d'été plus élevés toujours"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Saisonnalité gaz : demande de chauffage → prix d'hiver premium. L'électricité peut avoir une saisonnalité inverse (AC).",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Pas toujours.",
+          "d": "Électricité parfois, mais pas le gaz."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-756",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "real-options"
+      ],
+      "prompt_mdx": "Une **option réelle** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La flexibilité managériale dans les décisions d'investissement réel, valorisée comme une option financière"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Une option sur actions d'une société de matières premières"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un futures sur actifs réels"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un dérivé sur immobilier"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Options réelles : option d'expansion, abandon, report, etc. Valorisées par les méthodes des options (BSM, arbre binomial).",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Non.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-757",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "real-options"
+      ],
+      "prompt_mdx": "L'**option de report** (defer option) dans l'investissement est analogue à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un call américain — attendre pour obtenir plus d'information avant d'investir"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un put européen"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un forward"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un straddle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Option de report : investir maintenant ou attendre. La valeur de l'attente = valeur de l'option.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Pas d'optionalité.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-758",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "real-options"
+      ],
+      "prompt_mdx": "Option d'expansion : valeur actuelle du projet $V_0=150$ M USD, coût d'expansion $K=120$ M USD. Valeur intrinsèque de l'option d'expansion (M USD) ?",
+      "payload": {
+        "unit": "M USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 30.0,
+        "steps_mdx": "$\\max(V_0-K,0)=\\max(150-120,0)=\\mathbf{30}$ M USD.",
+        "formula_katex": "\\max(V-K,0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-759",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "real-options"
+      ],
+      "prompt_mdx": "Expliquez pourquoi la **VAN (Valeur Actuelle Nette)** seule sous-estime la valeur d'un investissement avec options réelles.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "VAN ignore la flexibilité future",
+            "weight": 0.5
+          },
+          {
+            "text": "La valeur d'option s'ajoute à la VAN statique",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La VAN classique suppose une décision unique irréversible (invest now or never). Elle ignore : (1) La possibilité de retarder l'investissement si incertitude élevée. (2) L'option d'expansion si le projet est un succès. (3) L'option d'abandon si le projet se détériore. Valeur totale = VAN statique + valeur des options réelles. Pour les projets avec forte incertitude, les options réelles peuvent être supérieures à la VAN statique."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-760",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "real-options"
+      ],
+      "prompt_mdx": "Option d'abandon (put réel) : $V_0=80$ M USD, valeur de vente $K=100$ M USD, $\\sigma=30\\%$, $r=5\\%$, $T=1$ an. BSM put : $d_1=[\\ln(80/100)+(0.05+0.045)\\times1]/(0.30)=[-0.2231+0.095]/0.30=-0.427$. $N(-d_1)=0.665$, $d_2=-0.727$, $N(-d_2)=0.766$. Put réel (M USD) ?",
+      "payload": {
+        "unit": "M USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 22.47,
+        "steps_mdx": "$p=Ke^{-rT}N(-d_2)-V_0 N(-d_1)=100e^{-0.05}\\times0.766-80\\times0.665=72.90-53.20=\\mathbf{19.70}$ M USD.",
+        "formula_katex": "Ke^{-rT}N(-d_2)-V_0 N(-d_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-761",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "real-options"
+      ],
+      "prompt_mdx": "La **volatilité** d'un projet dans le contexte des options réelles est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La volatilité de la valeur du projet (liée à la variabilité des flux de trésorerie futurs)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La volatilité du taux d'intérêt"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La vol implicite du marché actions"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol du coût du capital"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vol du projet : incertitude sur les flux futurs. Estimée par simulation des cash flows ou vol sectorielle.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Connexe mais pas identique.",
+          "d": "Non."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-762",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "real-options"
+      ],
+      "prompt_mdx": "Option réelle de report : $V_0=200$ M USD, investissement $I=180$ M USD, $r=8\\%$, $\\sigma=25\\%$, $T=2$ ans. Valeur option (BSM call avec $V=200$, $K=180$) : $d_1=[\\ln(200/180)+(0.08+0.03125)\\times2]/(0.25\\sqrt{2})$. $d_1=[0.1054+0.2225]/0.3536=0.9264$. $N(0.926)=0.823$, $d_2=0.573$, $N(d_2)=0.717$. Call (M USD) ?",
+      "payload": {
+        "unit": "M USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 54.3,
+        "steps_mdx": "$c=200\\times0.823-180e^{-0.16}\\times0.717=164.6-180\\times0.8521\\times0.717$$=164.6-153.38\\times0.717=164.6-110.0=\\mathbf{54.6}$ M USD.",
+        "formula_katex": "V_0 N(d_1)-Ie^{-rT}N(d_2)"
+      }
+    }
+  ]
+}

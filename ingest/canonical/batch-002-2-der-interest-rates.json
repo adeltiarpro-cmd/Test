@@ -1,0 +1,1609 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-interest-rates",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-087",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Le **taux au comptant** (spot rate) $r(t,T)$ est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le taux d'intérêt pour un emprunt commençant aujourd'hui et se terminant en $T$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux d'intérêt anticipé pour une période future"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux d'un prêt bancaire à court terme"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux directeur de la banque centrale"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le taux spot est le taux en vigueur aujourd'hui pour une maturité $T$.",
+        "distractor_explains": {
+          "b": "C'est le taux forward.",
+          "c": "Approximation insuffisante.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-088",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Obligations zéro-coupon : valeur nominale 1 000 USD, maturité 3 ans, taux spot continu $r = 5\\%$. Prix ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 860.71,
+        "steps_mdx": "$P = 1000 e^{-0.05\\times3} = 1000\\times0.86071 = \\mathbf{860.71}$ USD",
+        "formula_katex": "1000 e^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-089",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "La **courbe des taux** (yield curve) normale est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Croissante : les taux longs sont supérieurs aux taux courts"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Plate : tous les taux sont identiques"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Inversée : les taux courts dépassent les longs"
+          },
+          {
+            "key": "d",
+            "text_mdx": "En forme de bosse au milieu"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Courbe normale = prime de terme positive : les investisseurs exigent un rendement supplémentaire pour les maturités longues.",
+        "distractor_explains": {
+          "b": "Courbe plate.",
+          "c": "Courbe inversée, souvent précurseur de récession.",
+          "d": "Courbe en bosse."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-090",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Taux nominal annuel $= 12\\%$ avec capitalisation **mensuelle**. Quel est le taux effectif annuel ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 12.68,
+        "steps_mdx": "$(1 + 0.12/12)^{12} - 1 = (1.01)^{12} - 1 = 1.12683 - 1 = \\mathbf{12.68}\\%$",
+        "formula_katex": "(1+r_m/m)^m - 1"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-091",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Taux nominal $r_m = 8\\%$ capitalisé semestriellement. Convertissez en (a) taux effectif annuel, (b) taux continu équivalent.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Taux effectif annuel (%)",
+            "unit": "%",
+            "tolerance": 0.01,
+            "solution_mdx": "$(1+0.04)^2-1=1.0816-1=\\mathbf{8.16}\\%$",
+            "hint_mdx": "$(1+r_m/2)^2-1$"
+          },
+          {
+            "label": "Taux continu équivalent (%)",
+            "unit": "%",
+            "tolerance": 0.01,
+            "solution_mdx": "$r_c=\\ln(1.0816)=\\mathbf{7.84}\\%$",
+            "hint_mdx": "$r_c=\\ln(1+r_{eff})$",
+            "trap_mdx": "Ne pas oublier de prendre le log naturel du taux effectif, pas du taux nominal."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 8.16
+          },
+          {
+            "answer": 7.84
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-092",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "La **durée de Macaulay** mesure :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La sensibilité du prix d'une obligation à une variation de taux"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La maturité résiduelle de l'obligation"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le temps moyen pondéré jusqu'aux flux de trésorerie"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La convexité de l'obligation"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "c"
+        ],
+        "explain_mdx": "Durée de Macaulay = $\\sum t_i \\frac{PV(CF_i)}{P}$, moyenne pondérée des dates des flux.",
+        "distractor_explains": {
+          "a": "C'est la durée modifiée.",
+          "b": "Pas exactement.",
+          "d": "La convexité est différente."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-093",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Obligation : coupon annuel 6 USD sur 100 USD, maturité 3 ans, YTM $= 5\\%$. Calculez la **durée de Macaulay** (années).",
+      "payload": {
+        "unit": "ans",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 2.832,
+        "steps_mdx": "Flux : $CF_1=6,CF_2=6,CF_3=106$. $P = 6e^{-0.05}+6e^{-0.1}+106e^{-0.15}=5.706+5.427+91.136=102.27$. $D=\\frac{1\\times5.706+2\\times5.427+3\\times91.136}{102.27}=\\frac{5.706+10.854+273.408}{102.27}=\\frac{289.97}{102.27}=\\mathbf{2.836}$ ans",
+        "formula_katex": "\\frac{\\sum t_i PV(CF_i)}{P}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-094",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Durée modifiée $D^* = 4.2$ ans, YTM augmente de 50 bp $= 0.005$. Variation **approximative** du prix (%)?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": -2.1,
+        "steps_mdx": "$\\Delta P / P \\approx -D^* \\Delta y = -4.2 \\times 0.005 = -\\mathbf{2.1}\\%$",
+        "formula_katex": "-D^* \\Delta y"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-095",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Expliquez la différence entre **duration modifiée** et **duration de Macaulay**.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Duration modifiée = Macaulay/(1+y)",
+            "weight": 0.5
+          },
+          {
+            "text": "Mesure directe de la sensibilité au taux",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La durée de Macaulay mesure la **durée moyenne** des flux en années. La durée modifiée $D^* = D/(1+y/m)$ (ou $D$ pour les taux continus) mesure directement la **sensibilité** : $\\Delta P/P \\approx -D^* \\Delta y$. Pour les taux continus, $D^* = D$ exactement."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-096",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "La **convexité** d'une obligation fait que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le prix monte plus que prédit par la durée si les taux baissent"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix baisse plus que prédit par la durée si les taux montent"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La duration surestime toujours la perte"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les obligations convexes sont plus risquées"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La relation prix/taux est convexe : la durée sous-estime la hausse de prix (et surestrime la baisse).",
+        "distractor_explains": {
+          "b": "La durée surestime la perte (convexité est favorable).",
+          "c": "Faux.",
+          "d": "Faux, la convexité est un avantage."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-097",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Taux spot 1 an $r_1=3\\%$, taux spot 2 ans $r_2=4\\%$ (continus). **Taux forward** 1 an dans 1 an ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 5.0,
+        "steps_mdx": "$r_f = \\frac{r_2 T_2 - r_1 T_1}{T_2-T_1} = \\frac{0.04\\times2-0.03\\times1}{1} = \\frac{0.05}{1} = \\mathbf{5.0}\\%$",
+        "formula_katex": "\\frac{r_2 T_2 - r_1 T_1}{T_2-T_1}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-098",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Taux spot : $r_1=2\\%$, $r_2=2.5\\%$, $r_3=3\\%$, $r_4=3.3\\%$ (continus). Calculez les taux forward annuels : $f(1,2)$, $f(2,3)$, $f(3,4)$.",
+      "payload": {
+        "steps": [
+          {
+            "label": "f(1,2) (%)",
+            "unit": "%",
+            "tolerance": 0.01,
+            "solution_mdx": "$2.5\\%\\times2-2\\%\\times1=5\\%-2\\%=\\mathbf{3.0}\\%$",
+            "hint_mdx": "$f(t_1,t_2)=r_2 t_2-r_1 t_1$"
+          },
+          {
+            "label": "f(2,3) (%)",
+            "unit": "%",
+            "tolerance": 0.01,
+            "solution_mdx": "$3\\%\\times3-2.5\\%\\times2=9\\%-5\\%=\\mathbf{4.0}\\%$"
+          },
+          {
+            "label": "f(3,4) (%)",
+            "unit": "%",
+            "tolerance": 0.01,
+            "solution_mdx": "$3.3\\%\\times4-3\\%\\times3=13.2\\%-9\\%=\\mathbf{4.2}\\%$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 3.0
+          },
+          {
+            "answer": 4.0
+          },
+          {
+            "answer": 4.2
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-099",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Une obligation **à coupon** a toujours une durée :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Inférieure à sa maturité"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Égale à sa maturité"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Supérieure à sa maturité"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Nulle"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les coupons intermédiaires raccourcissent la durée : $D < T$ pour tout coupon $> 0$.",
+        "distractor_explains": {
+          "b": "Seulement pour un zéro-coupon.",
+          "c": "Impossible.",
+          "d": "Impossible."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-100",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Taux nominal $12\\%$ capitalisé **trimestriellement**. Taux continu équivalent ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 11.71,
+        "steps_mdx": "Taux effectif annuel $= (1+0.03)^4-1=1.12551-1=12.551\\%$. $r_c=\\ln(1.12551)=\\mathbf{11.83}\\%$",
+        "formula_katex": "\\ln(1+(r_m/m)^m)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-101",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Qu'est-ce que la **structure par terme** des taux d'intérêt, et quelles théories l'expliquent ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Relation taux/maturité",
+            "weight": 0.5
+          },
+          {
+            "text": "Théories : anticipations, préférence pour la liquidité, segmentation",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La structure par terme décrit la relation entre les taux spot et leur maturité. Trois théories principales : (1) **Anticipations pures** : la courbe reflète uniquement les taux courts futurs anticipés. (2) **Préférence pour la liquidité** : une prime est requise pour les maturités longues. (3) **Segmentation des marchés** : l'offre/demande à chaque maturité détermine les taux indépendamment."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-102",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Obligation d'État : nominal 1 000 USD, coupon annuel 8%, maturité 5 ans, YTM $= 6\\%$ (annuel). Prix ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 1084.25,
+        "steps_mdx": "$P=\\sum_{t=1}^5 \\frac{80}{1.06^t}+\\frac{1000}{1.06^5}$$=80\\times4.2124+1000\\times0.7473=336.99+747.26=\\mathbf{1084.25}$ USD",
+        "formula_katex": "\\sum CF_t/(1+y)^t"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-103",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Le **YTM** (rendement à l'échéance) d'une obligation est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le taux d'actualisation qui égalise le prix aux flux de trésorerie futurs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux coupon divisé par le prix"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux moyen des coupons"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux auquel l'obligation sera réinvestie"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$P = \\sum CF_t/(1+y)^t$ — $y$ est le YTM.",
+        "distractor_explains": {
+          "b": "C'est le current yield.",
+          "c": "Faux.",
+          "d": "Hypothèse nécessaire mais pas la définition."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-104",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Portfolio immunisé : valeur actuelle des engagements = 1 M USD dans 5 ans. Duration cible = 5 ans. Obligations A ($D_A=3$ ans, poids $w_A$) et B ($D_B=8$ ans, poids $w_B=1-w_A$). Quel est $w_A$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.6,
+        "steps_mdx": "$w_A D_A + (1-w_A) D_B = 5$ → $3w_A + 8-8w_A = 5$ → $-5w_A=-3$ → $w_A=\\mathbf{0.6}$",
+        "formula_katex": "\\frac{D_B-D_T}{D_B-D_A}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-105",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Expliquez le risque de **réinvestissement** pour le détenteur d'une obligation à coupon.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Les coupons sont réinvestis à un taux incertain",
+            "weight": 0.5
+          },
+          {
+            "text": "YTM suppose réinvestissement au même taux",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le YTM suppose que tous les coupons sont réinvestis au taux $y$. En pratique, si les taux baissent, les coupons sont réinvestis à un taux inférieur, ce qui réduit le rendement effectif. Le risque de réinvestissement est proportionnel à la durée et au montant des coupons. Les obligations zéro-coupon éliminent ce risque."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-106",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Prix spot 6 mois $= 98.50$ USD (obligation 100 USD). Taux spot 6 mois continu ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 3.05,
+        "steps_mdx": "$r = -\\frac{\\ln(98.50/100)}{0.5} = -\\frac{\\ln(0.985)}{0.5} = -\\frac{-0.01511}{0.5} = \\mathbf{3.02}\\%$",
+        "formula_katex": "-\\frac{\\ln(P/F)}{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-107",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Une **obligation à coupon** peut être vue comme :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un portefeuille d'obligations zéro-coupon"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un seul flux terminal"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un call sur le taux d'intérêt"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un swap de taux fixe contre variable"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Chaque coupon est un zéro-coupon de maturité correspondante. On décompose et valorise par les taux spot.",
+        "distractor_explains": {
+          "b": "C'est un zéro-coupon.",
+          "c": "Faux.",
+          "d": "Un swap a une structure différente."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-108",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Obligation : nominal 1 000 USD, coupon semestriel 3%, 4 ans. Taux spot semestriels (continus) : $r_{0.5}=2\\%, r_1=2.2\\%, r_{1.5}=2.4\\%, r_2=2.6\\%, r_{2.5}=2.8\\%, r_3=3\\%, r_{3.5}=3.1\\%, r_4=3.2\\%$. Prix ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 993.15,
+        "steps_mdx": "Actualiser chaque flux $30$ ou $1030$ USD avec les taux spot correspondants. $P = 30(e^{-0.01}+e^{-0.022}+...)+1030e^{-0.032\\times4}$. Calcul numérique $\\approx \\mathbf{993}$ USD.",
+        "formula_katex": "\\sum CF_i e^{-r_i T_i}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-109",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Duration modifiée $D^*=6.5$ ans, prix $= 950$ USD. Si taux augmente de 25 bp, variation de prix (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": -15.44,
+        "steps_mdx": "$\\Delta P = -D^* \\times P \\times \\Delta y = -6.5 \\times 950 \\times 0.0025 = \\mathbf{-15.44}$ USD",
+        "formula_katex": "-D^* \\times P \\times \\Delta y"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-110",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Obligation de nominal 1 000 USD, coupon annuel $c=6\\%$, maturité $T=3$ ans, $r=5\\%$ (continu). Calculez : (a) le prix, (b) la durée de Macaulay, (c) la duration modifiée.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Prix (USD)",
+            "unit": "USD",
+            "tolerance": 0.1,
+            "solution_mdx": "$60e^{-0.05}+60e^{-0.1}+1060e^{-0.15}=57.07+57.14+906.77=\\mathbf{1020.98}$ USD",
+            "hint_mdx": "$P=\\sum CF_i e^{-rT_i}$"
+          },
+          {
+            "label": "Duration de Macaulay (ans)",
+            "unit": "ans",
+            "tolerance": 0.01,
+            "solution_mdx": "$D=\\frac{1\\times57.07+2\\times57.14+3\\times906.77}{1020.98}=\\frac{57.07+114.28+2720.31}{1020.98}=\\frac{2891.66}{1020.98}=\\mathbf{2.832}$ ans",
+            "trap_mdx": "Utiliser les VA des flux, pas les flux bruts."
+          },
+          {
+            "label": "Duration modifiée (ans)",
+            "unit": "ans",
+            "tolerance": 0.005,
+            "solution_mdx": "Taux continus : $D^*=D=\\mathbf{2.832}$ ans (pas de division par $1+y$ pour taux continus)",
+            "trap_mdx": "Pour taux continus $D^*=D$. Pour taux discrets $D^*=D/(1+y)$."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 1020.98
+          },
+          {
+            "answer": 2.832
+          },
+          {
+            "answer": 2.832
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-111",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Le phénomène de **pull to par** signifie que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le prix d'une obligation converge vers son nominal à l'approche de l'échéance"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le taux coupon augmente avec le temps"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La duration diminue quand les taux augmentent"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'obligation est rappelée par l'émetteur"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "À l'échéance, l'obligation vaut son nominal quels que soient les taux du marché.",
+        "distractor_explains": {
+          "b": "Coupon fixe.",
+          "c": "La duration diminue avec le temps, mais ce n'est pas pull to par.",
+          "d": "C'est un callable bond."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-112",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rates"
+      ],
+      "prompt_mdx": "Courbe des taux plates à $r=4\\%$. Obligation 5 ans, coupon annuel $5\\%$, nominal $1000$ USD. Les taux montent immédiatement à $4.5\\%$. Nouvelle duration modifiée ?",
+      "payload": {
+        "unit": "ans",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 4.28,
+        "steps_mdx": "Nouveau prix : recalculer les flux à $4.5\\%$. $D^* \\approx 4.28$ ans (légèrement réduite car prix baisse).",
+        "formula_katex": "D^* \\approx D/(1+y)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-139",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Un **Eurodollar futures** couvre :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un dépôt USD de 1 million USD à 3 mois, taux LIBOR/SOFR"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un achat d'euros contre dollars"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un emprunt en EUR à taux fixe"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un swap de devise EUR/USD"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Eurodollar futures = contrat sur le taux interbancaire USD à 3 mois (LIBOR puis SOFR).",
+        "distractor_explains": {
+          "b": "C'est un futures de change.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-140",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Futures Eurodollar à 94.20 (prix = 100 − taux). Quel est le taux **LIBOR implicite** ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 5.8,
+        "steps_mdx": "Taux implicite $= 100 - 94.20 = \\mathbf{5.80}\\%$",
+        "formula_katex": "100 - F"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-141",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Un emprunteur prévoit d'emprunter 10 M USD dans 3 mois pour 3 mois. Il vend 10 contrats Eurodollar (1 M USD chacun) à 94.50 ($r=5.5\\%$). À l'emprunt, le taux SOFR est 6.0%, futures à 94.00.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Gain sur futures (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "50 bp $\\times$ 25 USD $\\times$ 10 contrats $= \\mathbf{12\\,500}$ USD",
+            "hint_mdx": "Variation de 50 bp, DV01 = 25 USD/bp/contrat"
+          },
+          {
+            "label": "Surcoût d'emprunt vs anticipé (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "0.5% $\\times$ 10 M $\\times$ 0.25 $= \\mathbf{12\\,500}$ USD",
+            "trap_mdx": "Vérifier que le gain compense exactement."
+          },
+          {
+            "label": "Taux effectif de l'emprunt (%)",
+            "unit": "%",
+            "tolerance": 0.01,
+            "solution_mdx": "Surcoût compensé : taux effectif $\\approx \\mathbf{5.50}\\%$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 12500.0
+          },
+          {
+            "answer": 12500.0
+          },
+          {
+            "answer": 5.5
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-142",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "La **convexity adjustment** entre le taux futures et le taux forward est due à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le marking-to-market quotidien des futures crée un biais vs les forwards"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le futures est toujours plus cher que le forward"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les obligations à coupon ont une convexité positive"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le taux LIBOR est différent du taux OIS"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le marking-to-market des futures crée une corrélation entre les flux et les taux : taux futures $>$ taux forward.",
+        "distractor_explains": {
+          "b": "Pas toujours.",
+          "c": "Non lié directement.",
+          "d": "Écart basis, pas convexity adjustment."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-143",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Futures T-Bond (nominal 100 000 USD). Prix futures $= 105{-}16$ (en 32es). Valeur faciale du contrat (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 105500.0,
+        "steps_mdx": "$105 + 16/32 = 105.50\\%$. Valeur $= 100\\,000 \\times 1.0550 = \\mathbf{105\\,500}$ USD.",
+        "formula_katex": "F \\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-144",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Le **facteur de conversion** d'un T-Bond futures sert à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Rendre comparables des obligations de coupons différents lors de la livraison"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Calculer les intérêts courus"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Déterminer le prix du futures en 32es"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Ajuster pour la durée du contrat"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le vendeur peut livrer n'importe quelle T-Bond éligible ; le facteur ajuste le prix reçu selon le coupon.",
+        "distractor_explains": {
+          "b": "Les intérêts courus sont séparés.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-145",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "T-Bond futures, prix futures $Q_F=110$, obligation livrable : nominal $100\\,000$, coupon $6\\%$, facteur de conversion $CF=1.0452$, intérêts courus $AI=2.50\\%$. Prix facturé (invoice price) ?",
+      "payload": {
+        "steps": [
+          {
+            "label": "Prix ajusté (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "$110 \\times 1.0452 = 114.97\\%$ du nominal $= \\mathbf{114\\,972}$ USD",
+            "hint_mdx": "$Q_F \\times CF$"
+          },
+          {
+            "label": "Invoice price (USD)",
+            "unit": "USD",
+            "tolerance": 1.0,
+            "solution_mdx": "$114\\,972 + 0.025\\times100\\,000 = 114\\,972 + 2\\,500 = \\mathbf{117\\,472}$ USD",
+            "hint_mdx": "$+$ intérêts courus"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 114972.0
+          },
+          {
+            "answer": 117472.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-146",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Eurodollar futures à 95.40. DV01 par contrat = 25 USD. Un hedger veut couvrir 50 M USD contre une hausse de taux sur 3 mois. Nombre de contrats ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 50.0,
+        "steps_mdx": "$N = 50\\,000\\,000 / 1\\,000\\,000 = \\mathbf{50}$ contrats (hedge parfait)",
+        "formula_katex": "N_{exp}/N_{contract}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-147",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Un **contrat T-Bill futures** est coté en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Indice $= 100 - $ taux d'escompte"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Pourcentage du nominal"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Prix en dollars"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Rendement actuariel"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "IMM index = 100 – taux de rendement annualisé.",
+        "distractor_explains": {
+          "b": "T-Bond futures oui, mais T-Bill non.",
+          "c": "Pas directement.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-148",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Un gestionnaire détient 20 M USD d'obligations de duration $D_P=7$ ans. T-Bond futures : prix $= 108$, duration livrée $D_F=5.5$ ans. Nombre de contrats à vendre pour immuniser totalement ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 235.0,
+        "steps_mdx": "$N = \\frac{D_P \\times V_P}{D_F \\times Q_F} = \\frac{7\\times20\\,000\\,000}{5.5\\times108\\,000} = \\frac{140\\,000\\,000}{594\\,000} = \\mathbf{235.6} \\approx 236$ contrats",
+        "formula_katex": "\\frac{D_P V_P}{D_F Q_F}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-149",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "La **livraison la moins chère** (cheapest-to-deliver, CTD) dans un T-Bond futures est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'obligation qui minimise le coût net pour le vendeur du futures"
+          },
+          {
+            "key": "b",
+            "text_mdx": "L'obligation de plus faible coupon"
+          },
+          {
+            "key": "c",
+            "text_mdx": "L'obligation de plus courte maturité"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'obligation la plus récemment émise"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CTD minimise : prix spot $-$ prix futures $\\times$ facteur de conversion.",
+        "distractor_explains": {
+          "b": "Pas nécessairement.",
+          "c": "Pas nécessairement.",
+          "d": "Pas nécessairement."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-150",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Expliquez le **wild card option** dans les T-Bond futures.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vendeur peut décider de livrer jusqu'à minuit après 14h",
+            "weight": 0.5
+          },
+          {
+            "text": "Valeur optionnelle pour le court",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le vendeur d'un T-Bond futures peut notifier son intention de livrer jusqu'à minuit, après la fixation du prix futures à 14h. Si les obligations baissent de 14h à minuit, le vendeur peut acheter à bas prix et livrer au prix futures plus élevé. Cette option de timing a une valeur et explique pourquoi $F_0 < (S-I)e^{rT}$ pour les T-Bond."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-151",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Taux cap implicite d'un Eurodollar futures à 94.75 (annualisé, base 360). Coût d'emprunt sur 90 jours pour 5 M USD ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 65625.0,
+        "steps_mdx": "Taux $= (100-94.75)/100 = 5.25\\%$. Intérêts $= 5\\,000\\,000 \\times 0.0525 \\times 90/360 = \\mathbf{65\\,625}$ USD",
+        "formula_katex": "N \\times r \\times 90/360"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-152",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Une société veut **augmenter** la duration de son portefeuille de 4 à 7 ans. Valeur portefeuille = 30 M USD. T-Bond futures à prix 105, duration CTD = 6 ans.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Nombre de contrats à **acheter**",
+            "unit": "contrats",
+            "tolerance": 1.0,
+            "solution_mdx": "$N=(7-4)\\times30\\,000\\,000/(6\\times105\\,000)=90\\,000\\,000/630\\,000=\\mathbf{143}$ contrats",
+            "hint_mdx": "$N=(D_T-D_P)\\times V_P/(D_F\\times Q_F)$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 143.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-153",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Un **FRA** (Forward Rate Agreement) est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un accord OTC pour fixer un taux d'intérêt sur un emprunt futur"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un futures sur obligation d'État"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un swap de taux d'intérêt"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un contrat d'option sur taux"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "FRA = contrat OTC fixant le taux sur une période future ; réglé en espèces.",
+        "distractor_explains": {
+          "b": "Le futures est standardisé.",
+          "c": "Swap = échange de flux sur plusieurs périodes.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-154",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "FRA $3\\times6$ : taux forward $= 5.20\\%$, notionnel 10 M USD. Dans 3 mois, taux 3 mois SOFR $= 5.60\\%$. Règlement (USD) reçu par l'acheteur du FRA ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 50.0
+        }
+      },
+      "solution": {
+        "value": 9804.0,
+        "steps_mdx": "Différence $= (5.60-5.20)/100 \\times 90/360 \\times 10\\,000\\,000 = 0.001 \\times 10\\,000\\,000 = 10\\,000$. Actualisé $= 10\\,000/(1+0.056\\times90/360) = 10\\,000/1.014 = \\mathbf{9\\,862}$ USD",
+        "formula_katex": "\\frac{(r_M-r_K) \\times L \\times \\tau}{1+r_M \\tau}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-155",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Le prix d'un T-Bond futures **augmente** quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Les taux d'intérêt baissent"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La duration de l'obligation CTD augmente"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux repo augmente"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'obligation livrable verse un coupon"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Prix obligations et taux sont inversement liés → futures monte si taux baissent.",
+        "distractor_explains": {
+          "b": "Pas directement.",
+          "c": "Hausse du repo réduit le coût de portage, baisse le futures.",
+          "d": "Coupon réduit le prix (ex-div)."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-156",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Taux repo 3 mois = $3\\%$, prix spot CTD = 98, coupon couru = 0, CF = 1.05. Prix futures T-Bond 3 mois ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.003
+        }
+      },
+      "solution": {
+        "value": 93.9,
+        "steps_mdx": "$F_0 = (S-I)/CF \\times e^{rT} = 98/1.05 \\times e^{0.03\\times0.25} = 93.33\\times1.00751 = \\mathbf{94.04}$",
+        "formula_katex": "(S-I)/CF \\times e^{rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-157",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Qu'est-ce que le **taux repo** et quel est son rôle dans la valorisation des futures T-Bond ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Taux de pension livrée (financement court terme)",
+            "weight": 0.5
+          },
+          {
+            "text": "Détermine le coût de portage",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Le **taux repo** est le taux d'un accord de pension livré (repo) : vente spot + rachat terme d'une obligation. Dans la valorisation des T-Bond futures, il représente le coût de financement de la position en obligation sous-jacente. $F_0 = (S-I)e^{r_{repo}T}/CF$. Un taux repo élevé abaisse le futures (carry cost élevé)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-158",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Futures Eurodollar : variation de prix d'1 bp $= 25$ USD. Hedger long 1 M USD d'obligations, DV01 = 800 USD. Nombre de contrats Eurodollar pour couvrir le risque de taux ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 32.0,
+        "steps_mdx": "$N = DV01_P / DV01_F = 800/25 = \\mathbf{32}$ contrats",
+        "formula_katex": "DV01_P/DV01_F"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-159",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Un **strip de FRA** est équivalent à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Un swap de taux d'intérêt"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un futures T-Bond"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un put sur taux"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Une obligation à coupon"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Une série de FRA sur des périodes consécutives reproduit exactement un swap de taux.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-160",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Contrat Eurodollar : prix $=95.00$, taille $=$ 1 M USD. Le prix tombe à $94.80$. Perte pour le long (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": -500.0,
+        "steps_mdx": "20 bp $\\times$ 25 USD/bp $= \\mathbf{-500}$ USD",
+        "formula_katex": "\\Delta bp \\times 25"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-161",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Comment les futures T-Bond sont-ils utilisés pour **gérer la duration** d'un portefeuille obligataire ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vente de futures réduit la duration",
+            "weight": 0.5
+          },
+          {
+            "text": "Achat de futures augmente la duration",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Vendre des T-Bond futures revient à **réduire** la duration du portefeuille (équivalent à vendre des obligations longues). Acheter des futures l'augmente. La formule : $\\Delta N = (D_T - D_P) \\times V_P / (D_F \\times Q_F)$ donne le nombre de contrats à acheter ($+$) ou vendre ($-$) pour atteindre la duration cible $D_T$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-162",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "interest-rate-futures"
+      ],
+      "prompt_mdx": "Portefeuille obligataire de 50 M USD, $D_P=8$ ans. T-Bond futures à 112, $D_F=6.5$ ans. Pour ramener $D_T=5$ ans : vendre combien de contrats ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 206.0,
+        "steps_mdx": "$N=(D_P-D_T)\\times V_P/(D_F\\times Q_F)=(8-5)\\times50\\,000\\,000/(6.5\\times112\\,000)=150\\,000\\,000/728\\,000=\\mathbf{206}$ contrats",
+        "formula_katex": "(D_P-D_T)V_P/(D_F Q_F)"
+      }
+    }
+  ]
+}

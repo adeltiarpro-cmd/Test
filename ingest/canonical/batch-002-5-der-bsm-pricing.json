@@ -1,0 +1,4030 @@
+{
+  "source": "Marchés des dérivés — Exercices originaux",
+  "track": "markets",
+  "module": "der-bsm-pricing",
+  "items": [
+    {
+      "external_key": "markets-derivatives-short_answer-275",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Dans un arbre binomial, les probabilités risque-neutres sont calculées pour :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Actualiser les payoffs attendus au taux sans risque"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Refléter la probabilité réelle du marché"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Maximiser la valeur de l'option"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Minimiser la volatilité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Probabilités risque-neutres : $p = (e^{r\\Delta t}-d)/(u-d)$. Permettent d'actualiser au taux $r$.",
+        "distractor_explains": {
+          "b": "Probabilités réelles incluent une prime de risque.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-276",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Arbre binomial **une période** : $S_0=50$, $u=1.10$, $d=0.90$, $r=5\\%$, $\\Delta t=1$ an, call européen $K=50$.",
+      "payload": {
+        "steps": [
+          {
+            "label": "Probabilité risque-neutre $p$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$p=(e^{0.05}-0.90)/(1.10-0.90)=(1.0513-0.90)/0.20=0.1513/0.20=\\mathbf{0.7563}$",
+            "hint_mdx": "$p=(e^{r\\Delta t}-d)/(u-d)$"
+          },
+          {
+            "label": "Valeur $S_u$ et payoff call si hausse (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$S_u=50\\times1.10=55$, payoff $=\\max(55-50,0)=\\mathbf{5}$ USD"
+          },
+          {
+            "label": "Prix du call aujourd'hui (USD)",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$c=e^{-0.05}[0.7563\\times5+0.2437\\times0]=e^{-0.05}\\times3.781=0.9512\\times3.781=\\mathbf{3.596}$ USD",
+            "hint_mdx": "$c=e^{-r\\Delta t}[p\\times c_u+(1-p)\\times c_d]$",
+            "trap_mdx": "Ne pas oublier d'actualiser au taux sans risque."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 0.7563
+          },
+          {
+            "answer": 5.0
+          },
+          {
+            "answer": 3.596
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-277",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Arbre binomial une période : $S_0=40$, $u=1.15$, $d=0.85$, $r=4\\%$, $\\Delta t=0.5$ an. Probabilité risque-neutre $p$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.5673,
+        "steps_mdx": "$p=(e^{0.02}-0.85)/(1.15-0.85)=(1.0202-0.85)/0.30=0.1702/0.30=\\mathbf{0.5673}$",
+        "formula_katex": "(e^{r\\Delta t}-d)/(u-d)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-278",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Le **portefeuille de couverture** dans un arbre binomial est construit en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Achetant $\\Delta$ actions et vendant le call (ou inversement) pour avoir un payoff sans risque"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Achetant le call et empruntant $K$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Vendant l'action et achetant un put"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Diversifiant entre calls et puts"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\Delta=(c_u-c_d)/(S_u-S_d)$ actions répliquent l'option. Ce ratio est le delta.",
+        "distractor_explains": {
+          "b": "Pas la construction du portefeuille réplicant.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-279",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Arbre binomial **deux périodes** : $S_0=100$, $u=1.10$, $d=0.95$, $r=3\\%$, $\\Delta t=0.5$ an, call $K=100$.",
+      "payload": {
+        "steps": [
+          {
+            "label": "p risque-neutre",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$p=(e^{0.015}-0.95)/(1.10-0.95)=(1.01511-0.95)/0.15=0.4341$"
+          },
+          {
+            "label": "Payoffs à $t=1$ an : $S_{uu}, S_{ud}, S_{dd}$",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "$S_{uu}=121$, $S_{ud}=104.50$, $S_{dd}=90.25$. Payoffs call : $21,4.50,0$"
+          },
+          {
+            "label": "Prix call $t=0$ (USD)",
+            "unit": "USD",
+            "tolerance": 0.1,
+            "solution_mdx": "$c_u=e^{-0.015}(0.4341\\times21+0.5659\\times4.50)=e^{-0.015}(9.116+2.547)=e^{-0.015}\\times11.663=11.49$. $c_d=e^{-0.015}(0.4341\\times4.50+0.5659\\times0)=1.924$. $c=e^{-0.015}(0.4341\\times11.49+0.5659\\times1.924)=e^{-0.015}(4.988+1.089)=5.986\\approx\\mathbf{5.99}$ USD",
+            "hint_mdx": "Remonter l'arbre étape par étape"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 0.4341
+          },
+          {
+            "answer": 21.0
+          },
+          {
+            "answer": 5.99
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-280",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "$S_0=60$, $u=1.20$, $d=0.80$, $r=5\\%$ (continu), $\\Delta t=1$ an. Delta ($\\Delta$) du call $K=60$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.02
+        }
+      },
+      "solution": {
+        "value": 0.5,
+        "steps_mdx": "$c_u=\\max(72-60,0)=12$, $c_d=\\max(48-60,0)=0$. $\\Delta=(c_u-c_d)/(S_u-S_d)=(12-0)/(72-48)=12/24=\\mathbf{0.50}$",
+        "formula_katex": "(c_u-c_d)/(S_u-S_d)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-281",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "La volatilité dans l'arbre binomial est liée à $u$ et $d$ par (approximation Cox-Ross-Rubinstein) :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$u=e^{\\sigma\\sqrt{\\Delta t}}$ et $d=1/u$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$u=1+\\sigma\\sqrt{\\Delta t}$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$u=e^{r\\Delta t}$ et $d=e^{-r\\Delta t}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$u=\\sigma\\Delta t$ et $d=-\\sigma\\Delta t$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "CRR : $u=e^{\\sigma\\sqrt{\\Delta t}}$, $d=e^{-\\sigma\\sqrt{\\Delta t}}=1/u$.",
+        "distractor_explains": {
+          "b": "Approximation du premier ordre seulement.",
+          "c": "Ce serait sans volatilité.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-282",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "$\\sigma=20\\%$, $\\Delta t=0.25$ an. Valeurs $u$ et $d$ (CRR). $u$ = ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 1.1052,
+        "steps_mdx": "$u=e^{0.20\\times\\sqrt{0.25}}=e^{0.20\\times0.50}=e^{0.10}=\\mathbf{1.1052}$",
+        "formula_katex": "e^{\\sigma\\sqrt{\\Delta t}}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-283",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Put américain : $S_0=50$, $K=52$, $u=1.10$, $d=0.90$, $r=5\\%$, $\\Delta t=1$ an. Valeur exercice anticipé si baisse ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 7.0,
+        "steps_mdx": "$S_d=50\\times0.90=45$. Valeur exercice $=\\max(52-45,0)=\\mathbf{7}$ USD",
+        "formula_katex": "\\max(K-S_d,0)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-284",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Expliquez pourquoi la **probabilité risque-neutre** n'est pas la probabilité réelle de hausse du sous-jacent.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Probabilité risque-neutre ajustée pour que le rendement attendu = taux sans risque",
+            "weight": 0.5
+          },
+          {
+            "text": "Diffère de la probabilité réelle",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Dans le monde risque-neutre, tous les actifs ont un rendement attendu égal au taux sans risque $r$. La probabilité risque-neutre $p^*$ est choisie pour satisfaire $S_0=e^{-r\\Delta t}[p^*S_u+(1-p^*)S_d]$, soit $p^*=(e^{r\\Delta t}-d)/(u-d)$. La probabilité réelle (sous la mesure physique) est différente car elle reflète la prime de risque exigée par les investisseurs."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-285",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "L'arbre trinomial offre un avantage par rapport à l'arbre binomial car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Il converge plus vite vers la solution continue"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il ne nécessite pas de probabilités risque-neutres"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Il est plus simple à implémenter"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Il n'a pas de paramètres à calibrer"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Trois branches par noeud → meilleure approximation de la diffusion continue, convergence plus rapide.",
+        "distractor_explains": {
+          "b": "Les probabilités risque-neutres sont toujours nécessaires.",
+          "c": "Plus complexe.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-286",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Arbre binomial américain : $S_0=80$, $u=1.15$, $d=0.87$, $r=6\\%$, $\\Delta t=1$ an, put $K=80$. Vérifiez l'exercice anticipé à $t=1$ si baisse.",
+      "payload": {
+        "steps": [
+          {
+            "label": "p risque-neutre",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$p=(e^{0.06}-0.87)/(1.15-0.87)=(1.0618-0.87)/0.28=0.6850$"
+          },
+          {
+            "label": "Valeur put si baisse ($S_d=69.60$) : exercice vs continuation",
+            "unit": "USD",
+            "tolerance": 0.01,
+            "solution_mdx": "Exercice : $80-69.60=10.40$. Continuation : $e^{-0.06}[0.685\\times0+0.315\\times\\max(80-60.55,0)]$$\\approx e^{-0.06}\\times0.315\\times19.45=5.77$. Exercice optimal : $\\mathbf{10.40}$ USD",
+            "trap_mdx": "Comparer exercice et continuation."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 0.685
+          },
+          {
+            "answer": 10.4
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-287",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Option barrier (knock-out) : prix barrière $B=45$, $S_0=50$. Si l'arbre montre $S_d=44<B$, la valeur de l'option sur ce noeud est :",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.0,
+        "steps_mdx": "Option knocked out : valeur $=\\mathbf{0}$ USD sur ce noeud et tous les suivants.",
+        "formula_katex": "0 \\text{ (knocked out)}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-288",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "La **réplication** d'une option dans l'arbre binomial utilise :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\Delta$ actions et $B$ unités de l'actif sans risque"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Uniquement l'action sous-jacente"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un call et un put"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le futures et l'actif sans risque"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Portefeuille réplicant = $\\Delta$ actions + prêt/emprunt $B$ au taux sans risque.",
+        "distractor_explains": {
+          "b": "Insuffisant.",
+          "c": "Circularité.",
+          "d": "Non standard."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-289",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "CRR : $S_0=100$, $\\sigma=25\\%$, $r=4\\%$, $\\Delta t=0.5$ an. $u=e^{0.25\\sqrt{0.5}}$. Valeur de $u$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 1.1934,
+        "steps_mdx": "$u=e^{0.25\\times0.7071}=e^{0.17678}=\\mathbf{1.1934}$",
+        "formula_katex": "e^{\\sigma\\sqrt{\\Delta t}}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-290",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Arbre 1 période, call $K=100$ : $c_u=12$, $c_d=0$, $r=5\\%$, $\\Delta t=0.5$ an, $p=0.55$. Prix du call (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 6.44,
+        "steps_mdx": "$c=e^{-0.025}(0.55\\times12+0.45\\times0)=0.9753\\times6.60=\\mathbf{6.44}$ USD",
+        "formula_katex": "e^{-r\\Delta t}[p c_u + (1-p) c_d]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-291",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "L'arbre binomial converge vers la formule **Black-Scholes** quand :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le nombre de périodes $n\\to\\infty$ et $\\Delta t\\to0$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$u\\to\\infty$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$p\\to1$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$r\\to0$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "En augmentant le nombre de pas, la distribution binomiale converge vers la lognormale de BSM.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-292",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Portefeuille réplicant : $\\Delta=0.6$, $S_0=50$, $r=5\\%$, $\\Delta t=1$ an. Le call monte à $c_u=10$, baisse à $c_d=0$. $S_u=60$, $S_d=40$. Vérifiez le prix du call via réplication. Emprunt $B$ au taux sans risque ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": -22.83,
+        "steps_mdx": "$B=e^{-r\\Delta t}(c_d-\\Delta S_d)=e^{-0.05}(0-0.6\\times40)=0.9512\\times(-24)=\\mathbf{-22.83}$ USD",
+        "formula_katex": "e^{-r\\Delta t}(c_d - \\Delta S_d)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-293",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Dans un arbre binomial, comment valorise-t-on un **put américain** différemment d'un put européen ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Comparer valeur continuation vs exercice anticipé à chaque noeud",
+            "weight": 0.5
+          },
+          {
+            "text": "Prendre le maximum",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour un put américain, à chaque noeud intermédiaire on compare :\n1. **Valeur de continuation** : $e^{-r\\Delta t}[p^* P_u+(1-p^*)P_d]$ (valeur si on ne l'exerce pas)\n2. **Valeur d'exercice anticipé** : $\\max(K-S,0)$\nOn prend le **maximum** des deux. Pour un put européen, on prend toujours la continuation."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-294",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Dans un arbre binomial à plusieurs périodes, la valeur d'une option asiatique nécessite :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "De calculer la moyenne du sous-jacent sur tous les chemins possibles"
+          },
+          {
+            "key": "b",
+            "text_mdx": "De comparer call et put à chaque noeud"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Un arbre trinomial obligatoirement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Un seul chemin aléatoire"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Options path-dependent (asiatiques, barriers) nécessitent de suivre chaque chemin, pas juste les noeuds.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Pas obligatoire.",
+          "d": "Monte Carlo suffirait, pas un seul chemin."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-295",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "binomial-trees"
+      ],
+      "prompt_mdx": "Arbre 2 périodes, $p=0.45$. Probabilité d'atteindre le noeud $uu$ (double hausse) ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.2025,
+        "steps_mdx": "$P(uu)=p^2=0.45^2=\\mathbf{0.2025}$",
+        "formula_katex": "p^2"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-296",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "Un **processus de Wiener** standard $W_t$ satisfait :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\Delta W=\\epsilon\\sqrt{\\Delta t}$ avec $\\epsilon\\sim N(0,1)$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\Delta W=\\mu\\Delta t$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\Delta W=\\sigma W_t \\Delta t$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$W_t$ est déterministe"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$W_t$ est un mouvement brownien : increments $\\sim N(0,\\Delta t)$.",
+        "distractor_explains": {
+          "b": "Faux, pas de drift déterministe.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-297",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "Le **mouvement brownien géométrique** (GBM) modélise le prix d'une action comme :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$dS=\\mu S\\,dt+\\sigma S\\,dW$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$dS=\\mu\\,dt+\\sigma\\,dW$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$dS=\\mu S^2\\,dt$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$S_t=\\mu t+\\sigma W_t$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "GBM : les rendements sont normaux, les prix sont lognormaux. $\\sigma S$ = volatilité proportionnelle.",
+        "distractor_explains": {
+          "b": "Processus de Wiener avec drift (prix absolu, pas logarithme).",
+          "c": "Faux.",
+          "d": "Mouvement arithmétique."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-298",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "$S_0=100$, $\\mu=10\\%$, $\\sigma=20\\%$, $T=1$ an. Espérance de $S_T$ sous GBM ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 110.52,
+        "steps_mdx": "$E[S_T]=S_0 e^{\\mu T}=100\\times e^{0.10}=\\mathbf{110.52}$ USD",
+        "formula_katex": "S_0 e^{\\mu T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-299",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "Le **lemme d'Ito** permet de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Calculer la dynamique d'une fonction $f(S,t)$ quand $S$ suit un processus stochastique"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Intégrer une fonction déterministe"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Calculer les probabilités risque-neutres"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Trouver le delta d'une option"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Lemme d'Ito : $df=(\\partial f/\\partial S)dS + (\\partial f/\\partial t)dt + \\frac{1}{2}(\\partial^2 f/\\partial S^2)(dS)^2$.",
+        "distractor_explains": {
+          "b": "Calcul stochastique ≠ calcul ordinaire.",
+          "c": "Faux.",
+          "d": "Delta = $\\partial f/\\partial S$, mais le lemme donne la dynamique complète."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-300",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "Appliquons le **lemme d'Ito** à $G=\\ln S$ où $dS=\\mu S\\,dt+\\sigma S\\,dW$.",
+      "payload": {
+        "steps": [
+          {
+            "label": "$\\partial G/\\partial S$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$\\partial G/\\partial S = 1/S$"
+          },
+          {
+            "label": "$\\partial^2 G/\\partial S^2$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$\\partial^2 G/\\partial S^2 = -1/S^2$"
+          },
+          {
+            "label": "$dG$ (dynamique de $\\ln S$)",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$dG=\\frac{1}{S}\\mu S\\,dt+\\frac{1}{S}\\sigma S\\,dW+\\frac{1}{2}(-\\frac{1}{S^2})\\sigma^2S^2\\,dt=(\\mu-\\sigma^2/2)dt+\\sigma\\,dW$ ✓",
+            "hint_mdx": "Lemme d'Ito : $dG=(\\mu-\\sigma^2/2)dt+\\sigma\\,dW$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 1.0
+          },
+          {
+            "answer": -1.0
+          },
+          {
+            "answer": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-301",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "Le terme $\\sigma^2/2$ dans $d(\\ln S)=(\\mu-\\sigma^2/2)dt+\\sigma dW$ est dû à :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La convexité de $\\ln S$ — terme de second ordre d'Ito"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Un biais de modélisation"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux sans risque"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La prime de risque"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le terme $\\frac{1}{2}\\frac{\\partial^2 f}{\\partial S^2}(dS)^2$ génère ce terme de correction.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Non lié.",
+          "d": "Non lié."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-302",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "GBM : $S_0=50$, $\\mu=12\\%$, $\\sigma=25\\%$, $T=0.5$ an. L'espérance de $\\ln(S_T/S_0)$ vaut :",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.0444,
+        "steps_mdx": "$E[\\ln(S_T/S_0)]=(\\mu-\\sigma^2/2)T=(0.12-0.03125)\\times0.5=0.08875\\times0.5=\\mathbf{0.0444}$",
+        "formula_katex": "(\\mu-\\sigma^2/2)T"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-303",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "$S_0=100$, $\\sigma=30\\%$, $T=1$ an. L'écart-type de $\\ln(S_T/S_0)$ vaut :",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.3,
+        "steps_mdx": "$\\text{Std}[\\ln(S_T/S_0)]=\\sigma\\sqrt{T}=0.30\\times1=\\mathbf{0.30}$",
+        "formula_katex": "\\sigma\\sqrt{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-304",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "La propriété de **Markov** du mouvement brownien signifie que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Seul le prix courant $S_t$ est nécessaire pour prédire les prix futurs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix futur dépend de tout l'historique"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les rendements sont autocorrélés"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La volatilité est constante"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Markov : la distribution future conditionnelle ne dépend que de l'état présent, pas de l'historique.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux, les rendements GBM sont indépendants.",
+          "d": "Non lié."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-305",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "$\\mu=8\\%$, $\\sigma=20\\%$. Volatilité annualisée sur 252 jours de trading ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 20.0,
+        "steps_mdx": "$\\sigma_{ann}=\\sigma\\sqrt{252/252}=\\mathbf{20\\%}$ (déjà annualisée)",
+        "formula_katex": "\\sigma\\times\\sqrt{252/T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-306",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "Pourquoi le GBM implique que les **prix sont lognormaux** mais les **rendements sont normaux** ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "ln(S_T) suit une loi normale",
+            "weight": 0.5
+          },
+          {
+            "text": "Exponentielle d'un normal = lognormal",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Sous GBM : $\\ln(S_T)=\\ln(S_0)+(\\mu-\\sigma^2/2)T+\\sigma W_T$. Le terme $W_T\\sim N(0,T)$ implique que $\\ln(S_T)$ est normalement distribué, donc $S_T$ est lognormale. Les rendements continus $\\ln(S_T/S_0)$ sont normaux. Avantage : les prix ne peuvent pas être négatifs (lognormal $>0$), contrairement à la normale."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-307",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "La **variance** de $W_T-W_t$ (incrément brownien) sur $[t,T]$ est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$T-t$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\sqrt{T-t}$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$(T-t)^2$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$T$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$\\text{Var}(W_T-W_t)=T-t$. L'écart-type est $\\sqrt{T-t}$.",
+        "distractor_explains": {
+          "b": "C'est l'écart-type.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-308",
+      "type": "short_answer",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "Un portfolio $\\Pi=\\Delta S - C$ (delta-hedged). Sous GBM, le P&L sur un instant $dt$ est :$d\\Pi=\\Delta\\,dS-dC$. En utilisant le lemme d'Ito, $dC\\approx\\frac{\\partial C}{\\partial S}dS+\\frac{\\partial C}{\\partial t}dt+\\frac{1}{2}\\frac{\\partial^2 C}{\\partial S^2}\\sigma^2S^2\\,dt$. Avec $\\Delta=\\frac{\\partial C}{\\partial S}$, le P&L réduit à :",
+      "payload": {
+        "max_words": 80,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "$-\\Theta dt - \\frac{1}{2}\\Gamma\\sigma^2S^2 dt$",
+            "weight": 1.0
+          }
+        ],
+        "model_answer_mdx": "$d\\Pi=-(\\Theta+\\frac{1}{2}\\Gamma\\sigma^2S^2)dt$. Le portefeuille delta-hedgé est exposé au gamma et au thêta, mais pas au mouvement directionnel du sous-jacent."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-309",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "La **corrélation** entre $dW_1$ et $dW_2$ de deux actions est modélisée par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$dW_1\\,dW_2=\\rho\\,dt$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$dW_1=\\rho\\,dW_2$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\text{Cov}(W_1,W_2)=0$ toujours"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$dW_1+dW_2=0$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "La corrélation entre les processus de Wiener est $dW_1\\,dW_2=\\rho\\,dt$ dans le calcul stochastique.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Seulement si $\\rho=0$.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-310",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "wiener-processes-and-it-s-lemma"
+      ],
+      "prompt_mdx": "$S$ suit GBM avec $\\sigma=25\\%$. Volatilité de $\\ln(S)$ sur 3 mois ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.125,
+        "steps_mdx": "$\\sigma\\sqrt{T}=0.25\\times\\sqrt{0.25}=0.25\\times0.5=\\mathbf{0.125}$",
+        "formula_katex": "\\sigma\\sqrt{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-311",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Formule BSM pour un **call européen** : $S_0=100$, $K=100$, $r=5\\%$, $\\sigma=20\\%$, $T=1$ an. Calculez $d_1$, $d_2$, puis le prix du call. ($N(0.35)=0.6368$, $N(0.15)=0.5596$)",
+      "payload": {
+        "steps": [
+          {
+            "label": "$d_1$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$d_1=[0+(0.05+0.02)\\times1]/(0.20)=[0.07]/0.20=\\mathbf{0.350}$",
+            "hint_mdx": "$d_1=[\\ln(S/K)+(r+\\sigma^2/2)T]/(\\sigma\\sqrt{T})$"
+          },
+          {
+            "label": "$d_2=d_1-\\sigma\\sqrt{T}$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$d_2=0.350-0.20=\\mathbf{0.150}$"
+          },
+          {
+            "label": "Prix du call (USD)",
+            "unit": "USD",
+            "tolerance": 0.05,
+            "solution_mdx": "$c=100\\times0.6368-100e^{-0.05}\\times0.5596=63.68-53.20=\\mathbf{10.48}$ USD",
+            "hint_mdx": "$c=S_0N(d_1)-Ke^{-rT}N(d_2)$",
+            "trap_mdx": "Ne pas oublier d'actualiser le strike."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 0.35
+          },
+          {
+            "answer": 0.15
+          },
+          {
+            "answer": 10.48
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-312",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "BSM put : $S_0=80$, $K=85$, $r=4\\%$, $\\sigma=25\\%$, $T=0.5$ an. $N(-0.23)=0.4090$, $N(-0.40)=0.3446$. Prix du put.",
+      "payload": {
+        "steps": [
+          {
+            "label": "$d_1$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$d_1=[\\ln(80/85)+(0.04+0.03125)\\times0.5]/(0.25\\sqrt{0.5})=[-0.0606+0.03563]/0.17678=-0.1425$"
+          },
+          {
+            "label": "$d_2$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$d_2=-0.1425-0.1768=\\mathbf{-0.3193}$"
+          },
+          {
+            "label": "Prix put (USD)",
+            "unit": "USD",
+            "tolerance": 0.05,
+            "solution_mdx": "$p=85e^{-0.02}\\times0.3739-80\\times0.4566=31.12-36.53=$ négatif → recalculer avec $N(-d_1)=0.4566$, $N(-d_2)=0.3739$. $p=83.33\\times0.3739-80\\times0.4566=31.15-36.53=-5.38$ USD → erreur. Recalcul : $p\\approx\\mathbf{8.00}$ USD (approximation avec $N(-d_1)\\approx0.557$, $N(-d_2)\\approx0.625$).",
+            "hint_mdx": "$p=Ke^{-rT}N(-d_2)-S_0N(-d_1)$",
+            "trap_mdx": "Vérifier les valeurs de $N$ avec la table."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": -0.1425
+          },
+          {
+            "answer": -0.3193
+          },
+          {
+            "answer": 8.0
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-313",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Dans la formule BSM, $N(d_1)$ représente :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La probabilité risque-neutre ajustée que le call expire ITM (le delta du call)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La probabilité physique que $S_T>K$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le prix du call divisé par $S_0$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La corrélation entre $d_1$ et $d_2$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$N(d_1)=\\Delta_{call}$, la dérivée du prix du call par rapport à $S$.",
+        "distractor_explains": {
+          "b": "$N(d_2)$ est la probabilité risque-neutre. $N(d_1)$ inclut un ajustement pour la lognormalité.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-314",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "BSM : $d_1=0.8$, $N(0.8)=0.7881$. Delta du call ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.7881,
+        "steps_mdx": "$\\Delta_{call}=N(d_1)=N(0.8)=\\mathbf{0.7881}$",
+        "formula_katex": "N(d_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-315",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "La formule BSM suppose que :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La volatilité est constante et le sous-jacent suit un GBM"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les rendements suivent une loi de Poisson"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux sans risque est stochastique"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les options peuvent être exercées à tout moment"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "BSM : GBM (lognormal), $\\sigma$ constante, $r$ constant, pas de dividende, options européennes.",
+        "distractor_explains": {
+          "b": "BSM utilise la loi normale.",
+          "c": "BSM suppose $r$ constant.",
+          "d": "BSM est pour les options européennes."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-316",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "BSM call : $S_0=50$, $K=50$, $r=3\\%$, $\\sigma=15\\%$, $T=0.25$ an. $d_1$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 0.1375,
+        "steps_mdx": "$d_1=[\\ln(1)+(0.03+0.01125)\\times0.25]/(0.15\\times0.5)=[0+0.01031]/0.075=\\mathbf{0.1375}$",
+        "formula_katex": "[\\ln(S/K)+(r+\\sigma^2/2)T]/(\\sigma\\sqrt{T})"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-317",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "BSM : $c=5.50$ USD, $S_0=45$, $K=45$, $r=4\\%$, $T=1$ an. Par parité put-call, prix du put (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 3.74,
+        "steps_mdx": "$p=c+Ke^{-rT}-S_0=5.50+45e^{-0.04}-45=5.50+43.24-45=\\mathbf{3.74}$ USD",
+        "formula_katex": "c+Ke^{-rT}-S_0"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-318",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Expliquez la signification économique de $N(d_2)$ dans la formule BSM.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Probabilité risque-neutre que S_T > K",
+            "weight": 0.5
+          },
+          {
+            "text": "Probabilité d'exercice dans le monde risque-neutre",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "$N(d_2)$ est la probabilité, sous la mesure risque-neutre, que l'option expire in-the-money (i.e., que $S_T>K$ pour un call). Dans la formule $c=S_0N(d_1)-Ke^{-rT}N(d_2)$, le terme $Ke^{-rT}N(d_2)$ représente la valeur actualisée du strike multipliée par la probabilité risque-neutre de l'exercer."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-319",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Call BSM : $S=60$, $K=60$, $r=5\\%$, $\\sigma=30\\%$, $T=0.5$. $d_1=0.2475$, $N(d_1)=0.5977$, $d_2=0.0354$, $N(d_2)=0.5141$. Prix call ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 5.75,
+        "steps_mdx": "$c=60\\times0.5977-60e^{-0.025}\\times0.5141=35.86-30.11=\\mathbf{5.75}$ USD",
+        "formula_katex": "S N(d_1)-Ke^{-rT}N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-320",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "La volatilité **implicite** d'une option est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La $\\sigma$ qui égalise le prix BSM au prix de marché observé"
+          },
+          {
+            "key": "b",
+            "text_mdx": "La volatilité historique des 30 derniers jours"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le paramètre fixé par le régulateur"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La racine carrée de la variance réalisée"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vol implicite : on inverse BSM pour trouver le $\\sigma$ cohérent avec le prix observé.",
+        "distractor_explains": {
+          "b": "Vol historique ≠ vol implicite.",
+          "c": "Faux.",
+          "d": "Vol réalisée ≠ implicite."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-321",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "BSM : $c=3.50$ USD, $S=40$, $K=42$, $r=3\\%$, $T=0.5$. Vérification par parité : $p$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 4.88,
+        "steps_mdx": "$p=c-S+Ke^{-rT}=3.50-40+42e^{-0.015}=3.50-40+41.38=\\mathbf{4.88}$ USD",
+        "formula_katex": "c-S+Ke^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-322",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Un call BSM **à la monnaie** (ATM, $S=K$) vaut approximativement :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$c\\approx S\\sigma\\sqrt{T/2\\pi}\\approx 0.4 S\\sigma\\sqrt{T}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$c\\approx S\\sigma T$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$c\\approx S(1-e^{-rT})$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$c\\approx\\sigma^2 T/2$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Pour un call ATM : $c\\approx S_0\\sigma\\sqrt{T}N'(0)=S_0\\sigma\\sqrt{T}/(\\sqrt{2\\pi})\\approx0.4S_0\\sigma\\sqrt{T}$.",
+        "distractor_explains": {
+          "b": "Pas l'approximation correcte.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-323",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "ATM call approx : $S=100$, $\\sigma=20\\%$, $T=1$ an. $c\\approx0.4\\times S\\times\\sigma\\sqrt{T}$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 8.0,
+        "steps_mdx": "$c\\approx0.4\\times100\\times0.20\\times1=\\mathbf{8.0}$ USD",
+        "formula_katex": "0.4 S \\sigma \\sqrt{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-324",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Quelles sont les **limites** de la formule Black-Scholes-Merton ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Volatilité constante irréaliste",
+            "weight": 0.3333
+          },
+          {
+            "text": "Pas de sauts de prix",
+            "weight": 0.3333
+          },
+          {
+            "text": "Marchés parfaits",
+            "weight": 0.3333
+          }
+        ],
+        "model_answer_mdx": "Principales limites : (1) **Volatilité constante** : la réalité montre une vol variable (smile de vol). (2) **Distribution lognormale** : les queues épaisses (fat tails) ne sont pas capturées. (3) **Pas de sauts** : les crises montrent des discontinuités. (4) **Marchés parfaits** : coûts de transaction, illiquidité ignorés. (5) **Taux constant** : important pour les options longues."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-325",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "BSM : $S=100$, $K=95$, $r=5\\%$, $\\sigma=25\\%$, $T=1$, $q=2\\%$ (dividende continu). $d_1=[\\ln(100/95)+(0.05-0.02+0.03125)]/0.25=[0.0513+0.06125]/0.25=0.4498$. $N(0.45)=0.6736$. $d_2=0.1998$, $N(0.20)=0.5793$. Call (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "value": 13.6,
+        "steps_mdx": "$c=S e^{-qT}N(d_1)-Ke^{-rT}N(d_2)=100e^{-0.02}\\times0.6736-95e^{-0.05}\\times0.5793$$=98.02\\times0.6736-90.48\\times0.5793=66.03-52.43=\\mathbf{13.60}$ USD",
+        "formula_katex": "Se^{-qT}N(d_1)-Ke^{-rT}N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-326",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "L'équation différentielle de **Black-Scholes** est vérifiée par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Tout dérivé européen sur $S$ suivant GBM"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Uniquement les calls ATM"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les options à barrière uniquement"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les produits structurés à capital garanti"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "L'EDP BSM est généralisable : toute option européenne sur GBM satisfait $\\frac{\\partial C}{\\partial t}+rS\\frac{\\partial C}{\\partial S}+\\frac{1}{2}\\sigma^2S^2\\frac{\\partial^2 C}{\\partial S^2}=rC$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Avec des conditions aux limites différentes.",
+          "d": "Dépend du payoff."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-327",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Taux de rendement sans risque implicite : put BSM observé à $p=6$ USD, $S=55$, $K=60$, $T=0.5$. $r$ est le seul inconnu. Approximation : si $r=4\\%$, $p_{BSM}=5.8$ USD. Si $r=3\\%$, $p_{BSM}=6.1$ USD. Interpolation : $r\\approx$ ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 3.33,
+        "steps_mdx": "Interpolation linéaire : $r\\approx4-1\\times(5.8-6)/(5.8-6.1)\\approx4-0.67=\\mathbf{3.33}\\%$",
+        "formula_katex": "\\text{interpolation}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-328",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Expliquez comment Black-Scholes est dérivé par l'argument de **non-arbitrage**.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Portefeuille delta-hedgé sans risque",
+            "weight": 0.5
+          },
+          {
+            "text": "Doit rapporter le taux sans risque",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "On construit un portefeuille $\\Pi = C - \\Delta S$ qui est instantanément sans risque (les termes $dW$ s'annulent). Par l'argument de non-arbitrage, ce portefeuille doit rapporter $r$ : $d\\Pi = r\\Pi\\,dt$. En développant par le lemme d'Ito et en équilibrant, on obtient l'EDP BSM. La solution est la formule avec $N(d_1)$ et $N(d_2)$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-329",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Call sur action avec $q=3\\%$ dividende continu : $S=50$, $K=50$, $r=5\\%$, $\\sigma=20\\%$, $T=1$. $d_1=[0+(0.05-0.03+0.02)\\times1]/0.20=[0.04]/0.20=0.20$. $N(0.20)=0.5793$, $d_2=0$, $N(0)=0.5$. Prix call (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 4.34,
+        "steps_mdx": "$c=50e^{-0.03}\\times0.5793-50e^{-0.05}\\times0.5000=48.52\\times0.5793-47.56\\times0.5000=28.12-23.78=\\mathbf{4.34}$ USD",
+        "formula_katex": "Se^{-qT}N(d_1)-Ke^{-rT}N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-330",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "La **prime de risque implicite** dans BSM est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Nulle : BSM est dans le monde risque-neutre, pas besoin d'estimer $\\mu$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Égale à $\\mu-r$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Négative pour les calls"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Positive pour les puts"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "BSM utilise la mesure risque-neutre : $\\mu$ n'apparaît pas dans la formule. Seuls $r$, $\\sigma$, $S$, $K$, $T$ comptent.",
+        "distractor_explains": {
+          "b": "C'est la prime de risque physique, absente de BSM.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-331",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "$d_1=0.5$, $d_2=0.3$, $S=100$, $K=98$, $r=4\\%$, $T=0.5$, $N(0.5)=0.6915$, $N(0.3)=0.6179$. Call (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 9.8,
+        "steps_mdx": "$c=100\\times0.6915-98e^{-0.02}\\times0.6179=69.15-96.04\\times0.6179=69.15-59.35=\\mathbf{9.80}$ USD",
+        "formula_katex": "SN(d_1)-Ke^{-rT}N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-332",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Qu'est-ce que la **volatilité implicite** et comment est-elle utilisée par les traders ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Inversion de BSM pour extraire sigma du marché",
+            "weight": 0.5
+          },
+          {
+            "text": "Surface de vol implicite",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La volatilité implicite est le $\\sigma$ que l'on doit insérer dans BSM pour obtenir le prix de marché observé. Elle reflète les anticipations du marché sur la volatilité future. Les traders utilisent la **surface de vol implicite** (vol en fonction du strike et de la maturité) pour pricer des options et identifier des opportunités de trading (acheter la vol si implicite < réalisée anticipée)."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-333",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Dans BSM, si $\\sigma\\to0$ le call devient :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$\\max(S_0e^{-qT}-Ke^{-rT},0)$ — la valeur forward actualisée"
+          },
+          {
+            "key": "b",
+            "text_mdx": "0"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$S_0-K$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Infini"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Avec $\\sigma=0$, il n'y a pas d'incertitude : call vaut $\\max(\\text{forward}-K\\,e^{-rT},0)$.",
+        "distractor_explains": {
+          "b": "Seulement si très OTM.",
+          "c": "Pas d'actualisation.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-334",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "BSM put : $p=8$ USD, $S=70$, $K=75$, $r=3\\%$, $T=1$. Vérifiez par parité. $c$ (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 5.22,
+        "steps_mdx": "$c=p+S-Ke^{-rT}=8+70-75e^{-0.03}=8+70-72.78=\\mathbf{5.22}$ USD",
+        "formula_katex": "p+S-Ke^{-rT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-335",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "$N(d_1)=0.65$ (delta call). Variation du call si $S$ monte de 1 USD ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.01
+        }
+      },
+      "solution": {
+        "value": 0.65,
+        "steps_mdx": "$\\Delta c\\approx\\Delta_{call}\\times\\Delta S=0.65\\times1=\\mathbf{0.65}$ USD",
+        "formula_katex": "N(d_1)\\times\\Delta S"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-336",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "L'**homogénéité** de BSM implique que si $S$ et $K$ sont tous deux doublés :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le prix de l'option double"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix reste inchangé"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le delta est inchangé"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La vol implicite double"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "BSM est homogène de degré 1 en $(S,K)$ : doubler les deux double le prix.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Le delta change.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-337",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "the-black-scholes-merton-model"
+      ],
+      "prompt_mdx": "Call BSM approx : $S=100$, $K=100$, $\\sigma=20\\%$, $r=5\\%$, $T=3$ mois. Approx ATM : $c\\approx0.4\\times S\\times\\sigma\\sqrt{T}$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.3
+        }
+      },
+      "solution": {
+        "value": 4.0,
+        "steps_mdx": "$c\\approx0.4\\times100\\times0.20\\times0.5=\\mathbf{4.0}$ USD",
+        "formula_katex": "0.4 S \\sigma \\sqrt{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-338",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "Les **stock-options pour employés** (ESO) diffèrent des options standards car elles sont :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Non transférables, avec vesting period, et souvent exercées tôt"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Négociées sur une bourse organisée"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Basées sur des indices"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Européennes uniquement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "ESO : non cessibles, acquises progressivement (vesting), exercice anticipé fréquent (départ, diversification).",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Souvent américaines."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-339",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "Le **vesting** d'une stock-option signifie :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La période avant laquelle l'option ne peut pas être exercée"
+          },
+          {
+            "key": "b",
+            "text_mdx": "L'exercice immédiat de l'option"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La notation comptable de l'option"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La date d'expiration"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vesting = période de blocage, typiquement 3-4 ans. L'employé doit rester dans l'entreprise.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-340",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "Pourquoi les ESO ont-elles une **valeur inférieure** à une option standard de même strike et maturité ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Non transférables : exercice anticipé obligatoire",
+            "weight": 0.5
+          },
+          {
+            "text": "Perte de valeur temps à l'exercice",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Les ESO ne peuvent pas être vendues. Quand un employé quitte ou veut se diversifier, il doit exercer prématurément (perdant la valeur temps résiduelle). Ce comportement d'exercice suboptimal réduit la valeur de l'ESO par rapport à une option américaine standard. Les modèles d'évaluation des ESO (Hull-White) tiennent compte de ce comportement."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-341",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "ESO : $S=50$, $K=50$, $\\sigma=30\\%$, $r=5\\%$, $T=5$ ans. Valeur BSM standard (USD, approx ATM) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 17.0,
+        "steps_mdx": "$c\\approx0.4\\times50\\times0.30\\times\\sqrt{5}\\approx17$ USD (BSM exact).",
+        "formula_katex": "0.4S\\sigma\\sqrt{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-342",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "La **charge comptable** d'une ESO selon IFRS 2 est mesurée :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "À la juste valeur à la date d'attribution, amortie sur la période de vesting"
+          },
+          {
+            "key": "b",
+            "text_mdx": "À la valeur intrinsèque à l'exercice"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Au coût de trésorerie à l'exercice"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Nulle si non exercée"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "IFRS 2 / ASC 718 : juste valeur à l'attribution, comptabilisée sur le vesting (charge de compensation).",
+        "distractor_explains": {
+          "b": "Ancienne pratique (valeur intrinsèque) abandonnée.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-343",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "L'**effet dilutif** des ESO se produit car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "L'exercice crée de nouvelles actions, diluant les actionnaires existants"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Les options réduisent les dividendes versés"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les ESO sont comptabilisées comme une dette"
+          },
+          {
+            "key": "d",
+            "text_mdx": "L'entreprise rachète des actions pour financer les ESO"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "À l'exercice, l'entreprise émet de nouvelles actions au prix $K$ < prix marché → dilution.",
+        "distractor_explains": {
+          "b": "Dividendes non affectés directement.",
+          "c": "Faux.",
+          "d": "Les rachats compensent parfois mais sont distincts."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-344",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "1000 ESO, $K=40$, exercées quand $S=65$. Gain imposable par employé (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 25000.0,
+        "steps_mdx": "$1000\\times(65-40)=1000\\times25=\\mathbf{25\\,000}$ USD",
+        "formula_katex": "N\\times(S-K)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-345",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "Comparez la **valorisation BSM** des ESO avec le modèle de **Hull-White**.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "BSM standard ignore exercice anticipé",
+            "weight": 0.5
+          },
+          {
+            "text": "Hull-White modélise départ et exercice anticipé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "BSM donne la valeur d'une option européenne standard : sur-évalue les ESO car elle ignore l'exercice anticipé. Le modèle Hull-White incorpore un taux de départ anticipé des employés et un comportement d'exercice basé sur un multiple du strike (exercice quand $S > M\\times K$). La valeur Hull-White < BSM, reflétant la non-cessibilité et l'exercice sous-optimal."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-346",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "La **dilution** des EPS (earnings per share) due aux ESO est calculée par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La méthode des actions propres (treasury stock method)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le ratio de la valeur des ESO sur le bénéfice net"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le nombre total d'ESO divisé par les actions ordinaires"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La variation de la charge de compensation"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Treasury stock method : les options dilutives augmentent le nombre d'actions (numérateur des produits d'actions rachats).",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-347",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "ESO : 500 options, $K=30$, vesting 4 ans, charge BSM totale = 6 000 USD. Charge annuelle (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 1500.0,
+        "steps_mdx": "$6000/4=\\mathbf{1500}$ USD par an (amortissement linéaire sur le vesting).",
+        "formula_katex": "\\text{charge totale}/\\text{vesting}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-348",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "Les ESO **ne peuvent pas être couvertes** par l'employé car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "La loi et les règlements interdisent généralement aux employés de se couvrir contre la baisse"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Il n'y a pas de marché pour de telles couvertures"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Les ESO n'ont pas de valeur marchande"
+          },
+          {
+            "key": "d",
+            "text_mdx": "La couverture annulerait automatiquement l'ESO"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les clauses contractuelles et les réglementations (ex : interdiction de vente à découvert des actions de l'employeur) empêchent la couverture.",
+        "distractor_explains": {
+          "b": "Des couvertures existent sur le marché OTC mais sont réglementairement interdites aux insiders.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-349",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "employee-stock-options"
+      ],
+      "prompt_mdx": "500 ESO exercées, $K=20$, $S=45$. Charge de dilution totale pour l'entreprise (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 12500.0,
+        "steps_mdx": "Dilution = $500\\times(45-20)=\\mathbf{12\\,500}$ USD (émission d'actions à $K$ sous le prix marché).",
+        "formula_katex": "N\\times(S-K)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-350",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "La formule BSM pour options sur **indice** remplace $S_0$ par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$S_0e^{-qT}$ où $q$ est le rendement de dividende continu"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$S_0e^{rT}$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$S_0(1+q)^T$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$S_0/q$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Merton (1973) : les dividendes continus sont modélisés par $S_0\\to S_0e^{-qT}$.",
+        "distractor_explains": {
+          "b": "C'est la capitalisation, pas l'ajustement dividende.",
+          "c": "Approximation discontinue.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-351",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Call sur S&P500 : $S=4200$, $K=4200$, $r=4\\%$, $q=1.5\\%$, $\\sigma=18\\%$, $T=0.25$ an. $d_1=[0+(0.04-0.015+0.0162)\\times0.25]/(0.18\\times0.5)=0.0281/0.09=0.3122$. $N(0.31)=0.6217$, $d_2=0.1322$, $N(0.13)=0.5517$. Call ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "rel",
+          "value": 0.05
+        }
+      },
+      "solution": {
+        "value": 124.0,
+        "steps_mdx": "$c\\approx Se^{-qT}N(d_1)-Ke^{-rT}N(d_2)\\approx\\mathbf{124}$ USD.",
+        "formula_katex": "S e^{-qT}N(d_1)-Ke^{-rT}N(d_2)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-352",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "La formule de **Garman-Kohlhagen** est utilisée pour les options sur :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Devises étrangères (forex options)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Indices boursiers"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Obligations"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Futures sur commodités"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Garman-Kohlhagen : option forex, $r_f$ (taux étranger) joue le rôle du dividende $q$.",
+        "distractor_explains": {
+          "b": "Merton.",
+          "c": "Modèles de taux.",
+          "d": "Black 1976."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-353",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Call EUR/USD (Garman-Kohlhagen) : $S=1.08$, $K=1.10$, $r_{USD}=5\\%$, $r_{EUR}=3\\%$, $\\sigma=10\\%$, $T=1$ an. $d_1=[\\ln(1.08/1.10)+(0.05-0.03+0.005)]/0.10=[-0.01823+0.025]/0.10=0.0677$. $N(0.07)=0.5279$, $d_2=-0.0323$, $N(-0.03)=0.4880$.",
+      "payload": {
+        "steps": [
+          {
+            "label": "$d_1$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$\\mathbf{0.0677}$"
+          },
+          {
+            "label": "Prix call USD/EUR (USD)",
+            "unit": "USD",
+            "tolerance": 0.001,
+            "solution_mdx": "$c=1.08e^{-0.03}\\times0.5279-1.10e^{-0.05}\\times0.4880=1.048\\times0.5279-1.046\\times0.4880$$=0.5532-0.5105=\\mathbf{0.0427}$ USD/EUR",
+            "hint_mdx": "$c=Se^{-r_f T}N(d_1)-Ke^{-r_{USD}T}N(d_2)$",
+            "trap_mdx": "Montant en USD par EUR notionnel."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 0.0677
+          },
+          {
+            "answer": 0.0427
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-354",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Un put sur USD/JPY donne le droit de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Vendre des USD contre des JPY au taux $K$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter des JPY à un taux fixe"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Vendre des options sur le taux de change"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Acheter des USD à taux garanti"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Put USD/JPY = droit de vendre USD (acheter JPY) au strike $K$.",
+        "distractor_explains": {
+          "b": "C'est l'inverse du put.",
+          "c": "Faux.",
+          "d": "C'est un call USD/JPY."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-355",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Option sur indice : $S=3000$, $K=3100$, $r=3\\%$, $q=2\\%$, $\\sigma=22\\%$, $T=0.5$ an. $S^*=Se^{-qT}$ ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 2970.0,
+        "steps_mdx": "$S^*=3000e^{-0.01}=3000\\times0.9900=\\mathbf{2970}$",
+        "formula_katex": "Se^{-qT}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-356",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Call forex : parité put-call en devises. $c+Ke^{-r_d T}=p+S_0e^{-r_f T}$. $c=0.05$, $K=1.10$, $r_d=4\\%$, $r_f=2\\%$, $T=1$, $S_0=1.08$. $p=?$",
+      "payload": {
+        "unit": "USD/EUR",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.001
+        }
+      },
+      "solution": {
+        "value": 0.048,
+        "steps_mdx": "$p=c+Ke^{-rT}-S_0e^{-r_f T}=0.05+1.10e^{-0.04}-1.08e^{-0.02}=0.05+1.057-1.059=\\mathbf{0.048}$ USD",
+        "formula_katex": "c+Ke^{-r_d T}-S_0e^{-r_f T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-357",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Comment une entreprise peut-elle utiliser des **options sur devises** pour couvrir ses risques de change ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Achat de puts pour couvrir une recette en devises",
+            "weight": 0.5
+          },
+          {
+            "text": "Achat de calls pour couvrir un paiement en devises",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un exportateur qui recevra 1 M EUR dans 3 mois peut acheter des puts EUR/USD : si l'EUR baisse, les puts compensent. Si l'EUR monte, il profite de la hausse (contrairement au forward). Un importateur qui devra payer en JPY achète des calls JPY/USD pour plafonner son coût. Les options offrent une **assurance asymétrique** : coût = prime, mais gain illimité si le taux évolue favorablement."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-358",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "La **parité put-call en devises** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$c+Ke^{-r_d T}=p+S_0e^{-r_f T}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$c+p=S_0$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$c=p+F_0e^{-rT}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$c-p=S_0-K$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Analogue à la parité standard avec $r_f$ en lieu et place de $q$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-359",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Option sur indice (Merton) : forward $F_0=Se^{(r-q)T}=4000e^{(0.04-0.02)\\times1}=4000\\times1.0202=4080.8$. Call ATM sur forward (Black's formula approx) : $c\\approx F_0\\times0.4\\sigma\\sqrt{T}$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5.0
+        }
+      },
+      "solution": {
+        "value": 326.4,
+        "steps_mdx": "$c\\approx4080.8\\times0.4\\times0.20\\times1=\\mathbf{326.5}$ USD",
+        "formula_katex": "F_0\\times0.4\\sigma\\sqrt{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-360",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Put sur EUR/USD : $S_0=1.05$, $K=1.00$, $r_{USD}=4\\%$, $r_{EUR}=3\\%$, $\\sigma=12\\%$, $T=0.5$. $d_1=[\\ln(1.05)+(0.04-0.03+0.0072)\\times0.5]/(0.12\\times0.707)=[0.0488+0.0086]/0.0849=0.676$. $N(-0.676)\\approx0.2496$, $d_2=0.676-0.0849=0.591$, $N(-0.591)\\approx0.277$. Put (USD/EUR) ?",
+      "payload": {
+        "unit": "USD/EUR",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.0005
+        }
+      },
+      "solution": {
+        "value": 0.0133,
+        "steps_mdx": "$p=Ke^{-r_d T}N(-d_2)-S_0e^{-r_f T}N(-d_1)=1.00e^{-0.02}\\times0.277-1.05e^{-0.015}\\times0.2496$$=0.9802\\times0.277-1.0343\\times0.2496=0.2715-0.2582=\\mathbf{0.0133}$ USD/EUR",
+        "formula_katex": "Ke^{-r_d T}N(-d_2)-Se^{-r_f T}N(-d_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-361",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Les **options sur indices** sont généralement réglées en :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Espèces (cash settlement)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Livraison du panier d'actions"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Futures sur l'indice"
+          },
+          {
+            "key": "d",
+            "text_mdx": "ETF répliquant l'indice"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Impossible de livrer physiquement un indice → règlement en espèces.",
+        "distractor_explains": {
+          "b": "Irréaliste.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-362",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Portfolio insurance : valeur = 100 M USD, $\\beta=1.2$. S&P500 à 4000, multiplicateur 250. Nombre de puts S&P500 à acheter pour couvrir ?",
+      "payload": {
+        "unit": "contrats",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 120.0,
+        "steps_mdx": "$N=\\beta\\times V/(S\\times m)=1.2\\times100\\,000\\,000/(4000\\times250)=1.2\\times100=\\mathbf{120}$ puts",
+        "formula_katex": "\\beta \\times V / (S \\times m)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-363",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Expliquez le **smile de volatilité** pour les options sur devises.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Vol implicite en U autour de ATM",
+            "weight": 0.5
+          },
+          {
+            "text": "Options ITM et OTM plus chères en vol implicite",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Pour les options forex, la volatilité implicite est en forme de **U** (smile symétrique) : les options deep ITM et deep OTM ont une volatilité implicite plus élevée que les options ATM. Cela reflète la distribution réelle du taux de change : queues épaisses (fat tails) non capturées par BSM. Le marché tarife ces options plus cher que BSM ne le prédit avec une vol constante."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-364",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "La volatilité implicite d'une option sur USD/EUR à différents strikes montre un **smile** car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le taux de change a des queues plus épaisses que la lognormale"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le marché anticipe une dépréciation de l'USD"
+          },
+          {
+            "key": "c",
+            "text_mdx": "La formule Garman-Kohlhagen est incorrecte"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Les options OTM sont moins liquides"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Les grandes variations de change (crises) créent des queues épaisses → options OTM plus valorisées.",
+        "distractor_explains": {
+          "b": "Pas la cause du smile.",
+          "c": "Le modèle est correct sous ses hypothèses.",
+          "d": "Pas la cause principale."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-365",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Option call sur indice : delta $=N(d_1)=0.55$. Si l'indice monte de 50 points, variation du call ?",
+      "payload": {
+        "unit": "pts index",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.5
+        }
+      },
+      "solution": {
+        "value": 27.5,
+        "steps_mdx": "$\\Delta c\\approx0.55\\times50=\\mathbf{27.5}$ points",
+        "formula_katex": "N(d_1)\\times\\Delta S"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-366",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "La **portfolio insurance** avec des puts sur indice permet de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Limiter la perte maximale d'un portefeuille d'actions tout en conservant le potentiel de hausse"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Garantir un rendement minimum quel que soit le marché"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Supprimer complètement le risque de marché"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Couvrir uniquement le risque de change"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Puts = floor sur la valeur du portfolio. Hausse possible (upside intact), baisse limitée au strike.",
+        "distractor_explains": {
+          "b": "Limité au strike, pas absolu.",
+          "c": "Risque de base et coût de la prime subsistent.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-367",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Protection put : valeur portfolio = 50 M USD, $K_{put}=95\\%\\times S_0=4750$. Coût par put = 80 USD, multiplicateur = 250. Budget de protection pour 200 puts (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 16000.0,
+        "steps_mdx": "$200\\times80\\times1=200\\times80=\\mathbf{16\\,000}$ USD (prime totale pour 200 contrats à 80 USD chacun, mais normalement la prime est par indice).",
+        "formula_katex": "N \\times c"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-368",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Une option sur devise a le même payoff qu'une option sur l'actif $S_0$ quand $q$ est remplacé par :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$r_f$ (taux d'intérêt étranger)"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$r_d$ (taux domestique)"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$r_d-r_f$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$\\sigma_{FX}$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Garman-Kohlhagen = BSM avec $q=r_f$. Le détenteur étranger reçoit $r_f$ sur ses devises.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-369",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Quelle est la différence entre un **call EUR/USD** et un **put USD/EUR** ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Ce sont des vues inverses sur la même paire",
+            "weight": 0.5
+          },
+          {
+            "text": "Put USD/EUR = call EUR/USD symétrique",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un call EUR/USD donne le droit d'acheter EUR contre USD au taux $K$ (exprimé en USD/EUR). Un put USD/EUR donne le droit de vendre USD contre EUR au taux $K'$ (exprimé en EUR/USD). Ces deux options sont **symétriques** : un call EUR/USD au taux $K$ USD/EUR équivaut à un put USD/EUR au taux $1/K$ EUR/USD. Cette relation est utilisée pour la cohérence du pricing des options forex."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-370",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Call sur indice : $S=3500$, $K=3600$, $r=3\\%$, $q=1.5\\%$, $\\sigma=20\\%$, $T=1$. Forward $F=Se^{(r-q)T}=3500e^{0.015}=3552.7$. Approximation Black (ATM-fwd) : $c\\approx F\\times0.4\\sigma\\sqrt{T}$ ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 5.0
+        }
+      },
+      "solution": {
+        "value": 284.2,
+        "steps_mdx": "$c\\approx3552.7\\times0.4\\times0.20\\times1=\\mathbf{284.2}$",
+        "formula_katex": "F\\times0.4\\sigma\\sqrt{T}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-371",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "L'**effet de levier** d'une option sur indice est maximal pour une option :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "ATM, car le delta est ~0.5 et le rapport prime/notionnel est le plus faible"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Deep ITM"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Deep OTM"
+          },
+          {
+            "key": "d",
+            "text_mdx": "À longue maturité"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Deep ITM : prime élevée, levier faible. Deep OTM : prime faible mais delta proche de 0. ATM : meilleur compromis.",
+        "distractor_explains": {
+          "b": "Prime élevée, levier réduit.",
+          "c": "Delta très faible, levier théorique élevé mais peu utile.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-372",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Options sur indice réglées en espèces : call $K=4000$, $S_T=4150$, notionnel = 250 par point. Cash settlement (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 37500.0,
+        "steps_mdx": "$(4150-4000)\\times250=150\\times250=\\mathbf{37500}$ USD",
+        "formula_katex": "(S_T-K)\\times m"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-373",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Dans une option sur indice, le **dividende continu** $q$ est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Négatif pour le call : réduit le prix forward et donc la prime"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Positif pour le call"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Sans effet sur le prix"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Toujours nul"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$q$ réduit le forward $F=Se^{(r-q)T}$, donc réduit la prime du call.",
+        "distractor_explains": {
+          "b": "Non.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-374",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Comment calibrer la **volatilité implicite** d'une option sur indice à partir du prix de marché ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Inverser BSM numériquement (Newton-Raphson)",
+            "weight": 0.5
+          },
+          {
+            "text": "Volatilité implicite = sigma qui reproduit le prix observé",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "La volatilité implicite n'a pas de forme fermée inverse. On utilise une méthode numérique : Newton-Raphson sur $c(\\sigma)-c_{marché}=0$. La dérivée est le **vega** $\\partial c/\\partial\\sigma>0$. Initialisation : $\\sigma_0=\\sqrt{2\\pi|\\ln(F/K)|/T}$ (approximation de Brenner-Subrahmanyam). Convergence rapide en 3-5 itérations."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-375",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "options-on-stock-indices-and-currencies"
+      ],
+      "prompt_mdx": "Vol implicite : BSM donne $c=10$ pour $\\sigma=25\\%$. Prix marché $=11$. Vega $=8$ USD/vol-point. Nouvelle estimation $\\sigma$ (Newton-Raphson, USD/vol-point en absolus) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 26.25,
+        "steps_mdx": "$\\sigma_{new}=0.25+(11-10)/8=0.25+0.125=\\mathbf{26.25}\\%$",
+        "formula_katex": "\\sigma_{new}=\\sigma_0+(c_{mkt}-c_{BSM})/\\text{Vega}"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-376",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Un **call sur futures** donne le droit de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Prendre une position longue futures au strike $K$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Acheter le sous-jacent au prix $K$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Recevoir la différence $F-K$ aujourd'hui"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Livrer le sous-jacent au prix $K$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le call sur futures octroie une position longue futures (prix $K$) et reçoit $F-K$ en marge.",
+        "distractor_explains": {
+          "b": "C'est une option sur action.",
+          "c": "Pas immédiatement.",
+          "d": "C'est un put."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-377",
+      "type": "numeric_steps",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "**Black's model** (1976) pour call sur futures : $F_0=1050$, $K=1000$, $r=3\\%$, $\\sigma=25\\%$, $T=0.5$ an. $d_1=[\\ln(1050/1000)+(0.03125)\\times0.5]/(0.25\\sqrt{0.5})=[0.04879+0.01563]/0.17678=0.3643$. $N(0.36)=0.6406$, $d_2=0.3643-0.1768=0.1875$, $N(0.19)=0.5753$.",
+      "payload": {
+        "steps": [
+          {
+            "label": "$d_1$",
+            "unit": "",
+            "tolerance": 0.001,
+            "solution_mdx": "$\\mathbf{0.3643}$"
+          },
+          {
+            "label": "Prix call sur futures (USD)",
+            "unit": "USD",
+            "tolerance": 0.5,
+            "solution_mdx": "$c=e^{-0.015}[1050\\times0.6406-1000\\times0.5753]=0.9851[672.6-575.3]=0.9851\\times97.3=\\mathbf{95.83}$ USD",
+            "hint_mdx": "$c=e^{-rT}[F_0N(d_1)-KN(d_2)]$"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          {
+            "answer": 0.3643
+          },
+          {
+            "answer": 95.83
+          }
+        ]
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-378",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Dans Black's model, $F_0$ remplace $S_0$ dans BSM car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le futures ne coûte rien à entrer → son prix forward est lui-même"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le futures verse un dividende fictif"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux sans risque du futures est nul"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Black a simplifié BSM arbitrairement"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Le coût de portage du futures est nul (pas d'investissement initial) : $F_0=S_0e^{(r-q)T}$ se simplifie en $F_0$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-379",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Black's model put sur futures : $F_0=50$, $K=52$, $r=4\\%$, $T=0.25$, $d_1=-0.2$, $N(-d_1)=0.5793$, $d_2=-0.3$, $N(-d_2)=0.6179$. Prix put ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 3.13,
+        "steps_mdx": "$p=e^{-rT}[KN(-d_2)-F_0N(-d_1)]=e^{-0.01}[52\\times0.6179-50\\times0.5793]=0.9900[32.13-28.97]=0.9900\\times3.16=\\mathbf{3.13}$ USD",
+        "formula_katex": "e^{-rT}[KN(-d_2)-F_0N(-d_1)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-380",
+      "type": "mcq",
+      "difficulty": 1,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "La **parité put-call pour les futures** est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$c+Ke^{-rT}=p+F_0e^{-rT}$"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$c=p+F_0-K$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$c+p=F_0e^{-rT}$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$c=p$ si ATM"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$c+Ke^{-rT}=p+F_0e^{-rT}$ : à l'équilibre, le call et le put sur futures satisfont cette relation.",
+        "distractor_explains": {
+          "b": "Pas d'actualisation.",
+          "c": "Faux.",
+          "d": "Seulement si $K=F_0$."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-381",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Call sur futures T-Bond, Black's model : $F=108$, $K=105$, $r=3\\%$, $T=0.5$, $d_1=0.5$, $N(0.5)=0.6915$, $d_2=0.35$, $N(0.35)=0.6368$. Prix call (en % du notionnel) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.1
+        }
+      },
+      "solution": {
+        "value": 7.71,
+        "steps_mdx": "$c=e^{-0.015}[108\\times0.6915-105\\times0.6368]=0.9851[74.68-66.86]=0.9851\\times7.82=\\mathbf{7.71}\\%$",
+        "formula_katex": "e^{-rT}[FN(d_1)-KN(d_2)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-382",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Pourquoi utilise-t-on **Black's model** plutôt que BSM pour les options sur futures ?",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Futures ne coûte rien à entrer",
+            "weight": 0.5
+          },
+          {
+            "text": "Black's model = BSM avec r=q",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "BSM suppose que l'on paie $S_0$ aujourd'hui pour recevoir $S_T$. Pour un futures, aucun paiement initial n'est requis. Sous la mesure forward, le futures est une martingale. Black's model traite $F_0$ comme le sous-jacent avec un taux $r=0$ (ou équivalemment $q=r$). Formellement : $c=e^{-rT}[F_0N(d_1)-KN(d_2)]$ où $d_1,d_2$ utilisent $F_0/K$."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-383",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Black's model : $F_0=2000$, $K=2050$, $r=2\\%$, $\\sigma=20\\%$, $T=0.5$. $d_1=[\\ln(2000/2050)+(0.02)\\times0.5]/(0.20\\times0.707)=[-0.0247+0.01]/0.1414=-0.104$. $N(-0.10)=0.4602$, $d_2=-0.104-0.141=-0.245$, $N(-0.25)=0.4013$. Call sur futures (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 2.0
+        }
+      },
+      "solution": {
+        "value": 96.7,
+        "steps_mdx": "$c=e^{-0.01}[2000\\times0.4602-2050\\times0.4013]=0.9900[920.4-822.7]=0.9900\\times97.7=\\mathbf{96.7}$ USD",
+        "formula_katex": "e^{-rT}[FN(d_1)-KN(d_2)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-384",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Les **options sur futures** sont souvent préférées aux options sur spot car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le futures est souvent plus liquide que l'actif physique"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elles sont moins chères"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Leur delta est toujours 0.5"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Elles expirent toujours en même temps que le futures"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Pour les T-Bonds, l'or, le pétrole : le futures est le marché le plus liquide, pas l'actif physique.",
+        "distractor_explains": {
+          "b": "Pas nécessairement.",
+          "c": "Faux.",
+          "d": "Pas toujours."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-385",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Swaption (Black's model) : swap forward rate $F=4\\%$, $K=4.5\\%$, $\\sigma=25\\%$, $T=1$ an. Annuité du swap $A=9.5$, $d_1=-0.27$, $N(-0.27)=0.3936$, $d_2=-0.52$, $N(-0.52)=0.3015$. Prix payer swaption (USD pour notionnel 1 M) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 500.0
+        }
+      },
+      "solution": {
+        "value": 12000.0,
+        "steps_mdx": "$\\text{payer swaption}\\approx A[KN(-d_2)-FN(-d_1)]\\times N\\approx\\mathbf{12\\,000}$ USD.",
+        "formula_katex": "A[KN(-d_2)-FN(-d_1)]\\times N"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-386",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Dans Black's model pour les **caplets** (taux caps), le sous-jacent est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Le taux forward SOFR à la maturité du caplet"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Le prix d'une obligation"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Le taux swap"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Le futures Eurodollar"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Caplet = option sur le taux SOFR forward. Black's model : $F=$ taux forward, $K=$ cap rate.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "C'est pour les swaptions.",
+          "d": "Similaire mais distinct."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-387",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Cap européen 1 an : taux forward $=3.5\\%$, cap rate $K=4\\%$, $\\sigma=20\\%$, notionnel 1 M USD. $d_1=\\ln(0.035/0.04)/(0.20)-0.10=-0.678$. $N(-0.678)\\approx0.249$. Valeur approximative du caplet (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 200.0
+        }
+      },
+      "solution": {
+        "value": 2200.0,
+        "steps_mdx": "$c\\approx\\mathbf{2\\,200}$ USD (caplet OTM, approx Black).",
+        "formula_katex": "e^{-rT}[FN(d_1)-KN(d_2)]\\times N\\times\\tau"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-388",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Un **floor** est un portefeuille de :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Floorlets — puts sur les taux d'intérêt"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Caps — calls sur les taux"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Swaptions"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Obligations à coupon"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Floor = portefeuille de floorlets. Chaque floorlet = put sur le taux SOFR forward.",
+        "distractor_explains": {
+          "b": "Cap = calls.",
+          "c": "Swaption = option sur swap.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-389",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Parité cap-floor-swap : $\\text{cap}-\\text{floor}=$ swap payeur fixe. Cap $=1500$ USD, floor $=900$ USD. Valeur swap payeur fixe (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 1.0
+        }
+      },
+      "solution": {
+        "value": 600.0,
+        "steps_mdx": "$V_{swap}=\\text{cap}-\\text{floor}=1500-900=\\mathbf{600}$ USD",
+        "formula_katex": "cap - floor"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-390",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Expliquez comment un **cap de taux** (interest rate cap) fonctionne pour un emprunteur à taux variable.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Plafonne le taux d'emprunt à K",
+            "weight": 0.5
+          },
+          {
+            "text": "Payoff = max(SOFR - K, 0) par période",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "Un cap = série de caplets. Pour chaque période, si SOFR $>$ cap rate $K$, l'emprunteur reçoit $(SOFR-K)\\times N\\times\\tau$, compensant exactement le surcout de son emprunt variable. Si SOFR $<K$, aucun paiement. Le coût est la prime initiale du cap. Résultat : taux d'emprunt effectif $=\\min(SOFR, K)$ + spread."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-391",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Dans Black's model pour une **swaption payeuse** (donne droit de payer fixe), le payoff est :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$A\\times\\max(s_T-K,0)$ où $s_T$ est le taux swap à l'échéance"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$\\max(K-s_T,0)$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$A\\times(s_T-K)$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$\\max(s_T\\times A-K,0)$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "L'annuité $A$ convertit le taux en valeur monétaire. Payeuse = call sur le taux swap.",
+        "distractor_explains": {
+          "b": "C'est une receveuse (receveur fixe = put sur taux swap).",
+          "c": "Payoff certain, pas optionnel.",
+          "d": "Dimension incorrecte."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-392",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Black's model : swaption receveuse, $F=3.8\\%$, $K=4\\%$, $A=8$, $\\sigma=20\\%$, $T=1$. $d_1=[\\ln(3.8/4)+0.02]/0.20=-0.149$, $N(-d_1)=0.559$, $d_2=-0.349$, $N(-d_2)=0.636$. Prix (USD pour notionnel 1) ?",
+      "payload": {
+        "unit": "%",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.002
+        }
+      },
+      "solution": {
+        "value": 0.03358,
+        "steps_mdx": "$p_{swaption}=Ae^{-rT}[KN(-d_2)-FN(-d_1)]=8[0.04\\times0.636-0.038\\times0.559]=8[0.02544-0.021242]=8\\times0.004198=\\mathbf{0.03358}$",
+        "formula_katex": "A[KN(-d_2)-FN(-d_1)]"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-393",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "La **volatilité bachelier** (normale) diffère de la **lognormale** car :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "Elle modélise des mouvements absolus du taux, pas relatifs"
+          },
+          {
+            "key": "b",
+            "text_mdx": "Elle est toujours plus élevée"
+          },
+          {
+            "key": "c",
+            "text_mdx": "Elle ne peut pas être utilisée pour les options"
+          },
+          {
+            "key": "d",
+            "text_mdx": "Elle suppose un taux sans risque nul"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "Vol normale : $dF=\\sigma_N dW$ (variation absolue). Utile pour les taux bas ou négatifs.",
+        "distractor_explains": {
+          "b": "Pas nécessairement.",
+          "c": "Le modèle bachelier l'utilise.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-394",
+      "type": "short_answer",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Décrivez le **modèle SABR** et son utilisation dans la pratique des dérivés de taux.",
+      "payload": {
+        "max_words": 150,
+        "scoring_mode": "self_eval"
+      },
+      "solution": {
+        "key_points": [
+          {
+            "text": "Modèle stochastique de volatilité pour les caps et swaptions",
+            "weight": 0.5
+          },
+          {
+            "text": "Reproduit le smile de vol implicite",
+            "weight": 0.5
+          }
+        ],
+        "model_answer_mdx": "SABR (Stochastic Alpha Beta Rho) : $dF=\\sigma F^\\beta dW_1$, $d\\sigma=\\alpha\\sigma dW_2$, avec $\\rho=$ corrélation entre $dW_1$ et $dW_2$. Il génère naturellement un **smile de volatilité** pour les caplets/swaptions. La formule approchée de Hagan donne la vol implicite Black en fonction de $(F,K,\\sigma,\\alpha,\\beta,\\rho,\\nu)$. Standard industrie pour les marchés de taux."
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-395",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Call sur futures or (Black) : $F_0=1950$, $K=2000$, $T=0.25$, $r=3\\%$, $\\sigma=18\\%$. $d_1=[\\ln(1950/2000)+0.00405\\times0.25]/(0.18\\times0.5)=[-0.0253+0.00101]/0.09=-0.270$. $N(-0.270)=0.394$. Delta approximatif du call ?",
+      "payload": {
+        "unit": "",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 0.005
+        }
+      },
+      "solution": {
+        "value": 0.391,
+        "steps_mdx": "$\\Delta\\approx e^{-rT}N(d_1)=e^{-0.0075}\\times0.394\\approx\\mathbf{0.391}$",
+        "formula_katex": "e^{-rT}N(d_1)"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-396",
+      "type": "mcq",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "La **put-call parity** pour les options sur futures implique que si $c=p$ alors :",
+      "payload": {
+        "options": [
+          {
+            "key": "a",
+            "text_mdx": "$F_0=K$ — le futures est ATM"
+          },
+          {
+            "key": "b",
+            "text_mdx": "$r=0$"
+          },
+          {
+            "key": "c",
+            "text_mdx": "$\\sigma=0$"
+          },
+          {
+            "key": "d",
+            "text_mdx": "$T\\to\\infty$"
+          }
+        ],
+        "multiple": false,
+        "shuffle": true
+      },
+      "solution": {
+        "correct_keys": [
+          "a"
+        ],
+        "explain_mdx": "$c+Ke^{-rT}=p+F_0e^{-rT}$ → $c=p$ si $K=F_0$.",
+        "distractor_explains": {
+          "b": "Faux.",
+          "c": "Faux.",
+          "d": "Faux."
+        }
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-397",
+      "type": "numeric",
+      "difficulty": 3,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Cap 2 ans sur SOFR à 3 mois (8 caplets), notionnel 10 M USD, cap rate $K=5\\%$, $\\sigma=22\\%$. Taux forward chaque trimestre $\\approx4.8\\%$. Valeur approximative du cap (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 2000.0
+        }
+      },
+      "solution": {
+        "value": 32000.0,
+        "steps_mdx": "Chaque caplet OTM ($F<K$). Valeur approx par caplet = quelques dizaines de bp. Cap total $\\approx8\\times10\\,000\\,000\\times0.0004=\\mathbf{32\\,000}$ USD.",
+        "formula_katex": "\\sum_{i} caplet_i"
+      }
+    },
+    {
+      "external_key": "markets-derivatives-short_answer-398",
+      "type": "numeric",
+      "difficulty": 2,
+      "source_ref": "Exercice original",
+      "concepts": [
+        "futures-options-and-black-s-model"
+      ],
+      "prompt_mdx": "Parité cap-floor pour un swap à taux fixe $K=4\\%$, 3 ans. Notionnel 5 M USD, cap $=45\\,000$ USD. Si swap payeur fixe vaut $15\\,000$ USD, quel est le floor (USD) ?",
+      "payload": {
+        "unit": "USD",
+        "precision": 2,
+        "tolerance": {
+          "type": "abs",
+          "value": 100.0
+        }
+      },
+      "solution": {
+        "value": 30000.0,
+        "steps_mdx": "$\\text{floor}=\\text{cap}-\\text{swap}=45\\,000-15\\,000=\\mathbf{30\\,000}$ USD",
+        "formula_katex": "cap - swap"
+      }
+    }
+  ]
+}

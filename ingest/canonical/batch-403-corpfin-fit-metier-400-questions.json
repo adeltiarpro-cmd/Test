@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "You've never worked in finance before. How much do you know about what bankers actually do?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -43,7 +44,8 @@
       ],
       "prompt_mdx": "Let's say I'm working on an IPO for a client. Can you describe briefly what I would do?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -77,7 +79,8 @@
       ],
       "prompt_mdx": "How much do you know about the lifestyle in this industry? Do you know how many hours you're going to work each week?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -103,7 +106,8 @@
       ],
       "prompt_mdx": "I see you were an English major in college, and had time to participate in a lot of different activities. Can you talk about a time when you had to work long hours and make sacrifices?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -125,7 +129,8 @@
       ],
       "prompt_mdx": "Can you tell me about the different product and industry groups at our bank?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -155,7 +160,8 @@
       ],
       "prompt_mdx": "What's in a pitch book?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -185,7 +191,8 @@
       ],
       "prompt_mdx": "How do companies select the bankers they work with?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -207,7 +214,8 @@
       ],
       "prompt_mdx": "Walk me through the process of a typical sell-side M&A deal.",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -241,7 +249,8 @@
       ],
       "prompt_mdx": "Walk me through the process of a typical buy-side M&A deal.",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -271,7 +280,8 @@
       ],
       "prompt_mdx": "Walk me through a debt issuance deal.",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -301,7 +311,8 @@
       ],
       "prompt_mdx": "How are Equity Capital Markets (ECM) and Debt Capital Markets (DCM) different from M&A or industry groups?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -327,7 +338,8 @@
       ],
       "prompt_mdx": "What's the difference between DCM and Leveraged Finance?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -353,7 +365,8 @@
       ],
       "prompt_mdx": "Explain what a divestiture is.",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -379,7 +392,8 @@
       ],
       "prompt_mdx": "Imagine you want to draft a 1-slide company profile for an investor. What would you put there?",
       "payload": {
-        "max_words": 150
+        "max_words": 150,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

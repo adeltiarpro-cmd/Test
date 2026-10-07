@@ -13,7 +13,8 @@
       ],
       "prompt_mdx": "You've had tons of engineering experience and you've worked at many tech companies. Why do you want to be an investment banker now?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -35,7 +36,8 @@
       ],
       "prompt_mdx": "You've done Big 4 accounting for the past year, why would you want a job that's a lot more stressful with twice the hours?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -57,7 +59,8 @@
       ],
       "prompt_mdx": "I see you've practiced law at Wilson Sonsini for the past 4 years, if you've been there that long, you're probably on Partner-track by now. Why would you want to leave a lucrative career in law and go back to being an entry-level Associate in banking?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -79,7 +82,8 @@
       ],
       "prompt_mdx": "I see you worked at McKinsey one summer and then went to Citi investment banking the next year. Are you sure you want to do investment banking?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -101,7 +105,8 @@
       ],
       "prompt_mdx": "Wow. I must be honest, I rarely see people who have accomplished as much as you have at your age. You sold your own company for over USD 1 million within 2 years of starting it, and became a leading real estate investor in Asia at the same time. Why would you ever want to work for other people in banking if you've been so successful on your own?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -123,7 +128,8 @@
       ],
       "prompt_mdx": "Where else are you interviewing? Is it just banking? Consulting? Other companies?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -145,7 +151,8 @@
       ],
       "prompt_mdx": "Are you mostly interviewing at larger banks like us? What kinds of options within banking are you considering?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -167,7 +174,8 @@
       ],
       "prompt_mdx": "Before you entered business school, I see you switched jobs about once a year. How do I know that you're here to stay for the long-term?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -189,7 +197,8 @@
       ],
       "prompt_mdx": "Recently some Analysts and Associates have left \"early\" and jumped to hedge funds or private equity. If the opportunity comes up, why would you stay here instead?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -211,7 +220,8 @@
       ],
       "prompt_mdx": "Tell me about a time when you failed to honor a commitment.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -233,7 +243,8 @@
       ],
       "prompt_mdx": "If I gave you an offer right now on the spot would you take it?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -255,7 +266,8 @@
       ],
       "prompt_mdx": "Let's say that we were to give you an offer, how long would you need to decide whether or not to accept it?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -277,7 +289,8 @@
       ],
       "prompt_mdx": "You spent this last summer working at Morgan Stanley's investment banking division. It seems like you'd be crazy not to go back, why would you want to work for a smaller firm in our M&A group?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -299,7 +312,8 @@
       ],
       "prompt_mdx": "Since you worked at Bank of America this past year, you probably have the chance to go to a lot of different large banks, why are you interested in us specifically?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -321,7 +335,8 @@
       ],
       "prompt_mdx": "When you were working at that boutique this past summer, you mentioned how you liked the smaller team and more hands-on environment. Why not just go back there? Why do you want to move to a large bank?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -343,7 +358,8 @@
       ],
       "prompt_mdx": "Why are you interested in our M&A division rather than our industry groups? Our Tech, Healthcare and Energy teams have been really successful this year.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -365,7 +381,8 @@
       ],
       "prompt_mdx": "Why do you want to work in Capital Markets? There's hardly any market activity these days.",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -387,7 +404,8 @@
       ],
       "prompt_mdx": "What do you think our bank's greatest weaknesses are?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -409,7 +427,8 @@
       ],
       "prompt_mdx": "Which of our competitors do you admire the most?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -431,7 +450,8 @@
       ],
       "prompt_mdx": "I realize it's still early in your career, you haven't even graduated yet, but have you given any thought to your long-term plans? Do you think you'll stick with investment banking?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -453,7 +473,8 @@
       ],
       "prompt_mdx": "You've had quite diverse experience prior to business school. After you complete your degree, where do you think you'll be going in the long-term?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -475,7 +496,8 @@
       ],
       "prompt_mdx": "What is your career goal?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -497,7 +519,8 @@
       ],
       "prompt_mdx": "Looking into the future 10 years, do you think you'll still be an investment banker?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -519,7 +542,8 @@
       ],
       "prompt_mdx": "I see you have no relevant finance experience, why should we hire you over someone who's had a previous banking internship?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -541,7 +565,8 @@
       ],
       "prompt_mdx": "I see you've worked mostly in wealth management before, why are you looking to switch into banking now?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -563,7 +588,8 @@
       ],
       "prompt_mdx": "You're a smart guy/girl with a lot of options, and right now the economy is not doing well and lots of banks have failed. Why are you still interested in banking when you could do anything else?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -585,7 +611,8 @@
       ],
       "prompt_mdx": "The economy has been improving lately, and more people are \"getting interested\" in finance. How do I know you're serious and not just following everyone else?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -607,7 +634,8 @@
       ],
       "prompt_mdx": "Where did your interest in finance begin?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [
@@ -629,7 +657,8 @@
       ],
       "prompt_mdx": "If you enjoyed your last internship and got an offer to come back, why are you trying to switch into investment banking now?",
       "payload": {
-        "max_words": 250
+        "max_words": 250,
+        "scoring_mode": "self_eval"
       },
       "solution": {
         "key_points": [

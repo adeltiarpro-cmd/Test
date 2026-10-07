@@ -10,6 +10,7 @@ import { schedule } from "./srs";
 export type ExerciseAnswer =
   | { type: "mcq"; selected_keys: string[] }
   | { type: "numeric"; value: number }
+  | { type: "numeric_steps"; steps: number[] }
   | { type: "formula_cloze"; blanks: Record<string, string> }
   | { type: "short_answer"; text: string }
   | { type: "graph_fill"; nodes: Record<string, string> }
@@ -27,10 +28,21 @@ export type RubricBranchResult = {
   must_have: boolean;
 };
 
+export type PointResult = { text: string; covered: boolean; weight: number };
+export type StepResult = {
+  isCorrect: boolean;
+  correctValue: number;
+  solutionMdx: string;
+  trapMdx?: string;
+};
+
 export type AttemptResult = {
   isCorrect: boolean;
   score: number;
   explanation: string;
+  scoringMode?: "auto" | "self_eval" | "partial";
+  pointResults?: PointResult[];
+  stepResults?: StepResult[];
   distractorExplains?: Record<string, string>;
   blankFeedback?: Record<string, { correct: boolean; canonical: string; explain: string }>;
   cellResults?: Record<string, CellResult>;
@@ -232,13 +244,16 @@ function scoreShortAnswer(
   const lower = text.toLowerCase();
   let total = 0;
   let matched = 0;
+  const pointResults: PointResult[] = [];
   for (const kp of sol.key_points) {
     total += kp.weight;
     const keywords = kp.text.toLowerCase().split(/[\s,;]+/).filter(Boolean);
-    if (keywords.every((kw) => lower.includes(kw))) matched += kp.weight;
+    const covered = keywords.every((kw) => lower.includes(kw));
+    if (covered) matched += kp.weight;
+    pointResults.push({ text: kp.text, covered, weight: kp.weight });
   }
   const score = total > 0 ? Math.round((matched / total) * 100) / 100 : 0;
-  return { isCorrect: score >= 0.7, score, explanation: sol.model_answer_mdx };
+  return { isCorrect: score >= 0.7, score, explanation: sol.model_answer_mdx, pointResults };
 }
 
 function scoreGraphFill(
@@ -490,13 +505,51 @@ function scoreMarketSizing(
   };
 }
 
+function scoreNumericSteps(
+  userSteps: number[],
+  pay: {
+    steps: Array<{
+      label: string;
+      unit: string;
+      tolerance: number;
+      hint_mdx?: string;
+      solution_mdx: string;
+      trap_mdx?: string;
+    }>;
+  },
+  sol: { steps: Array<{ answer: number }> }
+): AttemptResult {
+  let correct = 0;
+  const stepResults: StepResult[] = [];
+
+  for (let i = 0; i < sol.steps.length; i++) {
+    const expected = sol.steps[i].answer;
+    const given = userSteps[i] ?? NaN;
+    const tol = pay.steps[i]?.tolerance ?? 0;
+    const isCorrect = isFinite(given) && Math.abs(given - expected) <= Math.max(tol, Math.abs(expected) * 1e-9);
+    if (isCorrect) correct++;
+    stepResults.push({
+      isCorrect,
+      correctValue: expected,
+      solutionMdx: pay.steps[i]?.solution_mdx ?? "",
+      trapMdx: pay.steps[i]?.trap_mdx,
+    });
+  }
+
+  const total = sol.steps.length;
+  const score = total > 0 ? Math.round((correct / total) * 100) / 100 : 0;
+  const allSolutions = pay.steps.map((s) => s.solution_mdx).join("\n\n");
+  return { isCorrect: score >= 0.7, score, explanation: allSolutions, stepResults };
+}
+
 // ── Main action ───────────────────────────────────────────────────────────────
 
 export async function submitAttempt(
   exerciseId: string,
   answer: ExerciseAnswer,
   timeSpentMs: number,
-  confidence: 1 | 2 | 3 = 2
+  confidence: 1 | 2 | 3 = 2,
+  selfEvalRating?: 1 | 2 | 3
 ): Promise<AttemptResult> {
   const supabase = await createClient();
 
@@ -532,6 +585,13 @@ export async function submitAttempt(
         pay.tolerance as { type: "abs" | "rel"; value: number }
       );
       break;
+    case "numeric_steps":
+      result = scoreNumericSteps(
+        answer.steps,
+        pay as Parameters<typeof scoreNumericSteps>[1],
+        sol as Parameters<typeof scoreNumericSteps>[2]
+      );
+      break;
     case "formula_cloze":
       result = scoreFormulaCloze(answer.blanks, {
         blanks: sol.blanks as Record<
@@ -540,9 +600,21 @@ export async function submitAttempt(
         >,
       });
       break;
-    case "short_answer":
-      result = scoreShortAnswer(answer.text, sol as Parameters<typeof scoreShortAnswer>[1]);
+    case "short_answer": {
+      const scoringMode = (pay.scoring_mode as string | undefined) ?? "auto";
+      if (scoringMode === "self_eval" && selfEvalRating !== undefined) {
+        result = {
+          isCorrect: selfEvalRating >= 2,
+          score: selfEvalRating >= 2 ? 1 : 0,
+          explanation: (sol.model_answer_mdx as string) ?? "",
+          scoringMode: "self_eval",
+        };
+      } else {
+        result = scoreShortAnswer(answer.text, sol as Parameters<typeof scoreShortAnswer>[1]);
+        result.scoringMode = scoringMode as "auto" | "partial";
+      }
       break;
+    }
     case "graph_fill":
       result = scoreGraphFill(answer.nodes, {
         nodes: sol.nodes as Record<
@@ -679,4 +751,97 @@ export async function submitAttempt(
   }
 
   return result;
+}
+
+// ── Self-eval helpers ─────────────────────────────────────────────────────────
+
+/** Returns the model answer for a self_eval short_answer — called after user has written their answer. */
+export async function peekSelfEvalAnswer(
+  exerciseId: string
+): Promise<{ model_answer_mdx: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) throw new Error("Not authenticated");
+
+  const { data: ex } = await supabase
+    .from("exercises")
+    .select("solution")
+    .eq("id", exerciseId)
+    .single();
+
+  const sol = ex?.solution as Record<string, unknown> | null;
+  return { model_answer_mdx: (sol?.model_answer_mdx as string) ?? "" };
+}
+
+/** Override the last attempt to correct — for partial scoring "ma réponse était juste". */
+export async function overrideToCorrect(exerciseId: string): Promise<void> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) throw new Error("Not authenticated");
+
+  const { data: ex } = await supabase
+    .from("exercises")
+    .select("exercise_concepts(concept_id)")
+    .eq("id", exerciseId)
+    .single();
+  const conceptIds =
+    (ex?.exercise_concepts as { concept_id: string }[] | null)?.map((ec) => ec.concept_id) ?? [];
+
+  const { data: rs } = await supabase
+    .from("review_states")
+    .select("reps, lapses, stability, difficulty_fsrs, state")
+    .eq("user_id", user.id)
+    .eq("exercise_id", exerciseId)
+    .maybeSingle();
+
+  const srs = schedule(
+    {
+      reps: Number(rs?.reps) || 0,
+      lapses: Number(rs?.lapses) || 0,
+      stability: Number(rs?.stability) || 0,
+      difficulty_fsrs: Number(rs?.difficulty_fsrs) || 0.3,
+      state: Number(rs?.state) || 0,
+    },
+    true,
+    2
+  );
+
+  await supabase.from("review_states").upsert(
+    {
+      user_id: user.id,
+      exercise_id: exerciseId,
+      due_at: srs.dueAt.toISOString(),
+      stability: srs.stability,
+      difficulty_fsrs: srs.difficulty_fsrs,
+      reps: srs.reps,
+      lapses: srs.lapses,
+      state: srs.state,
+      last_review_at: new Date().toISOString(),
+    },
+    { onConflict: "user_id,exercise_id" }
+  );
+
+  for (const conceptId of conceptIds) {
+    const { data: cm } = await supabase
+      .from("concept_mastery")
+      .select("mastery_score")
+      .eq("user_id", user.id)
+      .eq("concept_id", conceptId)
+      .maybeSingle();
+    const newScore =
+      Math.round((0.7 * Number(cm?.mastery_score || 0) + 0.3 * 1) * 10_000) / 10_000;
+    await supabase.from("concept_mastery").upsert(
+      {
+        user_id: user.id,
+        concept_id: conceptId,
+        mastery_score: newScore,
+        last_updated: new Date().toISOString(),
+      },
+      { onConflict: "user_id,concept_id" }
+    );
+  }
 }
