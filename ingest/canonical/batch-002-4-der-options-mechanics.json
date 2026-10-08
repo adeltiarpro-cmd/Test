@@ -1595,8 +1595,8 @@
         }
       },
       "solution": {
-        "value": 49.02,
-        "steps_mdx": "$p\\leq Ke^{-rT}=50e^{-0.04}=\\mathbf{49.02}$ USD",
+        "value": 48.04,
+        "steps_mdx": "$p\\leq Ke^{-rT}=50e^{-0.04}=\\mathbf{48.04}$ USD",
         "formula_katex": "Ke^{-rT}"
       }
     },
