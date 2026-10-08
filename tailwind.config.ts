@@ -39,8 +39,9 @@ const config: Config = {
         ring: "var(--color-ring)",
       },
       fontFamily: {
-        sans: ["var(--font-fira-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-fira-code)", "ui-monospace", "monospace"],
+        sans:  ["var(--font-ibm-plex-sans)",  "system-ui", "sans-serif"],
+        mono:  ["var(--font-ibm-plex-mono)",  "ui-monospace", "monospace"],
+        serif: ["var(--font-source-serif-4)", "Georgia", "serif"],
       },
       boxShadow: {
         sm: "0 1px 2px rgba(0,0,0,0.05)",

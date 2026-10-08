@@ -15,7 +15,12 @@ const LINKS = [
 
 export function Nav() {
   const pathname = usePathname();
-  if (pathname.startsWith("/login") || pathname.startsWith("/style-guide")) return null;
+  if (
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/style-guide") ||
+    pathname.startsWith("/session")
+  )
+    return null;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

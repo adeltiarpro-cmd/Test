@@ -6,10 +6,10 @@ import { cn } from "@/lib/cn";
 const calloutVariants = cva("flex gap-3 rounded-lg border p-3 text-sm", {
   variants: {
     variant: {
-      info: "border-primary/30 bg-primary/10 text-primary",
-      success: "border-green-600/30 bg-green-50 text-green-700",
-      warning: "border-amber-600/30 bg-amber-50 text-amber-700",
-      error: "border-destructive/30 bg-destructive/10 text-destructive",
+      info:    "border-primary/30 bg-primary/10 text-primary",
+      success: "border-green-700/40 bg-green-950/60 text-green-400",
+      warning: "border-amber-700/40 bg-amber-950/60 text-amber-400",
+      error:   "border-destructive/30 bg-destructive/10 text-destructive",
     },
   },
   defaultVariants: {

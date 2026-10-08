@@ -23,11 +23,11 @@ export function ResultPanel({ result, exerciseType, onOverride }: ResultPanelPro
       {!isSelfEval && (
         <div className="flex items-center gap-2">
           {result.isCorrect ? (
-            <CheckCircle2 className="h-5 w-5 text-green-600 shrink-0" />
+            <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
           ) : (
             <XCircle className="h-5 w-5 text-destructive shrink-0" />
           )}
-          <span className={`font-semibold ${result.isCorrect ? "text-green-700" : "text-destructive"}`}>
+          <span className={`font-semibold ${result.isCorrect ? "text-green-400" : "text-destructive"}`}>
             {result.isCorrect ? "Correct" : "Incorrect"}
           </span>
           {result.score > 0 && result.score < 1 && (
@@ -42,11 +42,11 @@ export function ResultPanel({ result, exerciseType, onOverride }: ResultPanelPro
       {isSelfEval && (
         <div className="flex items-center gap-2">
           {result.isCorrect ? (
-            <CheckCircle2 className="h-5 w-5 text-green-600 shrink-0" />
+            <CheckCircle2 className="h-5 w-5 text-green-400 shrink-0" />
           ) : (
-            <XCircle className="h-5 w-5 text-amber-500 shrink-0" />
+            <XCircle className="h-5 w-5 text-amber-400 shrink-0" />
           )}
-          <span className={`text-sm font-medium ${result.isCorrect ? "text-green-700" : "text-amber-700"}`}>
+          <span className={`text-sm font-medium ${result.isCorrect ? "text-green-400" : "text-amber-400"}`}>
             {result.isCorrect ? "Enregistré — programmé pour révision" : "Noté pour retravailler"}
           </span>
         </div>
@@ -68,7 +68,7 @@ export function ResultPanel({ result, exerciseType, onOverride }: ResultPanelPro
           {result.pointResults.map((pt, i) => (
             <div key={i} className="flex items-start gap-2 text-sm">
               {pt.covered ? (
-                <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
               ) : (
                 <XCircle className="h-4 w-4 text-muted-foreground mt-0.5 shrink-0" />
               )}
@@ -115,7 +115,7 @@ export function ResultPanel({ result, exerciseType, onOverride }: ResultPanelPro
           {Object.entries(result.blankFeedback).map(([key, fb]) => (
             <div key={key} className="flex items-start gap-2 text-sm">
               {fb.correct ? (
-                <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
               ) : (
                 <XCircle className="h-4 w-4 text-destructive mt-0.5 shrink-0" />
               )}

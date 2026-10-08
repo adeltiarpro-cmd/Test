@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 import { Nav } from "@/components/layout/nav";
-import { Fira_Sans, Fira_Code } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import "katex/dist/katex.min.css";
 
-const firaSans = Fira_Sans({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-fira-sans",
+  variable: "--font-ibm-plex-sans",
   display: "swap",
 });
 
-const firaCode = Fira_Code({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-fira-code",
+  weight: ["400", "600"],
+  variable: "--font-ibm-plex-mono",
+  display: "swap",
+});
+
+const sourceSerif4 = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-source-serif-4",
   display: "swap",
 });
 
@@ -30,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={`${firaSans.variable} ${firaCode.variable} font-sans`}>
+      <body className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} ${sourceSerif4.variable} font-sans`}>
         <Nav />
         {children}
       </body>

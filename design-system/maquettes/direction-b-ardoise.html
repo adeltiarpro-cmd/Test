@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction B — Ardoise · Maquette session + correction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+/* ── Palette — mode sombre ── */
+:root {
+  --bg:          #0D1117;
+  --surface:     #161B22;
+  --sunk:        #0B0F15;
+  --ink:         #E6EDF3;
+  --muted:       #7D8590;
+  --line:        #21262D;
+  --accent:      #58A6FF;
+  --accent-soft: #0D1F38;
+  --ok:          #3FB950;
+  --ok-soft:     #062310;
+  --err:         #F85149;
+  --err-soft:    #2C0805;
+  --warn:        #D29922;
+  --warn-soft:   #2A1E00;
+  --hint:        #79C0FF;
+  --hint-soft:   #0B1926;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:  "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --mono:  "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Étiquette de contexte (méta-maquette) ── */
+.state-banner {
+  background: #fff;
+  color: #0D1117;
+  font: 700 10.5px/1 var(--sans);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  padding: 9px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.state-banner.corr { background: #062310; color: #3FB950; }
+
+/* ── Barre supérieure fixe ── */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--surface) 95%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  height: 52px;
+  padding: 0 24px;
+  display: flex; align-items: center;
+}
+.tb-inner {
+  display: flex; align-items: center; gap: 0;
+  width: 100%; max-width: 780px; margin: 0 auto;
+}
+.logo { font: 700 15px/1 var(--sans); color: var(--ink); flex-shrink: 0; margin-right: 2px; }
+.logo-sep { color: var(--line); margin: 0 8px; font-size: 18px; font-weight: 200; }
+.breadcrumb {
+  display: flex; align-items: center; gap: 5px;
+  font: 400 12.5px/1 var(--sans); color: var(--muted);
+}
+.breadcrumb b { font-weight: 600; color: var(--ink); }
+.bsep { color: var(--line); margin: 0 1px; }
+.tb-right { margin-left: auto; display: flex; align-items: center; gap: 14px; }
+.progress-pill {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--sunk); border: 1px solid var(--line);
+  border-radius: 999px; padding: 5px 12px 5px 8px;
+}
+.prog-bar-wrap { width: 64px; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.prog-bar { height: 100%; background: var(--accent); border-radius: 2px; width: 33%; }
+.prog-txt { font: 600 12px/1 var(--mono); color: var(--ink); white-space: nowrap; }
+.btn-exit {
+  background: none; border: 1px solid var(--line); color: var(--muted);
+  font: 500 12px/1 var(--sans); border-radius: 7px; padding: 6px 12px; cursor: pointer;
+}
+.btn-exit:hover { color: var(--ink); border-color: var(--muted); }
+
+/* ── Page principale ── */
+.page { max-width: 780px; margin: 0 auto; padding: 40px 24px 80px; }
+
+/* ── Carte exercice ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 36px 40px 30px;
+  display: grid; gap: 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,.35);
+}
+.card-meta { display: flex; align-items: center; gap: 10px; }
+.tag {
+  font: 600 10.5px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase;
+  background: var(--accent-soft); color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  padding: 5px 10px; border-radius: 5px;
+}
+.niv { display: inline-flex; gap: 3px; }
+.niv i { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--muted); }
+.niv i.on { background: var(--muted); border-color: var(--muted); }
+.code { font: 500 12px/1 var(--mono); color: var(--muted); margin-left: auto; }
+.card-title { margin: 0; font: 700 clamp(22px, 3vw, 28px)/1.2 var(--serif); }
+.card-sub { margin: -10px 0 0; font: 400 14px/1 var(--sans); color: var(--muted); }
+.divider { height: 1px; background: var(--line); margin: 0; }
+.enonce { font-size: 15px; line-height: 1.65; max-width: 62ch; }
+.enonce p { margin: 0 0 10px; }
+.enonce p:last-child { margin: 0; }
+
+/* Grille de paramètres */
+.params {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.param-item {
+  background: var(--sunk);
+  padding: 11px 14px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.param-label { font: 400 11.5px/1 var(--sans); color: var(--muted); }
+.param-val { font: 700 14px/1 var(--mono); color: var(--ink); }
+
+/* ── Accordéon commun ── */
+details { border-radius: 8px; }
+summary {
+  cursor: pointer; list-style: none;
+  font: 600 13px/1 var(--sans); padding: 10px 14px;
+  display: flex; align-items: center; gap: 7px; border-radius: 8px;
+  user-select: none; border: 1px solid transparent;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: ""; width: 6px; height: 6px;
+  border-right: 2px solid; border-bottom: 2px solid;
+  transform: rotate(-45deg); transition: .15s; flex-shrink: 0;
+}
+details[open] > summary::before { transform: rotate(45deg); }
+.hint summary { color: var(--hint); background: var(--hint-soft); border-color: color-mix(in srgb, var(--hint) 18%, transparent); }
+.hint .inn { padding: 12px 15px 5px; font-size: 14px; line-height: 1.65; }
+.hint .inn p { margin: 0 0 8px; }
+.hint .inn p:last-child { margin: 0; }
+
+/* ── Zone de réponse ── */
+.ans-section { display: grid; gap: 10px; }
+.ans-lbl { font: 600 11px/1 var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.ans-row { display: flex; align-items: center; gap: 12px; }
+.num-in {
+  height: 50px; width: 172px;
+  background: var(--sunk); border: 1.5px solid var(--line);
+  border-radius: 9px; color: var(--ink);
+  font: 700 20px/1 var(--mono); padding: 0 14px; text-align: right;
+  appearance: none;
+}
+.num-in:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+.unit { font: 500 14px/1 var(--sans); color: var(--muted); }
+.btn-val {
+  height: 50px; background: var(--accent); color: #0D1117;
+  border: none; border-radius: 9px; font: 700 14px/1 var(--sans);
+  padding: 0 26px; cursor: pointer; flex-shrink: 0;
+}
+.btn-val:hover { filter: brightness(1.1); }
+.btn-pass {
+  height: 50px; background: none; border: 1px solid var(--line);
+  color: var(--muted); border-radius: 9px; font: 500 13px/1 var(--sans);
+  padding: 0 16px; cursor: pointer; margin-left: auto;
+}
+
+/* ── Résultat ── */
+.result {
+  border-radius: 9px; padding: 14px 16px;
+  display: grid; gap: 5px;
+}
+.result.err { background: var(--err-soft); border: 1px solid color-mix(in srgb, var(--err) 20%, transparent); }
+.result.ok  { background: var(--ok-soft);  border: 1px solid color-mix(in srgb, var(--ok)  20%, transparent); }
+.result-head { display: flex; align-items: center; gap: 8px; font: 700 14px/1 var(--sans); }
+.result-head.err { color: var(--err); }
+.result-head.ok  { color: var(--ok); }
+.result-detail { font: 400 13.5px/1.5 var(--sans); color: var(--muted); }
+.result-detail b { color: var(--ink); }
+
+/* ── Solution ── */
+.sol summary { color: var(--ok); background: var(--ok-soft); border-color: color-mix(in srgb, var(--ok) 18%, transparent); }
+.sol .inn { padding: 14px 0 2px; display: grid; gap: 12px; }
+pre.calc {
+  margin: 0; background: var(--sunk); border: 1px solid var(--line);
+  border-radius: 9px; padding: 16px 18px;
+  font: 13px/1.75 var(--mono); overflow-x: auto; white-space: pre;
+  color: var(--ink);
+}
+pre.calc b { color: var(--hint); font-weight: 700; }
+.concl { margin: 0; font-size: 14px; line-height: 1.65; max-width: 66ch; }
+.trap {
+  background: var(--warn-soft);
+  border: 1px solid color-mix(in srgb, var(--warn) 20%, transparent);
+  border-radius: 9px; padding: 12px 14px; display: grid; gap: 4px;
+}
+.trap > b { color: var(--warn); font: 700 10.5px/1 var(--sans); letter-spacing: .07em; text-transform: uppercase; }
+.trap p { margin: 4px 0 0; font-size: 14px; line-height: 1.55; }
+.done {
+  display: inline-flex; gap: 8px; align-items: center;
+  font: 400 13px/1 var(--sans); color: var(--muted); cursor: pointer;
+}
+.done input { accent-color: var(--ok); width: 15px; height: 15px; }
+
+/* ── Navigation exercices ── */
+.ex-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; }
+.btn-prev {
+  height: 42px; background: none; border: 1px solid var(--line);
+  color: var(--muted); border-radius: 9px; font: 500 13px/1 var(--sans);
+  padding: 0 16px; cursor: pointer;
+}
+.btn-prev:hover { border-color: var(--muted); color: var(--ink); }
+.btn-next {
+  height: 42px; background: var(--accent); color: #0D1117;
+  border: none; border-radius: 9px; font: 700 13.5px/1 var(--sans);
+  padding: 0 22px; cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     ÉTAT 1 — ÉCRAN DE SESSION (avant réponse)
+════════════════════════════════════════════════════ -->
+<div class="state-banner">
+  État 1 — Écran de session &nbsp;·&nbsp; exercice en cours, réponse non encore soumise
+</div>
+
+<header class="topbar">
+  <div class="tb-inner">
+    <span class="logo">Prep</span>
+    <span class="logo-sep">/</span>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <span>Marchés</span><span class="bsep">›</span>
+      <span>Dérivés</span><span class="bsep">›</span>
+      <b>Options européennes</b>
+    </nav>
+    <div class="tb-right">
+      <div class="progress-pill">
+        <div class="prog-bar-wrap"><div class="prog-bar"></div></div>
+        <span class="prog-txt">4 / 12</span>
+      </div>
+      <button class="btn-exit" type="button">Quitter</button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <div class="card">
+    <div class="card-meta">
+      <span class="tag">Numérique</span>
+      <span class="niv" title="Difficulté 2/3"><i class="on"></i><i class="on"></i><i></i></span>
+      <span class="code">DER-047</span>
+    </div>
+
+    <div>
+      <h1 class="card-title">Prix d'un call européen — Black-Scholes</h1>
+      <p class="card-sub">Calculez le prix exact par la formule BSM.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="enonce">
+      <p>Une action ne versant pas de dividende cote actuellement <b>S = 48 USD</b>. Vous analysez un call européen de strike <b>K = 50 USD</b>, d'échéance <b>T = 0,5 an</b>. Le taux sans risque est <b>r = 5 %</b> en continu et la volatilité annualisée est <b>σ = 25 %</b>.</p>
+      <p>Calculez le prix de ce call par le modèle Black-Scholes. Arrondissez à deux décimales.</p>
+    </div>
+
+    <div class="params">
+      <div class="param-item">
+        <span class="param-label">S — Prix actuel</span>
+        <span class="param-val">48,00 USD</span>
+      </div>
+      <div class="param-item">
+        <span class="param-label">K — Strike</span>
+        <span class="param-val">50,00 USD</span>
+      </div>
+      <div class="param-item">
+        <span class="param-label">T — Échéance</span>
+        <span class="param-val">0,5 an</span>
+      </div>
+      <div class="param-item">
+        <span class="param-label">r — Taux sans risque</span>
+        <span class="param-val">5,00 %</span>
+      </div>
+      <div class="param-item">
+        <span class="param-label">σ — Volatilité</span>
+        <span class="param-val">25,00 %</span>
+      </div>
+    </div>
+
+    <details class="hint">
+      <summary>Indice</summary>
+      <div class="inn">
+        <p>d₁ = [ln(S/K) + (r + σ²/2)·T] / (σ√T) &nbsp;·&nbsp; d₂ = d₁ − σ√T</p>
+        <p>C = S·N(d₁) − K·e<sup>−rT</sup>·N(d₂)</p>
+      </div>
+    </details>
+
+    <div class="ans-section">
+      <span class="ans-lbl">Prix du call</span>
+      <div class="ans-row">
+        <input class="num-in" type="number" placeholder="0,00" step="0.01" aria-label="Prix du call en USD">
+        <span class="unit">USD</span>
+        <button class="btn-val" type="button">Valider →</button>
+        <button class="btn-pass" type="button">Passer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     ÉTAT 2 — ÉCRAN DE CORRECTION (réponse soumise)
+════════════════════════════════════════════════════ -->
+<div class="state-banner corr">
+  État 2 — Écran de correction &nbsp;·&nbsp; réponse soumise (incorrecte), solution affichée
+</div>
+
+<header class="topbar">
+  <div class="tb-inner">
+    <span class="logo">Prep</span>
+    <span class="logo-sep">/</span>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <span>Marchés</span><span class="bsep">›</span>
+      <span>Dérivés</span><span class="bsep">›</span>
+      <b>Options européennes</b>
+    </nav>
+    <div class="tb-right">
+      <div class="progress-pill">
+        <div class="prog-bar-wrap"><div class="prog-bar"></div></div>
+        <span class="prog-txt">4 / 12</span>
+      </div>
+      <button class="btn-exit" type="button">Quitter</button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+  <div class="card">
+    <div class="card-meta">
+      <span class="tag">Numérique</span>
+      <span class="niv" title="Difficulté 2/3"><i class="on"></i><i class="on"></i><i></i></span>
+      <span class="code">DER-047</span>
+    </div>
+
+    <h1 class="card-title">Prix d'un call européen — Black-Scholes</h1>
+
+    <div class="enonce">
+      <p>S = <b>48 USD</b> · K = <b>50 USD</b> · T = <b>0,5 an</b> · r = <b>5 %</b> · σ = <b>25 %</b></p>
+    </div>
+
+    <!-- Résultat -->
+    <div class="result err" role="status">
+      <div class="result-head err">✗ &nbsp;Incorrect</div>
+      <div class="result-detail">
+        Votre réponse : <b>3,20 USD</b> &nbsp;·&nbsp; Bonne réponse : <b>3,05 USD</b> &nbsp;(tolérance ± 0,05 USD)
+      </div>
+    </div>
+
+    <!-- Solution -->
+    <details class="sol" open>
+      <summary>Solution détaillée</summary>
+      <div class="inn">
+<pre class="calc">σ√T = 0,25 × √0,5 = 0,25 × 0,70711 = 0,17678
+
+d₁ = [ln(48/50) + (0,05 + 0,25²/2) × 0,5] / 0,17678
+   = [ln(0,96) + (0,05 + 0,03125) × 0,5] / 0,17678
+   = [−0,04082 + 0,04063] / 0,17678
+   = −0,00019 / 0,17678
+   = −0,0011
+
+d₂ = d₁ − σ√T = −0,0011 − 0,17678 = −0,1779
+
+N(d₁) = N(−0,0011) ≈ 0,4996
+N(d₂) = N(−0,1779) ≈ 0,4294
+
+C = S · N(d₁) − K · e^(−rT) · N(d₂)
+  = 48 × 0,4996  −  50 × e^(−0,025) × 0,4294
+  = 48 × 0,4996  −  50 × 0,97531 × 0,4294
+  = 23,981  −  20,938
+  = <b>3,04 USD  ≈  3,05 USD</b></pre>
+        <p class="concl">Le call vaut 3,05 USD. S étant légèrement en dessous du strike (out-of-the-money), la valeur intrinsèque est nulle — le prix reflète uniquement la valeur temps.</p>
+        <div class="trap">
+          <b>Piège</b>
+          <p>Omettre le facteur d'actualisation e<sup>−rT</sup> sur le strike est l'erreur la plus fréquente. Sans ce facteur, on surévalue K de ≈ 1,24 USD sur cette maturité, ce qui conduit typiquement à une réponse autour de 1,80 USD.</p>
+        </div>
+      </div>
+    </details>
+
+    <label class="done">
+      <input type="checkbox"> Réussi sans regarder la solution
+    </label>
+
+    <div class="ex-nav">
+      <button class="btn-prev" type="button">← Précédent</button>
+      <button class="btn-next" type="button">Exercice suivant →</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

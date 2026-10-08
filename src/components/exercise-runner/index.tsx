@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { Badge } from "@/components/ui/badge";
 import { Callout } from "@/components/ui/callout";
 import { cn } from "@/lib/cn";
 import { MathText } from "./mdx";
@@ -54,17 +53,10 @@ export type SessionExercise = {
 interface ExerciseRunnerProps {
   exercise: SessionExercise;
   onNext: () => void;
+  onPrev?: () => void;
   /** Aperçu admin : l'exercice s'affiche, mais rien n'est envoyé ni enregistré. */
   preview?: boolean;
 }
-
-const DIFFICULTY_LABELS: Record<number, string> = {
-  1: "Très facile",
-  2: "Facile",
-  3: "Moyen",
-  4: "Difficile",
-  5: "Expert",
-};
 
 const CONFIDENCE_LABELS: Record<1 | 2 | 3, string> = {
   1: "Au hasard",
@@ -79,17 +71,31 @@ const SELF_EVAL_LABELS: Record<1 | 2 | 3, string> = {
 };
 
 const TYPE_LABELS: Record<string, string> = {
-  mcq: "QCM",
-  numeric: "Numérique",
-  formula_cloze: "Formule à trous",
-  short_answer: "Réponse courte",
-  graph_fill: "Graphe à trous",
-  excel_model: "Modèle Excel",
-  statement_interactive: "État financier interactif",
-  case_math: "Math de Cas",
-  case_structuring: "Structuration de Cas",
-  market_sizing: "Market Sizing",
-  numeric_steps: "Exercice à étapes",
+  mcq:                    "QCM",
+  numeric:                "Numérique",
+  formula_cloze:          "Formule à trous",
+  short_answer:           "Réponse courte",
+  graph_fill:             "Graphe à trous",
+  excel_model:            "Modèle Excel",
+  statement_interactive:  "État financier",
+  case_math:              "Math de Cas",
+  case_structuring:       "Structuration",
+  market_sizing:          "Market Sizing",
+  numeric_steps:          "Exercice à étapes",
+};
+
+const TYPE_ABBREV: Record<string, string> = {
+  numeric:               "NUM",
+  mcq:                   "MCQ",
+  short_answer:          "SA",
+  formula_cloze:         "FC",
+  graph_fill:            "GF",
+  excel_model:           "EM",
+  statement_interactive: "SI",
+  case_math:             "CM",
+  case_structuring:      "CS",
+  market_sizing:         "MS",
+  numeric_steps:         "NS",
 };
 
 // Grid-based runners stay mounted so colored cells remain visible.
@@ -99,7 +105,14 @@ const CASE_TYPES = new Set(["case_structuring", "market_sizing"]);
 // numeric_steps stays mounted so per-step results and solutions remain visible.
 const PERSISTENT_TYPES = new Set([...GRID_TYPES, ...CASE_TYPES, "numeric_steps"]);
 
-export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRunnerProps) {
+function deriveShortCode(id: string, type: string): string {
+  const segs = id.split("-");
+  const num = segs.at(-1) ?? "?";
+  const abbrev = TYPE_ABBREV[type] ?? type.slice(0, 3).toUpperCase();
+  return `${abbrev}-${num}`;
+}
+
+export function ExerciseRunner({ exercise, onNext, onPrev, preview = false }: ExerciseRunnerProps) {
   const [result, setResult] = useState<AttemptResult | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const startRef = useRef(Date.now());
@@ -133,7 +146,7 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
       );
       setResult(res);
       setTimeout(
-        () => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }),
+        () => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }),
         50
       );
     } catch (e) {
@@ -189,49 +202,50 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
     }
   }
 
+  const shortCode = deriveShortCode(exercise.id, exercise.type);
+
   return (
-    <article className="flex flex-col gap-4 rounded-lg border border-border bg-card p-4 shadow-md">
-      {/* Breadcrumb */}
-      {exercise.breadcrumb && (
-        <p className="text-xs text-muted-foreground leading-snug -mb-2">
-          {[
-            exercise.breadcrumb.track,
-            exercise.breadcrumb.chapter,
-            exercise.breadcrumb.subchapter,
-          ]
-            .filter(Boolean)
-            .join(" › ")}
+    <article className="flex flex-col gap-6 rounded-xl border border-border bg-card p-8 shadow-[0_4px_32px_rgba(0,0,0,.4)]">
+      {/* ── Meta row ── */}
+      <div className="flex items-center gap-3 flex-wrap">
+        <span className="inline-flex items-center rounded-md border border-primary/25 bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+          {TYPE_LABELS[exercise.type] ?? exercise.type}
+        </span>
+        {/* Difficulty dots (5) */}
+        <span className="flex items-center gap-1" title={`Difficulté ${exercise.difficulty}/5`}>
+          {Array.from({ length: 5 }, (_, i) => (
+            <span
+              key={i}
+              className={cn(
+                "w-1.5 h-1.5 rounded-full border",
+                i < exercise.difficulty
+                  ? "bg-muted-foreground border-muted-foreground"
+                  : "border-muted-foreground/30"
+              )}
+            />
+          ))}
+        </span>
+        <span className="ml-auto font-mono text-xs text-muted-foreground">{shortCode}</span>
+      </div>
+
+      {/* ── Subchapter label (serif) ── */}
+      {exercise.breadcrumb?.subchapter && (
+        <p className="font-serif text-lg font-semibold leading-snug text-foreground -mt-2">
+          {exercise.breadcrumb.subchapter}
         </p>
       )}
-      {/* Header */}
-      <header className="flex items-center gap-2 flex-wrap">
-        <Badge variant="outline">{TYPE_LABELS[exercise.type] ?? exercise.type}</Badge>
-        <Badge
-          variant={
-            exercise.difficulty >= 4
-              ? "accent"
-              : exercise.difficulty === 3
-              ? "default"
-              : "muted"
-          }
-        >
-          {DIFFICULTY_LABELS[exercise.difficulty] ?? `Niveau ${exercise.difficulty}`}
-        </Badge>
-        {exercise.tags.slice(0, 3).map((tag) => (
-          <Badge key={tag} variant="muted">
-            {tag}
-          </Badge>
-        ))}
-      </header>
 
-      {/* Prompt */}
+      {/* ── Divider ── */}
+      <div className="h-px bg-border" />
+
+      {/* ── Prompt ── */}
       {promptMdx && (
-        <div className="text-base text-foreground leading-relaxed">
+        <div className="text-base text-foreground leading-relaxed max-w-prose">
           <MathText>{promptMdx}</MathText>
         </div>
       )}
 
-      {/* Confidence selector — hidden for self_eval (rating replaces it) */}
+      {/* ── Confidence selector (hidden for self_eval) ── */}
       {!result && !isSelfEval && (
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs text-muted-foreground shrink-0">Confiance :</span>
@@ -241,7 +255,7 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
               type="button"
               onClick={() => setConfidence(c)}
               className={cn(
-                "px-2 py-0.5 rounded text-xs font-medium border transition-colors",
+                "px-2.5 py-1 rounded-md text-xs font-medium border transition-colors",
                 confidence === c
                   ? "bg-primary text-primary-foreground border-primary"
                   : "text-muted-foreground border-border hover:border-foreground hover:text-foreground"
@@ -253,7 +267,7 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
         </div>
       )}
 
-      {/* Runner — persistent types stay visible after submission */}
+      {/* ── Runner — persistent types stay visible after submission ── */}
       {(!result || isPersistent) && (
         <div aria-live="polite">
           {exercise.type === "mcq" && (
@@ -349,7 +363,7 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
         </div>
       )}
 
-      {/* Self-eval: revealed model answer + rating buttons */}
+      {/* ── Self-eval: revealed model answer + rating buttons ── */}
       {isSelfEval && selfEvalPhase === "revealed" && revealedModelAnswer && !result && (
         <div className="flex flex-col gap-3 border-t border-border pt-4">
           <Callout variant="info" title="Corrigé">
@@ -364,12 +378,12 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
                 disabled={isSubmitting}
                 onClick={() => handleSelfEvalSubmit(r)}
                 className={cn(
-                  "px-3 py-1.5 rounded text-sm font-medium border transition-colors min-h-[36px]",
+                  "px-3 py-1.5 rounded-md text-sm font-medium border transition-colors min-h-[36px]",
                   r === 1
-                    ? "border-destructive/40 text-destructive hover:bg-destructive/10"
+                    ? "border-destructive/50 text-destructive hover:bg-destructive/10"
                     : r === 2
-                    ? "border-amber-400/60 text-amber-700 hover:bg-amber-50"
-                    : "border-green-500/50 text-green-700 hover:bg-green-50",
+                    ? "border-amber-500/50 text-amber-400 hover:bg-amber-950/60"
+                    : "border-green-500/50 text-green-400 hover:bg-green-950/60",
                   isSubmitting && "opacity-50 cursor-not-allowed"
                 )}
               >
@@ -380,15 +394,14 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
         </div>
       )}
 
-      {/* Result */}
+      {/* ── Result ── */}
       {result && (
         <div ref={resultRef} aria-live="assertive">
-          {/* Grid types: compact score line instead of full ResultPanel */}
           {isGrid ? (
             <p
               className={cn(
                 "text-sm font-semibold mt-2",
-                result.isCorrect ? "text-green-700" : "text-foreground"
+                result.isCorrect ? "text-green-400" : "text-foreground"
               )}
             >
               {result.isCorrect
@@ -406,10 +419,27 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
               }
             />
           )}
+        </div>
+      )}
+
+      {/* ── Navigation (visible après soumission) ── */}
+      {result && (
+        <div className="flex items-center justify-between gap-3 pt-2 border-t border-border">
+          {onPrev ? (
+            <button
+              type="button"
+              onClick={onPrev}
+              className="inline-flex items-center justify-center rounded-lg border border-border text-muted-foreground text-sm font-medium px-4 py-2.5 min-h-[42px] hover:text-foreground hover:border-muted-foreground transition-colors"
+            >
+              ← Précédent
+            </button>
+          ) : (
+            <div />
+          )}
           <button
             type="button"
             onClick={onNext}
-            className="mt-4 inline-flex items-center justify-center gap-2 rounded-md bg-accent text-accent-foreground font-semibold px-4 py-2 min-h-[44px] transition-all duration-200 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer"
+            className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground font-semibold text-sm px-5 py-2.5 min-h-[42px] hover:opacity-90 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             Exercice suivant →
           </button>
