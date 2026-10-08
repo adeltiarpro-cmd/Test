@@ -46,6 +46,10 @@ export function SessionClient({ exercises }: SessionClientProps) {
   }
 
   const exercise = exercises[index];
+  const prevSubchapter = index > 0 ? exercises[index - 1].breadcrumb?.subchapter : null;
+  const currSubchapter = exercise.breadcrumb?.subchapter;
+  const showSubchapterHeader =
+    index > 0 && currSubchapter && currSubchapter !== prevSubchapter;
 
   return (
     <div className="flex flex-col gap-4">
@@ -68,6 +72,16 @@ export function SessionClient({ exercises }: SessionClientProps) {
           {index + 1} / {exercises.length}
         </span>
       </div>
+
+      {showSubchapterHeader && (
+        <div className="flex items-center gap-3 py-1">
+          <div className="flex-1 h-px bg-border" />
+          <span className="text-xs font-medium text-muted-foreground whitespace-nowrap">
+            {currSubchapter}
+          </span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+      )}
 
       <ExerciseRunner
         key={exercise.id}

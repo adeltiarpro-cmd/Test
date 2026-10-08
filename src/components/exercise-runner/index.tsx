@@ -24,6 +24,12 @@ import {
 } from "@/lib/session-actions";
 import type { AttemptResult } from "@/lib/session-actions";
 
+export type Breadcrumb = {
+  track: string;
+  chapter?: string;
+  subchapter?: string;
+};
+
 export type SessionExercise = {
   id: string;
   type:
@@ -42,6 +48,7 @@ export type SessionExercise = {
   payload: Record<string, unknown>;
   tags: string[];
   module_id?: string;
+  breadcrumb?: Breadcrumb;
 };
 
 interface ExerciseRunnerProps {
@@ -184,6 +191,18 @@ export function ExerciseRunner({ exercise, onNext, preview = false }: ExerciseRu
 
   return (
     <article className="flex flex-col gap-4 rounded-lg border border-border bg-card p-4 shadow-md">
+      {/* Breadcrumb */}
+      {exercise.breadcrumb && (
+        <p className="text-xs text-muted-foreground leading-snug -mb-2">
+          {[
+            exercise.breadcrumb.track,
+            exercise.breadcrumb.chapter,
+            exercise.breadcrumb.subchapter,
+          ]
+            .filter(Boolean)
+            .join(" › ")}
+        </p>
+      )}
       {/* Header */}
       <header className="flex items-center gap-2 flex-wrap">
         <Badge variant="outline">{TYPE_LABELS[exercise.type] ?? exercise.type}</Badge>

@@ -17,6 +17,19 @@ FICHIERS CLÉS: <chemins créés/modifiés, pour que la session suivante sache o
 
 ---
 
+## 2026-10-08 — CHANTIER-4 — Questions organisées par section
+STATUT: FAIT
+FAIT: (1) Fil d'Ariane dans le runner : chaque exercice affiche "Filière › Chapitre › Sous-chapitre" en haut de sa carte. breadcrumbOf() construit à partir du moduleMap déjà chargé dans session/page.tsx, puis enrichit chaque exercice avant de le passer au client. (2) Page /sections : liste tous les sous-chapitres (ou chapitres feuilles) avec compteur de questions, barre % vu, score de maîtrise si disponible, bouton "Lancer →". Puces filtrantes par filière (navigation serveur via URL params). (3) Intertitre de section dans session-client.tsx : un séparateur "— Sous-chapitre —" apparaît entre deux exercices quand le sous-chapitre change (utile en mode "Tout le chapitre"). (4) Lien "Sections" ajouté dans la nav. `npm run build` : vert (14 routes).
+RESTE:
+  1. Les filières consulting/gmat/math n'ont pas de sous-chapitres (level=1) — elles apparaissent dans /sections comme chapitres feuilles dès qu'elles ont des exercices. Créer des sous-chapitres (migration 20240020) quand elles auront du contenu.
+  2. La maîtrise dans /sections n'est visible que si des concepts ont été chargés en base (charger-lots.command non encore lancé sur les batch-002-*).
+DÉCISIONS:
+  - Pas de migration 20240020 : les filières sans sous-chapitres sont déjà gérées en fallback (module level=0 affiché comme feuille). Migration reportée au moment où du contenu est ajouté.
+  - typedRoutes oblige à passer les hrefs sous forme d'objet `{ pathname, query }` dans SectionRow et les puces filtrantes.
+FICHIERS CLÉS: src/components/exercise-runner/index.tsx (type Breadcrumb + affichage), src/app/session/page.tsx (breadcrumbOf + enrichedFinal), src/app/session/session-client.tsx (intertitre), src/app/sections/page.tsx (nouveau), src/components/layout/nav.tsx
+
+---
+
 ## 2026-10-08 — CHANTIER-3 — Audit qualité : valeurs intermédiaires, arrondis, dépendances, triviaux
 STATUT: FAIT
 FAIT: Script `ingest/fix_audit.py` écrit et exécuté — 20 exercices corrigés dans les fichiers batch-002-*. CAT 1 (4) : valeurs intermédiaires BSM fausses dans l'énoncé corrigées (key-319 d1 0,2475→0,2239, key-351 numérateur 0,0281→0,0103/d1=0,1144/c=163, key-405 N'(d1) 0,38→0,391 et N(d2) 0,52→0,510/θ/365=-0,0122, key-632 d1=(0+0,03)/…→(0+0,035)/…=0,2475). CAT 2 (1) : key-148 236 contrats (non 235) + règle d'arrondi supérieur documentée. CAT 3 (2) : key-647 "même données que call" supprimé, key-726 structure CDO ajoutée à l'énoncé. CAT 4 (13) : 7 exercices clairs reformulés (answer littéralement lisible → calcul réel imposé) + 6 borderline (valeurs changées pour éviter la lecture directe). `npm run build` : vert.

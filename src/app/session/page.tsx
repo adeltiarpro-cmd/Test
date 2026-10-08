@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { fetchGraphData } from "@/lib/graph-actions";
 import { fetchModelTemplate } from "@/lib/model-actions";
 import { SessionClient } from "./session-client";
-import type { SessionExercise } from "@/components/exercise-runner";
+import type { SessionExercise, Breadcrumb } from "@/components/exercise-runner";
 
 export const metadata = { title: "Session — Prep Platform" };
 
@@ -85,6 +85,19 @@ export default async function SessionPage({
     .from("modules")
     .select("id, slug, title, parent_id, tracks(slug, title)");
   const moduleRows = (moduleData ?? []) as unknown as ModuleRow[];
+
+  // Breadcrumb lookup
+  const moduleMap = new Map(moduleRows.map((m) => [m.id, m]));
+  function breadcrumbOf(moduleId?: string): Breadcrumb | undefined {
+    if (!moduleId) return undefined;
+    const m = moduleMap.get(moduleId);
+    if (!m?.tracks) return undefined;
+    if (m.parent_id) {
+      const parent = moduleMap.get(m.parent_id);
+      return { track: m.tracks.title, chapter: parent?.title, subchapter: m.title };
+    }
+    return { track: m.tracks.title, chapter: m.title };
+  }
 
   const own = await Promise.all(
     moduleRows.map(async (m) => {
@@ -247,6 +260,11 @@ export default async function SessionPage({
     })
   );
 
+  const enrichedFinal = enriched.map((ex) => ({
+    ...ex,
+    breadcrumb: breadcrumbOf(ex.module_id),
+  }));
+
   // Sélecteur : filière → chapitre → sous-chapitres
   type Group = { key: string; heading: string; trackSlug: string; modules: ModuleChoice[] };
   const groups: Group[] = [];
@@ -322,7 +340,7 @@ export default async function SessionPage({
           ))}
         </nav>
 
-        <SessionClient key={selected?.id ?? "all"} exercises={enriched} />
+        <SessionClient key={selected?.id ?? "all"} exercises={enrichedFinal} />
       </div>
     </main>
   );
