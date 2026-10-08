@@ -17,6 +17,21 @@ FICHIERS CLÉS: <chemins créés/modifiés, pour que la session suivante sache o
 
 ---
 
+## 2026-10-08 — CHANTIER-7 — Refonte de l'interface (Direction B — Ardoise)
+STATUT: FAIT
+FAIT: Palette sombre (bg #0D1117, card #161B22, accent bleu #58A6FF, green #3FB950, red #F85149) appliquée globalement via globals.css. Typographie remplacée : IBM Plex Sans (corps), IBM Plex Mono (code), Source Serif 4 variable (serif). Session : la Nav se cache sur /session, remplacée par un topbar sticky avec fil d'Ariane (Filière › Chapitre › Sous-chapitre du dernier exercice), progress pill animée, bouton Quitter. Carte exercice redessinée : tag de type + 5 points de difficulté + code court (NUM-042), sous-chapitre en serif, divider, prompt, sélecteur de confiance, runner, résultat, boutons nav Précédent/Suivant en bas. Callout et ResultPanel corrigés pour le thème sombre (green-400, amber-400 au lieu des -50/-700 light). Maquettes HTML statiques dans design-system/maquettes/. `npm run build` : vert (15 routes).
+RESTE:
+  1. Test navigateur : /session, /dashboard, /sections, /progress — vérifier que tous les composants sont lisibles dans le nouveau thème sombre.
+  2. Certains composants (McqRunner, GraphFillRunner, NumericStepsRunner) peuvent avoir des couleurs hardcodées à auditer après les premiers tests visuels.
+DÉCISIONS:
+  - Source Serif 4 chargée sans `weight` (police variable) — next/font échoue avec des weights explicites sur les polices variables.
+  - La palette s'applique à toutes les pages (pas seulement /session) car les classes Tailwind sont sémantiques (bg-background, text-foreground…).
+  - `onPrev` ajouté à ExerciseRunner pour la navigation arrière ; affiché uniquement après soumission (pour éviter de quitter un exercice en cours).
+  - Le breadcrumb de l'exercice disparaît du corps de la carte (il est dans le topbar) ; à l'intérieur de la carte, seul `breadcrumb.subchapter` reste (en titre serif).
+FICHIERS CLÉS: src/app/globals.css, src/app/layout.tsx, tailwind.config.ts, src/components/layout/nav.tsx, src/app/session/session-client.tsx (topbar inline), src/components/exercise-runner/index.tsx, src/components/exercise-runner/result-panel.tsx, src/components/ui/callout.tsx, design-system/maquettes/ (2 fichiers HTML)
+
+---
+
 ## 2026-10-08 — CHANTIER-6 — Guide de progression
 STATUT: FAIT
 FAIT: Page /progress (RSC) : pour chaque filière, liste ordonnée des sous-chapitres (ou chapitres feuilles) avec état et prochaine action recommandée (Réviser N dus / Attaquer N à voir / Refaire N ratés / Maîtrisé / À jour). Bloc "Objectifs" : formulaire date d'entretien + objectif quotidien (GoalForm, composant client), server action saveGoal avec revalidatePath. Calcul du rythme conseillé (exercices non vus ÷ jours restants). Vue hebdomadaire (7 derniers jours) : total questions + % correct, sections avancées cette semaine, points faibles (concepts < 50%). Migration 20240020 : ADD COLUMN target_date date + daily_goal int sur profiles + politique UPDATE idempotente. Lien "Progression" ajouté dans la nav. `npm run build` : vert (15 routes).
