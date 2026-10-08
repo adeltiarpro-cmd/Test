@@ -17,6 +17,21 @@ FICHIERS CLÉS: <chemins créés/modifiés, pour que la session suivante sache o
 
 ---
 
+## 2026-10-08 — CHANTIER-6 — Guide de progression
+STATUT: FAIT
+FAIT: Page /progress (RSC) : pour chaque filière, liste ordonnée des sous-chapitres (ou chapitres feuilles) avec état et prochaine action recommandée (Réviser N dus / Attaquer N à voir / Refaire N ratés / Maîtrisé / À jour). Bloc "Objectifs" : formulaire date d'entretien + objectif quotidien (GoalForm, composant client), server action saveGoal avec revalidatePath. Calcul du rythme conseillé (exercices non vus ÷ jours restants). Vue hebdomadaire (7 derniers jours) : total questions + % correct, sections avancées cette semaine, points faibles (concepts < 50%). Migration 20240020 : ADD COLUMN target_date date + daily_goal int sur profiles + politique UPDATE idempotente. Lien "Progression" ajouté dans la nav. `npm run build` : vert (15 routes).
+RESTE:
+  1. `npx supabase db push` pour appliquer la migration 20240020 (target_date, daily_goal sur profiles).
+  2. La maîtrise dans /progress n'est visible qu'après chargement des concepts (charger-lots.command).
+  3. La vue hebdomadaire est vide avant les premières tentatives.
+DÉCISIONS:
+  - GoalForm utilise useTransition + startTransition(async () => await saveGoal(formData)) — pattern client component appelant un server action, cohérent avec exercise-runner.
+  - `suggested` = ceil((total exercices - exercices vus) / jours restants) — proxy simple, pas de pondération par maîtrise.
+  - review_states.created_at utilisé pour détecter les "sections avancées cette semaine" (premier passage sur un exercice).
+FICHIERS CLÉS: supabase/migrations/20240020000000_profiles_goals.sql (nouveau), src/lib/progress-actions.ts (nouveau), src/components/progress/goal-form.tsx (nouveau), src/app/progress/page.tsx (nouveau), src/components/layout/nav.tsx
+
+---
+
 ## 2026-10-08 — CHANTIER-4 — Questions organisées par section
 STATUT: FAIT
 FAIT: (1) Fil d'Ariane dans le runner : chaque exercice affiche "Filière › Chapitre › Sous-chapitre" en haut de sa carte. breadcrumbOf() construit à partir du moduleMap déjà chargé dans session/page.tsx, puis enrichit chaque exercice avant de le passer au client. (2) Page /sections : liste tous les sous-chapitres (ou chapitres feuilles) avec compteur de questions, barre % vu, score de maîtrise si disponible, bouton "Lancer →". Puces filtrantes par filière (navigation serveur via URL params). (3) Intertitre de section dans session-client.tsx : un séparateur "— Sous-chapitre —" apparaît entre deux exercices quand le sous-chapitre change (utile en mode "Tout le chapitre"). (4) Lien "Sections" ajouté dans la nav. `npm run build` : vert (14 routes).
