@@ -2011,21 +2011,31 @@
       "concepts": [
         "hedging-strategies-using-futures"
       ],
-      "prompt_mdx": "Un gestionnaire détient 500 000 actions dont $\\beta = 1{,}4$ vs le S&P500. Le S&P500 spot est à 4 000, multiplicateur futures = 250. Il veut couvrir le risque marché en vendant des futures. Calculez le **nombre optimal de contrats** à vendre.",
+      "prompt_mdx": "Un gestionnaire détient 500 000 actions cotées 80 USD, de $\\beta = 1{,}4$ par rapport au S&P 500. Le S&P 500 est à 4 000 points et le multiplicateur du futures est de 250 USD par point. Il veut couvrir le risque de marché en vendant des futures.",
       "payload": {
         "steps": [
           {
-            "label": "Nombre de contrats (arrondi)",
+            "label": "Valeur du portefeuille",
+            "unit": "USD",
+            "tolerance": 1000,
+            "hint_mdx": "Nombre d'actions multiplié par le cours.",
+            "solution_mdx": "$V_P = 500\\,000 \\times 80 = \\mathbf{40\\,000\\,000}$ USD"
+          },
+          {
+            "label": "Nombre de contrats à vendre (arrondi)",
             "unit": "contrats",
             "tolerance": 0.5,
-            "solution_mdx": "Si $V_P = 40\\,000\\,000$ USD : $N^* = 1{,}4 \\times \\frac{40\\,000\\,000}{4\\,000 \\times 250} = 1{,}4 \\times 40 = \\mathbf{56}$ contrats",
-            "hint_mdx": "$N^* = \\beta \\times \\dfrac{V_P}{F \\times \\text{mult}}$ avec $V_P$ = valeur portefeuille",
-            "trap_mdx": "Arrondir au nombre entier le plus proche."
+            "hint_mdx": "$N^* = \\beta \\times \\dfrac{V_P}{\\text{indice} \\times \\text{multiplicateur}}$",
+            "solution_mdx": "Valeur d'un contrat : $4\\,000 \\times 250 = 1\\,000\\,000$ USD. $N^* = 1{,}4 \\times \\dfrac{40\\,000\\,000}{1\\,000\\,000} = 1{,}4 \\times 40 = \\mathbf{56}$ contrats",
+            "trap_mdx": "Oublier le bêta donne 40 contrats : on couvrirait alors une exposition au marché de 1 et non de 1,4."
           }
         ]
       },
       "solution": {
         "steps": [
+          {
+            "answer": 40000000.0
+          },
           {
             "answer": 56.0
           }

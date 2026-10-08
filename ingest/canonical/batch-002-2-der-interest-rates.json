@@ -1287,20 +1287,31 @@
       "concepts": [
         "interest-rate-futures"
       ],
-      "prompt_mdx": "Une société veut **augmenter** la duration de son portefeuille de 4 à 7 ans. Valeur portefeuille = 30 M USD. T-Bond futures à prix 105, duration CTD = 6 ans.",
+      "prompt_mdx": "Une société veut **augmenter** la duration de son portefeuille obligataire de 4 à 7 ans. Valeur du portefeuille : 30 M USD. Le T-Bond futures cote 105 (pour 100 de nominal), sur un nominal de 100 000 USD par contrat, et la duration de l'obligation la moins chère à livrer est de 6 ans.",
       "payload": {
         "steps": [
           {
-            "label": "Nombre de contrats à **acheter**",
+            "label": "Valeur d'un contrat futures",
+            "unit": "USD",
+            "tolerance": 10,
+            "hint_mdx": "Le prix est coté pour 100 de nominal.",
+            "solution_mdx": "$105\\% \\times 100\\,000 = \\mathbf{105\\,000}$ USD"
+          },
+          {
+            "label": "Nombre de contrats à **acheter** (arrondi)",
             "unit": "contrats",
             "tolerance": 1.0,
-            "solution_mdx": "$N=(7-4)\\times30\\,000\\,000/(6\\times105\\,000)=90\\,000\\,000/630\\,000=\\mathbf{143}$ contrats",
-            "hint_mdx": "$N=(D_T-D_P)\\times V_P/(D_F\\times Q_F)$"
+            "hint_mdx": "$N=(D_T-D_P)\\times V_P/(D_F\\times \\text{valeur d'un contrat})$",
+            "solution_mdx": "$N=(7-4)\\times30\\,000\\,000/(6\\times105\\,000)=90\\,000\\,000/630\\,000=142{,}9$, soit $\\mathbf{143}$ contrats",
+            "trap_mdx": "Pour allonger la duration on **achète** des futures ; on en vend pour la raccourcir."
           }
         ]
       },
       "solution": {
         "steps": [
+          {
+            "answer": 105000.0
+          },
           {
             "answer": 143.0
           }
