@@ -229,7 +229,7 @@
       "concepts": [
         "the-greek-letters"
       ],
-      "prompt_mdx": "Thêta BSM call : $\\Theta=-\\frac{SN'(d_1)\\sigma}{2\\sqrt{T}}-rKe^{-rT}N(d_2)$. $S=50$, $\\sigma=25\\%$, $T=0.5$ an, $N'(d_1)=0.38$, $r=4\\%$, $K=50$, $N(d_2)=0.52$. Thêta par jour (USD/365) ?",
+      "prompt_mdx": "Un call européen : $S=50$, $K=50$, $r=4\\%$, $\\sigma=25\\%$, $T=0{,}5$ an, $N'(d_1)=0{,}391$, $N(d_2)=0{,}510$. Calculez $\\Theta/365$ (USD/jour).",
       "payload": {
         "unit": "USD/jour",
         "precision": 2,
@@ -239,8 +239,8 @@
         }
       },
       "solution": {
-        "value": -0.0178,
-        "steps_mdx": "$\\Theta=-(50\\times0.38\\times0.25)/(2\\sqrt{0.5})-0.04\\times50e^{-0.02}\\times0.52$$=-(4.75)/(1.4142)-0.04\\times49.01\\times0.52=-3.358-1.019=-4.377$ USD/an. $\\div365=\\mathbf{-0.0120}$ USD/jour.",
+        "value": -0.0122,
+        "steps_mdx": "$\\Theta=-\\dfrac{S N'(d_1)\\sigma}{2\\sqrt{T}}-rKe^{-rT}N(d_2)$. Terme 1 : $-\\dfrac{50\\times0{,}391\\times0{,}25}{2\\sqrt{0{,}5}}=-\\dfrac{4{,}888}{1{,}4142}=-3{,}457$ USD/an. Terme 2 : $-0{,}04\\times50\\times e^{-0{,}02}\\times0{,}510=-1{,}001$ USD/an. $\\Theta=-3{,}457-1{,}001=-4{,}458$ USD/an. $\\Theta/365=-4{,}458/365=\\mathbf{-0{,}0122}$ USD/jour.",
         "formula_katex": "\\Theta/365"
       }
     },
@@ -365,36 +365,48 @@
       "payload": {
         "steps": [
           {
-            "label": "Équation gamma : $1.5w_A+0.8w_B=-(-200)=200$",
+            "label": "Équation gamma : $1{,}5w_A+0{,}8w_B=200$ (RHS)",
             "unit": "",
             "tolerance": 0.1,
             "solution_mdx": "$1.5w_A+0.8w_B=200$"
           },
           {
-            "label": "Équation delta : $0.6w_A+0.4w_B=-(-300)=300$",
+            "label": "Équation delta : $0{,}6w_A+0{,}4w_B=300$ (RHS)",
             "unit": "",
             "tolerance": 0.1,
             "solution_mdx": "$0.6w_A+0.4w_B=300$"
           },
           {
-            "label": "$w_A$ (résoudre le système)",
+            "label": "$w_A$ (résoudre le système 2×2)",
             "unit": "options",
             "tolerance": 1.0,
             "solution_mdx": "De la 2e : $w_B=(300-0.6w_A)/0.4=750-1.5w_A$. Substituer : $1.5w_A+0.8(750-1.5w_A)=200$. $1.5w_A+600-1.2w_A=200$. $0.3w_A=-400$. $w_A=\\mathbf{-1333}$ (short options A).",
             "hint_mdx": "Résoudre : $1.5w_A+0.8w_B=200$, $0.6w_A+0.4w_B=300$"
+          },
+          {
+            "label": "$w_B$ (substitution dans l'équation delta)",
+            "unit": "options",
+            "tolerance": {
+              "type": "abs",
+              "value": 5.0
+            },
+            "solution_mdx": "$w_B=\\dfrac{300-0{,}6\\times(-1\\,333)}{0{,}4}=\\dfrac{300+800}{0{,}4}=\\dfrac{1\\,100}{0{,}4}=\\mathbf{2\\,750}$"
           }
         ]
       },
       "solution": {
         "steps": [
           {
-            "answer": null
+            "answer": 200.0
           },
           {
-            "answer": null
+            "answer": 300.0
           },
           {
             "answer": -1333.0
+          },
+          {
+            "answer": 2750.0
           }
         ]
       }
@@ -457,7 +469,7 @@
       "concepts": [
         "the-greek-letters"
       ],
-      "prompt_mdx": "Relation BSM : $\\Theta+rS\\Delta+\\frac{1}{2}\\sigma^2S^2\\Gamma=rC$. $\\Theta=-3$, $r=5\\%$, $S=50$, $\\Delta=0.5$, $\\sigma=20\\%$, $\\Gamma=0.02$, $C=?$",
+      "prompt_mdx": "Relation BSM : $\\Theta+rS\\Delta+\\frac{1}{2}\\sigma^2S^2\\Gamma=rC$. $\\Theta=-3$, $r=5\\%$, $S=50$, $\\Delta=0{,}5$, $\\sigma=20\\%$, $\\Gamma=0{,}04$. $C=?$",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -467,8 +479,8 @@
         }
       },
       "solution": {
-        "value": 5.5,
-        "steps_mdx": "$rC=\\Theta+rS\\Delta+\\frac{1}{2}\\sigma^2S^2\\Gamma=-3+0.05\\times50\\times0.5+\\frac{1}{2}\\times0.04\\times2500\\times0.02$$=-3+1.25+1.0=-0.75$. $C=-0.75/0.05=\\mathbf{-15}$... Re-vérif: $0.05C=-3+1.25+1.0=-0.75$? Non: $rS\\Delta=0.05\\times50\\times0.5=1.25$, $\\frac{1}{2}\\sigma^2S^2\\Gamma=0.5\\times0.04\\times2500\\times0.02=1.0$. Donc $0.05C=-3+1.25+1.0=-0.75$, $C=-15$... Correction : $\\Theta=-3$ USD/an.",
+        "value": 5.0,
+        "steps_mdx": "EDP BSM : $rC=\\Theta+rS\\Delta+\\tfrac{1}{2}\\sigma^2 S^2\\Gamma$. $rS\\Delta=0{,}05\\times50\\times0{,}5=1{,}25$. $\\tfrac{1}{2}\\sigma^2 S^2\\Gamma=\\tfrac{1}{2}\\times0{,}04\\times2\\,500\\times0{,}04=2{,}00$. $0{,}05C=-3+1{,}25+2{,}00=\\mathbf{0{,}25}$. $C=0{,}25/0{,}05=\\mathbf{5{,}0}$ USD.",
         "formula_katex": "BSM\\ EDP"
       }
     },
@@ -566,18 +578,18 @@
       "concepts": [
         "the-greek-letters"
       ],
-      "prompt_mdx": "Un delta-hedge est réévalué chaque heure. $\\Gamma=0.05$, $S=100$, $\\sigma=20\\%$ annuel. Variance du P&L sur 1 heure (USD²) ?",
+      "prompt_mdx": "Portefeuille delta-hedgé, rééquilibré quotidiennement ($\\Delta t=1/252$ an). $\\Gamma=0{,}05$, $S=100$ USD, $\\sigma=20\\%$ annuel. Espérance du gain journalier lié au gamma (USD) ?",
       "payload": {
-        "unit": "USD²",
-        "precision": 2,
+        "unit": "USD",
+        "precision": 4,
         "tolerance": {
           "type": "abs",
-          "value": 0.002
+          "value": 0.005
         }
       },
       "solution": {
-        "value": 0.0285,
-        "steps_mdx": "$\\text{Var}(P\\&L)\\approx\\frac{1}{2}\\Gamma^2\\sigma^4S^4\\Delta t$. P&L approx : $\\frac{1}{2}\\Gamma(\\Delta S)^2$. $\\text{Var}(\\Delta S)=\\sigma^2S^2\\Delta t=0.04\\times10000\\times(1/8760)=0.0457$ USD². $\\text{Var}(P\\&L)\\approx(\\frac{1}{2}\\times0.05)^2\\times(0.0457)^2$... Simplifié : $\\sqrt{\\text{Var}(P\\&L)}\\approx\\frac{1}{2}|\\Gamma|\\sigma^2S^2\\Delta t\\approx0.5\\times0.05\\times0.04\\times10000/8760\\approx\\mathbf{0.0114}$ USD.",
+        "value": 0.0397,
+        "steps_mdx": "$E[\\text{gain gamma}]=\\tfrac{1}{2}\\Gamma\\sigma^2 S^2\\Delta t=\\tfrac{1}{2}\\times0{,}05\\times0{,}04\\times10\\,000\\times\\dfrac{1}{252}=\\dfrac{10}{252}=\\mathbf{0{,}0397}$ USD/jour.",
         "formula_katex": "\\frac{1}{2}\\Gamma\\sigma^2 S^2 \\Delta t"
       }
     },
@@ -1788,12 +1800,12 @@
         "precision": 2,
         "tolerance": {
           "type": "abs",
-          "value": 5e-05
+          "value": 1e-05
         }
       },
       "solution": {
-        "value": 0.001238,
-        "steps_mdx": "$\\sigma_n^2=0.94\\times0.0004+0.06\\times(-0.03)^2=0.000376+0.06\\times0.0009=0.000376+0.000054=\\mathbf{0.000430}$.",
+        "value": 0.00043,
+        "steps_mdx": "EWMA : $\\sigma_n^2=\\lambda\\sigma_{n-1}^2+(1-\\lambda)r_{n-1}^2$. $=0{,}94\\times0{,}0004+0{,}06\\times(-0{,}03)^2=0{,}000376+0{,}06\\times0{,}0009=0{,}000376+0{,}000054=\\mathbf{0{,}000430}$.",
         "formula_katex": "\\lambda\\sigma_{n-1}^2+(1-\\lambda)r_{n-1}^2"
       }
     },
@@ -1904,12 +1916,12 @@
         "precision": 2,
         "tolerance": {
           "type": "abs",
-          "value": 0.001
+          "value": 0.0005
         }
       },
       "solution": {
-        "value": 0.025184,
-        "steps_mdx": "$(1-\\lambda)\\lambda^{d-1}=0.03\\times0.97^9=0.03\\times0.7602=\\mathbf{0.02281}$.",
+        "value": 0.02281,
+        "steps_mdx": "Poids EWMA de l'observation à $d=10$ jours : $(1-\\lambda)\\lambda^{d-1}=0{,}03\\times0{,}97^9=0{,}03\\times0{,}7602=\\mathbf{0{,}02281}$.",
         "formula_katex": "(1-\\lambda)\\lambda^{d-1}"
       }
     },

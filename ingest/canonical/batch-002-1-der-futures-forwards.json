@@ -3000,8 +3000,8 @@
         }
       },
       "solution": {
-        "value": 27.87,
-        "steps_mdx": "$F_0 = S_0 e^{(r+u)T} = 25 \\times e^{0{,}11} = 25 \\times 1{,}11628 = \\mathbf{27{,}91}$ USD",
+        "value": 27.91,
+        "steps_mdx": "$F_0=S_0 e^{(r+u)T}=25\\times e^{(0{,}08+0{,}03)\\times1}=25\\times e^{0{,}11}=25\\times1{,}11628=\\mathbf{27{,}91}$ USD.",
         "formula_katex": "S_0 e^{(r+u)T}"
       }
     },

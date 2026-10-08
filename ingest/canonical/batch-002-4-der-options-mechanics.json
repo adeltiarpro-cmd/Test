@@ -1938,7 +1938,7 @@
       "concepts": [
         "trading-strategies-involving-options"
       ],
-      "prompt_mdx": "Butterfly spread : achat call $K_1=45$ ($c_1=6$), vente 2 calls $K_2=50$ ($c_2=3$ chacun), achat call $K_3=55$ ($c_3=1$). Coût net (USD) ?",
+      "prompt_mdx": "Butterfly spread : achat call $K_1=45$ ($c_1=7$), vente 2 calls $K_2=50$ ($c_2=3{,}5$ chacun), achat call $K_3=55$ ($c_3=1{,}5$). Coût net (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -1948,8 +1948,8 @@
         }
       },
       "solution": {
-        "value": 1.0,
-        "steps_mdx": "$6-2\\times3+1=6-6+1=\\mathbf{1}$ USD",
+        "value": 1.5,
+        "steps_mdx": "$7-2\\times3{,}5+1{,}5=7-7+1{,}5=\\mathbf{1{,}5}$ USD.",
         "formula_katex": "c_1-2c_2+c_3"
       }
     },

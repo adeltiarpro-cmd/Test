@@ -235,8 +235,8 @@
         }
       },
       "solution": {
-        "value": 2.832,
-        "steps_mdx": "Flux : $CF_1=6,CF_2=6,CF_3=106$. $P = 6e^{-0.05}+6e^{-0.1}+106e^{-0.15}=5.706+5.427+91.136=102.27$. $D=\\frac{1\\times5.706+2\\times5.427+3\\times91.136}{102.27}=\\frac{5.706+10.854+273.408}{102.27}=\\frac{289.97}{102.27}=\\mathbf{2.836}$ ans",
+        "value": 2.836,
+        "steps_mdx": "Flux actualisés (taux continu $r=5\\%$, annuel) : $PV_1=6e^{-0.05}=6\\times0{,}9512=5{,}707$, $PV_2=6e^{-0.10}=6\\times0{,}9048=5{,}429$, $PV_3=106e^{-0.15}=106\\times0{,}8607=91{,}235$. Prix $P=5{,}707+5{,}429+91{,}235=\\mathbf{102{,}371}$. $D_{Mac}=\\dfrac{1\\times5{,}707+2\\times5{,}429+3\\times91{,}235}{102{,}371}=\\dfrac{5{,}707+10{,}858+273{,}705}{102{,}371}=\\dfrac{290{,}270}{102{,}371}=\\mathbf{2{,}836}$ ans.",
         "formula_katex": "\\frac{\\sum t_i PV(CF_i)}{P}"
       }
     },
@@ -463,8 +463,8 @@
         }
       },
       "solution": {
-        "value": 11.71,
-        "steps_mdx": "Taux effectif annuel $= (1+0.03)^4-1=1.12551-1=12.551\\%$. $r_c=\\ln(1.12551)=\\mathbf{11.83}\\%$",
+        "value": 11.83,
+        "steps_mdx": "Taux nominal $r_m=12\\%$, capitalisation trimestrielle ($m=4$). Taux effectif annuel : $r_{eff}=(1+0{,}12/4)^4-1=(1{,}03)^4-1=1{,}12551-1=12{,}551\\%$. Taux continu équivalent : $r_c=\\ln(1+r_{eff})=\\ln(1{,}12551)=\\mathbf{11{,}83}\\%$.",
         "formula_katex": "\\ln(1+(r_m/m)^m)"
       }
     },
@@ -629,8 +629,8 @@
         }
       },
       "solution": {
-        "value": 3.05,
-        "steps_mdx": "$r = -\\frac{\\ln(98.50/100)}{0.5} = -\\frac{\\ln(0.985)}{0.5} = -\\frac{-0.01511}{0.5} = \\mathbf{3.02}\\%$",
+        "value": 3.02,
+        "steps_mdx": "Obligation zéro-coupon : $P=98{,}50$ USD, $F=100$ USD, $T=0{,}5$ an. $r=-\\dfrac{\\ln(P/F)}{T}=-\\dfrac{\\ln(98{,}50/100)}{0{,}5}=-\\dfrac{\\ln(0{,}985)}{0{,}5}=-\\dfrac{-0{,}01511}{0{,}5}=\\mathbf{3{,}02}\\%$.",
         "formula_katex": "-\\frac{\\ln(P/F)}{T}"
       }
     },
@@ -832,8 +832,8 @@
         }
       },
       "solution": {
-        "value": 4.28,
-        "steps_mdx": "Nouveau prix : recalculer les flux à $4.5\\%$. $D^* \\approx 4.28$ ans (légèrement réduite car prix baisse).",
+        "value": 4.36,
+        "steps_mdx": "Obligation 5 ans, coupon annuel 50 USD, nominal 1 000 USD, $y=4{,}5\\%$. $PV_1=50/1{,}045=47{,}847$, $PV_2=50/1{,}045^2=45{,}785$, $PV_3=50/1{,}045^3=43{,}820$, $PV_4=50/1{,}045^4=41{,}929$, $PV_5=1050/1{,}045^5=842{,}569$. $P=1\\,021{,}950$. $D_{Mac}=\\dfrac{1\\times47{,}847+2\\times45{,}785+3\\times43{,}820+4\\times41{,}929+5\\times842{,}569}{1\\,021{,}950}=\\dfrac{4\\,651{,}4}{1\\,021{,}950}=4{,}551$ ans. $D^*=D_{Mac}/(1+y)=4{,}551/1{,}045=\\mathbf{4{,}36}$ ans.",
         "formula_katex": "D^* \\approx D/(1+y)"
       }
     },
@@ -1171,7 +1171,7 @@
       "concepts": [
         "interest-rate-futures"
       ],
-      "prompt_mdx": "Un gestionnaire détient 20 M USD d'obligations de duration $D_P=7$ ans. T-Bond futures : prix $= 108$, duration livrée $D_F=5.5$ ans. Nombre de contrats à vendre pour immuniser totalement ?",
+      "prompt_mdx": "Un gestionnaire détient 20 M USD d'obligations de duration $D_P=7$ ans. T-Bond futures : prix $=108$, duration livrée $D_F=5{,}5$ ans. Nombre de contrats à vendre pour immuniser totalement (arrondi au contrat entier supérieur) ?",
       "payload": {
         "unit": "contrats",
         "precision": 2,
@@ -1181,8 +1181,8 @@
         }
       },
       "solution": {
-        "value": 235.0,
-        "steps_mdx": "$N = \\frac{D_P \\times V_P}{D_F \\times Q_F} = \\frac{7\\times20\\,000\\,000}{5.5\\times108\\,000} = \\frac{140\\,000\\,000}{594\\,000} = \\mathbf{235.6} \\approx 236$ contrats",
+        "value": 236.0,
+        "steps_mdx": "$N=\\dfrac{D_P\\times V_P}{D_F\\times Q_F}=\\dfrac{7\\times20\\,000\\,000}{5{,}5\\times108\\,000}=\\dfrac{140\\,000\\,000}{594\\,000}=235{,}69\\to\\mathbf{236}$ contrats (arrondi supérieur).",
         "formula_katex": "\\frac{D_P V_P}{D_F Q_F}"
       }
     },

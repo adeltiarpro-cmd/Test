@@ -1493,7 +1493,7 @@
       "concepts": [
         "the-black-scholes-merton-model"
       ],
-      "prompt_mdx": "Call BSM : $S=60$, $K=60$, $r=5\\%$, $\\sigma=30\\%$, $T=0.5$. $d_1=0.2475$, $N(d_1)=0.5977$, $d_2=0.0354$, $N(d_2)=0.5141$. Prix call ?",
+      "prompt_mdx": "Call BSM : $S=60$, $K=60$, $r=5\\%$, $\\sigma=30\\%$, $T=0{,}5$. $d_1=0{,}2239$, $N(d_1)=0{,}5886$, $d_2=0{,}0118$, $N(d_2)=0{,}5047$. Prix call (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -1503,8 +1503,8 @@
         }
       },
       "solution": {
-        "value": 5.75,
-        "steps_mdx": "$c=60\\times0.5977-60e^{-0.025}\\times0.5141=35.86-30.11=\\mathbf{5.75}$ USD",
+        "value": 5.79,
+        "steps_mdx": "$c=60\\times0{,}5886-60\\,e^{-0{,}025}\\times0{,}5047=35{,}316-60\\times0{,}9753\\times0{,}5047=35{,}316-29{,}53=\\mathbf{5{,}79}$ USD.",
         "formula_katex": "S N(d_1)-Ke^{-rT}N(d_2)"
       }
     },
@@ -1977,7 +1977,7 @@
       "concepts": [
         "the-black-scholes-merton-model"
       ],
-      "prompt_mdx": "$N(d_1)=0.65$ (delta call). Variation du call si $S$ monte de 1 USD ?",
+      "prompt_mdx": "Call BSM : $S=60$, $K=55$, $r=5\\%$, $\\sigma=25\\%$, $T=1$ an. Approximation linéaire (delta) : variation du prix du call si $\\Delta S=+1$ USD (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -1987,8 +1987,8 @@
         }
       },
       "solution": {
-        "value": 0.65,
-        "steps_mdx": "$\\Delta c\\approx\\Delta_{call}\\times\\Delta S=0.65\\times1=\\mathbf{0.65}$ USD",
+        "value": 0.75,
+        "steps_mdx": "$d_1=\\dfrac{\\ln(60/55)+(0{,}05+0{,}03125)\\times1}{0{,}25}=\\dfrac{0{,}0870+0{,}0813}{0{,}25}=\\dfrac{0{,}1683}{0{,}25}=0{,}673$. $N(0{,}673)=0{,}750=\\Delta_{call}$. $\\Delta c\\approx0{,}750\\times1=\\mathbf{0{,}750}$ USD.",
         "formula_katex": "N(d_1)\\times\\Delta S"
       }
     },
@@ -2043,7 +2043,7 @@
       "concepts": [
         "the-black-scholes-merton-model"
       ],
-      "prompt_mdx": "Call BSM approx : $S=100$, $K=100$, $\\sigma=20\\%$, $r=5\\%$, $T=3$ mois. Approx ATM : $c\\approx0.4\\times S\\times\\sigma\\sqrt{T}$ ?",
+      "prompt_mdx": "Call BSM ATM : $S=K=100$, $\\sigma=20\\%$, $r=5\\%$, $T=0{,}25$ an. Approximation analytique de Brenner-Subrahmanyam (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -2054,7 +2054,7 @@
       },
       "solution": {
         "value": 4.0,
-        "steps_mdx": "$c\\approx0.4\\times100\\times0.20\\times0.5=\\mathbf{4.0}$ USD",
+        "steps_mdx": "$c\\approx\\dfrac{S\\sigma\\sqrt{T}}{\\sqrt{2\\pi}}\\approx0{,}4\\times S\\sigma\\sqrt{T}=0{,}4\\times100\\times0{,}20\\times0{,}5=\\mathbf{4{,}0}$ USD.",
         "formula_katex": "0.4 S \\sigma \\sqrt{T}"
       }
     },
@@ -2513,18 +2513,18 @@
       "concepts": [
         "options-on-stock-indices-and-currencies"
       ],
-      "prompt_mdx": "Call sur S&P500 : $S=4200$, $K=4200$, $r=4\\%$, $q=1.5\\%$, $\\sigma=18\\%$, $T=0.25$ an. $d_1=[0+(0.04-0.015+0.0162)\\times0.25]/(0.18\\times0.5)=0.0281/0.09=0.3122$. $N(0.31)=0.6217$, $d_2=0.1322$, $N(0.13)=0.5517$. Call ?",
+      "prompt_mdx": "Call sur S\\&P500 : $S=4200$, $K=4200$, $r=4\\%$, $q=1{,}5\\%$, $\\sigma=18\\%$, $T=0{,}25$ an. $(r-q+\\sigma^2/2)\\times T=(0{,}04-0{,}015+0{,}0162)\\times0{,}25=0{,}0103$. $d_1=0{,}0103/0{,}09=0{,}1144$, $N(d_1)=0{,}5455$, $d_2=0{,}0244$, $N(d_2)=0{,}5097$. Call (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
         "tolerance": {
-          "type": "rel",
-          "value": 0.05
+          "type": "abs",
+          "value": 2.0
         }
       },
       "solution": {
-        "value": 124.0,
-        "steps_mdx": "$c\\approx Se^{-qT}N(d_1)-Ke^{-rT}N(d_2)\\approx\\mathbf{124}$ USD.",
+        "value": 163.0,
+        "steps_mdx": "$c=Se^{-qT}N(d_1)-Ke^{-rT}N(d_2)=4200\\times0{,}9963\\times0{,}5455-4200\\times0{,}9900\\times0{,}5097=4\\,184\\times0{,}5455-4\\,158\\times0{,}5097=2\\,282-2\\,119=\\mathbf{163}$ USD.",
         "formula_katex": "S e^{-qT}N(d_1)-Ke^{-rT}N(d_2)"
       }
     },

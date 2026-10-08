@@ -879,8 +879,8 @@
         }
       },
       "solution": {
-        "value": 1.859,
-        "steps_mdx": "$\\sigma_p=\\sqrt{0.000144+0.000144+2\\times0.24\\times0.3\\times0.0006}$$=\\sqrt{0.000144+0.000144+0.0000864}=\\sqrt{0.000374}=\\mathbf{1.935}\\%$.",
+        "value": 1.935,
+        "steps_mdx": "$\\sigma_p=\\sqrt{w_A^2\\sigma_A^2+w_B^2\\sigma_B^2+2w_Aw_B\\rho\\sigma_A\\sigma_B}$. $w_A^2\\sigma_A^2=0{,}36\\times0{,}0004=0{,}000144$. $w_B^2\\sigma_B^2=0{,}16\\times0{,}0009=0{,}000144$. $2w_Aw_B\\rho\\sigma_A\\sigma_B=2\\times0{,}6\\times0{,}4\\times0{,}3\\times0{,}02\\times0{,}03=0{,}0000864$. $\\sigma_p=\\sqrt{0{,}000144+0{,}000144+0{,}0000864}=\\sqrt{0{,}0003744}=\\mathbf{1{,}935}\\%$.",
         "formula_katex": "\\sqrt{w_A^2\\sigma_A^2+w_B^2\\sigma_B^2+2w_Aw_B\\rho\\sigma_A\\sigma_B}"
       }
     },
@@ -1666,8 +1666,8 @@
         }
       },
       "solution": {
-        "value": 917.4,
-        "steps_mdx": "$P_{bond}=e^{-r}[(1-PD)\\times1000+PD\\times R\\times1000]=e^{-0.04}[0.95\\times1000+0.05\\times400]$$=0.9608[950+20]=0.9608\\times970=\\mathbf{932.0}$ USD.",
+        "value": 932.0,
+        "steps_mdx": "Bond zéro-coupon risqué : $V=e^{-r}[(1-PD)\\times K+PD\\times R\\times K]$. $=e^{-0{,}04}[0{,}95\\times1\\,000+0{,}05\\times0{,}40\\times1\\,000]=0{,}9608\\times[950+20]=0{,}9608\\times970=\\mathbf{932{,}0}$ USD.",
         "formula_katex": "e^{-r}[(1-PD)\\times K+PD\\times R\\times K]"
       }
     },
@@ -1772,7 +1772,7 @@
       "concepts": [
         "credit-risk"
       ],
-      "prompt_mdx": "Correlation de défaut implicite (base correlation). Tranche 0-3% (equity) : $\\rho=15\\%$. Tranche 3-6% : $\\rho=25\\%$. La base correlation est croissante : vrai ou faux ? Vrai = 1, Faux = 0.",
+      "prompt_mdx": "Base correlation CDO (valeurs implicites Bloomberg). Tranche equity (0–3\\%) : $\\rho=25\\%$. Tranche mezzanine (3–6\\%) : $\\rho=18\\%$. La base correlation est-elle croissante ici ? (1 = oui, 0 = non)",
       "payload": {
         "unit": "",
         "precision": 2,
@@ -1782,8 +1782,8 @@
         }
       },
       "solution": {
-        "value": 1.0,
-        "steps_mdx": "La base correlation est par construction croissante avec le point d'attachement. $\\mathbf{1}$ (Vrai).",
+        "value": 0.0,
+        "steps_mdx": "La base correlation doit être croissante avec le point d'attachement (propriété théorique). Ici $25\\%\\to18\\%$ : décroissante $\\Rightarrow$ propriété violée $\\Rightarrow\\mathbf{0}$ (Non).",
         "formula_katex": "\\text{par définition}"
       }
     },
@@ -2073,8 +2073,8 @@
         }
       },
       "solution": {
-        "value": 931.2,
-        "steps_mdx": "$V=e^{-0.04}[(1-0.03)\\times1000+0.03\\times400]=0.9608[970+12]=0.9608\\times982=\\mathbf{943.9}$ USD.",
+        "value": 943.9,
+        "steps_mdx": "Bond risqué : $V=e^{-r}[(1-PD)\\times K+PD\\times R\\times K]$. $=e^{-0{,}04}[0{,}97\\times1\\,000+0{,}03\\times0{,}40\\times1\\,000]=0{,}9608\\times[970+12]=0{,}9608\\times982=\\mathbf{943{,}9}$ USD.",
         "formula_katex": "e^{-r}[(1-PD)\\times F+PD\\times R\\times F]"
       }
     },
@@ -2784,18 +2784,18 @@
       "concepts": [
         "credit-derivatives"
       ],
-      "prompt_mdx": "CDS Big Bang : coupon standard = 100 bps, spread de marché = 80 bps. L'acheteur reçoit un upfront (vendeur de protection paie) car spread < coupon. Upfront approx = (100-80) bps × duration 5 ans ?",
+      "prompt_mdx": "CDS Big Bang : coupon standard $=100$ bps, spread de marché $=73$ bps, duration risquée $=4{,}8$ ans. Upfront reçu par l'acheteur de protection (\\% du notionnel) ?",
       "payload": {
         "unit": "%",
-        "precision": 2,
+        "precision": 3,
         "tolerance": {
           "type": "abs",
           "value": 0.05
         }
       },
       "solution": {
-        "value": 1.0,
-        "steps_mdx": "$Upfront=(100-80)\\,bps\\times5=20\\,bps\\times5=100\\,bps=\\mathbf{1}\\%$ du notionnel.",
+        "value": 1.296,
+        "steps_mdx": "$\\text{Upfront}=(100-73)\\,\\text{bps}\\times4{,}8\\,\\text{ans}=27\\times4{,}8=129{,}6\\,\\text{bps}\\cdot\\text{an}=\\mathbf{1{,}296}\\%$ du notionnel.",
         "formula_katex": "(K-s)\\times\\text{duration}"
       }
     },
@@ -2877,7 +2877,7 @@
       "concepts": [
         "credit-derivatives"
       ],
-      "prompt_mdx": "Z-spread d'une obligation = 180 bps, CDS spread = 200 bps. Basis (bps) ?",
+      "prompt_mdx": "Z-spread d'une obligation $=176$ bps, asset-swap spread $=168$ bps, CDS spread $=195$ bps. Basis (bps) ?",
       "payload": {
         "unit": "bps",
         "precision": 2,
@@ -2887,8 +2887,8 @@
         }
       },
       "solution": {
-        "value": 20.0,
-        "steps_mdx": "$Basis=200-180=\\mathbf{20}$ bps (positive basis — CDS plus cher).",
+        "value": 27.0,
+        "steps_mdx": "$\\text{Basis}=\\text{CDS spread}-\\text{asset-swap spread}=195-168=\\mathbf{27}$ bps (basis positive).",
         "formula_katex": "CDS_{spread}-Z_{spread}"
       }
     },
@@ -2943,18 +2943,18 @@
       "concepts": [
         "credit-derivatives"
       ],
-      "prompt_mdx": "Cheapest-to-Deliver (CTD) dans un CDS sur restructuration : obligations éligibles à 85, 88, 80 USD. CTD (USD) ?",
+      "prompt_mdx": "CDS sur restructuration : obligations éligibles 85 USD, 88 USD, 80 USD (pour 100 nominal). Paiement de protection reçu par l'acheteur (USD / 100 nominal) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
         "tolerance": {
           "type": "abs",
-          "value": 0.01
+          "value": 0.5
         }
       },
       "solution": {
-        "value": 80.0,
-        "steps_mdx": "L'obligation à $\\mathbf{80}$ USD est la moins chère à livrer (maximise le paiement de l'acheteur).",
+        "value": 20.0,
+        "steps_mdx": "CTD = obligation la moins chère $= 80$ USD. Paiement $= 100 - 80 = \\mathbf{20}$ USD / 100 nominal.",
         "formula_katex": "\\min(\\text{prix obligataires})"
       }
     },
@@ -3069,8 +3069,8 @@
         }
       },
       "solution": {
-        "value": 15.2,
-        "steps_mdx": "$V\\approx4\\times e^{-rT}[FN(d_1)-KN(d_2)]$. $d_2=0.963-0.2121=0.751$. $N(0.751)=0.774$. $V=4[180\\times0.832-150\\times0.774]=4[149.8-116.1]=4\\times33.7=\\mathbf{134.8}$ bps $\\times e^{-r}$.",
+        "value": 134.8,
+        "steps_mdx": "CDS swaption payeuse Black : $V=D\\cdot[F\\cdot N(d_1)-K\\cdot N(d_2)]$. $d_1=0{,}963$ → $N(0{,}963)=0{,}832$. $d_2=0{,}751$ → $N(0{,}751)=0{,}774$. $V=4\\times[180\\times0{,}832-150\\times0{,}774]=4\\times[149{,}8-116{,}1]=4\\times33{,}7=\\mathbf{134{,}8}$ bps.",
         "formula_katex": "D[FN(d_1)-KN(d_2)]"
       }
     },

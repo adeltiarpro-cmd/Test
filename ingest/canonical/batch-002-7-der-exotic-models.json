@@ -338,7 +338,7 @@
       "concepts": [
         "exotic-options"
       ],
-      "prompt_mdx": "Parité put-call : $c=8$ USD, $p=5$ USD à la date de choix $T_1$. Valeur du chooser ?",
+      "prompt_mdx": "Chooser option : $c=6{,}3$ USD, $p=6{,}8$ USD à la date de choix $T_1$. Valeur du chooser (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -348,8 +348,8 @@
         }
       },
       "solution": {
-        "value": 8.0,
-        "steps_mdx": "Chooser vaut $\\max(c,p)=\\max(8,5)=\\mathbf{8}$ USD.",
+        "value": 6.8,
+        "steps_mdx": "Chooser $=\\max(c,p)=\\max(6{,}3;\\,6{,}8)=\\mathbf{6{,}8}$ USD.",
         "formula_katex": "\\max(c,p)"
       }
     },
@@ -507,8 +507,8 @@
         }
       },
       "solution": {
-        "value": 4.82,
-        "steps_mdx": "$c_{Margrabe}\\approx A_0 N(d_1)-B_0 N(d_2)$ avec $d_1=[\\ln(50/48)+0.5\\times0.0265]/(0.1628)=[0.0408+0.01325]/0.1628=0.330$. $N(0.33)=0.629$, $d_2=0.167$, $N(0.167)=0.566$. $c=50\\times0.629-48\\times0.566=31.45-27.17=\\mathbf{4.28}$ USD.",
+        "value": 4.28,
+        "steps_mdx": "Margrabe : $\\sigma_{eff}=\\sqrt{\\sigma_A^2+\\sigma_B^2-2\\rho\\sigma_A\\sigma_B}=\\sqrt{0{,}04+0{,}0225-0{,}036}=\\sqrt{0{,}0265}=0{,}1628$. $d_1=\\dfrac{\\ln(50/48)+\\tfrac{1}{2}\\times0{,}0265}{0{,}1628}=\\dfrac{0{,}0408+0{,}01325}{0{,}1628}=0{,}330$. $N(0{,}330)=0{,}629$. $d_2=0{,}330-0{,}163=0{,}167$. $N(0{,}167)=0{,}566$. $c=50\\times0{,}629-48\\times0{,}566=31{,}45-27{,}17=\\mathbf{4{,}28}$ USD.",
         "formula_katex": "A_0 N(d_1)-B_0 N(d_2)"
       }
     },
@@ -792,7 +792,7 @@
       "concepts": [
         "exotic-options"
       ],
-      "prompt_mdx": "Rainbow option sur 2 actifs : payoff $=\\max(A_T, B_T, K)$. $A_T=110$, $B_T=95$, $K=100$. Payoff ?",
+      "prompt_mdx": "Rainbow option sur 2 actifs : payoff $=\\max(A_T,\\,B_T,\\,K)$. $A_T=95$, $B_T=112$, $K=108$. Payoff (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -802,8 +802,8 @@
         }
       },
       "solution": {
-        "value": 110.0,
-        "steps_mdx": "$\\max(110,95,100)=\\mathbf{110}$ USD.",
+        "value": 112.0,
+        "steps_mdx": "$\\max(95,\\,112,\\,108)=\\mathbf{112}$ USD.",
         "formula_katex": "\\max(A_T, B_T, K)"
       }
     },
@@ -864,12 +864,12 @@
         "precision": 2,
         "tolerance": {
           "type": "abs",
-          "value": 0.002
+          "value": 0.001
         }
       },
       "solution": {
-        "value": 0.01958,
-        "steps_mdx": "$\\approx 2\\sum\\frac{p_i}{K_i^2}\\Delta K=2[(2/6400+4/8100+5/10000)\\times10]$$=2\\times10\\times(0.0003125+0.0004938+0.0005000)=20\\times0.001306=\\mathbf{0.02612}$ USD.",
+        "value": 0.02613,
+        "steps_mdx": "Contribution puts (sans actualisation) : $2\\sum_{i}\\dfrac{p_i}{K_i^2}\\Delta K=2\\times10\\times\\left(\\dfrac{2}{80^2}+\\dfrac{4}{90^2}+\\dfrac{5}{100^2}\\right)$. $=2\\times10\\times(0{,}000313+0{,}000494+0{,}000500)=20\\times0{,}001306=\\mathbf{0{,}02613}$ USD.",
         "formula_katex": "2\\sum p_i/K_i^2\\cdot\\Delta K"
       }
     },
@@ -1229,8 +1229,8 @@
         }
       },
       "solution": {
-        "value": 23.1,
-        "steps_mdx": "$\\Delta t_{max}=25/156.25=0.16$ an $=0.16\\times365=\\mathbf{58.4}$ jours... Corrigé : $\\sigma^2 S^2=(0.0625)(2500)=156.25$. $\\Delta t=25/156.25=0.160$ an.",
+        "value": 58.4,
+        "steps_mdx": "Condition CFL pour différences finies explicites : $\\Delta t\\leq\\dfrac{(\\Delta S)^2}{\\sigma^2 S^2}=\\dfrac{5^2}{0{,}25^2\\times50^2}=\\dfrac{25}{156{,}25}=0{,}160$ an $=0{,}160\\times365=\\mathbf{58{,}4}$ jours.",
         "formula_katex": "(\\Delta S)^2/(\\sigma^2 S^2)"
       }
     },
@@ -1378,19 +1378,19 @@
       "concepts": [
         "more-on-models-and-numerical-procedures"
       ],
-      "prompt_mdx": "Arbre trinomial (Hull-White) : $u=1.10$, $m=1.00$, $d=0.91$, $p_u=0.25$, $p_m=0.50$, $p_d=0.25$. Vérification : $p_u+p_m+p_d=$ ?",
+      "prompt_mdx": "Arbre trinomial (Hull-White) : $S_0=100$ USD, $u=1{,}10$, $m=1{,}00$, $d=0{,}91$, $p_u=0{,}25$, $p_m=0{,}50$, $p_d=0{,}25$. Calculer $E[S_1]$ (USD).",
       "payload": {
-        "unit": "",
+        "unit": "USD",
         "precision": 2,
         "tolerance": {
           "type": "abs",
-          "value": 0.001
+          "value": 0.5
         }
       },
       "solution": {
-        "value": 1.0,
-        "steps_mdx": "$0.25+0.50+0.25=\\mathbf{1.0}$. Condition de normalisation.",
-        "formula_katex": "p_u+p_m+p_d=1"
+        "value": 100.25,
+        "steps_mdx": "$E[S_1]=p_u\\cdot S_u+p_m\\cdot S_m+p_d\\cdot S_d=0{,}25\\times110+0{,}50\\times100+0{,}25\\times91=27{,}5+50{,}0+22{,}75=\\mathbf{100{,}25}$ USD.",
+        "formula_katex": "p_u u S_0 + p_m m S_0 + p_d d S_0"
       }
     },
     {
@@ -1656,8 +1656,8 @@
         }
       },
       "solution": {
-        "value": 0.008,
-        "steps_mdx": "$(C(105)-2C(100)+C(95))=(3.5-10.4+7.4)=0.5$. $\\partial^2 C/\\partial K^2=0.5/25=\\mathbf{0.02}$.",
+        "value": 0.02,
+        "steps_mdx": "Butterfly spread discret ($K=100$, $\\varepsilon=5$) : $(C(105)-2C(100)+C(95))=(3{,}5-2\\times5{,}2+7{,}4)=(3{,}5-10{,}4+7{,}4)=0{,}5$. $\\partial^2 C/\\partial K^2=0{,}5/\\varepsilon^2=0{,}5/25=\\mathbf{0{,}02}$.",
         "formula_katex": "(C(K+\\epsilon)-2C(K)+C(K-\\epsilon))/\\epsilon^2"
       }
     },
@@ -2895,7 +2895,7 @@
       "concepts": [
         "martingales-and-measures"
       ],
-      "prompt_mdx": "Sous la mesure $Q$, Mouvement Brownien $W^Q$ genère $dS=rSdt+\\sigma S dW^Q$. Pour un call $K=100$, $S_0=100$, $r=5\\%$, $\\sigma=20\\%$, $T=0.5$: $d_1=(0+0.03)/0.1414=0.212$, $N(0.21)=0.583$. Call BSM (USD) ?",
+      "prompt_mdx": "Sous la mesure $Q$, $dS=rS\\,dt+\\sigma S\\,dW^Q$. Call $K=100$, $S_0=100$, $r=5\\%$, $\\sigma=20\\%$, $T=0{,}5$. $d_1=\\dfrac{0+0{,}035}{0{,}1414}=0{,}2475$, $N(0{,}2475)=0{,}5977$. Call BSM (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,
@@ -2906,7 +2906,7 @@
       },
       "solution": {
         "value": 6.89,
-        "steps_mdx": "$c=100\\times0.583-100e^{-0.025}\\times N(0.071)$. $d_2=0.212-0.1414=0.071$, $N(0.071)=0.528$. $c=58.3-97.53\\times0.528=58.3-51.49=\\mathbf{6.81}$ USD.",
+        "steps_mdx": "$d_2=0{,}2475-0{,}1414=0{,}1061$, $N(0{,}1061)=0{,}5423$. $c=100\\times0{,}5977-100\\,e^{-0{,}025}\\times0{,}5423=59{,}77-97{,}53\\times0{,}5423=59{,}77-52{,}88=\\mathbf{6{,}89}$ USD.",
         "formula_katex": "S_0N(d_1)-Ke^{-rT}N(d_2)"
       }
     },
@@ -2998,8 +2998,8 @@
         }
       },
       "solution": {
-        "value": 2195.0,
-        "steps_mdx": "$V=1\\,000\\,000\\times0.25\\times e^{-0.04}[0.04\\times0.365-0.045\\times0.276]$$=250\\,000\\times0.9608\\times[0.01460-0.01242]=240\\,200\\times0.00218=\\mathbf{524}$ USD. Recalcul complet $\\approx\\mathbf{2\\,200}$ USD (OTM caplet).",
+        "value": 524.0,
+        "steps_mdx": "Caplet Black : $V=L\\delta e^{-r_s T}[F_k N(d_1)-R_K N(d_2)]$. $d_1=[\\ln(0{,}04/0{,}045)+0{,}5\\times0{,}0625]/0{,}25=[-0{,}1178+0{,}0313]/0{,}25=-0{,}346$. $N(-0{,}346)=0{,}365$. $d_2=-0{,}596$. $N(-0{,}596)=0{,}276$. $V=1\\,000\\,000\\times0{,}25\\times e^{-0{,}04}\\times[0{,}04\\times0{,}365-0{,}045\\times0{,}276]=240\\,200\\times0{,}00218=\\mathbf{524}$ USD.",
         "formula_katex": "L\\delta e^{-r_s T}[F_kN(d_1)-R_KN(d_2)]"
       }
     },
@@ -3056,16 +3056,16 @@
       ],
       "prompt_mdx": "Swaption Black : $S_0=3.8\\%$ (taux swap forward), $K=4\\%$, $\\sigma=20\\%$, $T=1$ an, annuité $A=4.5$, $d_1=[\\ln(3.8/4)+0.02]/0.20=-0.149$, $N(d_1)=0.441$, $d_2=-0.349$, $N(d_2)=0.364$. Swaption payeuse (USD pour notionnel 1) ?",
       "payload": {
-        "unit": "%",
+        "unit": "",
         "precision": 2,
         "tolerance": {
           "type": "abs",
-          "value": 0.001
+          "value": 0.0005
         }
       },
       "solution": {
-        "value": 0.0453,
-        "steps_mdx": "$V=Ae^{-rT}[S_0N(d_1)-KN(d_2)]=4.5[0.038\\times0.441-0.04\\times0.364]$$=4.5[0.016758-0.014560]=4.5\\times0.002198=\\mathbf{0.009891}$.",
+        "value": 0.009935,
+        "steps_mdx": "Swaption payeuse Black : $V=A[S_0 N(d_1)-K N(d_2)]$. $d_1=-0{,}149$ → $N(-0{,}149)=0{,}441$. $d_2=-0{,}349$ → $N(-0{,}349)=0{,}364$. $V=4{,}5\\times[0{,}038\\times0{,}441-0{,}04\\times0{,}364]=4{,}5\\times[0{,}01676-0{,}01456]=4{,}5\\times0{,}00220=\\mathbf{0{,}009935}$ (pour notionnel 1).",
         "formula_katex": "A[S_0 N(d_1)-K N(d_2)]"
       }
     },
@@ -3223,8 +3223,8 @@
         }
       },
       "solution": {
-        "value": 1850.0,
-        "steps_mdx": "$d_1=[\\ln(0.045/0.05)+0.02]/0.20=[-0.1054+0.02]/0.20=-0.427$. $N(d_1)=0.335$. $d_2=-0.627$. $N(d_2)=0.265$. $V=1\\,000\\,000\\times0.5\\times e^{-0.04}[0.045\\times0.335-0.05\\times0.265]$$=500\\,000\\times0.9608\\times[0.01508-0.01325]=480\\,400\\times0.00183\\approx\\mathbf{879}$ USD.",
+        "value": 879.0,
+        "steps_mdx": "Caplet OTM Black : $L=1\\,\\text{M}$, $\\delta=0{,}5$, $F_k=4{,}5\\%$, $R_K=5\\%$, $\\sigma=20\\%$. $d_1=[\\ln(0{,}045/0{,}05)+0{,}02]/0{,}20=[-0{,}1054+0{,}02]/0{,}20=-0{,}427$. $N(-0{,}427)=0{,}335$. $d_2=-0{,}627$. $N(-0{,}627)=0{,}265$. $V=1\\,000\\,000\\times0{,}5\\times e^{-0{,}04}\\times[0{,}045\\times0{,}335-0{,}05\\times0{,}265]=480\\,400\\times0{,}00183=\\mathbf{879}$ USD.",
         "formula_katex": "L\\delta e^{-r_s}[F_k N(d_1)-R_K N(d_2)]"
       }
     },
@@ -3372,7 +3372,7 @@
       "concepts": [
         "interest-rate-derivatives-the-standard-market-models"
       ],
-      "prompt_mdx": "Swaption receveuse (put sur taux) : même données que call avec $S_0=3.8\\%$, $K=4\\%$. Via parité : receveuse $=$ payeuse $-$ (swap payeur). Swap payeur $\\approx0$ si ATM. Si payeuse $=0.0099$ USD et swap $=-0.0090$, receveuse $=$ ?",
+      "prompt_mdx": "Swaption : $S_0=3{,}8\\%$, $K=4\\%$. Parité swaption : receveuse $=$ payeuse $-$ swap payeur. Payeuse $=0{,}0099$ USD (notionnel unitaire), swap payeur $=-0{,}0090$ USD. Receveuse (USD) ?",
       "payload": {
         "unit": "%",
         "precision": 2,
@@ -3663,7 +3663,7 @@
       "concepts": [
         "short-rate-models-and-hjm"
       ],
-      "prompt_mdx": "Hull-White : prix obligation $B(t,T)=A(t,T)e^{-B(t,T)r_t}$. $a=0.1$, $T-t=2$ ans. $B_{HW}(t,T)=(1-e^{-a(T-t)})/a=(1-e^{-0.2})/0.1=(1-0.8187)/0.1=0.1813/0.1$. $B_{HW}=$?",
+      "prompt_mdx": "Hull-White : $B_{HW}(t,T)=\\dfrac{1-e^{-a(T-t)}}{a}$. $a=0{,}1$, $T-t=2$ ans. Calculer $B_{HW}$.",
       "payload": {
         "unit": "",
         "precision": 2,
@@ -3674,7 +3674,7 @@
       },
       "solution": {
         "value": 1.813,
-        "steps_mdx": "$B_{HW}=0.1813/0.1=\\mathbf{1.813}$.",
+        "steps_mdx": "$B_{HW}=\\dfrac{1-e^{-0{,}2}}{0{,}1}=\\dfrac{1-0{,}8187}{0{,}1}=\\dfrac{0{,}1813}{0{,}1}=\\mathbf{1{,}813}$.",
         "formula_katex": "(1-e^{-a(T-t)})/a"
       }
     },
@@ -3855,8 +3855,8 @@
         }
       },
       "solution": {
-        "value": 0.9568,
-        "steps_mdx": "$B(0,1)=e^{-0.0023-0.9048\\times0.04}=e^{-0.0023-0.03619}=e^{-0.03849}=\\mathbf{0.9623}$.",
+        "value": 0.9623,
+        "steps_mdx": "$B(0,1)=e^{A-B\\cdot r_0}=e^{-0{,}0023-0{,}9048\\times0{,}04}=e^{-0{,}0023-0{,}03619}=e^{-0{,}03849}=\\mathbf{0{,}9623}$.",
         "formula_katex": "e^{A-B\\cdot r_0}"
       }
     },
@@ -4004,18 +4004,18 @@
       "concepts": [
         "short-rate-models-and-hjm"
       ],
-      "prompt_mdx": "CIR : condition de Feller $2ab>\\sigma^2$. $a=0.3$, $b=5\\%$, $\\sigma=8\\%$. Vérification ?",
+      "prompt_mdx": "CIR : $a=0{,}3$, $b=6\\%$, $\\sigma=8\\%$. Calculer la marge de la condition de Feller $2ab-\\sigma^2$.",
       "payload": {
         "unit": "",
-        "precision": 2,
+        "precision": 4,
         "tolerance": {
           "type": "abs",
-          "value": 0.001
+          "value": 0.002
         }
       },
       "solution": {
-        "value": 0.03,
-        "steps_mdx": "$2ab=2\\times0.3\\times0.05=0.03$. $\\sigma^2=0.0064$. $0.030>0.0064$ ✓. Condition : $2ab=\\mathbf{0.03}>0.0064=\\sigma^2$.",
+        "value": 0.0296,
+        "steps_mdx": "$2ab=2\\times0{,}3\\times0{,}06=0{,}036$. $\\sigma^2=0{,}08^2=0{,}0064$. $2ab-\\sigma^2=0{,}036-0{,}0064=\\mathbf{0{,}0296}>0$ (condition de Feller vérifiée).",
         "formula_katex": "2ab\\text{ vs }\\sigma^2"
       }
     },
@@ -4514,8 +4514,8 @@
         }
       },
       "solution": {
-        "value": 16.0,
-        "steps_mdx": "$(0.18^2\\times2-0.20^2\\times1)/1=(0.0648-0.04)/1=0.0248$. $\\sigma_2=\\sqrt{0.0248}=\\mathbf{15.7\\%}$.",
+        "value": 15.75,
+        "steps_mdx": "Bootstrapping LMM : $\\sigma_2^2=\\dfrac{\\sigma_{1,2}^2\\times T_2-\\sigma_1^2\\times T_1}{T_2-T_1}=\\dfrac{0{,}18^2\\times2-0{,}20^2\\times1}{1}=\\dfrac{0{,}0648-0{,}040}{1}=0{,}0248$. $\\sigma_2=\\sqrt{0{,}0248}=\\mathbf{15{,}75}\\%$.",
         "formula_katex": "\\sqrt{(\\sigma_{cap}^2 T-\\sigma_{prev}^2 T_{prev})/(T-T_{prev})}"
       }
     },
@@ -4599,16 +4599,16 @@
       ],
       "prompt_mdx": "Ajustement de convexité CMS approx : $CA\\approx\\frac{\\sigma^2 T s(0) B'(s(0))}{B(s(0))}$. $\\sigma=15\\%$, $T=1$ an, $s(0)=4\\%$, approximation : $CA\\approx\\sigma^2 T s(0)\\times(-D/(1+s(0)))$. Duration $D=5$ ans. $CA=?$",
       "payload": {
-        "unit": "%",
+        "unit": "",
         "precision": 2,
         "tolerance": {
           "type": "abs",
-          "value": 0.002
+          "value": 0.0005
         }
       },
       "solution": {
-        "value": 0.0289,
-        "steps_mdx": "$CA\\approx0.0225\\times1\\times0.04\\times5/1.04=0.0225\\times0.1923=\\mathbf{0.00433}$... Approximation simplifiée : $CA\\approx\\sigma^2 T\\times5\\times s/(1+s)=0.0225\\times5\\times0.0385=\\mathbf{0.004330}$.",
+        "value": 0.00433,
+        "steps_mdx": "Ajustement convexité CMS approx. ($\\sigma=15\\%$, $T=1$, $s=4\\%$, $D=5$ ans) : $CA\\approx\\sigma^2 T\\cdot s\\cdot\\dfrac{D}{1+s}=0{,}0225\\times1\\times0{,}04\\times\\dfrac{5}{1{,}04}=0{,}0225\\times0{,}1923=\\mathbf{0{,}00433}$ (en décimal).",
         "formula_katex": "\\sigma^2 T s D/(1+s)"
       }
     },
@@ -4696,8 +4696,8 @@
         }
       },
       "solution": {
-        "value": 0.01083,
-        "steps_mdx": "$c=e^{0}[(1\\times0.8413+1\\times0.2420)]=0.8413+0.2420=\\mathbf{1.083}\\%$.",
+        "value": 1.083,
+        "steps_mdx": "Bachelier call sur taux : $h=(F-K)/(\\sigma\\sqrt{T})=(2\\%-1\\%)/(1\\%\\times1)=1$. $c=[(F-K)N(h)+\\sigma\\sqrt{T}N'(h)]e^{-rT}=[(1\\%)(0{,}8413)+(1\\%)(0{,}2420)]\\times1=1\\%\\times(0{,}8413+0{,}2420)=\\mathbf{1{,}083}\\%$.",
         "formula_katex": "[(F-K)N(h)+\\sigma\\sqrt{T}N'(h)]e^{-rT}"
       }
     },
@@ -5493,7 +5493,7 @@
       "concepts": [
         "structured-products-and-credit-derivatives-overview"
       ],
-      "prompt_mdx": "CDO (suite) : après perte de 15 M USD. Perte tranche mezzanine (USD) ?",
+      "prompt_mdx": "CDO : pool 100 M USD. Tranche equity 0–10 M, mezzanine 10–30 M, senior 30–100 M. Perte cumulée du pool $=15$ M USD. Perte subie par la tranche mezzanine (USD) ?",
       "payload": {
         "unit": "USD",
         "precision": 2,

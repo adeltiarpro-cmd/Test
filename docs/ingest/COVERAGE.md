@@ -1,8 +1,8 @@
 # Couverture des exercices ingérés
 
-*Mis à jour par `report.ts` — 2026-10-06*
+*Mis à jour par `report.ts` — 2026-10-08*
 
-**Total :** 1425 exercices — **27** module(s) couverts
+**Total :** 2187 exercices — **36** module(s) couverts
 
 ## markets/derivatives  *(770 items)*
 
@@ -21,6 +21,132 @@
 | 3 | 405 |
 | 4 | 206 |
 | 5 | 12 |
+
+## markets/der-futures-forwards  *(112 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 41 |
+| `numeric` | 45 |
+| `short_answer` | 20 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 8 |
+| 2 | 87 |
+| 3 | 17 |
+
+## markets/der-interest-rates  *(50 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 16 |
+| `numeric` | 22 |
+| `short_answer` | 6 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 1 |
+| 2 | 36 |
+| 3 | 13 |
+
+## markets/der-swaps  *(42 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 15 |
+| `numeric` | 13 |
+| `short_answer` | 9 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 1 |
+| 2 | 25 |
+| 3 | 16 |
+
+## markets/der-options-mechanics  *(69 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 35 |
+| `numeric` | 26 |
+| `short_answer` | 6 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 4 |
+| 2 | 54 |
+| 3 | 11 |
+
+## markets/der-bsm-pricing  *(124 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 47 |
+| `numeric` | 52 |
+| `short_answer` | 17 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 4 |
+| 2 | 96 |
+| 3 | 24 |
+
+## markets/der-greeks-vol  *(67 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 31 |
+| `numeric` | 24 |
+| `short_answer` | 11 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 10 |
+| 2 | 48 |
+| 3 | 9 |
+
+## markets/der-exotic-models  *(177 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 76 |
+| `numeric` | 72 |
+| `short_answer` | 29 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 14 |
+| 2 | 149 |
+| 3 | 14 |
+
+## markets/der-credit-var  *(98 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 39 |
+| `numeric` | 43 |
+| `short_answer` | 16 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 7 |
+| 2 | 85 |
+| 3 | 6 |
+
+## markets/der-commodities  *(23 items)*
+
+| Type | Count |
+|---|---|
+| `mcq` | 10 |
+| `numeric` | 10 |
+| `short_answer` | 3 |
+
+| Difficulté | Count |
+|---|---|
+| 1 | 2 |
+| 2 | 20 |
+| 3 | 1 |
 
 ## corpfin/fm-three-statements  *(44 items)*
 

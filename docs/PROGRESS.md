@@ -17,6 +17,36 @@ FICHIERS CLÉS: <chemins créés/modifiés, pour que la session suivante sache o
 
 ---
 
+## 2026-10-08 — CHANTIER-3 — Audit qualité : valeurs intermédiaires, arrondis, dépendances, triviaux
+STATUT: FAIT
+FAIT: Script `ingest/fix_audit.py` écrit et exécuté — 20 exercices corrigés dans les fichiers batch-002-*. CAT 1 (4) : valeurs intermédiaires BSM fausses dans l'énoncé corrigées (key-319 d1 0,2475→0,2239, key-351 numérateur 0,0281→0,0103/d1=0,1144/c=163, key-405 N'(d1) 0,38→0,391 et N(d2) 0,52→0,510/θ/365=-0,0122, key-632 d1=(0+0,03)/…→(0+0,035)/…=0,2475). CAT 2 (1) : key-148 236 contrats (non 235) + règle d'arrondi supérieur documentée. CAT 3 (2) : key-647 "même données que call" supprimé, key-726 structure CDO ajoutée à l'énoncé. CAT 4 (13) : 7 exercices clairs reformulés (answer littéralement lisible → calcul réel imposé) + 6 borderline (valeurs changées pour éviter la lecture directe). `npm run build` : vert.
+RESTE:
+  1. `npx supabase db push` pour appliquer la migration 20240019.
+  2. `charger-lots.command` sur les 9 fichiers batch-002-* (762 exercices UPSERT).
+  3. Test navigateur : /session filière markets → dérivés.
+DÉCISIONS:
+  - key-531 : answer changé de 1 (Vrai) à 0 (Non) en donnant des ρ décroissants — force l'étudiant à connaître la propriété théorique plutôt que de lire la tendance des données.
+  - key-180 : exercice "vérifier V=0" remplacé par "calculer k*" (4,054%) — le k=3,5% d'origine ne donnait pas V=0 pour ces taux spots.
+  - key-549 (basis=0) conservé tel quel : la base nulle est un point pédagogique valide.
+FICHIERS CLÉS: ingest/fix_audit.py (nouveau), ingest/canonical/batch-002-{1..9}-der-*.json (20 items modifiés)
+
+---
+
+## 2026-10-07 — CHANTIER-2 — Vérification et correction des exercices numériques (dérivés)
+STATUT: FAIT
+FAIT: Script `ingest/verify_numeric.py` écrit et exécuté. 31 exercices corrigés sur les 335 numeric/numeric_steps des 9 fichiers batch-002-*. Corrections : 29 valeurs `solution.value` erronées (recalculées à partir des formules et des paramètres de l'énoncé), 2 exercices redesignés (key-412 : Γ 0,02→0,04 donne C=5,0 USD ; key-415 : variance→espérance gain gamma=0,0397 USD), 1 exercice numeric_steps avec réponses `null` corrigées et étape manquante ajoutée (key-409 : wA=-1333, wB=2750). Corrigés réécris ligne par ligne avec calcul explicite. 8 faux positifs détectés par la vérification automatique confirmés corrects (formules short position, profit net, strike actualisé, EAD en M USD). `npm run build` : vert.
+RESTE:
+  1. `npx supabase db push` pour appliquer la migration 20240019 (9 sous-chapitres dérivés).
+  2. `charger-lots.command` sur les 9 fichiers batch-002-* pour ingérer les 762 exercices en base (UPSERT par external_key).
+  3. Test navigateur : /session avec filière markets → dérivés.
+DÉCISIONS:
+  - Vérification par comparaison `\mathbf{X}` (dernière valeur en gras dans steps_mdx) vs solution.value, seuil max(tol*1,5, |val|*0,003).
+  - Corrections hardcodées dans FIXES/NSTEP_FIXES après vérification mathématique indépendante — pas de correction automatique aveugle.
+  - Script rejouable (idempotent) : un second run applique les mêmes valeurs sans effet de bord.
+FICHIERS CLÉS: ingest/verify_numeric.py (nouveau), ingest/canonical/batch-002-{1..9}-der-*.json (31 items modifiés)
+
+---
+
 ## 2026-10-07 — CHANTIER-1 — Remplacement des 762 exercices Hull (dérivés)
 STATUT: FAIT
 FAIT: 762 exercices originaux générés pour les 9 sous-chapitres de `markets/derivatives`, remplaçant les anciens exercices Hull (type `short_answer` avec faux `key_points`). UPSERT par `external_key` (`markets-derivatives-short_answer-001` à `-762`) : les clés existantes sont mises à jour en base sans recréation. Types utilisés : numeric (calculs BSM, Greeks, VaR, CDS), numeric_steps (arbres binomiaux, EWMA, LMM), mcq (définitions, propriétés), short_answer/self_eval (analyse, comparaisons). Formules KaTeX, montants en USD. 9 fichiers JSON produits dans `ingest/canonical/` : batch-002-1 (112) + batch-002-2 (50) + batch-002-3 (42) + batch-002-4 (69) + batch-002-5 (124) + batch-002-6 (67) + batch-002-7 (177) + batch-002-8 (98) + batch-002-9 (23) = 762 items. Migration additive `20240019` crée les 9 modules dérivés et leurs `module_targets`. `npm run build` : vert.
